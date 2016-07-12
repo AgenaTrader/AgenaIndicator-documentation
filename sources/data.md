@@ -39,25 +39,25 @@ The concept of data series is followed up consistently and continuously. All pri
 
 The following data series are available:
 
-[*Open*](./data.md#Open)
+[*Open*]
 
 [*High*]
 
-[*Low*] *Lows*
+[*Low*]
 
-[*Close*] *Closes*
+[*Close*]
 
-[*Median*] *Medians*
+[*Median*]
 
-[*Typical*] *Typicals*
+[*Typical*]
 
-[*Weighted*] *Weighteds*
+[*Weighted*]
 
 Time Times
 
 TimeFrame TimeFrames
 
-[*Volume*] *Volumes*
+[*Volume*]
 
 #Open
 

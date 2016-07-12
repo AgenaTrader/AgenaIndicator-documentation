@@ -1,7 +1,7 @@
 #Welcome to the official AgenaIndicator repository!
 Want to learn more about the AgenaTrader indicators? We've got the resources to help you get started. 
 
--   [*Data*]
+-   [Data](./data.md)
     -   [*Bars (Candles)*]
     -   [*Data Series*]
     -   [*Open*]
@@ -12,10 +12,10 @@ Want to learn more about the AgenaTrader indicators? We've got the resources to 
     -   [*Median*]
     -   [*Typical*]
     -   [*Weighted*]
--   [Indicators & Oscillators]
+-   [Indicators & Oscillators](./indicators_oscillators.md)
     -   [Accumulation/Distribution (ADL)]
     -   [Adaptive Price Zone (APZ)]
-    -   [Aroon]
+    -   [Aroon](./indicators_oscillators.md#Aroon)
     -   [Aroon Oscillator]
     -   [Average Directional Index (ADX)]
     -   [Average Directional Movement Rating (ADXR)]

@@ -15,7 +15,7 @@ Indicators can be used in
 
 For each indicator you will find a brief description of its interpretation, operation and functionality, a graphical representation on a chart and further technical details for its usage with AgenaScript.
 
-<img src=".//images/image1.png" width="597" height="511" />
+<img src=".//media/image1.png" width="597" height="511" />
 
 Accumulation/Distribution (ADL)
 -------------------------------
@@ -60,7 +60,7 @@ input Input data series for the indicator
 
 ### Visualization
 
-<img src=".//images/image2.png" width="491" height="408" />
+<img src=".//media/image2.png" width="491" height="408" />
 
 ### Example
 
@@ -119,7 +119,7 @@ period Number of bars included in the calculation
 
 ### Visualization
 
-<img src=".//images/image3.png" width="492" height="407" />
+<img src=".//media/image3.png" width="492" height="407" />
 
 ### Example
 
@@ -178,7 +178,7 @@ period Number of bars taken into consideration when calculating the values
 
 ### Visualization
 
-<img src=".//images/image4.png" width="491" height="407" />
+<img src=".//media/image4.png" width="491" height="407" />
 
 ### Example
 
@@ -223,7 +223,7 @@ period Number of bars taken into consideration for the calculations
 
 ### Visualization
 
-<img src=".//images/image5.png" width="492" height="408" />
+<img src=".//media/image5.png" width="492" height="408" />
 
 ### Example
 
@@ -274,7 +274,7 @@ period Number of bars included in the calculation
 
 ### Visualization
 
-<img src=".//images/image6.png" width="494" height="408" />
+<img src=".//media/image6.png" width="494" height="408" />
 
 ### Example
 
@@ -321,7 +321,7 @@ period Number of bars included in the calculation
 
 ### Visualization
 
-<img src=".//images/image7.png" width="491" height="406" />
+<img src=".//media/image7.png" width="491" height="406" />
 
 ### Example
 
@@ -376,7 +376,7 @@ period Number of bars included in the calculation
 
 ### Visualization
 
-<img src=".//images/image8.png" width="493" height="406" />
+<img src=".//media/image8.png" width="493" height="406" />
 
 ### Example
 
@@ -420,7 +420,7 @@ smooth Settings for the smoothing
 
 ### Visualization
 
-<img src=".//images/image9.png" width="494" height="409" />
+<img src=".//media/image9.png" width="494" height="409" />
 
 ### Example
 
@@ -487,7 +487,7 @@ period Number of bars included in the calculation
 
 ### Visualization
 
-<img src=".//images/image10.png" width="493" height="406" />
+<img src=".//media/image10.png" width="493" height="406" />
 
 ### Example
 
@@ -559,7 +559,7 @@ numStdDev Standard deviation
 
 ### Visualization
 
-<img src=".//images/image11.png" width="532" height="638" />
+<img src=".//media/image11.png" width="532" height="638" />
 
 ### Example
 
@@ -632,7 +632,7 @@ numStdDev Standard deviation
 
 ### Visualization
 
-<img src=".//images/image12.png" width="524" height="604" />
+<img src=".//media/image12.png" width="524" height="604" />
 
 ### Example
 
@@ -656,7 +656,7 @@ BollingerMTF can only be used for display in the chart and cannot be applied/imp
 
 The image shows a 5-minute chart with a 60-minute Bollinger band
 
-<img src=".//images/image13.png" width="510" height="467" />
+<img src=".//media/image13.png" width="510" height="467" />
 
 BuySellPressure
 ---------------
@@ -707,7 +707,7 @@ input Input data series for the indicator
 
 ### Visualization
 
-<img src=".//images/image14.png" width="626" height="572" />
+<img src=".//media/image14.png" width="626" height="572" />
 
 ### Example
 
@@ -766,7 +766,7 @@ input Input data series for the indicator
 
 ### Visualization
 
-<img src=".//images/image15.png" width="388" height="340" />
+<img src=".//media/image15.png" width="388" height="340" />
 
 ### Example
 
@@ -866,7 +866,7 @@ When using this method with an index (e.g. **CandleStickPattern**(...)\[**int** 
 
 ### Visualization
 
-<img src=".//images/image16.png" width="427" height="385" />
+<img src=".//media/image16.png" width="427" height="385" />
 
 ### Example
 
@@ -913,7 +913,7 @@ period Number of bars included in the calculation
 
 ### Visualization
 
-<img src=".//images/image17.png" width="490" height="404" />
+<img src=".//media/image17.png" width="490" height="404" />
 
 ### Example
 
@@ -958,7 +958,7 @@ slow Number of bars included in the calculation for the slow EMA
 
 ### Visualization
 
-<img src=".//images/image18.png" width="492" height="408" />
+<img src=".//media/image18.png" width="492" height="408" />
 
 ### Example
 
@@ -1002,7 +1002,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-<img src=".//images/image19.png" width="486" height="547" />
+<img src=".//media/image19.png" width="486" height="547" />
 
 ### Example
 
@@ -1050,7 +1050,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-<img src=".//images/image20.png" width="491" height="406" />
+<img src=".//media/image20.png" width="491" height="406" />
 
 ### Example
 
@@ -1101,7 +1101,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-<img src=".//images/image21.png" width="492" height="406" />
+<img src=".//media/image21.png" width="492" height="406" />
 
 ### Example
 
@@ -1160,7 +1160,7 @@ input Input data series for the indicator
 
 ### Visualization
 
-<img src=".//images/image22.png" width="628" height="641" />
+<img src=".//media/image22.png" width="628" height="641" />
 
 ### Example
 
@@ -1223,7 +1223,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-<img src=".//images/image23.png" width="486" height="408" />
+<img src=".//media/image23.png" width="486" height="408" />
 
 ### Example
 
@@ -1277,7 +1277,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-### <img src=".//images/image24.png" width="487" height="409" />
+### <img src=".//media/image24.png" width="487" height="409" />
 
 ### Example
 
@@ -1336,7 +1336,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-### <img src=".//images/image25.png" width="486" height="408" />
+### <img src=".//media/image25.png" width="486" height="408" />
 
 ### Example
 
@@ -1413,7 +1413,7 @@ EMA-Period2 Periods for the second EMA
 
 ### Visualization
 
-### <img src=".//images/image26.png" width="631" height="570" />
+### <img src=".//media/image26.png" width="631" height="570" />
 
 ### Example
 
@@ -1461,7 +1461,7 @@ smooth Smoothing settings
 
 ### Visualization
 
-### <img src=".//images/image27.png" width="490" height="406" />
+### <img src=".//media/image27.png" width="490" height="406" />
 
 ### Example
 
@@ -1510,7 +1510,7 @@ volDivisor For calculation of the box ratio (see “Calculation” below)
 
 ### Visualization
 
-### <img src=".//images/image28.png" width="486" height="407" />
+### <img src=".//media/image28.png" width="486" height="407" />
 
 ### Calculation
 
@@ -1561,7 +1561,7 @@ When using this method with an index (e.g. **FisherTransform**(10)\[**int** bars
 
 ### Visualization
 
-<img src=".//images/image29.png" width="430" height="385" />
+<img src=".//media/image29.png" width="430" height="385" />
 
 ### Example
 
@@ -1606,7 +1606,7 @@ When using this method with an index (e.g. **FOSC**(14)\[**int** barsAgo\] ), th
 
 ### Visualization
 
-### <img src=".//images/image30.png" width="487" height="407" />
+### <img src=".//media/image30.png" width="487" height="407" />
 
 ### Examples
 
@@ -1648,7 +1648,7 @@ BarsBack Number of periods in which the highest high will be searched for
 
 ### Visualization
 
-<img src=".//images/image31.png" width="498" height="394" />
+<img src=".//media/image31.png" width="498" height="394" />
 
 ### Example
 
@@ -1686,7 +1686,7 @@ BarsBack Number of periods in which the highest high will be searched for
 
 ### Visualization
 
-<img src=".//images/image32.png" width="498" height="395" />
+<img src=".//media/image32.png" width="498" height="395" />
 
 ### Example
 
@@ -1790,7 +1790,7 @@ periodSlow Number of periods used for the calculation of the Chikou line. Defaul
 
 ### Visualization
 
-### <img src=".//images/image33.png" width="627" height="441" />
+### <img src=".//media/image33.png" width="627" height="441" />
 
 InsideBarsMT
 ------------
@@ -1838,7 +1838,7 @@ Will return the low of the bar preceding the outside bar
 
 ### Visualization
 
-<img src=".//images/image34.png" width="406" height="462" />
+<img src=".//media/image34.png" width="406" height="462" />
 
 ### 
 
@@ -1849,7 +1849,7 @@ The tolerance parameter defines the number of ticks by which the inside bars may
 
 Tolerance default setting = 0.
 
-<img src=".//images/image35.png" width="351" height="214" />
+<img src=".//media/image35.png" width="351" height="214" />
 
 ### Example
 
@@ -1941,7 +1941,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-### <img src=".//images/image36.png" width="486" height="408" />
+### <img src=".//media/image36.png" width="486" height="408" />
 
 ### Calculation
 
@@ -2268,7 +2268,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-### <img src=".//images/image37.png" width="487" height="405" />
+### <img src=".//media/image37.png" width="487" height="405" />
 
 ### Example
 
@@ -2315,7 +2315,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-### <img src=".//images/image38.png" width="545" height="588" />
+### <img src=".//media/image38.png" width="545" height="588" />
 
 ### Example
 
@@ -2361,7 +2361,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-### <img src=".//images/image39.png" width="562" height="586" />
+### <img src=".//media/image39.png" width="562" height="586" />
 
 ### Example
 
@@ -2399,7 +2399,7 @@ BarsBack Number of periods within which the highest high shall be searched for
 
 ### Visualization
 
-<img src=".//images/image40.png" width="498" height="394" />
+<img src=".//media/image40.png" width="498" height="394" />
 
 ### Example
 
@@ -2437,7 +2437,7 @@ BarsBack Number of periods within which the low will be searched for
 
 ### Visualization
 
-<img src=".//images/image41.png" width="497" height="393" />
+<img src=".//media/image41.png" width="497" height="393" />
 
 ### Example
 
@@ -2508,7 +2508,7 @@ smooth Number of periods for the EMA calculation of the signal line
 
 ### Visualization
 
-### <img src=".//images/image42.png" width="487" height="409" />
+### <img src=".//media/image42.png" width="487" height="409" />
 
 ### Example
 
@@ -2581,7 +2581,7 @@ maType Type of moving average used, possible choices are:
 
 ### Visualization
 
-### <img src=".//images/image43.png" width="520" height="568" />
+### <img src=".//media/image43.png" width="520" height="568" />
 
 ### Usage
 
@@ -2612,31 +2612,31 @@ The market phases are defined according to the book series “*Der Händler*” 
 
 The market is located far away from the movement; a correction is imminent.
 
-<img src=".//images/image44.png" width="107" height="138" />
+<img src=".//media/image44.png" width="107" height="138" />
 
 **Phase 4:**
 
 The market is in correction mode. The original trend direction has not yet resumed. During the uptrend, further lows may occur, and in a downtrend, further highs may occur.
 
-<img src=".//images/image45.png" width="111" height="138" />
+<img src=".//media/image45.png" width="111" height="138" />
 
 **Phase 5:**
 
 The market is coming out of the correction and will resume its trend direction.
 
-<img src=".//images/image46.png" width="123" height="138" />
+<img src=".//media/image46.png" width="123" height="138" />
 
 **Phase 5+**
 
 The market is in Phase 5. In addition, the sub-trend is confirming a 1-2-3 pattern.
 
-<img src=".//images/image47.png" width="142" height="138" />
+<img src=".//media/image47.png" width="142" height="138" />
 
 **Phase 5+ (Prom Queen)**
 
 The term Prom Queen is also taken from the book series “*Der Händler*”. A 5+ trend phase is classified by an uptrend correction move running up to point 2. The correction zone is marked in grey in the following image.
 
-<img src=".//images/image48.png" width="160" height="138" />
+<img src=".//media/image48.png" width="160" height="138" />
 
 Market phases 1, 2, 6, and 9 are not relevant for successful trading.
 
@@ -2644,7 +2644,7 @@ Market phases 1, 2, 6, and 9 are not relevant for successful trading.
 
 No parameters are required.
 
-<img src=".//images/image49.png" width="432" height="503" />
+<img src=".//media/image49.png" width="432" height="503" />
 
 ### Usage in AgenaScript
 
@@ -2678,7 +2678,7 @@ When using market phases within AgenaScript, the indicator provides a data serie
 
 You can use the indicator as a filter by using the signals of other indicators when they are inside the market phases 55 or 66 (long):
 
-<img src=".//images/image50.png" width="632" height="621" />
+<img src=".//media/image50.png" width="632" height="621" />
 
 Momentum (MOM)
 --------------
@@ -2722,7 +2722,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-<img src=".//images/image51.png" width="506" height="405" />
+<img src=".//media/image51.png" width="506" height="405" />
 
 ### Example
 
@@ -2769,7 +2769,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-### <img src=".//images/image52.png" width="488" height="408" />
+### <img src=".//media/image52.png" width="488" height="408" />
 
 ### Example
 
@@ -2868,7 +2868,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-### <img src=".//images/image53.png" width="523" height="565" />
+### <img src=".//media/image53.png" width="523" height="565" />
 
 ### Calculation
 
@@ -2918,7 +2918,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-### <img src=".//images/image54.png" width="483" height="407" />
+### <img src=".//media/image54.png" width="483" height="407" />
 
 ### Calculation
 
@@ -2947,7 +2947,7 @@ Also see [*BollingerMTF*], [*SmaMTF*].
 
 A 5-minute chart with an EMA(20) calculated with hourly bars as the underlying input:
 
-<img src=".//images/image55.png" width="513" height="469" />
+<img src=".//media/image55.png" width="513" height="469" />
 
 HMA - Hull Moving Average
 -------------------------
@@ -2984,7 +2984,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-### <img src=".//images/image56.png" width="480" height="406" />
+### <img src=".//media/image56.png" width="480" height="406" />
 
 ### Calculation
 
@@ -3048,7 +3048,7 @@ slow Long period
 
 ### Visualization
 
-### <img src=".//images/image57.png" width="482" height="408" />
+### <img src=".//media/image57.png" width="482" height="408" />
 
 ### Example
 
@@ -3109,7 +3109,7 @@ slowLimit Lower limit for the alpha value
 
 ### Visualization
 
-### <img src=".//images/image58.png" width="483" height="408" />
+### <img src=".//media/image58.png" width="483" height="408" />
 
 ### Example
 
@@ -3163,7 +3163,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-### <img src=".//images/image59.png" width="482" height="407" />
+### <img src=".//media/image59.png" width="482" height="407" />
 
 ### Calculation
 
@@ -3188,7 +3188,7 @@ See [*BollingerMTF*], [*EmaMTF*].
 
 The image shows a 5-minute chart with an SMA (14) calculated on 4-hour bars
 
-<img src=".//images/image60.png" width="514" height="468" />
+<img src=".//media/image60.png" width="514" height="468" />
 
 SMMA - Smoothed Moving Average
 ------------------------------
@@ -3232,7 +3232,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-### <img src=".//images/image61.png" width="532" height="509" />
+### <img src=".//media/image61.png" width="532" height="509" />
 
 ### Example
 
@@ -3273,7 +3273,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-### <img src=".//images/image62.png" width="483" height="413" />
+### <img src=".//media/image62.png" width="483" height="413" />
 
 ### Example
 
@@ -3314,7 +3314,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-### <img src=".//images/image63.png" width="484" height="404" />
+### <img src=".//media/image63.png" width="484" height="404" />
 
 ### Example
 
@@ -3365,7 +3365,7 @@ signal period Number of bars included in the signal line calculation
 
 ### Visualization
 
-### <img src=".//images/image64.png" width="480" height="408" />
+### <img src=".//media/image64.png" width="480" height="408" />
 
 ### Example
 
@@ -3414,7 +3414,7 @@ vFactor Volume factor (multiplier)
 
 ### Visualization
 
-### <img src=".//images/image65.png" width="531" height="550" />
+### <img src=".//media/image65.png" width="531" height="550" />
 
 ### Example
 
@@ -3460,7 +3460,7 @@ volatility period Number of bars included in the calculation for the signal line
 
 ### Visualization
 
-### <img src=".//images/image66.png" width="482" height="410" />
+### <img src=".//media/image66.png" width="482" height="410" />
 
 ### Example
 
@@ -3499,7 +3499,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-### <img src=".//images/image67.png" width="476" height="405" />
+### <img src=".//media/image67.png" width="476" height="405" />
 
 ### Example
 
@@ -3542,7 +3542,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-<img src=".//images/image68.png" width="475" height="408" />
+<img src=".//media/image68.png" width="475" height="408" />
 
 ### Example
 
@@ -3585,7 +3585,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-<img src=".//images/image69.png" width="477" height="404" />
+<img src=".//media/image69.png" width="477" height="404" />
 
 ### Example
 
@@ -3639,7 +3639,7 @@ higherLow Additional condition (true): continuously rising lows
 
 ### Visualization
 
-<img src=".//images/image70.png" width="506" height="382" />
+<img src=".//media/image70.png" width="506" height="382" />
 
 ### Example
 
@@ -3697,7 +3697,7 @@ lowerLow Additional condition (true); continuously falling lows
 
 ### Visualization
 
-<img src=".//images/image71.png" width="502" height="377" />
+<img src=".//media/image71.png" width="502" height="377" />
 
 ### Example
 
@@ -3744,7 +3744,7 @@ input Input data series for the indicator
 
 ### Visualization
 
-<img src=".//images/image72.png" width="474" height="409" />
+<img src=".//media/image72.png" width="474" height="409" />
 
 ### Example
 
@@ -3815,13 +3815,13 @@ For the default settings, the trend T2 is enabled by default.
 
 The depiction in the chart may change with the changing market movements. If the market moves below the last point 3 and breaks the uptrend, the point is marked with a “3?”. The newly created low becomes the new point 2 and the last point 2 becomes point 1.
 
-<img src=".//images/image73.png" width="548" height="529" />
+<img src=".//media/image73.png" width="548" height="529" />
 
 The parameter settings are not relevant for the display in the chart and are primarily used for the Condition Escort.
 
 The depiction in the chart is primarily influenced by the settings “Display 123” and “Display Lines”.
 
-<img src=".//images/image74.png" width="608" height="596" />
+<img src=".//media/image74.png" width="608" height="596" />
 
 The settings highlighted in yellow have no influence on the chart. No changes need to be made.
 
@@ -3948,7 +3948,7 @@ When using this method with an index (e.g. **ParabolicSAR**(...)\[**int** barsAg
 
 ### Visualization
 
-<img src=".//images/image75.png" width="506" height="406" />
+<img src=".//media/image75.png" width="506" height="406" />
 
 ### Example
 
@@ -4003,7 +4003,7 @@ smooth Number of bars for the calculation of the EMA signal line
 
 ### Visualization
 
-<img src=".//images/image76.png" width="475" height="407" />
+<img src=".//media/image76.png" width="475" height="407" />
 
 ### Example
 
@@ -4063,7 +4063,7 @@ percent Difference in % for the bands (from the input value)
 
 ### Visualization
 
-<img src=".//images/image77.png" width="486" height="551" />
+<img src=".//media/image77.png" width="486" height="551" />
 
 ### Example
 
@@ -4159,7 +4159,7 @@ This class has the following public methods (as data series), which all return d
 
 ### Visualization
 
-<img src=".//images/image78.png" width="520" height="479" />
+<img src=".//media/image78.png" width="520" height="479" />
 
 ### Example
 
@@ -4292,7 +4292,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-<img src=".//images/image79.png" width="478" height="408" />
+<img src=".//media/image79.png" width="478" height="408" />
 
 ### Example
 
@@ -4335,7 +4335,7 @@ smooth Number of bars used for the calculation of the EMA signal line
 
 ### Visualization
 
-<img src=".//images/image80.png" width="444" height="387" />
+<img src=".//media/image80.png" width="444" height="387" />
 
 ### Example
 
@@ -4376,7 +4376,7 @@ input Input data series for the indicator
 
 ### Visualization
 
-<img src=".//images/image81.png" width="443" height="384" />
+<img src=".//media/image81.png" width="443" height="384" />
 
 ### Example
 
@@ -4429,7 +4429,7 @@ smooth Number of bars used for smoothing the indicator (using an EMA)
 
 ### Visualization
 
-<img src=".//images/image82.png" width="463" height="407" />
+<img src=".//media/image82.png" width="463" height="407" />
 
 ### Example
 
@@ -4479,7 +4479,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-<img src=".//images/image83.png" width="464" height="405" />
+<img src=".//media/image83.png" width="464" height="405" />
 
 ### Example
 
@@ -4534,7 +4534,7 @@ eMA2 Number of periods for the second EMA
 
 ### Visualization
 
-<img src=".//images/image84.png" width="501" height="405" />
+<img src=".//media/image84.png" width="501" height="405" />
 
 ### Example
 
@@ -4589,7 +4589,7 @@ smooth Number of periods for the smoothing
 
 ### Visualization
 
-<img src=".//images/image85.png" width="468" height="410" />
+<img src=".//media/image85.png" width="468" height="410" />
 
 ### Example
 
@@ -4634,7 +4634,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-<img src=".//images/image86.png" width="426" height="436" />
+<img src=".//media/image86.png" width="426" height="436" />
 
 ### Example
 
@@ -4682,7 +4682,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-<img src=".//images/image87.png" width="458" height="408" />
+<img src=".//media/image87.png" width="458" height="408" />
 
 ### Example
 
@@ -4742,13 +4742,13 @@ tolerance See the following description below
 
 ### Visualization
 
-<img src=".//images/image88.png" width="440" height="481" />
+<img src=".//media/image88.png" width="440" height="481" />
 
 ### The tolerance parameter
 
 The reversal bars must exceed their previous bars by at least 1 tick. The tolerance parameter allows you to define/add a certain number of ticks; the parameter is set to 0 by default, but in a sideways market this will lead to a relatively large number of reversal bars being marked.
 
-<img src=".//images/image89.png" width="394" height="306" />
+<img src=".//media/image89.png" width="394" height="306" />
 
 **Example**
 
@@ -4803,7 +4803,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-<img src=".//images/image90.png" width="484" height="477" />
+<img src=".//media/image90.png" width="484" height="477" />
 
 ### Example
 
@@ -4816,7 +4816,7 @@ StandardDeviation(StdDev)
 
 ### Description
 
-The Standard Deviation <img src=".//images/image91.png" width="21" height="12" /> (StdDev) is a tool used in statistics and probability calculation, and is a measurement of the dispersion of the values of a random variable around its median value. The Standard Deviation is used to calculate many indicators, such as the Bollinger Bands etc.
+The Standard Deviation <img src=".//media/image91.png" width="21" height="12" /> (StdDev) is a tool used in statistics and probability calculation, and is a measurement of the dispersion of the values of a random variable around its median value. The Standard Deviation is used to calculate many indicators, such as the Bollinger Bands etc.
 
 ### Interpretation
 
@@ -4850,7 +4850,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-<img src=".//images/image92.png" width="458" height="408" />
+<img src=".//media/image92.png" width="458" height="408" />
 
 ### Example
 
@@ -4910,7 +4910,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-<img src=".//images/image93.png" width="458" height="409" />
+<img src=".//media/image93.png" width="458" height="409" />
 
 ### Example
 
@@ -4987,7 +4987,7 @@ smooth Number of periods for the smoothing of %D
 
 ### Visualization
 
-<img src=".//images/image94.png" width="457" height="407" />
+<img src=".//media/image94.png" width="457" height="407" />
 
 ### Example
 
@@ -5050,7 +5050,7 @@ periodK Number of periods included in the calculation of %K
 
 ### Visualization
 
-<img src=".//images/image95.png" width="458" height="401" />
+<img src=".//media/image95.png" width="458" height="401" />
 
 ### Example
 
@@ -5101,7 +5101,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-<img src=".//images/image96.png" width="458" height="405" />
+<img src=".//media/image96.png" width="458" height="405" />
 
 ### Example
 
@@ -5140,7 +5140,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-<img src=".//images/image97.png" width="493" height="382" />
+<img src=".//media/image97.png" width="493" height="382" />
 
 ### Example
 
@@ -5239,7 +5239,7 @@ When using this method with an index (e.g. **SuperTrend**(...).UpTrend\[**int** 
 
 ### Visualization
 
-<img src=".//images/image98.png" width="579" height="529" />
+<img src=".//media/image98.png" width="579" height="529" />
 
 ### Example
 
@@ -5287,7 +5287,7 @@ Once broken, these areas tend to reverse their function, meaning that a broken s
 
 ### Visualization
 
-<img src=".//images/image99.png" width="628" height="467" />
+<img src=".//media/image99.png" width="628" height="467" />
 
 Swing
 -----
@@ -5336,7 +5336,7 @@ When using this method with an index (e.g. **Swing**(5)\[**int** barsAgo\] ), th
 
 ### Visualization
 
-<img src=".//images/image100.png" width="501" height="407" />
+<img src=".//media/image100.png" width="501" height="407" />
 
 ### Example
 
@@ -5391,7 +5391,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-<img src=".//images/image101.png" width="460" height="406" />
+<img src=".//media/image101.png" width="460" height="406" />
 
 ### Example
 
@@ -5431,7 +5431,7 @@ When using this method with an index (e.g. **ConstantLines**(1,2,3,4)\[**int** b
 
 ### Visualization
 
-<img src=".//images/image102.png" width="496" height="364" />
+<img src=".//media/image102.png" width="496" height="364" />
 
 ### 
 
@@ -5482,7 +5482,7 @@ When using this method with an index (e.g. **CurrentDayOHL**.CurrentOpen(...)\[*
 
 ### Visualization
 
-<img src=".//images/image103.png" width="428" height="384" />
+<img src=".//media/image103.png" width="428" height="384" />
 
 ### Example
 
@@ -5504,11 +5504,11 @@ See [*Momentum*], [*ROC*].
 **Regarding usage with a scanner:
 **To get a list of your favorite stocks and their daily percentual changes, please set CalculateOnBarClose to “False”, TimeFrame to “1 Day”, Calculation mode to “Percent” and Days ago to “0”.
 
-<img src=".//images/image104.png" width="281" height="308" />
+<img src=".//media/image104.png" width="281" height="308" />
 
 The result will look similar to this:
 
-<img src=".//images/image105.png" width="223" height="129" />
+<img src=".//media/image105.png" width="223" height="129" />
 
 ### 
 
@@ -5546,7 +5546,7 @@ daysAgo Number of days in the past
 
 ### Visualization
 
-### <img src=".//images/image106.png" width="626" height="588" />
+### <img src=".//media/image106.png" width="626" height="588" />
 
 ### Example
 
@@ -5583,7 +5583,7 @@ See [*CurrentDayOHL*], [*PriorDayOHLC*].
 
 ### Visualization
 
-<img src=".//images/image107.png" width="414" height="425" />
+<img src=".//media/image107.png" width="414" height="425" />
 
 DayLinesAdv
 -----------
@@ -5606,20 +5606,20 @@ This is generally applicable to traders in different time zones. For example, a 
 To add the couple of hours that are transcribed on Sunday to the previous Friday’s session, you simply need to set IncludeWeekends = true.
 The first picture shows IncludeWeekends = false:
 
-<img src=".//images/image108.png" width="632" height="644" />
+<img src=".//media/image108.png" width="632" height="644" />
 
 The second picture shows Include Weekends = true:
 
-<img src=".//images/image109.png" width="630" height="569" />
+<img src=".//media/image109.png" width="630" height="569" />
 
 **Show Prices parameter
 **If set to “true”, prices are displayed in addition to the line itself.
 
-<img src=".//images/image110.png" width="630" height="540" />
+<img src=".//media/image110.png" width="630" height="540" />
 
 **Extend high lines and Extend low lines parameters**. If set to “true”, the highs and lows that have not yet been „breached“ by the price will be extended onto the right-hand side of the chart using dotted lines.
 
-<img src=".//images/image111.png" width="535" height="584" />
+<img src=".//media/image111.png" width="535" height="584" />
 
 GetDayBar
 ---------
@@ -5690,7 +5690,7 @@ The background of the chart may (depending on the underlying instrument) display
 
 ### Visualization
 
-<img src=".//images/image112.png" width="627" height="458" />
+<img src=".//media/image112.png" width="627" height="458" />
 
 Maximum (MAX)
 -------------
@@ -5723,7 +5723,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-<img src=".//images/image113.png" width="506" height="383" />
+<img src=".//media/image113.png" width="506" height="383" />
 
 ### Example
 
@@ -5764,7 +5764,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-<img src=".//images/image114.png" width="506" height="382" />
+<img src=".//media/image114.png" width="506" height="382" />
 
 ### Example
 
@@ -5790,7 +5790,7 @@ TimeFrameValue Value of the timeframe (number)
 
 ### Visualization
 
-<img src=".//images/image115.png" width="501" height="530" />
+<img src=".//media/image115.png" width="501" height="530" />
 
 PriceLine
 ---------
@@ -5805,7 +5805,7 @@ The colors and line widths can be freely modified.
 
 ### Visualization
 
-<img src=".//images/image116.png" width="533" height="587" />
+<img src=".//media/image116.png" width="533" height="587" />
 
 PriorDayOHLC
 ------------
@@ -5862,7 +5862,7 @@ When using this method with an index (e.g. **PriorDayOHLC**().PriorHigh\[**int**
 
 ### Visualization
 
-<img src=".//images/image117.png" width="462" height="499" />
+<img src=".//media/image117.png" width="462" height="499" />
 
 ### Example
 
@@ -5892,7 +5892,7 @@ See [*PriorDayOHLCext*].
 
 ### Visualization
 
-<img src=".//images/image118.png" width="478" height="402" />
+<img src=".//media/image118.png" width="478" height="402" />
 
 ShowBidAsk
 ----------
@@ -5903,7 +5903,7 @@ The indicator ShowBidAsk shows the current bid and ask prices as well as the cor
 
 ### Visualization
 
-<img src=".//images/image119.png" width="516" height="539" />
+<img src=".//media/image119.png" width="516" height="539" />
 
 TickCounter
 -----------
@@ -5918,7 +5918,7 @@ When programming your own scripts, please use Bars, TickCount or Bars, PercentCo
 
 ### Visualization
 
-<img src=".//images/image120.png" width="518" height="507" />
+<img src=".//media/image120.png" width="518" height="507" />
 
 True Strength Index (TSI)
 -------------------------
@@ -5962,7 +5962,7 @@ slow Number of bars included in the calculation of the slow EMA
 
 ### Visualization
 
-<img src=".//images/image121.png" width="446" height="407" />
+<img src=".//media/image121.png" width="446" height="407" />
 
 ### Example
 
@@ -6019,7 +6019,7 @@ When using this method with an index (e.g. **UltimateOscillator** (5)\[**int** b
 
 ### Visualization
 
-<img src=".//images/image122.png" width="502" height="407" />
+<img src=".//media/image122.png" width="502" height="407" />
 
 ### Example
 
@@ -6060,7 +6060,7 @@ input Input data series for the indicator
 
 ### Visualization
 
-<img src=".//images/image123.png" width="448" height="406" />
+<img src=".//media/image123.png" width="448" height="406" />
 
 ### Example
 
@@ -6120,7 +6120,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-<img src=".//images/image124.png" width="476" height="407" />
+<img src=".//media/image124.png" width="476" height="407" />
 
 ### Example
 
@@ -6168,7 +6168,7 @@ slow Number of bars for the calculation of the slow moving average
 
 ### Visualization
 
-<img src=".//images/image125.png" width="446" height="406" />
+<img src=".//media/image125.png" width="446" height="406" />
 
 ### Example
 
@@ -6193,7 +6193,7 @@ Prices with especially high trading volume will have a more satiated accumulatio
 
 ### Visualization
 
-<img src=".//images/image126.png" width="454" height="484" />
+<img src=".//media/image126.png" width="454" height="484" />
 
 Volume Rate of Change (VROC)
 ----------------------------
@@ -6236,7 +6236,7 @@ smooth Number of Bars included in the calculation for the smoothing
 
 ### Visualization
 
-<img src=".//images/image127.png" width="446" height="407" />
+<img src=".//media/image127.png" width="446" height="407" />
 
 ### Example
 
@@ -6276,7 +6276,7 @@ input Input data series for the indicator
 
 ### Visualization
 
-<img src=".//images/image128.png" width="493" height="511" />
+<img src=".//media/image128.png" width="493" height="511" />
 
 ### Example
 
@@ -6339,7 +6339,7 @@ period Number of bars included in the calculations
 
 ### Visualization
 
-<img src=".//images/image129.png" width="447" height="407" />
+<img src=".//media/image129.png" width="447" height="407" />
 
 ### Example
 
@@ -6400,7 +6400,7 @@ A return value of 0 indicates that no high or low point has been found yet.
 
 ### Visualization
 
-<img src=".//images/image130.png" width="447" height="405" />
+<img src=".//media/image130.png" width="447" height="405" />
 
 ### Example
 

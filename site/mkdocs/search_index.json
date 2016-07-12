@@ -1,0 +1,14 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Welcome to the official AgenaIndicator repository!\n\n\nWant to learn more about the AgenaTrader indicators? We've got the resources to help you get started.", 
+            "title": "Lets start"
+        }, 
+        {
+            "location": "/#welcome-to-the-official-agenaindicator-repository", 
+            "text": "Want to learn more about the AgenaTrader indicators? We've got the resources to help you get started.", 
+            "title": "Welcome to the official AgenaIndicator repository!"
+        }
+    ]
+}

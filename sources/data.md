@@ -5,8 +5,8 @@ In this context, data is understood as information loaded from outside sources a
 
 More detailed information can be found under the respective keywords:
 
--   *Bars*
--   *DataSeries*
+-   *Bars (Candles)*
+-   *Data Series*
 -   *Instruments*
  
 
@@ -119,7 +119,6 @@ barsAgo Index value (see [*Bars*])
 ### usage
 ```cs
 High
-
 High[int barsAgo]
 ```
 
@@ -130,15 +129,12 @@ The outputted value depends on the property *CalculateOnBarClose*.
 ### Example
 ```cs
 // High price of the current period
-
 Print(Time[0] + " " + High[0]);
 
 // High price of the bar 5 periods ago
-
 Print(Time[5] + " " + High[5]);
 
 // Current value for the SMA 14 using the high prices (rounded)
-
 Print("SMA(14) calculated using the high values: " + Instrument.Round2TickSize(SMA(High, 14)[0]));
 ```
 
@@ -158,7 +154,6 @@ barsAgo Index value (see [*Bars*])
 ### Usage
 ```cs
 Low
-
 Low[int barsAgo]
 ```
 
@@ -169,15 +164,12 @@ The outputted value depends on the property *CalculateOnBarClose*.
 ### Example
 ```cs
 // Low prices of the current period
-
 Print(Time[0] + " " + Low[0];
 
 // Low prices of the bar 5 periods ago
-
 Print(Time[5] + " " + Low[5]);
 
 // Current value for the SMA 14 calculated using the low prices
-
 Print("SMA(14) calculated using the low prices: " + Instrument.Round2TickSize(SMA(Low, 14)[0]));
 ```
 
@@ -197,7 +189,6 @@ barsAgo Index value (see [*Bars*])
 ### Usage
 ```cs
 Close
-
 Close[int barsAgo]
 ```
 
@@ -210,19 +201,15 @@ Indicators are generally calculated using the closing prices. The selection of t
 ### Example
 ```cs
 // Closing prices for the current period
-
 Print(Time[0] + " " + Close[0]);
 
 // Closing prices for the bar 5 periods ago
-
 Print(Time[5] + " " + Close[5]);
 
 // Current value for the SMA 14 using the closing prices
-
 Print("SMA(14) calculated using the closing prices: " + Instrument.Round2TickSize(SMA(Close, 14)[0]));
 
 // Close can be omitted since it is used by default
-
 Print("SMA(14) calculated using the closing prices: " + Instrument.Round2TickSize(SMA(14)[0]));
 ```
 
@@ -242,7 +229,6 @@ barsAgo Index value (see [*Bars*])
 ### Usage
 ```cs
 Volume
-
 Volume[int barsAgo]
 ```
 
@@ -257,16 +243,13 @@ E.g. Vol()\[3\] will deliver the same value as Volume\[3\].
 ### Example
 ```cs
 // Volume of the current period
-
 Print(Time[0] + " " + Volume[0]]);
 
 // Volume of the bar 5 periods ago
-
-**Print**(Time[5] + " " + Volume[5]);
+Print(Time[5] + " " + Volume[5]);
 
 // Current value for the SMA14 based on the volume
-
-**Print**("SMA(14) calculated using the volume: " + Instrument.Round2TickSize(SMA(Volume, 14)[0]));
+Print("SMA(14) calculated using the volume: " + Instrument.Round2TickSize(SMA(Volume, 14)[0]));
 ```
 
 
@@ -288,7 +271,6 @@ barsAgo Index value (see [*Bars*])
 ### Usage
 ```cs
 Median
-
 Median[int barsAgo]
 ```
 
@@ -304,15 +286,12 @@ Further information on median, typical and weighted:
 ### Example
 ```cs
 // Median price for the current period
-
 Print(Time[0] + " " + Median[0]);
 
 // Median price for the bar 5 periods ago
-
 Print(Time[5] + " " + Median[5]);
 
 // Current value for the SMA 14 calculated using the median prices
-
 Print("SMA(14) calculated using the median prices: " + Instrument.Round2TickSize(SMA(Median, 14)\[0\]));
 ```
 
@@ -335,7 +314,6 @@ barsAgo Index value (see [*Bars*])
 ### Usage
 ```cs
 Typical
-
 Typical[int barsAgo]
 ```
 
@@ -350,15 +328,12 @@ Further information regarding median, typical and weighted:
 ### Example
 ```cs
 // Typical price of the current period
-
 Print(Time[0] + " " + Typical[0]);
 
 // Typical price for the bar 5 periods ago
-
 Print(Time[5] + " " + Typical[5]);
 
 // Current value for the SMA 14 using the typical price
-
 Print("SMA(14)calculated using the typical prices: " + Instrument.Round2TickSize(SMA(Typical, 14)[0]));
 ```
 
@@ -378,7 +353,6 @@ barsAgo Index value (see [*Bars*])
 ### Usage
 ```cs
 Weighted
-
 Weighted[int barsAgo]
 ```
 
@@ -393,15 +367,12 @@ Further information on median, typical and weighted:
 ### Example
 ```cs
 // Weighted price for the current period
-
 Print(Time[0] + " " + Weighted[0]);
 
 // Weighted price of the bar 5 periods ago
-
 Print(Time[5] + " " + Weighted[5]);
 
 // Current value for the SMA(14) using the weighted price
-
 Print("SMA(14) calculated using the weighted price: " + Instrument.Round2TickSize(SMA(Weighted, 14)[0]));
 ```
 

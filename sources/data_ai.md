@@ -147,11 +147,10 @@ More detailed information can be found under the respective keywords:
 
 -   [*Bars*]
 
--   *DataSeries*
+-   [*DataSeries*]
 
--   *Instruments*
+-   [*Instruments*]
 
--   
 
 Bars (Candles)
 --------------
@@ -225,13 +224,10 @@ barsAgo Index value (see [*Bars*])
 
 ### Usage
 
-\`\`\`cs
-
+```cs
 Open
-
 Open\[**int** barsAgo\]
-
-\`\`\`
+```
 
 ### More information
 

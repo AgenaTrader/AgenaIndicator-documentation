@@ -5,3 +5,5 @@ site_favicon: favicon.ico
 extra_css: [custom.css]
 pages:
     - 'Lets start': 'index.md'
+    - 'Data': 'data.md'
+    - 'Indicators & Oscillators': 'indicators_oscillators.md'

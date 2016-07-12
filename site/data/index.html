@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Data - AgenaIndicator Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../custom.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Data";
+    var mkdocs_page_input_path = "data.md";
+    var mkdocs_page_url = "/data/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> AgenaIndicator Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Lets start</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Data</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#data">Data</a></li>
+                
+                    <li><a class="toctree-l4" href="#bars-candles">Bars (Candles)</a></li>
+                
+                    <li><a class="toctree-l4" href="#data-series">Data Series</a></li>
+                
+                    <li><a class="toctree-l4" href="#open">Open</a></li>
+                
+                    <li><a class="toctree-l4" href="#high">High</a></li>
+                
+                    <li><a class="toctree-l4" href="#low">Low</a></li>
+                
+                    <li><a class="toctree-l4" href="#close">Close</a></li>
+                
+                    <li><a class="toctree-l4" href="#volume">Volume</a></li>
+                
+                    <li><a class="toctree-l4" href="#median">Median</a></li>
+                
+                    <li><a class="toctree-l4" href="#typical">Typical</a></li>
+                
+                    <li><a class="toctree-l4" href="#weighted">Weighted</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../indicators_oscillators/">Indicators & Oscillators</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">AgenaIndicator Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Data</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="data">Data</h1>
+<p>In this context, data is understood as information loaded from outside sources as well as data sets originating from internally generated AgenaScripts.</p>
+<p>More detailed information can be found under the respective keywords:</p>
+<ul>
+<li>
+<p>[<em>Bars</em>]</p>
+</li>
+<li>
+<p><em>DataSeries</em></p>
+</li>
+<li>
+<p><em>Instruments</em></p>
+</li>
+<li></li>
+</ul>
+<h2 id="bars-candles">Bars (Candles)</h2>
+<h3 id="modus-operandi">Modus Operandi</h3>
+<p>A classical indicator will calculate one or multiple values using the available data series.</p>
+<p>Data series in this sense can consist of closing prices, lows, hourly charts or 10-minute periods etc.
+Each period (candle) will be assigned to a specific indicator(s).</p>
+<p>In the following examples and illustrations, we will assume an indicator value generated by something like a simple moving average.</p>
+<p>To calculate a moving average, AgenaTrader needs a data series; for this we will use the closing prices. All closing prices for the bars (candles) within a chart will be saved in a list and numerically ordered.</p>
+<p>The current closing price of the current bar will be displayed on the right edge of the chart and will be assigned the number 0. The bar to the left of it is assigned the number 1 and so on. The oldest displayed bar will have the number 500 (as an example).</p>
+<p>If a new bar is added during the current trading session, then this bar will be assigned the number 0, and the previous bar – which up to that point was bar number 0 – will now be reassigned as bar 1, and the oldest bar to the very left will have the number 501.</p>
+<p>Within a script (self-created program), the “Close” array is the list of all closing prices. The last closing price is thus Close[0] and the preceding closing price (bar to the left of the last bar) is Close[1] and so on, with the oldest candle having the value of Close[501]. The number within the square brackets here clearly denotes the index of the array. The general term used within AgenaTrader is “barsAgo”.</p>
+<p>In addition, each bar will not only have a close value, but also a [<em>High</em>], [<em>Low</em>], [<em>Open</em>], [<em>Median</em>], [<em>Typical</em>], [<em>Weighted</em>], <em>Time</em> and [<em>Volume</em>]. On a daily period timeframe, the high of the candle that occurred 10 periods ago would be High[10]; the low of the last day would be Low[1].</p>
+<p><strong>Important note:</strong></p>
+<p>The examples mentioned concern calculations that are performed at the end of a period. The values for the currently running and unfinished candles are not taken into consideration.</p>
+<p>If you want the values of the currently running and unfinished candles, you will need to set CalculateOnBarClose = false. As with the previous example, the currently running bar will receive the number 0 and so on.
+Close[0] will provide you with the most recent price transmitted by the data provider. All values of the bars High[0]…Low[0]… etc. are subject to change until the bar has been finalized and a new bar has begun. The only value that will definitely not change is Open[0].</p>
+<h2 id="data-series">Data Series</h2>
+<h3 id="description">Description</h3>
+<p>AgenaTrader differentiates between data series used for your self-programmed definitions that will hold values of various types, and on the other hand, data series which are the standard integrated series containing market data and price data for the individual data.
+The concept of data series is followed up consistently and continuously. All price data for individual bars are organized within the data series.</p>
+<p>The following data series are available:</p>
+<p>[<em>Open</em>] <em>Opens</em></p>
+<p>[<em>High</em>] <em>Highs</em></p>
+<p>[<em>Low</em>] <em>Lows</em></p>
+<p>[<em>Close</em>] <em>Closes</em></p>
+<p>[<em>Median</em>] <em>Medians</em></p>
+<p>[<em>Typical</em>] <em>Typicals</em></p>
+<p>[<em>Weighted</em>] <em>Weighteds</em></p>
+<p>Time Times</p>
+<p>TimeFrame TimeFrames</p>
+<p>[<em>Volume</em>] <em>Volumes</em></p>
+<h2 id="open">Open</h2>
+<h3 id="description_1">Description</h3>
+<p>Open is the data series in which the historical opening prices are saved.</p>
+<h3 id="parameter">Parameter</h3>
+<p>barsAgo Index value (see [<em>Bars</em>])</p>
+<h3 id="usage">Usage</h3>
+<p>Open</p>
+<p>Open[<strong>int</strong> barsAgo]</p>
+<h3 id="more-information">More information</h3>
+<p>The outputted value depends on the property <em>CalculateOnBarClose</em>.</p>
+<h3 id="example">Example</h3>
+<p>// Opening price of the current period</p>
+<p><strong>Print</strong>(Time[0] + " " + Open[0]);</p>
+<p>// Opening price of the bar that occurred 5 periods ago</p>
+<p><strong>Print</strong>(Time[5] + " " + Open[5]);</p>
+<p>// Current value of the SMA 14 above the opening price (rounded)</p>
+<p><strong>Print</strong>("SMA(14) Calculated using the opening prices: " + Instrument.<strong>Round2TickSize</strong>(<strong>SMA</strong>(Open, 14)[0]));</p>
+<h2 id="high">High</h2>
+<h3 id="description_2">Description</h3>
+<p>High is the data series in which the historical highs are saved.</p>
+<h3 id="parameter_1">Parameter</h3>
+<p>barsAgo Index value (see [<em>Bars</em>])</p>
+<h3 id="usage_1">usage</h3>
+<p>High</p>
+<p>High[<strong>int</strong> barsAgo]</p>
+<h3 id="more-information_1">More information</h3>
+<p>The outputted value depends on the property <em>CalculateOnBarClose</em>.</p>
+<h3 id="example_1">Example</h3>
+<p>// High price of the current period</p>
+<p><strong>Print</strong>(Time[0] + " " + High[0]);</p>
+<p>// High price of the bar 5 periods ago</p>
+<p><strong>Print</strong>(Time[5] + " " + High[5]);</p>
+<p>// Current value for the SMA 14 using the high prices (rounded)</p>
+<p><strong>Print</strong>("SMA(14) calculated using the high values: " + Instrument.<strong>Round2TickSize</strong>(<strong>SMA</strong>(High, 14)[0]));</p>
+<h2 id="low">Low</h2>
+<h3 id="description_3">Description</h3>
+<p>Low is the data series in which all historical lows are saved.</p>
+<h3 id="parameter_2">Parameter</h3>
+<p>barsAgo Index value (see [<em>Bars</em>])</p>
+<h3 id="usage_2">Usage</h3>
+<p>Low</p>
+<p>Low[<strong>int</strong> barsAgo]</p>
+<h3 id="more-information_2">More information</h3>
+<p>The outputted value depends on the property <em>CalculateOnBarClose</em>.</p>
+<h3 id="example_2">Example</h3>
+<p>// Low prices of the current period</p>
+<p><strong>Print</strong>(Time[0] + " " + Low[0]);</p>
+<p>// Low prices of the bar 5 periods ago</p>
+<p><strong>Print</strong>(Time[5] + " " + Low[5]);</p>
+<p>// Current value for the SMA 14 calculated using the low prices</p>
+<p><strong>Print</strong>("SMA(14) calculated using the low prices: " + Instrument.<strong>Round2TickSize</strong>(<strong>SMA</strong>(Low, 14)[0]));</p>
+<h2 id="close">Close</h2>
+<h3 id="description_4">Description</h3>
+<p>Close is the data series in which all historical closing prices are saved.</p>
+<h3 id="parameter_3">Parameter</h3>
+<p>barsAgo Index value (see [<em>Bars</em>])</p>
+<h3 id="usage_3">Usage</h3>
+<p>Close</p>
+<p>Close[<strong>int</strong> barsAgo]</p>
+<h3 id="more-information_3">More information</h3>
+<p>The outputted value depends on the property <em>CalculateOnBarClose</em>.</p>
+<p>Indicators are generally calculated using the closing prices. The selection of the input series can generally be omitted (see example below).</p>
+<h3 id="example_3">Example</h3>
+<p>// Closing prices for the current period</p>
+<p><strong>Print</strong>(Time[0] + " " + Close[0]);</p>
+<p>// Closing prices for the bar 5 periods ago</p>
+<p><strong>Print</strong>(Time[5] + " " + Close[5]);</p>
+<p>// Current value for the SMA 14 using the closing prices</p>
+<p><strong>Print</strong>("SMA(14) calculated using the closing prices: " + Instrument.<strong>Round2TickSize</strong>(<strong>SMA</strong>(Close, 14)[0]));</p>
+<p>// Close can be omitted since it is used by default</p>
+<p><strong>Print</strong>("SMA(14) calculated using the closing prices: " + Instrument.<strong>Round2TickSize</strong>(<strong>SMA</strong>(14)[0]));</p>
+<h2 id="volume">Volume</h2>
+<h3 id="description_5">Description</h3>
+<p>Volume is the data series in which the historical volume records are saved.</p>
+<h3 id="parameter_4">Parameter</h3>
+<p>barsAgo Index value (see [<em>Bars</em>])</p>
+<h3 id="usage_4">Usage</h3>
+<p>Volume</p>
+<p>Volume[<strong>int</strong> barsAgo]</p>
+<h3 id="more-information_4">More information</h3>
+<p>The outputted value depends on the property <em>CalculateOnBarClose</em>.</p>
+<p>The value delivered by the indicator [<em>VOL()</em>] is identical to the volume described here.
+E.g. Vol()[3] will deliver the same value as Volume[3].</p>
+<h3 id="example_4">Example</h3>
+<p>// Volume of the current period</p>
+<p><strong>Print</strong>(Time[0] + " " + Volume[0]);</p>
+<p>// Volume of the bar 5 periods ago</p>
+<p><strong>Print</strong>(Time[5] + " " + Volume[5]);</p>
+<p>// Current value for the SMA14 based on the volume</p>
+<p><strong>Print</strong>("SMA(14) calculated using the volume: " + Instrument.<strong>Round2TickSize</strong>(<strong>SMA</strong>(Volume, 14)[0]));</p>
+<h2 id="median">Median</h2>
+<h3 id="description_6">Description</h3>
+<p>Median is the data series in which the historical median values are saved.
+The median price is calculated as (high + low) / 2.</p>
+<p>See [<em>Typical</em>] and [<em>Weighted</em>].</p>
+<h3 id="parameter_5">Parameter</h3>
+<p>barsAgo Index value (see [<em>Bars</em>])</p>
+<h3 id="usage_5">Usage</h3>
+<p>Median</p>
+<p>Median[<strong>int</strong> barsAgo]</p>
+<h3 id="more-information_5">More information</h3>
+<p>The outputted value depends on the property <em>CalculateOnBarClose</em>.</p>
+<p>Further information on median, typical and weighted:
+[<em>http://blog.nobletrading.com/2009/12/median-price-typical-price-weighted.html</em>]</p>
+<h3 id="example_5">Example</h3>
+<p>// Median price for the current period</p>
+<p><strong>Print</strong>(Time[0] + " " + Median[0]);</p>
+<p>// Median price for the bar 5 periods ago</p>
+<p><strong>Print</strong>(Time[5] + " " + Median[5]);</p>
+<p>// Current value for the SMA 14 calculated using the median prices</p>
+<p><strong>Print</strong>("SMA(14) calculated using the median prices: " + Instrument.<strong>Round2TickSize</strong>(<strong>SMA</strong>(Median, 14)[0]));</p>
+<h2 id="typical">Typical</h2>
+<h3 id="description_7">Description</h3>
+<p>Typical is the data series in which the historical typical values are saved.</p>
+<p>The typical price of a bar is calculated as (high + low + close) / 3.</p>
+<p>See [<em>Median</em>] and [<em>Weighted</em>].</p>
+<h3 id="parameter_6">Parameter</h3>
+<p>barsAgo Index value (see [<em>Bars</em>])</p>
+<h3 id="usage_6">Usage</h3>
+<p>Typical</p>
+<p>Typical[<strong>int</strong> barsAgo]</p>
+<h3 id="more-information_6">More information</h3>
+<p>The outputted value depends on the property <em>CalculateOnBarClose</em>.</p>
+<p>Further information regarding median, typical and weighted:
+[<em>http://blog.nobletrading.com/2009/12/median-price-typical-price-weighted.html</em>]</p>
+<h3 id="example_6">Example</h3>
+<p>// Typical price of the current period</p>
+<p><strong>Print</strong>(Time[0] + " " + Typical[0]);</p>
+<p>// Typical price for the bar 5 periods ago</p>
+<p><strong>Print</strong>(Time[5] + " " + Typical[5]);</p>
+<p>// Current value for the SMA 14 using the typical price</p>
+<p><strong>Print</strong>("SMA(14)calculated using the typical prices: " + Instrument.<strong>Round2TickSize</strong>(<strong>SMA</strong>(Typical, 14)[0]));</p>
+<h2 id="weighted">Weighted</h2>
+<h3 id="description_8">Description</h3>
+<p>Weighted is the data series in which all historical weighted values are saved.</p>
+<p>The weighted price of a bar is calculated as (high + low + 2*close) / 4 and is weighted on the closing price. See [<em>Median</em>] &amp; [<em>Typical</em>].</p>
+<h3 id="parameter_7">Parameter</h3>
+<p>barsAgo Index value (see [<em>Bars</em>])</p>
+<h3 id="usage_7">Usage</h3>
+<p>Weighted</p>
+<p>Weighted[<strong>int</strong> barsAgo]</p>
+<h3 id="more-information_7">More information</h3>
+<p>The outputted value depends on the property <em>CalculateOnBarClose</em>.</p>
+<p>Further information on median, typical and weighted:
+[<em>http://blog.nobletrading.com/2009/12/median-price-typical-price-weighted.html</em>]</p>
+<h3 id="example_7">Example</h3>
+<p>// Weighted price for the current period</p>
+<p><strong>Print</strong>(Time[0] + " " + Weighted[0]);</p>
+<p>// Weighted price of the bar 5 periods ago</p>
+<p><strong>Print</strong>(Time[5] + " " + Weighted[5]);</p>
+<p>// Current value for the SMA(14) using the weighted price</p>
+<p><strong>Print</strong>("SMA(14) calculated using the weighted price: " + Instrument.<strong>Round2TickSize</strong>(<strong>SMA</strong>(Weighted, 14)[0]));</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../indicators_oscillators/" class="btn btn-neutral float-right" title="Indicators & Oscillators">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Lets start"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../indicators_oscillators/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

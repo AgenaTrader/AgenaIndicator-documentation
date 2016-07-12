@@ -1,0 +1,7 @@
+site_name: AgenaIndicator Documentation
+docs_dir: sources
+theme: readthedocs
+site_favicon: favicon.ico
+extra_css: [custom.css]
+pages:
+    - 'Lets start': 'index.md'

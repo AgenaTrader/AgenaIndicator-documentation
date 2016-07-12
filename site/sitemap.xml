@@ -9,4 +9,20 @@
     </url>
     
 
+    
+    <url>
+     <loc>None/data/</loc>
+     <lastmod>2016-07-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/indicators_oscillators/</loc>
+     <lastmod>2016-07-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
 </urlset>

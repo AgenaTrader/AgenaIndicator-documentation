@@ -1,11 +1,11 @@
 
 #Live System
-To get started, check out: [https://agenatrader.github.io/AgenaIndicator-documentation/](https://agenatrader.github.io/AgenaIndicator-documentation/)
+To get started, check out: [https://agenatrader.github.io/AgenaIndicator-documentation/site/index.html](https://agenatrader.github.io/AgenaIndicator-documentation/site/index.html)
 
 #Documentation
 MkDocs is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation.
 Documentation source files are written in [Markdown](https://guides.github.com/features/mastering-markdown/), and configured with a single YAML configuration file.
-The tutorials in the sources directory of this repository, are built with mkdocs and publicly hosted on GitHub Pages at [https://agenatrader.github.io/AgenaIndicator-documentation/](https://agenatrader.github.io/AgenaIndicator-documentation/).
+The tutorials in the sources directory of this repository, are built with mkdocs and publicly hosted on GitHub Pages at [https://agenatrader.github.io/AgenaIndicator-documentation/site/index.html](https://agenatrader.github.io/AgenaIndicator-documentation/site/index.html).
 
 ##Getting Started
 ###Installation

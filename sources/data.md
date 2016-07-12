@@ -5,11 +5,9 @@ In this context, data is understood as information loaded from outside sources a
 
 More detailed information can be found under the respective keywords:
 
--   [*Bars*]
-
--   [*DataSeries*]
-
--   [*Instruments*]
+-   *Bars*
+-   *DataSeries*
+-   *Instruments*
  
 
 Bars (Candles)
@@ -85,7 +83,6 @@ barsAgo Index value (see [*Bars*])
 ### Usage
 ```cs
 Open
-
 Open[int barsAgo]
 ```
 
@@ -97,15 +94,12 @@ The outputted value depends on the property *CalculateOnBarClose*.
 ### Example
 ```cs
 // Opening price of the current period
-
 Print(Time[0] + " " + Open[0]);
 
 // Opening price of the bar that occurred 5 periods ago
-
 Print(Time[5] + " " + Open[5]);
 
 // Current value of the SMA 14 above the opening price (rounded)
-
 Print("SMA(14) Calculated using the opening prices: " + Instrument.Round2TickSize(SMA(Open, 14)[0]));
 ```
 

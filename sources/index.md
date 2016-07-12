@@ -15,7 +15,7 @@ Want to learn more about the AgenaTrader indicators? We've got the resources to 
 -   [Indicators & Oscillators](./indicators_oscillators.md)
     -   [Accumulation/Distribution (ADL)]
     -   [Adaptive Price Zone (APZ)]
-    -   [Aroon]
+    -   [Aroon](./indicators_oscillators.md#Aroon)
     -   [Aroon Oscillator]
     -   [Average Directional Index (ADX)]
     -   [Average Directional Movement Rating (ADXR)]

@@ -9,11 +9,10 @@ More detailed information can be found under the respective keywords:
 
 -   [*Bars*]
 
--   *DataSeries*
+-   [*DataSeries*]
 
--   *Instruments*
-
--   
+-   [*Instruments*]
+ 
 
 Bars (Candles)
 --------------

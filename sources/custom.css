@@ -1,0 +1,17 @@
+body {
+    background-color: #cdcdcd;
+}
+
+
+.wy-side-nav-search {
+    background-color: #0772ac;
+}
+
+a {
+    color: #0772ac;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, legend {
+     color: #0f396b;
+}

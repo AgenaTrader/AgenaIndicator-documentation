@@ -147,10 +147,11 @@ More detailed information can be found under the respective keywords:
 
 -   [*Bars*]
 
--   [*DataSeries*]
+-   *DataSeries*
 
--   [*Instruments*]
+-   *Instruments*
 
+-   
 
 Bars (Candles)
 --------------
@@ -224,18 +225,15 @@ barsAgo Index value (see [*Bars*])
 
 ### Usage
 
-```cs
 Open
+
 Open\[**int** barsAgo\]
-```
 
 ### More information
 
 The outputted value depends on the property *CalculateOnBarClose*.
 
 ### Example
-
-\`\`\`cs
 
 // Opening price of the current period
 
@@ -248,8 +246,6 @@ The outputted value depends on the property *CalculateOnBarClose*.
 // Current value of the SMA 14 above the opening price (rounded)
 
 **Print**("SMA(14) Calculated using the opening prices: " + Instrument.**Round2TickSize**(**SMA**(Open, 14)\[0\]));
-
-\`\`\`
 
 High
 ----
@@ -264,13 +260,9 @@ barsAgo Index value (see [*Bars*])
 
 ### usage
 
-### \`\`\`cs
-
 High
 
 High\[**int** barsAgo\]
-
-### \`\`\`
 
 ### More information
 

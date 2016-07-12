@@ -39,9 +39,9 @@ The concept of data series is followed up consistently and continuously. All pri
 
 The following data series are available:
 
-[*Open*](Opens)
+[*Open*](./data.md#Open)
 
-[*High*] *Highs*
+[*High*]
 
 [*Low*] *Lows*
 

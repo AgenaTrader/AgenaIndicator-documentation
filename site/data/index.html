@@ -75,7 +75,18 @@
                 
                     <li><a class="toctree-l4" href="#data-series">Data Series</a></li>
                 
-                    <li><a class="toctree-l4" href="#open">Open</a></li>
+            
+                <li class="toctree-l3"><a href="#open">Open</a></li>
+                
+                    <li><a class="toctree-l4" href="#description_1">Description</a></li>
+                
+                    <li><a class="toctree-l4" href="#parameter">Parameter</a></li>
+                
+                    <li><a class="toctree-l4" href="#usage">Usage</a></li>
+                
+                    <li><a class="toctree-l4" href="#more-information">More information</a></li>
+                
+                    <li><a class="toctree-l4" href="#example">Example</a></li>
                 
                     <li><a class="toctree-l4" href="#high">High</a></li>
                 
@@ -138,18 +149,6 @@
               
                 <h1 id="data">Data</h1>
 <p>In this context, data is understood as information loaded from outside sources as well as data sets originating from internally generated AgenaScripts.</p>
-<p>More detailed information can be found under the respective keywords:</p>
-<ul>
-<li>
-<p>[<em>Bars</em>]</p>
-</li>
-<li>
-<p>[<em>DataSeries</em>]</p>
-</li>
-<li>
-<p>[<em>Instruments</em>]</p>
-</li>
-</ul>
 <h2 id="bars-candles">Bars (Candles)</h2>
 <h3 id="modus-operandi">Modus Operandi</h3>
 <p>A classical indicator will calculate one or multiple values using the available data series.</p>
@@ -170,106 +169,137 @@ Close[0] will provide you with the most recent price transmitted by the data pro
 <p>AgenaTrader differentiates between data series used for your self-programmed definitions that will hold values of various types, and on the other hand, data series which are the standard integrated series containing market data and price data for the individual data.
 The concept of data series is followed up consistently and continuously. All price data for individual bars are organized within the data series.</p>
 <p>The following data series are available:</p>
-<p>[<em>Open</em>] <em>Opens</em></p>
-<p>[<em>High</em>] <em>Highs</em></p>
-<p>[<em>Low</em>] <em>Lows</em></p>
-<p>[<em>Close</em>] <em>Closes</em></p>
-<p>[<em>Median</em>] <em>Medians</em></p>
-<p>[<em>Typical</em>] <em>Typicals</em></p>
-<p>[<em>Weighted</em>] <em>Weighteds</em></p>
+<p>[<em>Open</em>]</p>
+<p>[<em>High</em>]</p>
+<p>[<em>Low</em>]</p>
+<p>[<em>Close</em>]</p>
+<p>[<em>Median</em>]</p>
+<p>[<em>Typical</em>]</p>
+<p>[<em>Weighted</em>]</p>
 <p>Time Times</p>
 <p>TimeFrame TimeFrames</p>
-<p>[<em>Volume</em>] <em>Volumes</em></p>
-<h2 id="open">Open</h2>
+<p>[<em>Volume</em>]</p>
+<h1 id="open">Open</h1>
 <h3 id="description_1">Description</h3>
 <p>Open is the data series in which the historical opening prices are saved.</p>
 <h3 id="parameter">Parameter</h3>
 <p>barsAgo Index value (see [<em>Bars</em>])</p>
 <h3 id="usage">Usage</h3>
-<p>Open</p>
-<p>Open[<strong>int</strong> barsAgo]</p>
+<pre><code class="cs">Open
+Open[int barsAgo]
+</code></pre>
+
 <h3 id="more-information">More information</h3>
 <p>The outputted value depends on the property <em>CalculateOnBarClose</em>.</p>
 <h3 id="example">Example</h3>
-<p>// Opening price of the current period</p>
-<p><strong>Print</strong>(Time[0] + " " + Open[0]);</p>
-<p>// Opening price of the bar that occurred 5 periods ago</p>
-<p><strong>Print</strong>(Time[5] + " " + Open[5]);</p>
-<p>// Current value of the SMA 14 above the opening price (rounded)</p>
-<p><strong>Print</strong>("SMA(14) Calculated using the opening prices: " + Instrument.<strong>Round2TickSize</strong>(<strong>SMA</strong>(Open, 14)[0]));</p>
+<pre><code class="cs">// Opening price of the current period
+Print(Time[0] + &quot; &quot; + Open[0]);
+
+// Opening price of the bar that occurred 5 periods ago
+Print(Time[5] + &quot; &quot; + Open[5]);
+
+// Current value of the SMA 14 above the opening price (rounded)
+Print(&quot;SMA(14) Calculated using the opening prices: &quot; + Instrument.Round2TickSize(SMA(Open, 14)[0]));
+</code></pre>
+
 <h2 id="high">High</h2>
 <h3 id="description_2">Description</h3>
 <p>High is the data series in which the historical highs are saved.</p>
 <h3 id="parameter_1">Parameter</h3>
 <p>barsAgo Index value (see [<em>Bars</em>])</p>
 <h3 id="usage_1">usage</h3>
-<p>High</p>
-<p>High[<strong>int</strong> barsAgo]</p>
+<pre><code class="cs">High
+High[int barsAgo]
+</code></pre>
+
 <h3 id="more-information_1">More information</h3>
 <p>The outputted value depends on the property <em>CalculateOnBarClose</em>.</p>
 <h3 id="example_1">Example</h3>
-<p>// High price of the current period</p>
-<p><strong>Print</strong>(Time[0] + " " + High[0]);</p>
-<p>// High price of the bar 5 periods ago</p>
-<p><strong>Print</strong>(Time[5] + " " + High[5]);</p>
-<p>// Current value for the SMA 14 using the high prices (rounded)</p>
-<p><strong>Print</strong>("SMA(14) calculated using the high values: " + Instrument.<strong>Round2TickSize</strong>(<strong>SMA</strong>(High, 14)[0]));</p>
+<pre><code class="cs">// High price of the current period
+Print(Time[0] + &quot; &quot; + High[0]);
+
+// High price of the bar 5 periods ago
+Print(Time[5] + &quot; &quot; + High[5]);
+
+// Current value for the SMA 14 using the high prices (rounded)
+Print(&quot;SMA(14) calculated using the high values: &quot; + Instrument.Round2TickSize(SMA(High, 14)[0]));
+</code></pre>
+
 <h2 id="low">Low</h2>
 <h3 id="description_3">Description</h3>
 <p>Low is the data series in which all historical lows are saved.</p>
 <h3 id="parameter_2">Parameter</h3>
 <p>barsAgo Index value (see [<em>Bars</em>])</p>
 <h3 id="usage_2">Usage</h3>
-<p>Low</p>
-<p>Low[<strong>int</strong> barsAgo]</p>
+<pre><code class="cs">Low
+Low[int barsAgo]
+</code></pre>
+
 <h3 id="more-information_2">More information</h3>
 <p>The outputted value depends on the property <em>CalculateOnBarClose</em>.</p>
 <h3 id="example_2">Example</h3>
-<p>// Low prices of the current period</p>
-<p><strong>Print</strong>(Time[0] + " " + Low[0]);</p>
-<p>// Low prices of the bar 5 periods ago</p>
-<p><strong>Print</strong>(Time[5] + " " + Low[5]);</p>
-<p>// Current value for the SMA 14 calculated using the low prices</p>
-<p><strong>Print</strong>("SMA(14) calculated using the low prices: " + Instrument.<strong>Round2TickSize</strong>(<strong>SMA</strong>(Low, 14)[0]));</p>
+<pre><code class="cs">// Low prices of the current period
+Print(Time[0] + &quot; &quot; + Low[0];
+
+// Low prices of the bar 5 periods ago
+Print(Time[5] + &quot; &quot; + Low[5]);
+
+// Current value for the SMA 14 calculated using the low prices
+Print(&quot;SMA(14) calculated using the low prices: &quot; + Instrument.Round2TickSize(SMA(Low, 14)[0]));
+</code></pre>
+
 <h2 id="close">Close</h2>
 <h3 id="description_4">Description</h3>
 <p>Close is the data series in which all historical closing prices are saved.</p>
 <h3 id="parameter_3">Parameter</h3>
 <p>barsAgo Index value (see [<em>Bars</em>])</p>
 <h3 id="usage_3">Usage</h3>
-<p>Close</p>
-<p>Close[<strong>int</strong> barsAgo]</p>
+<pre><code class="cs">Close
+Close[int barsAgo]
+</code></pre>
+
 <h3 id="more-information_3">More information</h3>
 <p>The outputted value depends on the property <em>CalculateOnBarClose</em>.</p>
 <p>Indicators are generally calculated using the closing prices. The selection of the input series can generally be omitted (see example below).</p>
 <h3 id="example_3">Example</h3>
-<p>// Closing prices for the current period</p>
-<p><strong>Print</strong>(Time[0] + " " + Close[0]);</p>
-<p>// Closing prices for the bar 5 periods ago</p>
-<p><strong>Print</strong>(Time[5] + " " + Close[5]);</p>
-<p>// Current value for the SMA 14 using the closing prices</p>
-<p><strong>Print</strong>("SMA(14) calculated using the closing prices: " + Instrument.<strong>Round2TickSize</strong>(<strong>SMA</strong>(Close, 14)[0]));</p>
-<p>// Close can be omitted since it is used by default</p>
-<p><strong>Print</strong>("SMA(14) calculated using the closing prices: " + Instrument.<strong>Round2TickSize</strong>(<strong>SMA</strong>(14)[0]));</p>
+<pre><code class="cs">// Closing prices for the current period
+Print(Time[0] + &quot; &quot; + Close[0]);
+
+// Closing prices for the bar 5 periods ago
+Print(Time[5] + &quot; &quot; + Close[5]);
+
+// Current value for the SMA 14 using the closing prices
+Print(&quot;SMA(14) calculated using the closing prices: &quot; + Instrument.Round2TickSize(SMA(Close, 14)[0]));
+
+// Close can be omitted since it is used by default
+Print(&quot;SMA(14) calculated using the closing prices: &quot; + Instrument.Round2TickSize(SMA(14)[0]));
+</code></pre>
+
 <h2 id="volume">Volume</h2>
 <h3 id="description_5">Description</h3>
 <p>Volume is the data series in which the historical volume records are saved.</p>
 <h3 id="parameter_4">Parameter</h3>
 <p>barsAgo Index value (see [<em>Bars</em>])</p>
 <h3 id="usage_4">Usage</h3>
-<p>Volume</p>
-<p>Volume[<strong>int</strong> barsAgo]</p>
+<pre><code class="cs">Volume
+Volume[int barsAgo]
+</code></pre>
+
 <h3 id="more-information_4">More information</h3>
 <p>The outputted value depends on the property <em>CalculateOnBarClose</em>.</p>
 <p>The value delivered by the indicator [<em>VOL()</em>] is identical to the volume described here.
 E.g. Vol()[3] will deliver the same value as Volume[3].</p>
 <h3 id="example_4">Example</h3>
-<p>// Volume of the current period</p>
-<p><strong>Print</strong>(Time[0] + " " + Volume[0]);</p>
-<p>// Volume of the bar 5 periods ago</p>
-<p><strong>Print</strong>(Time[5] + " " + Volume[5]);</p>
-<p>// Current value for the SMA14 based on the volume</p>
-<p><strong>Print</strong>("SMA(14) calculated using the volume: " + Instrument.<strong>Round2TickSize</strong>(<strong>SMA</strong>(Volume, 14)[0]));</p>
+<pre><code class="cs">// Volume of the current period
+Print(Time[0] + &quot; &quot; + Volume[0]]);
+
+// Volume of the bar 5 periods ago
+Print(Time[5] + &quot; &quot; + Volume[5]);
+
+// Current value for the SMA14 based on the volume
+Print(&quot;SMA(14) calculated using the volume: &quot; + Instrument.Round2TickSize(SMA(Volume, 14)[0]));
+</code></pre>
+
 <h2 id="median">Median</h2>
 <h3 id="description_6">Description</h3>
 <p>Median is the data series in which the historical median values are saved.
@@ -278,19 +308,25 @@ The median price is calculated as (high + low) / 2.</p>
 <h3 id="parameter_5">Parameter</h3>
 <p>barsAgo Index value (see [<em>Bars</em>])</p>
 <h3 id="usage_5">Usage</h3>
-<p>Median</p>
-<p>Median[<strong>int</strong> barsAgo]</p>
+<pre><code class="cs">Median
+Median[int barsAgo]
+</code></pre>
+
 <h3 id="more-information_5">More information</h3>
 <p>The outputted value depends on the property <em>CalculateOnBarClose</em>.</p>
 <p>Further information on median, typical and weighted:
 [<em>http://blog.nobletrading.com/2009/12/median-price-typical-price-weighted.html</em>]</p>
 <h3 id="example_5">Example</h3>
-<p>// Median price for the current period</p>
-<p><strong>Print</strong>(Time[0] + " " + Median[0]);</p>
-<p>// Median price for the bar 5 periods ago</p>
-<p><strong>Print</strong>(Time[5] + " " + Median[5]);</p>
-<p>// Current value for the SMA 14 calculated using the median prices</p>
-<p><strong>Print</strong>("SMA(14) calculated using the median prices: " + Instrument.<strong>Round2TickSize</strong>(<strong>SMA</strong>(Median, 14)[0]));</p>
+<pre><code class="cs">// Median price for the current period
+Print(Time[0] + &quot; &quot; + Median[0]);
+
+// Median price for the bar 5 periods ago
+Print(Time[5] + &quot; &quot; + Median[5]);
+
+// Current value for the SMA 14 calculated using the median prices
+Print(&quot;SMA(14) calculated using the median prices: &quot; + Instrument.Round2TickSize(SMA(Median, 14)\[0\]));
+</code></pre>
+
 <h2 id="typical">Typical</h2>
 <h3 id="description_7">Description</h3>
 <p>Typical is the data series in which the historical typical values are saved.</p>
@@ -299,19 +335,25 @@ The median price is calculated as (high + low) / 2.</p>
 <h3 id="parameter_6">Parameter</h3>
 <p>barsAgo Index value (see [<em>Bars</em>])</p>
 <h3 id="usage_6">Usage</h3>
-<p>Typical</p>
-<p>Typical[<strong>int</strong> barsAgo]</p>
+<pre><code class="cs">Typical
+Typical[int barsAgo]
+</code></pre>
+
 <h3 id="more-information_6">More information</h3>
 <p>The outputted value depends on the property <em>CalculateOnBarClose</em>.</p>
 <p>Further information regarding median, typical and weighted:
 [<em>http://blog.nobletrading.com/2009/12/median-price-typical-price-weighted.html</em>]</p>
 <h3 id="example_6">Example</h3>
-<p>// Typical price of the current period</p>
-<p><strong>Print</strong>(Time[0] + " " + Typical[0]);</p>
-<p>// Typical price for the bar 5 periods ago</p>
-<p><strong>Print</strong>(Time[5] + " " + Typical[5]);</p>
-<p>// Current value for the SMA 14 using the typical price</p>
-<p><strong>Print</strong>("SMA(14)calculated using the typical prices: " + Instrument.<strong>Round2TickSize</strong>(<strong>SMA</strong>(Typical, 14)[0]));</p>
+<pre><code class="cs">// Typical price of the current period
+Print(Time[0] + &quot; &quot; + Typical[0]);
+
+// Typical price for the bar 5 periods ago
+Print(Time[5] + &quot; &quot; + Typical[5]);
+
+// Current value for the SMA 14 using the typical price
+Print(&quot;SMA(14)calculated using the typical prices: &quot; + Instrument.Round2TickSize(SMA(Typical, 14)[0]));
+</code></pre>
+
 <h2 id="weighted">Weighted</h2>
 <h3 id="description_8">Description</h3>
 <p>Weighted is the data series in which all historical weighted values are saved.</p>
@@ -319,19 +361,24 @@ The median price is calculated as (high + low) / 2.</p>
 <h3 id="parameter_7">Parameter</h3>
 <p>barsAgo Index value (see [<em>Bars</em>])</p>
 <h3 id="usage_7">Usage</h3>
-<p>Weighted</p>
-<p>Weighted[<strong>int</strong> barsAgo]</p>
+<pre><code class="cs">Weighted
+Weighted[int barsAgo]
+</code></pre>
+
 <h3 id="more-information_7">More information</h3>
 <p>The outputted value depends on the property <em>CalculateOnBarClose</em>.</p>
 <p>Further information on median, typical and weighted:
 [<em>http://blog.nobletrading.com/2009/12/median-price-typical-price-weighted.html</em>]</p>
 <h3 id="example_7">Example</h3>
-<p>// Weighted price for the current period</p>
-<p><strong>Print</strong>(Time[0] + " " + Weighted[0]);</p>
-<p>// Weighted price of the bar 5 periods ago</p>
-<p><strong>Print</strong>(Time[5] + " " + Weighted[5]);</p>
-<p>// Current value for the SMA(14) using the weighted price</p>
-<p><strong>Print</strong>("SMA(14) calculated using the weighted price: " + Instrument.<strong>Round2TickSize</strong>(<strong>SMA</strong>(Weighted, 14)[0]));</p>
+<pre><code class="cs">// Weighted price for the current period
+Print(Time[0] + &quot; &quot; + Weighted[0]);
+
+// Weighted price of the bar 5 periods ago
+Print(Time[5] + &quot; &quot; + Weighted[5]);
+
+// Current value for the SMA(14) using the weighted price
+Print(&quot;SMA(14) calculated using the weighted price: &quot; + Instrument.Round2TickSize(SMA(Weighted, 14)[0]));
+</code></pre>
               
             </div>
           </div>

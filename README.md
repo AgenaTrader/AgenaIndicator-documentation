@@ -1,4 +1,6 @@
 
+![AgenaTrader](./sources/images/logo_100.png)
+
 #Live System
 To get started, check out: [https://agenatrader.github.io/AgenaIndicator-documentation/site/index.html](https://agenatrader.github.io/AgenaIndicator-documentation/site/index.html)
 
@@ -8,6 +10,13 @@ Documentation source files are written in [Markdown](https://guides.github.com/f
 The tutorials in the sources directory of this repository, are built with mkdocs and publicly hosted on GitHub Pages at [https://agenatrader.github.io/AgenaIndicator-documentation/site/index.html](https://agenatrader.github.io/AgenaIndicator-documentation/site/index.html).
 
 ##Getting Started
+
+###Editor
+To edit these files you can use the GitHub Online Editor but we recommend to use a separate text editor.
+We recommend the text editor **Atom**. [You can download it here.](https://atom.io)
+
+![Atom](./sources/images/logo_atom.png)
+
 ###Installation
 The following things are prerequisites:
 * Install [GitHub Client](https://desktop.github.com) and create a GitHub user

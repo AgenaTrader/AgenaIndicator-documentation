@@ -1,4 +1,6 @@
 
+![AgenaTrader](./sources/images/logo_100.png)
+
 #Live System
 To get started, check out: [https://agenatrader.github.io/AgenaIndicator-documentation/site/index.html](https://agenatrader.github.io/AgenaIndicator-documentation/site/index.html)
 
@@ -11,6 +13,7 @@ The tutorials in the sources directory of this repository, are built with mkdocs
 
 ###Editor
 We recommend the text editor [Atom](https://atom.io)
+
 ![Atom](./sources/images/logo_atom.png)
 
 ###Installation

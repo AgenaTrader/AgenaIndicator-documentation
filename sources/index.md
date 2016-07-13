@@ -4,7 +4,7 @@
 Want to learn more about the AgenaTrader indicators? We've got the resources to help you get started. 
 
 -   [Data](./data.md)
-    -   [*Bars (Candles)*]
+    -   [*Bars (Candles)*](./data.md#bars-candles)
     -   [*Data Series*]
     -   [*Open*]
     -   [*High*]

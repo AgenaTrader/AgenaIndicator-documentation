@@ -3246,7 +3246,8 @@ TRIX(int period, int signalPeriod)
 TRIX(IDataSeries input, int period, int signalPeriod)
 TRIX(int period, int signalPeriod)[int barsAgo]
 TRIX(IDataSeries input, int period, int signalPeriod)[int barsAgo]
-For the signal line
+
+//For the signal line
 TRIX(int period, int signalPeriod).Signal[int barsAgo]
 TRIX(IDataSeries input, int period, int signalPeriod).Signal[int barsAgo]
 ```
@@ -3275,6 +3276,7 @@ signal period Number of bars included in the signal line calculation
 ```cs
 //Output for the TRIX EMA
 Print("The current TRIX value is " + TRIX(14, 3)[0]);
+
 //Output for the TRIX signal line
 Print("The current TRIX value is " + TRIX(14, 3).Signal[0]);
 ```

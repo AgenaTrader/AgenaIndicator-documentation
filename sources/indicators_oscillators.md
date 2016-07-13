@@ -37,10 +37,10 @@ VTADWiki: [*http://vtadwiki.vtad.de/index.php/Accumulation\_Distribution\_Linie*
 ### Usage
 
 ```cs
-**ADL**()
-**ADL**(IDataSeries input)
-**ADL**()\[**int** barsAgo\]
-**ADL**(IDataSeries input)\[**int** barsAgo\]
+ADL()
+ADL(IDataSeries input)
+ADL()[int barsAgo]
+ADL(IDataSeries input)[int barsAgo]
 ```
 
 
@@ -62,9 +62,7 @@ input Input data series for the indicator
 
 ```cs
 //Testing the direction of the ADL
-
 if (Rising(ADL())
-
 Print("The ADL indicator is rising.");
 ```
 
@@ -85,22 +83,14 @@ The bigger the price movement, the greater the distance between the upper and lo
 
 ### Usage
 ```cs
-
-**APZ**(**double** barPct, **int** period)
-
-**APZ**(IDataSeries input, **double** barPct, **int** period)
-
-**Upper Band**
-
-**APZ**(**double** barPct, **int** period).Upper\[**int** barsAgo\]
-
-**APZ**(IDataSeries input, **double** barPct, **int** period).Upper\[**int** barsAgo\]
-
-**Lower Band**
-
-**APZ**(**double** barPct, **int** period).Lower\[**int** barsAgo\]
-
-**APZ**(IDataSeries input, **double** barPct, **int** period).Lower\[**int** barsAgo\]
+APZ(double barPct, int period)
+APZ(IDataSeries input, double barPct, int period)
+Upper Band
+APZ(double barPct, int period).Upper[int barsAgo]
+APZ(IDataSeries input, double barPct, int period).Upper[int barsAgo]
+Lower Band
+APZ(double barPct, int period).Lower[int barsAgo]
+APZ(IDataSeries input, double barPct, int period).Lower[int barsAgo]
 ```
 
 
@@ -126,10 +116,8 @@ period Number of bars included in the calculation
 
 ```cs
 //Output for the current values for the upper and lower band of a 20-period APZ
-
-**Print**("Value for the upper APZ band : " + **APZ**(2, 20).Upper\[0\]);
-
-**Print**("Value for the lower APZ band: " + **APZ**(2, 20).Lower\[0\]);
+Print("Value for the upper APZ band : " + APZ(2, 20).Upper[0]);
+Print("Value for the lower APZ band: " + APZ(2, 20).Lower[0]);
 ```
 
 
@@ -152,21 +140,14 @@ VTAD: [*http://stockcharts.com/school/doku.php?id=chart\_school:technical\_indic
 ### Usage
 
 ```cs
-**Aroon**(**int** period)
-
-**Aroon**(IDataSeries input, **int** period)
-
-**//For the upper value**
-
-**Aroon**(**int** period).Up\[**int** barsAgo\]
-
-**Aroon**(IDataSeries input, **int** period).Up\[**int** barsAgo\]
-
-**//For the lower value**
-
-**Aroon**(**int** period).Down\[**int** barsAgo\]
-
-**Aroon**(IDataSeries input, **int** period).Down\[**int** barsAgo\]
+Aroon(int period)
+Aroon(IDataSeries input, int period)
+//For the upper value
+Aroon(int period).Up[int barsAgo]
+Aroon(IDataSeries input, int period).Up[int barsAgo]
+//For the lower value
+Aroon(int period).Down[int barsAgo]
+Aroon(IDataSeries input, int period).Down[int barsAgo]
 ```
 
 
@@ -190,10 +171,8 @@ period Number of bars taken into consideration when calculating the values
 
 ```cs
 //Output of the current up or down values for the 20 period Aroon
-
-**Print**("Current value for Aroon Up is : " + **Aroon**(20).Up\[0\]);
-
-**Print**("Current value for Aroon Down is: " + **Aroon**(20).Down\[0\]);
+Print("Current value for Aroon Up is : " + Aroon(20).Up[0]);
+Print("Current value for Aroon Down is: " + Aroon(20).Down[0]);
 ```
 
 
@@ -210,13 +189,10 @@ The Aroon Oscillator is ideally used as a trend filter and trend strength indica
 ### Usage
 
 ```cs
-**AroonOscillator**(**int** period)
-
-**AroonOscillator**(IDataSeries input, **int** period)
-
-**AroonOscillator**(**int** period)\[**int** barsAgo\]
-
-**AroonOscillator**(IDataSeries input, **int** period)\[**int** barsAgo\]
+AroonOscillator(int period)
+AroonOscillator(IDataSeries input, int period)
+AroonOscillator(int period)[int barsAgo]
+AroonOscillator(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -240,8 +216,7 @@ period Number of bars taken into consideration for the calculations
 
 ```cs
 //Output for the current value for a 20 period Aroon Oscillator
-
-**Print**("Value for the oscillator is: " + **AroonOscillator**(20)\[0\]);
+Print("Value for the oscillator is: " + AroonOscillator(20)[0]);
 ```
 
 
@@ -266,13 +241,10 @@ Wikipedia: [*http://de.wikipedia.org/wiki/Average\_Directional\_Movement\_Index*
 ### Usage
 
 ```cs
-**ADX**(**int** period)
-
-**ADX**(IDataSeries input, **int** period)
-
-**ADX**(**int** period)\[**int** barsAgo\]
-
-**ADX**(IDataSeries input, **int** period)\[**int** barsAgo\]
+ADX(int period)
+ADX(IDataSeries input, int period)
+ADX(int period)[int barsAgo]
+ADX(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -296,8 +268,7 @@ period Number of bars included in the calculation
 
 ```cs
 //Output of the current value of a 20 period ADX
-
-**Print**("Value of the ADX: " + **ADX**(20)\[0\]);
+Print("Value of the ADX: " + ADX(20)[0]);
 ```
 
 
@@ -316,13 +287,10 @@ Welles Wilder recommends buying into the market at a value of 25 and higher, and
 ### Usage
 
 ```cs
-**ADXR**(**int** interval, **int** period)
-
-**ADXR**(IDataSeries input, **int** interval, **int** period)
-
-**ADXR**(**int** interval, **int** period)\[**int** barsAgo\]
-
-**ADXR**(IDataSeries input, **int** interval, **int** period)\[**int** barsAgo\]
+ADXR(int interval, int period)
+ADXR(IDataSeries input, int interval, int period)
+ADXR(int interval, int period)[int barsAgo]
+ADXR(IDataSeries input, int interval, int period)[int barsAgo]
 ```
 
 
@@ -348,8 +316,7 @@ period Number of bars included in the calculation
 
 ```cs
 //Output of the current value of the ADXR
-
-**Print**("Value of the ADXR: " + **ADXR**(10, 14)\[0\]);
+Print("Value of the ADXR: " + ADXR(10, 14)[0]);
 ```
 
 
@@ -376,13 +343,10 @@ VTAD: [*http://vtadwiki.vtad.de/index.php/Average\_True\_Range*]
 ### Usage
 
 ```cs
-**ATR**(**int** period)
-
-**ATR**(IDataSeries input, **int** period)
-
-**ATR**(**int** period)\[**int** barsAgo\]
-
-**ATR**(IDataSeries input, **int** period)\[**int** barsAgo\]
+ATR(int period)
+ATR(IDataSeries input, int period)
+ATR(int period)[int barsAgo]
+ATR(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -406,8 +370,7 @@ period Number of bars included in the calculation
 
 ```cs
 //Output of the current value of a 14 period ATR
-
-**Print**("The current ATR value is: " + **ATR**(14)\[0\]);
+Print("The current ATR value is: " + ATR(14)[0]);
 ```
 
 
@@ -425,13 +388,10 @@ A directional change of the BOP can be interpreted as a warning signal and will 
 ### Usage
 
 ```cs
-**BOP**(**int** smooth)
-
-**BOP**(IDataSeries input, **int** smooth)
-
-**BOP**(**int** smooth)\[**int** barsAgo\]
-
-**BOP**(IDataSeries input, **int** smooth)\[**int** barsAgo\]
+BOP(int smooth)
+BOP(IDataSeries input, int smooth)
+BOP(int smooth)[int barsAgo]
+BOP(IDataSeries input, int smooth)[int barsAgo]
 ```
 
 
@@ -455,7 +415,7 @@ smooth Settings for the smoothing
 
 ```cs
 //Output of the value for the BOP with a smoothing of 5 periods
-**Print**("The Balance of Power value is: " + **BOP**(5));
+Print("The Balance of Power value is: " + BOP(5));
 ```
 
 
@@ -486,21 +446,14 @@ Book "Technische Indikatoren - simplified" by Oliver Paesler (German only)
 ### Usage
 
 ```cs
-**Bollinger**(**double** numStdDev, **int** period)
-
-**Bollinger**(IDataSeries input, **double** numStdDev, **int** period)
-
-//**For the upper band**
-
-**Bollinger**(**double** numStdDev, **int** period).Upper\[**int** barsAgo\]
-
-**Bollinger**(IDataSeries input, **double** numStdDev, **int** period).Upper\[**int** barsAgo\]
-
-//**For the lower band**
-
-**Bollinger**(**double** numStdDev, **int** period).Lower\[**int** barsAgo\]
-
-**Bollinger**(IDataSeries input, **double** numStdDev, **int** period).Lower\[**int** barsAgo\]
+Bollinger(double numStdDev, int period)
+Bollinger(IDataSeries input, double numStdDev, int period)
+//For the upper band
+Bollinger(double numStdDev, int period).Upper[int barsAgo]
+Bollinger(IDataSeries input, double numStdDev, int period).Upper[int barsAgo]
+//For the lower band
+Bollinger(double numStdDev, int period).Lower[int barsAgo]
+Bollinger(IDataSeries input, double numStdDev, int period).Lower[int barsAgo]
 ```
 
 
@@ -526,16 +479,11 @@ period Number of bars included in the calculation
 
 ```cs
 //Output of the value for the upper Bollinger Band
-
-**Print**("Value of the upper band: " + **Bollinger**(2, 20).Upper\[0\]);
-
+Print("Value of the upper band: " + Bollinger(2, 20).Upper[0]);
 //Middle band
-
-**Print**("Value of the middle band: " + **Bollinger**(2, 20)\[0\]);
-
+Print("Value of the middle band: " + Bollinger(2, 20)[0]);
 //Lower band
-
-**Print**("Value of the lower band: " + **Bollinger**(2, 20).Lower\[0\]);
+Print("Value of the lower band: " + Bollinger(2, 20).Lower[0]);
 ```
 
 
@@ -571,13 +519,10 @@ Book "Technische Indikatoren - simplified" by Oliver Paesler (German only)
 ### Usage
 
 ```cs
-**BollingerPercentB**(**int** period, **double** numStdDev)
-
-**BollingerPercentB**(IDataSeries input, **int** period, **double** numStdDev)
-
-**BollingerPercentB**(**int** period, **double** numStdDev) \[**int** barsAgo\]
-
-**BollingerPercentB**(IDataSeries input, **int** period, **double** numStdDev)\[**int** barsAgo\]
+BollingerPercentB(int period, double numStdDev)
+BollingerPercentB(IDataSeries input, int period, double numStdDev)
+BollingerPercentB(int period, double numStdDev) [int barsAgo]
+BollingerPercentB(IDataSeries input, int period, double numStdDev)[int barsAgo]
 ```
 
 
@@ -626,33 +571,20 @@ Book "Technische Indikatoren - simplified" by Oliver Paesler (German only)
 ### Usage
 
 ```cs
-**BBWidth**(**double** numStdDev, **int** period)
-
-**BBWidth**(IDataSeries input, **double** numStdDev, **int** period)
-
-**BBWidth**(**double** numStdDev, **int** period)\[**int** barsAgo\]
-
-**BBWidth**(IDataSeries input, **double** numStdDev, **int** period)\[**int** barsAgo\]
-
-**For the value of the upper Band Width**
-
-**BBWidth**(**double** numStdDev, **int** period).BandWidth
-
-**BBWidth**(IDataSeries input, **double** numStdDev, **int** period).BandWidth
-
-**BBWidth**(**double** numStdDev, **int** period).BandWidth\[**int** barsAgo\]
-
-**BBWidth**(IDataSeries input, **double** numStdDev, **int** period).BandWidth\[**int** barsAgo\]
-
-**For the value of the trigger line (threshold)**
-
-**BBWidth**(**double** numStdDev, **int** period).Threshold
-
-**BBWidth**(IDataSeries input, **double** numStdDev, **int** period).Threshold
-
-**BBWidth**(**double** numStdDev, **int** period).Threshold\[**int** barsAgo\]
-
-**BBWidth**(IDataSeries input, **double** numStdDev, **int** period).Threshold\[**int** barsAgo\]
+BBWidth(double numStdDev, int period)
+BBWidth(IDataSeries input, double numStdDev, int period)
+BBWidth(double numStdDev, int period)[int barsAgo]
+BBWidth(IDataSeries input, double numStdDev, int period)[int barsAgo]
+For the value of the upper Band Width
+BBWidth(double numStdDev, int period).BandWidth
+BBWidth(IDataSeries input, double numStdDev, int period).BandWidth
+BBWidth(double numStdDev, int period).BandWidth[int barsAgo]
+BBWidth(IDataSeries input, double numStdDev, int period).BandWidth[int barsAgo]
+For the value of the trigger line (threshold)
+BBWidth(double numStdDev, int period).Threshold
+BBWidth(IDataSeries input, double numStdDev, int period).Threshold
+BBWidth(double numStdDev, int period).Threshold[int barsAgo]
+BBWidth(IDataSeries input, double numStdDev, int period).Threshold[int barsAgo]
 ```
 
 
@@ -678,12 +610,9 @@ numStdDev Standard deviation
 
 ```cs
 //Output for the values of Bollinger Band Width
-
-**Print**("The value of the Bollinger Band Width is: " + **BBWidth**(2, 20).BandWidth\[0\]);
-
+Print("The value of the Bollinger Band Width is: " + BBWidth(2, 20).BandWidth[0]);
 //Output for the values for the signal line
-
-**Print**("The value of the signal line is: " + **BBWidth**(2, 20).Threshold\[0\]);
+Print("The value of the signal line is: " + BBWidth(2, 20).Threshold[0]);
 ```
 
 
@@ -716,21 +645,14 @@ See [*BuySellVolume*].
 ### Usage
 
 ```cs
-**BuySellPressure**()
-
-**BuySellPressure**(IDataSeries input)
-
-**For the values of buy pressure**
-
-**BuySellPressure**().BuyPressure\[**int** barsAgo\]
-
-**BuySellPressure**(IDataSeries input).BuyPressure\[**int** barsAgo\]
-
-**For the values of sell Pressure**
-
-**BuySellPressure**().SellPressure\[**int** barsAgo\]
-
-**BuySellPressure**(IDataSeries input).SellPressure\[**int** barsAgo\]
+BuySellPressure()
+BuySellPressure(IDataSeries input)
+For the values of buy pressure
+BuySellPressure().BuyPressure[int barsAgo]
+BuySellPressure(IDataSeries input).BuyPressure[int barsAgo]
+For the values of sell Pressure
+BuySellPressure().SellPressure[int barsAgo]
+BuySellPressure(IDataSeries input).SellPressure[int barsAgo]
 ```
 
 
@@ -757,17 +679,15 @@ input Input data series for the indicator
 
 ```cs
 protected override void Initialize()
-
 {
-BuySellPressure().CalculateOnBarClose = **false**;
+BuySellPressure().CalculateOnBarClose = false;
 }
-
-**protected** override void **OnBarUpdate**()
+protected override void OnBarUpdate()
 {
-**if** (Close\[0\] &gt; **DonchianChannel**(20).Upper\[5\])
+if (Close[0] > DonchianChannel(20).Upper[5])
 {
-**if** (Historical || **BuySellPressure**().BuyPressure\[0\] &gt; 70)
-**EnterLong**();
+if (Historical || BuySellPressure().BuyPressure[0] > 70)
+EnterLong();
 }
 }
 ```
@@ -787,9 +707,8 @@ Similar conditions as with the [*BuySellPressure*] apply.
 
 
 ```cs
-**BuySellVolume BuySellVolume()**
-
-**BuySellVolume BuySellVolume(IDataSeries input)**
+BuySellVolume BuySellVolume()
+BuySellVolume BuySellVolume(IDataSeries input)
 ```
 
 
@@ -811,7 +730,7 @@ input Input data series for the indicator
 
 ```cs
 //Output for the BuySellVolume
-Print("The BuySellVolume is: " + BuySellVolume()\[0\]);
+Print("The BuySellVolume is: " + BuySellVolume()[0]);
 ```
 
 
@@ -830,13 +749,10 @@ Explanations of the formations and their interpretations can be found here:
 ### Usage
 
 ```cs
-**CandleStickPattern**(ChartPattern pattern, **int** trendStrength)
-
-**CandleStickPattern**(IDataSeries input, ChartPattern pattern, **int** trendStrength)
-
-**CandleStickPattern**(ChartPattern pattern, **int** trendStrength)\[**int** barsAgo\]
-
-**CandleStickPattern**(IDataSeries input, ChartPattern pattern, **int** trendStrength)\[**int** barsAgo\]
+CandleStickPattern(ChartPattern pattern, int trendStrength)
+CandleStickPattern(IDataSeries input, ChartPattern pattern, int trendStrength)
+CandleStickPattern(ChartPattern pattern, int trendStrength)[int barsAgo]
+CandleStickPattern(IDataSeries input, ChartPattern pattern, int trendStrength)[int barsAgo]
 ```
 
 
@@ -933,13 +849,10 @@ VTAD: [*http://vtadwiki.vtad.de/index.php/Chaikin\_Money\_Flow*]
 ### Usage
 
 ```cs
-**ChaikinMoneyFlow**(**int** period)
-
-**ChaikinMoneyFlow**(IDataSeries input, **int** period)
-
-**ChaikinMoneyFlow**(**int** period)\[**int** barsAgo\]
-
-**ChaikinMoneyFlow**(IDataSeries input, **int** period)\[**int** barsAgo\]
+ChaikinMoneyFlow(int period)
+ChaikinMoneyFlow(IDataSeries input, int period)
+ChaikinMoneyFlow(int period)[int barsAgo]
+ChaikinMoneyFlow(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -978,13 +891,10 @@ The interpretation of the Chaikin Oscillator is similar to the principle of the 
 ### Usage
 
 ```cs
-**ChaikinOscillator**(**int** fast, **int** slow)
-
-**ChaikinOscillator**(IDataSeries input, **int** fast, **int** slow)
-
-**ChaikinOscillator**(**int** fast, **int** slow)\[**int** barsAgo\]
-
-**ChaikinOscillator**(IDataSeries input, **int** fast, **int** slow)\[**int** barsAgo\]
+ChaikinOscillator(int fast, int slow)
+ChaikinOscillator(IDataSeries input, int fast, int slow)
+ChaikinOscillator(int fast, int slow)[int barsAgo]
+ChaikinOscillator(IDataSeries input, int fast, int slow)[int barsAgo]
 ```
 
 
@@ -1010,8 +920,7 @@ slow Number of bars included in the calculation for the slow EMA
 
 ```cs
 //Output for the oscillator for the fast and slow values of 3 and 10
-
-**Print**("The Chaikin Oscillator value is: " + **ChaikinOscillator**(3, 10)\[0\]);
+Print("The Chaikin Oscillator value is: " + ChaikinOscillator(3, 10)[0]);
 ```
 
 
@@ -1029,13 +938,10 @@ The indicator oscillates around the zero line and fluctuates between a scale of 
 ### Usage
 
 ```cs
-**ChaikinVolatility**(**int** fast, **int** slow)
-
-**ChaikinVolatility**(IDataSeries input, **int** fast, **int** slow)
-
-**ChaikinVolatility**(**int** fast, **int** slow)\[**int** barsAgo\]
-
-**ChaikinVolatility**(IDataSeries input, **int** fast, **int** slow)\[**int** barsAgo\]
+ChaikinVolatility(int fast, int slow)
+ChaikinVolatility(IDataSeries input, int fast, int slow)
+ChaikinVolatility(int fast, int slow)[int barsAgo]
+ChaikinVolatility(IDataSeries input, int fast, int slow)[int barsAgo]
 ```
 
 
@@ -1059,8 +965,7 @@ period Number of bars included in the calculations
 
 ```cs
 //Chaikin output for a period of 14
-
-**Print**("The value of the Chaikin Volatility is: " + **ChaikinVolatility**(14)\[0\]);
+Print("The value of the Chaikin Volatility is: " + ChaikinVolatility(14)[0]);
 ```
 
 
@@ -1082,13 +987,10 @@ The CMO is a technical momentum indicator invented by the technical analyst Tush
 ### Usage
 
 ```cs
-**CMO**(**int** period)
-
-**CMO**(IDataSeries input, **int** period)
-
-**CMO**(**int** period)\[**int** barsAgo\]
-
-**CMO**(IDataSeries input, **int** period)\[**int** barsAgo\]
+CMO(int period)
+CMO(IDataSeries input, int period)
+CMO(int period)[int barsAgo]
+CMO(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -1112,8 +1014,7 @@ period Number of bars included in the calculations
 
 ```cs
 //Output for the value of the Chande Momentum Oscillator
-
-**Print**("The current value for the Chande Momentum Oscillator is: " + **CMO**(14)\[0\]);
+Print("The current value for the Chande Momentum Oscillator is: " + CMO(14)[0]);
 ```
 
 
@@ -1138,13 +1039,10 @@ VTAD: [*http://vtadwiki.vtad.de/index.php/Commodity\_Channel\_Index*]
 ### Usage
 
 ```cs
-**CCI**(**int** period)
-
-**CCI**(IDataSeries input, **int** period)
-
-**CCI**(**int** period)\[**int** barsAgo\]
-
-**CCI**(IDataSeries input, **int** period)\[**int** barsAgo\]
+CCI(int period)
+CCI(IDataSeries input, int period)
+CCI(int period)[int barsAgo]
+CCI(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -1166,10 +1064,8 @@ period Number of bars included in the calculations
 
 ### Example
 ```cs
-
 //Output for the CCI value calculated using 14 periods
-
-**Print**("The value of the Commodity Channel Index is: " + **CCI**(14));
+Print("The value of the Commodity Channel Index is: " + CCI(14));
 ```
 
 
@@ -1196,21 +1092,14 @@ Here you can read about a trading system based on the Darvas boxes. (German only
 ### Usage
 
 ```cs
-**Darvas**()
-
-**Darvas**(IDataSeries input)
-
+Darvas()
+Darvas(IDataSeries input)
 For the upper Box boundary
-
-**Darvas**().Upper\[**int** barsAgo\]
-
-**Darvas**(IDataSeries input).Upper\[**int** barsAgo\]
-
-Returns the lower **value**
-
-**Darvas**().Lower\[**int** barsAgo\]
-
-**Darvas**(IDataSeries input).Lower\[**int** barsAgo\]
+Darvas().Upper[int barsAgo]
+Darvas(IDataSeries input).Upper[int barsAgo]
+Returns the lower value
+Darvas().Lower[int barsAgo]
+Darvas(IDataSeries input).Lower[int barsAgo]
 ```
 
 
@@ -1232,12 +1121,9 @@ input Input data series for the indicator
 
 ```cs
 //Output for the values for the upper markings (box top)
-
-**Print**("The upper boundary for the Darvas box is: " + **Darvas**().Upper\[0\]);
-
+Print("The upper boundary for the Darvas box is: " + Darvas().Upper[0]);
 //Lower markings
-
-**Print**("The lower boundary for the Darvas box is: " + **Darvas**().Lower\[0\]);
+Print("The lower boundary for the Darvas box is: " + Darvas().Lower[0]);
 ```
 
 
@@ -1258,25 +1144,16 @@ See: Directional Movement Index ([*DMI*])
 ### Usage
 
 ```cs
-**DM**(**int** period)
-
-**DM**(IDataSeries input, **int** period)
-
-**DM**(**int** period)\[**int** barsAgo\]
-
-**DM**(IDataSeries input, **int** period)\[**int** barsAgo\]
-
-**For the value of +DM**
-
-**DM**(**int** period).DiPlus\[**int** barsAgo\]
-
-**DM**(IDataSeries input, **int** period).DiPlus\[**int** barsAgo\]
-
-**For the value of -DM**
-
-**DM**(**int** period).DiMinus\[**int** barsAgo\]
-
-**DM**(IDataSeries input, **int** period).DiMinus\[**int** barsAgo\]
+DM(int period)
+DM(IDataSeries input, int period)
+DM(int period)[int barsAgo]
+DM(IDataSeries input, int period)[int barsAgo]
+For the value of +DM
+DM(int period).DiPlus[int barsAgo]
+DM(IDataSeries input, int period).DiPlus[int barsAgo]
+For the value of -DM
+DM(int period).DiMinus[int barsAgo]
+DM(IDataSeries input, int period).DiMinus[int barsAgo]
 ```
 
 
@@ -1300,10 +1177,8 @@ period Number of bars included in the calculations
 
 ```cs
 //Output of the DM values
-
-**Print**("The current +DM value is: " + **DM**(14).DiPlus\[0\]);
-
-**Print**("The current –DM value is: " + **DM**(14).DiMinus\[0\]);
+Print("The current +DM value is: " + DM(14).DiPlus[0]);
+Print("The current –DM value is: " + DM(14).DiMinus[0]);
 ```
 
 
@@ -1320,22 +1195,17 @@ VTAD: [*http://vtadwiki.vtad.de/index.php/Donchian\_Channel*]
 
 ### Usage
 ```cs
-
-**DonchianChannel**(**int** period)
-
-**DonchianChannel**(IDataSeries input, **int** period)
-
-**Upper band
-DonchianChannel**(**int** period).Upper\[**int** barsAgo\]
-**DonchianChannel**(IDataSeries input, **int** period).Upper\[**int** barsAgo\]
-
-**Middle band
-**DonchianChannel(int period)\[int barsAgo\]
-DonchianChannel(IDataSeries input, int period)\[int barsAgo\]
-
-**Lower band
-DonchianChannel**(**int** period).Lower\[**int** barsAgo\]
-**DonchianChannel**(IDataSeries input, **int** period).Lower\[**int** barsAgo\]
+DonchianChannel(int period)
+DonchianChannel(IDataSeries input, int period)
+Upper band
+DonchianChannel(int period).Upper[int barsAgo]
+DonchianChannel(IDataSeries input, int period).Upper[int barsAgo]
+Middle band
+DonchianChannel(int period)[int barsAgo]
+DonchianChannel(IDataSeries input, int period)[int barsAgo]
+Lower band
+DonchianChannel(int period).Lower[int barsAgo]
+DonchianChannel(IDataSeries input, int period).Lower[int barsAgo]
 ```
 
 
@@ -1359,12 +1229,9 @@ period Number of bars included in the calculations
 
 ```cs
 //Output for the values of the Donchian Channel
-
-**Print**("The upper band is at: " + **DonchianChannel**(14).Upper\[0\]);
-
-**Print**("The middle band is at: " + **DonchianChannel**(14)\[0\]);
-
-**Print**("The lower band is at: " + **DonchianChannel**(14).Lower\[0\]);
+Print("The upper band is at: " + DonchianChannel(14).Upper[0]);
+Print("The middle band is at: " + DonchianChannel(14)[0]);
+Print("The lower band is at: " + DonchianChannel(14).Lower[0]);
 ```
 
 
@@ -1393,13 +1260,10 @@ VTAD: [*http://vtadwiki.vtad.de/index.php/DMI\_-\_Directional\_Movement\_Index*]
 ### Usage
 
 ```cs
-**DMI**(**int** period)
-
-**DMI**(IDataSeries input, **int** period)
-
-**DMI**(**int** period)\[**int** barsAgo\]
-
-**DMI**(IDataSeries input, **int** period)\[**int** barsAgo\]
+DMI(int period)
+DMI(IDataSeries input, int period)
+DMI(int period)[int barsAgo]
+DMI(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -1421,10 +1285,8 @@ period Number of bars included in the calculations
 
 ### Example
 ```cs
-
 //Output for the DMI
-
-**Print**("The current DMI value is: " + **DMI**(20)\[0\]);
+Print("The current DMI value is: " + DMI(20)[0]);
 ```
 
 
@@ -1443,39 +1305,23 @@ Values above 80 are seen as overbought, and below 20 as oversold. In addition, s
 ### Usage
 
 ```cs
-**DoubleStochastics**(**int** period)
-
-**DoubleStochastics**(**int** period)\[**int** barsAgo\]
-
-**DoubleStochastics**(**int** period, DoubleStochasticsMode mode, **int** EMA-Period1)
-
-**DoubleStochastics**(IDataSeries input, **int** period, DoubleStochasticsMode mode, **int** EMA-Period1)
-
-**DoubleStochastics**(**int** period, DoubleStochasticsMode mode, **int** EMA-Period1)\[**int** barsAgo\]
-
-**DoubleStochastics**(IDataSeries input, **int** period, DoubleStochasticsMode mode, **int** EMA-Period1)\[**int** barsAgo\]
-
-**DoubleStochastics**(**int** period, DoubleStochasticsMode mode, **int** EMA-Period1, **int** EMA-Period2)
-
-**DoubleStochastics**(IDataSeries input, **int** period, DoubleStochasticsMode mode, **int** EMA-Period1, **int** EMA-Period2)
-
-**DoubleStochastics**(**int** period, DoubleStochasticsMode mode, **int** EMA-Period1, **int** EMA-Period2)\[**int** barsAgo\]
-
-**DoubleStochastics**(IDataSeries input, **int** period, DoubleStochasticsMode mode, **int** EMA-Period1, **int** EMA-Period2)\[**int** barsAgo\]
-
-**For the value of %K**
-
-**DoubleStochastics**(**int** period).K\[**int** barsAgo\]
-
-**DoubleStochastics**(IDataSeries input, **int** period).K\[**int** barsAgo\]
-
-**DoubleStochastics**(**int** period, DoubleStochasticsMode mode, **int** EMA-Period1).K\[**int** barsAgo\]
-
-**DoubleStochastics**(IDataSeries input, **int** period, DoubleStochasticsMode mode, **int** EMA-Period1).K\[**int** barsAgo\]
-
-**DoubleStochastics**(**int** period, DoubleStochasticsMode mode, **int** EMA-Period1, **int** EMA-Period2).K\[**int** barsAgo\]
-
-**DoubleStochastics**(IDataSeries input, **int** period, DoubleStochasticsMode mode, **int** EMA-Period1, **int** EMA-Period2).K\[**int** barsAgo\]
+DoubleStochastics(int period)
+DoubleStochastics(int period)[int barsAgo]
+DoubleStochastics(int period, DoubleStochasticsMode mode, int EMA-Period1)
+DoubleStochastics(IDataSeries input, int period, DoubleStochasticsMode mode, int EMA-Period1)
+DoubleStochastics(int period, DoubleStochasticsMode mode, int EMA-Period1)[int barsAgo]
+DoubleStochastics(IDataSeries input, int period, DoubleStochasticsMode mode, int EMA-Period1)[int barsAgo]
+DoubleStochastics(int period, DoubleStochasticsMode mode, int EMA-Period1, int EMA-Period2)
+DoubleStochastics(IDataSeries input, int period, DoubleStochasticsMode mode, int EMA-Period1, int EMA-Period2)
+DoubleStochastics(int period, DoubleStochasticsMode mode, int EMA-Period1, int EMA-Period2)[int barsAgo]
+DoubleStochastics(IDataSeries input, int period, DoubleStochasticsMode mode, int EMA-Period1, int EMA-Period2)[int barsAgo]
+For the value of %K
+DoubleStochastics(int period).K[int barsAgo]
+DoubleStochastics(IDataSeries input, int period).K[int barsAgo]
+DoubleStochastics(int period, DoubleStochasticsMode mode, int EMA-Period1).K[int barsAgo]
+DoubleStochastics(IDataSeries input, int period, DoubleStochasticsMode mode, int EMA-Period1).K[int barsAgo]
+DoubleStochastics(int period, DoubleStochasticsMode mode, int EMA-Period1, int EMA-Period2).K[int barsAgo]
+DoubleStochastics(IDataSeries input, int period, DoubleStochasticsMode mode, int EMA-Period1, int EMA-Period2).K[int barsAgo]
 ```
 
 
@@ -1505,8 +1351,7 @@ EMA-Period2 Periods for the second EMA
 
 ```cs
 //Output for %K
-
-**Print**("The value of the DSS Bressert %K is: " + **DoubleStochastics**(10, DoubleStochasticsMode.Bressert, 2)\[0\]);
+Print("The value of the DSS Bressert %K is: " + DoubleStochastics(10, DoubleStochasticsMode.Bressert, 2)[0]);
 ```
 
 
@@ -1528,13 +1373,10 @@ VTAD: [*http://vtadwiki.vtad.de/index.php/Dynamic\_Momentum\_Index*]
 ### Usage
 
 ```cs
-**DMIndex**(**int** smooth)
-
-**DMIndex**(IDataSeries input, **int** smooth)
-
-**DMIndex**(**int** smooth)\[**int** barsAgo\]
-
-**DMIndex**(IDataSeries input, **int** smooth)\[**int** barsAgo\]
+DMIndex(int smooth)
+DMIndex(IDataSeries input, int smooth)
+DMIndex(int smooth)[int barsAgo]
+DMIndex(IDataSeries input, int smooth)[int barsAgo]
 ```
 
 
@@ -1558,8 +1400,7 @@ smooth Smoothing settings
 
 ```cs
 //Output of the value for the DMIndex Indicator with a smoothing factor of 3
-
-**Print**("The current value for the DMIndex is: " + **DMIndex**(3)\[0\]);
+Print("The current value for the DMIndex is: " + DMIndex(3)[0]);
 ```
 
 
@@ -1580,13 +1421,10 @@ When the EOM is moving away from the zero line (marker) then an impulse has begu
 ### Usage
 
 ```cs
-**EaseOfMovement**(**int** smoothing, **int** volDivisor)
-
-**EaseOfMovement**(IDataSeries input, **int** smoothing, **int** volDivisor)
-
-**EaseOfMovement**(**int** smoothing, **int** volDivisor)\[**int** barsAgo\]
-
-**EaseOfMovement**(IDataSeries input, **int** smoothing, **int** volDivisor)\[**int** barsAgo\]
+EaseOfMovement(int smoothing, int volDivisor)
+EaseOfMovement(IDataSeries input, int smoothing, int volDivisor)
+EaseOfMovement(int smoothing, int volDivisor)[int barsAgo]
+EaseOfMovement(IDataSeries input, int smoothing, int volDivisor)[int barsAgo]
 ```
 
 
@@ -1619,8 +1457,7 @@ Ease = MidpointMove / Box Ratio
 
 ```cs
 //Output for the values of the EOM line
-
-**Print**("The value for the Ease of Movement is: " + **EaseOfMovement**(14, 10000)\[0\]);
+Print("The value for the Ease of Movement is: " + EaseOfMovement(14, 10000)[0]);
 ```
 
 
@@ -1649,14 +1486,10 @@ When using this method with an index (e.g. **FisherTransform**(10)\[**int** bars
 
 ### Usage
 ```cs
-
-**FisherTransform**(**int** period)
-
-**FisherTransform**(IDataSeries input, **int** period)
-
-**FisherTransform**(**int** period)\[**int** barsAgo\]
-
-**FisherTransform**(IDataSeries input, **int** period)\[**int** barsAgo\]
+FisherTransform(int period)
+FisherTransform(IDataSeries input, int period)
+FisherTransform(int period)[int barsAgo]
+FisherTransform(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -1668,8 +1501,7 @@ When using this method with an index (e.g. **FisherTransform**(10)\[**int** bars
 
 ```cs
 //Output values for the Fisher Transform
-
-**Print**("The current value for the Fisher Transform is: " + **FisherTransform**(10)\[0\]);
+Print("The current value for the Fisher Transform is: " + FisherTransform(10)[0]);
 ```
 
 
@@ -1700,13 +1532,10 @@ When using this method with an index (e.g. **FOSC**(14)\[**int** barsAgo\] ), th
 ### Usage
 
 ```cs
-**FOSC**(**int** period)
-
-**FOSC**(IDataSeries input, **int** period)
-
-**FOSC**(**int** period)\[**int** barsAgo\]
-
-**FOSC**(IDataSeries input, **int** period)\[**int** barsAgo\]
+FOSC(int period)
+FOSC(IDataSeries input, int period)
+FOSC(int period)[int barsAgo]
+FOSC(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -1718,14 +1547,10 @@ When using this method with an index (e.g. **FOSC**(14)\[**int** barsAgo\] ), th
 
 ```cs
 //Output for the Forecast Oscillator
-
-**Print**("The current value for the Forecast Oscillator is: " + **FOSC**(14)\[0\]);
-
+Print("The current value for the Forecast Oscillator is: " + FOSC(14)[0]);
 //Determining the future market direction
-
-**if** (**FOSC**(14)\[0\] &gt; 0)
-
-**Print**("The FOSC is bigger than zero, which indicates rising price movements.");
+if (FOSC(14)[0] > 0)
+Print("The FOSC is bigger than zero, which indicates rising price movements.");
 ```
 
 
@@ -1741,9 +1566,8 @@ See [*HighestHighPrice()*], [*LowestLowPrice()*], *[LowestLowIndex]()*,
 ### Usage
 
 ```cs
-**HighestHighIndex**(**int** BarsBack)
-
-**HighestHighIndex**(**int** BarsBack)\[**int** barsAgo\]
+HighestHighIndex(int BarsBack)
+HighestHighIndex(int BarsBack)[int barsAgo]
 ```
 
 
@@ -1765,8 +1589,7 @@ BarsBack Number of periods in which the highest high will be searched for
 
 ```cs
 // How many bars back is the bar with the highest high of the last 14 bars located?
-
-**Print**("The highest high in the last 14 bars was " + **HighestHighIndex**(14)\[0\] + " bars ago.");
+Print("The highest high in the last 14 bars was " + HighestHighIndex(14)[0] + " bars ago.");
 ```
 
 
@@ -1784,9 +1607,8 @@ See [*HighestHighIndex()*], [*LowestLowPrice()*], *[LowestLowIndex]()*,
 ### Usage
 
 ```cs
-**HighestHighPrice**(**int** BarsBack)
-
-**HighestHighPrice**(**int** BarsBack)\[**int** barsAgo\]
+HighestHighPrice(int BarsBack)
+HighestHighPrice(int BarsBack)[int barsAgo]
 ```
 
 
@@ -1806,10 +1628,8 @@ BarsBack Number of periods in which the highest high will be searched for
 
 ### Example
 ```cs
-
 // What was the value of the highest high in the last 14 periods?
-
-**Print**("The highest high for the last 14 bars is " + **HighestHighPrice**(14)\[0\]);
+Print("The highest high for the last 14 bars is " + HighestHighPrice(14)[0]);
 ```
 
 
@@ -1857,39 +1677,23 @@ Similarly to the smoothing averages, the Ichimoku indicator will create a bullis
 ### Usage
 
 ```cs
-**IchimokuCloud**(**int** periodFast, **int** periodMedium, **int** periodSlow)
-
-**IchimokuCloud**(IDataSeries input, **int** periodFast, **int** periodMedium, **int** periodSlow)
-
-**TenkanSen**
-
-**IchimokuCloud**(**int** periodFast, **int** periodMedium, **int** periodSlow).TenkanSen\[**int** barsAgo\]
-
-**IchimokuCloud**(IDataSeries input, **int** periodFast, **int** periodMedium, **int** periodSlow).TenkanSen\[**int** barsAgo\]
-
-**KijunSen**
-
-**IchimokuCloud**(**int** periodFast, **int** periodMedium, **int** periodSlow).KijunSen\[**int** barsAgo\]
-
-**IchimokuCloud**(IDataSeries input, **int** periodFast, **int** periodMedium, **int** periodSlow).KijunSen\[**int** barsAgo\]
-
-**ChikouSpan**
-
-**IchimokuCloud**(**int** periodFast, **int** periodMedium, **int** periodSlow).ChikouSpan\[**int** barsAgo\]
-
-**IchimokuCloud**(IDataSeries input, **int** periodFast, **int** periodMedium, **int** periodSlow).ChikouSpan\[**int** barsAgo\]
-
-**SenkouSpanA**
-
-**IchimokuCloud**(**int** periodFast, **int** periodMedium, **int** periodSlow).SenkouSpanA\[**int** barsAgo\]
-
-**IchimokuCloud**(IDataSeries input, **int** periodFast, **int** periodMedium, **int** periodSlow).SenkouSpanA\[**int** barsAgo\]
-
-**SenkouSpanB**
-
-**IchimokuCloud**(**int** periodFast, **int** periodMedium, **int** periodSlow).SenkouSpanB\[**int** barsAgo\]
-
-**IchimokuCloud**(IDataSeries input, **int** periodFast, **int** periodMedium, **int** periodSlow).SenkouSpanB\[**int** barsAgo\]
+IchimokuCloud(int periodFast, int periodMedium, int periodSlow)
+IchimokuCloud(IDataSeries input, int periodFast, int periodMedium, int periodSlow)
+TenkanSen
+IchimokuCloud(int periodFast, int periodMedium, int periodSlow).TenkanSen[int barsAgo]
+IchimokuCloud(IDataSeries input, int periodFast, int periodMedium, int periodSlow).TenkanSen[int barsAgo]
+KijunSen
+IchimokuCloud(int periodFast, int periodMedium, int periodSlow).KijunSen[int barsAgo]
+IchimokuCloud(IDataSeries input, int periodFast, int periodMedium, int periodSlow).KijunSen[int barsAgo]
+ChikouSpan
+IchimokuCloud(int periodFast, int periodMedium, int periodSlow).ChikouSpan[int barsAgo]
+IchimokuCloud(IDataSeries input, int periodFast, int periodMedium, int periodSlow).ChikouSpan[int barsAgo]
+SenkouSpanA
+IchimokuCloud(int periodFast, int periodMedium, int periodSlow).SenkouSpanA[int barsAgo]
+IchimokuCloud(IDataSeries input, int periodFast, int periodMedium, int periodSlow).SenkouSpanA[int barsAgo]
+SenkouSpanB
+IchimokuCloud(int periodFast, int periodMedium, int periodSlow).SenkouSpanB[int barsAgo]
+IchimokuCloud(IDataSeries input, int periodFast, int periodMedium, int periodSlow).SenkouSpanB[int barsAgo]
 ```
 
 
@@ -1931,13 +1735,10 @@ Inside bars will sometimes reflect sideways phases, and will also display trend 
 ### Usage
 
 ```cs
-**InsideBarsMT**().isInsideBar\[**int** barsAgo\]
-
-**InsideBarsMT**().isOutsideBar\[**int** barsAgo\]
-
-**InsideBarsMT**().HighBeforeOutsideBar\[**int** barsAgo\]
-
-**InsideBarsMT**().LowBeforeOutsideBar\[**int** barsAgo\]
+InsideBarsMT().isInsideBar[int barsAgo]
+InsideBarsMT().isOutsideBar[int barsAgo]
+InsideBarsMT().HighBeforeOutsideBar[int barsAgo]
+InsideBarsMT().LowBeforeOutsideBar[int barsAgo]
 ```
 
 
@@ -1976,28 +1777,17 @@ Tolerance default setting = 0.
 ### Example
 
 ```cs
-**double** StopPrice;
-
-**protected** override void **OnBarUpdate**()
-
+double StopPrice;
+protected override void OnBarUpdate()
 {
-
 // Open position when SMAs cross
-
-**if** (**CrossAbove**(**SMA**(10),**SMA**(20),1) && Position.MarketPosition == PositionType.Flat)
-
-**EnterLong**();
-
+if (CrossAbove(SMA(10),SMA(20),1) && Position.MarketPosition == PositionType.Flat)
+EnterLong();
 // If the current bar is an inside bar, modify the stop
-
-**if** (**InsideBarsMT**().isInsideBar\[0\])
-
-StopPrice = **InsideBarsMT**().LowBeforeOutsideBar\[0\];
-
-**else**
-
+if (InsideBarsMT().isInsideBar[0])
+StopPrice = InsideBarsMT().LowBeforeOutsideBar[0];
+else
 // Use different stop method
-
 }
 ```
 
@@ -2027,28 +1817,17 @@ VTAD: http://vtadwiki.vtad.de/index.php/Keltner\_Channel
 
 ### Usage
 ```cs
-
-**KeltnerChannel**(**double** offsetMutiplier, **int** period)
-
-**KeltnerChannel**(IDataSeries input, **double** offsetMutiplier, **int** period)
-
-Returns midline **value**
-
-**KeltnerChannel**(**double** offsetMutiplier, **int** period)\[**int** barsAgo\]
-
-**KeltnerChannel**(IDataSeries input, **double** offsetMutiplier, **int** period)\[**int** barsAgo\]
-
-Returns upper band **value**
-
-**KeltnerChannel**(**double** offsetMutiplier, **int** period).Upper\[**int** barsAgo\]
-
-**KeltnerChannel**(IDataSeries input, **double** offsetMutiplier, **int** period).Upper\[**int** barsAgo\]
-
-Returns lower band **value**
-
-**KeltnerChannel**(**double** offsetMutiplier, **int** period).Lower\[**int** barsAgo\]
-
-**KeltnerChannel**(IDataSeries input, **double** offsetMutiplier, **int** period).Lower\[**int** barsAgo\]
+KeltnerChannel(double offsetMutiplier, int period)
+KeltnerChannel(IDataSeries input, double offsetMutiplier, int period)
+Returns midline value
+KeltnerChannel(double offsetMutiplier, int period)[int barsAgo]
+KeltnerChannel(IDataSeries input, double offsetMutiplier, int period)[int barsAgo]
+Returns upper band value
+KeltnerChannel(double offsetMutiplier, int period).Upper[int barsAgo]
+KeltnerChannel(IDataSeries input, double offsetMutiplier, int period).Upper[int barsAgo]
+Returns lower band value
+KeltnerChannel(double offsetMutiplier, int period).Lower[int barsAgo]
+KeltnerChannel(IDataSeries input, double offsetMutiplier, int period).Lower[int barsAgo]
 ```
 
 
@@ -2086,12 +1865,9 @@ diff.**Set**(High\[0\] - Low\[0\]);
 
 ```cs
 //Current value for the Keltner Channel based on 15 periods
-
-**Print**("Current value of the upper Keltner Channel band: " + **KeltnerChannel**(1.5, 15).Upper\[0\]);
-
-**Print**("Current value of the middle Keltner Channel band: " + **KeltnerChannel**(1.5, 15)\[0\]);
-
-**Print**("Current value of the lower Keltner Channel band: " + **KeltnerChannel**(1.5, 15).Lower\[0\]);
+Print("Current value of the upper Keltner Channel band: " + KeltnerChannel(1.5, 15).Upper[0]);
+Print("Current value of the middle Keltner Channel band: " + KeltnerChannel(1.5, 15)[0]);
+Print("Current value of the lower Keltner Channel band: " + KeltnerChannel(1.5, 15).Lower[0]);
 ```
 
 
@@ -2120,14 +1896,10 @@ period Number of bars included in the calculations
 
 ### Usage
 ```cs
-
-**KeyReversalUp**(**int** period)
-
-**KeyReversalUp**(IDataSeries input, **int** period)
-
-**KeyReversalUp**(**int** period)\[**int** barsAgo\]
-
-**KeyReversalUp**(IDataSeries input, **int** period)\[**int** barsAgo\]
+KeyReversalUp(int period)
+KeyReversalUp(IDataSeries input, int period)
+KeyReversalUp(int period)[int barsAgo]
+KeyReversalUp(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -2164,14 +1936,10 @@ period Number of bars included in the calculations
 
 ### Usage
 ```cs
-
-**KeyReversalDown**(**int** period)
-
-**KeyReversalDown**(IDataSeries input, **int** period)
-
-**KeyReversalDown**(**int** period)\[**int** barsAgo\]
-
-**KeyReversalDown**(IDataSeries input, **int** period)\[**int** barsAgo\]
+KeyReversalDown(int period)
+KeyReversalDown(IDataSeries input, int period)
+KeyReversalDown(int period)[int barsAgo]
+KeyReversalDown(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -2179,10 +1947,8 @@ period Number of bars included in the calculations
 
 ```cs
 // Look for a short entry
-
-**if** (**KeyReversalDown**(10)\[0\] == 1)
-
-**Print**("A short reversal formation has occurred.");
+if (KeyReversalDown(10)[0] == 1)
+Print("A short reversal formation has occurred.");
 ```
 
 
@@ -2214,13 +1980,10 @@ SMAperiod Number of periods included in the calculation of the SMA
 ### Usage
 
 ```cs
-**KeyReversalUpAtSMA**(**int** period, **int** SMAperiod)
-
-**KeyReversalUpAtSMA**(IDataSeries input, **int** period, **int** SMAperiod)
-
-**KeyReversalUpAtSMA**(**int** period, **int** SMAperiod)\[**int** barsAgo\]
-
-**KeyReversalUpAtSMA**(IDataSeries input, **int** period, **int** SMAperiod)\[**int** barsAgo\]
+KeyReversalUpAtSMA(int period, int SMAperiod)
+KeyReversalUpAtSMA(IDataSeries input, int period, int SMAperiod)
+KeyReversalUpAtSMA(int period, int SMAperiod)[int barsAgo]
+KeyReversalUpAtSMA(IDataSeries input, int period, int SMAperiod)[int barsAgo]
 ```
 
 
@@ -2228,10 +1991,8 @@ SMAperiod Number of periods included in the calculation of the SMA
 
 ```cs
 // Look for a long entry
-
-**if** (**KeyReversalUpAtSMA**(10)\[0\] == 1)
-
-**Print**("A long reversal formation has occurred.");
+if (KeyReversalUpAtSMA(10)[0] == 1)
+Print("A long reversal formation has occurred.");
 ```
 
 
@@ -2262,14 +2023,10 @@ SMAperiod Number of periods included in the SMA calculation
 
 ### Usage
 ```cs
-
-**KeyReversalDownAtSMA**(**int** period, **int** SMAperiod)
-
-**KeyReversalDownAtSMA**(IDataSeries input, **int** period, **int** SMAperiod)
-
-**KeyReversalDownAtSMA**(**int** period, **int** SMAperiod)\[**int** barsAgo\]
-
-**KeyReversalDownAtSMA**(IDataSeries input, **int** period, **int** SMAperiod)\[**int** barsAgo\]
+KeyReversalDownAtSMA(int period, int SMAperiod)
+KeyReversalDownAtSMA(IDataSeries input, int period, int SMAperiod)
+KeyReversalDownAtSMA(int period, int SMAperiod)[int barsAgo]
+KeyReversalDownAtSMA(IDataSeries input, int period, int SMAperiod)[int barsAgo]
 ```
 
 
@@ -2277,10 +2034,8 @@ SMAperiod Number of periods included in the SMA calculation
 
 ```cs
 // Search for a short entry
-
-**if** (**KeyReversalDownAtSMA**(10)\[0\] == 1)
-
-**Print**("A short reversal formation has occurred.");
+if (KeyReversalDownAtSMA(10)[0] == 1)
+Print("A short reversal formation has occurred.");
 ```
 
 
@@ -2311,14 +2066,10 @@ EMAperiod Number of periods included in the EMA calculation
 
 ### Usage
 ```cs
-
-**KeyReversalUpAtEMA**(**int** period, **int** EMAperiod)
-
-**KeyReversalUpAtEMA**(IDataSeries input, **int** period, **int** EMAperiod)
-
-**KeyReversalUpAtEMA**(**int** period, **int** EMAperiod)\[**int** barsAgo\]
-
-**KeyReversalUpAtEMA**(IDataSeries input, **int** period, **int** EMAperiod)\[**int** barsAgo\]
+KeyReversalUpAtEMA(int period, int EMAperiod)
+KeyReversalUpAtEMA(IDataSeries input, int period, int EMAperiod)
+KeyReversalUpAtEMA(int period, int EMAperiod)[int barsAgo]
+KeyReversalUpAtEMA(IDataSeries input, int period, int EMAperiod)[int barsAgo]
 ```
 
 
@@ -2326,10 +2077,8 @@ EMAperiod Number of periods included in the EMA calculation
 
 ```cs
 // Search for a long entry
-
-**if** (**KeyReversalUpAtEMA**(10)\[0\] == 1)
-
-**Print**("A long reversal formation has occurred.");
+if (KeyReversalUpAtEMA(10)[0] == 1)
+Print("A long reversal formation has occurred.");
 ```
 
 
@@ -2362,13 +2111,10 @@ EMAperiod Number of periods used to calculate the EMA
 ### Usage
 
 ```cs
-**KeyReversalDownAtEMA**(**int** period, **int** EMAperiod)
-
-**KeyReversalDownAtEMA**(IDataSeries input, **int** period, **int** EMAperiod)
-
-**KeyReversalDownAtEMA**(**int** period, **int** EMAperiod)\[**int** barsAgo\]
-
-**KeyReversalDownAtEMA**(IDataSeries input, **int** period, **int** EMAperiod)\[**int** barsAgo\]
+KeyReversalDownAtEMA(int period, int EMAperiod)
+KeyReversalDownAtEMA(IDataSeries input, int period, int EMAperiod)
+KeyReversalDownAtEMA(int period, int EMAperiod)[int barsAgo]
+KeyReversalDownAtEMA(IDataSeries input, int period, int EMAperiod)[int barsAgo]
 ```
 
 
@@ -2376,10 +2122,8 @@ EMAperiod Number of periods used to calculate the EMA
 
 ```cs
 // Search for a short entry
-
-**if** (**KeyReversalDownAtEMA**(10)\[0\] == 1)
-
-**Print**("A short reversal formation has occurred.");
+if (KeyReversalDownAtEMA(10)[0] == 1)
+Print("A short reversal formation has occurred.");
 ```
 
 
@@ -2403,13 +2147,10 @@ The linear regression indicator is used as a prognosis tool for the future devel
 ### Usage
 
 ```cs
-**LinReg**(**int** period)
-
-**LinReg**(IDataSeries input, **int** period)
-
-**LinReg**(**int** period)\[**int** barsAgo\]
-
-**LinReg**(IDataSeries input, **int** period)\[**int** barsAgo\]
+LinReg(int period)
+LinReg(IDataSeries input, int period)
+LinReg(int period)[int barsAgo]
+LinReg(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -2433,8 +2174,7 @@ period Number of bars included in the calculations
 
 ```cs
 //Show the current values of the regression line
-
-**Print**("The current value for the linear regression is: " + **LinReg**(14)\[0\]);
+Print("The current value for the linear regression is: " + LinReg(14)[0]);
 ```
 
 
@@ -2455,13 +2195,10 @@ The indicator is not used by itself, but is simply a component of trading system
 ### Usage
 
 ```cs
-**LinRegIntercept**(**int** period)
-
-**LinRegIntercept**(IDataSeries input, **int** period)
-
-**LinRegIntercept**(**int** period)\[**int** barsAgo\]
-
-**LinRegIntercept**(IDataSeries input, **int** period)\[**int** barsAgo\]
+LinRegIntercept(int period)
+LinRegIntercept(IDataSeries input, int period)
+LinRegIntercept(int period)[int barsAgo]
+LinRegIntercept(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -2483,10 +2220,8 @@ period Number of bars included in the calculations
 
 ### Example
 ```cs
-
 //Show current value
-
-**Print**("The current value of the regression constant is: " + **LinRegIntercept**(14)\[0\]);
+Print("The current value of the regression constant is: " + LinRegIntercept(14)[0]);
 ```
 
 
@@ -2506,13 +2241,10 @@ This indicator is not very useful for determining overbought or oversold areas, 
 ### Usage
 
 ```cs
-**LinRegSlope**(**int** period)
-
-**LinRegSlope**(IDataSeries input, **int** period)
-
-**LinRegSlope**(**int** period)\[**int** barsAgo\]
-
-**LinRegSlope**(IDataSeries input, **int** period)\[**int** barsAgo\]
+LinRegSlope(int period)
+LinRegSlope(IDataSeries input, int period)
+LinRegSlope(int period)[int barsAgo]
+LinRegSlope(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -2536,8 +2268,7 @@ period Number of bars included in the calculations
 
 ```cs
 //Current value for the slope:
-
-**Print**("The current value for the inclination of the linear regression line is: " + **LinRegSlope**(14)\[0\]);
+Print("The current value for the inclination of the linear regression line is: " + LinRegSlope(14)[0]);
 ```
 
 
@@ -2555,9 +2286,8 @@ See [*HighestHighPrice()*], [*HighestHighIndex()*], [*LowestLowPrice()*],
 ### Usage
 
 ```cs
-**LowestLowIndex**(**int** BarsBack)
-
-**LowestLowIndex**(**int** BarsBack)\[**int** barsAgo\]
+LowestLowIndex(int BarsBack)
+LowestLowIndex(int BarsBack)[int barsAgo]
 ```
 
 
@@ -2577,10 +2307,8 @@ BarsBack Number of periods within which the highest high shall be searched for
 
 ### Example
 ```cs
-
 // How many bars back is the lowest low of the last 14 bars located?
-
-**Print**("The lowest low of the last 14 bars was " + **LowestLowIndex**(14)\[0\] + " bars ago.");
+Print("The lowest low of the last 14 bars was " + LowestLowIndex(14)[0] + " bars ago.");
 ```
 
 
@@ -2598,9 +2326,8 @@ See [*HighestHighPrice()*], [*HighestHighIndex()*], *[LowestLowIndex]()*,
 ### Usage
 
 ```cs
-**LowestLowPrice**(**int** BarsBack)
-
-**LowestLowPrice**(**int** BarsBack)\[**int** barsAgo\]
+LowestLowPrice(int BarsBack)
+LowestLowPrice(int BarsBack)[int barsAgo]
 ```
 
 
@@ -2622,8 +2349,7 @@ BarsBack Number of periods within which the low will be searched for
 
 ```cs
 // What value did the lowest low of the last 14 periods have?
-
-**Print**("The lowest low of the last 14 bars is " + **LowestLowPrice**(14)\[0\]);
+Print("The lowest low of the last 14 bars is " + LowestLowPrice(14)[0]);
 ```
 
 
@@ -2650,27 +2376,17 @@ VTAD: [*http://vtadwiki.vtad.de/index.php/MACD*]
 ### Usage
 
 ```cs
-**MACD**(**int** fast, **int** slow, **int** smooth)
-
-**MACD**(IDataSeries input, **int** fast, **int** slow, **int** smooth)
-
-**For the value of the MACD line**
-
-**MACD**(**int** fast, **int** slow, **int** smooth)\[**int** barsAgo\]
-
-**MACD**(IDataSeries input, **int** fast, **int** slow, **int** smooth)\[**int** barsAgo\]
-
-**For the value of the signal line**
-
-**MACD**(**int** fast, **int** slow, **int** smooth).Avg\[**int** barsAgo\]
-
-**MACD**(IDataSeries input, **int** fast, **int** slow, **int** smooth).Avg\[**int** barsAgo\]
-
-**For the difference between the MACD and the signal line**
-
-**MACD**(**int** fast, **int** slow, **int** smooth).Diff\[**int** barsAgo\]
-
-**MACD**(IDataSeries input, **int** fast, **int** slow, **int** smooth).Diff\[**int** barsAgo\]
+MACD(int fast, int slow, int smooth)
+MACD(IDataSeries input, int fast, int slow, int smooth)
+For the value of the MACD line
+MACD(int fast, int slow, int smooth)[int barsAgo]
+MACD(IDataSeries input, int fast, int slow, int smooth)[int barsAgo]
+For the value of the signal line
+MACD(int fast, int slow, int smooth).Avg[int barsAgo]
+MACD(IDataSeries input, int fast, int slow, int smooth).Avg[int barsAgo]
+For the difference between the MACD and the signal line
+MACD(int fast, int slow, int smooth).Diff[int barsAgo]
+MACD(IDataSeries input, int fast, int slow, int smooth).Diff[int barsAgo]
 ```
 
 
@@ -2698,12 +2414,9 @@ smooth Number of periods for the EMA calculation of the signal line
 
 ```cs
 //Show the current values for the MACD
-
-**Print**("The current value for the MACD line is: " + **MACD**(12,26,9)\[0\]);
-
-**Print**("The current value for the signal line is: " + **MACD**(12,26,9).Avg\[0\]);
-
-**Print**("The difference between the MACD and the signal line is: " + **MACD**(12,26,9).Diff\[0\]);
+Print("The current value for the MACD line is: " + MACD(12,26,9)[0]);
+Print("The current value for the signal line is: " + MACD(12,26,9).Avg[0]);
+Print("The difference between the MACD and the signal line is: " + MACD(12,26,9).Diff[0]);
 ```
 
 
@@ -2722,27 +2435,17 @@ Sometimes a strong trend does not take hold after an envelope break and prices m
 ### Usage
 
 ```cs
-**MAEnvelopes**(**double** envelopePercentage, MAEnvelopesMAType maType, **int** period)
-
-**MAEnvelopes**(IDataSeries input, **double** envelopePercentage, MAEnvelopesMAType maType, **int** period)
-
-**For the upper band**
-
-**MAEnvelopes**(**double** envelopePercentage, MAEnvelopesMAType maType, **int** period).Upper\[**int** barsAgo\]
-
-**MAEnvelopes**(IDataSeries input, **double** envelopePercentage, MAEnvelopesMAType maType, **int** period).Upper\[**int** barsAgo\]
-
-**For the middle band**
-
-**MAEnvelopes**(**double** envelopePercentage, MAEnvelopesMAType maType, **int** period).Middle\[**int** barsAgo\]
-
-**MAEnvelopes**(IDataSeries input, **double** envelopePercentage, MAEnvelopesMAType maType, **int** period).Middle\[**int** barsAgo\]
-
-**For the lower band**
-
-**MAEnvelopes**(**double** envelopePercentage, MAEnvelopesMAType maType, **int** period).Lower\[**int** barsAgo\]
-
-**MAEnvelopes**(IDataSeries input, **double** envelopePercentage, MAEnvelopesMAType maType, **int** period).Lower\[**int** barsAgo\]
+MAEnvelopes(double envelopePercentage, MAEnvelopesMAType maType, int period)
+MAEnvelopes(IDataSeries input, double envelopePercentage, MAEnvelopesMAType maType, int period)
+For the upper band
+MAEnvelopes(double envelopePercentage, MAEnvelopesMAType maType, int period).Upper[int barsAgo]
+MAEnvelopes(IDataSeries input, double envelopePercentage, MAEnvelopesMAType maType, int period).Upper[int barsAgo]
+For the middle band
+MAEnvelopes(double envelopePercentage, MAEnvelopesMAType maType, int period).Middle[int barsAgo]
+MAEnvelopes(IDataSeries input, double envelopePercentage, MAEnvelopesMAType maType, int period).Middle[int barsAgo]
+For the lower band
+MAEnvelopes(double envelopePercentage, MAEnvelopesMAType maType, int period).Lower[int barsAgo]
+MAEnvelopes(IDataSeries input, double envelopePercentage, MAEnvelopesMAType maType, int period).Lower[int barsAgo]
 ```
 
 
@@ -2776,16 +2479,11 @@ maType Type of moving average used, possible choices are:
 
 ```cs
 //Value output for the upper band
-
-**Print**("Upper band of the MA Envelope: " + **MAEnvelopes**(1.5, MAEnvelopesMAType.SMA, 14).Upper\[0\]);
-
+Print("Upper band of the MA Envelope: " + MAEnvelopes(1.5, MAEnvelopesMAType.SMA, 14).Upper[0]);
 //Value output for the middle band
-
-**Print**("Middle band of the MA Envelope: " + **MAEnvelopes**(1.5, MAEnvelopesMAType.SMA, 14).Middle\[0\]);
-
+Print("Middle band of the MA Envelope: " + MAEnvelopes(1.5, MAEnvelopesMAType.SMA, 14).Middle[0]);
 //Value output for the lower band
-
-**Print**("Lower band of the MA Envelope: " + **MAEnvelopes**(1.5, MAEnvelopesMAType.SMA, 14).Lower\[0\]);
+Print("Lower band of the MA Envelope: " + MAEnvelopes(1.5, MAEnvelopesMAType.SMA, 14).Lower[0]);
 ```
 
 
@@ -2891,13 +2589,10 @@ See [*ROC*].
 ### Usage
 
 ```cs
-**Momentum**(**int** period)
-
-**Momentum** (IDataSeries input, **int** period)
-
-**Momentum** (**int** period)\[**int** barsAgo\]
-
-**Momentum** (IDataSeries input, **int** period)\[**int** barsAgo\]
+Momentum(int period)
+Momentum (IDataSeries input, int period)
+Momentum (int period)[int barsAgo]
+Momentum (IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -2921,8 +2616,7 @@ period Number of bars included in the calculations
 
 ```cs
 //Output of the values for the momentum indicator.
-
-**Print**("The current value for the momentum is " + **Momentum**(14)\[0\]);
+Print("The current value for the momentum is " + Momentum(14)[0]);
 ```
 
 
@@ -2943,13 +2637,10 @@ VTAD: [*http://vtadwiki.vtad.de/index.php/ Money\_Flow\_Index*]
 ### Usage
 
 ```cs
-**MFI**(**int** period)
-
-**MFI**(IDataSeries input, **int** period)
-
-**MFI**(**int** period)\[**int** barsAgo\]
-
-**MFI**(IDataSeries input, **int** period)\[**int** barsAgo\]
+MFI(int period)
+MFI(IDataSeries input, int period)
+MFI(int period)[int barsAgo]
+MFI(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -2971,10 +2662,8 @@ period Number of bars included in the calculations
 
 ### Example
 ```cs
-
 //Current MFI value
-
-**Print**("The current value for the MFI is: " + **MFI**(14)\[0\]);
+Print("The current value for the MFI is: " + MFI(14)[0]);
 ```
 
 
@@ -3046,13 +2735,10 @@ The general interpretations are the same as for regular moving averages.
 ### Usage
 
 ```cs
-**DEMA**(**int** period)
-
-**DEMA**(IDataSeries input, **int** period)
-
-**DEMA**(**int** period)\[**int** barsAgo\]
-
-**DEMA**(IDataSeries input, **int** period)\[**int** barsAgo\]
+DEMA(int period)
+DEMA(IDataSeries input, int period)
+DEMA(int period)[int barsAgo]
+DEMA(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -3080,7 +2766,7 @@ Value.**Set**(2 \* **EMA**(Inputs\[0\], Period)\[0\] - **EMA**(**EMA**(Inputs\[0
 
 ```cs
 //Output the values for the DEMA
-**Print**("The current DEMA value is " + **DEMA**(20)\[0\]);
+Print("The current DEMA value is " + DEMA(20)[0]);
 ```
 
 
@@ -3100,13 +2786,10 @@ General interpretations of the moving averages also apply to the EMA.
 ### Usage
 
 ```cs
-**EMA**(**int** period)
-
-**EMA**(IDataSeries input, **int** period)
-
-**EMA**(**int** period)\[**int** barsAgo\]
-
-**EMA**(IDataSeries input, **int** period)\[**int** barsAgo\]
+EMA(int period)
+EMA(IDataSeries input, int period)
+EMA(int period)[int barsAgo]
+EMA(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -3132,10 +2815,8 @@ Value.**Set**(CurrentBar == 0 ? Input\[0\] : Input\[0\] \* (2.0 / (1 + Period)) 
 
 ### Example
 ```cs
-
 //Output the value for the EMA
-
-**Print**("The current EMA value is " + **EMA**(20)\[0\]);
+Print("The current EMA value is " + EMA(20)[0]);
 ```
 
 
@@ -3169,14 +2850,10 @@ The same interpretations as for the moving averages apply to the HMA, the only m
 
 ### Usage
 ```cs
-
-**HMA**(**int** period)
-
-**HMA**(IDataSeries input, **int** period)
-
-**HMA**(**int** period)\[**int** barsAgo\]
-
-**HMA**(IDataSeries input, **int** period)\[**int** barsAgo\]
+HMA(int period)
+HMA(IDataSeries input, int period)
+HMA(int period)[int barsAgo]
+HMA(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -3210,8 +2887,7 @@ Value.**Set**(**WMA**(diffSeries, (**int**) Math.**Sqrt**(Period))\[0\]);
 
 ```cs
 //Output the value for the HMA
-
-**Print**("The current HMA value is " + **HMA**(21)\[0\]);
+Print("The current HMA value is " + HMA(21)[0]);
 ```
 
 
@@ -3235,13 +2911,10 @@ For a more general interpretation of moving averages, please see the following c
 ### Usage
 
 ```cs
-**KAMA**(**int** fast, **int** period, **int** slow)
-
-**KAMA**(IDataSeries input, **int** fast, **int** period, **int** slow)
-
-**KAMA**(**int** fast, **int** period, **int** slow)\[**int** barsAgo\]
-
-**KAMA**(IDataSeries input, **int** fast, **int** period, **int** slow)\[**int** barsAgo\]
+KAMA(int fast, int period, int slow)
+KAMA(IDataSeries input, int fast, int period, int slow)
+KAMA(int fast, int period, int slow)[int barsAgo]
+KAMA(IDataSeries input, int fast, int period, int slow)[int barsAgo]
 ```
 
 
@@ -3269,8 +2942,7 @@ slow Long period
 
 ```cs
 //Output for the value of the Kaufman Moving Average(KAMA)
-
-**Print**("The current value of the KAMA is " + **KAMA**(2,10,30)\[0\]);
+Print("The current value of the KAMA is " + KAMA(2,10,30)[0]);
 ```
 
 
@@ -3297,19 +2969,13 @@ General information about moving averages can be found here: [*Moving Averages*]
 ### Usage
 
 ```cs
-**MAMA**(**double** fastLimit, **double** slowLimit)
-
-**MAMA**(IDataSeries input, **double** fastLimit, **double** slowLimit)
-
-**MAMA**(**double** fastLimit, **double** slowLimit)\[**int** barsAgo\]
-
-**MAMA**(IDataSeries input, **double** fastLimit, **double** slowLimit)\[**int** barsAgo\]
-
-**Value of the Following Adaptive Moving Average (FAMA)**
-
-**MAMA**(**double** fastLimit, **double** slowLimit).Fama\[**int** barsAgo\]
-
-**MAMA**(IDataSeries input, **double** fastLimit, **double** slowLimit).Fama\[**int** barsAgo\]
+MAMA(double fastLimit, double slowLimit)
+MAMA(IDataSeries input, double fastLimit, double slowLimit)
+MAMA(double fastLimit, double slowLimit)[int barsAgo]
+MAMA(IDataSeries input, double fastLimit, double slowLimit)[int barsAgo]
+Value of the Following Adaptive Moving Average (FAMA)
+MAMA(double fastLimit, double slowLimit).Fama[int barsAgo]
+MAMA(IDataSeries input, double fastLimit, double slowLimit).Fama[int barsAgo]
 ```
 
 
@@ -3335,12 +3001,9 @@ slowLimit Lower limit for the alpha value
 
 ```cs
 //Output values for (MAMA)
-
-**Print**("The current value for the MAMA is " + **MAMA**(0.5, 0.05)\[0\]);
-
+Print("The current value for the MAMA is " + MAMA(0.5, 0.05)[0]);
 //Output values for (FAMA)
-
-**Print**("The current value for the FAMA is " + **MAMA**(0.5, 0.05).Fama\[0\]);
+Print("The current value for the FAMA is " + MAMA(0.5, 0.05).Fama[0]);
 ```
 
 
@@ -3364,13 +3027,10 @@ More general interpretations and meanings can be found here: [*Moving Averages*]
 ### Usage
 
 ```cs
-**SMA**(**int** period)
-
-**SMA**(IDataSeries input, **int** period)
-
-**SMA**(**int** period)\[**int** barsAgo\]
-
-**SMA**(IDataSeries input, **int** period)\[**int** barsAgo\]
+SMA(int period)
+SMA(IDataSeries input, int period)
+SMA(int period)[int barsAgo]
+SMA(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -3396,10 +3056,8 @@ Value.**Set**((last + Input\[0\] - Input\[Period\]) / Math.**Min**(CurrentBar, P
 
 ### Example
 ```cs
-
 //Output of the SMA value
-
-**Print**("The current SMA value is " + **SMA**(14)\[0\]);
+Print("The current SMA value is " + SMA(14)[0]);
 ```
 
 
@@ -3437,13 +3095,10 @@ The SMMA is often used with the [*SuperTrend*] indicator.
 ### Usage
 
 ```cs
-**SMMA**(**int** period)
-
-**SMMA**(IDataSeries input, **int** period)
-
-**SMMA**(**int** period)\[**int** barsAgo\]
-
-**SMMA**(IDataSeries input, **int** period)\[**int** barsAgo\]
+SMMA(int period)
+SMMA(IDataSeries input, int period)
+SMMA(int period)[int barsAgo]
+SMMA(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -3467,8 +3122,7 @@ period Number of bars included in the calculations
 
 ```cs
 //Output for the value of the SMMA
-
-**Print**("The current SMMA value is " + **SMMA**(14)\[0\]);
+Print("The current SMMA value is " + SMMA(14)[0]);
 ```
 
 
@@ -3483,13 +3137,10 @@ More information about moving averages in general can be found here: [*Moving Av
 ### Usage
 
 ```cs
-**TEMA**(**int** period)
-
-**TEMA**(IDataSeries input, **int** period)
-
-**TEMA**(**int** period)\[**int** barsAgo\]
-
-**TEMA**(IDataSeries input, **int** period)\[**int** barsAgo\]
+TEMA(int period)
+TEMA(IDataSeries input, int period)
+TEMA(int period)[int barsAgo]
+TEMA(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -3513,8 +3164,7 @@ period Number of bars included in the calculations
 
 ```cs
 //Output for the Triple Exponential Moving Average
-
-**Print**("The current TEMA value is " + **TEMA**(14)\[0\]);
+Print("The current TEMA value is " + TEMA(14)[0]);
 ```
 
 
@@ -3528,14 +3178,10 @@ The Triangular Moving Average is a specifically weighted average with a special 
 
 ### Usage
 ```cs
-
-**TMA**(**int** period)
-
-**TMA**(IDataSeries input, **int** period)
-
-**TMA**(**int** period)\[**int** barsAgo\]
-
-**TMA**(IDataSeries input, **int** period)\[**int** barsAgo\]
+TMA(int period)
+TMA(IDataSeries input, int period)
+TMA(int period)[int barsAgo]
+TMA(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -3559,8 +3205,7 @@ period Number of bars included in the calculations
 
 ```cs
 //Output for the value of the TMA
-
-**Print**("The current value for the TMA is " + **TMA**(14)\[0\]);
+Print("The current value for the TMA is " + TMA(14)[0]);
 ```
 
 
@@ -3577,19 +3222,13 @@ A buy signal is created when the TRIX indicator crosses the zero line from botto
 ### Usage
 
 ```cs
-**TRIX**(**int** period, **int** signalPeriod)
-
-**TRIX**(IDataSeries input, **int** period, **int** signalPeriod)
-
-**TRIX**(**int** period, **int** signalPeriod)\[**int** barsAgo\]
-
-**TRIX**(IDataSeries input, **int** period, **int** signalPeriod)\[**int** barsAgo\]
-
-**For the signal line**
-
-**TRIX**(**int** period, **int** signalPeriod).Signal\[**int** barsAgo\]
-
-**TRIX**(IDataSeries input, **int** period, **int** signalPeriod).Signal\[**int** barsAgo\]
+TRIX(int period, int signalPeriod)
+TRIX(IDataSeries input, int period, int signalPeriod)
+TRIX(int period, int signalPeriod)[int barsAgo]
+TRIX(IDataSeries input, int period, int signalPeriod)[int barsAgo]
+For the signal line
+TRIX(int period, int signalPeriod).Signal[int barsAgo]
+TRIX(IDataSeries input, int period, int signalPeriod).Signal[int barsAgo]
 ```
 
 
@@ -3615,12 +3254,9 @@ signal period Number of bars included in the signal line calculation
 
 ```cs
 //Output for the TRIX EMA
-
-**Print**("The current TRIX value is " + **TRIX**(14, 3)\[0\]);
-
+Print("The current TRIX value is " + TRIX(14, 3)[0]);
 //Output for the TRIX signal line
-
-**Print**("The current TRIX value is " + **TRIX**(14, 3).Signal\[0\]);
+Print("The current TRIX value is " + TRIX(14, 3).Signal[0]);
 ```
 
 
@@ -3635,13 +3271,10 @@ The calculation is the same as that of the DEMA, the only difference being that 
 ### Usage
 
 ```cs
-**T3**(**int** period, **int** tCount, **double** vFactor)
-
-**T3**(IDataSeries input, **int** period, **int** tCount, **double** vFactor)
-
-**T3**(**int** period, **int** tCount, **double** vFactor)\[**int** barsAgo\]
-
-**T3**(IDataSeries input, **int** period, **int** tCount, **double** vFactor)\[**int** barsAgo\]
+T3(int period, int tCount, double vFactor)
+T3(IDataSeries input, int period, int tCount, double vFactor)
+T3(int period, int tCount, double vFactor)[int barsAgo]
+T3(IDataSeries input, int period, int tCount, double vFactor)[int barsAgo]
 ```
 
 
@@ -3667,10 +3300,8 @@ vFactor Volume factor (multiplier)
 
 ### Example
 ```cs
-
 //Output of the value for the T3 indicator
-
-**Print**("The current T3 value is " + **T3**(14, 3, 0.7)\[0\]);
+Print("The current T3 value is " + T3(14, 3, 0.7)[0]);
 ```
 
 
@@ -3688,13 +3319,10 @@ By automatically regulating the smoothing constant, the VMA attempts to eliminat
 ### Usage
 
 ```cs
-**VMA**(**int** period, **int** volatilityPeriod)
-
-**VMA**(IDataSeries input, **int** period, **int** volatilityPeriod)
-
-**VMA**(**int** period, **int** volatilityPeriod)\[**int** barsAgo\]
-
-**VMA**(IDataSeries input, **int** period, **int** volatilityPeriod)\[**int** barsAgo\]
+VMA(int period, int volatilityPeriod)
+VMA(IDataSeries input, int period, int volatilityPeriod)
+VMA(int period, int volatilityPeriod)[int barsAgo]
+VMA(IDataSeries input, int period, int volatilityPeriod)[int barsAgo]
 ```
 
 
@@ -3718,10 +3346,8 @@ volatility period Number of bars included in the calculation for the signal line
 
 ### Example
 ```cs
-
 //Output the VMA value
-
-**Print**("The current VMA value is " + **VMA**(9, 9)\[0\]);
+Print("The current VMA value is " + VMA(9, 9)[0]);
 ```
 
 
@@ -3733,14 +3359,10 @@ VWMA is a non-cumulated smoothed average. This moving average is weighted based 
 
 ### Usage
 ```cs
-
-**VWMA**(**int** period)
-
-**VWMA**(IDataSeries input, **int** period)
-
-**VWMA**(**int** period)\[**int** barsAgo\]
-
-**VWMA**(IDataSeries input, **int** period)\[**int** barsAgo\]
+VWMA(int period)
+VWMA(IDataSeries input, int period)
+VWMA(int period)[int barsAgo]
+VWMA(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -3762,10 +3384,8 @@ period Number of bars included in the calculations
 
 ### Example
 ```cs
-
 //Output for the VWMA
-
-**Print**("The current VWMA value is " + **VWMA**(14)\[0\]);
+Print("The current VWMA value is " + VWMA(14)[0]);
 ```
 
 
@@ -3782,13 +3402,10 @@ The Weighted Moving Average is the most well-known of the weighted averages. It 
 ### Usage
 
 ```cs
-**WMA**(**int** period)
-
-**WMA**(IDataSeries input, **int** period)
-
-**WMA**(**int** period)\[**int** barsAgo\]
-
-**WMA**(IDataSeries input, **int** period)\[**int** barsAgo\]
+WMA(int period)
+WMA(IDataSeries input, int period)
+WMA(int period)[int barsAgo]
+WMA(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -3810,10 +3427,8 @@ period Number of bars included in the calculations
 
 ### Example
 ```cs
-
 //Output for the WMA
-
-**Print**("The current value of the WMA is " + **WMA**(14)\[0\]);
+Print("The current value of the WMA is " + WMA(14)[0]);
 ```
 
 
@@ -3830,13 +3445,10 @@ FMLabs: [*http://www.fmlabs.com/reference/default.htm?url=ZeroLagExpMA.htm*]
 ### Usage
 
 ```cs
-**ZLEMA**(**int** period)
-
-**ZLEMA**(IDataSeries input, **int** period)
-
-**ZLEMA**(**int** period)\[**int** barsAgo\]
-
-**ZLEMA**(IDataSeries input, **int** period)\[**int** barsAgo\]
+ZLEMA(int period)
+ZLEMA(IDataSeries input, int period)
+ZLEMA(int period)[int barsAgo]
+ZLEMA(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -3860,8 +3472,7 @@ period Number of bars included in the calculations
 
 ```cs
 //Output for the value of the Zero Lag Exponential Moving Average
-
-**Print**("The current ZLEMA value is " + **ZLEMA**(14)\[0\]);
+Print("The current ZLEMA value is " + ZLEMA(14)[0]);
 ```
 
 
@@ -3879,14 +3490,10 @@ See [*NBarsDown*].
 
 ### Usage
 ```cs
-
-**NBarsUp**(**int** barCount, **bool** BarUp, **bool** higherHigh, **bool** higherLow)
-
-**NBarsUp**(IDataSeries input, **int** barCount, **bool** BarUp, **bool** higherHigh, **bool** higherLow)
-
-**NBarsUp**(**int** barCount, **int** barCount, **bool** BarUp, **bool** higherHigh, **bool** higherLow)\[**int** barsAgo\]
-
-**NBarsUp**(IDataSeries input, **int** barCount, **bool** BarUp, **bool** higherHigh, **bool** higherLow)\[**int** barsAgo\]
+NBarsUp(int barCount, bool BarUp, bool higherHigh, bool higherLow)
+NBarsUp(IDataSeries input, int barCount, bool BarUp, bool higherHigh, bool higherLow)
+NBarsUp(int barCount, int barCount, bool BarUp, bool higherHigh, bool higherLow)[int barsAgo]
+NBarsUp(IDataSeries input, int barCount, bool BarUp, bool higherHigh, bool higherLow)[int barsAgo]
 ```
 
 
@@ -3919,10 +3526,8 @@ higherLow Additional condition (true): continuously rising lows
 
 ```cs
 // Look for 3 successively rising closing prices
-
-**if** (**NBarsUp**(3, **true**, **true**, **true**)\[0\] == 1)
-
-**Print**("3 successively higher closing prices have occurred.");
+if (NBarsUp(3, true, true, true)[0] == 1)
+Print("3 successively higher closing prices have occurred.");
 ```
 
 
@@ -3941,13 +3546,10 @@ In addition, the following conditions can be included in the search:
 ### Usage
 
 ```cs
-**NBarsDown**(**int** barCount, **bool** BarDown, **bool** lowerHigh, **bool** lowerLow)
-
-**NBarsDown**(IDataSeries input, **int** barCount, **bool** BarDown, **bool** lowerHigh, **bool** lowerLow)
-
-**NBarsDown**(**int** barCount, **bool** BarDown, **bool** lowerHigh, **bool** lowerLow)\[**int** barsAgo\]
-
-**NBarsDown**(IDataSeries input, **bool** barCount, **int** BarDown, **bool** lowerHigh, **bool** lowerLow)\[**int** barsAgo\]
+NBarsDown(int barCount, bool BarDown, bool lowerHigh, bool lowerLow)
+NBarsDown(IDataSeries input, int barCount, bool BarDown, bool lowerHigh, bool lowerLow)
+NBarsDown(int barCount, bool BarDown, bool lowerHigh, bool lowerLow)[int barsAgo]
+NBarsDown(IDataSeries input, bool barCount, int BarDown, bool lowerHigh, bool lowerLow)[int barsAgo]
 ```
 
 
@@ -3978,14 +3580,10 @@ lowerLow Additional condition (true); continuously falling lows
 
 ### Example
 ```cs
-
-**NBarsDown**(**int** barCount, **bool** BarDown, **bool** lowerHigh, **bool** lowerLow)
-
-**NBarsDown**(IDataSeries input, **int** barCount, **bool** BarDown, **bool** lowerHigh, **bool** lowerLow)
-
-**NBarsDown**(**int** barCount, **bool** BarDown, **bool** lowerHigh, **bool** lowerLow)\[**int** barsAgo\]
-
-**NBarsDown**(IDataSeries input, **bool** barCount, **int** BarDown, **bool** lowerHigh, **bool** lowerLow)\[**int** barsAgo\]
+NBarsDown(int barCount, bool BarDown, bool lowerHigh, bool lowerLow)
+NBarsDown(IDataSeries input, int barCount, bool BarDown, bool lowerHigh, bool lowerLow)
+NBarsDown(int barCount, bool BarDown, bool lowerHigh, bool lowerLow)[int barsAgo]
+NBarsDown(IDataSeries input, bool barCount, int BarDown, bool lowerHigh, bool lowerLow)[int barsAgo]
 ```
 
 
@@ -4004,13 +3602,10 @@ The absolute value of OBV is not important. Chartists should instead focus on th
 ### Usage
 
 ```cs
-**OBV**()
-
-**OBV**(IDataSeries input)
-
-**OBV**()\[**int** barsAgo\]
-
-**OBV**(IDataSeries input)\[**int** barsAgo\]
+OBV()
+OBV(IDataSeries input)
+OBV()[int barsAgo]
+OBV(IDataSeries input)[int barsAgo]
 ```
 
 
@@ -4030,10 +3625,8 @@ input Input data series for the indicator
 
 ### Example
 ```cs
-
 //Output the value for the On Balance Volume (OBV)
-
-**Print**("The current value for the OBV is " + **OBV**()\[0\]);
+Print("The current value for the OBV is " + OBV()[0]);
 ```
 
 
@@ -4145,40 +3738,23 @@ occurrence the occurrences of the youngest to the oldest point
 **Example**
 
 ```cs
-**private** void **PrintOutTrendProperties**(**int** trendSize)
-
+private void PrintOutTrendProperties(int trendSize)
 {
-
 // Reverse order of prints fills output window in correct order
-
-**Print**("");
-
-**Print**("valid P3 date: " + **P123**(trendSize).ValidP3DateTime);
-
-**Print**("valid P3 price: " + **P123**(trendSize).ValidP3Price);
-
-**Print**("temp P3 date: " + **P123**(trendSize).TempP3DateTime);
-
-**Print**("temp P3 price: " + **P123**(trendSize).TempP3Price);
-
-**Print**("P2 date: " + **P123**(trendSize).P2DateTime);
-
-**Print**("P2 price: " + **P123**(trendSize).P2Price);
-
-**Print**("P1 date: " + **P123**(trendSize).P1DateTime);
-
-**Print**("P1 price: " + **P123**(trendSize).P1Price);
-
-**Print**("last point date: " + **P123**(trendSize).LastPointDateTime);
-
-**Print**("last point price: " + **P123**(trendSize).LastPointPrice);
-
-**Print**("last point: " + **P123**(trendSize).LastPoint);
-
-**Print**("is trend valid: " + **P123**(trendSize).IsTrendValid);
-
-**Print**("trend direction: " + **P123**(trendSize).TrendDirection);
-
+Print("");
+Print("valid P3 date: " + P123(trendSize).ValidP3DateTime);
+Print("valid P3 price: " + P123(trendSize).ValidP3Price);
+Print("temp P3 date: " + P123(trendSize).TempP3DateTime);
+Print("temp P3 price: " + P123(trendSize).TempP3Price);
+Print("P2 date: " + P123(trendSize).P2DateTime);
+Print("P2 price: " + P123(trendSize).P2Price);
+Print("P1 date: " + P123(trendSize).P1DateTime);
+Print("P1 price: " + P123(trendSize).P1Price);
+Print("last point date: " + P123(trendSize).LastPointDateTime);
+Print("last point price: " + P123(trendSize).LastPointPrice);
+Print("last point: " + P123(trendSize).LastPoint);
+Print("is trend valid: " + P123(trendSize).IsTrendValid);
+Print("trend direction: " + P123(trendSize).TrendDirection);
 }
 ```
 
@@ -4208,14 +3784,10 @@ Wikipedia: [*http://en.wikipedia.org/wiki/Parabolic\_SAR*]
 
 ### Usage
 ```cs
-
-**ParabolicSAR**(**double** acceleration, **double** accelerationStep, **double** accelerationMax)
-
-**ParabolicSAR**(IDataSeries input, **double** acceleration, **double** accelerationStep, **double** accelerationMax)
-
-**ParabolicSAR**(**double** acceleration, **double** accelerationStep, **double** accelerationMax)\[**int** barsAgo\]
-
-**ParabolicSAR**(IDataSeries input, **double** acceleration, **double** accelerationStep, **double** accelerationMax)\[**int** barsAgo\]
+ParabolicSAR(double acceleration, double accelerationStep, double accelerationMax)
+ParabolicSAR(IDataSeries input, double acceleration, double accelerationStep, double accelerationMax)
+ParabolicSAR(double acceleration, double accelerationStep, double accelerationMax)[int barsAgo]
+ParabolicSAR(IDataSeries input, double acceleration, double accelerationStep, double accelerationMax)[int barsAgo]
 ```
 
 
@@ -4242,9 +3814,7 @@ When using this method with an index (e.g. **ParabolicSAR**(...)\[**int** barsAg
 
 ```cs
 //Output of the value for the PSAR
-
-**Print**("The current value for the Parabolic SAR is " + **ParabolicSAR**(0.02, 0.2, 0.02)\[0\]);
-
+Print("The current value for the Parabolic SAR is " + ParabolicSAR(0.02, 0.2, 0.02)[0]);
 ```
 
 ##Percentage Price Oscillator (PPO)
@@ -4261,20 +3831,13 @@ The PPO can be used for divergence analysis. The divergences have the advantage 
 
 ### Usage
 ```cs
-
-**PPO**(**int** fast, **int** slow, **int** smooth)
-
-**PPO**(IDataSeries input, **int** fast, **int** slow, **int** smooth)
-
-**PPO**(**int** fast, **int** slow, **int** smooth)\[**int** barsAgo\]
-
-**PPO**(IDataSeries input, **int** fast, **int** slow, **int** smooth)\[**int** barsAgo\]
-
-**For the smoothed value**
-
-**PPO**(**int** fast, **int** slow, **int** smooth).Smoothed\[**int** barsAgo\]
-
-**PPO**(IDataSeries input, **int** fast, **int** slow, **int** smooth).Smoothed\[**int** barsAgo\]
+PPO(int fast, int slow, int smooth)
+PPO(IDataSeries input, int fast, int slow, int smooth)
+PPO(int fast, int slow, int smooth)[int barsAgo]
+PPO(IDataSeries input, int fast, int slow, int smooth)[int barsAgo]
+For the smoothed value
+PPO(int fast, int slow, int smooth).Smoothed[int barsAgo]
+PPO(IDataSeries input, int fast, int slow, int smooth).Smoothed[int barsAgo]
 ```
 
 
@@ -4302,12 +3865,9 @@ smooth Number of bars for the calculation of the EMA signal line
 
 ```cs
 //Output for the PPO
-
-**Print**("The current value for the PPO is " + **PPO**(12, 26, 9)\[0\]);
-
+Print("The current value for the PPO is " + PPO(12, 26, 9)[0]);
 //Output for the value of the PPO smoothed
-
-**Print**("The current value for the PPO is " + **PPO**(12, 26, 9).**Smoothed**\[0\]);
+Print("The current value for the PPO is " + PPO(12, 26, 9).Smoothed[0]);
 ```
 
 
@@ -4329,21 +3889,14 @@ The Percent Envelope should never be used to make decisions based solely on the 
 ### Usage
 
 ```cs
-**PercentEnvelopes**(**double** percent)
-
-**PercentEnvelopes**(IDataSeries input, **double** percent)
-
-**For the upper band**
-
-**PercentEnvelopes**(**double** percent).UpperPercentBand\[**int** barsAgo\]
-
-**PercentEnvelopes**(IDataSeries input, **double** percent).UpperPercentBand\[**int** barsAgo\]
-
-**For the lower band**
-
-**PercentEnvelopes**(**double** percent).LowerPercentBand\[**int** barsAgo\]
-
-**PercentEnvelopes**(IDataSeries input, **double** percent).LowerPercentBand\[**int** barsAgo\]
+PercentEnvelopes(double percent)
+PercentEnvelopes(IDataSeries input, double percent)
+For the upper band
+PercentEnvelopes(double percent).UpperPercentBand[int barsAgo]
+PercentEnvelopes(IDataSeries input, double percent).UpperPercentBand[int barsAgo]
+For the lower band
+PercentEnvelopes(double percent).LowerPercentBand[int barsAgo]
+PercentEnvelopes(IDataSeries input, double percent).LowerPercentBand[int barsAgo]
 ```
 
 
@@ -4367,13 +3920,9 @@ percent Difference in % for the bands (from the input value)
 
 ```cs
 //Output for the upper band
-
-**Print**("Value of the upper percent band is: " + **PercentEnvelopes**(3).UpperPercentBand\[0\]);
-
+Print("Value of the upper percent band is: " + PercentEnvelopes(3).UpperPercentBand[0]);
 //Output for the lower band
-
-**Print**("Value of the lower percent band is: " + **PercentEnvelopes**(3).LowerPercentBand\[0\]);
-
+Print("Value of the lower percent band is: " + PercentEnvelopes(3).LowerPercentBand[0]);
 ```
 
 ##Pivot Points
@@ -4401,21 +3950,14 @@ Traders prefer to sell above the resistance lines 1 & 2 (e.g. to build up short 
 ### Usage
 
 ```cs
-**PivotPoints**()
-
-**PivotPoints**(PivotPointsMode mode)
-
-**PivotPoints**(PivotPointsMode mode, **int** LineWidth, **bool** ShowPrices, **int** DaysBack, Color RColor, Color PPColor, Color SColor)
-
-**PivotPoints**(IDataSeries input, PivotPointsMode mode, **int** LineWidth, **bool** ShowPrices, **int** DaysBack, Color RColor, Color PPColor, Color SColor)
-
-**PivotPoints**()\[barsAgo\]
-
-**PivotPoints**(PivotPointsMode mode)\[barsAgo\]
-
-**PivotPoints**(PivotPointsMode mode, **int** LineWidth, **bool** ShowPrices, **int** DaysBack, Color RColor, Color PPColor, Color SColor)\[barsAgo\]
-
-**PivotPoints**(IDataSeries input, PivotPointsMode mode, **int** LineWidth, **bool** ShowPrices, **int** DaysBack, Color RColor, Color PPColor, Color SColor)\[barsAgo\]
+PivotPoints()
+PivotPoints(PivotPointsMode mode)
+PivotPoints(PivotPointsMode mode, int LineWidth, bool ShowPrices, int DaysBack, Color RColor, Color PPColor, Color SColor)
+PivotPoints(IDataSeries input, PivotPointsMode mode, int LineWidth, bool ShowPrices, int DaysBack, Color RColor, Color PPColor, Color SColor)
+PivotPoints()[barsAgo]
+PivotPoints(PivotPointsMode mode)[barsAgo]
+PivotPoints(PivotPointsMode mode, int LineWidth, bool ShowPrices, int DaysBack, Color RColor, Color PPColor, Color SColor)[barsAgo]
+PivotPoints(IDataSeries input, PivotPointsMode mode, int LineWidth, bool ShowPrices, int DaysBack, Color RColor, Color PPColor, Color SColor)[barsAgo]
 ```
 
 
@@ -4428,9 +3970,8 @@ This class has the following public methods (as data series), which all return d
 ### Example:
 
 ```cs
-**PivotPoints**().**PP**\[**int** barsAgo\]
-
-**PivotPoints**(PivotPointsMode.Classic).S3\[**int** barsAgo\]
+PivotPoints().PP[int barsAgo]
+PivotPoints(PivotPointsMode.Classic).S3[int barsAgo]
 ```
 
 
@@ -4471,12 +4012,9 @@ This class has the following public methods (as data series), which all return d
 
 ```cs
 //Output current pivot point
-
-**Print**("The floor pivot point is located at: " + **PivotPoints**()\[0\]);
-
+Print("The floor pivot point is located at: " + PivotPoints()[0]);
 //Output first support (S1)
-
-**Print**("The first pivot support (S1) is at: " + **PivotPoints**().S1\[0\]);
+Print("The first pivot support (S1) is at: " + PivotPoints().S1[0]);
 ```
 
 
@@ -4579,14 +4117,10 @@ When the PFE zigzags around the zero line, no trend is present. If the PFE is eq
 ### Usage
 
 ```cs
-**PFE**(**int** period)
-
-**PFE**(IDataSeries input, **int** period)
-
-**PFE**(**int** period)\[**int** barsAgo\]
-
-**PFE**(IDataSeries input, **int** period)\[**int** barsAgo\]
-
+PFE(int period)
+PFE(IDataSeries input, int period)
+PFE(int period)[int barsAgo]
+PFE(IDataSeries input, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -4607,10 +4141,8 @@ period Number of bars included in the calculations
 
 ### Example
 ```cs
-
 //Output for the value of the Polarized Fractal Efficiency (PFE)
-
-**Print**("The current value for the PFE is: " + **PFE**(20)\[0\]);
+Print("The current value for the PFE is: " + PFE(20)[0]);
 ```
 
 
@@ -4623,13 +4155,10 @@ The Price Oscillator is an indicator based on the difference between two moving 
 ### Usage
 
 ```cs
-**PriceOscillator**(**int** fast, **int** slow, **int** smooth)
-
-**PriceOscillator**(IDataSeries input, **int** fast, **int** slow, **int** smooth)
-
-**PriceOscillator**(**int** fast, **int** slow, **int** smooth)\[**int** barsAgo\]
-
-**PriceOscillator**(IDataSeries input, **int** fast, **int** slow, **int** smooth)\[**int** barsAgo\]
+PriceOscillator(int fast, int slow, int smooth)
+PriceOscillator(IDataSeries input, int fast, int slow, int smooth)
+PriceOscillator(int fast, int slow, int smooth)[int barsAgo]
+PriceOscillator(IDataSeries input, int fast, int slow, int smooth)[int barsAgo]
 ```
 
 
@@ -4657,12 +4186,9 @@ smooth Number of bars used for the calculation of the EMA signal line
 
 ```cs
 //Output for the value of the price oscillator
-
-**Print**("The current value for the PPO is " + **PriceOscillator**(12, 26, 9)\[0\]);
-
+Print("The current value for the PPO is " + PriceOscillator(12, 26, 9)[0]);
 //Output for the value of the smooth price oscillator
-
-**Print**("The current value for the smooth is " + **PriceOscillator**(12, 26, 9).**Smoothed**\[0\]);
+Print("The current value for the smooth is " + PriceOscillator(12, 26, 9).Smoothed[0]);
 ```
 
 
@@ -4675,13 +4201,10 @@ Range outputs the span/difference between the high and the low in ticks for each
 ### Usage
 
 ```cs
-**Range**()
-
-**Range**(IDataSeries input)
-
-**Range**()\[**int** barsAgo\]
-
-**Range**(IDataSeries input)\[**int** barsAgo\]
+Range()
+Range(IDataSeries input)
+Range()[int barsAgo]
+Range(IDataSeries input)[int barsAgo]
 ```
 
 
@@ -4703,12 +4226,9 @@ input Input data series for the indicator
 
 ```cs
 //Output for the value of the range
-
-**Print**("The current bar has a range of: " + **Range**()\[0\]);
-
+Print("The current bar has a range of: " + Range()[0]);
 //Identical output
-
-**Print**("The current bar has a range of: " + High\[0\] - Low\[0\]);
+Print("The current bar has a range of: " + High[0] - Low[0]);
 ```
 
 
@@ -4729,13 +4249,10 @@ When the span between the current close and the previous days close is bigger th
 ### Usage
 
 ```cs
-**RIND**(**int** periodQ, **int** smooth)
-
-**RIND**(IDataSeries input, **int** periodQ, **int** smooth)
-
-**RIND**(**int** periodQ, **int** smooth)\[**int** barsAgo\]
-
-**RIND**(IDataSeries input, **int** periodQ, **int** smooth)\[**int** barsAgo\]
+RIND(int periodQ, int smooth)
+RIND(IDataSeries input, int periodQ, int smooth)
+RIND(int periodQ, int smooth)[int barsAgo]
+RIND(IDataSeries input, int periodQ, int smooth)[int barsAgo]
 ```
 
 
@@ -4759,10 +4276,8 @@ smooth Number of bars used for smoothing the indicator (using an EMA)
 
 ### Example
 ```cs
-
 //Output
-
-**Print**("The current value for the PFE is: " + **RIND**(3, 10)\[0\]);
+Print("The current value for the PFE is: " + RIND(3, 10)[0]);
 ```
 
 
@@ -4786,13 +4301,10 @@ VTAD: [*http://vtadwiki.vtad.de/index.php/RoC*]
 ### Usage
 
 ```cs
-**ROC**(**int** period)
-
-**ROC**(IDataSeries input, **int** period)
-
-**ROC**(**int** period)\[**int** barsAgo\]
-
-**ROC**(IDataSeries input, **int** period)\[**int** barsAgo\]
+ROC(int period)
+ROC(IDataSeries input, int period)
+ROC(int period)[int barsAgo]
+ROC(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -4816,8 +4328,7 @@ period Number of bars included in the calculations
 
 ```cs
 //Output of the value for the ROC indicator
-
-**Print**("The current ROC value is: " + **ROC**(14)\[0\]);
+Print("The current ROC value is: " + ROC(14)[0]);
 ```
 
 
@@ -4842,13 +4353,10 @@ In the long-term analysis, the following methodology should be applied:
 ### Usage
 
 ```cs
-**RSS**(**int** eMA1, **int** eMA2, **int** length)
-
-**RSS**(IDataSeries input, **int** eMA1, **int** eMA2, **int** length)
-
-**RSS**(**int** eMA1, **int** eMA2, **int** length)\[**int** barsAgo\]
-
-**RSS**(IDataSeries input, **int** eMA1, **int** eMA2, **int** length)\[**int** barsAgo\]
+RSS(int eMA1, int eMA2, int length)
+RSS(IDataSeries input, int eMA1, int eMA2, int length)
+RSS(int eMA1, int eMA2, int length)[int barsAgo]
+RSS(IDataSeries input, int eMA1, int eMA2, int length)[int barsAgo]
 ```
 
 
@@ -4874,10 +4382,8 @@ eMA2 Number of periods for the second EMA
 
 ### Example
 ```cs
-
 //Output for the RSS
-
-**Print**("The current RSS is " + **RSS** (10, 40, 5)\[0\]);
+Print("The current RSS is " + RSS (10, 40, 5)[0]);
 ```
 
 
@@ -4898,19 +4404,13 @@ Traditionally, and according to Wilder, RSI is considered overbought when above 
 ### Usage
 
 ```cs
-**RSI**(**int** period, **int** smooth)
-
-**RSI**(IDataSeries input, **int** period, **int** smooth)
-
-**RSI**(**int** period, **int** smooth)\[**int** barsAgo\]
-
-**RSI**(IDataSeries input, **int** period, **int** smooth)\[**int** barsAgo\]
-
-**For the average value**
-
-**RSI**(**int** period, **int** smooth).Avg\[**int** barsAgo\]
-
-**RSI**(IDataSeries input, **int** period, **int** smooth).Avg\[**int** barsAgo\]
+RSI(int period, int smooth)
+RSI(IDataSeries input, int period, int smooth)
+RSI(int period, int smooth)[int barsAgo]
+RSI(IDataSeries input, int period, int smooth)[int barsAgo]
+For the average value
+RSI(int period, int smooth).Avg[int barsAgo]
+RSI(IDataSeries input, int period, int smooth).Avg[int barsAgo]
 ```
 
 
@@ -4936,12 +4436,9 @@ smooth Number of periods for the smoothing
 
 ```cs
 //Output for the RSI
-
-**Print**("The current value for the RSI is: " + **RSI**(14, 3)\[0\]);
-
+Print("The current value for the RSI is: " + RSI(14, 3)[0]);
 //Output for the average line
-
-**Print**("The current value for the AVG line is: " + **RSI**(14, 3).Avg\[0\]);
+Print("The current value for the AVG line is: " + RSI(14, 3).Avg[0]);
 ```
 
 
@@ -4956,13 +4453,10 @@ The calculation is carried out by taking the weekly closes (or daily closes) and
 ### Usage
 
 ```cs
-**RSL**(**int** period)
-
-**RSL**DataSeries input, **int** period)
-
-**RSLnt** period)\[**int** barsAgo\]
-
-**RSL**(IDataSeries input, **int** period)\[**int** barsAgo\]
+RSL(int period)
+RSLDataSeries input, int period)
+RSLnt period)[int barsAgo]
+RSL(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -4984,10 +4478,8 @@ period Number of bars included in the calculations
 
 ### Example
 ```cs
-
 //RSL value output
-
-**Print**("The Relative Strength as calculated by Levy is " + **RSL**(27)\[0\]);
+Print("The Relative Strength as calculated by Levy is " + RSL(27)[0]);
 ```
 
 
@@ -5008,14 +4500,10 @@ Values above 50 assume an increase in volatility. Values below 50 imply a drop i
 
 ### Usage
 ```cs
-
-**RVI**(**int** period)
-
-**RVI**(IDataSeries input, **int** period)
-
-**RVI**(**int** period)\[**int** barsAgo\]
-
-**RVI**(IDataSeries input, **int** period)\[**int** barsAgo\]
+RVI(int period)
+RVI(IDataSeries input, int period)
+RVI(int period)[int barsAgo]
+RVI(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -5039,8 +4527,7 @@ period Number of bars included in the calculations
 
 ```cs
 //Output of the RVI value
-
-**Print**("The current value for the RVI is: " + **RVI**(14)\[0\]);
+Print("The current value for the RVI is: " + RVI(14)[0]);
 ```
 
 
@@ -5060,21 +4547,14 @@ The interpretation of reversal bars is described in M. Voight’s book.
 ### Usage
 
 ```cs
-**Reversalbars**()
-
-**Reversalbars**(IDataSeries input)
-
-**Reversalbars**()\[**int** barsAgo\]
-
-**Reversalbars**(IDataSeries input)\[**int** barsAgo\]
-
-**Reversalbars**(**int** tolerance)
-
-**Reversalbars**(IDataSeries input, **int** tolreance)
-
-**Reversalbars**(**int** tolerance)\[**int** barsAgo\]
-
-**Reversalbars**(IDataSeries input, **int** tolerance)\[**int** barsAgo\]
+Reversalbars()
+Reversalbars(IDataSeries input)
+Reversalbars()[int barsAgo]
+Reversalbars(IDataSeries input)[int barsAgo]
+Reversalbars(int tolerance)
+Reversalbars(IDataSeries input, int tolreance)
+Reversalbars(int tolerance)[int barsAgo]
+Reversalbars(IDataSeries input, int tolerance)[int barsAgo]
 ```
 
 
@@ -5110,10 +4590,8 @@ The reversal bars must exceed their previous bars by at least 1 tick. The tolera
 
 ```cs
 // Set CalculateOnBarClose = true !!
-
-**if** (Reversalbars()\[0\] == 1.0)
-
-**Print**("The last bar is a long reversal bar.");
+if (Reversalbars()[0] == 1.0)
+Print("The last bar is a long reversal bar.");
 ```
 
 
@@ -5140,13 +4618,10 @@ In a strong trend phase, the prices will remain within a tight range for an exte
 ### Usage
 
 ```cs
-**RSquared**(**int** period)
-
-**RSquared**(IDataSeries input, **int** period)
-
-**RSquared**(**int** period)\[**int** barsAgo\]
-
-**RSquared**(IDataSeries input, **int** period)\[**int** barsAgo\]
+RSquared(int period)
+RSquared(IDataSeries input, int period)
+RSquared(int period)[int barsAgo]
+RSquared(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -5170,8 +4645,7 @@ period Number of bars included in the calculations
 
 ```cs
 //Output for the value of R-Squared
-
-**Print**("The current value of R-Squared is: " + **RSquared**(8)\[0\]);
+Print("The current value of R-Squared is: " + RSquared(8)[0]);
 ```
 
 
@@ -5192,13 +4666,10 @@ VTAD: [*http://vtadwiki.vtad.de/index.php/Standard\_Abweichung*]
 ### Usage
 
 ```cs
-**StdDev** (**int** period)
-
-**StdDev** (IDataSeries input, **int** period)
-
-**StdDev** (**int** period)\[**int** barsAgo\]
-
-**StdDev** (IDataSeries input, **int** period)\[**int** barsAgo\]
+StdDev (int period)
+StdDev (IDataSeries input, int period)
+StdDev (int period)[int barsAgo]
+StdDev (IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -5220,10 +4691,8 @@ period Number of bars included in the calculations
 
 ### Example
 ```cs
-
 //Output for the StdDev
-
-**Print**("The current value for the standard deviation is: " + **StdDev**(14)\[0\]);
+Print("The current value for the standard deviation is: " + StdDev(14)[0]);
 ```
 
 
@@ -5245,25 +4714,16 @@ One of the applications of the standard error bands is the tightening of the ban
 ### Usage
 
 ```cs
-**StdError**(**int** period)
-
-**StdError**(IDataSeries input, **int** period)
-
-**StdError**(**int** period)\[**int** barsAgo\]
-
-**StdError**(IDataSeries input, **int** period)\[**int** barsAgo\]
-
-**Upper band**
-
-**StdError**(**int** period).Upper\[**int** barsAgo\]
-
-**StdError**(IDataSeries input, **int** period).Upper\[**int** barsAgo\]
-
-**Lower band**
-
-**StdError**(**int** period).Lower\[**int** barsAgo\]
-
-**StdError**(IDataSeries input, **int** period).Lower\[**int** barsAgo\]
+StdError(int period)
+StdError(IDataSeries input, int period)
+StdError(int period)[int barsAgo]
+StdError(IDataSeries input, int period)[int barsAgo]
+Upper band
+StdError(int period).Upper[int barsAgo]
+StdError(IDataSeries input, int period).Upper[int barsAgo]
+Lower band
+StdError(int period).Lower[int barsAgo]
+StdError(IDataSeries input, int period).Lower[int barsAgo]
 ```
 
 
@@ -5287,16 +4747,11 @@ period Number of bars included in the calculations
 
 ```cs
 //Output for the values of the middle line
-
-**Print**("The middle line is currently at: " + **StdError**(21)\[0\]);
-
+Print("The middle line is currently at: " + StdError(21)[0]);
 //Output for the lower band
-
-**Print**("The lower band of the standard error is currently at: " + **StdError**(21).Lower\[0\]);
-
+Print("The lower band of the standard error is currently at: " + StdError(21).Lower[0]);
 //output for the upper band
-
-**Print**("The upper band of the standard error is currently at: " + **StdError**(21).Upper\[0\]);
+Print("The upper band of the standard error is currently at: " + StdError(21).Upper[0]);
 ```
 
 
@@ -5326,22 +4781,14 @@ VTAD: [*http://vtadwiki.vtad.de/index.php/Stochastik*]
 
 ### Usage
 ```cs
-
-**Stochastics**(**int** periodD, **int** periodK, **int** smooth)
-
-**Stochastics**(IDataSeries input, **int** periodD, **int** periodK, **int** smooth)
-
-**For the %D line**
-
-**Stochastics**(**int** periodD, **int** periodK, **int** smooth).D\[**int** barsAgo\]
-
-**Stochastics**(IDataSeries input, **int** periodD, **int** periodK, **int** smooth).D\[**int** barsAgo\]
-
-**For the %K line**
-
-**Stochastics**(**int** periodD, **int** periodK, **int** smooth).K\[**int** barsAgo\]
-
-**Stochastics**(IDataSeries input, **int** periodD, **int** periodK, **int** smooth).K\[**int** barsAgo\]
+Stochastics(int periodD, int periodK, int smooth)
+Stochastics(IDataSeries input, int periodD, int periodK, int smooth)
+For the %D line
+Stochastics(int periodD, int periodK, int smooth).D[int barsAgo]
+Stochastics(IDataSeries input, int periodD, int periodK, int smooth).D[int barsAgo]
+For the %K line
+Stochastics(int periodD, int periodK, int smooth).K[int barsAgo]
+Stochastics(IDataSeries input, int periodD, int periodK, int smooth).K[int barsAgo]
 ```
 
 
@@ -5369,12 +4816,9 @@ smooth Number of periods for the smoothing of %D
 
 ```cs
 //Output for the %K line
-
-**Print**("The stochastic line %K is currently at: " + **Stochastics**(3, 14, 7).K\[0\]);
-
+Print("The stochastic line %K is currently at: " + Stochastics(3, 14, 7).K[0]);
 //Output for the %D line
-
-**Print**("The stochastic line %D is currently at: " + **Stochastics**(3, 14, 7).D\[0\]);
+Print("The stochastic line %D is currently at: " + Stochastics(3, 14, 7).D[0]);
 ```
 
 
@@ -5397,21 +4841,14 @@ VTAD: [*http://vtadwiki.vtad.de/index.php/Stochastik*]
 ### Usage
 
 ```cs
-**StochasticsFast**(**int** periodD, **int** periodK)
-
-**StochasticsFast**(IDataSeries input, **int** periodD, **int** periodK)
-
-**For the %D line**
-
-**StochasticsFast**(**int** periodD, **int** periodK).D\[**int** barsAgo\]
-
-**StochasticsFast**(IDataSeries input, **int** periodD, **int** periodK).D\[**int** barsAgo\]
-
-**For the %K line**
-
-**StochasticsFast**(**int** periodD, **int** periodK).K\[**int** barsAgo\]
-
-**StochasticsFast**(IDataSeries input, **int** periodD, **int** periodK).K\[**int** barsAgo\]
+StochasticsFast(int periodD, int periodK)
+StochasticsFast(IDataSeries input, int periodD, int periodK)
+For the %D line
+StochasticsFast(int periodD, int periodK).D[int barsAgo]
+StochasticsFast(IDataSeries input, int periodD, int periodK).D[int barsAgo]
+For the %K line
+StochasticsFast(int periodD, int periodK).K[int barsAgo]
+StochasticsFast(IDataSeries input, int periodD, int periodK).K[int barsAgo]
 ```
 
 
@@ -5437,12 +4874,9 @@ periodK Number of periods included in the calculation of %K
 
 ```cs
 //Output for the %K line of the fast stochastic
-
-**Print**("The stochastic line %K is currently at: " + **StochasticsFast**(3, 14).K\[0\]);
-
+Print("The stochastic line %K is currently at: " + StochasticsFast(3, 14).K[0]);
 //Output %D line
-
-**Print**("The stochastic line %D is currently at: " + **StochasticsFast**(3, 14).D\[0\]);
+Print("The stochastic line %D is currently at: " + StochasticsFast(3, 14).D[0]);
 ```
 
 
@@ -5463,13 +4897,10 @@ The indicator provides fast and precise extreme values/points in the price movem
 ### Usage
 
 ```cs
-**StochRSI**(**int** period)
-
-**StochRSI**(IDataSeries input, **int** period)
-
-**StochRSI**(**int** period)\[**int** barsAgo\]
-
-**StochRSI**(IDataSeries input, **int** period)\[**int** barsAgo\]
+StochRSI(int period)
+StochRSI(IDataSeries input, int period)
+StochRSI(int period)[int barsAgo]
+StochRSI(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -5491,10 +4922,8 @@ period Number of bars included in the calculations
 
 ### Example
 ```cs
-
 //Output for the StochRSI
-
-**Print**("The current value for the StochRSI is: " + **StochRSI**(14)\[0\]);
+Print("The current value for the StochRSI is: " + StochRSI(14)[0]);
 ```
 
 
@@ -5507,13 +4936,10 @@ Summation is the sum over a specific number of periods.
 ### Usage
 
 ```cs
-**SUM**(**int** period)
-
-**SUM**(IDataSeries input, **int** period)
-
-**SUM**(**int** period)\[**int** barsAgo\]
-
-**SUM**(IDataSeries input, **int** period)\[**int** barsAgo\]
+SUM(int period)
+SUM(IDataSeries input, int period)
+SUM(int period)[int barsAgo]
+SUM(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -5535,10 +4961,8 @@ period Number of bars included in the calculations
 
 ### Example
 ```cs
-
 // Sum of the volume for the last 10 trading days
-
-**Print**(**SUM**(Volume,10)\[0\]);
+Print(SUM(Volume,10)[0]);
 ```
 
 
@@ -5557,25 +4981,16 @@ The indicator can be used as an exit for additional trading systems, meaning tha
 ### Usage
 
 ```cs
-**SuperTrend**(SuperTrendMode stMode, **int** length, **double** multiplier, SuperTrendMAType maType, **int** smooth)
-
-**SuperTrend**(IDataSeries input, SuperTrendMode stMode, **int** length, **double** multiplier, SuperTrendMAType maType, **int** smooth)
-
-**SuperTrend**(SuperTrendMode stMode, **int** length, **double** multiplier, SuperTrendMAType maType, **int** smooth)\[**int** barsAgo\]
-
-**SuperTrend**(IDataSeries input, SuperTrendMode stMode, **int** length, **double** multiplier, SuperTrendMAType maType, **int** smooth)\[**int** barsAgo\]
-
-**For the values of the uptrend:**
-
-**SuperTrend**(SuperTrendMode stMode, **int** length, **double** multiplier, SuperTrendMAType maType, **int** smooth).UpTrend\[**int** barsAgo\]
-
-**SuperTrend**(IDataSeries input, SuperTrendMode stMode, **int** length, **double** multiplier, SuperTrendMAType maType, **int** smooth).UpTrend\[**int** barsAgo\]
-
-**For the values of the downtrend:**
-
-**SuperTrend**(SuperTrendMode stMode, **int** length, **double** multiplier, SuperTrendMAType maType, **int** smooth).DownTrend\[**int** barsAgo\]
-
-**SuperTrend**(IDataSeries input, SuperTrendMode stMode, **int** length, **double** multiplier, SuperTrendMAType maType, **int** smooth).DownTrend\[**int** barsAgo\]
+SuperTrend(SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth)
+SuperTrend(IDataSeries input, SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth)
+SuperTrend(SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth)[int barsAgo]
+SuperTrend(IDataSeries input, SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth)[int barsAgo]
+For the values of the uptrend:
+SuperTrend(SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth).UpTrend[int barsAgo]
+SuperTrend(IDataSeries input, SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth).UpTrend[int barsAgo]
+For the values of the downtrend:
+SuperTrend(SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth).DownTrend[int barsAgo]
+SuperTrend(IDataSeries input, SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth).DownTrend[int barsAgo]
 ```
 
 
@@ -5640,13 +5055,10 @@ When using this method with an index (e.g. **SuperTrend**(...).UpTrend\[**int** 
 ### Example
 
 ```cs
-**if** (Close\[0\] &gt; **SuperTrend**(SuperTrendMode.ATR, 14, 2.618, MovingAverageType.HMA, 14).UpTrend\[0\])
-
-**Print**("The market is in an uptrend.");
-
-**if** (Close\[0\] &lt; **SuperTrend**(SuperTrendMode.ATR, 14, 2.618, MovingAverageType.HMA, 14).DownTrend\[0\])
-
-**Print**("The market is in a downtrend.");
+if (Close[0] > SuperTrend(SuperTrendMode.ATR, 14, 2.618, MovingAverageType.HMA, 14).UpTrend[0])
+Print("The market is in an uptrend.");
+if (Close[0] < SuperTrend(SuperTrendMode.ATR, 14, 2.618, MovingAverageType.HMA, 14).DownTrend[0])
+Print("The market is in a downtrend.");
 ```
 
 
@@ -5700,18 +5112,12 @@ The methods for these indicators can be used in scripts to determine the last ex
 
 ### Usage
 ```cs
-
-**For a high**
-
-**Swing**(**int** strength).**SwingHighBar**(**int** barsAgo, **int** instance, **int** lookBackPeriod)
-
-**Swing**(IDataSeries input, **int** strength).**SwingHighBar**(**int** barsAgo, **int** instance, **int** lookBackPeriod)
-
-**For a low**
-
-**Swing**(**int** strength).**SwingLowBar**(**int** barsAgo, **int** instance, **int** lookBackPeriod)
-
-**Swing**(IDataSeries input, **int** strength).**SwingLowBar**(**int** barsAgo, **int** instance, **int** lookBackPeriod)
+For a high
+Swing(int strength).SwingHighBar(int barsAgo, int instance, int lookBackPeriod)
+Swing(IDataSeries input, int strength).SwingHighBar(int barsAgo, int instance, int lookBackPeriod)
+For a low
+Swing(int strength).SwingLowBar(int barsAgo, int instance, int lookBackPeriod)
+Swing(IDataSeries input, int strength).SwingLowBar(int barsAgo, int instance, int lookBackPeriod)
 ```
 
 
@@ -5742,12 +5148,9 @@ When using this method with an index (e.g. **Swing**(5)\[**int** barsAgo\] ), th
 
 ```cs
 // Position and price of the last swing high
-
-**int** barsAgo = **Swing**(5).**SwingHighBar**(0, 1, 10);
-
-**Print**("The last swing high was " + barsAgo + " bars ago.");
-
-**Print**("The last swing high was at " + High\[barsAgo\]);
+int barsAgo = Swing(5).SwingHighBar(0, 1, 10);
+Print("The last swing high was " + barsAgo + " bars ago.");
+Print("The last swing high was at " + High[barsAgo]);
 ```
 
 
@@ -5770,13 +5173,10 @@ An entry is placed when the price breaks the TSF line from bottom to top.
 ### Usage
 
 ```cs
-**TSF**(**int** forecast, **int** period)
-
-**TSF**(IDataSeries input, **int** forecast, **int** period)
-
-**TSF**(**int** forecast, **int** period)\[**int** barsAgo\]
-
-**TSF**(IDataSeries input, **int** forecast, **int** period)\[**int** barsAgo\]
+TSF(int forecast, int period)
+TSF(IDataSeries input, int forecast, int period)
+TSF(int forecast, int period)[int barsAgo]
+TSF(IDataSeries input, int forecast, int period)[int barsAgo]
 ```
 
 
@@ -5802,8 +5202,7 @@ period Number of bars included in the calculations
 
 ```cs
 //Output the TSF values
-
-**Print**("The current value for the TSF is: " + **TSF**(3, 14)\[0\]);
+Print("The current value for the TSF is: " + TSF(3, 14)[0]);
 ```
 
 
@@ -5818,18 +5217,12 @@ The Constant Lines tool draws up to four freely configurable horizontal lines wi
 ### Usage
 
 ```cs
-**ConstantLines**(**double** line1Value, **double** line2Value, **double** line3Value, **double** line4Value)
-
-**ConstantLines**(**double** line1Value, **double** line2Value, **double** line3Value, **double** line4Value)\[barsAgo\]
-
-**ConstantLines**(**double** line1Value, **double** line2Value, **double** line3Value, **double** line4Value).Line1\[barsAgo\]
-
-**ConstantLines**(**double** line1Value, **double** line2Value, **double** line3Value, **double** line4Value).Line2\[barsAgo\]
-
-**ConstantLines**(**double** line1Value, **double** line2Value, **double** line3Value, **double** line4Value).Line3\[barsAgo\]
-
-**ConstantLines**(**double** line1Value, **double** line2Value, **double** line3Value, **double** line4Value).Line4\[barsAgo\]
-
+ConstantLines(double line1Value, double line2Value, double line3Value, double line4Value)
+ConstantLines(double line1Value, double line2Value, double line3Value, double line4Value)[barsAgo]
+ConstantLines(double line1Value, double line2Value, double line3Value, double line4Value).Line1[barsAgo]
+ConstantLines(double line1Value, double line2Value, double line3Value, double line4Value).Line2[barsAgo]
+ConstantLines(double line1Value, double line2Value, double line3Value, double line4Value).Line3[barsAgo]
+ConstantLines(double line1Value, double line2Value, double line3Value, double line4Value).Line4[barsAgo]
 ```
 
 ### Return value
@@ -5866,27 +5259,17 @@ When using this method with an index (e.g. **CurrentDayOHL**.CurrentOpen(...)\[*
 ### Usage
 
 ```cs
-**CurrentDayOHL**()
-
-**CurrentDayOHL**(IDataSeries input)
-
-**For the open value**
-
-**CurrentDayOHL**().CurrentOpen\[**int** barsAgo\]
-
-**CurrentDayOHL**(IDataSeries input).CurrentOpen\[**int** barsAgo\]
-
-**For the high value**
-
-**CurrentDayOHL**().CurrentHigh\[**int** barsAgo\]
-
-**CurrentDayOHL**(IDataSeries input).CurrentHigh\[**int** barsAgo\]
-
-**For the low value**
-
-**CurrentDayOHL**().CurrentLow\[**int** barsAgo\]
-
-**CurrentDayOHL**(IDataSeries input).CurrentLow\[**int** barsAgo\]
+CurrentDayOHL()
+CurrentDayOHL(IDataSeries input)
+For the open value
+CurrentDayOHL().CurrentOpen[int barsAgo]
+CurrentDayOHL(IDataSeries input).CurrentOpen[int barsAgo]
+For the high value
+CurrentDayOHL().CurrentHigh[int barsAgo]
+CurrentDayOHL(IDataSeries input).CurrentHigh[int barsAgo]
+For the low value
+CurrentDayOHL().CurrentLow[int barsAgo]
+CurrentDayOHL(IDataSeries input).CurrentLow[int barsAgo]
 ```
 
 
@@ -5897,7 +5280,7 @@ When using this method with an index (e.g. **CurrentDayOHL**.CurrentOpen(...)\[*
 ### Example
 
 ```cs
-**Print**("The low of the current session is at " + **CurrentDayOHL**().CurrentLow\[0\]);
+Print("The low of the current session is at " + CurrentDayOHL().CurrentLow[0]);
 ```
 
 
@@ -5927,13 +5310,10 @@ The result will look similar to this:
 ### Usage
 
 ```cs
-**DailyPerformance**(DailyPerformanceReference reference, DailyPerformanceCalculationMode mode, **int** daysAgo)
-
-**DailyPerformance**(IDataSeries input,DailyPerformanceReference reference, DailyPerformanceCalculationMode mode, **int** daysAgo)
-
-**DailyPerformance**(DailyPerformanceReference reference, DailyPerformanceCalculationMode mode, **int** daysAgo)\[**int** barsAgo\]
-
-**DailyPerformance**(IDataSeries input,DailyPerformanceReference reference, DailyPerformanceCalculationMode mode, **int** daysAgo)\[**int** barsAgo\]
+DailyPerformance(DailyPerformanceReference reference, DailyPerformanceCalculationMode mode, int daysAgo)
+DailyPerformance(IDataSeries input,DailyPerformanceReference reference, DailyPerformanceCalculationMode mode, int daysAgo)
+DailyPerformance(DailyPerformanceReference reference, DailyPerformanceCalculationMode mode, int daysAgo)[int barsAgo]
+DailyPerformance(IDataSeries input,DailyPerformanceReference reference, DailyPerformanceCalculationMode mode, int daysAgo)[int barsAgo]
 ```
 
 
@@ -5967,24 +5347,15 @@ daysAgo Number of days in the past
 
 ```cs
 //How many ticks are between today’s open and the current price?
-
-**DailyPerformance**(DailyPerformanceReference.TodaysOpen, DailyPerformanceCalculationMode.Ticks, 1)\[0\]
-
+DailyPerformance(DailyPerformanceReference.TodaysOpen, DailyPerformanceCalculationMode.Ticks, 1)[0]
 //By how much percent did the stock rise/fall since the last closing price?
-
-**DailyPerformance**(DailyPerformanceReference.PreviousClose, DailyPerformanceCalculationMode.Percent, 1)\[0\]
-
+DailyPerformance(DailyPerformanceReference.PreviousClose, DailyPerformanceCalculationMode.Percent, 1)[0]
 //By how many points/ticks did the future deviate from the start of the trading week to the current value?
-
-**DailyPerformance**(DailyPerformanceReference.PreviousClose, DailyPerformanceCalculationMode.Points, 3)\[0\]
-
+DailyPerformance(DailyPerformanceReference.PreviousClose, DailyPerformanceCalculationMode.Points, 3)[0]
 //How many EURO/USD does the performance equal?
-
-**DailyPerformance**(DailyPerformanceReference.PreviousClose, DailyPerformanceCalculationMode.Currency, 3)\[0\]
-
+DailyPerformance(DailyPerformanceReference.PreviousClose, DailyPerformanceCalculationMode.Currency, 3)[0]
 //How big is the overnight gap in comparison to the opening price?
-
-**DailyPerformance**(DailyPerformanceReference.PreviousClose, DailyPerformanceCalculationMode.Points, 1)\[0\]
+DailyPerformance(DailyPerformanceReference.PreviousClose, DailyPerformanceCalculationMode.Points, 1)[0]
 ```
 
 
@@ -6067,33 +5438,23 @@ All other values are calculated using intraday data.
 ### Usage
 
 ```cs
-**GetDayBar** (**int** daysAgo)
+GetDayBar (int daysAgo)
 ```
 
 
 ### Example
 
 ```cs
-\[**TimeFrameRequirements**("1 day")\]
-
-**public** class xy : UserIndicator
-
+[TimeFrameRequirements("1 day")]
+public class xy : UserIndicator
 {
-
-**int** daysAgo = 5;
-
-**double** historicalClose = Instrument.**Round2TickSize**(**GetDayBar**(daysAgo).Close);
-
+int daysAgo = 5;
+double historicalClose = Instrument.Round2TickSize(GetDayBar(daysAgo).Close);
 ...
-
 }
-
-**protected** override void **OnStartUp**()
-
+protected override void OnStartUp()
 {
-
-**Print**("The closing price from " + daysAgo + " days ago was at " + historicalClose);
-
+Print("The closing price from " + daysAgo + " days ago was at " + historicalClose);
 }
 ```
 
@@ -6120,14 +5481,10 @@ Max (MAX) outputs the highest value for a specified number of periods.
 
 ### Usage
 ```cs
-
-**MAX**(**int** period)
-
-**MAX** (IDataSeries input, **int** period)
-
-**MAX** (**int** period)\[**int** barsAgo\]
-
-**MAX** (IDataSeries input, **int** period)\[**int** barsAgo\]
+MAX(int period)
+MAX (IDataSeries input, int period)
+MAX (int period)[int barsAgo]
+MAX (IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -6151,10 +5508,8 @@ period Number of bars included in the calculations
 
 ```cs
 // Output of the highest value of the last 20 periods
-
-// The output is identical to high \[HighestBar(High,20)\]
-
-**Print**("The highest value of the last 20 periods is " + **MAX**(High, 20)\[0\]);
+// The output is identical to high [HighestBar(High,20)]
+Print("The highest value of the last 20 periods is " + MAX(High, 20)[0]);
 ```
 
 
@@ -6167,13 +5522,10 @@ Minimum (MIN) provides the smallest value for a specified number of periods.
 ### Usage
 
 ```cs
-**MIN** (**int** period)
-
-**MIN** (IDataSeries input, **int** period)
-
-**MIN** (**int** period)\[**int** barsAgo\]
-
-**MIN** (IDataSeries input, **int** period)\[**int** barsAgo\]
+MIN (int period)
+MIN (IDataSeries input, int period)
+MIN (int period)[int barsAgo]
+MIN (IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -6197,8 +5549,7 @@ period Number of bars included in the calculations
 
 ```cs
 // Outputs the lowest value for the last 20 periods
-
-**Print**("The lowest value of the last 20 periods is " + **MIN**(Low, 20)\[0\]);
+Print("The lowest value of the last 20 periods is " + MIN(Low, 20)[0]);
 ```
 
 
@@ -6260,33 +5611,20 @@ When using this method with an index (e.g. **PriorDayOHLC**().PriorHigh\[**int**
 ### Usage
 
 ```cs
-**PriorDayOHLC**()
-
-**PriorDayOHLC**(IDataSeries input)
-
-**For the value of open**
-
-**PriorDayOHLC**().PriorOpen\[**int** barsAgo\]
-
-**PriorDayOHLC**(IDataSeries input).PriorOpen\[**int** barsAgo\]
-
-**For the value of high**
-
-**PriorDayOHLC**().PriorHigh\[**int** barsAgo\]
-
-**PriorDayOHLC**(IDataSeries input).PriorHigh\[**int** barsAgo\]
-
-**For the value of low**
-
-**PriorDayOHLC**().PriorLow\[**int** barsAgo\]
-
-**PriorDayOHLC**(IDataSeries input).PriorLow\[**int** barsAgo\]
-
-**For the value of close**
-
-**PriorDayOHLC**().PriorClose\[**int** barsAgo\]
-
-**PriorDayOHLC**(IDataSeries input).PriorClose\[**int** barsAgo\]
+PriorDayOHLC()
+PriorDayOHLC(IDataSeries input)
+For the value of open
+PriorDayOHLC().PriorOpen[int barsAgo]
+PriorDayOHLC(IDataSeries input).PriorOpen[int barsAgo]
+For the value of high
+PriorDayOHLC().PriorHigh[int barsAgo]
+PriorDayOHLC(IDataSeries input).PriorHigh[int barsAgo]
+For the value of low
+PriorDayOHLC().PriorLow[int barsAgo]
+PriorDayOHLC(IDataSeries input).PriorLow[int barsAgo]
+For the value of close
+PriorDayOHLC().PriorClose[int barsAgo]
+PriorDayOHLC(IDataSeries input).PriorClose[int barsAgo]
 ```
 
 
@@ -6298,14 +5636,10 @@ When using this method with an index (e.g. **PriorDayOHLC**().PriorHigh\[**int**
 
 ```cs
 // Value from the previous trading day
-
-**Print**("Yesterday’s open was " + **PriorDayOHLC**().PriorOpen\[0\]);
-
-**Print**("Yesterday’s high was " + **PriorDayOHLC**().PriorHigh\[0\]);
-
-**Print**("Yesterday’s low was " + **PriorDayOHLC**().PriorLow\[0\]);
-
-**Print**("Yesterday’s close was " + **PriorDayOHLC**().PriorClose\[0\]);
+Print("Yesterday’s open was " + PriorDayOHLC().PriorOpen[0]);
+Print("Yesterday’s high was " + PriorDayOHLC().PriorHigh[0]);
+Print("Yesterday’s low was " + PriorDayOHLC().PriorLow[0]);
+Print("Yesterday’s close was " + PriorDayOHLC().PriorClose[0]);
 ```
 
 
@@ -6367,13 +5701,10 @@ The TSI line moves between 100 and -100. Most values are between +25 and -25. Th
 ### Usage
 
 ```cs
-**TSI**(**int** fast, **int** slow)
-
-**TSI**(IDataSeries input, **int** fast, **int** slow)
-
-**TSI**(**int** fast, **int** slow)\[**int** barsAgo\]
-
-**TSI**(IDataSeries input, **int** fast, **int** slow)\[**int** barsAgo\]
+TSI(int fast, int slow)
+TSI(IDataSeries input, int fast, int slow)
+TSI(int fast, int slow)[int barsAgo]
+TSI(IDataSeries input, int fast, int slow)[int barsAgo]
 ```
 
 
@@ -6399,8 +5730,7 @@ slow Number of bars included in the calculation of the slow EMA
 
 ```cs
 //Output of the current value for the True Strength Index (TSI)
-
-**Print**("The current value for the TSI is " + **TSI**(3, 14)\[0\]);
+Print("The current value for the TSI is " + TSI(3, 14)[0]);
 ```
 
 
@@ -6428,13 +5758,10 @@ A sell signal consists of bearish divergences forming above 70. These positions 
 ### Usage
 
 ```cs
-**UltimateOscillator**(**int** fast, **int** intermediate, **int** slow)
-
-**UltimateOscillator**(IDataSeries input, **int** fast, **int** intermediate, **int** slow)
-
-**UltimateOscillator**(**int** fast, **int** intermediate, **int** slow)\[**int** barsAgo\]
-
-**UltimateOscillator**(IDataSeries input, **int** fast, **int** intermediate, **int** slow)\[**int** barsAgo\]
+UltimateOscillator(int fast, int intermediate, int slow)
+UltimateOscillator(IDataSeries input, int fast, int intermediate, int slow)
+UltimateOscillator(int fast, int intermediate, int slow)[int barsAgo]
+UltimateOscillator(IDataSeries input, int fast, int intermediate, int slow)[int barsAgo]
 ```
 
 
@@ -6461,8 +5788,7 @@ When using this method with an index (e.g. **UltimateOscillator** (5)\[**int** b
 
 ```cs
 // Output of the values for the UltimateOscillator with settings of 7,14,28
-
-**Print**("The current value for the Ultimate Oscillator is " + **UltimateOscillator**(7, 14, 28)\[0\]);
+Print("The current value for the Ultimate Oscillator is " + UltimateOscillator(7, 14, 28)[0]);
 ```
 
 
@@ -6479,13 +5805,10 @@ This is the volume for the shares, futures, ETFs etc. traded within a certain ti
 ### Usage
 
 ```cs
-**VOL**()
-
-**VOL**(IDataSeries input)
-
-**VOL**()\[**int** barsAgo\]
-
-**VOL**(IDataSeries input)\[**int** barsAgo\]
+VOL()
+VOL(IDataSeries input)
+VOL()[int barsAgo]
+VOL(IDataSeries input)[int barsAgo]
 ```
 
 
@@ -6505,10 +5828,8 @@ input Input data series for the indicator
 
 ### Example
 ```cs
-
 //Output of the current volume
-
-**Print**("The current volume is " + **VOL**()\[0\]);
+Print("The current volume is " + VOL()[0]);
 ```
 
 
@@ -6542,13 +5863,10 @@ Here, you can find more general information about *Moving Averages*.
 ### Usage
 
 ```cs
-**VOLMA**(**int** period)
-
-**VOLMA**(IDataSeries input, **int** period)
-
-**VOLMA**(**int** period)\[**int** barsAgo\]
-
-**VOLMA**(IDataSeries input, **int** period)\[**int** barsAgo\]
+VOLMA(int period)
+VOLMA(IDataSeries input, int period)
+VOLMA(int period)[int barsAgo]
+VOLMA(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -6570,10 +5888,8 @@ period Number of bars included in the calculations
 
 ### Example
 ```cs
-
 //Output for the value of the Volume Moving Average (VOLMA)
-
-**Print**("The current VOLMA value is " + **VOLMA**(14)\[0\]);
+Print("The current VOLMA value is " + VOLMA(14)[0]);
 ```
 
 
@@ -6591,13 +5907,10 @@ Values above zero mean that the shortest moving average of the volume is above t
 ### Usage
 
 ```cs
-**VolumeOscillator**(**int** fast, **int** slow)
-
-**VolumeOscillator**(IDataSeries input, **int** fast, **int** slow)
-
-**VolumeOscillator**(**int** fast, **int** slow)\[**int** barsAgo\]
-
-**VolumeOscillator**(IDataSeries input, **int** fast, **int** slow)\[**int** barsAgo\]
+VolumeOscillator(int fast, int slow)
+VolumeOscillator(IDataSeries input, int fast, int slow)
+VolumeOscillator(int fast, int slow)[int barsAgo]
+VolumeOscillator(IDataSeries input, int fast, int slow)[int barsAgo]
 ```
 
 
@@ -6623,8 +5936,7 @@ slow Number of bars for the calculation of the slow moving average
 
 ```cs
 //Output of the current value for the Volume Oscillator
-
-**Print**("The current value for the Volume Oscillator is: " + **VolumeOszillator**(12,26)\[0\]);
+Print("The current value for the Volume Oscillator is: " + VolumeOszillator(12,26)[0]);
 ```
 
 
@@ -6663,13 +5975,10 @@ A shrinking VROC during rising prices may hint to a trend change about to occur.
 ### Usage
 
 ```cs
-**VROC**(**int** period, **int** smooth)
-
-**VROC**(IDataSeries input, **int** period, **int** smooth)
-
-**VROC**(**int** period, **int** smooth)\[**int** barsAgo\]
-
-**VROC**(IDataSeries input, **int** period, **int** smooth)\[**int** barsAgo\]
+VROC(int period, int smooth)
+VROC(IDataSeries input, int period, int smooth)
+VROC(int period, int smooth)[int barsAgo]
+VROC(IDataSeries input, int period, int smooth)[int barsAgo]
 ```
 
 
@@ -6695,8 +6004,7 @@ smooth Number of Bars included in the calculation for the smoothing
 
 ```cs
 //Output of the current value for the Volume ROC
-
-**Print**("The current value for the Volume ROC is: " + **VROC**(14, 3)\[0\]);
+Print("The current value for the Volume ROC is: " + VROC(14, 3)[0]);
 ```
 
 
@@ -6712,13 +6020,10 @@ A Doji (open = close) displays the volume in blue.
 ### Usage
 
 ```cs
-**VolumeUpDown**()
-
-**VolumeUpDown**(IDataSeries input)
-
-**VolumeUpDown**()\[**int** barsAgo\]
-
-**VolumeUpDown**(IDataSeries input)\[**int** barsAgo\]
+VolumeUpDown()
+VolumeUpDown(IDataSeries input)
+VolumeUpDown()[int barsAgo]
+VolumeUpDown(IDataSeries input)[int barsAgo]
 ```
 
 
@@ -6740,8 +6045,7 @@ input Input data series for the indicator
 
 ```cs
 //Output of the current volume
-
-**Print**("The current volume is " + **VolumeUpDown**()\[0\]);
+Print("The current volume is " + VolumeUpDown()[0]);
 ```
 
 
@@ -6776,14 +6080,10 @@ Low readings (below -80) indicate that the price is near its low for the given t
 
 ### Usage
 ```cs
-
-**WilliamsR**(**int** period)
-
-**WilliamsR**(IDataSeries input, **int** period)
-
-**WilliamsR**(**int** period)\[**int** barsAgo\]
-
-**WilliamsR**(IDataSeries input, **int** period)\[**int** barsAgo\]
+WilliamsR(int period)
+WilliamsR(IDataSeries input, int period)
+WilliamsR(int period)[int barsAgo]
+WilliamsR(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -6806,14 +6106,10 @@ period Number of bars included in the calculations
 ### Example
 
 ```cs
-
-**WilliamsR**(**int** period)
-
-**WilliamsR**(IDataSeries input, **int** period)
-
-**WilliamsR**(**int** period)\[**int** barsAgo\]
-
-**WilliamsR**(IDataSeries input, **int** period)\[**int** barsAgo\]
+WilliamsR(int period)
+WilliamsR(IDataSeries input, int period)
+WilliamsR(int period)[int barsAgo]
+WilliamsR(IDataSeries input, int period)[int barsAgo]
 ```
 
 
@@ -6835,18 +6131,12 @@ The previous extreme values (local highs or lows) are ideally suited for either 
 
 ### Usage
 ```cs
-
-**For the upper extreme value**
-
-**ZigZag**(DeviationType deviationType, **double** deviationValue, **bool** useHighLow).ZigZagHigh\[**int** barsAgo\]
-
-**ZigZag**(IDataSeries input, DeviationType deviationType, **double** deviationValue, **bool** useHighLow).ZigZagHigh\[**int** barsAgo\]
-
-**For the lower extreme value**
-
-**ZigZag**(DeviationType deviationType, **double** deviationValue, **bool** useHighLow).ZigZagLow\[**int** barsAgo\]
-
-**ZigZag**(IDataSeries input, DeviationType deviationType, **double** deviationValue, **bool** useHighLow).ZigZagLow\[**int** barsAgo\]
+For the upper extreme value
+ZigZag(DeviationType deviationType, double deviationValue, bool useHighLow).ZigZagHigh[int barsAgo]
+ZigZag(IDataSeries input, DeviationType deviationType, double deviationValue, bool useHighLow).ZigZagHigh[int barsAgo]
+For the lower extreme value
+ZigZag(DeviationType deviationType, double deviationValue, bool useHighLow).ZigZagLow[int barsAgo]
+ZigZag(IDataSeries input, DeviationType deviationType, double deviationValue, bool useHighLow).ZigZagLow[int barsAgo]
 ```
 
 
@@ -6878,10 +6168,8 @@ A return value of 0 indicates that no high or low point has been found yet.
 
 ```cs
 //Output of the market value for the last high point
-
-**Print**("The last high of the ZigZag indicator was at " + **ZigZag**(DeviationType.Percent, 1, **true**).ZigZagHigh\[0\]);
-
+Print("The last high of the ZigZag indicator was at " + ZigZag(DeviationType.Percent, 1, true).ZigZagHigh[0]);
 // Output of the market value for the last low point
-
-**Print**("The last low of the ZigZag indicator was at " + **ZigZag**(DeviationType.Percent, 1, **true**).ZigZagLow\[0\]);
+Print("The last low of the ZigZag indicator was at " + ZigZag(DeviationType.Percent, 1, true).ZigZagLow[0]);
 ```
+

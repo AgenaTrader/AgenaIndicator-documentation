@@ -12,7 +12,8 @@ The tutorials in the sources directory of this repository, are built with mkdocs
 ##Getting Started
 
 ###Editor
-We recommend the text editor [Atom](https://atom.io)
+To edit these files you can use the GitHub Online Editor but we recommend to use a separate text editor.
+We recommend the text editor *Atom*. You can download it here: [Download Atom](https://atom.io)
 
 ![Atom](./sources/images/logo_atom.png)
 

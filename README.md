@@ -8,6 +8,11 @@ Documentation source files are written in [Markdown](https://guides.github.com/f
 The tutorials in the sources directory of this repository, are built with mkdocs and publicly hosted on GitHub Pages at [https://agenatrader.github.io/AgenaIndicator-documentation/site/index.html](https://agenatrader.github.io/AgenaIndicator-documentation/site/index.html).
 
 ##Getting Started
+
+###Editor
+We recommend the text editor [Atom](https://atom.io)
+![Atom](./images/logo_atom.png)
+
 ###Installation
 The following things are prerequisites:
 * Install [GitHub Client](https://desktop.github.com) and create a GitHub user

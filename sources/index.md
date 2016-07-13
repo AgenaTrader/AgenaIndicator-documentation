@@ -5,15 +5,15 @@ Want to learn more about the AgenaTrader indicators? We've got the resources to 
 
 -   [Data](./data.md)
     -   [*Bars (Candles)*](./data.md#bars-candles)
-    -   [*Data Series*]
-    -   [*Open*]
-    -   [*High*]
-    -   [*Low*]
-    -   [*Close*]
-    -   [*Volume*]
-    -   [*Median*]
-    -   [*Typical*]
-    -   [*Weighted*]
+    -   [*Data Series*](./data.md#data-series)
+    -   [*Open*](./data.md#open)
+    -   [*High*](./data.md#high)
+    -   [*Low*](./data.md#low)
+    -   [*Close*](./data.md#close)
+    -   [*Volume*](./data.md#volume)
+    -   [*Median*](./data.md#median)
+    -   [*Typical*](./data.md#typical)
+    -   [*Weighted*](./data.md#weighted)
 -   [Indicators & Oscillators](./indicators_oscillators.md)
     -   [Accumulation/Distribution (ADL)]
     -   [Adaptive Price Zone (APZ)]

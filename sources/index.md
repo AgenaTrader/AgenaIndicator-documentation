@@ -1,144 +1,143 @@
 ![AgenaTrader](./images/logo_100.png)
 
 #Welcome to the official AgenaIndicator repository!
-Want to learn more about the AgenaTrader indicators? We've got the resources to help you get started. 
+Want to learn more about the AgenaTrader indicators? We've got the resources to help you get started.
 
 -   [Data](./data.md)
-    -   [*Bars (Candles)*](./data.md#bars-candles)
-    -   [*Data Series*](./data.md#data-series)
-    -   [*Open*](./data.md#open)
-    -   [*High*](./data.md#high)
-    -   [*Low*](./data.md#low)
-    -   [*Close*](./data.md#close)
-    -   [*Volume*](./data.md#volume)
-    -   [*Median*](./data.md#median)
-    -   [*Typical*](./data.md#typical)
-    -   [*Weighted*](./data.md#weighted)
--   [Indicators & Oscillators](./indicators_oscillators.md)
-    -   [Accumulation/Distribution (ADL)]
-    -   [Adaptive Price Zone (APZ)]
-    -   [Aroon](./indicators_oscillators.md#Aroon)
-    -   [Aroon Oscillator]
-    -   [Average Directional Index (ADX)]
-    -   [Average Directional Movement Rating (ADXR)]
-    -   [Average True Range (ATR)]
-    -   [Balance of Power (BOP)]
-    -   [Bollinger Bands]
-    -   [Bollinger Percent B (%b)]
-    -   [Bollinger Band Width (BBWidth)]
-    -   [Bollinger MTF (MultiTimeFrame)]
-    -   [BuySellPressure]
-    -   [BuySellVolume]
-    -   [CandleStickPattern]
-    -   [ChaikinMoneyFlow (CMF)]
-    -   [Chaikin Oscillator]
-    -   [ChaikinVolatility (CVL)]
-    -   [Chande Momentum Oscillator (CMO)]
-    -   [Commodity Channel Index (CCI)]
-    -   [Darvas Boxes]
-    -   [Directional Movement (DM)]
-    -   [Donchian Channel]
-    -   [Directional Movement Index (DMI)]
-    -   [Double Stochastics (DSS)]
-    -   [Dynamic Momentum Index (DMIndex)]
-    -   [Ease of Movement (EOM)]
-    -   [Fisher Transform]
-    -   [Forecast Oscillator (FOSC)]
-    -   [HighestHighIndex()]
-    -   [HighestHighPrice()]
-    -   [IchimokuCloud]
-    -   [InsideBarsMT]
-    -   [Keltner Channel]
-    -   [KeyReversalUp]
-    -   [KeyReversalDown]
-    -   [KeyReversalUpAtSMA]
-    -   [KeyReversalDownAtSMA]
-    -   [KeyReversalUpAtEMA]
-    -   [KeyReversalDownAtEMA]
-    -   [Linear Regression]
-    -   [LinRegIntercept]
-    -   [LinRegSlope]
-    -   [LowestLowIndex()]
-    -   [LowestLowPrice()]
-    -   [MACD]
-    -   [MAEnvelopes]
-    -   [MarketPhases]
-    -   [Momentum (MOM)]
-    -   []
-    -   [Money Flow Index (MFI)]
-    -   [Moving Averages]
-    -   [DEMA - Double Exponential Moving Average]
-    -   [EMA - Exponential Moving Average]
-    -   [EMA MTF (MultiTimeFrame)]
-    -   [HMA - Hull Moving Average]
-    -   [KAMA - Kaufman's Adaptive Moving Average]
-    -   [MAMA - Mesa Adaptive Moving Average]
-    -   [SMA - Simple Moving Average]
-    -   [SMA MTF (MultiTimeFrame)]
-    -   [SMMA - Smoothed Moving Average]
-    -   [TEMA - Triple Exponential Moving Average]
-    -   [TMA - Triangular Moving Average]
-    -   [TRIX - Triple Exponential Moving Average]
-    -   [T3 - Triple Exponential Moving Average]
-    -   [VMA - Variable Moving Average]
-    -   [VWMA - Volume Weighted Moving Average]
-    -   [WMA - Weighted Moving Average]
-    -   [ZLEMA - Zero Lag Exponential Moving Average]
-    -   [nBarsUp]
-    -   [nBarsDown]
-    -   [OnBalanceVolume (OBV)]
-    -   [OutsideBars]
-    -   [P123]
-    -   [Parabolic SAR]
-    -   [Percentage Price Oscillator (PPO)]
-    -   [PercentEnvelopes]
-    -   [Pivot Points]
-    -   [Polarized Fractal Efficiency (PFE)]
-    -   [Price Oscillator]
-    -   [Range]
-    -   [Range Indicator (RIND)]
-    -   [Rate of Change (ROC)]
-    -   [Relative Spread Strength (RSS)]
-    -   [Relative Strength Index (RSI)]
-    -   [Relative Strength Levy (RSL)]
-    -   [Relative Volatility Index (RVI)]
-    -   [ReversalBars]
-    -   [R-Squared]
-    -   [StandardDeviation(StdDev)]
-    -   [Standard Error (StdError)]
-    -   [Stochastics]
-    -   [Stochastics Fast]
-    -   [Stochastics RSI (StochRSI)]
-    -   [Summation (SUM)]
-    -   [SuperTrend]
-    -   [SupportResistanceAreas]
-    -   [Swing]
-    -   [Time-Series-Forecast (TSF)]
-    -   [Tools]
-    -   [Constant Lines]
-    -   [CurrentDayOHL]
-    -   [Daily Performance]
-    -   [DayLines]
-    -   [DayLinesAdv]
-    -   [GetDayBar]
-    -   [Info]
-    -   [Maximum (MAX)]
-    -   [Minimum (MIN)]
-    -   [MTFBoxes]
-    -   [PriceLine]
-    -   [PriorDayOHLC]
-    -   [PriorDayOHLCext]
-    -   [SessionBreakLines]
-    -   [ShowBidAsk]
-    -   [TickCounter]
-    -   [True Strength Index (TSI)]
-    -   [Ultimate Oscillator]
-    -   [Volume (VOL)]
-    -   [Volume Moving Average (VOLMA)]
-    -   [Volume Oscillator]
-    -   [Volume Profile]
-    -   [Volume Rate of Change (VROC)]
-    -   [VolumeUpDown]
-    -   [Volume Zones]
-    -   [Williams %R]
-    -   [ZigZag]
+    - [*Bars (Candles)*](./data.md#bars-candles)
+    - [*Data Series*](./data.md#data-series)
+    - [*Open*](./data.md#open)
+    - [*High*](./data.md#high)
+    - [*Low*](./data.md#low)
+    - [*Close*](./data.md#close)
+    - [*Volume*](./data.md#volume)
+    - [*Median*](./data.md#median)
+    - [*Typical*](./data.md#typical)
+    - [*Weighted*](./data.md#weighted)
+- [Indicators & Oscillators](./indicators_oscillators.md#indicators-oscillators)
+  	- [Accumulation/Distribution (ADL)](#accumulationdistribution-adl)
+  	- [Adaptive Price Zone (APZ)](#adaptive-price-zone-apz)
+  	- [Aroon](#aroon)
+  	- [Aroon Oscillator](#aroon-oscillator)
+  	- [Average Directional Index (ADX)](#average-directional-index-adx)
+  	- [Average Directional Movement Rating (ADXR)](#average-directional-movement-rating-adxr)
+  	- [Average True Range (ATR)](#average-true-range-atr)
+  	- [Balance of Power (BOP)](#balance-of-power-bop)
+  	- [Bollinger Bands](#bollinger-bands)
+  	- [Bollinger Percent B (%b)](#bollinger-percent-b-b)
+  	- [Bollinger Band Width (BBWidth)](#bollinger-band-width-bbwidth)
+  	- [Bollinger MTF (MultiTimeFrame)](#bollinger-mtf-multitimeframe)
+  	- [BuySellPressure](#buysellpressure)
+  	- [BuySellVolume](#buysellvolume)
+  	- [CandleStickPattern](#candlestickpattern)
+  	- [ChaikinMoneyFlow (CMF)](#chaikinmoneyflow-cmf)
+  	- [Chaikin Oscillator](#chaikin-oscillator)
+  	- [ChaikinVolatility (CVL)](#chaikinvolatility-cvl)
+  	- [Chande Momentum Oscillator (CMO)](#chande-momentum-oscillator-cmo)
+  	- [Commodity Channel Index (CCI)](#commodity-channel-index-cci)
+  	- [Darvas Boxes](#darvas-boxes)
+  	- [Directional Movement (DM)](#directional-movement-dm)
+  	- [Donchian Channel](#donchian-channel)
+  	- [Directional Movement Index (DMI)](#directional-movement-index-dmi)
+  	- [Double Stochastics (DSS)](#double-stochastics-dss)
+  	- [Dynamic Momentum Index (DMIndex)](#dynamic-momentum-index-dmindex)
+  	- [Ease of Movement (EOM)](#ease-of-movement-eom)
+  	- [Fisher Transform](#fisher-transform)
+  	- [Forecast Oscillator (FOSC)](#forecast-oscillator-fosc)
+  	- [HighestHighIndex()](#highesthighindex)
+  	- [HighestHighPrice()](#highesthighprice)
+  	- [IchimokuCloud](#ichimokucloud)
+  	- [InsideBarsMT](#insidebarsmt)
+  	- [Keltner Channel](#keltner-channel)
+  	- [KeyReversalUp](#keyreversalup)
+  	- [KeyReversalDown](#keyreversaldown)
+  	- [KeyReversalUpAtSMA](#keyreversalupatsma)
+  	- [KeyReversalDownAtSMA](#keyreversaldownatsma)
+  	- [KeyReversalUpAtEMA](#keyreversalupatema)
+  	- [KeyReversalDownAtEMA](#keyreversaldownatema)
+  	- [Linear Regression](#linear-regression)
+  	- [LinRegIntercept](#linregintercept)
+  	- [LinRegSlope](#linregslope)
+  	- [LowestLowIndex()](#lowestlowindex)
+  	- [LowestLowPrice()](#lowestlowprice)
+  	- [MACD](#macd)
+  	- [MAEnvelopes](#maenvelopes)
+  	- [MarketPhases](#marketphases)
+  	- [Momentum (MOM)](#momentum-mom)
+  	- [Money Flow Index (MFI)](#money-flow-index-mfi)
+  	- [Moving Averages](#moving-averages)
+  	- [DEMA - Double Exponential Moving Average](#dema-double-exponential-moving-average)
+  	- [EMA - Exponential Moving Average](#ema-exponential-moving-average)
+  	- [EMA MTF (MultiTimeFrame)](#ema-mtf-multitimeframe)
+  	- [HMA - Hull Moving Average](#hma-hull-moving-average)
+  	- [KAMA - Kaufman's Adaptive Moving Average](#kama-kaufmans-adaptive-moving-average)
+  	- [MAMA - Mesa Adaptive Moving Average](#mama-mesa-adaptive-moving-average)
+  	- [SMA - Simple Moving Average](#sma-simple-moving-average)
+  	- [SMA MTF (MultiTimeFrame)](#sma-mtf-multitimeframe)
+  	- [SMMA - Smoothed Moving Average](#smma-smoothed-moving-average)
+  	- [TEMA - Triple Exponential Moving Average](#tema-triple-exponential-moving-average)
+  	- [TMA - Triangular Moving Average](#tma-triangular-moving-average)
+  	- [TRIX - Triple Exponential Moving Average](#trix-triple-exponential-moving-average)
+  	- [T3 - Triple Exponential Moving Average](#t3-triple-exponential-moving-average)
+  	- [VMA - Variable Moving Average](#vma-variable-moving-average)
+  	- [VWMA - Volume Weighted Moving Average](#vwma-volume-weighted-moving-average)
+  	- [WMA - Weighted Moving Average](#wma-weighted-moving-average)
+  	- [ZLEMA - Zero Lag Exponential Moving Average](#zlema-zero-lag-exponential-moving-average)
+  	- [nBarsUp](#nbarsup)
+  	- [nBarsDown](#nbarsdown)
+  	- [OnBalanceVolume (OBV)](#onbalancevolume-obv)
+  	- [OutsideBars](#outsidebars)
+  	- [P123](#p123)
+  	- [Parabolic SAR](#parabolic-sar)
+  	- [Percentage Price Oscillator (PPO)](#percentage-price-oscillator-ppo)
+  	- [PercentEnvelopes](#percentenvelopes)
+  	- [Pivot Points](#pivot-points)
+  	- [Polarized Fractal Efficiency (PFE)](#polarized-fractal-efficiency-pfe)
+  	- [Price Oscillator](#price-oscillator)
+  	- [Range](#range)
+  	- [Range Indicator (RIND)](#range-indicator-rind)
+  	- [Rate of Change (ROC)](#rate-of-change-roc)
+  	- [Relative Spread Strength (RSS)](#relative-spread-strength-rss)
+  	- [Relative Strength Index (RSI)](#relative-strength-index-rsi)
+  	- [Relative Strength Levy (RSL)](#relative-strength-levy-rsl)
+  	- [Relative Volatility Index (RVI)](#relative-volatility-index-rvi)
+  	- [ReversalBars](#reversalbars)
+  	- [R-Squared](#r-squared)
+  	- [StandardDeviation(StdDev)](#standarddeviationstddev)
+  	- [Standard Error (StdError)](#standard-error-stderror)
+  	- [Stochastics](#stochastics)
+  	- [Stochastics Fast](#stochastics-fast)
+  	- [Stochastics RSI (StochRSI)](#stochastics-rsi-stochrsi)
+  	- [Summation (SUM)](#summation-sum)
+  	- [SuperTrend](#supertrend)
+  	- [SupportResistanceAreas](#supportresistanceareas)
+  	- [Swing](#swing)
+  	- [Time-Series-Forecast (TSF)](#time-series-forecast-tsf)
+  	- [Tools](#tools)
+  	- [Constant Lines](#constant-lines)
+  	- [CurrentDayOHL](#currentdayohl)
+  	- [Daily Performance](#daily-performance)
+  	- [DayLines](#daylines)
+  	- [DayLinesAdv](#daylinesadv)
+  	- [GetDayBar](#getdaybar)
+  	- [Info](#info)
+  	- [Maximum (MAX)](#maximum-max)
+  	- [Minimum (MIN)](#minimum-min)
+  	- [MTFBoxes](#mtfboxes)
+  	- [PriceLine](#priceline)
+  	- [PriorDayOHLC](#priordayohlc)
+  	- [PriorDayOHLCext](#priordayohlcext)
+  	- [SessionBreakLines](#sessionbreaklines)
+  	- [ShowBidAsk](#showbidask)
+  	- [TickCounter](#tickcounter)
+  	- [True Strength Index (TSI)](#true-strength-index-tsi)
+  	- [Ultimate Oscillator](#ultimate-oscillator)
+  	- [Volume (VOL)](#volume-vol)
+  	- [Volume Moving Average (VOLMA)](#volume-moving-average-volma)
+  	- [Volume Oscillator](#volume-oscillator)
+  	- [Volume Profile](#volume-profile)
+  	- [Volume Rate of Change (VROC)](#volume-rate-of-change-vroc)
+  	- [VolumeUpDown](#volumeupdown)
+  	- [Volume Zones](#volume-zones)
+  	- [Williams %R](#williams-r)
+  	- [ZigZag](#zigzag)

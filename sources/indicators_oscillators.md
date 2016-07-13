@@ -1,5 +1,4 @@
-Indicators & Oscillators
-========================
+#Indicators & Oscillators
 
 **Trade like the professionals!**
 
@@ -8,17 +7,14 @@ AgenaTrader provides you with a variety of powerful indicators that will assist 
 Indicators can be used in
 
 -   Charts
-
 -   Condition Escort
-
 -   AgenaScript
 
 For each indicator you will find a brief description of its interpretation, operation and functionality, a graphical representation on a chart and further technical details for its usage with AgenaScript.
 
 <img src=".//media/image1.png" width="597" height="511" />
 
-Accumulation/Distribution (ADL)
--------------------------------
+##Accumulation/Distribution (ADL)
 
 ### Description
 
@@ -76,8 +72,7 @@ input Input data series for the indicator
 ```
 
 
-Adaptive Price Zone (APZ)
--------------------------
+##Adaptive Price Zone (APZ)
 
 ### Description
 
@@ -141,8 +136,7 @@ period Number of bars included in the calculation
 ```
 
 
-Aroon
------
+##Aroon
 
 ### Description
 
@@ -206,8 +200,7 @@ period Number of bars taken into consideration when calculating the values
 ```
 
 
-Aroon Oscillator
-----------------
+##Aroon Oscillator
 
 ### Description
 
@@ -255,8 +248,7 @@ period Number of bars taken into consideration for the calculations
 ```
 
 
-Average Directional Index (ADX)
--------------------------------
+##Average Directional Index (ADX)
 
 ### Description
 
@@ -312,8 +304,7 @@ period Number of bars included in the calculation
 ```
 
 
-Average Directional Movement Rating (ADXR)
-------------------------------------------
+##Average Directional Movement Rating (ADXR)
 
 ### Description
 
@@ -365,8 +356,7 @@ period Number of bars included in the calculation
 ```
 
 
-Average True Range (ATR)
-------------------------
+##Average True Range (ATR)
 
 ### Description & Interpretation
 
@@ -377,9 +367,7 @@ Wilder features ATR in his 1978 book, [**New Concepts in Technical Trading Syst
 Wilder started with a concept called **True Range (TR)**, which is defined as the greatest of the following:
 
 -   Method 1: current high minus the current low
-
 -   Method 2: current high minus the previous close (absolute value)
-
 -   Method 3: current Low minus the previous close (absolute value)
 
 Absolute values are used to ensure positive numbers. After all, Wilder was interested in measuring the distance between two points, not the direction. If the current period's high is above the prior period's high and the low is below the prior period's low, then the current period's high-low range will be used as the True Range. This is an outside day that would use method 1 to calculate the TR. This is pretty straightforward. Methods 2 and 3 are used when there is a gap or an inside day. A gap occurs when the previous close is greater than the current high (signaling a potential gap down or limit move) or the previous close is lower than the current low (signaling a potential gap up or limit move). The image below shows examples of when methods 2 and 3 are appropriate.
@@ -426,8 +414,7 @@ period Number of bars included in the calculation
 ```
 
 
-Balance of Power (BOP)
-----------------------
+##Balance of Power (BOP)
 
 ### Description
 
@@ -471,13 +458,11 @@ smooth Settings for the smoothing
 
 ```cs
 //Output of the value for the BOP with a smoothing of 5 periods
-
 **Print**("The Balance of Power value is: " + **BOP**(5));
 ```
 
 
-Bollinger Bands
----------------
+##Bollinger Bands
 
 ### Description & Interpretation
 
@@ -557,8 +542,7 @@ period Number of bars included in the calculation
 ```
 
 
-Bollinger Percent B (%b)
-------------------------
+##Bollinger Percent B (%b)
 
 ### Description
 
@@ -624,8 +608,7 @@ numStdDev Standard deviation
 
 **Print**("Value of the Bollinger Percent B is: " + **BollingerPercentB**(20, 2)\[0\]);
 
-Bollinger Band Width (BBWidth)
-------------------------------
+##Bollinger Band Width (BBWidth)
 
 ### Description
 
@@ -707,8 +690,7 @@ numStdDev Standard deviation
 ```
 
 
-Bollinger MTF (MultiTimeFrame)
-------------------------------
+##Bollinger MTF (MultiTimeFrame)
 
 ### Description
 
@@ -721,8 +703,7 @@ The image shows a 5-minute chart with a 60-minute Bollinger band
 
 <img src=".//media/image13.png" width="510" height="467" />
 
-BuySellPressure
----------------
+##BuySellPressure
 
 ### Description
 
@@ -778,34 +759,24 @@ input Input data series for the indicator
 ### Example
 
 ```cs
-**protected** override void **Initialize**()
+protected override void Initialize()
 
 {
-
-**BuySellPressure**().CalculateOnBarClose = **false**;
-
+BuySellPressure().CalculateOnBarClose = **false**;
 }
 
 **protected** override void **OnBarUpdate**()
-
 {
-
 **if** (Close\[0\] &gt; **DonchianChannel**(20).Upper\[5\])
-
 {
-
 **if** (Historical || **BuySellPressure**().BuyPressure\[0\] &gt; 70)
-
 **EnterLong**();
-
 }
-
 }
 ```
 
 
-BuySellVolume
--------------
+##BuySellVolume
 
 ### Description
 
@@ -843,14 +814,12 @@ input Input data series for the indicator
 
 ```cs
 //Output for the BuySellVolume
-
 Print("The BuySellVolume is: " + BuySellVolume()\[0\]);
 ```
 
- 
 
-CandleStickPattern
-------------------
+
+##CandleStickPattern
 
 ### Description
 
@@ -890,53 +859,53 @@ When using this method with an index (e.g. **CandleStickPattern**(...)\[**int** 
 | input         | Input data series for the indicator                                                                                                                                                                                |
 | pattern       | Possible values are:                                                                                                                                                                                               
                  ChartPattern.BearishBeltHold                                                                                                                                                                                        
-                                                                                                                                                                                                                                     
+
                  ChartPattern.BearishEngulfing                                                                                                                                                                                       
-                                                                                                                                                                                                                                     
+
                  ChartPattern.BearishHarami                                                                                                                                                                                          
-                                                                                                                                                                                                                                     
+
                  ChartPattern.BearishHaramiCross                                                                                                                                                                                     
-                                                                                                                                                                                                                                     
+
                  ChartPattern.BullishBeltHold                                                                                                                                                                                        
-                                                                                                                                                                                                                                     
+
                  ChartPattern.BullishEngulfing                                                                                                                                                                                       
-                                                                                                                                                                                                                                     
+
                  ChartPattern.BullishHarami                                                                                                                                                                                          
-                                                                                                                                                                                                                                     
+
                  ChartPattern.BullishHaramiCross                                                                                                                                                                                     
-                                                                                                                                                                                                                                     
+
                  ChartPattern.DarkCloudCover                                                                                                                                                                                         
-                                                                                                                                                                                                                                     
+
                  ChartPattern.Doji                                                                                                                                                                                                   
-                                                                                                                                                                                                                                     
+
                  ChartPattern.DownsideTasukiGap                                                                                                                                                                                      
-                                                                                                                                                                                                                                     
+
                  ChartPattern.EveningStar                                                                                                                                                                                            
-                                                                                                                                                                                                                                     
+
                  ChartPattern.FallingThreeMethods                                                                                                                                                                                    
-                                                                                                                                                                                                                                     
+
                  ChartPattern.Hammer                                                                                                                                                                                                 
-                                                                                                                                                                                                                                     
+
                  ChartPattern.HangingMan                                                                                                                                                                                             
-                                                                                                                                                                                                                                     
+
                  ChartPattern.InvertedHammer                                                                                                                                                                                         
-                                                                                                                                                                                                                                     
+
                  ChartPattern.MorningStart                                                                                                                                                                                           
-                                                                                                                                                                                                                                     
+
                  ChartPattern.PiercingLine                                                                                                                                                                                           
-                                                                                                                                                                                                                                     
+
                  ChartPattern.RisingThreeMethods                                                                                                                                                                                     
-                                                                                                                                                                                                                                     
+
                  ChartPattern.ShootingStar                                                                                                                                                                                           
-                                                                                                                                                                                                                                     
+
                  ChartPattern.StickSandwich                                                                                                                                                                                          
-                                                                                                                                                                                                                                     
+
                  ChartPattern.ThreeBlackCrows                                                                                                                                                                                        
-                                                                                                                                                                                                                                     
+
                  ChartPattern.ThreeWhiteSoldiers                                                                                                                                                                                     
-                                                                                                                                                                                                                                     
+
                  ChartPattern.UpsideGapTwoCrows                                                                                                                                                                                      
-                                                                                                                                                                                                                                     
+
                  ChartPattern.UpsideTasukiGap                                                                                                                                                                                        |
 | trendStrength | Signifies the number of bars to the left and right of the swing high or swing low that are used to identify a trend. The value 0 turns off the search, meaning that the only thing searched for is chart patterns. |
 
@@ -950,8 +919,7 @@ When using this method with an index (e.g. **CandleStickPattern**(...)\[**int** 
 
 **Print**("Pattern ShootingStar found!");
 
-ChaikinMoneyFlow (CMF)
-----------------------
+##ChaikinMoneyFlow (CMF)
 
 ### Description
 
@@ -1000,8 +968,7 @@ period Number of bars included in the calculation
 
 **Print**("The Chaikin Money Flow value is: " + **ChaikinMoneyFlow**(21)\[0\]);
 
-Chaikin Oscillator
-------------------
+##Chaikin Oscillator
 
 ### Description
 
@@ -1051,8 +1018,7 @@ slow Number of bars included in the calculation for the slow EMA
 ```
 
 
-ChaikinVolatility (CVL)
------------------------
+##ChaikinVolatility (CVL)
 
 ### Description
 
@@ -1101,8 +1067,7 @@ period Number of bars included in the calculations
 ```
 
 
-Chande Momentum Oscillator (CMO)
---------------------------------
+##Chande Momentum Oscillator (CMO)
 
 ### Description
 
@@ -1155,8 +1120,7 @@ period Number of bars included in the calculations
 ```
 
 
-Commodity Channel Index (CCI)
------------------------------
+##Commodity Channel Index (CCI)
 
 ### Description
 
@@ -1212,8 +1176,7 @@ period Number of bars included in the calculations
 ```
 
 
-Darvas Boxes
-------------
+##Darvas Boxes
 
 ### Description
 
@@ -1281,8 +1244,7 @@ input Input data series for the indicator
 ```
 
 
-Directional Movement (DM)
--------------------------
+##Directional Movement (DM)
 
 ### Description
 
@@ -1348,8 +1310,7 @@ period Number of bars included in the calculations
 ```
 
 
-Donchian Channel
-----------------
+##Donchian Channel
 
 ### Description
 
@@ -1410,8 +1371,7 @@ period Number of bars included in the calculations
 ```
 
 
-Directional Movement Index (DMI)
---------------------------------
+##Directional Movement Index (DMI)
 
 ### Description
 
@@ -1471,8 +1431,7 @@ period Number of bars included in the calculations
 ```
 
 
-Double Stochastics (DSS)
-------------------------
+##Double Stochastics (DSS)
 
 ### Description
 
@@ -1554,8 +1513,7 @@ EMA-Period2 Periods for the second EMA
 ```
 
 
-Dynamic Momentum Index (DMIndex)
---------------------------------
+##Dynamic Momentum Index (DMIndex)
 
 ### Description
 
@@ -1608,8 +1566,7 @@ smooth Smoothing settings
 ```
 
 
-Ease of Movement (EOM)
-----------------------
+##Ease of Movement (EOM)
 
 ### Description
 
@@ -1670,8 +1627,7 @@ Ease = MidpointMove / Box Ratio
 ```
 
 
-Fisher Transform
-----------------
+##Fisher Transform
 
 ### Description
 
@@ -1720,8 +1676,7 @@ When using this method with an index (e.g. **FisherTransform**(10)\[**int** bars
 ```
 
 
-Forecast Oscillator (FOSC)
---------------------------
+##Forecast Oscillator (FOSC)
 
 ### Description
 
@@ -1777,8 +1732,7 @@ When using this method with an index (e.g. **FOSC**(14)\[**int** barsAgo\] ), th
 ```
 
 
-HighestHighIndex()
-------------------
+##HighestHighIndex()
 
 ### Description
 
@@ -1819,8 +1773,7 @@ BarsBack Number of periods in which the highest high will be searched for
 ```
 
 
-HighestHighPrice()
-------------------
+##HighestHighPrice()
 
 ### Description
 
@@ -1863,8 +1816,7 @@ BarsBack Number of periods in which the highest high will be searched for
 ```
 
 
-IchimokuCloud
--------------
+##IchimokuCloud
 
 The Ichimoku Cloud, also known as Ichimoku Kinko Hyo, is a versatile indicator that defines support and resistance, identifies trend direction, gauges momentum and provides trading signals. Ichimoku Kinko Hyo translates into "one look equilibrium chart". With one look, chartists can identify the trend and look for potential signals within that trend. The indicator was developed by Goichi Hosoda, a journalist, and published in his 1969 book. Even though the Ichimoku Cloud may seem complicated when viewed on the price chart, it is actually a straight-forward indicator that is very usable. It was, after all, created by a journalist, not a rocket scientist! Moreover, the concepts are easy to understand and the signals are well-defined.
 
@@ -1964,8 +1916,7 @@ periodSlow Number of periods used for the calculation of the Chikou line. Defaul
 
 <img src=".//media/image33.png" width="627" height="441" />
 
-InsideBarsMT
-------------
+##InsideBarsMT
 
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
 
@@ -2015,7 +1966,6 @@ Will return the low of the bar preceding the outside bar
 
 <img src=".//media/image34.png" width="406" height="462" />
 
-### 
 
 ###  “Tolerance” parameter
 
@@ -2055,8 +2005,7 @@ StopPrice = **InsideBarsMT**().LowBeforeOutsideBar\[0\];
 ```
 
 
-Keltner Channel
----------------
+##Keltner Channel
 
 ### Description
 
@@ -2149,8 +2098,7 @@ diff.**Set**(High\[0\] - Low\[0\]);
 ```
 
 
-KeyReversalUp
--------------
+##KeyReversalUp
 
 ### Description
 
@@ -2194,8 +2142,7 @@ period Number of bars included in the calculations
 
 **Print**("A long reversal formation has occurred.");
 
-KeyReversalDown
----------------
+##KeyReversalDown
 
 ### Description
 
@@ -2242,8 +2189,7 @@ period Number of bars included in the calculations
 ```
 
 
-KeyReversalUpAtSMA
-------------------
+##KeyReversalUpAtSMA
 
 ### Description
 
@@ -2292,8 +2238,7 @@ SMAperiod Number of periods included in the calculation of the SMA
 ```
 
 
-KeyReversalDownAtSMA
---------------------
+##KeyReversalDownAtSMA
 
 ### Description
 
@@ -2342,8 +2287,7 @@ SMAperiod Number of periods included in the SMA calculation
 ```
 
 
-KeyReversalUpAtEMA
-------------------
+##KeyReversalUpAtEMA
 
 ### Description
 
@@ -2392,8 +2336,7 @@ EMAperiod Number of periods included in the EMA calculation
 ```
 
 
-KeyReversalDownAtEMA
---------------------
+##KeyReversalDownAtEMA
 
 ### Description
 
@@ -2443,8 +2386,7 @@ EMAperiod Number of periods used to calculate the EMA
 ```
 
 
-Linear Regression
------------------
+##Linear Regression
 
 ### Description
 
@@ -2499,8 +2441,7 @@ period Number of bars included in the calculations
 ```
 
 
-LinRegIntercept
----------------
+##LinRegIntercept
 
 ### Description
 
@@ -2552,8 +2493,7 @@ period Number of bars included in the calculations
 ```
 
 
-LinRegSlope
------------
+##LinRegSlope
 
 ### Description
 
@@ -2604,8 +2544,7 @@ period Number of bars included in the calculations
 ```
 
 
-LowestLowIndex()
-----------------
+##LowestLowIndex()
 
 ### Description
 
@@ -2648,8 +2587,7 @@ BarsBack Number of periods within which the highest high shall be searched for
 ```
 
 
-LowestLowPrice()
-----------------
+##LowestLowPrice()
 
 ### Description
 
@@ -2692,8 +2630,7 @@ BarsBack Number of periods within which the low will be searched for
 ```
 
 
-MACD
-----
+##MACD
 
 ### Description
 
@@ -2773,8 +2710,7 @@ smooth Number of periods for the EMA calculation of the signal line
 ```
 
 
-MAEnvelopes
------------
+##MAEnvelopes
 
 ### Description
 
@@ -2856,8 +2792,7 @@ maType Type of moving average used, possible choices are:
 ```
 
 
-MarketPhases
-------------
+##MarketPhases
 
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
 
@@ -2939,8 +2874,7 @@ You can use the indicator as a filter by using the signals of other indicators w
 
 <img src=".//media/image50.png" width="632" height="621" />
 
-Momentum (MOM)
---------------
+##Momentum (MOM)
 
 ### Description
 
@@ -2995,8 +2929,7 @@ period Number of bars included in the calculations
 ```
 
 
-Money Flow Index (MFI)
-----------------------
+##Money Flow Index (MFI)
 
 ### Description
 
@@ -3048,8 +2981,7 @@ period Number of bars included in the calculations
 ```
 
 
-Moving Averages
----------------
+##Moving Averages
 
 ### Variants
 
@@ -3103,8 +3035,7 @@ Another method is to use three moving averages (Triple Crossover Method). This m
 
 (Source: VTAD)
 
-DEMA - Double Exponential Moving Average
-----------------------------------------
+##DEMA - Double Exponential Moving Average
 
 ### Description
 
@@ -3152,13 +3083,11 @@ Value.**Set**(2 \* **EMA**(Inputs\[0\], Period)\[0\] - **EMA**(**EMA**(Inputs\[0
 
 ```cs
 //Output the values for the DEMA
-
 **Print**("The current DEMA value is " + **DEMA**(20)\[0\]);
 ```
 
 
-EMA - Exponential Moving Average
---------------------------------
+##EMA - Exponential Moving Average
 
 ### Description
 
@@ -3213,8 +3142,7 @@ Value.**Set**(CurrentBar == 0 ? Input\[0\] : Input\[0\] \* (2.0 / (1 + Period)) 
 ```
 
 
-EMA MTF (MultiTimeFrame)
-------------------------
+##EMA MTF (MultiTimeFrame)
 
 ### Description
 
@@ -3232,8 +3160,7 @@ A 5-minute chart with an EMA(20) calculated with hourly bars as the underlying i
 
 <img src=".//media/image55.png" width="513" height="469" />
 
-HMA - Hull Moving Average
--------------------------
+##HMA - Hull Moving Average
 
 ### Description
 
@@ -3291,8 +3218,7 @@ Value.**Set**(**WMA**(diffSeries, (**int**) Math.**Sqrt**(Period))\[0\]);
 ```
 
 
-KAMA - Kaufman's Adaptive Moving Average
-----------------------------------------
+##KAMA - Kaufman's Adaptive Moving Average
 
 ### Description
 
@@ -3351,8 +3277,7 @@ slow Long period
 ```
 
 
-MAMA - Mesa Adaptive Moving Average
------------------------------------
+##MAMA - Mesa Adaptive Moving Average
 
 ### Description
 
@@ -3422,8 +3347,7 @@ slowLimit Lower limit for the alpha value
 ```
 
 
-SMA - Simple Moving Average
----------------------------
+##SMA - Simple Moving Average
 
 ### Description
 
@@ -3482,8 +3406,7 @@ Value.**Set**((last + Input\[0\] - Input\[Period\]) / Math.**Min**(CurrentBar, P
 ```
 
 
-SMA MTF (MultiTimeFrame)
-------------------------
+##SMA MTF (MultiTimeFrame)
 
 ### Description
 
@@ -3497,8 +3420,7 @@ The image shows a 5-minute chart with an SMA (14) calculated on 4-hour bars
 
 <img src=".//media/image60.png" width="514" height="468" />
 
-SMMA - Smoothed Moving Average
-------------------------------
+##SMMA - Smoothed Moving Average
 
 ### Description
 
@@ -3553,8 +3475,7 @@ period Number of bars included in the calculations
 ```
 
 
-TEMA - Triple Exponential Moving Average
-----------------------------------------
+##TEMA - Triple Exponential Moving Average
 
 ### Description
 
@@ -3600,10 +3521,9 @@ period Number of bars included in the calculations
 ```
 
 
-TMA - Triangular Moving Average
--------------------------------
+##TMA - Triangular Moving Average
 
-### 
+###
 
 ### Description
 
@@ -3647,8 +3567,7 @@ period Number of bars included in the calculations
 ```
 
 
-TRIX - Triple Exponential Moving Average
-----------------------------------------
+##TRIX - Triple Exponential Moving Average
 
 ### Description
 
@@ -3708,8 +3627,7 @@ signal period Number of bars included in the signal line calculation
 ```
 
 
-T3 - Triple Exponential Moving Average
---------------------------------------
+##T3 - Triple Exponential Moving Average
 
 ### Description
 
@@ -3759,8 +3677,7 @@ vFactor Volume factor (multiplier)
 ```
 
 
-VMA - Variable Moving Average
------------------------------
+##VMA - Variable Moving Average
 
 ### Description
 
@@ -3811,8 +3728,7 @@ volatility period Number of bars included in the calculation for the signal line
 ```
 
 
-VWMA - Volume Weighted Moving Average
--------------------------------------
+##VWMA - Volume Weighted Moving Average
 
 ### Description
 
@@ -3856,8 +3772,7 @@ period Number of bars included in the calculations
 ```
 
 
-WMA - Weighted Moving Average
------------------------------
+##WMA - Weighted Moving Average
 
 ### Description
 
@@ -3905,8 +3820,7 @@ period Number of bars included in the calculations
 ```
 
 
-ZLEMA - Zero Lag Exponential Moving Average
--------------------------------------------
+##ZLEMA - Zero Lag Exponential Moving Average
 
 ### Description
 
@@ -3954,8 +3868,7 @@ period Number of bars included in the calculations
 ```
 
 
-nBarsUp
--------
+##nBarsUp
 
 ### Description
 
@@ -4016,8 +3929,7 @@ higherLow Additional condition (true): continuously rising lows
 ```
 
 
-nBarsDown
----------
+##nBarsDown
 
 ### Description
 
@@ -4041,8 +3953,6 @@ In addition, the following conditions can be included in the search:
 **NBarsDown**(IDataSeries input, **bool** barCount, **int** BarDown, **bool** lowerHigh, **bool** lowerLow)\[**int** barsAgo\]
 ```
 
-
-### 
 
 ### Return value
 
@@ -4082,8 +3992,7 @@ lowerLow Additional condition (true); continuously falling lows
 ```
 
 
-OnBalanceVolume (OBV)
----------------------
+##OnBalanceVolume (OBV)
 
 ### Description
 
@@ -4094,8 +4003,6 @@ The On Balance Volume Indicator shows the buy or sell pressure. The volume is cu
 Granville theorized that volume precedes price. OBV rises when volume on up days outpaces volume on down days. OBV falls when volume on down days is stronger. A rising OBV reflects positive volume pressure that can lead to higher prices. Conversely, falling OBV reflects negative volume pressure that can foreshadow lower prices. Granville noted in his research that OBV would often move before price. Expect prices to move higher if OBV is rising while prices are either flat or moving down. Expect prices to move lower if OBV is falling while prices are either flat or moving up.
 
 The absolute value of OBV is not important. Chartists should instead focus on the characteristics of the OBV line. First define the trend for OBV. Second, determine if the current trend matches the trend for the underlying security. Third, look for potential support or resistance levels. Once broken, the trend for OBV will change and these breaks can be used to generate signals. Also notice that OBV is based on closing prices. Therefore, closing prices should be considered when looking for divergences or support/resistance breaks. And finally, volume spikes can sometimes throw off the indicator by causing a sharp move that will require a settling period. (Source: Stockcharts.com)
-
-### 
 
 ### Usage
 
@@ -4133,15 +4040,13 @@ input Input data series for the indicator
 ```
 
 
-OutsideBars
------------
+##OutsideBars
 
 ### Description
 
 The indicator Outside Bars is an outdated version of the [*InsideBarsMT*].
 
-P123
-----
+##P123
 
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
 
@@ -4220,7 +4125,7 @@ A notation such as \[barsAgo\] is not available for this. Parameter occurrences 
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------|
 | Trend Direction   | 1 = uptrend -1 = downtrend 0 = no trend                                                                                           |
 | IsTrendValid      | true = confirmed trend with a point sequence of at least 1 - 2 - 3 - 2                                                            
-                                                                                                                                                        
+
                      false = no confirmed trend (phases 1 and 2)                                                                                        |
 | LastPoint         | last point of a trend, 1, 2 or 3                                                                                                  |
 | LastPointPrice    | outputs the price value of the last market point                                                                                  |
@@ -4288,8 +4193,7 @@ The name has an underscore (“\_“) suffix in order to differentiate it.
 
 The parameters “trendSize” and “occurrence” can be found within the Condition Escort.
 
-Parabolic SAR
--------------
+##Parabolic SAR
 
 ### Description
 
@@ -4346,8 +4250,7 @@ When using this method with an index (e.g. **ParabolicSAR**(...)\[**int** barsAg
 
 ```
 
-Percentage Price Oscillator (PPO)
----------------------------------
+##Percentage Price Oscillator (PPO)
 
 ### Description
 
@@ -4411,8 +4314,7 @@ smooth Number of bars for the calculation of the EMA signal line
 ```
 
 
-PercentEnvelopes
-----------------
+##PercentEnvelopes
 
 ### Description
 
@@ -4477,8 +4379,7 @@ percent Difference in % for the bands (from the input value)
 
 ```
 
-Pivot Points
-------------
+##Pivot Points
 
 ### Description
 
@@ -4542,24 +4443,24 @@ This class has the following public methods (as data series), which all return d
 |-----------------|-----------------------------------------------------------------------------------|
 | input           | Input data series for the indicator                                               |
 | PivotPointsMode | Calculatory method                                                                
-                                                                                                      
+
                    PivotPointsMode.Classic                                                            
-                                                                                                      
+
                    PivotPointsMode.Floor                                                              
-                                                                                                      
+
                    PivotPointsMode.Woodie                                                             
-                                                                                                      
+
                    PivotPointsMode.Camarilla                                                          
-                                                                                                      
+
                    PivotPointsMode.Fibonacci                                                          
-                                                                                                      
+
                    Default: floor                                                                     |
 | LineWidth       | Default: 1                                                                        |
 | ShowPrices      | Shows prices next to the lines                                                    
-                                                                                                      
+
                    Default: false                                                                     |
-| DaysBack        | The number of historical periods to be included in the display of the pivot lines 
-                                                                                                      
+| DaysBack        | The number of historical periods to be included in the display of the pivot lines
+
                    Default: 0                                                                         |
 | RColor          | Resistance line color                                                             |
 | PPColor         | Pivot line color                                                                  |
@@ -4668,8 +4569,7 @@ r3 = pp + 0.764 \* Range
 
 s3 = pp - 0.764 \* Range
 
-Polarized Fractal Efficiency (PFE)
-----------------------------------
+##Polarized Fractal Efficiency (PFE)
 
 ### Description
 
@@ -4717,8 +4617,7 @@ period Number of bars included in the calculations
 ```
 
 
-Price Oscillator
-----------------
+##Price Oscillator
 
 ### Description
 
@@ -4770,8 +4669,7 @@ smooth Number of bars used for the calculation of the EMA signal line
 ```
 
 
-Range
------
+##Range
 
 ### Description
 
@@ -4817,8 +4715,7 @@ input Input data series for the indicator
 ```
 
 
-Range Indicator (RIND)
-----------------------
+##Range Indicator (RIND)
 
 ### Description
 
@@ -4872,8 +4769,7 @@ smooth Number of bars used for smoothing the indicator (using an EMA)
 ```
 
 
-Rate of Change (ROC)
---------------------
+##Rate of Change (ROC)
 
 ### Description
 
@@ -4928,8 +4824,7 @@ period Number of bars included in the calculations
 ```
 
 
-Relative Spread Strength (RSS)
-------------------------------
+##Relative Spread Strength (RSS)
 
 ### Description
 
@@ -4989,8 +4884,7 @@ eMA2 Number of periods for the second EMA
 ```
 
 
-Relative Strength Index (RSI)
------------------------------
+##Relative Strength Index (RSI)
 
 ### Description
 
@@ -5054,8 +4948,7 @@ smooth Number of periods for the smoothing
 ```
 
 
-Relative Strength Levy (RSL)
-----------------------------
+##Relative Strength Levy (RSL)
 
 ### Description
 
@@ -5101,8 +4994,7 @@ period Number of bars included in the calculations
 ```
 
 
-Relative Volatility Index (RVI)
--------------------------------
+##Relative Volatility Index (RVI)
 
 ### Description
 
@@ -5155,8 +5047,7 @@ period Number of bars included in the calculations
 ```
 
 
-ReversalBars
-------------
+##ReversalBars
 
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
 
@@ -5229,8 +5120,7 @@ The reversal bars must exceed their previous bars by at least 1 tick. The tolera
 ```
 
 
-R-Squared
----------
+##R-Squared
 
 ### Description
 
@@ -5288,8 +5178,7 @@ period Number of bars included in the calculations
 ```
 
 
-StandardDeviation(StdDev)
--------------------------
+##StandardDeviation(StdDev)
 
 ### Description
 
@@ -5341,8 +5230,7 @@ period Number of bars included in the calculations
 ```
 
 
-Standard Error (StdError)
--------------------------
+##Standard Error (StdError)
 
 ### Description
 
@@ -5415,8 +5303,7 @@ period Number of bars included in the calculations
 ```
 
 
-Stochastics
------------
+##Stochastics
 
 ### Description
 
@@ -5494,8 +5381,7 @@ smooth Number of periods for the smoothing of %D
 ```
 
 
-Stochastics Fast
-----------------
+##Stochastics Fast
 
 ### Description
 
@@ -5563,8 +5449,7 @@ periodK Number of periods included in the calculation of %K
 ```
 
 
-Stochastics RSI (StochRSI)
---------------------------
+##Stochastics RSI (StochRSI)
 
 ### Description
 
@@ -5616,8 +5501,7 @@ period Number of bars included in the calculations
 ```
 
 
-Summation (SUM)
----------------
+##Summation (SUM)
 
 ### Description
 
@@ -5661,8 +5545,7 @@ period Number of bars included in the calculations
 ```
 
 
-SuperTrend
-----------
+##SuperTrend
 
 ### Description
 
@@ -5711,45 +5594,45 @@ When using this method with an index (e.g. **SuperTrend**(...).UpTrend\[**int** 
 |------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | input      | Input data series for the indicator                                                                                                                                    |
 | maType     | For the calculation of the MA, the following methods can be used:                                                                                                      
-                                                                                                                                                                                      
+
               SuperTrendMAType.HMA                                                                                                                                                    
-                                                                                                                                                                                      
+
               SuperTrendMAType.SMA                                                                                                                                                    
-                                                                                                                                                                                      
+
               SuperTrendMAType.SMMA                                                                                                                                                   
-                                                                                                                                                                                      
+
               SuperTrendMAType.TEMA                                                                                                                                                   
-                                                                                                                                                                                      
+
               SuperTrendMAType.TMA                                                                                                                                                    
-                                                                                                                                                                                      
+
               SuperTrendMAType.VMA                                                                                                                                                    
-                                                                                                                                                                                      
+
               SuperTrendMAType.VWMA                                                                                                                                                   
-                                                                                                                                                                                      
+
               SuperTrendMAType.WMA                                                                                                                                                    
-                                                                                                                                                                                      
+
               Also see: [*HMA*], [*SMA*], [*SMMA*], [*TEMA*], [*TMA*], [*VMA*], [*VWMA*], [*WMA*][*VMA*].                                                                             
-                                                                                                                                                                                      
+
               Default: HMA                                                                                                                                                            |
 | multiplier | This is a multiplier for the internal calculation of the offset. This is only used when the method is set to ATR and DualThrust.                                       
               (In the adaptive mode, the multiplier uses the Homodyne Discriminator)                                                                                                  
-                                                                                                                                                                                      
+
               Default: 2.618                                                                                                                                                          |
 | Period     | Number of bars used for the calculation of the moving average                                                                                                          
-                                                                                                                                                                                      
+
               Default: 14                                                                                                                                                             |
 | smooth     | Values for additional smoothing                                                                                                                                        
               If no smoothing is necessary, this value can be set to 1                                                                                                                
-                                                                                                                                                                                      
+
               Default: 14                                                                                                                                                             |
 | stMode     | The following methods can be chosen:                                                                                                                                   
-                                                                                                                                                                                      
+
               SuperTrendMode.ATR,                                                                                                                                                     
-                                                                                                                                                                                      
+
               SuperTrendMode.DualThrust,                                                                                                                                              
-                                                                                                                                                                                      
+
               SuperTrendMode.Adaptive                                                                                                                                                 
-                                                                                                                                                                                      
+
               The Period Parameter will have a huge influence when the DualThrustMode is selected. The smaller the period, the tighter the indicator will follow price developments.  
               Default: SuperTrendMode.ATR                                                                                                                                             |
 
@@ -5770,8 +5653,7 @@ When using this method with an index (e.g. **SuperTrend**(...).UpTrend\[**int** 
 ```
 
 
-SupportResistanceAreas
-----------------------
+##SupportResistanceAreas
 
 ### Description
 
@@ -5799,7 +5681,7 @@ Once broken, these areas tend to reverse their function, meaning that a broken s
 | ATRRangeFactor    | Settings for the width of the support/resistance area as calculated by the ATR.                  
                      The smallest configurable value is 0.1; default is 0.3                                            |
 | Levels            | This setting defines how many S/R zones of the same type are displayed. The default is 3         |
-| Opacity           | Transparency of the bars to be drawn into the chart; 0 (transparent) – 255 (completely visible). 
+| Opacity           | Transparency of the bars to be drawn into the chart; 0 (transparent) – 255 (completely visible).
                      Default is 70                                                                                     |
 | SensibilityFactor | Defines the sensitivity of the S/R search.                                                       
                      The smallest setting is 1; the default is 5                                                       |
@@ -5808,8 +5690,7 @@ Once broken, these areas tend to reverse their function, meaning that a broken s
 
 <img src=".//media/image99.png" width="628" height="467" />
 
-Swing
------
+##Swing
 
 ### Description
 
@@ -5873,8 +5754,7 @@ When using this method with an index (e.g. **Swing**(5)\[**int** barsAgo\] ), th
 ```
 
 
-Time-Series-Forecast (TSF)
---------------------------
+##Time-Series-Forecast (TSF)
 
 ### Description
 
@@ -5930,11 +5810,9 @@ period Number of bars included in the calculations
 ```
 
 
-Tools
------
+##Tools
 
-Constant Lines
---------------
+##Constant Lines
 
 ### Description
 
@@ -5968,8 +5846,7 @@ When using this method with an index (e.g. **ConstantLines**(1,2,3,4)\[**int** b
 <img src=".//media/image102.png" width="496" height="364" />
 
 
-CurrentDayOHL
--------------
+##CurrentDayOHL
 
 ### Description
 
@@ -6027,8 +5904,7 @@ When using this method with an index (e.g. **CurrentDayOHL**.CurrentOpen(...)\[*
 ```
 
 
-Daily Performance
------------------
+##Daily Performance
 
 ### Description
 
@@ -6049,7 +5925,7 @@ The result will look similar to this:
 
 <img src=".//media/image105.png" width="223" height="129" />
 
-### 
+###
 
 ### Usage
 
@@ -6115,8 +5991,7 @@ daysAgo Number of days in the past
 ```
 
 
-DayLines
---------
+##DayLines
 
 ### Description
 
@@ -6130,8 +6005,7 @@ See [*CurrentDayOHL*], [*PriorDayOHLC*].
 
 <img src=".//media/image107.png" width="414" height="425" />
 
-DayLinesAdv
------------
+##DayLinesAdv
 
 ### Description
 
@@ -6166,8 +6040,7 @@ The second picture shows Include Weekends = true:
 
 <img src=".//media/image111.png" width="535" height="584" />
 
-GetDayBar
----------
+##GetDayBar
 
 ### Description
 
@@ -6228,11 +6101,10 @@ All other values are calculated using intraday data.
 ```
 
 
-**Important:
-**The attribute *TimeFrameRequirements* must also always be used for the class doing the calling up (in the above example, class xy) if the indicator uses *Multibars.*
+**Important:**
+**The attribute *TimeFrameRequirements* must also always be used for the class doing the calling up (in the above example, class xy) if the indicator uses *Multibars.**
 
-Info
-----
+##Info
 
 ### Description
 
@@ -6243,8 +6115,7 @@ The background of the chart may (depending on the underlying instrument) display
 
 <img src=".//media/image112.png" width="627" height="458" />
 
-Maximum (MAX)
--------------
+##Maximum (MAX)
 
 ### Description
 
@@ -6290,8 +6161,7 @@ period Number of bars included in the calculations
 ```
 
 
-Minimum (MIN)
--------------
+##Minimum (MIN)
 
 ### Description
 
@@ -6335,8 +6205,7 @@ period Number of bars included in the calculations
 ```
 
 
-MTFBoxes
---------
+##MTFBoxes
 
 ### Description
 
@@ -6355,8 +6224,7 @@ TimeFrameValue Value of the timeframe (number)
 
 <img src=".//media/image115.png" width="501" height="530" />
 
-PriceLine
----------
+##PriceLine
 
 ### Description
 
@@ -6370,8 +6238,7 @@ The colors and line widths can be freely modified.
 
 <img src=".//media/image116.png" width="533" height="587" />
 
-PriorDayOHLC
-------------
+##PriorDayOHLC
 
 ### Description
 
@@ -6445,13 +6312,11 @@ When using this method with an index (e.g. **PriorDayOHLC**().PriorHigh\[**int**
 ```
 
 
-PriorDayOHLCext
----------------
+##PriorDayOHLCext
 
 See *[PriorDayOHLC][*PriorDayOHLC*].*
 
-SessionBreakLines
------------------
+##SessionBreakLines
 
 ### Description
 
@@ -6463,8 +6328,7 @@ See [*PriorDayOHLCext*].
 
 <img src=".//media/image118.png" width="478" height="402" />
 
-ShowBidAsk
-----------
+##ShowBidAsk
 
 ### Description
 
@@ -6474,8 +6338,7 @@ The indicator ShowBidAsk shows the current bid and ask prices as well as the cor
 
 <img src=".//media/image119.png" width="516" height="539" />
 
-TickCounter
------------
+##TickCounter
 
 ### Description
 
@@ -6489,8 +6352,7 @@ When programming your own scripts, please use Bars, TickCount or Bars, PercentCo
 
 <img src=".//media/image120.png" width="518" height="507" />
 
-True Strength Index (TSI)
--------------------------
+##True Strength Index (TSI)
 
 ### Description
 
@@ -6545,8 +6407,7 @@ slow Number of bars included in the calculation of the slow EMA
 ```
 
 
-Ultimate Oscillator
--------------------
+##Ultimate Oscillator
 
 ### Description
 
@@ -6608,8 +6469,7 @@ When using this method with an index (e.g. **UltimateOscillator** (5)\[**int** b
 ```
 
 
-Volume (VOL)
-------------
+##Volume (VOL)
 
 ### Description
 
@@ -6655,8 +6515,7 @@ input Input data series for the indicator
 ```
 
 
-Volume Moving Average (VOLMA)
------------------------------
+##Volume Moving Average (VOLMA)
 
 ### Description
 
@@ -6721,8 +6580,7 @@ period Number of bars included in the calculations
 ```
 
 
-Volume Oscillator
------------------
+##Volume Oscillator
 
 ### Description
 
@@ -6773,8 +6631,7 @@ slow Number of bars for the calculation of the slow moving average
 ```
 
 
-Volume Profile
---------------
+##Volume Profile
 
 ### Description
 
@@ -6792,8 +6649,7 @@ Prices with especially high trading volume will have a more satiated accumulatio
 
 <img src=".//media/image126.png" width="454" height="484" />
 
-Volume Rate of Change (VROC)
-----------------------------
+##Volume Rate of Change (VROC)
 
 ### Description
 
@@ -6847,8 +6703,7 @@ smooth Number of Bars included in the calculation for the smoothing
 ```
 
 
-VolumeUpDown
-------------
+##VolumeUpDown
 
 ### Description
 
@@ -6893,8 +6748,7 @@ input Input data series for the indicator
 ```
 
 
-Volume Zones
-------------
+##Volume Zones
 
 ### Description
 
@@ -6905,8 +6759,7 @@ The indicator is intended for use with historical data only. To see volume chang
 
 ### Visualization
 
-Williams %R
------------
+##Williams %R
 
 ### Description
 
@@ -6967,8 +6820,7 @@ period Number of bars included in the calculations
 ```
 
 
-ZigZag
-------
+##ZigZag
 
 ### Description
 
@@ -7015,7 +6867,7 @@ A return value of 0 indicates that no high or low point has been found yet.
 |----------------|--------------------------------------------------------------------------------------------------------------------|
 | input          | Input data series for the indicator                                                                                |
 | deviationType  | The change in points or percent                                                                                    
-                                                                                                                                      
+
                   DeviationType.Points and                                                                                            
                   DeviationType.Percent                                                                                               |
 | deviationValue | Value of the deviation                                                                                             |
@@ -7036,133 +6888,3 @@ A return value of 0 indicates that no high or low point has been found yet.
 
 **Print**("The last low of the ZigZag indicator was at " + **ZigZag**(DeviationType.Percent, 1, **true**).ZigZagLow\[0\]);
 ```
-
-
-  [*Bars*]: #bars-candles
-  [*High*]: #high
-  [*Low*]: #low
-  [*Open*]: #open
-  [*Median*]: #median
-  [*Typical*]: #typical
-  [*Weighted*]: #weighted
-  [*Volume*]: #volume
-  [*Close*]: #close
-  [*VOL()*]: #volume-vol
-  [*http://blog.nobletrading.com/2009/12/median-price-typical-price-weighted.html*]: http://blog.nobletrading.com/2009/12/median-price-typical-price-weighted.html
-  [*divergence*]: http://vtadwiki.vtad.de/index.php/Divergenzen
-  [*http://vtadwiki.vtad.de/index.php/Accumulation\_Distribution\_Linie*]: http://vtadwiki.vtad.de/index.php/Accumulation_Distribution_Linie
-  [*http://www.investopedia.com/articles/trading/10/adaptive-price-zone-indicator-explained.asp*]: http://www.investopedia.com/articles/trading/10/adaptive-price-zone-indicator-explained.asp
-  [momentum oscillators]: http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:introduction_to_tech#momentum_oscillators
-  [*http://stockcharts.com/school/doku.php?id=chart\_school:technical\_indicators:aroon*]: http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:aroon
-  [**New Concepts in Technical Trading Systems**]: http://store.stockcharts.com/products/new-concepts-in-technical-trading-systems
-  [*RSI*]: http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:relative_strength_in
-  [*http://de.wikipedia.org/wiki/Average\_Directional\_Movement\_Index*]: http://de.wikipedia.org/wiki/Average_Directional_Movement_Index
-  [*volatility*]: http://stockcharts.com/school/doku.php?id=chart_school:glossary_v#volatility
-  [*http://vtadwiki.vtad.de/index.php/Average\_True\_Range*]: http://vtadwiki.vtad.de/index.php/Average_True_Range
-  [standard deviation]: http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:standard_deviation
-  [*BollingerMTF*]: #bollinger-mtf-multitimeframe
-  [*Bollinger Percent %B*]: #bollinger-percent-b-b
-  [*Bollinger Bands Width*]: #bollinger-band-width-bbwidth
-  [*http://vtadwiki.vtad.de/index.php/Bollinger\_B%C3%A4nder*]: http://vtadwiki.vtad.de/index.php/Bollinger_B%C3%A4nder
-  [*Bollinger Bands*]: #bollinger-bands
-  [*tradesignalonline*]: http://www.tradesignalonline.com/de/lexicon/view.aspx?id=Bollinger+Bands+%25B+Oszillator+%28BBO%29
-  [*BuySellVolume*]: #buysellvolume
-  [*BuySellPressure*]: #buysellpressure
-  [*http://en.wikipedia.org/wiki/Candlestick\_pattern*]: http://en.wikipedia.org/wiki/Candlestick_pattern
-  [*http://vtadwiki.vtad.de/index.php/Chaikin\_Money\_Flow*]: http://vtadwiki.vtad.de/index.php/Chaikin_Money_Flow
-  [*http://www.boersenwissen.de/content/content\_bin/cont\_bin18.html*]: http://www.boersenwissen.de/content/content_bin/cont_bin18.html
-  [*average*]: http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:moving_averages
-  [*http://vtadwiki.vtad.de/index.php/Commodity\_Channel\_Index*]: http://vtadwiki.vtad.de/index.php/Commodity_Channel_Index
-  [*http://www.eusdoni.de/index.php?option=com\_content&view=article&catid=13:eusdoni-version-3&id=42:darvas-boxen*]: http://www.eusdoni.de/index.php?option=com_content&view=article&catid=13:eusdoni-version-3&id=42:darvas-boxen
-  [*DMI*]: #directional-movement-index-dmi
-  [*http://vtadwiki.vtad.de/index.php/Donchian\_Channel*]: file:///C:\Users\User\AppData\Local\Microsoft\Windows\Temporary%20Internet%20Files\Content.Outlook\O6LR8XTV\Beschreibung
-  [*ADX*]: #average-directional-index-adx
-  [*TR*]: #average-true-range-atr
-  [*http://vtadwiki.vtad.de/index.php/DMI\_-\_Directional\_Movement\_Index*]: http://vtadwiki.vtad.de/index.php/DMI_-_Directional_Movement_Index
-  [*http://vtadwiki.vtad.de/index.php/Dynamic\_Momentum\_Index*]: http://vtadwiki.vtad.de/index.php/Dynamic_Momentum_Index
-  [Equivolume]: http://stockcharts.com/school/doku.php?id=chart_school:chart_analysis:equivolume
-  [*http://www.volumen-analyse.de*]: http://www.volumen-analyse.de
-  [*https://www.prorealtime.com/de/pdf/probacktest.pdf*]: https://www.prorealtime.com/de/pdf/probacktest.pdf
-  [*http://www.fmlabs.com/reference/default.htm?url=ForecastOscillator.htm*]: http://www.fmlabs.com/reference/default.htm?url=ForecastOscillator.htm
-  [*HighestHighPrice()*]: #highesthighprice
-  [*LowestLowPrice()*]: #lowestlowprice
-  [LowestLowIndex]: #lowestlowindex
-  [*HighestHighIndex()*]: #highesthighindex
-  [*http://de.wikipedia.org/wiki/Ichimoku*]: http://de.wikipedia.org/wiki/Ichimoku
-  [*http://www.forexabode.com/technical-analysis/ichimoku-cloud*]: http://www.forexabode.com/technical-analysis/ichimoku-cloud
-  [*http://stockcharts.com/school/doku.php?id=chart\_school:technical\_indicators:ichimoku\_cloud*]: http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:ichimoku_cloud
-  [*http://www.forexonlinegeheimnisse.com/ichimoku-kinko-hyo-teil-i\#top*]: http://www.forexonlinegeheimnisse.com/ichimoku-kinko-hyo-teil-i#top
-  [*http://www.forexonlinegeheimnisse.com/ichimoku-kinko-hyo-teil-ii-das-perfekte-kauf-oder-verkaufssignal\#top*]: http://www.forexonlinegeheimnisse.com/ichimoku-kinko-hyo-teil-ii-das-perfekte-kauf-oder-verkaufssignal#top
-  [*KeyReversalDown*]: #keyreversaldown
-  [*KeyReversalUpAtSMA*]: #keyreversalupatsma
-  [*KeyReversalDownAtSMA*]: #keyreversaldownatsma
-  [*KeyReversalUpAtEMA*]: #keyreversalupatema
-  [*KeyReversalDownAtEMA*]: #keyreversaldownatema
-  [*KeyReversalUp*]: #keyreversalup
-  [*R-Squared*]: #r-squared
-  [*LinRegSlope*]: #linregslope
-  [*LinRegIntercept*]: #linregintercept
-  [*http://www.vtad.de/sites/files/forschung/vtad\_Award\_2011\_Joachim\_Lenz\_Veroeffentlichung.pdf*]: http://www.vtad.de/sites/files/forschung/vtad_Award_2011_Joachim_Lenz_Veroeffentlichung.pdf
-  [*Linear Regression*]: #linear-regression
-  [momentum]: http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:introduction_to_tech#leading_indicators
-  [*http://vtadwiki.vtad.de/index.php/MACD*]: http://vtadwiki.vtad.de/index.php/MACD
-  [*ROC*]: #rate-of-change-roc
-  [*http://de.wikipedia.org/wiki/Momentum\_%28Chartanalyse%29*]: http://de.wikipedia.org/wiki/Momentum_%28Chartanalyse%29
-  [*http://vtadwiki.vtad.de/index.php/ Money\_Flow\_Index*]: http://vtadwiki.vtad.de/index.php/%20Money_Flow_Index
-  [*DEMA*]: #dema---double-exponential-moving-average
-  [*EMA*]: #ema---exponential-moving-average
-  [*HMA*]: #hma---hull-moving-average
-  [*KAMA*]: #kama---kaufmans-adaptive-moving-average
-  [*MAMA*]: #mama---mesa-adaptive-moving-average
-  [*SMA*]: #sma---simple-moving-average
-  [*TEMA*]: #tema---triple-exponential-moving-average
-  [*TMA*]: #tma---triangular-moving-average
-  [*TRIX*]: #trix---triple-exponential-moving-average
-  [*T3*]: #t3---triple-exponential-moving-average
-  [*VMA*]: #vma---variable-moving-average
-  [*VWMA*]: #vwma---volume-weighted-moving-average
-  [*ZLEMA*]: #zlema---zero-lag-exponential-moving-average
-  [*SmaMTF*]: #sma-mtf-multitimeframe
-  [*Moving Averages*]: #moving-averages
-  [*http://www.investor-verlag.de/boersenwissen/kama/*]: http://www.investor-verlag.de/boersenwissen/kama/
-  [*http://www.tradesignalonline.com/de/lexicon/view.aspx?id=MAMA+adaptive+Moving+Average*]: http://www.tradesignalonline.com/de/lexicon/view.aspx?id=MAMA+adaptive+Moving+Average
-  [*http://www.forex-trading-online.de/indikatoren/simple-moving-average-sma*]: http://www.forex-trading-online.de/indikatoren/simple-moving-average-sma
-  [*http://vtadwiki.vtad.de/index.php/SMA\#Average-Off-Berechnungsverfahren\_.28MMA.29*]: http://vtadwiki.vtad.de/index.php/SMA#Average-Off-Berechnungsverfahren_.28MMA.29
-  [*EmaMTF*]: #ema-mtf-multitimeframe
-  [*SuperTrend*]: #supertrend
-  [*http://www2.wealth-lab.com/wiki/SMMA.ashx*]: http://www2.wealth-lab.com/wiki/SMMA.ashx
-  [*http://www.tradesignalonline.com/de/lexicon/view.aspx?id=Moving+Average+Weighted+%28WMA%29*]: http://www.tradesignalonline.com/de/lexicon/view.aspx?id=Moving+Average+Weighted+%28WMA%29
-  [*http://www.fmlabs.com/reference/default.htm?url=ZeroLagExpMA.htm*]: http://www.fmlabs.com/reference/default.htm?url=ZeroLagExpMA.htm
-  [*NBarsDown*]: #nbarsdown
-  [*InsideBarsMT*]: #insidebarsmt
-  [*Das große Buch der Markttechnik*]: http://shop.der-haendler.com/index.php/cat/c3_Grosses-Fachbuch.html/XTCsid/0e59052f7ca53d62f5531e93f15c5e00
-  [*http://vtadwiki.vtad.de/index.php/Parabolic\_SAR*]: http://vtadwiki.vtad.de/index.php/Parabolic_SAR
-  [*http://en.wikipedia.org/wiki/Parabolic\_SAR*]: http://en.wikipedia.org/wiki/Parabolic_SAR
-  [*http://www.finanznachrichten.de/nachrichten-2008-01/9833653-was-sind-pivot-punkte-und-wie-kann-ich-sie-handeln-005.htm*]: http://www.finanznachrichten.de/nachrichten-2008-01/9833653-was-sind-pivot-punkte-und-wie-kann-ich-sie-handeln-005.htm
-  [*http://www.aktienboard.com/forum/f38/7-kapitel-pivot-points-t36428/*]: http://www.aktienboard.com/forum/f38/7-kapitel-pivot-points-t36428/
-  [*http://www.forexschule.com/schule/wie-man-mit-hilfe-von-pivot-punkten-handelt-50*]: http://www.forexschule.com/schule/wie-man-mit-hilfe-von-pivot-punkten-handelt-50
-  [*http://www.fmlabs.com/reference/default.htm?url=RangeIndicator.htm*]: http://www.fmlabs.com/reference/default.htm?url=RangeIndicator.htm
-  [*http://vtadwiki.vtad.de/index.php/RoC*]: http://vtadwiki.vtad.de/index.php/RoC
-  [*http://technische-analyse.eu/index.php?title=RSI*]: http://technische-analyse.eu/index.php?title=RSI
-  [*http://vtadwiki.vtad.de/index.php/Relative\_Volatility\_Index\_%28RVI%29*]: http://vtadwiki.vtad.de/index.php/Relative_Volatility_Index_%28RVI%29
-  [*http://www.blastchart.com/Community/IndicatorGuide/Indicators/LinearRegressionRSquared.aspx*]: http://www.blastchart.com/Community/IndicatorGuide/Indicators/LinearRegressionRSquared.aspx
-  [*http://vtadwiki.vtad.de/index.php/Standard\_Abweichung*]: http://vtadwiki.vtad.de/index.php/Standard_Abweichung
-  [*http://www.forexrealm.com/technical-analysis/technical-indicators/standard-error-bands.html*]: http://www.forexrealm.com/technical-analysis/technical-indicators/standard-error-bands.html
-  [*http://vtadwiki.vtad.de/index.php/Stochastik*]: http://vtadwiki.vtad.de/index.php/Stochastik
-  [*http://www.charttec.de/html/indikator\_stochastics.php*]: http://www.charttec.de/html/indikator_stochastics.php
-  [*http://www.investopedia.com/terms/s/stochrsi.asp\#axzz263tizhIG*]: http://www.investopedia.com/terms/s/stochrsi.asp#axzz263tizhIG
-  [*SMMA*]: #smma---smoothed-moving-average
-  [*http://finanzportal.wiwi.uni-saarland.de/tech/Kapitel5\_4.htm*]: http://finanzportal.wiwi.uni-saarland.de/tech/Kapitel5_4.htm
-  [*http://en.wikipedia.org/wiki/Time\_series*]: http://en.wikipedia.org/wiki/Time_series
-  [*PriorDayOHLC*]: #priordayohlc
-  [*DayLines*]: #daylines
-  [*Momentum*]: #momentum-mom
-  [*CurrentDayOHL*]: #currentdayohl
-  [*PriorDayOHLCext*]: #PriorDayOHLCext
-  [*http://en.wikipedia.org/wiki/True\_strength\_index*]: http://en.wikipedia.org/wiki/True_strength_index
-  [*http://de.wikipedia.org/wiki/Volumenanalyse*]: http://de.wikipedia.org/wiki/Volumenanalyse
-  [*VolumeZones*]: #volume-zones
-  [*http://www.shareholder24.de/boersensoftware-wiki/pages/viewpage.action?pageId=9207904*]: http://www.shareholder24.de/boersensoftware-wiki/pages/viewpage.action?pageId=9207904
-  [Stochastic Oscillator]: http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:stochastic_oscillato
-  [*http://www.broker-test.de/finanzwissen/technische-analyse/williams-percent-r/*]: http://www.broker-test.de/finanzwissen/technische-analyse/williams-percent-r/
-  [*http://www.robotrading.de/indikatoren/zig-zag-indikator-zeigt-hoch-und-tief-punkte-im-forex-markt*]: http://www.robotrading.de/indikatoren/zig-zag-indikator-zeigt-hoch-und-tief-punkte-im-forex-markt

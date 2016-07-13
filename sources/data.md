@@ -1,9 +1,9 @@
 
-#Data
+# Data
 
 In this context, data is understood as information loaded from outside sources as well as data sets originating from internally generated AgenaScripts.
- 
-##Bars (Candles)
+
+## Bars (Candles)
 
 ### Modus Operandi
 
@@ -31,7 +31,7 @@ The examples mentioned concern calculations that are performed at the end of a p
 If you want the values of the currently running and unfinished candles, you will need to set CalculateOnBarClose = false. As with the previous example, the currently running bar will receive the number 0 and so on.
 Close\[0\] will provide you with the most recent price transmitted by the data provider. All values of the bars High\[0\]…Low\[0\]… etc. are subject to change until the bar has been finalized and a new bar has begun. The only value that will definitely not change is Open\[0\].
 
-##Data Series
+## Data Series
 
 ### Description
 
@@ -40,27 +40,27 @@ The concept of data series is followed up consistently and continuously. All pri
 
 The following data series are available:
 
-[*Open*]
+[*Open*](#Open)
 
-[*High*]
+[*High*](#High)
 
-[*Low*]
+[*Low*](#Low)
 
-[*Close*]
+[*Close*](#Close)
 
-[*Median*]
+[*Median*](#Median)
 
-[*Typical*]
+[*Typical*](#Typical)
 
-[*Weighted*]
+[*Weighted*](#Weighted)
 
 Time Times
 
 TimeFrame TimeFrames
 
-[*Volume*]
+[*Volume*](#Volume)
 
-#Open
+## Open
 
 ### Description
 
@@ -94,8 +94,7 @@ Print("SMA(14) Calculated using the opening prices: " + Instrument.Round2TickSiz
 ```
 
 
-
-##High
+## High
 
 
 ### Description
@@ -130,7 +129,7 @@ Print("SMA(14) calculated using the high values: " + Instrument.Round2TickSize(S
 
 
 
-##Low
+## Low
 
 
 ### Description
@@ -204,7 +203,7 @@ Print("SMA(14) calculated using the closing prices: " + Instrument.Round2TickSiz
 
 
 
-##Volume
+## Volume
 
 
 ### Description
@@ -243,7 +242,7 @@ Print("SMA(14) calculated using the volume: " + Instrument.Round2TickSize(SMA(Vo
 
 
 
-##Median
+## Median
 
 
 ### Description
@@ -285,7 +284,7 @@ Print("SMA(14) calculated using the median prices: " + Instrument.Round2TickSize
 ```
 
 
-##Typical
+## Typical
 
 
 ### Description
@@ -326,7 +325,7 @@ Print(Time[5] + " " + Typical[5]);
 Print("SMA(14)calculated using the typical prices: " + Instrument.Round2TickSize(SMA(Typical, 14)[0]));
 ```
 
-##Weighted
+## Weighted
 
 ### Description
 
@@ -363,5 +362,3 @@ Print(Time[5] + " " + Weighted[5]);
 // Current value for the SMA(14) using the weighted price
 Print("SMA(14) calculated using the weighted price: " + Instrument.Round2TickSize(SMA(Weighted, 14)[0]));
 ```
-
-

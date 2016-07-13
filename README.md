@@ -42,3 +42,6 @@ We have created a branch called *gh-pages* and all data from this branch will be
 Commit now your changes into the master repository, sync your repository and *change locally to the branch gh-pages*. Update all changes from master into the branch using the GitHub Client function *upate from master*.
 
 Congrats! We are done. All changes are now online on GitHub Pages.
+
+###Finally
+mkdocs is creating wrong links for images, so we need to change this manually by **replacing ./media/ to ../media/**.

@@ -11,7 +11,7 @@ The tutorials in the sources directory of this repository, are built with mkdocs
 
 ###Editor
 We recommend the text editor [Atom](https://atom.io)
-![Atom](./images/logo_atom.png)
+![Atom](./sources/images/logo_atom.png)
 
 ###Installation
 The following things are prerequisites:

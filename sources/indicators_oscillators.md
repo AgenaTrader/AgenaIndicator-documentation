@@ -575,12 +575,14 @@ BBWidth(double numStdDev, int period)
 BBWidth(IDataSeries input, double numStdDev, int period)
 BBWidth(double numStdDev, int period)[int barsAgo]
 BBWidth(IDataSeries input, double numStdDev, int period)[int barsAgo]
-For the value of the upper Band Width
+
+//For the value of the upper Band Width
 BBWidth(double numStdDev, int period).BandWidth
 BBWidth(IDataSeries input, double numStdDev, int period).BandWidth
 BBWidth(double numStdDev, int period).BandWidth[int barsAgo]
 BBWidth(IDataSeries input, double numStdDev, int period).BandWidth[int barsAgo]
-For the value of the trigger line (threshold)
+
+//For the value of the trigger line (threshold)
 BBWidth(double numStdDev, int period).Threshold
 BBWidth(IDataSeries input, double numStdDev, int period).Threshold
 BBWidth(double numStdDev, int period).Threshold[int barsAgo]
@@ -647,10 +649,12 @@ See [*BuySellVolume*].
 ```cs
 BuySellPressure()
 BuySellPressure(IDataSeries input)
-For the values of buy pressure
+
+//For the values of buy pressure
 BuySellPressure().BuyPressure[int barsAgo]
 BuySellPressure(IDataSeries input).BuyPressure[int barsAgo]
-For the values of sell Pressure
+
+//For the values of sell Pressure
 BuySellPressure().SellPressure[int barsAgo]
 BuySellPressure(IDataSeries input).SellPressure[int barsAgo]
 ```
@@ -662,8 +666,8 @@ BuySellPressure(IDataSeries input).SellPressure[int barsAgo]
 
 When using this method with an index (e.g. **BuySellPressure**().BuyPressure\[**int** barsAgo\] ), the value of the indicator will be outputted for the referenced bar.
 
-**Caution:
-**If BuySellPressure is used with EoD data, the value 50 will always be outputted.
+**Caution:**
+**If BuySellPressure is used with EoD data, the value 50 will always be outputted.**
 - BuySellPressure().SellPressure\[0\] = 50
 - BuySellPressure().SellPressure\[0\] = 50
 
@@ -680,15 +684,16 @@ input Input data series for the indicator
 ```cs
 protected override void Initialize()
 {
-BuySellPressure().CalculateOnBarClose = false;
+  BuySellPressure().CalculateOnBarClose = false;
 }
+
 protected override void OnBarUpdate()
 {
-if (Close[0] > DonchianChannel(20).Upper[5])
-{
-if (Historical || BuySellPressure().BuyPressure[0] > 70)
-EnterLong();
-}
+  if (Close[0] > DonchianChannel(20).Upper[5])
+  {
+    if (Historical || BuySellPressure().BuyPressure[0] > 70)
+    EnterLong();
+  }
 }
 ```
 
@@ -705,12 +710,10 @@ Similar conditions as with the [*BuySellPressure*] apply.
 
 ### Usage
 
-
 ```cs
 BuySellVolume BuySellVolume()
 BuySellVolume BuySellVolume(IDataSeries input)
 ```
-
 
 ### Return value
 
@@ -827,10 +830,10 @@ When using this method with an index (e.g. **CandleStickPattern**(...)\[**int** 
 <img src="./media/image16.png" width="427" height="385" />
 
 ### Example
-
-**if** (**CandelStickPattern**(ChartPattern.ShootingStar, 5)\[0\] == 1)
-
-**Print**("Pattern ShootingStar found!");
+```cs
+if (CandelStickPattern(ChartPattern.ShootingStar, 5)[0] == 1)
+Print("Pattern ShootingStar found!");
+```
 
 ##ChaikinMoneyFlow (CMF)
 
@@ -873,10 +876,10 @@ period Number of bars included in the calculation
 <img src="./media/image17.png" width="490" height="404" />
 
 ### Example
-
+```cs
 //Output for the Money Flow value
-
-**Print**("The Chaikin Money Flow value is: " + **ChaikinMoneyFlow**(21)\[0\]);
+Print("The Chaikin Money Flow value is: " + ChaikinMoneyFlow(21)[0]);
+```
 
 ##Chaikin Oscillator
 
@@ -977,8 +980,7 @@ The CMO is a technical momentum indicator invented by the technical analyst Tush
 
 ### Interpretation
 
-**
-**The security is deemed overbought when the momentum oscillator is above +50 and oversold when it is below -50. Many technical traders add a nine-period moving average to this oscillator to act as a signal line. Bullish signals are generated when the oscillator crosses above the signal, and bearish signals are generated when the oscillator crosses down through the signal.
+**The security is deemed overbought when the momentum oscillator is above +50 and oversold when it is below -50. Many technical traders add a nine-period moving average to this oscillator to act as a signal line. Bullish signals are generated when the oscillator crosses above the signal, and bearish signals are generated when the oscillator crosses down through the signal.**
 
 ### Further information
 
@@ -1037,7 +1039,6 @@ As a [*leading indicator*][momentum oscillators], chartists can look for overbo
 VTAD: [*http://vtadwiki.vtad.de/index.php/Commodity\_Channel\_Index*]
 
 ### Usage
-
 ```cs
 CCI(int period)
 CCI(IDataSeries input, int period)
@@ -1094,10 +1095,12 @@ Here you can read about a trading system based on the Darvas boxes. (German only
 ```cs
 Darvas()
 Darvas(IDataSeries input)
-For the upper Box boundary
+
+//For the upper Box boundary
 Darvas().Upper[int barsAgo]
 Darvas(IDataSeries input).Upper[int barsAgo]
-Returns the lower value
+
+//Returns the lower value
 Darvas().Lower[int barsAgo]
 Darvas(IDataSeries input).Lower[int barsAgo]
 ```
@@ -1197,13 +1200,16 @@ VTAD: [*http://vtadwiki.vtad.de/index.php/Donchian\_Channel*]
 ```cs
 DonchianChannel(int period)
 DonchianChannel(IDataSeries input, int period)
-Upper band
+
+//Upper band
 DonchianChannel(int period).Upper[int barsAgo]
 DonchianChannel(IDataSeries input, int period).Upper[int barsAgo]
-Middle band
+
+//Middle band
 DonchianChannel(int period)[int barsAgo]
 DonchianChannel(IDataSeries input, int period)[int barsAgo]
-Lower band
+
+//Lower band
 DonchianChannel(int period).Lower[int barsAgo]
 DonchianChannel(IDataSeries input, int period).Lower[int barsAgo]
 ```
@@ -1315,7 +1321,8 @@ DoubleStochastics(int period, DoubleStochasticsMode mode, int EMA-Period1, int E
 DoubleStochastics(IDataSeries input, int period, DoubleStochasticsMode mode, int EMA-Period1, int EMA-Period2)
 DoubleStochastics(int period, DoubleStochasticsMode mode, int EMA-Period1, int EMA-Period2)[int barsAgo]
 DoubleStochastics(IDataSeries input, int period, DoubleStochasticsMode mode, int EMA-Period1, int EMA-Period2)[int barsAgo]
-For the value of %K
+
+//For the value of %K
 DoubleStochastics(int period).K[int barsAgo]
 DoubleStochastics(IDataSeries input, int period).K[int barsAgo]
 DoubleStochastics(int period, DoubleStochasticsMode mode, int EMA-Period1).K[int barsAgo]
@@ -1548,6 +1555,7 @@ FOSC(IDataSeries input, int period)[int barsAgo]
 ```cs
 //Output for the Forecast Oscillator
 Print("The current value for the Forecast Oscillator is: " + FOSC(14)[0]);
+
 //Determining the future market direction
 if (FOSC(14)[0] > 0)
 Print("The FOSC is bigger than zero, which indicates rising price movements.");
@@ -1560,8 +1568,7 @@ Print("The FOSC is bigger than zero, which indicates rising price movements.");
 
 Highest High Index prints the index of the bars with the highest high within a predefined number of periods. It differentiates from the HighestBar() function in that it can be visualized within the chart.
 
-See [*HighestHighPrice()*], [*LowestLowPrice()*], *[LowestLowIndex]()*,
-*HighestBar()*, *LowestBar()*.
+See [*HighestHighPrice()*], [*LowestLowPrice()*], [*LowestLowIndex]()*, [*HighestBar()*], [*LowestBar()*].
 
 ### Usage
 
@@ -1601,8 +1608,7 @@ Highest High Price displays the highest high reached within a specified number o
 
 In contrast to the *HighestBar()*, this is an indicator that can be displayed within the chart.
 
-See [*HighestHighIndex()*], [*LowestLowPrice()*], *[LowestLowIndex]()*,
-*HighestBar()*, *LowestBar()*.
+See [*HighestHighIndex()*], [*LowestLowPrice()*], [*LowestLowIndex*](), [*HighestBar()*], [*LowestBar()*].
 
 ### Usage
 
@@ -1637,23 +1643,23 @@ Print("The highest high for the last 14 bars is " + HighestHighPrice(14)[0]);
 
 The Ichimoku Cloud, also known as Ichimoku Kinko Hyo, is a versatile indicator that defines support and resistance, identifies trend direction, gauges momentum and provides trading signals. Ichimoku Kinko Hyo translates into "one look equilibrium chart". With one look, chartists can identify the trend and look for potential signals within that trend. The indicator was developed by Goichi Hosoda, a journalist, and published in his 1969 book. Even though the Ichimoku Cloud may seem complicated when viewed on the price chart, it is actually a straight-forward indicator that is very usable. It was, after all, created by a journalist, not a rocket scientist! Moreover, the concepts are easy to understand and the signals are well-defined.
 
-**1. Tenkan Sen – conversion line
-**This is the median value of the 9-period high and the 9-period low.
+**1. Tenkan Sen – conversion line**
+This is the median value of the 9-period high and the 9-period low.
 
-**2. Kinjun Sen – the baseline
-**This is the midpoint of the 26-period high and low.
+**2. Kinjun Sen – the baseline**
+This is the midpoint of the 26-period high and low.
 
 **3. Chikou Span – lagging span**
 This is the closing price plotted 26 days in the past.
 
-**4. Senkou Span A – the first leading line
-**This is the midpoint between the conversion line and the baseline. The leading Span A forms one of the two cloud boundaries. It is referred to as leading because it is plotted 26 periods in the future and thus forms the faster cloud boundary.
+**4. Senkou Span A – the first leading line**
+This is the midpoint between the conversion line and the baseline. The leading Span A forms one of the two cloud boundaries. It is referred to as leading because it is plotted 26 periods in the future and thus forms the faster cloud boundary.
 
-**5. Senkou Span B – the second leading line
-**This is the midpoint of the 52-day high-low range projected 26 periods into the future, and forms the slower cloud boundary.
+**5. Senkou Span B – the second leading line**
+This is the midpoint of the 52-day high-low range projected 26 periods into the future, and forms the slower cloud boundary.
 
-**Kumo – cloud
-**The cloud (Kumo) is the area between Senkou Span A and Senkou Span B. This area is highlighted in color and thus forms a cloud shape.
+**Kumo – cloud**
+The cloud (Kumo) is the area between Senkou Span A and Senkou Span B. This area is highlighted in color and thus forms a cloud shape.
 
 **Caution:**
 
@@ -1679,19 +1685,24 @@ Similarly to the smoothing averages, the Ichimoku indicator will create a bullis
 ```cs
 IchimokuCloud(int periodFast, int periodMedium, int periodSlow)
 IchimokuCloud(IDataSeries input, int periodFast, int periodMedium, int periodSlow)
-TenkanSen
+
+//TenkanSen
 IchimokuCloud(int periodFast, int periodMedium, int periodSlow).TenkanSen[int barsAgo]
 IchimokuCloud(IDataSeries input, int periodFast, int periodMedium, int periodSlow).TenkanSen[int barsAgo]
-KijunSen
+
+//KijunSen
 IchimokuCloud(int periodFast, int periodMedium, int periodSlow).KijunSen[int barsAgo]
 IchimokuCloud(IDataSeries input, int periodFast, int periodMedium, int periodSlow).KijunSen[int barsAgo]
-ChikouSpan
+
+//ChikouSpan
 IchimokuCloud(int periodFast, int periodMedium, int periodSlow).ChikouSpan[int barsAgo]
 IchimokuCloud(IDataSeries input, int periodFast, int periodMedium, int periodSlow).ChikouSpan[int barsAgo]
-SenkouSpanA
+
+//SenkouSpanA
 IchimokuCloud(int periodFast, int periodMedium, int periodSlow).SenkouSpanA[int barsAgo]
 IchimokuCloud(IDataSeries input, int periodFast, int periodMedium, int periodSlow).SenkouSpanA[int barsAgo]
-SenkouSpanB
+
+//SenkouSpanB
 IchimokuCloud(int periodFast, int periodMedium, int periodSlow).SenkouSpanB[int barsAgo]
 IchimokuCloud(IDataSeries input, int periodFast, int periodMedium, int periodSlow).SenkouSpanB[int barsAgo]
 ```
@@ -1819,13 +1830,16 @@ VTAD: http://vtadwiki.vtad.de/index.php/Keltner\_Channel
 ```cs
 KeltnerChannel(double offsetMutiplier, int period)
 KeltnerChannel(IDataSeries input, double offsetMutiplier, int period)
-Returns midline value
+
+//Returns midline value
 KeltnerChannel(double offsetMutiplier, int period)[int barsAgo]
 KeltnerChannel(IDataSeries input, double offsetMutiplier, int period)[int barsAgo]
-Returns upper band value
+
+//Returns upper band value
 KeltnerChannel(double offsetMutiplier, int period).Upper[int barsAgo]
 KeltnerChannel(IDataSeries input, double offsetMutiplier, int period).Upper[int barsAgo]
-Returns lower band value
+
+//Returns lower band value
 KeltnerChannel(double offsetMutiplier, int period).Lower[int barsAgo]
 KeltnerChannel(IDataSeries input, double offsetMutiplier, int period).Lower[int barsAgo]
 ```
@@ -1904,12 +1918,11 @@ KeyReversalUp(IDataSeries input, int period)[int barsAgo]
 
 
 ### Example
-
+```cs
 // Search for an entry opportunity (longs)
-
-**if** (**KeyReversalUp**(10)\[0\] == 1)
-
-**Print**("A long reversal formation has occurred.");
+if (KeyReversalUp(10)[0] == 1)
+Print("A long reversal formation has occurred.");
+```
 
 ##KeyReversalDown
 
@@ -2378,13 +2391,16 @@ VTAD: [*http://vtadwiki.vtad.de/index.php/MACD*]
 ```cs
 MACD(int fast, int slow, int smooth)
 MACD(IDataSeries input, int fast, int slow, int smooth)
-For the value of the MACD line
+
+//For the value of the MACD line
 MACD(int fast, int slow, int smooth)[int barsAgo]
 MACD(IDataSeries input, int fast, int slow, int smooth)[int barsAgo]
-For the value of the signal line
+
+//For the value of the signal line
 MACD(int fast, int slow, int smooth).Avg[int barsAgo]
 MACD(IDataSeries input, int fast, int slow, int smooth).Avg[int barsAgo]
-For the difference between the MACD and the signal line
+
+//For the difference between the MACD and the signal line
 MACD(int fast, int slow, int smooth).Diff[int barsAgo]
 MACD(IDataSeries input, int fast, int slow, int smooth).Diff[int barsAgo]
 ```
@@ -2437,13 +2453,16 @@ Sometimes a strong trend does not take hold after an envelope break and prices m
 ```cs
 MAEnvelopes(double envelopePercentage, MAEnvelopesMAType maType, int period)
 MAEnvelopes(IDataSeries input, double envelopePercentage, MAEnvelopesMAType maType, int period)
-For the upper band
+
+//For the upper band
 MAEnvelopes(double envelopePercentage, MAEnvelopesMAType maType, int period).Upper[int barsAgo]
 MAEnvelopes(IDataSeries input, double envelopePercentage, MAEnvelopesMAType maType, int period).Upper[int barsAgo]
-For the middle band
+
+//For the middle band
 MAEnvelopes(double envelopePercentage, MAEnvelopesMAType maType, int period).Middle[int barsAgo]
 MAEnvelopes(IDataSeries input, double envelopePercentage, MAEnvelopesMAType maType, int period).Middle[int barsAgo]
-For the lower band
+
+//For the lower band
 MAEnvelopes(double envelopePercentage, MAEnvelopesMAType maType, int period).Lower[int barsAgo]
 MAEnvelopes(IDataSeries input, double envelopePercentage, MAEnvelopesMAType maType, int period).Lower[int barsAgo]
 ```
@@ -2480,8 +2499,10 @@ maType Type of moving average used, possible choices are:
 ```cs
 //Value output for the upper band
 Print("Upper band of the MA Envelope: " + MAEnvelopes(1.5, MAEnvelopesMAType.SMA, 14).Upper[0]);
+
 //Value output for the middle band
 Print("Middle band of the MA Envelope: " + MAEnvelopes(1.5, MAEnvelopesMAType.SMA, 14).Middle[0]);
+
 //Value output for the lower band
 Print("Lower band of the MA Envelope: " + MAEnvelopes(1.5, MAEnvelopesMAType.SMA, 14).Lower[0]);
 ```
@@ -2584,7 +2605,7 @@ See [*ROC*].
 
 ### Further information
 
-<Wikipedia:> [*http://de.wikipedia.org/wiki/Momentum\_%28Chartanalyse%29*]
+[*http://de.wikipedia.org/wiki/Momentum\_%28Chartanalyse%29*]
 
 ### Usage
 
@@ -2953,8 +2974,8 @@ Print("The current value of the KAMA is " + KAMA(2,10,30)[0]);
 The MAMA indicator is an automatically adapting moving average whose period length is determined via various complex calculations.
 This indicator originates from publications by John Ehlers and is relatively hard to understand. Ehlers calculates cycles for the price movements to determine length and intensity of individual trend phases. Based on the length of the cycles, the weighting factor for the moving average can be established in varying ways.
 
-**FAMA
-**This indicator is a second line that is known as FAMA in various publications. This line is similar to the underlying exponential moving average and acts as a trigger line.
+**FAMA**
+This indicator is a second line that is known as FAMA in various publications. This line is similar to the underlying exponential moving average and acts as a trigger line.
 
 ### Interpretation
 
@@ -2973,7 +2994,8 @@ MAMA(double fastLimit, double slowLimit)
 MAMA(IDataSeries input, double fastLimit, double slowLimit)
 MAMA(double fastLimit, double slowLimit)[int barsAgo]
 MAMA(IDataSeries input, double fastLimit, double slowLimit)[int barsAgo]
-Value of the Following Adaptive Moving Average (FAMA)
+
+//Value of the Following Adaptive Moving Average (FAMA)
 MAMA(double fastLimit, double slowLimit).Fama[int barsAgo]
 MAMA(IDataSeries input, double fastLimit, double slowLimit).Fama[int barsAgo]
 ```
@@ -3170,8 +3192,6 @@ Print("The current TEMA value is " + TEMA(14)[0]);
 
 ##TMA - Triangular Moving Average
 
-###
-
 ### Description
 
 The Triangular Moving Average is a specifically weighted average with a special smoothing component. The weightings are not linear but are assigned a triangular pattern. The weighting for a 7-period average would thus be 1,2,3,4,3,2,1. The median value of the time series will be given more weight, and the newest i.e. oldest data less.
@@ -3313,8 +3333,8 @@ The Variable Moving Average is an EMA that automatically applies smoothing to th
 
 By automatically regulating the smoothing constant, the VMA attempts to eliminate the drawbacks of other moving averages. Thus the VMA can be used for most of the market conditions, and in some cases is even better than other averages.
 
-**Caution
-**The VMA is not to be confused with the Volume Moving Average (VolMA)!
+**Caution**
+The VMA is not to be confused with the Volume Moving Average (VolMA)!
 
 ### Usage
 
@@ -3740,21 +3760,21 @@ occurrence the occurrences of the youngest to the oldest point
 ```cs
 private void PrintOutTrendProperties(int trendSize)
 {
-// Reverse order of prints fills output window in correct order
-Print("");
-Print("valid P3 date: " + P123(trendSize).ValidP3DateTime);
-Print("valid P3 price: " + P123(trendSize).ValidP3Price);
-Print("temp P3 date: " + P123(trendSize).TempP3DateTime);
-Print("temp P3 price: " + P123(trendSize).TempP3Price);
-Print("P2 date: " + P123(trendSize).P2DateTime);
-Print("P2 price: " + P123(trendSize).P2Price);
-Print("P1 date: " + P123(trendSize).P1DateTime);
-Print("P1 price: " + P123(trendSize).P1Price);
-Print("last point date: " + P123(trendSize).LastPointDateTime);
-Print("last point price: " + P123(trendSize).LastPointPrice);
-Print("last point: " + P123(trendSize).LastPoint);
-Print("is trend valid: " + P123(trendSize).IsTrendValid);
-Print("trend direction: " + P123(trendSize).TrendDirection);
+  // Reverse order of prints fills output window in correct order
+  Print("");
+  Print("valid P3 date: " + P123(trendSize).ValidP3DateTime);
+  Print("valid P3 price: " + P123(trendSize).ValidP3Price);
+  Print("temp P3 date: " + P123(trendSize).TempP3DateTime);
+  Print("temp P3 price: " + P123(trendSize).TempP3Price);
+  Print("P2 date: " + P123(trendSize).P2DateTime);
+  Print("P2 price: " + P123(trendSize).P2Price);
+  Print("P1 date: " + P123(trendSize).P1DateTime);
+  Print("P1 price: " + P123(trendSize).P1Price);
+  Print("last point date: " + P123(trendSize).LastPointDateTime);
+  Print("last point price: " + P123(trendSize).LastPointPrice);
+  Print("last point: " + P123(trendSize).LastPoint);
+  Print("is trend valid: " + P123(trendSize).IsTrendValid);
+  Print("trend direction: " + P123(trendSize).TrendDirection);
 }
 ```
 
@@ -3835,7 +3855,8 @@ PPO(int fast, int slow, int smooth)
 PPO(IDataSeries input, int fast, int slow, int smooth)
 PPO(int fast, int slow, int smooth)[int barsAgo]
 PPO(IDataSeries input, int fast, int slow, int smooth)[int barsAgo]
-For the smoothed value
+
+//For the smoothed value
 PPO(int fast, int slow, int smooth).Smoothed[int barsAgo]
 PPO(IDataSeries input, int fast, int slow, int smooth).Smoothed[int barsAgo]
 ```
@@ -3866,6 +3887,7 @@ smooth Number of bars for the calculation of the EMA signal line
 ```cs
 //Output for the PPO
 Print("The current value for the PPO is " + PPO(12, 26, 9)[0]);
+
 //Output for the value of the PPO smoothed
 Print("The current value for the PPO is " + PPO(12, 26, 9).Smoothed[0]);
 ```
@@ -3891,10 +3913,12 @@ The Percent Envelope should never be used to make decisions based solely on the 
 ```cs
 PercentEnvelopes(double percent)
 PercentEnvelopes(IDataSeries input, double percent)
-For the upper band
+
+//For the upper band
 PercentEnvelopes(double percent).UpperPercentBand[int barsAgo]
 PercentEnvelopes(IDataSeries input, double percent).UpperPercentBand[int barsAgo]
-For the lower band
+
+//For the lower band
 PercentEnvelopes(double percent).LowerPercentBand[int barsAgo]
 PercentEnvelopes(IDataSeries input, double percent).LowerPercentBand[int barsAgo]
 ```
@@ -3921,6 +3945,7 @@ percent Difference in % for the bands (from the input value)
 ```cs
 //Output for the upper band
 Print("Value of the upper percent band is: " + PercentEnvelopes(3).UpperPercentBand[0]);
+
 //Output for the lower band
 Print("Value of the lower percent band is: " + PercentEnvelopes(3).LowerPercentBand[0]);
 ```
@@ -3981,24 +4006,16 @@ PivotPoints(PivotPointsMode.Classic).S3[int barsAgo]
 |-----------------|-----------------------------------------------------------------------------------|
 | input           | Input data series for the indicator                                               |
 | PivotPointsMode | Calculatory method                                                                
-
                    PivotPointsMode.Classic                                                            
-
                    PivotPointsMode.Floor                                                              
-
                    PivotPointsMode.Woodie                                                             
-
                    PivotPointsMode.Camarilla                                                          
-
                    PivotPointsMode.Fibonacci                                                          
-
                    Default: floor                                                                     |
 | LineWidth       | Default: 1                                                                        |
 | ShowPrices      | Shows prices next to the lines                                                    
-
                    Default: false                                                                     |
 | DaysBack        | The number of historical periods to be included in the display of the pivot lines
-
                    Default: 0                                                                         |
 | RColor          | Resistance line color                                                             |
 | PPColor         | Pivot line color                                                                  |
@@ -4146,7 +4163,7 @@ Print("The current value for the PFE is: " + PFE(20)[0]);
 ```
 
 
-##Price Oscillator
+## Price Oscillator
 
 ### Description
 
@@ -4227,6 +4244,7 @@ input Input data series for the indicator
 ```cs
 //Output for the value of the range
 Print("The current bar has a range of: " + Range()[0]);
+
 //Identical output
 Print("The current bar has a range of: " + High[0] - Low[0]);
 ```
@@ -4408,7 +4426,8 @@ RSI(int period, int smooth)
 RSI(IDataSeries input, int period, int smooth)
 RSI(int period, int smooth)[int barsAgo]
 RSI(IDataSeries input, int period, int smooth)[int barsAgo]
-For the average value
+
+//For the average value
 RSI(int period, int smooth).Avg[int barsAgo]
 RSI(IDataSeries input, int period, int smooth).Avg[int barsAgo]
 ```
@@ -4437,6 +4456,7 @@ smooth Number of periods for the smoothing
 ```cs
 //Output for the RSI
 Print("The current value for the RSI is: " + RSI(14, 3)[0]);
+
 //Output for the average line
 Print("The current value for the AVG line is: " + RSI(14, 3).Avg[0]);
 ```
@@ -4718,10 +4738,12 @@ StdError(int period)
 StdError(IDataSeries input, int period)
 StdError(int period)[int barsAgo]
 StdError(IDataSeries input, int period)[int barsAgo]
-Upper band
+
+//Upper band
 StdError(int period).Upper[int barsAgo]
 StdError(IDataSeries input, int period).Upper[int barsAgo]
-Lower band
+
+//Lower band
 StdError(int period).Lower[int barsAgo]
 StdError(IDataSeries input, int period).Lower[int barsAgo]
 ```
@@ -4748,8 +4770,10 @@ period Number of bars included in the calculations
 ```cs
 //Output for the values of the middle line
 Print("The middle line is currently at: " + StdError(21)[0]);
+
 //Output for the lower band
 Print("The lower band of the standard error is currently at: " + StdError(21).Lower[0]);
+
 //output for the upper band
 Print("The upper band of the standard error is currently at: " + StdError(21).Upper[0]);
 ```
@@ -4764,11 +4788,11 @@ The stochastic indicator is based on the observation that in an uptrend, the clo
 The stochastic indicator consists of two exponential Average Lines (%K and %D), both of which range between 0 and 100.
 There are two types of stochastic: the classic slow stochastic and the fast stochastic.
 
-**Fast stochastic:
-**The %D line is the smoothing average of the %K line
+**Fast stochastic:**
+The %D line is the smoothing average of the %K line
 
-**Slow stochastic:
-**The %D is the basis on which the smoothing average is calculated. The slow stochastic smoothes the fast stochastic, thus stabilizing the oscillator.
+**Slow stochastic:**
+The %D is the basis on which the smoothing average is calculated. The slow stochastic smoothes the fast stochastic, thus stabilizing the oscillator.
 
 ### Interpretation
 
@@ -4783,10 +4807,12 @@ VTAD: [*http://vtadwiki.vtad.de/index.php/Stochastik*]
 ```cs
 Stochastics(int periodD, int periodK, int smooth)
 Stochastics(IDataSeries input, int periodD, int periodK, int smooth)
-For the %D line
+
+//For the %D line
 Stochastics(int periodD, int periodK, int smooth).D[int barsAgo]
 Stochastics(IDataSeries input, int periodD, int periodK, int smooth).D[int barsAgo]
-For the %K line
+
+//For the %K line
 Stochastics(int periodD, int periodK, int smooth).K[int barsAgo]
 Stochastics(IDataSeries input, int periodD, int periodK, int smooth).K[int barsAgo]
 ```
@@ -4817,6 +4843,7 @@ smooth Number of periods for the smoothing of %D
 ```cs
 //Output for the %K line
 Print("The stochastic line %K is currently at: " + Stochastics(3, 14, 7).K[0]);
+
 //Output for the %D line
 Print("The stochastic line %D is currently at: " + Stochastics(3, 14, 7).D[0]);
 ```
@@ -4843,10 +4870,12 @@ VTAD: [*http://vtadwiki.vtad.de/index.php/Stochastik*]
 ```cs
 StochasticsFast(int periodD, int periodK)
 StochasticsFast(IDataSeries input, int periodD, int periodK)
-For the %D line
+
+//For the %D line
 StochasticsFast(int periodD, int periodK).D[int barsAgo]
 StochasticsFast(IDataSeries input, int periodD, int periodK).D[int barsAgo]
-For the %K line
+
+//For the %K line
 StochasticsFast(int periodD, int periodK).K[int barsAgo]
 StochasticsFast(IDataSeries input, int periodD, int periodK).K[int barsAgo]
 ```
@@ -4875,6 +4904,7 @@ periodK Number of periods included in the calculation of %K
 ```cs
 //Output for the %K line of the fast stochastic
 Print("The stochastic line %K is currently at: " + StochasticsFast(3, 14).K[0]);
+
 //Output %D line
 Print("The stochastic line %D is currently at: " + StochasticsFast(3, 14).D[0]);
 ```
@@ -4985,10 +5015,12 @@ SuperTrend(SuperTrendMode stMode, int length, double multiplier, SuperTrendMATyp
 SuperTrend(IDataSeries input, SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth)
 SuperTrend(SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth)[int barsAgo]
 SuperTrend(IDataSeries input, SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth)[int barsAgo]
-For the values of the uptrend:
+
+//For the values of the uptrend:
 SuperTrend(SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth).UpTrend[int barsAgo]
 SuperTrend(IDataSeries input, SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth).UpTrend[int barsAgo]
-For the values of the downtrend:
+
+//For the values of the downtrend:
 SuperTrend(SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth).DownTrend[int barsAgo]
 SuperTrend(IDataSeries input, SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth).DownTrend[int barsAgo]
 ```
@@ -5006,45 +5038,28 @@ When using this method with an index (e.g. **SuperTrend**(...).UpTrend\[**int** 
 |------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | input      | Input data series for the indicator                                                                                                                                    |
 | maType     | For the calculation of the MA, the following methods can be used:                                                                                                      
-
               SuperTrendMAType.HMA                                                                                                                                                    
-
               SuperTrendMAType.SMA                                                                                                                                                    
-
               SuperTrendMAType.SMMA                                                                                                                                                   
-
               SuperTrendMAType.TEMA                                                                                                                                                   
-
               SuperTrendMAType.TMA                                                                                                                                                    
-
               SuperTrendMAType.VMA                                                                                                                                                    
-
               SuperTrendMAType.VWMA                                                                                                                                                   
-
               SuperTrendMAType.WMA                                                                                                                                                    
-
               Also see: [*HMA*], [*SMA*], [*SMMA*], [*TEMA*], [*TMA*], [*VMA*], [*VWMA*], [*WMA*][*VMA*].                                                                             
-
               Default: HMA                                                                                                                                                            |
 | multiplier | This is a multiplier for the internal calculation of the offset. This is only used when the method is set to ATR and DualThrust.                                       
               (In the adaptive mode, the multiplier uses the Homodyne Discriminator)                                                                                                  
-
               Default: 2.618                                                                                                                                                          |
 | Period     | Number of bars used for the calculation of the moving average                                                                                                          
-
               Default: 14                                                                                                                                                             |
 | smooth     | Values for additional smoothing                                                                                                                                        
               If no smoothing is necessary, this value can be set to 1                                                                                                                
-
               Default: 14                                                                                                                                                             |
 | stMode     | The following methods can be chosen:                                                                                                                                   
-
               SuperTrendMode.ATR,                                                                                                                                                     
-
               SuperTrendMode.DualThrust,                                                                                                                                              
-
               SuperTrendMode.Adaptive                                                                                                                                                 
-
               The Period Parameter will have a huge influence when the DualThrustMode is selected. The smaller the period, the tighter the indicator will follow price developments.  
               Default: SuperTrendMode.ATR                                                                                                                                             |
 
@@ -5112,10 +5127,11 @@ The methods for these indicators can be used in scripts to determine the last ex
 
 ### Usage
 ```cs
-For a high
+//For a high
 Swing(int strength).SwingHighBar(int barsAgo, int instance, int lookBackPeriod)
 Swing(IDataSeries input, int strength).SwingHighBar(int barsAgo, int instance, int lookBackPeriod)
-For a low
+
+//For a low
 Swing(int strength).SwingLowBar(int barsAgo, int instance, int lookBackPeriod)
 Swing(IDataSeries input, int strength).SwingLowBar(int barsAgo, int instance, int lookBackPeriod)
 ```
@@ -5261,13 +5277,16 @@ When using this method with an index (e.g. **CurrentDayOHL**.CurrentOpen(...)\[*
 ```cs
 CurrentDayOHL()
 CurrentDayOHL(IDataSeries input)
-For the open value
+
+//For the open value
 CurrentDayOHL().CurrentOpen[int barsAgo]
 CurrentDayOHL(IDataSeries input).CurrentOpen[int barsAgo]
-For the high value
+
+//For the high value
 CurrentDayOHL().CurrentHigh[int barsAgo]
 CurrentDayOHL(IDataSeries input).CurrentHigh[int barsAgo]
-For the low value
+
+//For the low value
 CurrentDayOHL().CurrentLow[int barsAgo]
 CurrentDayOHL(IDataSeries input).CurrentLow[int barsAgo]
 ```
@@ -5296,8 +5315,8 @@ Colors and other settings can be freely selected.
 
 See [*Momentum*], [*ROC*].
 
-**Regarding usage with a scanner:
-**To get a list of your favorite stocks and their daily percentual changes, please set CalculateOnBarClose to “False”, TimeFrame to “1 Day”, Calculation mode to “Percent” and Days ago to “0”.
+**Regarding usage with a scanner:**
+To get a list of your favorite stocks and their daily percentual changes, please set CalculateOnBarClose to “False”, TimeFrame to “1 Day”, Calculation mode to “Percent” and Days ago to “0”.
 
 <img src="./media/image104.png" width="281" height="308" />
 
@@ -5348,12 +5367,16 @@ daysAgo Number of days in the past
 ```cs
 //How many ticks are between today’s open and the current price?
 DailyPerformance(DailyPerformanceReference.TodaysOpen, DailyPerformanceCalculationMode.Ticks, 1)[0]
+
 //By how much percent did the stock rise/fall since the last closing price?
 DailyPerformance(DailyPerformanceReference.PreviousClose, DailyPerformanceCalculationMode.Percent, 1)[0]
+
 //By how many points/ticks did the future deviate from the start of the trading week to the current value?
 DailyPerformance(DailyPerformanceReference.PreviousClose, DailyPerformanceCalculationMode.Points, 3)[0]
+
 //How many EURO/USD does the performance equal?
 DailyPerformance(DailyPerformanceReference.PreviousClose, DailyPerformanceCalculationMode.Currency, 3)[0]
+
 //How big is the overnight gap in comparison to the opening price?
 DailyPerformance(DailyPerformanceReference.PreviousClose, DailyPerformanceCalculationMode.Points, 1)[0]
 ```
@@ -5385,8 +5408,7 @@ The DayLinesAdv draws horizontal lines for yesterday’s high, low, and close, a
 
 The DaysBack parameter sets the number of days in the past for which the lines are to be placed onto the chart.
 
-**Include Weekends parameter
-**
+**Include Weekends parameter**
 This parameter manages the interaction with weekend price data. If IncludeWeekends = true, the price data for a trading session resulting from the weekend data is added to the last trading session.
 
 This is generally applicable to traders in different time zones. For example, a trader located in Germany will receive EURUSD data that beginning on Sunday evenings in America.
@@ -5399,12 +5421,13 @@ The second picture shows Include Weekends = true:
 
 <img src="./media/image109.png" width="630" height="569" />
 
-**Show Prices parameter
-**If set to “true”, prices are displayed in addition to the line itself.
+**Show Prices parameter**
+If set to “true”, prices are displayed in addition to the line itself.
 
 <img src="./media/image110.png" width="630" height="540" />
 
-**Extend high lines and Extend low lines parameters**. If set to “true”, the highs and lows that have not yet been „breached“ by the price will be extended onto the right-hand side of the chart using dotted lines.
+**Extend high lines and Extend low lines parameters.**
+If set to “true”, the highs and lows that have not yet been „breached“ by the price will be extended onto the right-hand side of the chart using dotted lines.
 
 <img src="./media/image111.png" width="535" height="584" />
 
@@ -5448,19 +5471,19 @@ GetDayBar (int daysAgo)
 [TimeFrameRequirements("1 day")]
 public class xy : UserIndicator
 {
-int daysAgo = 5;
-double historicalClose = Instrument.Round2TickSize(GetDayBar(daysAgo).Close);
-...
+  int daysAgo = 5;
+  double historicalClose = Instrument.Round2TickSize(GetDayBar(daysAgo).Close);
 }
+
 protected override void OnStartUp()
 {
-Print("The closing price from " + daysAgo + " days ago was at " + historicalClose);
+  Print("The closing price from " + daysAgo + " days ago was at " + historicalClose);
 }
 ```
 
 
 **Important:**
-**The attribute *TimeFrameRequirements* must also always be used for the class doing the calling up (in the above example, class xy) if the indicator uses *Multibars.**
+The attribute *TimeFrameRequirements* must also always be used for the class doing the calling up (in the above example, class xy) if the indicator uses *Multibars*.
 
 ##Info
 
@@ -5593,7 +5616,7 @@ The colors and line widths can be freely modified.
 The function PriorDayOHLC displays the values for the previous day’s (or the previous session’s) open, high, low, and close.
 PriorDayOHLC is intended for use with the intraday data series.
 
-<span id="PriorDayOHLCext" class="anchor"></span>**PriorDayOHLCext**
+**PriorDayOHLCext**
 For people in different time zones, PriorDayOHLCext allows you to set the IncludeWeekend parameter to “true” so that all data originating from a Saturday or Sunday is treated as if it belongs to the previous Friday’s session.
 
 See [*CurrentDayOHL*], [*DayLines*].
@@ -5613,16 +5636,20 @@ When using this method with an index (e.g. **PriorDayOHLC**().PriorHigh\[**int**
 ```cs
 PriorDayOHLC()
 PriorDayOHLC(IDataSeries input)
-For the value of open
+
+//For the value of open
 PriorDayOHLC().PriorOpen[int barsAgo]
 PriorDayOHLC(IDataSeries input).PriorOpen[int barsAgo]
-For the value of high
+
+//For the value of high
 PriorDayOHLC().PriorHigh[int barsAgo]
 PriorDayOHLC(IDataSeries input).PriorHigh[int barsAgo]
-For the value of low
+
+//For the value of low
 PriorDayOHLC().PriorLow[int barsAgo]
 PriorDayOHLC(IDataSeries input).PriorLow[int barsAgo]
-For the value of close
+
+//For the value of close
 PriorDayOHLC().PriorClose[int barsAgo]
 PriorDayOHLC(IDataSeries input).PriorClose[int barsAgo]
 ```
@@ -5839,8 +5866,8 @@ Print("The current volume is " + VOL()[0]);
 
 The Volume Moving Average is calculated by applying an exponential moving average to the respective volume of each individual period, i.e. their EMA (volume).
 
-**Caution:
-**In literature, the abbreviation for the Variable Moving Average (VMA) is often confused with the Volume Moving Average (VOLMA).
+**Caution:**
+In literature, the abbreviation for the Variable Moving Average (VMA) is often confused with the Volume Moving Average (VOLMA).
 
 ### Interpretation
 
@@ -6131,10 +6158,11 @@ The previous extreme values (local highs or lows) are ideally suited for either 
 
 ### Usage
 ```cs
-For the upper extreme value
+//For the upper extreme value
 ZigZag(DeviationType deviationType, double deviationValue, bool useHighLow).ZigZagHigh[int barsAgo]
 ZigZag(IDataSeries input, DeviationType deviationType, double deviationValue, bool useHighLow).ZigZagHigh[int barsAgo]
-For the lower extreme value
+
+//For the lower extreme value
 ZigZag(DeviationType deviationType, double deviationValue, bool useHighLow).ZigZagLow[int barsAgo]
 ZigZag(IDataSeries input, DeviationType deviationType, double deviationValue, bool useHighLow).ZigZagLow[int barsAgo]
 ```
@@ -6154,7 +6182,6 @@ A return value of 0 indicates that no high or low point has been found yet.
 |----------------|--------------------------------------------------------------------------------------------------------------------|
 | input          | Input data series for the indicator                                                                                |
 | deviationType  | The change in points or percent                                                                                    
-
                   DeviationType.Points and                                                                                            
                   DeviationType.Percent                                                                                               |
 | deviationValue | Value of the deviation                                                                                             |
@@ -6169,7 +6196,7 @@ A return value of 0 indicates that no high or low point has been found yet.
 ```cs
 //Output of the market value for the last high point
 Print("The last high of the ZigZag indicator was at " + ZigZag(DeviationType.Percent, 1, true).ZigZagHigh[0]);
+
 // Output of the market value for the last low point
 Print("The last low of the ZigZag indicator was at " + ZigZag(DeviationType.Percent, 1, true).ZigZagLow[0]);
 ```
-

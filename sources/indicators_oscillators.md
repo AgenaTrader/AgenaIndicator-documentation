@@ -38,11 +38,8 @@ VTADWiki: [*http://vtadwiki.vtad.de/index.php/Accumulation\_Distribution\_Linie*
 
 ```cs
 **ADL**()
-
 **ADL**(IDataSeries input)
-
 **ADL**()\[**int** barsAgo\]
-
 **ADL**(IDataSeries input)\[**int** barsAgo\]
 ```
 
@@ -66,9 +63,9 @@ input Input data series for the indicator
 ```cs
 //Testing the direction of the ADL
 
-**if** (**Rising**(**ADL**())
+if (Rising(ADL())
 
-**Print**("The ADL indicator is rising.");
+Print("The ADL indicator is rising.");
 ```
 
 

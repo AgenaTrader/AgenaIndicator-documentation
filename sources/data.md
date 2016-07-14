@@ -1,10 +1,8 @@
 
 # Data
-
 In this context, data is understood as information loaded from outside sources as well as data sets originating from internally generated AgenaScripts.
 
 ## Bars (Candles)
-
 ### Modus Operandi
 
 A classical indicator will calculate one or multiple values using the available data series.
@@ -25,7 +23,6 @@ Within a script (self-created program), the “Close” array is the list of all
 In addition, each bar will not only have a close value, but also a [*High*], [*Low*], [*Open*], [*Median*], [*Typical*], [*Weighted*], *Time* and [*Volume*]. On a daily period timeframe, the high of the candle that occurred 10 periods ago would be High\[10\]; the low of the last day would be Low\[1\].
 
 **Important note:**
-
 The examples mentioned concern calculations that are performed at the end of a period. The values for the currently running and unfinished candles are not taken into consideration.
 
 If you want the values of the currently running and unfinished candles, you will need to set CalculateOnBarClose = false. As with the previous example, the currently running bar will receive the number 0 and so on.

@@ -1,4 +1,3 @@
-
 ![AgenaTrader](./sources/images/logo_100.png)
 
 #Live System
@@ -10,7 +9,6 @@ Documentation source files are written in [Markdown](https://guides.github.com/f
 The tutorials in the sources directory of this repository, are built with mkdocs and publicly hosted on GitHub Pages at [https://agenatrader.github.io/AgenaIndicator-documentation/site/index.html](https://agenatrader.github.io/AgenaIndicator-documentation/site/index.html).
 
 ##Getting Started
-
 ###Editor
 To edit these files you can use the GitHub Online Editor but we recommend to use a separate text editor.
 We recommend the text editor **Atom**. [You can download it here.](https://atom.io)
@@ -20,8 +18,21 @@ We recommend the text editor **Atom**. [You can download it here.](https://atom.
 ###Installation
 The following things are prerequisites:
 * Install [GitHub Client](https://desktop.github.com) and create a GitHub user
+* Install [Pandoc](http://pandoc.org/installing.html)
 * Install [Python](https://www.python.org/downloads/)
 * Install Python package [mkdocs](http://www.mkdocs.org) using pip
+
+###Parsing markdown to ebook (epub)
+Move to your sources folder, open a console and create an ebook in \*.epub format:
+```bash
+pandoc -S --epub-cover-image=../documents/epub_cover.png --epub-stylesheet=../documents/epub_styles.css -o ../documents/agenaindicator-documenation.epub ../documents/epub_title.txt index.md data.md indicators_oscillators.md
+```
+
+###Parsing markdown to word file
+Move to your sources folder, open a console and create a Word document in \*.docx format:
+```bash
+pandoc -S -o ../documents/agenaindicator-documenation.docx ../documents/epub_title.txt index.md data.md indicators_oscillators.md
+```
 
 ###Parsing markdown to static website
 Clone the master repository to your local computer.
@@ -42,7 +53,7 @@ mkdocs build --clean
 ###Bugfixing links for images
 mkdocs is creating wrong links for images, so we need to change this manually by **replacing ./media/ to ../media/**.
 
-###Deploy 
+###Deploy
 We have created a branch called *gh-pages* and all data from this branch will be displayed on GitHub Pages.
 Commit now your changes into the master repository, sync your repository and *change locally to the branch gh-pages*. Update all changes from master into the branch using the GitHub Client function *upate from master*.
 

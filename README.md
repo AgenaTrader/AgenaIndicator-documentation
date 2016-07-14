@@ -22,6 +22,8 @@ The following things are prerequisites:
 * Install [Python](https://www.python.org/downloads/)
 * Install Python package [mkdocs](http://www.mkdocs.org) using pip
 
+After the installation of all packages we are able to start to parse our data.
+
 ###Parsing markdown to ebook (epub)
 Move to your sources folder, open a console and create an ebook in \*.epub format:
 ```bash
@@ -51,7 +53,12 @@ mkdocs build --clean
 ```
 
 ###Bugfixing links for images
-mkdocs is creating wrong links for images, so we need to change this manually by **replacing ./media/ to ../media/**.
+mkdocs is creating wrong links for images, so we need to change this by **replacing ./media/ to ../media/** manually.
+Another option is to to this automatic by using **sed** on linux or macintosh: 
+```bash
+sed -i .bak -e 's%./media/%../media/%g' site/indicators_oscillators/index.html  && rm site/indicators_oscillators/index.html.bak
+sed -i .bak -e 's%./media/%../media/%g' site/data/index.html  && rm site/data/index.html.bak
+```
 
 ###Deploy
 We have created a branch called *gh-pages* and all data from this branch will be displayed on GitHub Pages.

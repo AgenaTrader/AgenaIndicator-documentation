@@ -25,15 +25,15 @@ The following things are prerequisites:
 After the installation of all packages we are able to start to parse our data.
 
 ###Parsing markdown to ebook (epub)
-Move to your sources folder, open a console and create an ebook in \*.epub format:
+Move to your source folder, open a console and create an ebook in \*.epub format:
 ```bash
-pandoc -S --epub-cover-image=../documents/epub_cover.png --epub-stylesheet=../documents/epub_styles.css -o ../documents/agenaindicator-documenation.epub ../documents/epub_title.txt index.md data.md indicators_oscillators.md
+pandoc -S --epub-cover-image=../documents/epub_cover.png --epub-stylesheet=../documents/epub_styles.css -o ../documents/agenaindicator-documentation.epub ../documents/epub_title.txt index.md data.md indicators_oscillators.md
 ```
 
 ###Parsing markdown to word file
-Move to your sources folder, open a console and create a Word document in \*.docx format:
+Move to your source folder, open a console and create a Word document in \*.docx format:
 ```bash
-pandoc -S -o ../documents/agenaindicator-documenation.docx ../documents/epub_title.txt index.md data.md indicators_oscillators.md
+pandoc -S -o ../documents/agenaindicator-documentation.docx ../documents/epub_title.txt index.md data.md indicators_oscillators.md
 ```
 
 ###Parsing markdown to static website
@@ -54,7 +54,7 @@ mkdocs build --clean
 
 ###Bugfixing links for images
 mkdocs is creating wrong links for images, so we need to change this by **replacing ./media/ to ../media/** manually.
-Another option is to to this automatic by using **sed** on linux or macintosh: 
+Another option is to to this automatic by using **sed** on linux or macintosh:
 ```bash
 sed -i .bak -e 's%./media/%../media/%g' site/indicators_oscillators/index.html  && rm site/indicators_oscillators/index.html.bak
 sed -i .bak -e 's%./media/%../media/%g' site/data/index.html  && rm site/data/index.html.bak

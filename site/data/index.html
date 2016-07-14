@@ -149,8 +149,8 @@ Each period (candle) will be assigned to a specific indicator(s).</p>
 <p>If a new bar is added during the current trading session, then this bar will be assigned the number 0, and the previous bar – which up to that point was bar number 0 – will now be reassigned as bar 1, and the oldest bar to the very left will have the number 501.</p>
 <p>Within a script (self-created program), the “Close” array is the list of all closing prices. The last closing price is thus Close[0] and the preceding closing price (bar to the left of the last bar) is Close[1] and so on, with the oldest candle having the value of Close[501]. The number within the square brackets here clearly denotes the index of the array. The general term used within AgenaTrader is “barsAgo”.</p>
 <p>In addition, each bar will not only have a close value, but also a [<em>High</em>], [<em>Low</em>], [<em>Open</em>], [<em>Median</em>], [<em>Typical</em>], [<em>Weighted</em>], <em>Time</em> and [<em>Volume</em>]. On a daily period timeframe, the high of the candle that occurred 10 periods ago would be High[10]; the low of the last day would be Low[1].</p>
-<p><strong>Important note:</strong></p>
-<p>The examples mentioned concern calculations that are performed at the end of a period. The values for the currently running and unfinished candles are not taken into consideration.</p>
+<p><strong>Important note:</strong>
+The examples mentioned concern calculations that are performed at the end of a period. The values for the currently running and unfinished candles are not taken into consideration.</p>
 <p>If you want the values of the currently running and unfinished candles, you will need to set CalculateOnBarClose = false. As with the previous example, the currently running bar will receive the number 0 and so on.
 Close[0] will provide you with the most recent price transmitted by the data provider. All values of the bars High[0]…Low[0]… etc. are subject to change until the bar has been finalized and a new bar has begun. The only value that will definitely not change is Open[0].</p>
 <h2 id="data-series">Data Series</h2>

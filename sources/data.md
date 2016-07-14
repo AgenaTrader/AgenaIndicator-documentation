@@ -1,12 +1,9 @@
 
 # Data
-
 In this context, data is understood as information loaded from outside sources as well as data sets originating from internally generated AgenaScripts.
 
 ## Bars (Candles)
-
 ### Modus Operandi
-
 A classical indicator will calculate one or multiple values using the available data series.
 
 Data series in this sense can consist of closing prices, lows, hourly charts or 10-minute periods etc.
@@ -25,16 +22,13 @@ Within a script (self-created program), the “Close” array is the list of all
 In addition, each bar will not only have a close value, but also a [*High*], [*Low*], [*Open*], [*Median*], [*Typical*], [*Weighted*], *Time* and [*Volume*]. On a daily period timeframe, the high of the candle that occurred 10 periods ago would be High\[10\]; the low of the last day would be Low\[1\].
 
 **Important note:**
-
 The examples mentioned concern calculations that are performed at the end of a period. The values for the currently running and unfinished candles are not taken into consideration.
 
 If you want the values of the currently running and unfinished candles, you will need to set CalculateOnBarClose = false. As with the previous example, the currently running bar will receive the number 0 and so on.
 Close\[0\] will provide you with the most recent price transmitted by the data provider. All values of the bars High\[0\]…Low\[0\]… etc. are subject to change until the bar has been finalized and a new bar has begun. The only value that will definitely not change is Open\[0\].
 
 ## Data Series
-
 ### Description
-
 AgenaTrader differentiates between data series used for your self-programmed definitions that will hold values of various types, and on the other hand, data series which are the standard integrated series containing market data and price data for the individual data.
 The concept of data series is followed up consistently and continuously. All price data for individual bars are organized within the data series.
 
@@ -61,13 +55,10 @@ TimeFrame TimeFrames
 [*Volume*](#Volume)
 
 ## Open
-
 ### Description
-
 Open is the data series in which the historical opening prices are saved.
 
 ### Parameter
-
 barsAgo Index value (see [*Bars*])
 
 ### Usage
@@ -78,7 +69,6 @@ Open[int barsAgo]
 
 
 ### More information
-
 The outputted value depends on the property *CalculateOnBarClose*.
 
 ### Example
@@ -95,14 +85,10 @@ Print("SMA(14) Calculated using the opening prices: " + Instrument.Round2TickSiz
 
 
 ## High
-
-
 ### Description
-
 High is the data series in which the historical highs are saved.
 
 ### Parameter
-
 barsAgo Index value (see [*Bars*])
 
 ### usage
@@ -112,7 +98,6 @@ High[int barsAgo]
 ```
 
 ### More information
-
 The outputted value depends on the property *CalculateOnBarClose*.
 
 ### Example
@@ -130,14 +115,10 @@ Print("SMA(14) calculated using the high values: " + Instrument.Round2TickSize(S
 
 
 ## Low
-
-
 ### Description
-
 Low is the data series in which all historical lows are saved.
 
 ### Parameter
-
 barsAgo Index value (see [*Bars*])
 
 ### Usage
@@ -147,7 +128,6 @@ Low[int barsAgo]
 ```
 
 ### More information
-
 The outputted value depends on the property *CalculateOnBarClose*.
 
 ### Example
@@ -165,13 +145,10 @@ Print("SMA(14) calculated using the low prices: " + Instrument.Round2TickSize(SM
 
 
 ##Close
-
 ### Description
-
 Close is the data series in which all historical closing prices are saved.
 
 ### Parameter
-
 barsAgo Index value (see [*Bars*])
 
 ### Usage
@@ -181,7 +158,6 @@ Close[int barsAgo]
 ```
 
 ### More information
-
 The outputted value depends on the property *CalculateOnBarClose*.
 
 Indicators are generally calculated using the closing prices. The selection of the input series can generally be omitted (see example below).
@@ -204,14 +180,10 @@ Print("SMA(14) calculated using the closing prices: " + Instrument.Round2TickSiz
 
 
 ## Volume
-
-
 ### Description
-
 Volume is the data series in which the historical volume records are saved.
 
 ### Parameter
-
 barsAgo Index value (see [*Bars*])
 
 ### Usage
@@ -222,7 +194,6 @@ Volume[int barsAgo]
 
 
 ### More information
-
 The outputted value depends on the property *CalculateOnBarClose*.
 
 The value delivered by the indicator [*VOL()*] is identical to the volume described here.
@@ -243,17 +214,13 @@ Print("SMA(14) calculated using the volume: " + Instrument.Round2TickSize(SMA(Vo
 
 
 ## Median
-
-
 ### Description
-
 Median is the data series in which the historical median values are saved.
 The median price is calculated as (high + low) / 2.
 
 See [*Typical*] and [*Weighted*].
 
 ### Parameter
-
 barsAgo Index value (see [*Bars*])
 
 ### Usage
@@ -265,7 +232,6 @@ Median[int barsAgo]
 
 
 ### More information
-
 The outputted value depends on the property *CalculateOnBarClose*.
 
 Further information on median, typical and weighted:
@@ -285,10 +251,7 @@ Print("SMA(14) calculated using the median prices: " + Instrument.Round2TickSize
 
 
 ## Typical
-
-
 ### Description
-
 Typical is the data series in which the historical typical values are saved.
 
 The typical price of a bar is calculated as (high + low + close) / 3.
@@ -296,7 +259,6 @@ The typical price of a bar is calculated as (high + low + close) / 3.
 See [*Median*] and [*Weighted*].
 
 ### Parameter
-
 barsAgo Index value (see [*Bars*])
 
 ### Usage
@@ -307,7 +269,6 @@ Typical[int barsAgo]
 
 
 ### More information
-
 The outputted value depends on the property *CalculateOnBarClose*.
 
 Further information regarding median, typical and weighted:
@@ -326,15 +287,12 @@ Print("SMA(14)calculated using the typical prices: " + Instrument.Round2TickSize
 ```
 
 ## Weighted
-
 ### Description
-
 Weighted is the data series in which all historical weighted values are saved.
 
 The weighted price of a bar is calculated as (high + low + 2\*close) / 4 and is weighted on the closing price. See [*Median*] & [*Typical*].
 
 ### Parameter
-
 barsAgo Index value (see [*Bars*])
 
 ### Usage
@@ -345,7 +303,6 @@ Weighted[int barsAgo]
 
 
 ### More information
-
 The outputted value depends on the property *CalculateOnBarClose*.
 
 Further information on median, typical and weighted:
@@ -362,3 +319,6 @@ Print(Time[5] + " " + Weighted[5]);
 // Current value for the SMA(14) using the weighted price
 Print("SMA(14) calculated using the weighted price: " + Instrument.Round2TickSize(SMA(Weighted, 14)[0]));
 ```
+
+
+

@@ -3854,7 +3854,7 @@ Print("The current value of R-Squared is: " + RSquared(8)[0]);
 
 ##StandardDeviation(StdDev)
 ### Description
-The Standard Deviation <img src="./media/image91.png" width="21" height="12" /> (StdDev) is a tool used in statistics and probability calculation, and is a measurement of the dispersion of the values of a random variable around its median value. The Standard Deviation is used to calculate many indicators, such as the Bollinger Bands etc.
+The Standard Deviation ![StandardDeviation(StdDev)](./media/image91.png)(StdDev) is a tool used in statistics and probability calculation, and is a measurement of the dispersion of the values of a random variable around its median value. The Standard Deviation is used to calculate many indicators, such as the Bollinger Bands etc.
 
 ### Interpretation
 A lower standard deviation implies that the data points are located very close to their median value. The trading application assumes that prices will return to their median value.

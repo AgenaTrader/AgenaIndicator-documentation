@@ -30,6 +30,9 @@ Move to your source folder, open a console and create an ebook in \*.epub format
 pandoc -S --epub-cover-image=../documents/epub_cover.png --epub-stylesheet=../documents/epub_styles.css -o ../documents/agenaindicator-documentation.epub ../documents/epub_title.txt index.md data.md indicators_oscillators.md
 ```
 
+###Validate ebook (epub)
+We recommend to validate the ebook using **pagina EPUB-Checker**. [You can download it here.](http://www.pagina-online.de/produkte/epub-checker/#c773)
+
 ###Parsing markdown to word file
 Move to your source folder, open a console and create a Word document in \*.docx format:
 ```bash

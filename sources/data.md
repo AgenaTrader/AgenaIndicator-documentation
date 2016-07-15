@@ -67,7 +67,6 @@ Open
 Open[int barsAgo]
 ```
 
-
 ### More information
 The outputted value depends on the property *CalculateOnBarClose*.
 
@@ -82,7 +81,6 @@ Print(Time[5] + " " + Open[5]);
 // Current value of the SMA 14 above the opening price (rounded)
 Print("SMA(14) Calculated using the opening prices: " + Instrument.Round2TickSize(SMA(Open, 14)[0]));
 ```
-
 
 ## High
 ### Description
@@ -112,8 +110,6 @@ Print(Time[5] + " " + High[5]);
 Print("SMA(14) calculated using the high values: " + Instrument.Round2TickSize(SMA(High, 14)[0]));
 ```
 
-
-
 ## Low
 ### Description
 Low is the data series in which all historical lows are saved.
@@ -141,8 +137,6 @@ Print(Time[5] + " " + Low[5]);
 // Current value for the SMA 14 calculated using the low prices
 Print("SMA(14) calculated using the low prices: " + Instrument.Round2TickSize(SMA(Low, 14)[0]));
 ```
-
-
 
 ##Close
 ### Description
@@ -177,8 +171,6 @@ Print("SMA(14) calculated using the closing prices: " + Instrument.Round2TickSiz
 Print("SMA(14) calculated using the closing prices: " + Instrument.Round2TickSize(SMA(14)[0]));
 ```
 
-
-
 ## Volume
 ### Description
 Volume is the data series in which the historical volume records are saved.
@@ -191,7 +183,6 @@ barsAgo Index value (see [*Bars*])
 Volume
 Volume[int barsAgo]
 ```
-
 
 ### More information
 The outputted value depends on the property *CalculateOnBarClose*.
@@ -211,8 +202,6 @@ Print(Time[5] + " " + Volume[5]);
 Print("SMA(14) calculated using the volume: " + Instrument.Round2TickSize(SMA(Volume, 14)[0]));
 ```
 
-
-
 ## Median
 ### Description
 Median is the data series in which the historical median values are saved.
@@ -228,8 +217,6 @@ barsAgo Index value (see [*Bars*])
 Median
 Median[int barsAgo]
 ```
-
-
 
 ### More information
 The outputted value depends on the property *CalculateOnBarClose*.
@@ -249,7 +236,6 @@ Print(Time[5] + " " + Median[5]);
 Print("SMA(14) calculated using the median prices: " + Instrument.Round2TickSize(SMA(Median, 14)\[0\]));
 ```
 
-
 ## Typical
 ### Description
 Typical is the data series in which the historical typical values are saved.
@@ -266,7 +252,6 @@ barsAgo Index value (see [*Bars*])
 Typical
 Typical[int barsAgo]
 ```
-
 
 ### More information
 The outputted value depends on the property *CalculateOnBarClose*.
@@ -300,7 +285,6 @@ barsAgo Index value (see [*Bars*])
 Weighted
 Weighted[int barsAgo]
 ```
-
 
 ### More information
 The outputted value depends on the property *CalculateOnBarClose*.

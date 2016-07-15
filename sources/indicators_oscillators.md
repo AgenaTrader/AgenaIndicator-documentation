@@ -55,7 +55,6 @@ if (Rising(ADL())
 Print("The ADL indicator is rising.");
 ```
 
-
 ##Adaptive Price Zone (APZ)
 ### Description
 The adaptive price zone is a technical indicator developed by Lee Leibfarth in 2006. The APZ is a volatility-based indicator that appears as a set of bands placed over a price chart. Especially useful in non-trending, choppy markets, the APZ was created to help traders find potential turning points in the markets. The APZ is based on a short-term double-smoothed exponential moving average that reacts quickly to price changes with reduced lag. The bands form a channel that surrounds the average price and tracks the price changes. If the price crosses the upper band of the zone then this will present you with an opportunity to trade a reversal. The opposite is true for the lower band.
@@ -687,7 +686,6 @@ ChaikinMoneyFlow(int period)[int barsAgo]
 ChaikinMoneyFlow(IDataSeries input, int period)[int barsAgo]
 ```
 
-
 ### Return value
 **double**
 
@@ -758,7 +756,6 @@ ChaikinVolatility(IDataSeries input, int fast, int slow)
 ChaikinVolatility(int fast, int slow)[int barsAgo]
 ChaikinVolatility(IDataSeries input, int fast, int slow)[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -1073,7 +1070,6 @@ DoubleStochastics(int period, DoubleStochasticsMode mode, int EMA-Period1, int E
 DoubleStochastics(IDataSeries input, int period, DoubleStochasticsMode mode, int EMA-Period1, int EMA-Period2).K[int barsAgo]
 ```
 
-
 ### Return value
 **double**
 
@@ -1117,7 +1113,6 @@ DMIndex(IDataSeries input, int smooth)
 DMIndex(int smooth)[int barsAgo]
 DMIndex(IDataSeries input, int smooth)[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -1500,7 +1495,6 @@ KeltnerChannel(double offsetMutiplier, int period).Lower[int barsAgo]
 KeltnerChannel(IDataSeries input, double offsetMutiplier, int period).Lower[int barsAgo]
 ```
 
-
 ### Return value
 **double**
 
@@ -1535,7 +1529,6 @@ Print("Current value of the middle Keltner Channel band: " + KeltnerChannel(1.5,
 Print("Current value of the lower Keltner Channel band: " + KeltnerChannel(1.5, 15).Lower[0]);
 ```
 
-
 ##KeyReversalUp
 ### Description
 KeyReversalUp searches within a specified number of periods for turning points defined as such:
@@ -1562,7 +1555,6 @@ KeyReversalUp(IDataSeries input, int period)
 KeyReversalUp(int period)[int barsAgo]
 KeyReversalUp(IDataSeries input, int period)[int barsAgo]
 ```
-
 
 ### Example
 ```cs
@@ -1598,14 +1590,12 @@ KeyReversalDown(int period)[int barsAgo]
 KeyReversalDown(IDataSeries input, int period)[int barsAgo]
 ```
 
-
 ### Example
 ```cs
 // Look for a short entry
 if (KeyReversalDown(10)[0] == 1)
 Print("A short reversal formation has occurred.");
 ```
-
 
 ##KeyReversalUpAtSMA
 ### Description
@@ -1636,14 +1626,12 @@ KeyReversalUpAtSMA(int period, int SMAperiod)[int barsAgo]
 KeyReversalUpAtSMA(IDataSeries input, int period, int SMAperiod)[int barsAgo]
 ```
 
-
 ### Example
 ```cs
 // Look for a long entry
 if (KeyReversalUpAtSMA(10)[0] == 1)
 Print("A long reversal formation has occurred.");
 ```
-
 
 ##KeyReversalDownAtSMA
 ### Description
@@ -1674,14 +1662,12 @@ KeyReversalDownAtSMA(int period, int SMAperiod)[int barsAgo]
 KeyReversalDownAtSMA(IDataSeries input, int period, int SMAperiod)[int barsAgo]
 ```
 
-
 ### Example
 ```cs
 // Search for a short entry
 if (KeyReversalDownAtSMA(10)[0] == 1)
 Print("A short reversal formation has occurred.");
 ```
-
 
 ##KeyReversalUpAtEMA
 ### Description
@@ -1712,14 +1698,12 @@ KeyReversalUpAtEMA(int period, int EMAperiod)[int barsAgo]
 KeyReversalUpAtEMA(IDataSeries input, int period, int EMAperiod)[int barsAgo]
 ```
 
-
 ### Example
 ```cs
 // Search for a long entry
 if (KeyReversalUpAtEMA(10)[0] == 1)
 Print("A long reversal formation has occurred.");
 ```
-
 
 ##KeyReversalDownAtEMA
 ### Description
@@ -1751,14 +1735,12 @@ KeyReversalDownAtEMA(int period, int EMAperiod)[int barsAgo]
 KeyReversalDownAtEMA(IDataSeries input, int period, int EMAperiod)[int barsAgo]
 ```
 
-
 ### Example
 ```cs
 // Search for a short entry
 if (KeyReversalDownAtEMA(10)[0] == 1)
 Print("A short reversal formation has occurred.");
 ```
-
 
 ##Linear Regression
 ### Description
@@ -1781,7 +1763,6 @@ LinReg(int period)[int barsAgo]
 LinReg(IDataSeries input, int period)[int barsAgo]
 ```
 
-
 ### Return value
 **double**
 
@@ -1800,7 +1781,6 @@ period Number of bars included in the calculations
 //Show the current values of the regression line
 Print("The current value for the linear regression is: " + LinReg(14)[0]);
 ```
-
 
 ##LinRegIntercept
 ### Description
@@ -1821,7 +1801,6 @@ LinRegIntercept(int period)[int barsAgo]
 LinRegIntercept(IDataSeries input, int period)[int barsAgo]
 ```
 
-
 ### Return value
 **double**
 
@@ -1841,7 +1820,6 @@ period Number of bars included in the calculations
 Print("The current value of the regression constant is: " + LinRegIntercept(14)[0]);
 ```
 
-
 ##LinRegSlope
 ### Description
 The Linear Regression Slope delivers the slope of the linear regression line. It is a measurement of the “elevation” of the regression line.
@@ -1859,7 +1837,6 @@ LinRegSlope(IDataSeries input, int period)
 LinRegSlope(int period)[int barsAgo]
 LinRegSlope(IDataSeries input, int period)[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -1880,7 +1857,6 @@ period Number of bars included in the calculations
 Print("The current value for the inclination of the linear regression line is: " + LinRegSlope(14)[0]);
 ```
 
-
 ##LowestLowIndex()
 ### Description
 LowestLowIndex outputs the index of the bar with the lowest low within a specified number of periods.
@@ -1895,7 +1871,6 @@ See [*HighestHighPrice()*], [*HighestHighIndex()*], [*LowestLowPrice()*],
 LowestLowIndex(int BarsBack)
 LowestLowIndex(int BarsBack)[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -1915,7 +1890,6 @@ BarsBack Number of periods within which the highest high shall be searched for
 Print("The lowest low of the last 14 bars was " + LowestLowIndex(14)[0] + " bars ago.");
 ```
 
-
 ##LowestLowPrice()
 ### Description
 LowestLowPrice outputs the value of the lowest low within a specified number of periods.
@@ -1930,7 +1904,6 @@ See [*HighestHighPrice()*], [*HighestHighIndex()*], *[LowestLowIndex]()*,
 LowestLowPrice(int BarsBack)
 LowestLowPrice(int BarsBack)[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -1948,7 +1921,6 @@ BarsBack Number of periods within which the low will be searched for
 // What value did the lowest low of the last 14 periods have?
 Print("The lowest low of the last 14 bars is " + LowestLowPrice(14)[0]);
 ```
-
 
 ##MACD
 ### Description
@@ -1984,7 +1956,6 @@ MACD(int fast, int slow, int smooth).Diff[int barsAgo]
 MACD(IDataSeries input, int fast, int slow, int smooth).Diff[int barsAgo]
 ```
 
-
 ### Return value
 **double**
 
@@ -2009,7 +1980,6 @@ Print("The current value for the MACD line is: " + MACD(12,26,9)[0]);
 Print("The current value for the signal line is: " + MACD(12,26,9).Avg[0]);
 Print("The difference between the MACD and the signal line is: " + MACD(12,26,9).Diff[0]);
 ```
-
 
 ##MAEnvelopes
 ### Description
@@ -2038,7 +2008,6 @@ MAEnvelopes(IDataSeries input, double envelopePercentage, MAEnvelopesMAType maTy
 MAEnvelopes(double envelopePercentage, MAEnvelopesMAType maType, int period).Lower[int barsAgo]
 MAEnvelopes(IDataSeries input, double envelopePercentage, MAEnvelopesMAType maType, int period).Lower[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -2074,7 +2043,6 @@ Print("Middle band of the MA Envelope: " + MAEnvelopes(1.5, MAEnvelopesMAType.SM
 //Value output for the lower band
 Print("Lower band of the MA Envelope: " + MAEnvelopes(1.5, MAEnvelopesMAType.SMA, 14).Lower[0]);
 ```
-
 
 ##MarketPhases
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
@@ -2178,7 +2146,6 @@ Momentum (int period)[int barsAgo]
 Momentum (IDataSeries input, int period)[int barsAgo]
 ```
 
-
 ### Return value
 **double**
 
@@ -2198,7 +2165,6 @@ period Number of bars included in the calculations
 Print("The current value for the momentum is " + Momentum(14)[0]);
 ```
 
-
 ##Money Flow Index (MFI)
 ### Description
 The Money Flow Index (MFI) is an oscillator that uses both price and volume to measure buying and selling pressure. Created by Gene Quong and Avrum Soudack, MFI is also known as volume-weighted [RSI][*RSI*]. MFI starts with the typical price for each period. Money flow is positive when the typical price rises (buying pressure) and negative when the typical price declines (selling pressure). A ratio of positive and negative money flow is then plugged into an RSI formula to create an oscillator that moves between zero and one hundred. As a momentum oscillator tied to volume, the Money Flow Index (MFI) is best suited to identify reversals and price extremes with a variety of signals.
@@ -2216,7 +2182,6 @@ MFI(IDataSeries input, int period)
 MFI(int period)[int barsAgo]
 MFI(IDataSeries input, int period)[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -2236,7 +2201,6 @@ period Number of bars included in the calculations
 //Current MFI value
 Print("The current value for the MFI is: " + MFI(14)[0]);
 ```
-
 
 ##Moving Averages
 ### Variants
@@ -2303,7 +2267,6 @@ DEMA(int period)[int barsAgo]
 DEMA(IDataSeries input, int period)[int barsAgo]
 ```
 
-
 ### Return value
 **double**
 
@@ -2328,7 +2291,6 @@ Value.Set(2 * EMA(Inputs[0], Period)[0] - EMA(EMA(Inputs[0], Period), Period)[0]
 Print("The current DEMA value is " + DEMA(20)[0]);
 ```
 
-
 ##EMA - Exponential Moving Average
 ### Description
 Exponential moving averages reduce the lag by applying more weight to recent prices. The weighting applied to the most recent price depends on the number of periods in the moving average. There are three steps to calculating an exponential moving average. First, calculate the simple moving average. An exponential moving average (EMA) has to start somewhere, so a simple moving average is used as the previous period's EMA in the first calculation. Second, calculate the weighting multiplier. Third, calculate the exponential moving average. The formula below is for a 10-day EMA.
@@ -2346,7 +2308,6 @@ EMA(IDataSeries input, int period)
 EMA(int period)[int barsAgo]
 EMA(IDataSeries input, int period)[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -2371,7 +2332,6 @@ Value.Set(CurrentBar == 0 ? Input[0] : Input[0] * (2.0 / (1 + Period)) + (1 - (2
 //Output the value for the EMA
 Print("The current EMA value is " + EMA(20)[0]);
 ```
-
 
 ##EMA MTF (MultiTimeFrame)
 ### Description
@@ -2403,7 +2363,6 @@ HMA(int period)[int barsAgo]
 HMA(IDataSeries input, int period)[int barsAgo]
 ```
 
-
 ### Return value
 **double**
 
@@ -2431,7 +2390,6 @@ Value.Set(WMA(diffSeries, (int) Math.Sqrt(Period))[0]);
 Print("The current HMA value is " + HMA(21)[0]);
 ```
 
-
 ##KAMA - Kaufman's Adaptive Moving Average
 ### Description
 The KAMA is based on an EMA in which the weight of the price changes that are to come is controlled by a trend efficiency ratio. The efficiency ratio (the squared efficiency factor) is a measure that can also be used on its own. The trend efficiency is defined as the ratio of the absolute price change from the beginning to the end of the period, and the sum of the absolute daily price changes. At higher trending efficiencies (meaning straight price movements) without much variation, the additional price will have a higher weighting, which corresponds to a shorter day period setting. Lower trending frequencies will have a smaller weighting.
@@ -2452,7 +2410,6 @@ KAMA(IDataSeries input, int fast, int period, int slow)
 KAMA(int fast, int period, int slow)[int barsAgo]
 KAMA(IDataSeries input, int fast, int period, int slow)[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -2476,7 +2433,6 @@ slow Long period
 //Output for the value of the Kaufman Moving Average(KAMA)
 Print("The current value of the KAMA is " + KAMA(2,10,30)[0]);
 ```
-
 
 ##MAMA - Mesa Adaptive Moving Average
 ### Description
@@ -2506,7 +2462,6 @@ MAMA(double fastLimit, double slowLimit).Fama[int barsAgo]
 MAMA(IDataSeries input, double fastLimit, double slowLimit).Fama[int barsAgo]
 ```
 
-
 ### Return value
 **double**
 
@@ -2530,7 +2485,6 @@ Print("The current value for the MAMA is " + MAMA(0.5, 0.05)[0]);
 Print("The current value for the FAMA is " + MAMA(0.5, 0.05).Fama[0]);
 ```
 
-
 ##SMA - Simple Moving Average
 ### Description
 The SMA is the “mother of all averages” and represents the easiest way to display the trend direction of a chart. Viewed from a mathematical perspective, this is the arithmetic mean of a number of individual lengths.
@@ -2553,7 +2507,6 @@ SMA(int period)[int barsAgo]
 SMA(IDataSeries input, int period)[int barsAgo]
 ```
 
-
 ### Return value
 **double**
 
@@ -2575,7 +2528,6 @@ Value.**Set**((last + Input\[0\] - Input\[Period\]) / Math.**Min**(CurrentBar, P
 //Output of the SMA value
 Print("The current SMA value is " + SMA(14)[0]);
 ```
-
 
 ##SMA MTF (MultiTimeFrame)
 ### Description
@@ -2609,7 +2561,6 @@ SMMA(int period)[int barsAgo]
 SMMA(IDataSeries input, int period)[int barsAgo]
 ```
 
-
 ### Return value
 **double**
 
@@ -2629,7 +2580,6 @@ period Number of bars included in the calculations
 Print("The current SMMA value is " + SMMA(14)[0]);
 ```
 
-
 ##TEMA - Triple Exponential Moving Average
 ### Description
 The Triple Exponential Moving Average is a combination of a single EMA, a double EMA and a triple EMA. The combination improves the delay between the indicator and the price movements. TEMA is relatively efficient at smoothing the price changes.
@@ -2643,7 +2593,6 @@ TEMA(IDataSeries input, int period)
 TEMA(int period)[int barsAgo]
 TEMA(IDataSeries input, int period)[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -2664,7 +2613,6 @@ period Number of bars included in the calculations
 Print("The current TEMA value is " + TEMA(14)[0]);
 ```
 
-
 ##TMA - Triangular Moving Average
 ### Description
 The Triangular Moving Average is a specifically weighted average with a special smoothing component. The weightings are not linear but are assigned a triangular pattern. The weighting for a 7-period average would thus be 1,2,3,4,3,2,1. The median value of the time series will be given more weight, and the newest i.e. oldest data less.
@@ -2676,7 +2624,6 @@ TMA(IDataSeries input, int period)
 TMA(int period)[int barsAgo]
 TMA(IDataSeries input, int period)[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -2697,7 +2644,6 @@ period Number of bars included in the calculations
 Print("The current value for the TMA is " + TMA(14)[0]);
 ```
 
-
 ##TRIX - Triple Exponential Moving Average
 ### Description
 The TRIX indicator was developed by Jack Hutson. It is a 1-day rate-of-change indicator, meaning that day 2 is divided by day 1, day 3 by day 2 and so on, and this is applied to a triple exponential moving average of the closing prices. The result is a zero line fluctuating oscillator which, based on its stability, is used as trend indicator.
@@ -2716,7 +2662,6 @@ TRIX(IDataSeries input, int period, int signalPeriod)[int barsAgo]
 TRIX(int period, int signalPeriod).Signal[int barsAgo]
 TRIX(IDataSeries input, int period, int signalPeriod).Signal[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -2742,7 +2687,6 @@ Print("The current TRIX value is " + TRIX(14, 3)[0]);
 Print("The current TRIX value is " + TRIX(14, 3).Signal[0]);
 ```
 
-
 ##T3 - Triple Exponential Moving Average
 ### Description
 The Triple Exponential Moving Average T3 (also known as the T3MA) indicator is calculated using the weighted sums of a simple EMA, a double EMA, and a triple EMA. This results in a very smooth, soft indicator line.
@@ -2756,7 +2700,6 @@ T3(IDataSeries input, int period, int tCount, double vFactor)
 T3(int period, int tCount, double vFactor)[int barsAgo]
 T3(IDataSeries input, int period, int tCount, double vFactor)[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -2781,7 +2724,6 @@ vFactor Volume factor (multiplier)
 Print("The current T3 value is " + T3(14, 3, 0.7)[0]);
 ```
 
-
 ##VMA - Variable Moving Average
 ### Description
 The Variable Moving Average is an EMA that automatically applies smoothing to the fluctuations in the market. The sensitivity grows as more weight is placed on “fresher” data.
@@ -2798,7 +2740,6 @@ VMA(IDataSeries input, int period, int volatilityPeriod)
 VMA(int period, int volatilityPeriod)[int barsAgo]
 VMA(IDataSeries input, int period, int volatilityPeriod)[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -2821,7 +2762,6 @@ volatility period Number of bars included in the calculation for the signal line
 Print("The current VMA value is " + VMA(9, 9)[0]);
 ```
 
-
 ##VWMA - Volume Weighted Moving Average
 ### Description
 VWMA is a non-cumulated smoothed average. This moving average is weighted based on the various volumes for the periods.
@@ -2833,7 +2773,6 @@ VWMA(IDataSeries input, int period)
 VWMA(int period)[int barsAgo]
 VWMA(IDataSeries input, int period)[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -2854,7 +2793,6 @@ period Number of bars included in the calculations
 Print("The current VWMA value is " + VWMA(14)[0]);
 ```
 
-
 ##WMA - Weighted Moving Average
 ### Description
 The Weighted Moving Average is the most well-known of the weighted averages. It is used to identify and react to price changes more quickly. Current prices are given higher weighting than older values. An additional advantage is that bad signals in sideways markets are minimized. The WMA smoothes the price changes and allows for more efficient trade identification.
@@ -2869,7 +2807,6 @@ WMA(IDataSeries input, int period)
 WMA(int period)[int barsAgo]
 WMA(IDataSeries input, int period)[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -2890,7 +2827,6 @@ period Number of bars included in the calculations
 Print("The current value of the WMA is " + WMA(14)[0]);
 ```
 
-
 ##ZLEMA - Zero Lag Exponential Moving Average
 ### Description
 The Zero Lag Exponential Moving Average is another variant of the EMA. Here, zero lag means no delay i.e. the indicator adapts more closely to the price changes. The indicator achieves this by taking out older price data and reducing the cumulative effect to minimize the lag.
@@ -2905,7 +2841,6 @@ ZLEMA(IDataSeries input, int period)
 ZLEMA(int period)[int barsAgo]
 ZLEMA(IDataSeries input, int period)[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -2926,7 +2861,6 @@ period Number of bars included in the calculations
 Print("The current ZLEMA value is " + ZLEMA(14)[0]);
 ```
 
-
 ##nBarsUp
 ### Description
 The nBarsUp indicator searched for a specific number of rising closing prices.
@@ -2944,7 +2878,6 @@ NBarsUp(IDataSeries input, int barCount, bool BarUp, bool higherHigh, bool highe
 NBarsUp(int barCount, int barCount, bool BarUp, bool higherHigh, bool higherLow)[int barsAgo]
 NBarsUp(IDataSeries input, int barCount, bool BarUp, bool higherHigh, bool higherLow)[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -2975,7 +2908,6 @@ if (NBarsUp(3, true, true, true)[0] == 1)
 Print("3 successively higher closing prices have occurred.");
 ```
 
-
 ##nBarsDown
 ### Description
 The nBarsDown indicator searches for a specific number of falling closing prices.
@@ -2993,7 +2925,6 @@ NBarsDown(IDataSeries input, int barCount, bool BarDown, bool lowerHigh, bool lo
 NBarsDown(int barCount, bool BarDown, bool lowerHigh, bool lowerLow)[int barsAgo]
 NBarsDown(IDataSeries input, bool barCount, int BarDown, bool lowerHigh, bool lowerLow)[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -3025,7 +2956,6 @@ NBarsDown(int barCount, bool BarDown, bool lowerHigh, bool lowerLow)[int barsAgo
 NBarsDown(IDataSeries input, bool barCount, int BarDown, bool lowerHigh, bool lowerLow)[int barsAgo]
 ```
 
-
 ##OnBalanceVolume (OBV)
 ### Description
 The On Balance Volume Indicator shows the buy or sell pressure. The volume is cumulatively added for each day with a positive close, and subtracted for days with a close smaller than the open.
@@ -3043,7 +2973,6 @@ OBV()[int barsAgo]
 OBV(IDataSeries input)[int barsAgo]
 ```
 
-
 ### Return value
 **double**
 
@@ -3060,7 +2989,6 @@ input Input data series for the indicator
 //Output the value for the On Balance Volume (OBV)
 Print("The current value for the OBV is " + OBV()[0]);
 ```
-
 
 ##OutsideBars
 ### Description
@@ -3182,7 +3110,6 @@ private void PrintOutTrendProperties(int trendSize)
 }
 ```
 
-
 ### Utilization within the Condition Escort
 All public variables are available to you inside the Condition Escort as data series; they can be found under „Series & Output Values“.
 The name has an underscore (“\_“) suffix in order to differentiate it.
@@ -3209,7 +3136,6 @@ ParabolicSAR(IDataSeries input, double acceleration, double accelerationStep, do
 ParabolicSAR(double acceleration, double accelerationStep, double accelerationMax)[int barsAgo]
 ParabolicSAR(IDataSeries input, double acceleration, double accelerationStep, double accelerationMax)[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -3254,7 +3180,6 @@ PPO(int fast, int slow, int smooth).Smoothed[int barsAgo]
 PPO(IDataSeries input, int fast, int slow, int smooth).Smoothed[int barsAgo]
 ```
 
-
 ### Return value
 **double**
 
@@ -3281,7 +3206,6 @@ Print("The current value for the PPO is " + PPO(12, 26, 9)[0]);
 Print("The current value for the PPO is " + PPO(12, 26, 9).Smoothed[0]);
 ```
 
-
 ##PercentEnvelopes
 ### Description
 The Percent Envelopes indicator draws an upper band and a lower band around a predetermined value with a distance of a given percentual value.
@@ -3307,7 +3231,6 @@ PercentEnvelopes(IDataSeries input, double percent).UpperPercentBand[int barsAgo
 PercentEnvelopes(double percent).LowerPercentBand[int barsAgo]
 PercentEnvelopes(IDataSeries input, double percent).LowerPercentBand[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -3402,7 +3325,6 @@ Print("The floor pivot point is located at: " + PivotPoints()[0]);
 //Output first support (S1)
 Print("The first pivot support (S1) is at: " + PivotPoints().S1[0]);
 ```
-
 
 ### Calculation
 H=yesterday’s high, L=yesterday’s low, O=yesterday’s open, C=yesterday’s close
@@ -3523,7 +3445,6 @@ period Number of bars included in the calculations
 Print("The current value for the PFE is: " + PFE(20)[0]);
 ```
 
-
 ## Price Oscillator
 ### Description
 The Price Oscillator is an indicator based on the difference between two moving averages. The difference is accounted for in absolute values and not in percentages.
@@ -3535,7 +3456,6 @@ PriceOscillator(IDataSeries input, int fast, int slow, int smooth)
 PriceOscillator(int fast, int slow, int smooth)[int barsAgo]
 PriceOscillator(IDataSeries input, int fast, int slow, int smooth)[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -3562,7 +3482,6 @@ Print("The current value for the PPO is " + PriceOscillator(12, 26, 9)[0]);
 Print("The current value for the smooth is " + PriceOscillator(12, 26, 9).Smoothed[0]);
 ```
 
-
 ##Range
 ### Description
 Range outputs the span/difference between the high and the low in ticks for each bar. Range is always larger than or equal to 0.
@@ -3574,7 +3493,6 @@ Range(IDataSeries input)
 Range()[int barsAgo]
 Range(IDataSeries input)[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -3596,7 +3514,6 @@ Print("The current bar has a range of: " + Range()[0]);
 Print("The current bar has a range of: " + High[0] - Low[0]);
 ```
 
-
 ##Range Indicator (RIND)
 ### Description
 The Range Indicator (RIND) was developed by Jack Weinberg and published in 1954 for the first time. The indicator compares the span (range) between the high and low on an intraday basis to the span (range) between the current closing price and the previous day’s closing price.
@@ -3614,7 +3531,6 @@ RIND(IDataSeries input, int periodQ, int smooth)
 RIND(int periodQ, int smooth)[int barsAgo]
 RIND(IDataSeries input, int periodQ, int smooth)[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -3637,7 +3553,6 @@ smooth Number of bars used for smoothing the indicator (using an EMA)
 Print("The current value for the PFE is: " + RIND(3, 10)[0]);
 ```
 
-
 ##Rate of Change (ROC)
 ### Description
 The Rate of Change Indicator is a simple and effective momentum oscillator that measures the relative percentual change of the prices from one period to the next.
@@ -3659,7 +3574,6 @@ ROC(int period)[int barsAgo]
 ROC(IDataSeries input, int period)[int barsAgo]
 ```
 
-
 ### Return value
 **double**
 
@@ -3678,7 +3592,6 @@ period Number of bars included in the calculations
 //Output of the value for the ROC indicator
 Print("The current ROC value is: " + ROC(14)[0]);
 ```
-
 
 ##Relative Spread Strength (RSS)
 ### Description
@@ -3703,7 +3616,6 @@ RSS(int eMA1, int eMA2, int length)[int barsAgo]
 RSS(IDataSeries input, int eMA1, int eMA2, int length)[int barsAgo]
 ```
 
-
 ### Return value
 **double**
 
@@ -3727,7 +3639,6 @@ eMA2 Number of periods for the second EMA
 Print("The current RSS is " + RSS (10, 40, 5)[0]);
 ```
 
-
 ##Relative Strength Index (RSI)
 ### Description
 The RSI was developed by J. Welles Wilder and is one of the more popular and useful Momentum Oscillators. It compares the size of the most recent winnings with the size of the most recent losses. This means that it evaluates the relationships between the up and down closing prices. The information is depicted between 0 and 100.
@@ -3749,7 +3660,6 @@ RSI(IDataSeries input, int period, int smooth)[int barsAgo]
 RSI(int period, int smooth).Avg[int barsAgo]
 RSI(IDataSeries input, int period, int smooth).Avg[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -3775,7 +3685,6 @@ Print("The current value for the RSI is: " + RSI(14, 3)[0]);
 Print("The current value for the AVG line is: " + RSI(14, 3).Avg[0]);
 ```
 
-
 ##Relative Strength Levy (RSL)
 ### Description
 The concept of the Relative Strength according to Levy is that the past developments contribute greatly to the strength that will be found in the future. Essentially, the current performance is compared to the performance of the past.
@@ -3789,7 +3698,6 @@ RSLDataSeries input, int period)
 RSLnt period)[int barsAgo]
 RSL(IDataSeries input, int period)[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -3810,7 +3718,6 @@ period Number of bars included in the calculations
 Print("The Relative Strength as calculated by Levy is " + RSL(27)[0]);
 ```
 
-
 ##Relative Volatility Index (RVI)
 ### Description
 The Relative Volatility Index (RVI) is similar to the RSI indicator. Developed by Donald Dorsey, it is similar to the RSI, but uses the standard deviation instead of the daily price span.
@@ -3830,7 +3737,6 @@ RVI(int period)[int barsAgo]
 RVI(IDataSeries input, int period)[int barsAgo]
 ```
 
-
 ### Return value
 **double**
 
@@ -3849,7 +3755,6 @@ period Number of bars included in the calculations
 //Output of the RVI value
 Print("The current value for the RVI is: " + RVI(14)[0]);
 ```
-
 
 ##ReversalBars
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
@@ -3904,7 +3809,6 @@ if (Reversalbars()[0] == 1.0)
 Print("The last bar is a long reversal bar.");
 ```
 
-
 ##R-Squared
 ### Description
 The R-Squared indicator is one of the indicators belonging to the linear regression series. R-Squared is the correlation coefficient that describes the quality of the linear regression line.
@@ -3929,7 +3833,6 @@ RSquared(int period)[int barsAgo]
 RSquared(IDataSeries input, int period)[int barsAgo]
 ```
 
-
 ### Return value
 **double**
 
@@ -3949,7 +3852,6 @@ period Number of bars included in the calculations
 Print("The current value of R-Squared is: " + RSquared(8)[0]);
 ```
 
-
 ##StandardDeviation(StdDev)
 ### Description
 The Standard Deviation <img src="./media/image91.png" width="21" height="12" /> (StdDev) is a tool used in statistics and probability calculation, and is a measurement of the dispersion of the values of a random variable around its median value. The Standard Deviation is used to calculate many indicators, such as the Bollinger Bands etc.
@@ -3967,7 +3869,6 @@ StdDev (IDataSeries input, int period)
 StdDev (int period)[int barsAgo]
 StdDev (IDataSeries input, int period)[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -3987,7 +3888,6 @@ period Number of bars included in the calculations
 //Output for the StdDev
 Print("The current value for the standard deviation is: " + StdDev(14)[0]);
 ```
-
 
 ##Standard Error (StdError)
 ### Description
@@ -4016,7 +3916,6 @@ StdError(int period).Lower[int barsAgo]
 StdError(IDataSeries input, int period).Lower[int barsAgo]
 ```
 
-
 ### Return value
 **double**
 
@@ -4041,7 +3940,6 @@ Print("The lower band of the standard error is currently at: " + StdError(21).Lo
 //output for the upper band
 Print("The upper band of the standard error is currently at: " + StdError(21).Upper[0]);
 ```
-
 
 ##Stochastics
 ### Description
@@ -4077,7 +3975,6 @@ Stochastics(int periodD, int periodK, int smooth).K[int barsAgo]
 Stochastics(IDataSeries input, int periodD, int periodK, int smooth).K[int barsAgo]
 ```
 
-
 ### Return value
 **double**
 
@@ -4103,7 +4000,6 @@ Print("The stochastic line %K is currently at: " + Stochastics(3, 14, 7).K[0]);
 //Output for the %D line
 Print("The stochastic line %D is currently at: " + Stochastics(3, 14, 7).D[0]);
 ```
-
 
 ##Stochastics Fast
 ### Description
@@ -4131,7 +4027,6 @@ StochasticsFast(int periodD, int periodK).K[int barsAgo]
 StochasticsFast(IDataSeries input, int periodD, int periodK).K[int barsAgo]
 ```
 
-
 ### Return value
 **double**
 
@@ -4156,7 +4051,6 @@ Print("The stochastic line %K is currently at: " + StochasticsFast(3, 14).K[0]);
 Print("The stochastic line %D is currently at: " + StochasticsFast(3, 14).D[0]);
 ```
 
-
 ##Stochastics RSI (StochRSI)
 ### Description
 This is a calculation of the stochastic based on of the RSI indicator.
@@ -4174,7 +4068,6 @@ StochRSI(IDataSeries input, int period)
 StochRSI(int period)[int barsAgo]
 StochRSI(IDataSeries input, int period)[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -4195,7 +4088,6 @@ period Number of bars included in the calculations
 Print("The current value for the StochRSI is: " + StochRSI(14)[0]);
 ```
 
-
 ##Summation (SUM)
 ### Description
 Summation is the sum over a specific number of periods.
@@ -4207,7 +4099,6 @@ SUM(IDataSeries input, int period)
 SUM(int period)[int barsAgo]
 SUM(IDataSeries input, int period)[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -4227,7 +4118,6 @@ period Number of bars included in the calculations
 // Sum of the volume for the last 10 trading days
 Print(SUM(Volume,10)[0]);
 ```
-
 
 ##SuperTrend
 ### Description
@@ -4253,7 +4143,6 @@ SuperTrend(IDataSeries input, SuperTrendMode stMode, int length, double multipli
 SuperTrend(SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth).DownTrend[int barsAgo]
 SuperTrend(IDataSeries input, SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth).DownTrend[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -4300,7 +4189,6 @@ if (Close[0] > SuperTrend(SuperTrendMode.ATR, 14, 2.618, MovingAverageType.HMA, 
 if (Close[0] < SuperTrend(SuperTrendMode.ATR, 14, 2.618, MovingAverageType.HMA, 14).DownTrend[0])
   Print("The market is in a downtrend.");
 ```
-
 
 ##SupportResistanceAreas
 ### Description
@@ -4353,7 +4241,6 @@ Swing(int strength).SwingLowBar(int barsAgo, int instance, int lookBackPeriod)
 Swing(IDataSeries input, int strength).SwingLowBar(int barsAgo, int instance, int lookBackPeriod)
 ```
 
-
 ### Return value
 **double**
 
@@ -4382,7 +4269,6 @@ Print("The last swing high was " + barsAgo + " bars ago.");
 Print("The last swing high was at " + High[barsAgo]);
 ```
 
-
 ##Time-Series-Forecast (TSF)
 ### Description
 The Time-Series-Forecast is similar to a moving average. The trend is established according to a regression equation using the smallest square formula. The aim is to extrapolate the future price movements based on the currently existing data.
@@ -4402,7 +4288,6 @@ TSF(IDataSeries input, int forecast, int period)
 TSF(int forecast, int period)[int barsAgo]
 TSF(IDataSeries input, int forecast, int period)[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -4424,7 +4309,6 @@ period Number of bars included in the calculations
 //Output the TSF values
 Print("The current value for the TSF is: " + TSF(3, 14)[0]);
 ```
-
 
 ##Tools
 ##Constant Lines
@@ -4448,7 +4332,6 @@ When using this method with an index (e.g. **ConstantLines**(1,2,3,4)\[**int** b
 
 ### Visualization
 <img src="./media/image102.png" width="496" height="364" alt="Constant Lines" />
-
 
 ##CurrentDayOHL
 ### Description
@@ -4484,7 +4367,6 @@ CurrentDayOHL().CurrentLow[int barsAgo]
 CurrentDayOHL(IDataSeries input).CurrentLow[int barsAgo]
 ```
 
-
 ### Visualization
 <img src="./media/image103.png" width="428" height="384" alt="CurrentDayOHL" />
 
@@ -4492,7 +4374,6 @@ CurrentDayOHL(IDataSeries input).CurrentLow[int barsAgo]
 ```cs
 Print("The low of the current session is at " + CurrentDayOHL().CurrentLow[0]);
 ```
-
 
 ##Daily Performance
 ### Description
@@ -4520,7 +4401,6 @@ DailyPerformance(IDataSeries input,DailyPerformanceReference reference, DailyPer
 DailyPerformance(DailyPerformanceReference reference, DailyPerformanceCalculationMode mode, int daysAgo)[int barsAgo]
 DailyPerformance(IDataSeries input,DailyPerformanceReference reference, DailyPerformanceCalculationMode mode, int daysAgo)[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -4562,7 +4442,6 @@ DailyPerformance(DailyPerformanceReference.PreviousClose, DailyPerformanceCalcul
 //How big is the overnight gap in comparison to the opening price?
 DailyPerformance(DailyPerformanceReference.PreviousClose, DailyPerformanceCalculationMode.Points, 1)[0]
 ```
-
 
 ##DayLines
 ### Description
@@ -4636,7 +4515,6 @@ All other values are calculated using intraday data.
 GetDayBar (int daysAgo)
 ```
 
-
 ### Example
 ```cs
 [TimeFrameRequirements("1 day")]
@@ -4675,7 +4553,6 @@ MAX (int period)[int barsAgo]
 MAX (IDataSeries input, int period)[int barsAgo]
 ```
 
-
 ### Return value
 **double**
 
@@ -4696,7 +4573,6 @@ period Number of bars included in the calculations
 Print("The highest value of the last 20 periods is " + MAX(High, 20)[0]);
 ```
 
-
 ##Minimum (MIN)
 ### Description
 Minimum (MIN) provides the smallest value for a specified number of periods.
@@ -4708,7 +4584,6 @@ MIN (IDataSeries input, int period)
 MIN (int period)[int barsAgo]
 MIN (IDataSeries input, int period)[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -4728,7 +4603,6 @@ period Number of bars included in the calculations
 // Outputs the lowest value for the last 20 periods
 Print("The lowest value of the last 20 periods is " + MIN(Low, 20)[0]);
 ```
-
 
 ##MTFBoxes
 ### Description
@@ -4796,7 +4670,6 @@ PriorDayOHLC().PriorClose[int barsAgo]
 PriorDayOHLC(IDataSeries input).PriorClose[int barsAgo]
 ```
 
-
 ### Visualization
 <img src="./media/image117.png" width="462" height="499" alt="PriorDayOHLC" />
 
@@ -4808,7 +4681,6 @@ Print("Yesterday’s high was " + PriorDayOHLC().PriorHigh[0]);
 Print("Yesterday’s low was " + PriorDayOHLC().PriorLow[0]);
 Print("Yesterday’s close was " + PriorDayOHLC().PriorClose[0]);
 ```
-
 
 ##PriorDayOHLCext
 See *[PriorDayOHLC][*PriorDayOHLC*].*
@@ -4859,7 +4731,6 @@ TSI(int fast, int slow)[int barsAgo]
 TSI(IDataSeries input, int fast, int slow)[int barsAgo]
 ```
 
-
 ### Return value
 **double**
 
@@ -4880,7 +4751,6 @@ slow Number of bars included in the calculation of the slow EMA
 //Output of the current value for the True Strength Index (TSI)
 Print("The current value for the TSI is " + TSI(3, 14)[0]);
 ```
-
 
 ##Ultimate Oscillator
 ### Description
@@ -4908,7 +4778,6 @@ UltimateOscillator(int fast, int intermediate, int slow)[int barsAgo]
 UltimateOscillator(IDataSeries input, int fast, int intermediate, int slow)[int barsAgo]
 ```
 
-
 ### Return value
 **double**
 
@@ -4931,7 +4800,6 @@ When using this method with an index (e.g. **UltimateOscillator** (5)\[**int** b
 Print("The current value for the Ultimate Oscillator is " + UltimateOscillator(7, 14, 28)[0]);
 ```
 
-
 ##Volume (VOL)
 ### Description
 This is the volume for the shares, futures, ETFs etc. traded within a certain time period.
@@ -4946,7 +4814,6 @@ VOL(IDataSeries input)
 VOL()[int barsAgo]
 VOL(IDataSeries input)[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -4964,7 +4831,6 @@ input Input data series for the indicator
 //Output of the current volume
 Print("The current volume is " + VOL()[0]);
 ```
-
 
 ##Volume Moving Average (VOLMA)
 ### Description
@@ -4997,7 +4863,6 @@ VOLMA(int period)[int barsAgo]
 VOLMA(IDataSeries input, int period)[int barsAgo]
 ```
 
-
 ### Return value
 **double**
 
@@ -5017,7 +4882,6 @@ period Number of bars included in the calculations
 Print("The current VOLMA value is " + VOLMA(14)[0]);
 ```
 
-
 ##Volume Oscillator
 ### Description
 The Volume Oscillator uses the difference between the moving averages based on the trading volume. The result is similar to the MACD or any other oscillator where moving averages are applied.
@@ -5033,7 +4897,6 @@ VolumeOscillator(IDataSeries input, int fast, int slow)
 VolumeOscillator(int fast, int slow)[int barsAgo]
 VolumeOscillator(IDataSeries input, int fast, int slow)[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -5055,7 +4918,6 @@ slow Number of bars for the calculation of the slow moving average
 //Output of the current value for the Volume Oscillator
 Print("The current value for the Volume Oscillator is: " + VolumeOszillator(12,26)[0]);
 ```
-
 
 ##Volume Profile
 ### Description
@@ -5090,7 +4952,6 @@ VROC(int period, int smooth)[int barsAgo]
 VROC(IDataSeries input, int period, int smooth)[int barsAgo]
 ```
 
-
 ### Return value
 **double**
 
@@ -5112,7 +4973,6 @@ smooth Number of Bars included in the calculation for the smoothing
 Print("The current value for the Volume ROC is: " + VROC(14, 3)[0]);
 ```
 
-
 ##VolumeUpDown
 ### Description
 This indicator is a variant of the volume indicator. The only difference is that the volume bars are colored depending on whether the price movement creates an up bar or a down bar.
@@ -5127,7 +4987,6 @@ VolumeUpDown(IDataSeries input)
 VolumeUpDown()[int barsAgo]
 VolumeUpDown(IDataSeries input)[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -5145,7 +5004,6 @@ input Input data series for the indicator
 //Output of the current volume
 Print("The current volume is " + VolumeUpDown()[0]);
 ```
-
 
 ##Volume Zones
 ### Description
@@ -5176,7 +5034,6 @@ WilliamsR(int period)[int barsAgo]
 WilliamsR(IDataSeries input, int period)[int barsAgo]
 ```
 
-
 ### Return value
 **double**
 
@@ -5197,7 +5054,6 @@ WilliamsR(IDataSeries input, int period)
 WilliamsR(int period)[int barsAgo]
 WilliamsR(IDataSeries input, int period)[int barsAgo]
 ```
-
 
 ##ZigZag
 ### Description
@@ -5221,7 +5077,6 @@ ZigZag(IDataSeries input, DeviationType deviationType, double deviationValue, bo
 ZigZag(DeviationType deviationType, double deviationValue, bool useHighLow).ZigZagLow[int barsAgo]
 ZigZag(IDataSeries input, DeviationType deviationType, double deviationValue, bool useHighLow).ZigZagLow[int barsAgo]
 ```
-
 
 ### Return value
 **double**
@@ -5251,3 +5106,5 @@ Print("The last high of the ZigZag indicator was at " + ZigZag(DeviationType.Per
 // Output of the market value for the last low point
 Print("The last low of the ZigZag indicator was at " + ZigZag(DeviationType.Percent, 1, true).ZigZagLow[0]);
 ```
+
+

@@ -12,7 +12,7 @@ Indicators can be used in
 For each indicator you will find a brief description of its interpretation, operation and functionality, a graphical representation on a chart and further technical details for its usage with AgenaScript.
 
 ![AgenaTrader](./media/image1.png)
-<img src="./media/image1.png" width="597" height="511" alt="indicators" />
+![indicators](./media/image1.png)
 
 ##Accumulation/Distribution (ADL)
 ### Description
@@ -47,7 +47,7 @@ When using the method with an index (e.g. ADL()\[int barsAgo\] ), the value of t
 input Input data series for the indicator
 
 ### Visualization
-<img src="./media/image2.png" width="491" height="408" alt="Accumulation/Distribution (ADL)" />
+![Accumulation/Distribution (ADL)](./media/image2.png)
 
 ### Example
 ```cs
@@ -91,7 +91,7 @@ input Input data series for the indicator
 period Number of bars included in the calculation
 
 ### Visualization
-<img src="./media/image3.png" width="492" height="407" alt="Adaptive Price Zone (APZ)" />
+![Adaptive Price Zone (APZ)](./media/image3.png)
 
 ### Example
 ```cs
@@ -135,7 +135,7 @@ input Input data series for the indicator
 period Number of bars taken into consideration when calculating the values
 
 ### Visualization
-<img src="./media/image4.png" width="491" height="407" alt="Aroon" />
+![Aroon](./media/image4.png)
 
 ### Example
 ```cs
@@ -170,7 +170,7 @@ input Input data series for the indicator
 period Number of bars taken into consideration for the calculations
 
 ### Visualization
-<img src="./media/image5.png" width="492" height="408" alt="Aroon Oscillator" />
+![Aroon Oscillator](./media/image5.png)
 
 ### Example
 ```cs
@@ -211,7 +211,7 @@ input Input data series for the indicator
 period Number of bars included in the calculation
 
 ### Visualization
-<img src="./media/image6.png" width="494" height="408" alt="Average Directional Index (ADX)"/>
+![Average Directional Index (ADX)](./media/image6.png)
 
 ### Example
 ```cs
@@ -249,7 +249,7 @@ interval Interval between the first ADX value and the current ADX value
 period Number of bars included in the calculation
 
 ### Visualization
-<img src="./media/image7.png" width="491" height="406" alt="Average Directional Movement Rating (ADXR)" />
+![Average Directional Movement Rating (ADXR)](./media/image7.png)
 
 ### Example
 ```cs
@@ -292,7 +292,7 @@ input Input data series for the indicator
 period Number of bars included in the calculation
 
 ### Visualization
-<img src="./media/image8.png" width="493" height="406" alt="Average True Range (ATR)" />
+![Average True Range (ATR)](./media/image8.png)
 
 ### Example
 ```cs
@@ -327,7 +327,7 @@ input Input data series for the indicator
 smooth Settings for the smoothing
 
 ### Visualization
-<img src="./media/image9.png" width="494" height="409" alt="Balance of Power (BOP)" />
+![Balance of Power (BOP)](./media/image9.png)
 
 ### Example
 ```cs
@@ -381,7 +381,7 @@ numStdDev Standard deviation
 period Number of bars included in the calculation
 
 ### Visualization
-<img src="./media/image10.png" width="493" height="406" alt="Bollinger Bands" />
+![Bollinger Bands](./media/image10.png)
 
 ### Example
 ```cs
@@ -440,7 +440,7 @@ period Number of bars included in the calculation
 numStdDev Standard deviation
 
 ### Visualization
-<img src="./media/image11.png" width="532" height="638" alt="Bollinger Percent B (%b)" />
+![Bollinger Percent B (%b)](./media/image11.png)
 
 ### Example
 //Output for the value of Bollinger %B
@@ -494,7 +494,7 @@ period Number of bars included in the calculation
 numStdDev Standard deviation
 
 ### Visualization
-<img src="./media/image12.png" width="524" height="604" alt="Bollinger Band Width (BBWidth)"/>
+![Bollinger Band Width (BBWidth)](./media/image12.png)
 
 ### Example
 ```cs
@@ -512,7 +512,7 @@ BollingerMTF can only be used for display in the chart and cannot be applied/imp
 ### Visualization
 The image shows a 5-minute chart with a 60-minute Bollinger band
 
-<img src="./media/image13.png" width="510" height="467" alt="Bollinger MTF (MultiTimeFrame)" />
+![Bollinger MTF (MultiTimeFrame)](./media/image13.png)
 
 ##BuySellPressure
 ### Description
@@ -553,7 +553,7 @@ When using this method with an index (e.g. **BuySellPressure**().BuyPressure\[**
 input Input data series for the indicator
 
 ### Visualization
-<img src="./media/image14.png" width="626" height="572" alt="BuySellPressure" />
+![BuySellPressure](./media/image14.png)
 
 ### Example
 ```cs
@@ -595,7 +595,7 @@ When using this method with an index (e.g. **BuySellVolume**().BuyVolume\[**int*
 input Input data series for the indicator
 
 ### Visualization
-<img src="./media/image15.png" width="388" height="340" alt="BuySellVolume" />
+![BuySellVolume](./media/image15.png)
 
 ### Example
 ```cs
@@ -661,7 +661,7 @@ When using this method with an index (e.g. **CandleStickPattern**(...)\[**int** 
 | trendStrength | Signifies the number of bars to the left and right of the swing high or swing low that are used to identify a trend. The value 0 turns off the search, meaning that the only thing searched for is chart patterns. |
 
 ### Visualization
-<img src="./media/image16.png" width="427" height="385" alt="CandleStickPattern" />
+![CandleStickPattern](./media/image16.png)
 
 ### Example
 ```cs
@@ -698,7 +698,7 @@ input Input data series for the indicator
 period Number of bars included in the calculation
 
 ### Visualization
-<img src="./media/image17.png" width="490" height="404" alt="ChaikinMoneyFlow (CMF)" />
+![ChaikinMoneyFlow (CMF)](./media/image17.png)
 
 ### Example
 ```cs
@@ -734,7 +734,7 @@ fast Number of bars included in the calculation for the fast EMA
 slow Number of bars included in the calculation for the slow EMA
 
 ### Visualization
-<img src="./media/image18.png" width="492" height="408" alt="Chaikin Oscillator" />
+![Chaikin Oscillator](./media/image18.png)
 
 ### Example
 ```cs
@@ -769,7 +769,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image19.png" width="486" height="547" alt="ChaikinVolatility (CVL)" />
+![ChaikinVolatility (CVL)](./media/image19.png)
 
 ### Example
 ```cs
@@ -806,7 +806,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image20.png" width="491" height="406" alt="Chande Momentum Oscillator (CMO)" />
+![Chande Momentum Oscillator (CMO)](./media/image20.png)
 
 ### Example
 ```cs
@@ -847,7 +847,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image21.png" width="492" height="406" alt="Commodity Channel Index (CCI)" />
+![Commodity Channel Index (CCI)](./media/image21.png)
 
 ### Example
 ```cs
@@ -894,7 +894,7 @@ When using this method with an index (e.g. **Darvas**()\[**int** barsAgo\] ), th
 input Input data series for the indicator
 
 ### Visualization
-<img src="./media/image22.png" width="628" height="641" alt="Darvas Boxes" />
+![Darvas Boxes](./media/image22.png)
 
 ### Example
 ```cs
@@ -939,7 +939,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image23.png" width="486" height="408" alt="Directional Movement (DM)" />
+![Directional Movement (DM)](./media/image23.png)
 
 ### Example
 ```cs
@@ -985,7 +985,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image24.png" width="487" height="409" alt="Donchian Channel" />
+![Donchian Channel](./media/image24.png)
 
 ### Example
 ```cs
@@ -1032,7 +1032,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image25.png" width="486" height="408" alt="Directional Movement Index (DMI)" />
+![Directional Movement Index (DMI)](./media/image25.png)
 
 ### Example
 ```cs
@@ -1088,7 +1088,7 @@ EMA-Period1 Periods for the EMA
 EMA-Period2 Periods for the second EMA
 
 ### Visualization
-<img src="./media/image26.png" width="631" height="570" alt="Double Stochastics (DSS)" />
+![Double Stochastics (DSS)](./media/image26.png)
 
 ### Example
 ```cs
@@ -1126,7 +1126,7 @@ input Input data series for the indicator
 smooth Smoothing settings
 
 ### Visualization
-<img src="./media/image27.png" width="490" height="406" alt="Dynamic Momentum Index (DMIndex)" />
+![Dynamic Momentum Index (DMIndex)](./media/image27.png)
 
 ### Example
 ```cs
@@ -1165,7 +1165,7 @@ smoothing Smoothing settings
 volDivisor For calculation of the box ratio (see “Calculation” below)
 
 ### Visualization
-<img src="./media/image28.png" width="486" height="407" alt="Ease of Movement (EOM)"/>
+![Ease of Movement (EOM)](./media/image28.png)
 
 ### Calculation
 Midpoint = (High + Low) / 2
@@ -1206,7 +1206,7 @@ FisherTransform(IDataSeries input, int period)[int barsAgo]
 ```
 
 ### Visualization
-<img src="./media/image29.png" width="430" height="385" alt="Fisher Transform" />
+![Fisher Transform](./media/image29.png)
 
 ### Example
 ```cs
@@ -1242,7 +1242,7 @@ FOSC(IDataSeries input, int period)[int barsAgo]
 ```
 
 ### Visualization
-<img src="./media/image30.png" width="487" height="407" alt="Forecast Oscillator (FOSC)" />
+![Forecast Oscillator (FOSC)](./media/image30.png)
 
 ### Examples
 ```cs
@@ -1275,7 +1275,7 @@ When using this method with an index (e.g. **HighestHighIndex**(14)\[**int** bar
 BarsBack Number of periods in which the highest high will be searched for
 
 ### Visualization
-<img src="./media/image31.png" width="498" height="394" alt="HighestHighIndex()" />
+![HighestHighIndex()](./media/image31.png)
 
 ### Example
 ```cs
@@ -1306,7 +1306,7 @@ When using this method with an index (e.g. **HighestHighPrice**(14)\[**int** bar
 BarsBack Number of periods in which the highest high will be searched for
 
 ### Visualization
-<img src="./media/image32.png" width="498" height="395" alt="HighestHighPrice()" />
+![HighestHighPrice()](./media/image32.png)
 
 ### Example
 ```cs
@@ -1393,7 +1393,7 @@ periodMedium Period setting for the Kijun line. Default: 29
 periodSlow Number of periods used for the calculation of the Chikou line. Default: 52
 
 ### Visualization
-<img src="./media/image33.png" width="627" height="441" alt="IchimokuCloud" />
+![IchimokuCloud](./media/image33.png)
 
 ##InsideBarsMT
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
@@ -1433,7 +1433,7 @@ Will output the high of the bar preceding the outside bar
 Will return the low of the bar preceding the outside bar
 
 ### Visualization
-<img src="./media/image34.png" width="406" height="462" alt="InsideBarsMT" />
+![InsideBarsMT](./media/image34.png)
 
 ###  “Tolerance” parameter
 In the image below you will see a longer “phase” where the market is within an inside bar. The bar marked with the arrow opens the low of the outside bar. If the open of the green candle had been a tick lower, then the marked bar would not be an inside bar and the red bar would clearly not be an outside bar.
@@ -1441,7 +1441,7 @@ The tolerance parameter defines the number of ticks by which the inside bars may
 
 Tolerance default setting = 0.
 
-<img src="./media/image35.png" width="351" height="214" alt="InsideBarsMT"/>
+![InsideBarsMT](./media/image35.png)
 
 ### Example
 ```cs
@@ -1509,7 +1509,7 @@ offsetMultiplier Multiplier for the SMA
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image36.png" width="486" height="408" alt="Keltner Channel" />
+![Keltner Channel](./media/image36.png)
 
 ### Calculation
 diff.**Set**(High\[0\] - Low\[0\]);
@@ -1775,7 +1775,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image37.png" width="487" height="405" alt="Linear Regression" />
+![Linear Regression](./media/image37.png)
 
 ### Example
 ```cs
@@ -1813,7 +1813,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image38.png" width="545" height="588" alt="LinRegIntercept" />
+![LinRegIntercept](./media/image38.png)
 
 ### Example
 ```cs
@@ -1850,7 +1850,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image39.png" width="562" height="586" alt="LinRegSlope" />
+![LinRegSlope](./media/image39.png)
 
 ### Example
 ```cs
@@ -1883,7 +1883,7 @@ When using this method with an index (e.g. **LowestLowIndex**(14)\[**int** barsA
 BarsBack Number of periods within which the highest high shall be searched for
 
 ### Visualization
-<img src="./media/image40.png" width="498" height="394" alt="LowestLowIndex()" />
+![LowestLowIndex()](./media/image40.png)
 
 ### Example
 ```cs
@@ -1915,7 +1915,7 @@ When using this method with an index (e.g. **LowestLowPrice**(14)\[**int** barsA
 BarsBack Number of periods within which the low will be searched for
 
 ### Visualization
-<img src="./media/image41.png" width="497" height="393" alt="LowestLowPrice()"/>
+![LowestLowPrice()](./media/image41.png)
 
 ### Example
 ```cs
@@ -1972,7 +1972,7 @@ slow Number of periods for the slow EMA calculation
 smooth Number of periods for the EMA calculation of the signal line
 
 ### Visualization
-<img src="./media/image42.png" width="487" height="409" alt="MACD" />
+![MACD](./media/image42.png)
 
 ### Example
 ```cs
@@ -2031,7 +2031,7 @@ maType Type of moving average used, possible choices are:
 - WMA
 
 ### Visualization
-<img src="./media/image43.png" width="520" height="568" alt="MAEnvelopes" />
+![MAEnvelopes](./media/image43.png)
 
 ### Usage
 ```cs
@@ -2057,38 +2057,38 @@ The market phases are defined according to the book series “*Der Händler*” 
 
 The market is located far away from the movement; a correction is imminent.
 
-<img src="./media/image44.png" width="107" height="138" alt="MarketPhases Phase 3" />
+![MarketPhases Phase 3](./media/image44.png)
 
 **Phase 4:**
 
 The market is in correction mode. The original trend direction has not yet resumed. During the uptrend, further lows may occur, and in a downtrend, further highs may occur.
 
-<img src="./media/image45.png" width="111" height="138" alt="MarketPhases Phase 4" />
+![MarketPhases Phase 4](./media/image45.png)
 
 **Phase 5:**
 
 The market is coming out of the correction and will resume its trend direction.
 
-<img src="./media/image46.png" width="123" height="138" alt="MarketPhases Phase 5" />
+![MarketPhases Phase 5](./media/image46.png)
 
 **Phase 5+**
 
 The market is in Phase 5. In addition, the sub-trend is confirming a 1-2-3 pattern.
 
-<img src="./media/image47.png" width="142" height="138" alt="MarketPhases Phase 6" />
+![MarketPhases Phase 6](./media/image47.png)
 
 **Phase 5+ (Prom Queen)**
 
 The term Prom Queen is also taken from the book series “*Der Händler*”. A 5+ trend phase is classified by an uptrend correction move running up to point 2. The correction zone is marked in grey in the following image.
 
-<img src="./media/image48.png" width="160" height="138" alt="MarketPhases Phase 5+ (Prom Queen)" />
+![MarketPhases Phase 5+ (Prom Queen)](./media/image48.png)
 
 Market phases 1, 2, 6, and 9 are not relevant for successful trading.
 
 ### Depiction in the chart
 No parameters are required.
 
-<img src="./media/image49.png" width="432" height="503" alt="MarketPhases in chart window"/>
+![MarketPhases in chart window](./media/image49.png)
 
 ### Usage in AgenaScript
 The indicator provides the following values for the market phases:
@@ -2124,7 +2124,7 @@ When using market phases within AgenaScript, the indicator provides a data serie
 
 You can use the indicator as a filter by using the signals of other indicators when they are inside the market phases 55 or 66 (long):
 
-<img src="./media/image50.png" width="632" height="621" alt="Condition Escort" />
+![Condition Escort](./media/image50.png)
 
 ##Momentum (MOM)
 ### Description
@@ -2158,7 +2158,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image51.png" width="506" height="405" alt="Momentum (MOM)"/>
+![Momentum (MOM)](./media/image51.png)
 
 ### Example
 ```cs
@@ -2195,7 +2195,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image52.png" width="488" height="408" alt="Money Flow Index (MFI)" />
+![Money Flow Index (MFI)](./media/image52.png)
 
 ### Example
 ```cs
@@ -2279,7 +2279,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image53.png" width="523" height="565" alt="DEMA - Double Exponential Moving Average" />
+![DEMA - Double Exponential Moving Average](./media/image53.png)
 
 ### Calculation
 ```cs
@@ -2321,7 +2321,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image54.png" width="483" height="407" alt="EMA - Exponential Moving Average" />
+![EMA - Exponential Moving Average](./media/image54.png)
 
 ### Calculation
 ```cs
@@ -2347,7 +2347,7 @@ Also see [*BollingerMTF*], [*SmaMTF*].
 ### Visualization
 A 5-minute chart with an EMA(20) calculated with hourly bars as the underlying input:
 
-<img src="./media/image55.png" width="513" height="469" alt="EMA MTF (MultiTimeFrame)"/>
+![EMA MTF (MultiTimeFrame)](./media/image55.png)
 
 ##HMA - Hull Moving Average
 ### Description
@@ -2375,7 +2375,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image56.png" width="480" height="406" alt="HMA - Hull Moving Average"/>
+![HMA - Hull Moving Average](./media/image56.png)
 
 ### Calculation
 ```cs
@@ -2427,7 +2427,7 @@ fast Short period
 slow Long period
 
 ### Visualization
-<img src="./media/image57.png" width="482" height="408" alt="KAMA - Kaufman's Adaptive Moving Average"/>
+![KAMA - Kaufman](./media/image57.png)
 
 ### Example
 ```cs
@@ -2476,7 +2476,7 @@ fastLimit Upper limit for the alpha value
 slowLimit Lower limit for the alpha value
 
 ### Visualization
-<img src="./media/image58.png" width="483" height="408" alt="MAMA - Mesa Adaptive Moving Average"/>
+![MAMA - Mesa Adaptive Moving Average](./media/image58.png)
 
 ### Example
 ```cs
@@ -2519,7 +2519,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image59.png" width="482" height="407" alt="SMA - Simple Moving Average"/>
+![SMA - Simple Moving Average](./media/image59.png)
 
 ### Calculation
 Value.**Set**((last + Input\[0\] - Input\[Period\]) / Math.**Min**(CurrentBar, Period));
@@ -2539,7 +2539,7 @@ See [*BollingerMTF*], [*EmaMTF*].
 ### Visualization
 The image shows a 5-minute chart with an SMA (14) calculated on 4-hour bars
 
-<img src="./media/image60.png" width="514" height="468" alt="SMA MTF (MultiTimeFrame)" />
+![SMA MTF (MultiTimeFrame)](./media/image60.png)
 
 ##SMMA - Smoothed Moving Average
 ### Description
@@ -2573,7 +2573,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image61.png" width="532" height="509" alt="SMMA - Smoothed Moving Average" />
+![SMMA - Smoothed Moving Average](./media/image61.png)
 
 ### Example
 ```cs
@@ -2606,7 +2606,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image62.png" width="483" height="413" alt="TEMA - Triple Exponential Moving Average" />
+![TEMA - Triple Exponential Moving Average](./media/image62.png)
 
 ### Example
 ```cs
@@ -2637,7 +2637,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image63.png" width="484" height="404" alt="TMA - Triangular Moving Average" />
+![TMA - Triangular Moving Average](./media/image63.png)
 
 ### Example
 ```cs
@@ -2677,7 +2677,7 @@ period Number of bars included in the calculations
 signal period Number of bars included in the signal line calculation
 
 ### Visualization
-<img src="./media/image64.png" width="480" height="408" alt="TRIX - Triple Exponential Moving Average" />
+![TRIX - Triple Exponential Moving Average](./media/image64.png)
 
 ### Example
 ```cs
@@ -2717,7 +2717,7 @@ tCount Number of iterations for the smoothing
 vFactor Volume factor (multiplier)
 
 ### Visualization
-<img src="./media/image65.png" width="531" height="550" alt="T3 - Triple Exponential Moving Average" />
+![T3 - Triple Exponential Moving Average](./media/image65.png)
 
 ### Example
 ```cs
@@ -2755,7 +2755,7 @@ period Number of bars included in the calculations
 volatility period Number of bars included in the calculation for the signal line
 
 ### Visualization
-<img src="./media/image66.png" width="482" height="410" alt="VMA - Variable Moving Average"/>
+![VMA - Variable Moving Average](./media/image66.png)
 
 ### Example
 ```cs
@@ -2786,7 +2786,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image67.png" width="476" height="405" alt="VWMA - Volume Weighted Moving Average" />
+![VWMA - Volume Weighted Moving Average](./media/image67.png)
 
 ### Example
 ```cs
@@ -2820,7 +2820,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image68.png" width="475" height="408" alt="WMA - Weighted Moving Average" />
+![WMA - Weighted Moving Average](./media/image68.png)
 
 ### Example
 ```cs
@@ -2854,7 +2854,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image69.png" width="477" height="404" alt="ZLEMA - Zero Lag Exponential Moving Average" />
+![ZLEMA - Zero Lag Exponential Moving Average](./media/image69.png)
 
 ### Example
 ```cs
@@ -2900,7 +2900,7 @@ higherHigh Additional condition (true): continuously rising highs
 higherLow Additional condition (true): continuously rising lows
 
 ### Visualization
-<img src="./media/image70.png" width="506" height="382" alt="nBarsUp"/>
+![nBarsUp](./media/image70.png)
 
 ### Example
 ```cs
@@ -2947,7 +2947,7 @@ lowerHigh Additional condition (true): continuously falling highs
 lowerLow Additional condition (true); continuously falling lows
 
 ### Visualization
-<img src="./media/image71.png" width="502" height="377" alt="nBarsDown"/>
+![nBarsDown](./media/image71.png)
 
 ### Example
 ```cs
@@ -2983,7 +2983,7 @@ When using this method with an index (e.g. **OBV**()\[**int** barsAgo\] ), the v
 input Input data series for the indicator
 
 ### Visualization
-<img src="./media/image72.png" width="474" height="409" alt="OnBalanceVolume (OBV)" />
+![OnBalanceVolume (OBV)](./media/image72.png)
 
 ### Example
 ```cs
@@ -3046,13 +3046,13 @@ For the default settings, the trend T2 is enabled by default.
 
 The depiction in the chart may change with the changing market movements. If the market moves below the last point 3 and breaks the uptrend, the point is marked with a “3?”. The newly created low becomes the new point 2 and the last point 2 becomes point 1.
 
-<img src="./media/image73.png" width="548" height="529" alt="Visualization in the chart"/>
+![Visualization in the chart](./media/image73.png)
 
 The parameter settings are not relevant for the display in the chart and are primarily used for the Condition Escort.
 
 The depiction in the chart is primarily influenced by the settings “Display 123” and “Display Lines”.
 
-<img src="./media/image74.png" width="608" height="596" alt="parameter settings" />
+![parameter settings](./media/image74.png)
 
 The settings highlighted in yellow have no influence on the chart. No changes need to be made.
 
@@ -3152,7 +3152,7 @@ When using this method with an index (e.g. **ParabolicSAR**(...)\[**int** barsAg
 | input            | Input data series for the indicator |
 
 ### Visualization
-<img src="./media/image75.png" width="506" height="406" alt="Parabolic SAR" />
+![Parabolic SAR](./media/image75.png)
 
 ### Example
 ```cs
@@ -3196,7 +3196,7 @@ slow Number of bars for the calculation of the slow EMA
 smooth Number of bars for the calculation of the EMA signal line
 
 ### Visualization
-<img src="./media/image76.png" width="475" height="407" alt="Percentage Price Oscillator (PPO)" />
+![Percentage Price Oscillator (PPO)](./media/image76.png)
 
 ### Example
 ```cs
@@ -3244,7 +3244,7 @@ input Input data series for the indicator
 percent Difference in % for the bands (from the input value)
 
 ### Visualization
-<img src="./media/image77.png" width="486" height="551" alt="PercentEnvelopes" />
+![PercentEnvelopes](./media/image77.png)
 
 ### Example
 ```cs
@@ -3317,7 +3317,7 @@ PivotPoints(PivotPointsMode.Classic).S3[int barsAgo]
 | SColor          | Support line color                                                                |
 
 ### Visualization
-<img src="./media/image78.png" width="520" height="479" alt="Pivot Points" />
+![Pivot Points](./media/image78.png)
 
 ### Example
 ```cs
@@ -3438,7 +3438,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image79.png" width="478" height="408" alt="Polarized Fractal Efficiency (PFE)"/>
+![Polarized Fractal Efficiency (PFE)](./media/image79.png)
 
 ### Example
 ```cs
@@ -3473,7 +3473,7 @@ slow Number of bars used for the calculation of the slow EMA
 smooth Number of bars used for the calculation of the EMA signal line
 
 ### Visualization
-<img src="./media/image80.png" width="444" height="387" alt="Price Oscillator" />
+![Price Oscillator](./media/image80.png)
 
 ### Example
 ```cs
@@ -3504,7 +3504,7 @@ When using this method with an index (e.g. **Range**()\[**int** barsAgo\] ), the
 input Input data series for the indicator
 
 ### Visualization
-<img src="./media/image81.png" width="443" height="384" alt="Range" />
+![Range](./media/image81.png)
 
 ### Example
 ```cs
@@ -3546,7 +3546,7 @@ periodQ Number of bars used for the short-term stochastic
 smooth Number of bars used for smoothing the indicator (using an EMA)
 
 ### Visualization
-<img src="./media/image82.png" width="463" height="407" alt="Range Indicator (RIND)"/>
+![Range Indicator (RIND)](./media/image82.png)
 
 ### Example
 ```cs
@@ -3586,7 +3586,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image83.png" width="464" height="405" alt="Rate of Change (ROC)" />
+![Rate of Change (ROC)](./media/image83.png)
 
 ### Example
 ```cs
@@ -3632,7 +3632,7 @@ eMA1 Number of periods for the first EMA
 eMA2 Number of periods for the second EMA
 
 ### Visualization
-<img src="./media/image84.png" width="501" height="405" alt="Relative Spread Strength (RSS)" />
+![Relative Spread Strength (RSS)](./media/image84.png)
 
 ### Example
 ```cs
@@ -3675,7 +3675,7 @@ period Number of bars included in the calculations
 smooth Number of periods for the smoothing
 
 ### Visualization
-<img src="./media/image85.png" width="468" height="410" alt="Relative Strength Index (RSI)"/>
+![Relative Strength Index (RSI)](./media/image85.png)
 
 ### Example
 ```cs
@@ -3711,7 +3711,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image86.png" width="426" height="436" alt="Relative Strength Levy (RSL)" />
+![Relative Strength Levy (RSL)](./media/image86.png)
 
 ### Example
 ```cs
@@ -3749,7 +3749,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image87.png" width="458" height="408" alt="Relative Volatility Index (RVI)"/>
+![Relative Volatility Index (RVI)](./media/image87.png)
 
 ### Example
 ```cs
@@ -3796,12 +3796,12 @@ input Input data series for the indicator
 tolerance See the following description below
 
 ### Visualization
-<img src="./media/image88.png" width="440" height="481" alt="ReversalBars" />
+![ReversalBars](./media/image88.png)
 
 ### The tolerance parameter
 The reversal bars must exceed their previous bars by at least 1 tick. The tolerance parameter allows you to define/add a certain number of ticks; the parameter is set to 0 by default, but in a sideways market this will lead to a relatively large number of reversal bars being marked.
 
-<img src="./media/image89.png" width="394" height="306" alt="The tolerance parameter" />
+![The tolerance parameter](./media/image89.png)
 
 ### Example
 ```cs
@@ -3845,7 +3845,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image90.png" width="484" height="477" alt="R-Squared" />
+![R-Squared](./media/image90.png)
 
 ### Example
 ```cs
@@ -3882,7 +3882,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image92.png" width="458" height="408" alt="StandardDeviation(StdDev)" />
+![StandardDeviation(StdDev)](./media/image92.png)
 
 ### Example
 ```cs
@@ -3928,7 +3928,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image93.png" width="458" height="409" alt="Standard Error (StdError)"/>
+![Standard Error (StdError)](./media/image93.png)
 
 ### Example
 ```cs
@@ -3991,7 +3991,7 @@ periodK Number of bars included in the %K calculation
 smooth Number of periods for the smoothing of %D
 
 ### Visualization
-<img src="./media/image94.png" width="457" height="407" alt="Stochastics"/>
+![Stochastics](./media/image94.png)
 
 ### Example
 ```cs
@@ -4041,7 +4041,7 @@ periodD Number of periods for the smoothing of %K
 periodK Number of periods included in the calculation of %K
 
 ### Visualization
-<img src="./media/image95.png" width="458" height="401" alt="Stochastics Fast" />
+![Stochastics Fast](./media/image95.png)
 
 ### Example
 ```cs
@@ -4081,7 +4081,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image96.png" width="458" height="405" alt="Stochastics RSI (StochRSI)"/>
+![Stochastics RSI (StochRSI)](./media/image96.png)
 
 ### Example
 ```cs
@@ -4112,7 +4112,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image97.png" width="493" height="382" alt="Summation (SUM)" />
+![Summation (SUM)](./media/image97.png)
 
 ### Example
 ```cs
@@ -4181,7 +4181,7 @@ When using this method with an index (e.g. **SuperTrend**(...).UpTrend\[**int** 
               Default: SuperTrendMode.ATR                                                                                                                                             |
 
 ### Visualization
-<img src="./media/image98.png" width="579" height="529" alt="SuperTrend"/>
+![SuperTrend](./media/image98.png)
 
 ### Example
 ```cs
@@ -4221,7 +4221,7 @@ Once broken, these areas tend to reverse their function, meaning that a broken s
                      The smallest setting is 1; the default is 5                                                       |
 
 ### Visualization
-<img src="./media/image99.png" width="628" height="467" alt="SupportResistanceAreas" />
+![SupportResistanceAreas](./media/image99.png)
 
 ##Swing
 ### Description
@@ -4260,7 +4260,7 @@ When using this method with an index (e.g. **Swing**(5)\[**int** barsAgo\] ), th
 | strength       | Number of bars to the left and right of the extreme points                                                   |
 
 ### Visualization
-<img src="./media/image100.png" width="501" height="407" alt="Swing"/>
+![Swing](./media/image100.png)
 
 ### Example
 ```cs
@@ -4303,7 +4303,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image101.png" width="460" height="406" alt="Time-Series-Forecast (TSF)"/>
+![Time-Series-Forecast (TSF)](./media/image101.png)
 
 ### Example
 ```cs
@@ -4332,7 +4332,7 @@ ConstantLines(double line1Value, double line2Value, double line3Value, double li
 When using this method with an index (e.g. **ConstantLines**(1,2,3,4)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Visualization
-<img src="./media/image102.png" width="496" height="364" alt="Constant Lines" />
+![Constant Lines](./media/image102.png)
 
 ##CurrentDayOHL
 ### Description
@@ -4369,7 +4369,7 @@ CurrentDayOHL(IDataSeries input).CurrentLow[int barsAgo]
 ```
 
 ### Visualization
-<img src="./media/image103.png" width="428" height="384" alt="CurrentDayOHL" />
+![CurrentDayOHL](./media/image103.png)
 
 ### Example
 ```cs
@@ -4389,11 +4389,11 @@ See [*Momentum*], [*ROC*].
 **Regarding usage with a scanner:**
 To get a list of your favorite stocks and their daily percentual changes, please set CalculateOnBarClose to “False”, TimeFrame to “1 Day”, Calculation mode to “Percent” and Days ago to “0”.
 
-<img src="./media/image104.png" width="281" height="308" alt="settings"/>
+![settings](./media/image104.png)
 
 The result will look similar to this:
 
-<img src="./media/image105.png" width="223" height="129" alt="scanner" />
+![scanner](./media/image105.png)
 
 ### Usage
 ```cs
@@ -4424,7 +4424,7 @@ mode Possible values are:
 daysAgo Number of days in the past
 
 ### Visualization
-<img src="./media/image106.png" width="626" height="588" alt="DailyPerformance" />
+![DailyPerformance](./media/image106.png)
 
 ### Example
 ```cs
@@ -4453,7 +4453,7 @@ Each line can be turned on/off, and the colors and line strengths are freely con
 See [*CurrentDayOHL*], [*PriorDayOHLC*].
 
 ### Visualization
-<img src="./media/image107.png" width="414" height="425" alt="DayLines" />
+![DayLines](./media/image107.png)
 
 ##DayLinesAdv
 ### Description
@@ -4472,21 +4472,21 @@ This is generally applicable to traders in different time zones. For example, a 
 To add the couple of hours that are transcribed on Sunday to the previous Friday’s session, you simply need to set IncludeWeekends = true.
 The first picture shows IncludeWeekends = false:
 
-<img src="./media/image108.png" width="632" height="644" alt="IncludeWeekends = false"/>
+![IncludeWeekends = false](./media/image108.png)
 
 The second picture shows IncludeWeekends = true:
 
-<img src="./media/image109.png" width="630" height="569" alt="IncludeWeekends = true"/>
+![IncludeWeekends = true](./media/image109.png)
 
 **Show Prices parameter**
 If set to “true”, prices are displayed in addition to the line itself.
 
-<img src="./media/image110.png" width="630" height="540" alt="prices are displayed" />
+![prices are displayed](./media/image110.png)
 
 **Extend high lines and Extend low lines parameters.**
 If set to “true”, the highs and lows that have not yet been „breached“ by the price will be extended onto the right-hand side of the chart using dotted lines.
 
-<img src="./media/image111.png" width="535" height="584" alt="highs and lows"/>
+![highs and lows](./media/image111.png)
 
 ##GetDayBar
 ### Description
@@ -4540,7 +4540,7 @@ Info is not an indicator in the classic sense, but can be considered as more of 
 The background of the chart may (depending on the underlying instrument) display additional information.
 
 ### Visualization
-<img src="./media/image112.png" width="627" height="458" alt="GetDayBar" />
+![GetDayBar](./media/image112.png)
 
 ##Maximum (MAX)
 ### Description
@@ -4565,7 +4565,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image113.png" width="506" height="383" alt="Maximum (MAX)"/>
+![Maximum (MAX)](./media/image113.png)
 
 ### Example
 ```cs
@@ -4597,7 +4597,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image114.png" width="506" height="382" alt="Minimum (MIN)" />
+![Minimum (MIN)](./media/image114.png)
 
 ### Example
 ```cs
@@ -4618,7 +4618,7 @@ TimeFrame Timeframe of the “virtual” candle (second, minute, hour, day, week
 TimeFrameValue Value of the timeframe (number)
 
 ### Visualization
-<img src="./media/image115.png" width="501" height="530" alt="MTFBoxes"/>
+![MTFBoxes](./media/image115.png)
 
 ##PriceLine
 ### Description
@@ -4629,7 +4629,7 @@ A horizontal line is placed within the chart on top of the current market price.
 The colors and line widths can be freely modified.
 
 ### Visualization
-<img src="./media/image116.png" width="533" height="587" alt="PriceLine" />
+![PriceLine](./media/image116.png)
 
 ##PriorDayOHLC
 ### Description
@@ -4672,7 +4672,7 @@ PriorDayOHLC(IDataSeries input).PriorClose[int barsAgo]
 ```
 
 ### Visualization
-<img src="./media/image117.png" width="462" height="499" alt="PriorDayOHLC" />
+![PriorDayOHLC](./media/image117.png)
 
 ### Example
 ```cs
@@ -4693,14 +4693,14 @@ What is special about this indicator is that you can manually set how the so-cal
 See [*PriorDayOHLCext*].
 
 ### Visualization
-<img src="./media/image118.png" width="478" height="402" alt="PriorDayOHLCext" />
+![PriorDayOHLCext](./media/image118.png)
 
 ##ShowBidAsk
 ### Description
 The indicator ShowBidAsk shows the current bid and ask prices as well as the corresponding volume within the lower half of the chart. Changes in volume are also displayed even if a trade has not occurred.
 
 ### Visualization
-<img src="./media/image119.png" width="516" height="539" alt="ShowBidAsk"/>
+![ShowBidAsk](./media/image119.png)
 
 ##TickCounter
 ### Description
@@ -4711,7 +4711,7 @@ The indicator will only work with candle charts in which the bars are constructe
 When programming your own scripts, please use Bars, TickCount or Bars, PercentComplete.
 
 ### Visualization
-<img src="./media/image120.png" width="518" height="507" alt="TickCounter"/>
+![TickCounter](./media/image120.png)
 
 ##True Strength Index (TSI)
 ### Description
@@ -4745,7 +4745,7 @@ fast Number of bars included in the calculation of the fast EMA
 slow Number of bars included in the calculation of the slow EMA
 
 ### Visualization
-<img src="./media/image121.png" width="446" height="407" alt="True Strength Index (TSI)" />
+![True Strength Index (TSI)](./media/image121.png)
 
 ### Example
 ```cs
@@ -4793,7 +4793,7 @@ When using this method with an index (e.g. **UltimateOscillator** (5)\[**int** b
 | slow         | Number of bars for the calculation of the slow indicator          |
 
 ### Visualization
-<img src="./media/image122.png" width="502" height="407" alt="Ultimate Oscillator"/>
+![Ultimate Oscillator](./media/image122.png)
 
 ### Example
 ```cs
@@ -4825,7 +4825,7 @@ When using this method with an index (e.g. **VOL**()\[**int** barsAgo\] ), the v
 input Input data series for the indicator
 
 ### Visualization
-<img src="./media/image123.png" width="448" height="406" alt="Volume (VOL)" />
+![Volume (VOL)](./media/image123.png)
 
 ### Example
 ```cs
@@ -4875,7 +4875,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image124.png" width="476" height="407" alt="Volume Moving Average (VOLMA)"/>
+![Volume Moving Average (VOLMA)](./media/image124.png)
 
 ### Example
 ```cs
@@ -4912,7 +4912,7 @@ fast Number of bars for the calculation of the fast moving average
 slow Number of bars for the calculation of the slow moving average
 
 ### Visualization
-<img src="./media/image125.png" width="446" height="406" alt="Volume Oscillator"/>
+![Volume Oscillator](./media/image125.png)
 
 ### Example
 ```cs
@@ -4932,7 +4932,7 @@ See: [*VolumeZones*]
 Prices with especially high trading volume will have a more satiated accumulation and distribution at their respective levels. This leads to price resistance/support zones being formed.
 
 ### Visualization
-<img src="./media/image126.png" width="454" height="484" alt="Volume Profile" />
+![Volume Profile](./media/image126.png)
 
 ##Volume Rate of Change (VROC)
 ### Description
@@ -4966,7 +4966,7 @@ period Number of bars included in the calculations
 smooth Number of Bars included in the calculation for the smoothing
 
 ### Visualization
-<img src="./media/image127.png" width="446" height="407" alt="Volume Rate of Change (VROC)"/>
+![Volume Rate of Change (VROC)](./media/image127.png)
 
 ### Example
 ```cs
@@ -4998,7 +4998,7 @@ When using this method with an index (e.g. **VolumeUpDown**()\[**int** barsAgo\]
 input Input data series for the indicator
 
 ### Visualization
-<img src="./media/image128.png" width="493" height="511" alt="Volume Rate of Change (VROC)" />
+![Volume Rate of Change (VROC)](./media/image128.png)
 
 ### Example
 ```cs
@@ -5046,7 +5046,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-<img src="./media/image129.png" width="447" height="407" alt="Williams %R" />
+![Williams %R](./media/image129.png)
 
 ### Example
 ```cs
@@ -5097,7 +5097,7 @@ A return value of 0 indicates that no high or low point has been found yet.
 | useHighLow     | Defines whether the high/low of a bar will be used for extreme values or if you want to use closing prices instead |
 
 ### Visualization
-<img src="./media/image130.png" width="447" height="405" alt="ZigZag"/>
+![ZigZag](./media/image130.png)
 
 ### Example
 ```cs
@@ -5107,3 +5107,4 @@ Print("The last high of the ZigZag indicator was at " + ZigZag(DeviationType.Per
 // Output of the market value for the last low point
 Print("The last low of the ZigZag indicator was at " + ZigZag(DeviationType.Percent, 1, true).ZigZagLow[0]);
 ```
+

@@ -305,3 +305,4 @@ Print("SMA(14) calculated using the weighted price: " + Instrument.Round2TickSiz
 ```
 
 
+

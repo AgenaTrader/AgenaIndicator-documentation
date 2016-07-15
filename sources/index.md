@@ -1,5 +1,4 @@
 ![AgenaTrader](./images/logo_100.png)
-![AgenaTrader](./images/logo_100.png)
 
 #Welcome to the official AgenaIndicator repository!
 Want to learn more about the AgenaTrader indicators? We've got the resources to help you get started.
@@ -142,4 +141,3 @@ Want to learn more about the AgenaTrader indicators? We've got the resources to 
   	- [Volume Zones](./indicators_oscillators.md#volume-zones)
   	- [Williams %R](./indicators_oscillators.md#williams-r)
   	- [ZigZag](./indicators_oscillators.md#zigzag)
-

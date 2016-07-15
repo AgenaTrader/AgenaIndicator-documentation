@@ -11,6 +11,7 @@ Indicators can be used in
 
 For each indicator you will find a brief description of its interpretation, operation and functionality, a graphical representation on a chart and further technical details for its usage with AgenaScript.
 
+![AgenaTrader](./media/image1.png)
 <img src="./media/image1.png" width="597" height="511" alt="indicators" />
 
 ##Accumulation/Distribution (ADL)
@@ -5106,5 +5107,3 @@ Print("The last high of the ZigZag indicator was at " + ZigZag(DeviationType.Per
 // Output of the market value for the last low point
 Print("The last low of the ZigZag indicator was at " + ZigZag(DeviationType.Percent, 1, true).ZigZagLow[0]);
 ```
-
-

@@ -17,7 +17,7 @@ The current closing price of the current bar will be displayed on the right edge
 
 If a new bar is added during the current trading session, then this bar will be assigned the number 0, and the previous bar – which up to that point was bar number 0 – will now be reassigned as bar 1, and the oldest bar to the very left will have the number 501.
 
-Within a script (self-created program), the “Close” array is the list of all closing prices. The last closing price is thus Close\[0\] and the preceding closing price (bar to the left of the last bar) is Close\[1\] and so on, with the oldest candle having the value of Close\[501\]. The number within the square brackets here clearly denotes the index of the array. The general term used within AgenaTrader is “barsAgo”.
+Within a script (self-created program), the “Close" array is the list of all closing prices. The last closing price is thus Close\[0\] and the preceding closing price (bar to the left of the last bar) is Close\[1\] and so on, with the oldest candle having the value of Close\[501\]. The number within the square brackets here clearly denotes the index of the array. The general term used within AgenaTrader is “barsAgo".
 
 In addition, each bar will not only have a close value, but also a [*High*], [*Low*], [*Open*], [*Median*], [*Typical*], [*Weighted*], *Time* and [*Volume*]. On a daily period timeframe, the high of the candle that occurred 10 periods ago would be High\[10\]; the low of the last day would be Low\[1\].
 
@@ -34,25 +34,25 @@ The concept of data series is followed up consistently and continuously. All pri
 
 The following data series are available:
 
-[*Open*](#Open)
+[*Open*](#open)
 
-[*High*](#High)
+[*High*](#high)
 
-[*Low*](#Low)
+[*Low*](#low)
 
-[*Close*](#Close)
+[*Close*](#close)
 
-[*Median*](#Median)
+[*Median*](#median)
 
-[*Typical*](#Typical)
+[*Typical*](#typical)
 
-[*Weighted*](#Weighted)
+[*Weighted*](#weighted) [*Weighteds*](#weighteds)
 
-Time Times
+[*Time*](#time) [*Times*](#times)
 
-TimeFrame TimeFrames
+[*TimeFrame*](#timeframe) [*TimeFrames*](#timeframes)
 
-[*Volume*](#Volume)
+[*Volume*](#volume) [*Volumes*](#volumes)
 
 ## Open
 ### Description
@@ -305,4 +305,156 @@ Print("SMA(14) calculated using the weighted price: " + Instrument.Round2TickSiz
 ```
 
 
+## Weighteds
+### Description
+Weighteds is an array of [*DataSeries*][1] that contains all [*Weighted*] data series.
 
+The array is only of value for indicators and strategies that use data from multiple timeframes.
+
+A new entry is added to the array whenever a new timeframe is added to an indicator or strategy.
+
+With **\[TimeFrameRequirements(("1 Day"), ("1 Week"))\]** the array will contain 3 entries:
+
+Weighteds\[0\] the weighted data series of the chart timeframe
+Weighteds\[1\] the weighted data series of all bars in a daily timeframe
+Weighteds\[2\] the weighted data series of all bars in a weekly timeframe
+
+Weighteds\[0\]\[0\] is equivalent to Weighteds\[0\].
+
+See [*MultiBars*].
+
+### Parameter
+barsAgo Index value of the individual bars within a data series
+barSeriesIndex Index value for the various timeframes
+
+### Usage
+```cs
+Weighteds[int barSeriesIndex]
+Weighteds[int barSeriesIndex][int barsAgo]
+```
+
+### More Information
+The returned value is dependent upon the property [*CalculateOnBarClose*].
+
+### Example
+See example under [*Multibars*][*MultiBars*].
+
+## Time
+### Description
+Time is a [*DataSeries*][*Data series*] of the type [*DateTimeSeries*], in which the timestamps of the individual bars are saved.
+
+### Parameter
+barsAgo Index value (see [*Bars*])
+
+### Usage
+```cs
+Time
+Time[int barsAgo]
+```
+
+### More Information
+The returned value is dependent upon the property [*CalculateOnBarClose*].
+
+### Example
+```cs
+// Timestamp of the current period
+Print(Time[0]);
+// Timestamp of the bar from 5 periods ago
+Print(Time[5]);
+```
+
+## Times
+### Description
+Times is an array of *DataSeries* that contains all [*Time*] data series.
+
+This array is only of value to indicators and strategies that make use of multiple timeframes.
+A new entry is added to the array whenever a new timeframe is added to an indicator or strategy.
+
+With **\[TimeFrameRequirements(("1 Day"), ("1 Week"))\]** the array will contain 3 entries:
+
+Times\[0\] the time data series of the chart timeframe
+Times\[1\] the time data series of all bars in a daily timeframe
+Times\[2\] the time data series of all bars in a weekly timeframe
+
+Times\[0\]\[0\] is equivalent to Times\[0\].
+
+See [*MultiBars*].
+
+### Parameter
+barsAgo Index value for the individual bars within a data series
+barSeriesIndex Index value for the various timeframes
+
+### Usage
+```cs
+Times[int barSeriesIndex]
+Times[int barSeriesIndex][int barsAgo]
+```
+
+### More Information
+The returned value is dependent upon the property [*CalculateOnBarClose*].
+
+### Example
+See example [*Multibars*][*MultiBars*].
+
+## Volume
+### Description
+Volume is a [*DataSeries*][*Data series*] of the type [*DataSeries*], in which the historical volume information is saved.
+
+### Parameter
+barsAgo Index value (see [*Bars*])
+
+### Usage
+Volume
+
+Volume\[**int** barsAgo\]
+
+### More Information
+The returned value is dependent upon the property [*CalculateOnBarClose*].
+
+The value returned by the [*VOL()*] indicator is identical with the volume described here;
+for example, Vol()\[3\] will have the same value as Volume\[3\].
+
+### Example
+```cs
+// Volume for the current period
+Print(Time[0] + " " + Volume[0]);
+// Volume of the bar from 5 periods ago
+Print(Time[5] + " " + Volume[5]);
+// Current value for the SMA 14 calculated using the volume
+Print("SMA(14) calculated using the volume: " + Instrument.Round2TickSize(SMA(Volume, 14)[0]));
+```
+
+## Volumes
+### Description
+Volumes is an array of *DataSeries* that contains all [*Volume*] data series.
+
+This array is only of value for indicators or strategies that use data from multiple timeframes.
+
+A new entry is added to the array whenever a new timeframe is added to an indicator or strategy.
+
+With **\[TimeFrameRequirements(("1 Day"), ("1 Week"))\]** the array will contain 3 entries:
+
+Volumes\[0\] the volume data series of the chart timeframe
+Volumes\[1\] the volume data series of all bars in the daily timeframe
+Volumes\[2\] the volume data series of all bars in the weekly timeframe
+
+Volumes\[0\]\[0\] is equivalent to Volumes\[0\].
+
+See [*MultiBars*].
+
+### Parameter
+barsAgo Index value of the individual bars within a data series
+
+barSeriesIndex Index value of the various timeframes
+
+### Usage
+```cs
+Volumes[int barSeriesIndex]
+Volumes[int barSeriesIndex][int barsAgo]
+```
+
+### More Information
+The returned value is dependent upon the property [*CalculateOnBarClose*].
+
+### Example
+See example [*Multibars*][*MultiBars*].

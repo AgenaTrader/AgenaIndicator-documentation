@@ -222,7 +222,7 @@ Median[int barsAgo]
 The outputted value depends on the property *CalculateOnBarClose*.
 
 Further information on median, typical and weighted:
-[*http://blog.nobletrading.com/2009/12/median-price-typical-price-weighted.html*]
+<http://blog.nobletrading.com/2009/12/median-price-typical-price-weighted.html>
 
 ### Example
 ```cs
@@ -257,7 +257,7 @@ Typical[int barsAgo]
 The outputted value depends on the property *CalculateOnBarClose*.
 
 Further information regarding median, typical and weighted:
-[*http://blog.nobletrading.com/2009/12/median-price-typical-price-weighted.html*]
+<http://blog.nobletrading.com/2009/12/median-price-typical-price-weighted.html>
 
 ### Example
 ```cs
@@ -290,7 +290,7 @@ Weighted[int barsAgo]
 The outputted value depends on the property *CalculateOnBarClose*.
 
 Further information on median, typical and weighted:
-[*http://blog.nobletrading.com/2009/12/median-price-typical-price-weighted.html*]
+<http://blog.nobletrading.com/2009/12/median-price-typical-price-weighted.html>
 
 ### Example
 ```cs

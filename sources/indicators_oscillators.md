@@ -27,7 +27,7 @@ Confirmation of a trend or
 If the ADL is rising in an uptrend, then money is flowing in the direction of the rising prices, thus the uptrend is confirmed. If the ADL is falling in a downward trend, money is being taken out of the stock, thus confirming the downtrend.
 
 ### Further information
-[*VTADWiki*](http://vtadwiki.vtad.de/index.php/Accumulation\_Distribution\_Linie)
+<http://vtadwiki.vtad.de/index.php/Accumulation\_Distribution\_Linie>
 
 ### Usage
 ```cs
@@ -63,7 +63,7 @@ The adaptive price zone is a technical indicator developed by Lee Leibfarth in 2
 The bigger the price movement, the greater the distance between the upper and lower band will be. The smaller the price movement, the smaller the distance between the bands. More widely spaced bands will indicate increased instability and volatility, whereas closely tuned bands will display reduced volatility. If the price action breaks through the upper or lower band then the APZ will tend to return to its statistical average. This will lead to trading opportunities where the market may try to compensate for imbalances. If the price overshoots the bands for example, as mentioned in the description, then this will present you with a trading opportunity in the opposite direction.
 
 ### Further information
-[*http://www.investopedia.com/articles/trading/10/adaptive-price-zone-indicator-explained.asp*](http://www.investopedia.com/articles/trading/10/adaptive-price-zone-indicator-explained.asp*)
+<http://www.investopedia.com/articles/trading/10/adaptive-price-zone-indicator-explained.asp>
 
 ### Usage
 ```cs
@@ -109,7 +109,7 @@ The Aroon indicators fluctuate above/below a centerline (50) and are bound betwe
 A surge to 100 indicates that a trend may be emerging. This can be confirmed with a decline in the other Aroon indicator. For example, a move to 100 in Aroon-Up combined with a decline below 30 in Aroon-Down shows upside strength. Consistently high readings mean prices are regularly hitting new highs or new lows for the specified period. Prices are moving consistently higher when Aroon-Up remains in the 70-100 range for an extended period. Conversely, consistently low readings indicate that prices are seldom hitting new highs or lows. Prices are NOT moving lower when Aroon-Down remains in the 0-30 range for an extended period. This does not mean prices are moving higher though. For that we need to check Aroon-Up.
 
 ### Further information
-[*VTAD*](http://stockcharts.com/school/doku.php?id=chart\_school:technical\_indicators:aroon)
+<http://stockcharts.com/school/doku.php?id=chart\_school:technical\_indicators:aroon>
 
 ### Usage
 ```cs
@@ -189,7 +189,7 @@ The Average Directional Index (ADX) is used to measure the strength or weakness 
 It should be kept in mind that Wilder was a commodity and currency trader. The examples in his books are based on these instruments, not stocks. This does not mean his indicators cannot be used with stocks. Some stocks have price characteristics similar to commodities, which tend to be more volatile with short and strong trends. Stocks with low volatility may not generate signals based on Wilder's parameters. Chartists will likely need to adjust the indicator settings or the signal parameters according to the characteristics of the security.
 
 ### Further information
-[*Wikipedia*](http://de.wikipedia.org/wiki/Average\_Directional\_Movement\_Index)
+<http://de.wikipedia.org/wiki/Average\_Directional\_Movement\_Index>
 
 ### Usage
 ```cs
@@ -270,7 +270,7 @@ Wilder started with a concept called **True Range (TR)**, which is defined as t
 Absolute values are used to ensure positive numbers. After all, Wilder was interested in measuring the distance between two points, not the direction. If the current period's high is above the prior period's high and the low is below the prior period's low, then the current period's high-low range will be used as the True Range. This is an outside day that would use method 1 to calculate the TR. This is pretty straightforward. Methods 2 and 3 are used when there is a gap or an inside day. A gap occurs when the previous close is greater than the current high (signaling a potential gap down or limit move) or the previous close is lower than the current low (signaling a potential gap up or limit move). The image below shows examples of when methods 2 and 3 are appropriate.
 
 ### Further information
-[*VTAD*](http://vtadwiki.vtad.de/index.php/Average\_True\_Range)
+VTAD: <http://vtadwiki.vtad.de/index.php/Average\_True\_Range>
 
 ### Usage
 ```cs
@@ -351,7 +351,7 @@ Lower band = middle period – 2 standard deviations
 More information can be found here: [*BollingerMTF*], [*Bollinger Percent %B*], [*Bollinger Bands Width*]
 
 ### Further information
-VTAD: [*http://vtadwiki.vtad.de/index.php/Bollinger\_B%C3%A4nder*]
+VTAD: <http://vtadwiki.vtad.de/index.php/Bollinger\_B%C3%A4nder>
 
 Book "Technische Indikatoren - simplified" by Oliver Paesler (German only)
 
@@ -414,7 +414,7 @@ John Bollinger provides several parameters for the %b calculation, such as 40-da
 (Source: [*tradesignalonline*])
 
 ### Further information
-VTAD: [*http://vtadwiki.vtad.de/index.php/Bollinger\_B%C3%A4nder*]
+VTAD: <http://vtadwiki.vtad.de/index.php/Bollinger\_B%C3%A4nder>
 
 Book "Technische Indikatoren - simplified" by Oliver Paesler (German only)
 
@@ -456,7 +456,7 @@ Band Width measures the percentage difference between the upper band and the low
 John Bollinger uses the Band Width to recognize rising and falling trends. Most trends have their origins within sideway market movements that generally have a low volatility. If a breakout is accompanied by a sudden rise in the Band Width, this means that there is definite support for the move.
 
 ### Further information
-VTAD: [*http://vtadwiki.vtad.de/index.php/Bollinger\_B%C3%A4nder*]
+VTAD: <http://vtadwiki.vtad.de/index.php/Bollinger\_B%C3%A4nder>
 
 Book "Technische Indikatoren - simplified" by Oliver Paesler (German only)
 
@@ -608,7 +608,7 @@ This indicator searches for specific candlestick formations.
 
 ### Further information
 Explanations of the formations and their interpretations can be found here:
-[*http://en.wikipedia.org/wiki/Candlestick\_pattern*]
+<http://en.wikipedia.org/wiki/Candlestick\_pattern>
 
 ### Usage
 ```cs
@@ -676,7 +676,7 @@ The Chaikin Money Flow Index was developed by Marc Chaikin. It is a volume indic
 The CMF oscillates around the zero line and is shown in a separate window with an open scale. Should the CMF be located above the zero line, then it can be interpreted as accumulation. If higher highs are being created, then the buying pressure is increasing. The reverse is true for the selling pressure. The Chaikin Money Flow should always be used in combination with other methods of technical analysis.
 
 ### Further information
-VTAD: [*http://vtadwiki.vtad.de/index.php/Chaikin\_Money\_Flow*]
+VTAD: <http://vtadwiki.vtad.de/index.php/Chaikin\_Money\_Flow>
 
 ### Usage
 ```cs
@@ -784,7 +784,7 @@ The CMO is a technical momentum indicator invented by the technical analyst Tush
 **The security is deemed overbought when the momentum oscillator is above +50 and oversold when it is below -50. Many technical traders add a nine-period moving average to this oscillator to act as a signal line. Bullish signals are generated when the oscillator crosses above the signal, and bearish signals are generated when the oscillator crosses down through the signal.**
 
 ### Further information
-[*http://www.boersenwissen.de/content/content\_bin/cont\_bin18.html*]
+<http://www.boersenwissen.de/content/content\_bin/cont\_bin18.html>
 
 ### Usage
 ```cs
@@ -825,7 +825,7 @@ The Commodity Channel Index (CCI) can be used as either a coincident or leading 
 As a [*leading indicator*][momentum oscillators], chartists can look for overbought or oversold conditions that may foreshadow a mean reversion. Similarly, bullish and bearish divergences can be used to detect early momentum shifts and anticipate trend reversals.
 
 ### Further information
-VTAD: [*http://vtadwiki.vtad.de/index.php/Commodity\_Channel\_Index*]
+VTAD: <http://vtadwiki.vtad.de/index.php/Commodity\_Channel\_Index>
 
 ### Usage
 ```cs
@@ -867,8 +867,7 @@ This system is similar to a trend-following channel breakout system. As soon as 
 
 ### Further information
 Here you can read about a trading system based on the Darvas boxes. (German only)
-
-[*http://www.eusdoni.de/index.php?option=com\_content&view=article&catid=13:eusdoni-version-3&id=42:darvas-boxen*]
+<http://www.eusdoni.de/index.php?option=com\_content&view=article&catid=13:eusdoni-version-3&id=42:darvas-boxen>
 
 ### Usage
 ```cs
@@ -953,7 +952,7 @@ The Donchian channel is also known as the 4-week-rule and works in the following
 The trading system for the Donchian channel is a pure trend-following system based on the concept “buy when it’s strong, sell when it’s weak”. This breakout system was also used by the “Turtles”. With this indicator, the highs and lows of the last n days are displayed as lines above and below the price development. The 20 days represent 4 weeks.
 
 ### Further information
-VTAD: [*http://vtadwiki.vtad.de/index.php/Donchian\_Channel*]
+VTAD: <http://vtadwiki.vtad.de/index.php/Donchian\_Channel>
 
 ### Usage
 ```cs
@@ -1010,7 +1009,7 @@ The Directional Movement Index is a precursor to the Average Directional Movemen
 The DMI shows the strength of the trend, but not the trend direction. This means that it is particularly suited as a filter for trading systems employing the Parabolic SAR, for example, in order to filter out sideways phases. When the DMI rises (especially above 25), a trend is displayed; anything below that is recognized as a sideways phase. The +DI and the –DI point towards a trend. An uptrend is classified when the +DI is above the –DI. The further apart they drift, the stronger the trend.
 
 ### Further information
-VTAD: [*http://vtadwiki.vtad.de/index.php/DMI\_-\_Directional\_Movement\_Index*]
+VTAD: <http://vtadwiki.vtad.de/index.php/DMI\_-\_Directional\_Movement\_Index>
 
 ### Usage
 ```cs
@@ -1104,7 +1103,7 @@ Chande altered the Dynamic Momentum Index in such a way that the period settings
 If the DMI is inside the oversold zone, it is reasonable to assume that prices are going to start to fall.
 
 ### Further and more concise information
-VTAD: [*http://vtadwiki.vtad.de/index.php/Dynamic\_Momentum\_Index*]
+VTAD: <http://vtadwiki.vtad.de/index.php/Dynamic\_Momentum\_Index>
 
 ### Usage
 ```cs
@@ -1141,7 +1140,7 @@ Developed by Richard Arms, Ease of Movement (EMV) is a volume-based oscillator t
 When the EOM is moving away from the zero line (marker) then an impulse has begun in that direction. During a breakout onto the opposite side of the zero line, it is recommended to enter with the trend direction.
 
 ### Further information
-[*http://www.volumen-analyse.de*]
+<http://www.volumen-analyse.de>
 
 ### Usage
 ```cs
@@ -1184,7 +1183,7 @@ This indicator was developed by the physicist John Ehlers in 2002. The aim of th
 
 ### Interpretation
 A system using the Fisher Transform can be found here:
-[*https://www.prorealtime.com/de/pdf/probacktest.pdf*]
+<https://www.prorealtime.com/de/pdf/probacktest.pdf>
 
 ### Parameters
 input Input data series for the indicator
@@ -1220,7 +1219,7 @@ The Forecast Oscillator compares the current price with the value returned by th
 When the oscillator shows positive values, it suggests that the Time Series Forecast has underestimated the price, and negative values indicate that the actual price is lower than what was predicted by the TSF. Normally, the Forecast Oscillator line is also accompanied by an SMA to search for the oscillator reversals.
 
 ### Further information
-FMLabs: [*http://www.fmlabs.com/reference/default.htm?url=ForecastOscillator.htm*]
+FMLabs: <http://www.fmlabs.com/reference/default.htm?url=ForecastOscillator.htm>
 
 ### Parameters
 input Input data series for the indicator
@@ -1342,14 +1341,15 @@ Since the cloud is drawn „into the future“ you must shift the time axis to t
 Similarly to the smoothing averages, the Ichimoku indicator will create a bullish signal when the Tenkan Sen crosses over the Kinjun Sen from below.
 
 ### Further information
-[*http://de.wikipedia.org/wiki/Ichimoku*]
+<http://de.wikipedia.org/wiki/Ichimoku>
 
-[*http://www.forexabode.com/technical-analysis/ichimoku-cloud*]
+<http://www.forexabode.com/technical-analysis/ichimoku-cloud>
 
-[*http://stockcharts.com/school/doku.php?id=chart\_school:technical\_indicators:ichimoku\_cloud*]
+<http://stockcharts.com/school/doku.php?id=chart\_school:technical\_indicators:ichimoku\_cloud>
 
-[*http://www.forexonlinegeheimnisse.com/ichimoku-kinko-hyo-teil-i\#top*] (Part 1, German)
-[*http://www.forexonlinegeheimnisse.com/ichimoku-kinko-hyo-teil-ii-das-perfekte-kauf-oder-verkaufssignal\#top*] (Part 2, German)
+<http://www.forexonlinegeheimnisse.com/ichimoku-kinko-hyo-teil-i\#top> (Part 1, German)
+
+<http://www.forexonlinegeheimnisse.com/ichimoku-kinko-hyo-teil-ii-das-perfekte-kauf-oder-verkaufssignal\#top> (Part 2, German)
 
 ### Usage
 ```cs
@@ -1475,7 +1475,7 @@ With an exponential [*moving average*][*average*] as their foundation, the Kel
 A channel upturn and break above the upper trend line can signal the start of an uptrend. A channel downturn and break below the lower trend line can signal the start a downtrend. Sometimes a strong trend does not take hold after a channel breakout and prices oscillate between the channel lines. Such trading ranges are marked by a relatively flat moving average. The channel boundaries can then be used to identify overbought and oversold levels for trading purposes.
 
 ### Further information
-VTAD: http://vtadwiki.vtad.de/index.php/Keltner\_Channel
+VTAD: <http://vtadwiki.vtad.de/index.php/Keltner\_Channel>
 
 ### Usage
 ```cs
@@ -1750,7 +1750,7 @@ The indicator provides the end values of multiple linear regression trend lines.
 See [*R-Squared*], [*LinRegSlope*], [*LinRegIntercept*].
 
 ### Further information
-[*http://www.vtad.de/sites/files/forschung/vtad\_Award\_2011\_Joachim\_Lenz\_Veroeffentlichung.pdf*]
+<http://www.vtad.de/sites/files/forschung/vtad\_Award\_2011\_Joachim\_Lenz\_Veroeffentlichung.pdf>
 
 ### Interpretation
 The linear regression indicator is used as a prognosis tool for the future developments of the instrument. If the prices are rising or falling steadily, then it can be expected that they will return to a more realistic/reasonable level. In other words: the indicator shows where the price should be, a deviation from the regression is assumed to be short-lived and to be corrected soon.
@@ -1936,7 +1936,7 @@ The MACD line oscillates above and below the zero line, which is also known as t
 Due diligence is required before relying on these common signals. Signal line crossovers at positive or negative extremes should be viewed with caution. Even though the MACD does not have upper and lower limits, chartists can estimate historical extremes with a simple visual assessment. It takes a strong move in the underlying security to push momentum to an extreme. Even though the move may continue, momentum is likely to slow and this will usually produce a signal line crossover at the extremities. Volatility in the underlying security can also increase the number of crossovers.
 
 ### Further information
-VTAD: [*http://vtadwiki.vtad.de/index.php/MACD*]
+VTAD: <http://vtadwiki.vtad.de/index.php/MACD>
 
 ### Usage
 ```cs
@@ -2136,7 +2136,7 @@ Entry signals are generated when the indicator crosses the zero line.
 See [*ROC*].
 
 ### Further information
-[*http://de.wikipedia.org/wiki/Momentum\_%28Chartanalyse%29*]
+<http://de.wikipedia.org/wiki/Momentum\_%28Chartanalyse%29>
 
 ### Usage
 ```cs
@@ -2173,7 +2173,7 @@ The Money Flow Index (MFI) is an oscillator that uses both price and volume to m
 The MFI is interpreted similarly to the RSI indicator. The MFI’s decisive factor is much stronger than the RSI’s when it comes to trend direction, due to the fact that volume is included in the calculation.
 
 ### Further information
-VTAD: [*http://vtadwiki.vtad.de/index.php/ Money\_Flow\_Index*]
+VTAD: <http://vtadwiki.vtad.de/index.php/ Money\_Flow\_Index>
 
 ### Usage
 ```cs
@@ -2401,7 +2401,7 @@ Kaufman also defines a maximum and minimum value for the calculation of the smoo
 For a more general interpretation of moving averages, please see the following chapter: [*Moving Averages*].
 
 ### Further information
-[*http://www.investor-verlag.de/boersenwissen/kama/*]
+<http://www.investor-verlag.de/boersenwissen/kama/>
 
 ### Usage
 ```cs
@@ -2448,7 +2448,7 @@ For more concise information, we recommend that you read Ehler’s paper.
 General information about moving averages can be found here: [*Moving Averages*].
 
 ### Further information
-[*http://www.tradesignalonline.com/de/lexicon/view.aspx?id=MAMA+adaptive+Moving+Average*]
+<http://www.tradesignalonline.com/de/lexicon/view.aspx?id=MAMA+adaptive+Moving+Average>
 
 ### Usage
 ```cs
@@ -2495,9 +2495,9 @@ The simple moving average has a couple of drawbacks, which is why several permut
 More general interpretations and meanings can be found here: [*Moving Averages*].
 
 ### Further information
-[*http://www.forex-trading-online.de/indikatoren/simple-moving-average-sma*]
+<http://www.forex-trading-online.de/indikatoren/simple-moving-average-sma>
 
-[*http://vtadwiki.vtad.de/index.php/SMA\#Average-Off-Berechnungsverfahren\_.28MMA.29*]
+<http://vtadwiki.vtad.de/index.php/SMA\#Average-Off-Berechnungsverfahren\_.28MMA.29>
 
 ### Usage
 ```cs
@@ -2551,7 +2551,7 @@ For more general information about moving averages, please see [*Moving Averages
 The SMMA is often used with the [*SuperTrend*] indicator.
 
 ### Further information
-[*http://www2.wealth-lab.com/wiki/SMMA.ashx*]
+<http://www2.wealth-lab.com/wiki/SMMA.ashx>
 
 ### Usage
 ```cs
@@ -2798,7 +2798,7 @@ Print("The current VWMA value is " + VWMA(14)[0]);
 The Weighted Moving Average is the most well-known of the weighted averages. It is used to identify and react to price changes more quickly. Current prices are given higher weighting than older values. An additional advantage is that bad signals in sideways markets are minimized. The WMA smoothes the price changes and allows for more efficient trade identification.
 
 ### Further information
-[*http://www.tradesignalonline.com/de/lexicon/view.aspx?id=Moving+Average+Weighted+%28WMA%29*]
+<http://www.tradesignalonline.com/de/lexicon/view.aspx?id=Moving+Average+Weighted+%28WMA%29>
 
 ### Usage
 ```cs
@@ -2832,7 +2832,7 @@ Print("The current value of the WMA is " + WMA(14)[0]);
 The Zero Lag Exponential Moving Average is another variant of the EMA. Here, zero lag means no delay i.e. the indicator adapts more closely to the price changes. The indicator achieves this by taking out older price data and reducing the cumulative effect to minimize the lag.
 
 ### Further information
-FMLabs: [*http://www.fmlabs.com/reference/default.htm?url=ZeroLagExpMA.htm*]
+FMLabs: <http://www.fmlabs.com/reference/default.htm?url=ZeroLagExpMA.htm>
 
 ### Usage
 ```cs
@@ -3125,9 +3125,9 @@ Wilder introduced the Parabolic Time/Price System in his 1978 book, *New Concep
 SAR follows price and can be considered a trend-following indicator. Once a downtrend reverses and starts up, SAR follows prices like a trailing stop. The stop continuously rises as long as the uptrend remains in place. In other words, SAR never decreases in an uptrend and continuously protects profits as prices advance. The indicator acts as a guard against the propensity to lower a stop-loss. Once price stops rising and reverses below SAR, a downtrend starts and SAR is above the price. SAR follows prices lower like a trailing stop. The stop continuously falls as long as the downtrend extends. Because SAR never rises in a downtrend, it continuously protects profits on short positions. (Source: Stockcharts.com)
 
 ### Further information
-VTAD: [*http://vtadwiki.vtad.de/index.php/Parabolic\_SAR*]
+VTAD: <http://vtadwiki.vtad.de/index.php/Parabolic\_SAR>
 
-Wikipedia: [*http://en.wikipedia.org/wiki/Parabolic\_SAR*]
+Wikipedia: <http://en.wikipedia.org/wiki/Parabolic\_SAR>
 
 ### Usage
 ```cs
@@ -3266,11 +3266,11 @@ The indicator shows the pivot points for intraday charts, and the “ShowPrices�
 Traders prefer to sell above the resistance lines 1 & 2 (e.g. to build up short positions), and to start building up tactical long positions at the support lines.
 
 ### Further information
-[*http://www.finanznachrichten.de/nachrichten-2008-01/9833653-was-sind-pivot-punkte-und-wie-kann-ich-sie-handeln-005.htm*]
+<http://www.finanznachrichten.de/nachrichten-2008-01/9833653-was-sind-pivot-punkte-und-wie-kann-ich-sie-handeln-005.htm>
 
-[*http://www.aktienboard.com/forum/f38/7-kapitel-pivot-points-t36428/*]
+<http://www.aktienboard.com/forum/f38/7-kapitel-pivot-points-t36428/>
 
-[*http://www.forexschule.com/schule/wie-man-mit-hilfe-von-pivot-punkten-handelt-50*]
+<http://www.forexschule.com/schule/wie-man-mit-hilfe-von-pivot-punkten-handelt-50>
 
 ### Usage
 ```cs
@@ -3522,7 +3522,7 @@ The Range Indicator (RIND) was developed by Jack Weinberg and published in 1954 
 When the span between the current close and the previous days close is bigger than the intraday span between high and low, the indicator will display a high value. This signals a potential trend change...
 
 ### Further information
-[*http://www.fmlabs.com/reference/default.htm?url=RangeIndicator.htm*]
+<http://www.fmlabs.com/reference/default.htm?url=RangeIndicator.htm>
 
 ### Usage
 ```cs
@@ -3564,7 +3564,7 @@ As long as the ROC is below 0, the downtrend is intact.
 Divergences between the indicator and the price development can hint to a trend change.
 
 ### Further information
-VTAD: [*http://vtadwiki.vtad.de/index.php/RoC*]
+VTAD: <http://vtadwiki.vtad.de/index.php/RoC>
 
 ### Usage
 ```cs
@@ -3647,7 +3647,7 @@ The RSI was developed by J. Welles Wilder and is one of the more popular and use
 Traditionally, and according to Wilder, RSI is considered overbought when above 70 and oversold when below 30. Signals can also be generated by searching for divergences, failure swings and centerline crossovers. RSI can also be used to identify the general trend. These traditional levels can also be adjusted to better fit the security or analytical requirements. Raising overbought to 80 or lowering oversold to 20 will reduce the number of overbought/oversold readings. Short-term traders sometimes use 2-period RSI to look for overbought readings above 80 and oversold readings below 20.
 
 ### Further information
-[*http://technische-analyse.eu/index.php?title=RSI*]
+<http://technische-analyse.eu/index.php?title=RSI>
 
 ### Usage
 ```cs
@@ -3727,7 +3727,7 @@ The standard deviation over a period of 10 is used to determine the underlying v
 Values above 50 assume an increase in volatility. Values below 50 imply a drop in volatility. Dorsey recommends using the indicator as a filter for other indicators.
 
 ### Further information
-[*http://vtadwiki.vtad.de/index.php/Relative\_Volatility\_Index\_%28RVI%29*]
+<http://vtadwiki.vtad.de/index.php/Relative\_Volatility\_Index\_%28RVI%29>
 
 ### Usage
 ```cs
@@ -3823,7 +3823,7 @@ If the prices are in a sideways movement, the data is scattered around the regre
 In a strong trend phase, the prices will remain within a tight range for an extended period of time; if these are located close to the regression line then the R-Squared indicator will have a value of 1. Stanley Kroll and Tuchar Chande used the correlation coefficient as a trend filter in their book “*The new technical trader*”.
 
 ### Further information
-[*http://www.blastchart.com/Community/IndicatorGuide/Indicators/LinearRegressionRSquared.aspx*]
+<http://www.blastchart.com/Community/IndicatorGuide/Indicators/LinearRegressionRSquared.aspx>
 
 ### Usage
 ```cs
@@ -3860,7 +3860,7 @@ The Standard Deviation ![StandardDeviation(StdDev)](./media/image91.png)(StdDev)
 A lower standard deviation implies that the data points are located very close to their median value. The trading application assumes that prices will return to their median value.
 
 ### Further information
-VTAD: [*http://vtadwiki.vtad.de/index.php/Standard\_Abweichung*]
+VTAD: <http://vtadwiki.vtad.de/index.php/Standard\_Abweichung>
 
 ### Usage
 ```cs
@@ -3898,7 +3898,7 @@ The subtraction of two standard errors from the final value of the regression li
 One of the applications of the standard error bands is the tightening of the bands when prices rise/fall. If the bands tighten, it signifies that a trend is currently in place. A strong trend will continue to tighten the bands.
 
 ### Further information
-[*http://www.forexrealm.com/technical-analysis/technical-indicators/standard-error-bands.html*]
+<http://www.forexrealm.com/technical-analysis/technical-indicators/standard-error-bands.html>
 
 ### Usage
 ```cs
@@ -3959,7 +3959,7 @@ The closing prices found in the upper area imply an accumulation (buying pressur
 The stochastic indicator is a classic oscillator, and is primarily used in sideways markets in order to determine the reversal points. Days with a stable trend will not provide the indicator with any relevant or valuable results/information.
 
 ### Further information
-VTAD: [*http://vtadwiki.vtad.de/index.php/Stochastik*]
+VTAD: <http://vtadwiki.vtad.de/index.php/Stochastik>
 
 ### Usage
 ```cs
@@ -4009,9 +4009,9 @@ See [*stochastics*].
 Closing prices that are constantly in the upper area indicate accumulation (i.e. buying pressure), whilst the distribution (i.e. selling pressure) is shown by an indicator value in the lower area.
 
 ### Further information
-VTAD: [*http://vtadwiki.vtad.de/index.php/Stochastik*]
+VTAD: <http://vtadwiki.vtad.de/index.php/Stochastik>
 
-[*http://www.charttec.de/html/indikator\_stochastics.php*]
+Charttec: <http://www.charttec.de/html/indikator\_stochastics.php>
 
 ### Usage
 ```cs
@@ -4059,7 +4059,7 @@ This is a calculation of the stochastic based on of the RSI indicator.
 The indicator provides fast and precise extreme values/points in the price movements. The StochRSI can be used as a trend filter in higher timeframes as well as a tool for better entry timing.
 
 ### Further information
-[*http://www.investopedia.com/terms/s/stochrsi.asp\#axzz263tizhIG*]
+<http://www.investopedia.com/terms/s/stochrsi.asp\#axzz263tizhIG>
 
 ### Usage
 ```cs
@@ -4206,7 +4206,7 @@ Resistance due to a higher low (ColorHigherLow)
 S/R zones play an important role in technical analysis. Clearly defined and identifiable support areas provide favorable entry opportunities, while resistance areas provide target zones to exit those trades.
 Once broken, these areas tend to reverse their function, meaning that a broken support zone becomes a resistance zone.
 
-[*http://finanzportal.wiwi.uni-saarland.de/tech/Kapitel5\_4.htm*]
+<http://finanzportal.wiwi.uni-saarland.de/tech/Kapitel5\_4.htm>
 
 ### Parameters
 |                   |                                                                                                  |
@@ -4279,7 +4279,7 @@ The TSF reacts faster than the moving averages. These always have time delays wh
 An entry is placed when the price breaks the TSF line from bottom to top.
 
 ### Further information
-[*http://en.wikipedia.org/wiki/Time\_series*]
+<http://en.wikipedia.org/wiki/Time\_series>
 
 ### Usage
 ```cs
@@ -4721,7 +4721,7 @@ Typically, momentum oscillators are early/preemptive indicators of price changes
 The TSI line moves between 100 and -100. Most values are between +25 and -25. These trigger lines can be used to anticipate overbought or oversold situations. A rising TSI signals an uptrend, while falling TSI suggests a downtrend.
 
 ### Further information
-[*http://en.wikipedia.org/wiki/True\_strength\_index*]
+<http://en.wikipedia.org/wiki/True\_strength\_index>
 
 ### Usage
 ```cs
@@ -4805,7 +4805,7 @@ Print("The current value for the Ultimate Oscillator is " + UltimateOscillator(7
 This is the volume for the shares, futures, ETFs etc. traded within a certain time period.
 
 ### Further information
-[*http://de.wikipedia.org/wiki/Volumenanalyse*]
+<http://de.wikipedia.org/wiki/Volumenanalyse>
 
 ### Usage
 ```cs
@@ -4853,7 +4853,7 @@ After three successive volume spikes, it becomes much less likely that the situa
 Here, you can find more general information about *Moving Averages*.
 
 ### Further information
-[*Volumen-Analyse.de*](http://www.volumen-analyse.de)
+Volumen-Analyse.de: <http://www.volumen-analyse.de>
 
 ### Usage
 ```cs
@@ -4942,7 +4942,7 @@ Rising prices are accompanied by a rising VROC within the positive area.
 A shrinking VROC during rising prices may hint to a trend change about to occur.
 
 ### Further information
-[*http://www.shareholder24.de/boersensoftware-wiki/pages/viewpage.action?pageId=9207904*](http://www.shareholder24.de/boersensoftware-wiki/pages/viewpage.action?pageId=9207904)
+<http://www.shareholder24.de/boersensoftware-wiki/pages/viewpage.action?pageId=9207904>
 
 ### Usage
 ```cs
@@ -5024,7 +5024,7 @@ The centerline, -50, is an important level to watch. Williams %R moves between 0
 Low readings (below -80) indicate that the price is near its low for the given time period. High readings (above -20) indicate that the price is near its high for the given time period.
 
 ### Further information
-[*http://www.broker-test.de/finanzwissen/technische-analyse/williams-percent-r/*](http://www.broker-test.de/finanzwissen/technische-analyse/williams-percent-r/)
+<http://www.broker-test.de/finanzwissen/technische-analyse/williams-percent-r/>
 
 ### Usage
 ```cs
@@ -5065,7 +5065,7 @@ The previous extreme values (local highs or lows) are ideally suited for either 
 **Caution:** The ZigZag is not an indicator in the common sense. Position and direction of the zigzag can change retrospectively (repainting indicator).
 
 ### Further information
-[*http://www.robotrading.de/indikatoren/zig-zag-indikator-zeigt-hoch-und-tief-punkte-im-forex-markt*](http://www.robotrading.de/indikatoren/zig-zag-indikator-zeigt-hoch-und-tief-punkte-im-forex-markt)
+<http://www.robotrading.de/indikatoren/zig-zag-indikator-zeigt-hoch-und-tief-punkte-im-forex-markt>
 
 ### Usage
 ```cs

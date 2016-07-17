@@ -388,7 +388,7 @@
 </ol>
 <p>If the ADL is rising in an uptrend, then money is flowing in the direction of the rising prices, thus the uptrend is confirmed. If the ADL is falling in a downward trend, money is being taken out of the stock, thus confirming the downtrend.</p>
 <h3 id="further-information">Further information</h3>
-<p><a href="http://vtadwiki.vtad.de/index.php/Accumulation_Distribution_Linie"><em>VTADWiki</em></a></p>
+<p><a href="http://vtadwiki.vtad.de/index.php/Accumulation_Distribution_Linie">http://vtadwiki.vtad.de/index.php/Accumulation_Distribution_Linie</a></p>
 <h3 id="usage">Usage</h3>
 <pre><code class="cs">ADL()
 ADL(IDataSeries input)
@@ -415,7 +415,7 @@ Print(&quot;The ADL indicator is rising.&quot;);
 <h3 id="interpretation_1">Interpretation</h3>
 <p>The bigger the price movement, the greater the distance between the upper and lower band will be. The smaller the price movement, the smaller the distance between the bands. More widely spaced bands will indicate increased instability and volatility, whereas closely tuned bands will display reduced volatility. If the price action breaks through the upper or lower band then the APZ will tend to return to its statistical average. This will lead to trading opportunities where the market may try to compensate for imbalances. If the price overshoots the bands for example, as mentioned in the description, then this will present you with a trading opportunity in the opposite direction.</p>
 <h3 id="further-information_1">Further information</h3>
-<p><a href="http://www.investopedia.com/articles/trading/10/adaptive-price-zone-indicator-explained.asp*"><em>http://www.investopedia.com/articles/trading/10/adaptive-price-zone-indicator-explained.asp</em></a></p>
+<p><a href="http://www.investopedia.com/articles/trading/10/adaptive-price-zone-indicator-explained.asp">http://www.investopedia.com/articles/trading/10/adaptive-price-zone-indicator-explained.asp</a></p>
 <h3 id="usage_1">Usage</h3>
 <pre><code class="cs">APZ(double barPct, int period)
 APZ(IDataSeries input, double barPct, int period)
@@ -449,7 +449,7 @@ Print(&quot;Value for the lower APZ band: &quot; + APZ(2, 20).Lower[0]);
 <p>The Aroon indicators fluctuate above/below a centerline (50) and are bound between 0 and 100. These three levels are important for interpretation. At its most basic, the bulls have the edge when Aroon-Up is above 50 and Aroon-Down is below 50. This indicates a greater propensity for new x-day highs than lows. The converse is true for a downtrend. The bears have the edge when Aroon-Up is below 50 and Aroon-Down is above 50.</p>
 <p>A surge to 100 indicates that a trend may be emerging. This can be confirmed with a decline in the other Aroon indicator. For example, a move to 100 in Aroon-Up combined with a decline below 30 in Aroon-Down shows upside strength. Consistently high readings mean prices are regularly hitting new highs or new lows for the specified period. Prices are moving consistently higher when Aroon-Up remains in the 70-100 range for an extended period. Conversely, consistently low readings indicate that prices are seldom hitting new highs or lows. Prices are NOT moving lower when Aroon-Down remains in the 0-30 range for an extended period. This does not mean prices are moving higher though. For that we need to check Aroon-Up.</p>
 <h3 id="further-information_2">Further information</h3>
-<p><a href="http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:aroon"><em>VTAD</em></a></p>
+<p><a href="http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:aroon">http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:aroon</a></p>
 <h3 id="usage_2">Usage</h3>
 <pre><code class="cs">Aroon(int period)
 Aroon(IDataSeries input, int period)
@@ -508,7 +508,7 @@ Print(&quot;Value for the oscillator is: &quot; + AroonOscillator(20)[0]);
 <p>The Average Directional Index (ADX) is used to measure the strength or weakness of a trend, not the actual direction. Directional movement is defined by +DI and -DI. In general, the bulls have the edge when +DI is greater than -DI, while the bears have the edge when -DI is greater. Crosses of these directional indicators can be combined with ADX for a complete trading system.</p>
 <p>It should be kept in mind that Wilder was a commodity and currency trader. The examples in his books are based on these instruments, not stocks. This does not mean his indicators cannot be used with stocks. Some stocks have price characteristics similar to commodities, which tend to be more volatile with short and strong trends. Stocks with low volatility may not generate signals based on Wilder's parameters. Chartists will likely need to adjust the indicator settings or the signal parameters according to the characteristics of the security.</p>
 <h3 id="further-information_3">Further information</h3>
-<p><a href="http://de.wikipedia.org/wiki/Average_Directional_Movement_Index"><em>Wikipedia</em></a></p>
+<p><a href="http://de.wikipedia.org/wiki/Average_Directional_Movement_Index">http://de.wikipedia.org/wiki/Average_Directional_Movement_Index</a></p>
 <h3 id="usage_4">Usage</h3>
 <pre><code class="cs">ADX(int period)
 ADX(IDataSeries input, int period)
@@ -567,7 +567,7 @@ Print(&quot;Value of the ADXR: &quot; + ADXR(10, 14)[0]);
 -   Method 3: current Low minus the previous close (absolute value)</p>
 <p>Absolute values are used to ensure positive numbers. After all, Wilder was interested in measuring the distance between two points, not the direction. If the current period's high is above the prior period's high and the low is below the prior period's low, then the current period's high-low range will be used as the True Range. This is an outside day that would use method 1 to calculate the TR. This is pretty straightforward. Methods 2 and 3 are used when there is a gap or an inside day. A gap occurs when the previous close is greater than the current high (signaling a potential gap down or limit move) or the previous close is lower than the current low (signaling a potential gap up or limit move). The image below shows examples of when methods 2 and 3 are appropriate.</p>
 <h3 id="further-information_4">Further information</h3>
-<p><a href="http://vtadwiki.vtad.de/index.php/Average_True_Range"><em>VTAD</em></a></p>
+<p>VTAD: <a href="http://vtadwiki.vtad.de/index.php/Average_True_Range">http://vtadwiki.vtad.de/index.php/Average_True_Range</a></p>
 <h3 id="usage_6">Usage</h3>
 <pre><code class="cs">ATR(int period)
 ATR(IDataSeries input, int period)
@@ -625,7 +625,7 @@ Middle band = average of 20 periods
 Lower band = middle period – 2 standard deviations</p>
 <p>More information can be found here: [<em>BollingerMTF</em>], [<em>Bollinger Percent %B</em>], [<em>Bollinger Bands Width</em>]</p>
 <h3 id="further-information_5">Further information</h3>
-<p>VTAD: [<em>http://vtadwiki.vtad.de/index.php/Bollinger_B%C3%A4nder</em>]</p>
+<p>VTAD: <a href="http://vtadwiki.vtad.de/index.php/Bollinger_B%C3%A4nder">http://vtadwiki.vtad.de/index.php/Bollinger_B%C3%A4nder</a></p>
 <p>Book "Technische Indikatoren - simplified" by Oliver Paesler (German only)</p>
 <h3 id="usage_8">Usage</h3>
 <pre><code class="cs">Bollinger(double numStdDev, int period)
@@ -672,7 +672,7 @@ John Bollinger provides several parameters for the %b calculation, such as 40-da
 <p>(Sources: Oliver Paesler: "Technische Indikatoren - simplified" and John Bollinger: "Bollinger Bänder")</p>
 <p>(Source: [<em>tradesignalonline</em>])</p>
 <h3 id="further-information_6">Further information</h3>
-<p>VTAD: [<em>http://vtadwiki.vtad.de/index.php/Bollinger_B%C3%A4nder</em>]</p>
+<p>VTAD: <a href="http://vtadwiki.vtad.de/index.php/Bollinger_B%C3%A4nder">http://vtadwiki.vtad.de/index.php/Bollinger_B%C3%A4nder</a></p>
 <p>Book "Technische Indikatoren - simplified" by Oliver Paesler (German only)</p>
 <h3 id="usage_9">Usage</h3>
 <pre><code class="cs">BollingerPercentB(int period, double numStdDev)
@@ -700,7 +700,7 @@ BollingerPercentB(IDataSeries input, int period, double numStdDev)[int barsAgo]
 <h3 id="interpretation_7">Interpretation</h3>
 <p>John Bollinger uses the Band Width to recognize rising and falling trends. Most trends have their origins within sideway market movements that generally have a low volatility. If a breakout is accompanied by a sudden rise in the Band Width, this means that there is definite support for the move.</p>
 <h3 id="further-information_7">Further information</h3>
-<p>VTAD: [<em>http://vtadwiki.vtad.de/index.php/Bollinger_B%C3%A4nder</em>]</p>
+<p>VTAD: <a href="http://vtadwiki.vtad.de/index.php/Bollinger_B%C3%A4nder">http://vtadwiki.vtad.de/index.php/Bollinger_B%C3%A4nder</a></p>
 <p>Book "Technische Indikatoren - simplified" by Oliver Paesler (German only)</p>
 <h3 id="usage_10">Usage</h3>
 <pre><code class="cs">BBWidth(double numStdDev, int period)
@@ -818,7 +818,7 @@ Print(&quot;The BuySellVolume is: &quot; + BuySellVolume()[0]);
 <p>This indicator searches for specific candlestick formations.</p>
 <h3 id="further-information_8">Further information</h3>
 <p>Explanations of the formations and their interpretations can be found here:
-[<em>http://en.wikipedia.org/wiki/Candlestick_pattern</em>]</p>
+<a href="http://en.wikipedia.org/wiki/Candlestick_pattern">http://en.wikipedia.org/wiki/Candlestick_pattern</a></p>
 <h3 id="usage_13">Usage</h3>
 <pre><code class="cs">CandleStickPattern(ChartPattern pattern, int trendStrength)
 CandleStickPattern(IDataSeries input, ChartPattern pattern, int trendStrength)
@@ -971,7 +971,7 @@ Print(&quot;Pattern ShootingStar found!&quot;);
 <h3 id="interpretation_8">Interpretation</h3>
 <p>The CMF oscillates around the zero line and is shown in a separate window with an open scale. Should the CMF be located above the zero line, then it can be interpreted as accumulation. If higher highs are being created, then the buying pressure is increasing. The reverse is true for the selling pressure. The Chaikin Money Flow should always be used in combination with other methods of technical analysis.</p>
 <h3 id="further-information_9">Further information</h3>
-<p>VTAD: [<em>http://vtadwiki.vtad.de/index.php/Chaikin_Money_Flow</em>]</p>
+<p>VTAD: <a href="http://vtadwiki.vtad.de/index.php/Chaikin_Money_Flow">http://vtadwiki.vtad.de/index.php/Chaikin_Money_Flow</a></p>
 <h3 id="usage_14">Usage</h3>
 <pre><code class="cs">ChaikinMoneyFlow(int period)
 ChaikinMoneyFlow(IDataSeries input, int period)
@@ -1050,7 +1050,7 @@ Print(&quot;The value of the Chaikin Volatility is: &quot; + ChaikinVolatility(1
 <h3 id="interpretation_11">Interpretation</h3>
 <p><strong>The security is deemed overbought when the momentum oscillator is above +50 and oversold when it is below -50. Many technical traders add a nine-period moving average to this oscillator to act as a signal line. Bullish signals are generated when the oscillator crosses above the signal, and bearish signals are generated when the oscillator crosses down through the signal.</strong></p>
 <h3 id="further-information_10">Further information</h3>
-<p>[<em>http://www.boersenwissen.de/content/content_bin/cont_bin18.html</em>]</p>
+<p><a href="http://www.boersenwissen.de/content/content_bin/cont_bin18.html">http://www.boersenwissen.de/content/content_bin/cont_bin18.html</a></p>
 <h3 id="usage_17">Usage</h3>
 <pre><code class="cs">CMO(int period)
 CMO(IDataSeries input, int period)
@@ -1079,7 +1079,7 @@ Print(&quot;The current value for the Chande Momentum Oscillator is: &quot; + CM
 <p>The Commodity Channel Index (CCI) can be used as either a coincident or leading indicator. As a coincident indicator, surges above +100 reflect strong price action that can signal the start of an uptrend. Plunges below -100 reflect weak price action that can signal the start of a downtrend.</p>
 <p>As a [<em>leading indicator</em>][momentum oscillators], chartists can look for overbought or oversold conditions that may foreshadow a mean reversion. Similarly, bullish and bearish divergences can be used to detect early momentum shifts and anticipate trend reversals.</p>
 <h3 id="further-information_11">Further information</h3>
-<p>VTAD: [<em>http://vtadwiki.vtad.de/index.php/Commodity_Channel_Index</em>]</p>
+<p>VTAD: <a href="http://vtadwiki.vtad.de/index.php/Commodity_Channel_Index">http://vtadwiki.vtad.de/index.php/Commodity_Channel_Index</a></p>
 <h3 id="usage_18">Usage</h3>
 <pre><code class="cs">CCI(int period)
 CCI(IDataSeries input, int period)
@@ -1109,8 +1109,8 @@ If a stock does not form a new high after three consecutive days, then the high 
 <h3 id="interpretation_13">Interpretation</h3>
 <p>This system is similar to a trend-following channel breakout system. As soon as one of these boxes breaks out, a new buy or sell signal is generated.</p>
 <h3 id="further-information_12">Further information</h3>
-<p>Here you can read about a trading system based on the Darvas boxes. (German only)</p>
-<p>[<em>http://www.eusdoni.de/index.php?option=com_content&amp;view=article&amp;catid=13:eusdoni-version-3&amp;id=42:darvas-boxen</em>]</p>
+<p>Here you can read about a trading system based on the Darvas boxes. (German only)
+<a href="http://www.eusdoni.de/index.php?option=com_content&amp;view=article&amp;catid=13:eusdoni-version-3&amp;id=42:darvas-boxen">http://www.eusdoni.de/index.php?option=com_content&amp;view=article&amp;catid=13:eusdoni-version-3&amp;id=42:darvas-boxen</a></p>
 <h3 id="usage_19">Usage</h3>
 <pre><code class="cs">Darvas()
 Darvas(IDataSeries input)
@@ -1177,7 +1177,7 @@ Print(&quot;The current –DM value is: &quot; + DM(14).DiMinus[0]);
 <p>The Donchian channel is also known as the 4-week-rule and works in the following manner: when the current price peaks above the high of the past 4 weeks, a new long position is opened. If a short position is open at the time, then this is closed. The reverse applies to shorts.
 The trading system for the Donchian channel is a pure trend-following system based on the concept “buy when it’s strong, sell when it’s weak”. This breakout system was also used by the “Turtles”. With this indicator, the highs and lows of the last n days are displayed as lines above and below the price development. The 20 days represent 4 weeks.</p>
 <h3 id="further-information_14">Further information</h3>
-<p>VTAD: [<em>http://vtadwiki.vtad.de/index.php/Donchian_Channel</em>]</p>
+<p>VTAD: <a href="http://vtadwiki.vtad.de/index.php/Donchian_Channel">http://vtadwiki.vtad.de/index.php/Donchian_Channel</a></p>
 <h3 id="usage_21">Usage</h3>
 <pre><code class="cs">DonchianChannel(int period)
 DonchianChannel(IDataSeries input, int period)
@@ -1220,7 +1220,7 @@ Print(&quot;The lower band is at: &quot; + DonchianChannel(14).Lower[0]);
 <h3 id="interpretation_15">Interpretation</h3>
 <p>The DMI shows the strength of the trend, but not the trend direction. This means that it is particularly suited as a filter for trading systems employing the Parabolic SAR, for example, in order to filter out sideways phases. When the DMI rises (especially above 25), a trend is displayed; anything below that is recognized as a sideways phase. The +DI and the –DI point towards a trend. An uptrend is classified when the +DI is above the –DI. The further apart they drift, the stronger the trend.</p>
 <h3 id="further-information_15">Further information</h3>
-<p>VTAD: [<em>http://vtadwiki.vtad.de/index.php/DMI_-_Directional_Movement_Index</em>]</p>
+<p>VTAD: <a href="http://vtadwiki.vtad.de/index.php/DMI_-_Directional_Movement_Index">http://vtadwiki.vtad.de/index.php/DMI_-_Directional_Movement_Index</a></p>
 <h3 id="usage_22">Usage</h3>
 <pre><code class="cs">DMI(int period)
 DMI(IDataSeries input, int period)
@@ -1291,7 +1291,7 @@ Chande altered the Dynamic Momentum Index in such a way that the period settings
 <h3 id="interpretation_17">Interpretation</h3>
 <p>If the DMI is inside the oversold zone, it is reasonable to assume that prices are going to start to fall.</p>
 <h3 id="further-and-more-concise-information">Further and more concise information</h3>
-<p>VTAD: [<em>http://vtadwiki.vtad.de/index.php/Dynamic_Momentum_Index</em>]</p>
+<p>VTAD: <a href="http://vtadwiki.vtad.de/index.php/Dynamic_Momentum_Index">http://vtadwiki.vtad.de/index.php/Dynamic_Momentum_Index</a></p>
 <h3 id="usage_24">Usage</h3>
 <pre><code class="cs">DMIndex(int smooth)
 DMIndex(IDataSeries input, int smooth)
@@ -1318,7 +1318,7 @@ Print(&quot;The current value for the DMIndex is: &quot; + DMIndex(3)[0]);
 <h3 id="interpretation_18">Interpretation</h3>
 <p>When the EOM is moving away from the zero line (marker) then an impulse has begun in that direction. During a breakout onto the opposite side of the zero line, it is recommended to enter with the trend direction.</p>
 <h3 id="further-information_16">Further information</h3>
-<p>[<em>http://www.volumen-analyse.de</em>]</p>
+<p><a href="http://www.volumen-analyse.de">http://www.volumen-analyse.de</a></p>
 <h3 id="usage_25">Usage</h3>
 <pre><code class="cs">EaseOfMovement(int smoothing, int volDivisor)
 EaseOfMovement(IDataSeries input, int smoothing, int volDivisor)
@@ -1350,7 +1350,7 @@ Print(&quot;The value for the Ease of Movement is: &quot; + EaseOfMovement(14, 1
 <p>This indicator was developed by the physicist John Ehlers in 2002. The aim of the indicator is to illustrate turning points. This is achieved by using the Inverse Fisher Transform, which changes indicators in such a way that the movements are less random and the signal quality is improved. The transform compresses or stretches the input values of the function in such a way that the output is highly likely to be between -1 and 1. This results in a clearly identifiable pattern where even indicators such as the RSI become clearer and more precise.</p>
 <h3 id="interpretation_19">Interpretation</h3>
 <p>A system using the Fisher Transform can be found here:
-[<em>https://www.prorealtime.com/de/pdf/probacktest.pdf</em>]</p>
+<a href="https://www.prorealtime.com/de/pdf/probacktest.pdf">https://www.prorealtime.com/de/pdf/probacktest.pdf</a></p>
 <h3 id="parameters_23">Parameters</h3>
 <p>input Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
@@ -1376,7 +1376,7 @@ Print(&quot;The current value for the Fisher Transform is: &quot; + FisherTransf
 <p>The Forecast Oscillator compares the current price with the value returned by the Time Series Forecast study. It is calculated as a percentage ratio of the difference between the close price and the value of the Time Series Forecast for the previous bar.</p>
 <p>When the oscillator shows positive values, it suggests that the Time Series Forecast has underestimated the price, and negative values indicate that the actual price is lower than what was predicted by the TSF. Normally, the Forecast Oscillator line is also accompanied by an SMA to search for the oscillator reversals.</p>
 <h3 id="further-information_17">Further information</h3>
-<p>FMLabs: [<em>http://www.fmlabs.com/reference/default.htm?url=ForecastOscillator.htm</em>]</p>
+<p>FMLabs: <a href="http://www.fmlabs.com/reference/default.htm?url=ForecastOscillator.htm">http://www.fmlabs.com/reference/default.htm?url=ForecastOscillator.htm</a></p>
 <h3 id="parameters_24">Parameters</h3>
 <p>input Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
@@ -1463,11 +1463,11 @@ The cloud (Kumo) is the area between Senkou Span A and Senkou Span B. This area 
 <h3 id="interpretation_20">Interpretation</h3>
 <p>Similarly to the smoothing averages, the Ichimoku indicator will create a bullish signal when the Tenkan Sen crosses over the Kinjun Sen from below.</p>
 <h3 id="further-information_18">Further information</h3>
-<p>[<em>http://de.wikipedia.org/wiki/Ichimoku</em>]</p>
-<p>[<em>http://www.forexabode.com/technical-analysis/ichimoku-cloud</em>]</p>
-<p>[<em>http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:ichimoku_cloud</em>]</p>
-<p>[<em>http://www.forexonlinegeheimnisse.com/ichimoku-kinko-hyo-teil-i#top</em>] (Part 1, German)
-[<em>http://www.forexonlinegeheimnisse.com/ichimoku-kinko-hyo-teil-ii-das-perfekte-kauf-oder-verkaufssignal#top</em>] (Part 2, German)</p>
+<p><a href="http://de.wikipedia.org/wiki/Ichimoku">http://de.wikipedia.org/wiki/Ichimoku</a></p>
+<p><a href="http://www.forexabode.com/technical-analysis/ichimoku-cloud">http://www.forexabode.com/technical-analysis/ichimoku-cloud</a></p>
+<p><a href="http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:ichimoku_cloud">http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:ichimoku_cloud</a></p>
+<p><a href="http://www.forexonlinegeheimnisse.com/ichimoku-kinko-hyo-teil-i#top">http://www.forexonlinegeheimnisse.com/ichimoku-kinko-hyo-teil-i#top</a> (Part 1, German)</p>
+<p><a href="http://www.forexonlinegeheimnisse.com/ichimoku-kinko-hyo-teil-ii-das-perfekte-kauf-oder-verkaufssignal#top">http://www.forexonlinegeheimnisse.com/ichimoku-kinko-hyo-teil-ii-das-perfekte-kauf-oder-verkaufssignal#top</a> (Part 2, German)</p>
 <h3 id="usage_30">Usage</h3>
 <pre><code class="cs">IchimokuCloud(int periodFast, int periodMedium, int periodSlow)
 IchimokuCloud(IDataSeries input, int periodFast, int periodMedium, int periodSlow)
@@ -1569,7 +1569,7 @@ Lower channel line: 20-day EMA – (2xATR(10))</p>
 <p>With an exponential [<em>moving average</em>][<em>average</em>] as their foundation, the Keltner Channels are a trend-following indicator. As with moving averages and trend-following indicators, Keltner Channels lag price action. The direction of the moving average dictates the direction of the channel. In general, a downtrend is present when the channel moves lower, while an uptrend exists when the channel moves higher. The trend is flat when the channel moves sideways.</p>
 <p>A channel upturn and break above the upper trend line can signal the start of an uptrend. A channel downturn and break below the lower trend line can signal the start a downtrend. Sometimes a strong trend does not take hold after a channel breakout and prices oscillate between the channel lines. Such trading ranges are marked by a relatively flat moving average. The channel boundaries can then be used to identify overbought and oversold levels for trading purposes.</p>
 <h3 id="further-information_19">Further information</h3>
-<p>VTAD: http://vtadwiki.vtad.de/index.php/Keltner_Channel</p>
+<p>VTAD: <a href="http://vtadwiki.vtad.de/index.php/Keltner_Channel">http://vtadwiki.vtad.de/index.php/Keltner_Channel</a></p>
 <h3 id="usage_32">Usage</h3>
 <pre><code class="cs">KeltnerChannel(double offsetMutiplier, int period)
 KeltnerChannel(IDataSeries input, double offsetMutiplier, int period)
@@ -1791,7 +1791,7 @@ Print(&quot;A short reversal formation has occurred.&quot;);
 The indicator provides the end values of multiple linear regression trend lines. Every point along this indicator is thus an end value of a linear regression trend line. The result is similar to a smoothing average, with the difference being that the regression line has less lag.</p>
 <p>See [<em>R-Squared</em>], [<em>LinRegSlope</em>], [<em>LinRegIntercept</em>].</p>
 <h3 id="further-information_20">Further information</h3>
-<p>[<em>http://www.vtad.de/sites/files/forschung/vtad_Award_2011_Joachim_Lenz_Veroeffentlichung.pdf</em>]</p>
+<p><a href="http://www.vtad.de/sites/files/forschung/vtad_Award_2011_Joachim_Lenz_Veroeffentlichung.pdf">http://www.vtad.de/sites/files/forschung/vtad_Award_2011_Joachim_Lenz_Veroeffentlichung.pdf</a></p>
 <h3 id="interpretation_23">Interpretation</h3>
 <p>The linear regression indicator is used as a prognosis tool for the future developments of the instrument. If the prices are rising or falling steadily, then it can be expected that they will return to a more realistic/reasonable level. In other words: the indicator shows where the price should be, a deviation from the regression is assumed to be short-lived and to be corrected soon.</p>
 <h3 id="usage_39">Usage</h3>
@@ -1923,7 +1923,7 @@ Print(&quot;The lowest low of the last 14 bars is &quot; + LowestLowPrice(14)[0]
 <p>The MACD line oscillates above and below the zero line, which is also known as the centerline. These crossovers signal that the 12-day EMA has crossed the 26-day EMA. The direction, of course, depends on the direction of the moving average cross. Positive MACD indicates that the 12-day EMA is above the 26-day EMA. Positive values increase as the shorter EMA diverges further from the longer EMA. This means upside momentum is increasing. Negative MACD values indicate that the 12-day EMA is below the 26-day EMA. Negative values increase as the shorter EMA diverges further below the longer EMA. This means downside [momentum] is increasing. Signal line crossovers are the most common MACD signals. The signal line is a 9-day EMA of the MACD line. As a moving average of the indicator, it trails the MACD and makes it easier to spot MACD turns. A bullish crossover occurs when the MACD turns up and crosses above the signal line. A bearish crossover occurs when the MACD turns down and crosses below the signal line. Crossovers can last a few days or a few weeks, it all depends on the strength of the move.</p>
 <p>Due diligence is required before relying on these common signals. Signal line crossovers at positive or negative extremes should be viewed with caution. Even though the MACD does not have upper and lower limits, chartists can estimate historical extremes with a simple visual assessment. It takes a strong move in the underlying security to push momentum to an extreme. Even though the move may continue, momentum is likely to slow and this will usually produce a signal line crossover at the extremities. Volatility in the underlying security can also increase the number of crossovers.</p>
 <h3 id="further-information_21">Further information</h3>
-<p>VTAD: [<em>http://vtadwiki.vtad.de/index.php/MACD</em>]</p>
+<p>VTAD: <a href="http://vtadwiki.vtad.de/index.php/MACD">http://vtadwiki.vtad.de/index.php/MACD</a></p>
 <h3 id="usage_44">Usage</h3>
 <pre><code class="cs">MACD(int fast, int slow, int smooth)
 MACD(IDataSeries input, int fast, int slow, int smooth)
@@ -2062,7 +2062,7 @@ The momentum indicator is representative of a whole family of indicators that me
 <p>Entry signals are generated when the indicator crosses the zero line.</p>
 <p>See [<em>ROC</em>].</p>
 <h3 id="further-information_22">Further information</h3>
-<p>[<em>http://de.wikipedia.org/wiki/Momentum_%28Chartanalyse%29</em>]</p>
+<p><a href="http://de.wikipedia.org/wiki/Momentum_%28Chartanalyse%29">http://de.wikipedia.org/wiki/Momentum_%28Chartanalyse%29</a></p>
 <h3 id="usage_47">Usage</h3>
 <pre><code class="cs">Momentum(int period)
 Momentum (IDataSeries input, int period)
@@ -2089,7 +2089,7 @@ Print(&quot;The current value for the momentum is &quot; + Momentum(14)[0]);
 <h3 id="interpretation_28">Interpretation</h3>
 <p>The MFI is interpreted similarly to the RSI indicator. The MFI’s decisive factor is much stronger than the RSI’s when it comes to trend direction, due to the fact that volume is included in the calculation.</p>
 <h3 id="further-information_23">Further information</h3>
-<p>VTAD: [<em>http://vtadwiki.vtad.de/index.php/ Money_Flow_Index</em>]</p>
+<p>VTAD: <a href="http://vtadwiki.vtad.de/index.php/ Money_Flow_Index">http://vtadwiki.vtad.de/index.php/ Money_Flow_Index</a></p>
 <h3 id="usage_48">Usage</h3>
 <pre><code class="cs">MFI(int period)
 MFI(IDataSeries input, int period)
@@ -2248,7 +2248,7 @@ Print(&quot;The current HMA value is &quot; + HMA(21)[0]);
 Kaufman also defines a maximum and minimum value for the calculation of the smoothing components. The efficiency ratio is converted using specified maximum and minimum values, which are applied to newly incoming price changes. Kaufman uses 2 (short period) as a minimum value and 30 (long period) as a maximum value. The number of days for the determination of the efficiency ratio is one of the more important parameters for the KAMA.</p>
 <p>For a more general interpretation of moving averages, please see the following chapter: [<em>Moving Averages</em>].</p>
 <h3 id="further-information_24">Further information</h3>
-<p>[<em>http://www.investor-verlag.de/boersenwissen/kama/</em>]</p>
+<p><a href="http://www.investor-verlag.de/boersenwissen/kama/">http://www.investor-verlag.de/boersenwissen/kama/</a></p>
 <h3 id="usage_52">Usage</h3>
 <pre><code class="cs">KAMA(int fast, int period, int slow)
 KAMA(IDataSeries input, int fast, int period, int slow)
@@ -2281,7 +2281,7 @@ This indicator is a second line that is known as FAMA in various publications. T
 <p>For more concise information, we recommend that you read Ehler’s paper.</p>
 <p>General information about moving averages can be found here: [<em>Moving Averages</em>].</p>
 <h3 id="further-information_25">Further information</h3>
-<p>[<em>http://www.tradesignalonline.com/de/lexicon/view.aspx?id=MAMA+adaptive+Moving+Average</em>]</p>
+<p><a href="http://www.tradesignalonline.com/de/lexicon/view.aspx?id=MAMA+adaptive+Moving+Average">http://www.tradesignalonline.com/de/lexicon/view.aspx?id=MAMA+adaptive+Moving+Average</a></p>
 <h3 id="usage_53">Usage</h3>
 <pre><code class="cs">MAMA(double fastLimit, double slowLimit)
 MAMA(IDataSeries input, double fastLimit, double slowLimit)
@@ -2316,8 +2316,8 @@ The term “moving” comes from the fact that for this method of establishing a
 <p>The simple moving average has a couple of drawbacks, which is why several permutations of this indicator have been developed over the course of the years. Primarily, one of the biggest drawbacks is the lagging nature of the indicator and the equal weighting for all data inputs across the time intervals.</p>
 <p>More general interpretations and meanings can be found here: [<em>Moving Averages</em>].</p>
 <h3 id="further-information_26">Further information</h3>
-<p>[<em>http://www.forex-trading-online.de/indikatoren/simple-moving-average-sma</em>]</p>
-<p>[<em>http://vtadwiki.vtad.de/index.php/SMA#Average-Off-Berechnungsverfahren_.28MMA.29</em>]</p>
+<p><a href="http://www.forex-trading-online.de/indikatoren/simple-moving-average-sma">http://www.forex-trading-online.de/indikatoren/simple-moving-average-sma</a></p>
+<p><a href="http://vtadwiki.vtad.de/index.php/SMA#Average-Off-Berechnungsverfahren_.28MMA.29">http://vtadwiki.vtad.de/index.php/SMA#Average-Off-Berechnungsverfahren_.28MMA.29</a></p>
 <h3 id="usage_54">Usage</h3>
 <pre><code class="cs">SMA(int period)
 SMA(IDataSeries input, int period)
@@ -2355,7 +2355,7 @@ Generally speaking, it has about half of the value of an EMA, meaning that an SM
 <p>For more general information about moving averages, please see [<em>Moving Averages</em>].</p>
 <p>The SMMA is often used with the [<em>SuperTrend</em>] indicator.</p>
 <h3 id="further-information_27">Further information</h3>
-<p>[<em>http://www2.wealth-lab.com/wiki/SMMA.ashx</em>]</p>
+<p><a href="http://www2.wealth-lab.com/wiki/SMMA.ashx">http://www2.wealth-lab.com/wiki/SMMA.ashx</a></p>
 <h3 id="usage_55">Usage</h3>
 <pre><code class="cs">SMMA(int period)
 SMMA(IDataSeries input, int period)
@@ -2537,7 +2537,7 @@ Print(&quot;The current VWMA value is &quot; + VWMA(14)[0]);
 <h3 id="description_62">Description</h3>
 <p>The Weighted Moving Average is the most well-known of the weighted averages. It is used to identify and react to price changes more quickly. Current prices are given higher weighting than older values. An additional advantage is that bad signals in sideways markets are minimized. The WMA smoothes the price changes and allows for more efficient trade identification.</p>
 <h3 id="further-information_28">Further information</h3>
-<p>[<em>http://www.tradesignalonline.com/de/lexicon/view.aspx?id=Moving+Average+Weighted+%28WMA%29</em>]</p>
+<p><a href="http://www.tradesignalonline.com/de/lexicon/view.aspx?id=Moving+Average+Weighted+%28WMA%29">http://www.tradesignalonline.com/de/lexicon/view.aspx?id=Moving+Average+Weighted+%28WMA%29</a></p>
 <h3 id="usage_62">Usage</h3>
 <pre><code class="cs">WMA(int period)
 WMA(IDataSeries input, int period)
@@ -2562,7 +2562,7 @@ Print(&quot;The current value of the WMA is &quot; + WMA(14)[0]);
 <h3 id="description_63">Description</h3>
 <p>The Zero Lag Exponential Moving Average is another variant of the EMA. Here, zero lag means no delay i.e. the indicator adapts more closely to the price changes. The indicator achieves this by taking out older price data and reducing the cumulative effect to minimize the lag.</p>
 <h3 id="further-information_29">Further information</h3>
-<p>FMLabs: [<em>http://www.fmlabs.com/reference/default.htm?url=ZeroLagExpMA.htm</em>]</p>
+<p>FMLabs: <a href="http://www.fmlabs.com/reference/default.htm?url=ZeroLagExpMA.htm">http://www.fmlabs.com/reference/default.htm?url=ZeroLagExpMA.htm</a></p>
 <h3 id="usage_63">Usage</h3>
 <pre><code class="cs">ZLEMA(int period)
 ZLEMA(IDataSeries input, int period)
@@ -2819,8 +2819,8 @@ The name has an underscore (“_“) suffix in order to differentiate it.</p>
 <p>Wilder introduced the Parabolic Time/Price System in his 1978 book, <em>New Concepts in Technical Trading Systems</em>. This book also includes RSI, Average True Range (ATR), and the Directional Movement Concept (ADX). Despite being developed before the computer age, Wilder's indicators have stood the test of time and remain extremely popular.</p>
 <p>SAR follows price and can be considered a trend-following indicator. Once a downtrend reverses and starts up, SAR follows prices like a trailing stop. The stop continuously rises as long as the uptrend remains in place. In other words, SAR never decreases in an uptrend and continuously protects profits as prices advance. The indicator acts as a guard against the propensity to lower a stop-loss. Once price stops rising and reverses below SAR, a downtrend starts and SAR is above the price. SAR follows prices lower like a trailing stop. The stop continuously falls as long as the downtrend extends. Because SAR never rises in a downtrend, it continuously protects profits on short positions. (Source: Stockcharts.com)</p>
 <h3 id="further-information_30">Further information</h3>
-<p>VTAD: [<em>http://vtadwiki.vtad.de/index.php/Parabolic_SAR</em>]</p>
-<p>Wikipedia: [<em>http://en.wikipedia.org/wiki/Parabolic_SAR</em>]</p>
+<p>VTAD: <a href="http://vtadwiki.vtad.de/index.php/Parabolic_SAR">http://vtadwiki.vtad.de/index.php/Parabolic_SAR</a></p>
+<p>Wikipedia: <a href="http://en.wikipedia.org/wiki/Parabolic_SAR">http://en.wikipedia.org/wiki/Parabolic_SAR</a></p>
 <h3 id="usage_67">Usage</h3>
 <pre><code class="cs">ParabolicSAR(double acceleration, double accelerationStep, double accelerationMax)
 ParabolicSAR(IDataSeries input, double acceleration, double accelerationStep, double accelerationMax)
@@ -2947,9 +2947,9 @@ The indicator shows the pivot points for intraday charts, and the “ShowPrices�
 <h3 id="interpretation_41">Interpretation</h3>
 <p>Traders prefer to sell above the resistance lines 1 &amp; 2 (e.g. to build up short positions), and to start building up tactical long positions at the support lines.</p>
 <h3 id="further-information_31">Further information</h3>
-<p>[<em>http://www.finanznachrichten.de/nachrichten-2008-01/9833653-was-sind-pivot-punkte-und-wie-kann-ich-sie-handeln-005.htm</em>]</p>
-<p>[<em>http://www.aktienboard.com/forum/f38/7-kapitel-pivot-points-t36428/</em>]</p>
-<p>[<em>http://www.forexschule.com/schule/wie-man-mit-hilfe-von-pivot-punkten-handelt-50</em>]</p>
+<p><a href="http://www.finanznachrichten.de/nachrichten-2008-01/9833653-was-sind-pivot-punkte-und-wie-kann-ich-sie-handeln-005.htm">http://www.finanznachrichten.de/nachrichten-2008-01/9833653-was-sind-pivot-punkte-und-wie-kann-ich-sie-handeln-005.htm</a></p>
+<p><a href="http://www.aktienboard.com/forum/f38/7-kapitel-pivot-points-t36428/">http://www.aktienboard.com/forum/f38/7-kapitel-pivot-points-t36428/</a></p>
+<p><a href="http://www.forexschule.com/schule/wie-man-mit-hilfe-von-pivot-punkten-handelt-50">http://www.forexschule.com/schule/wie-man-mit-hilfe-von-pivot-punkten-handelt-50</a></p>
 <h3 id="usage_70">Usage</h3>
 <pre><code class="cs">PivotPoints()
 PivotPoints(PivotPointsMode mode)
@@ -3179,7 +3179,7 @@ Print(&quot;The current bar has a range of: &quot; + High[0] - Low[0]);
 <h3 id="interpretation_43">Interpretation</h3>
 <p>When the span between the current close and the previous days close is bigger than the intraday span between high and low, the indicator will display a high value. This signals a potential trend change...</p>
 <h3 id="further-information_32">Further information</h3>
-<p>[<em>http://www.fmlabs.com/reference/default.htm?url=RangeIndicator.htm</em>]</p>
+<p><a href="http://www.fmlabs.com/reference/default.htm?url=RangeIndicator.htm">http://www.fmlabs.com/reference/default.htm?url=RangeIndicator.htm</a></p>
 <h3 id="usage_74">Usage</h3>
 <pre><code class="cs">RIND(int periodQ, int smooth)
 RIND(IDataSeries input, int periodQ, int smooth)
@@ -3210,7 +3210,7 @@ The calculation compares the current price to the price of n periods ago.</p>
 As long as the ROC is below 0, the downtrend is intact.
 Divergences between the indicator and the price development can hint to a trend change.</p>
 <h3 id="further-information_33">Further information</h3>
-<p>VTAD: [<em>http://vtadwiki.vtad.de/index.php/RoC</em>]</p>
+<p>VTAD: <a href="http://vtadwiki.vtad.de/index.php/RoC">http://vtadwiki.vtad.de/index.php/RoC</a></p>
 <h3 id="usage_75">Usage</h3>
 <pre><code class="cs">ROC(int period)
 ROC(IDataSeries input, int period)
@@ -3275,7 +3275,7 @@ Print(&quot;The current RSS is &quot; + RSS (10, 40, 5)[0]);
 <h3 id="interpretation_46">Interpretation</h3>
 <p>Traditionally, and according to Wilder, RSI is considered overbought when above 70 and oversold when below 30. Signals can also be generated by searching for divergences, failure swings and centerline crossovers. RSI can also be used to identify the general trend. These traditional levels can also be adjusted to better fit the security or analytical requirements. Raising overbought to 80 or lowering oversold to 20 will reduce the number of overbought/oversold readings. Short-term traders sometimes use 2-period RSI to look for overbought readings above 80 and oversold readings below 20.</p>
 <h3 id="further-information_34">Further information</h3>
-<p>[<em>http://technische-analyse.eu/index.php?title=RSI</em>]</p>
+<p><a href="http://technische-analyse.eu/index.php?title=RSI">http://technische-analyse.eu/index.php?title=RSI</a></p>
 <h3 id="usage_77">Usage</h3>
 <pre><code class="cs">RSI(int period, int smooth)
 RSI(IDataSeries input, int period, int smooth)
@@ -3335,7 +3335,7 @@ The standard deviation over a period of 10 is used to determine the underlying v
 <h3 id="interpretation_47">Interpretation</h3>
 <p>Values above 50 assume an increase in volatility. Values below 50 imply a drop in volatility. Dorsey recommends using the indicator as a filter for other indicators.</p>
 <h3 id="further-information_35">Further information</h3>
-<p>[<em>http://vtadwiki.vtad.de/index.php/Relative_Volatility_Index_%28RVI%29</em>]</p>
+<p><a href="http://vtadwiki.vtad.de/index.php/Relative_Volatility_Index_%28RVI%29">http://vtadwiki.vtad.de/index.php/Relative_Volatility_Index_%28RVI%29</a></p>
 <h3 id="usage_79">Usage</h3>
 <pre><code class="cs">RVI(int period)
 RVI(IDataSeries input, int period)
@@ -3404,7 +3404,7 @@ Print(&quot;The last bar is a long reversal bar.&quot;);
 If the prices are in a sideways movement, the data is scattered around the regression line. R-Squared will have a value of 0 in the aforementioned situation.
 In a strong trend phase, the prices will remain within a tight range for an extended period of time; if these are located close to the regression line then the R-Squared indicator will have a value of 1. Stanley Kroll and Tuchar Chande used the correlation coefficient as a trend filter in their book “<em>The new technical trader</em>”.</p>
 <h3 id="further-information_36">Further information</h3>
-<p>[<em>http://www.blastchart.com/Community/IndicatorGuide/Indicators/LinearRegressionRSquared.aspx</em>]</p>
+<p><a href="http://www.blastchart.com/Community/IndicatorGuide/Indicators/LinearRegressionRSquared.aspx">http://www.blastchart.com/Community/IndicatorGuide/Indicators/LinearRegressionRSquared.aspx</a></p>
 <h3 id="usage_81">Usage</h3>
 <pre><code class="cs">RSquared(int period)
 RSquared(IDataSeries input, int period)
@@ -3431,7 +3431,7 @@ Print(&quot;The current value of R-Squared is: &quot; + RSquared(8)[0]);
 <h3 id="interpretation_50">Interpretation</h3>
 <p>A lower standard deviation implies that the data points are located very close to their median value. The trading application assumes that prices will return to their median value.</p>
 <h3 id="further-information_37">Further information</h3>
-<p>VTAD: [<em>http://vtadwiki.vtad.de/index.php/Standard_Abweichung</em>]</p>
+<p>VTAD: <a href="http://vtadwiki.vtad.de/index.php/Standard_Abweichung">http://vtadwiki.vtad.de/index.php/Standard_Abweichung</a></p>
 <h3 id="usage_82">Usage</h3>
 <pre><code class="cs">StdDev (int period)
 StdDev (IDataSeries input, int period)
@@ -3459,7 +3459,7 @@ The subtraction of two standard errors from the final value of the regression li
 <h3 id="interpretation_51">Interpretation</h3>
 <p>One of the applications of the standard error bands is the tightening of the bands when prices rise/fall. If the bands tighten, it signifies that a trend is currently in place. A strong trend will continue to tighten the bands.</p>
 <h3 id="further-information_38">Further information</h3>
-<p>[<em>http://www.forexrealm.com/technical-analysis/technical-indicators/standard-error-bands.html</em>]</p>
+<p><a href="http://www.forexrealm.com/technical-analysis/technical-indicators/standard-error-bands.html">http://www.forexrealm.com/technical-analysis/technical-indicators/standard-error-bands.html</a></p>
 <h3 id="usage_83">Usage</h3>
 <pre><code class="cs">StdError(int period)
 StdError(IDataSeries input, int period)
@@ -3508,7 +3508,7 @@ The %D is the basis on which the smoothing average is calculated. The slow stoch
 <p>The closing prices found in the upper area imply an accumulation (buying pressure); the lower area represents selling pressure.
 The stochastic indicator is a classic oscillator, and is primarily used in sideways markets in order to determine the reversal points. Days with a stable trend will not provide the indicator with any relevant or valuable results/information.</p>
 <h3 id="further-information_39">Further information</h3>
-<p>VTAD: [<em>http://vtadwiki.vtad.de/index.php/Stochastik</em>]</p>
+<p>VTAD: <a href="http://vtadwiki.vtad.de/index.php/Stochastik">http://vtadwiki.vtad.de/index.php/Stochastik</a></p>
 <h3 id="usage_84">Usage</h3>
 <pre><code class="cs">Stochastics(int periodD, int periodK, int smooth)
 Stochastics(IDataSeries input, int periodD, int periodK, int smooth)
@@ -3546,8 +3546,8 @@ Print(&quot;The stochastic line %D is currently at: &quot; + Stochastics(3, 14, 
 <h3 id="interpretation_53">Interpretation</h3>
 <p>Closing prices that are constantly in the upper area indicate accumulation (i.e. buying pressure), whilst the distribution (i.e. selling pressure) is shown by an indicator value in the lower area.</p>
 <h3 id="further-information_40">Further information</h3>
-<p>VTAD: [<em>http://vtadwiki.vtad.de/index.php/Stochastik</em>]</p>
-<p>[<em>http://www.charttec.de/html/indikator_stochastics.php</em>]</p>
+<p>VTAD: <a href="http://vtadwiki.vtad.de/index.php/Stochastik">http://vtadwiki.vtad.de/index.php/Stochastik</a></p>
+<p>Charttec: <a href="http://www.charttec.de/html/indikator_stochastics.php">http://www.charttec.de/html/indikator_stochastics.php</a></p>
 <h3 id="usage_85">Usage</h3>
 <pre><code class="cs">StochasticsFast(int periodD, int periodK)
 StochasticsFast(IDataSeries input, int periodD, int periodK)
@@ -3584,7 +3584,7 @@ Print(&quot;The stochastic line %D is currently at: &quot; + StochasticsFast(3, 
 <h3 id="interpretation_54">Interpretation</h3>
 <p>The indicator provides fast and precise extreme values/points in the price movements. The StochRSI can be used as a trend filter in higher timeframes as well as a tool for better entry timing.</p>
 <h3 id="further-information_41">Further information</h3>
-<p>[<em>http://www.investopedia.com/terms/s/stochrsi.asp#axzz263tizhIG</em>]</p>
+<p><a href="http://www.investopedia.com/terms/s/stochrsi.asp#axzz263tizhIG">http://www.investopedia.com/terms/s/stochrsi.asp#axzz263tizhIG</a></p>
 <h3 id="usage_86">Usage</h3>
 <pre><code class="cs">StochRSI(int period)
 StochRSI(IDataSeries input, int period)
@@ -3787,7 +3787,7 @@ if (Close[0] &lt; SuperTrend(SuperTrendMode.ATR, 14, 2.618, MovingAverageType.HM
 <h3 id="interpretation_56">Interpretation</h3>
 <p>S/R zones play an important role in technical analysis. Clearly defined and identifiable support areas provide favorable entry opportunities, while resistance areas provide target zones to exit those trades.
 Once broken, these areas tend to reverse their function, meaning that a broken support zone becomes a resistance zone.</p>
-<p>[<em>http://finanzportal.wiwi.uni-saarland.de/tech/Kapitel5_4.htm</em>]</p>
+<p><a href="http://finanzportal.wiwi.uni-saarland.de/tech/Kapitel5_4.htm">http://finanzportal.wiwi.uni-saarland.de/tech/Kapitel5_4.htm</a></p>
 <h3 id="parameters_78">Parameters</h3>
 <table>
 <thead>
@@ -3900,7 +3900,7 @@ Print(&quot;The last swing high was at &quot; + High[barsAgo]);
 <p>The TSF reacts faster than the moving averages. These always have time delays when depicting the pre-existing trends. The TSF formula never allows the distance to the current price to become too large, thus permitting sharper trade reversal recognition.</p>
 <p>An entry is placed when the price breaks the TSF line from bottom to top.</p>
 <h3 id="further-information_42">Further information</h3>
-<p>[<em>http://en.wikipedia.org/wiki/Time_series</em>]</p>
+<p><a href="http://en.wikipedia.org/wiki/Time_series">http://en.wikipedia.org/wiki/Time_series</a></p>
 <h3 id="usage_90">Usage</h3>
 <pre><code class="cs">TSF(int forecast, int period)
 TSF(IDataSeries input, int forecast, int period)
@@ -4230,7 +4230,7 @@ Typically, momentum oscillators are early/preemptive indicators of price changes
 <h3 id="interpretation_59">Interpretation</h3>
 <p>The TSI line moves between 100 and -100. Most values are between +25 and -25. These trigger lines can be used to anticipate overbought or oversold situations. A rising TSI signals an uptrend, while falling TSI suggests a downtrend.</p>
 <h3 id="further-information_43">Further information</h3>
-<p>[<em>http://en.wikipedia.org/wiki/True_strength_index</em>]</p>
+<p><a href="http://en.wikipedia.org/wiki/True_strength_index">http://en.wikipedia.org/wiki/True_strength_index</a></p>
 <h3 id="usage_98">Usage</h3>
 <pre><code class="cs">TSI(int fast, int slow)
 TSI(IDataSeries input, int fast, int slow)
@@ -4311,7 +4311,7 @@ Print(&quot;The current value for the Ultimate Oscillator is &quot; + UltimateOs
 <h3 id="description_111">Description</h3>
 <p>This is the volume for the shares, futures, ETFs etc. traded within a certain time period.</p>
 <h3 id="further-information_44">Further information</h3>
-<p>[<em>http://de.wikipedia.org/wiki/Volumenanalyse</em>]</p>
+<p><a href="http://de.wikipedia.org/wiki/Volumenanalyse">http://de.wikipedia.org/wiki/Volumenanalyse</a></p>
 <h3 id="usage_100">Usage</h3>
 <pre><code class="cs">VOL()
 VOL(IDataSeries input)
@@ -4344,7 +4344,7 @@ In literature, the abbreviation for the Variable Moving Average (VMA) is often c
 <p>After three successive volume spikes, it becomes much less likely that the situation will continue in the same direction</p>
 <p>Here, you can find more general information about <em>Moving Averages</em>.</p>
 <h3 id="further-information_45">Further information</h3>
-<p><a href="http://www.volumen-analyse.de"><em>Volumen-Analyse.de</em></a></p>
+<p>Volumen-Analyse.de: <a href="http://www.volumen-analyse.de">http://www.volumen-analyse.de</a></p>
 <h3 id="usage_101">Usage</h3>
 <pre><code class="cs">VOLMA(int period)
 VOLMA(IDataSeries input, int period)
@@ -4409,7 +4409,7 @@ Interpretation</p>
 <p>Rising prices are accompanied by a rising VROC within the positive area.
 A shrinking VROC during rising prices may hint to a trend change about to occur.</p>
 <h3 id="further-information_46">Further information</h3>
-<p><a href="http://www.shareholder24.de/boersensoftware-wiki/pages/viewpage.action?pageId=9207904"><em>http://www.shareholder24.de/boersensoftware-wiki/pages/viewpage.action?pageId=9207904</em></a></p>
+<p><a href="http://www.shareholder24.de/boersensoftware-wiki/pages/viewpage.action?pageId=9207904">http://www.shareholder24.de/boersensoftware-wiki/pages/viewpage.action?pageId=9207904</a></p>
 <h3 id="usage_103">Usage</h3>
 <pre><code class="cs">VROC(int period, int smooth)
 VROC(IDataSeries input, int period, int smooth)
@@ -4470,7 +4470,7 @@ The indicator is intended for use with historical data only. To see volume chang
 <p>The centerline, -50, is an important level to watch. Williams %R moves between 0 and -100, which makes -50 the midpoint. Think of it as the 50 yard line in football. The offense has a higher chance of scoring when it crosses the 50 yard line. The defense has an edge as long as it prevents the offense from crossing the 50 yard line. A Williams %R cross above -50 signals that prices are trading in the upper half of their high-low range for the given look-back period. This suggests that the cup is half full. Conversely, a cross below -50 means prices are trading in the bottom half of the given look-back period. This suggests that the cup is half empty.</p>
 <p>Low readings (below -80) indicate that the price is near its low for the given time period. High readings (above -20) indicate that the price is near its high for the given time period.</p>
 <h3 id="further-information_47">Further information</h3>
-<p><a href="http://www.broker-test.de/finanzwissen/technische-analyse/williams-percent-r/"><em>http://www.broker-test.de/finanzwissen/technische-analyse/williams-percent-r/</em></a></p>
+<p><a href="http://www.broker-test.de/finanzwissen/technische-analyse/williams-percent-r/">http://www.broker-test.de/finanzwissen/technische-analyse/williams-percent-r/</a></p>
 <h3 id="usage_105">Usage</h3>
 <pre><code class="cs">WilliamsR(int period)
 WilliamsR(IDataSeries input, int period)
@@ -4500,7 +4500,7 @@ WilliamsR(IDataSeries input, int period)[int barsAgo]
 <p>The previous extreme values (local highs or lows) are ideally suited for either entries or stop targets.</p>
 <p><strong>Caution:</strong> The ZigZag is not an indicator in the common sense. Position and direction of the zigzag can change retrospectively (repainting indicator).</p>
 <h3 id="further-information_48">Further information</h3>
-<p><a href="http://www.robotrading.de/indikatoren/zig-zag-indikator-zeigt-hoch-und-tief-punkte-im-forex-markt"><em>http://www.robotrading.de/indikatoren/zig-zag-indikator-zeigt-hoch-und-tief-punkte-im-forex-markt</em></a></p>
+<p><a href="http://www.robotrading.de/indikatoren/zig-zag-indikator-zeigt-hoch-und-tief-punkte-im-forex-markt">http://www.robotrading.de/indikatoren/zig-zag-indikator-zeigt-hoch-und-tief-punkte-im-forex-markt</a></p>
 <h3 id="usage_106">Usage</h3>
 <pre><code class="cs">//For the upper extreme value
 ZigZag(DeviationType deviationType, double deviationValue, bool useHighLow).ZigZagHigh[int barsAgo]

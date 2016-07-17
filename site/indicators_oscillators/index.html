@@ -388,7 +388,7 @@
 </ol>
 <p>If the ADL is rising in an uptrend, then money is flowing in the direction of the rising prices, thus the uptrend is confirmed. If the ADL is falling in a downward trend, money is being taken out of the stock, thus confirming the downtrend.</p>
 <h3 id="further-information">Further information</h3>
-<p>VTADWiki: [<em>http://vtadwiki.vtad.de/index.php/Accumulation_Distribution_Linie</em>]</p>
+<p><a href="http://vtadwiki.vtad.de/index.php/Accumulation_Distribution_Linie"><em>VTADWiki</em></a></p>
 <h3 id="usage">Usage</h3>
 <pre><code class="cs">ADL()
 ADL(IDataSeries input)
@@ -415,7 +415,7 @@ Print(&quot;The ADL indicator is rising.&quot;);
 <h3 id="interpretation_1">Interpretation</h3>
 <p>The bigger the price movement, the greater the distance between the upper and lower band will be. The smaller the price movement, the smaller the distance between the bands. More widely spaced bands will indicate increased instability and volatility, whereas closely tuned bands will display reduced volatility. If the price action breaks through the upper or lower band then the APZ will tend to return to its statistical average. This will lead to trading opportunities where the market may try to compensate for imbalances. If the price overshoots the bands for example, as mentioned in the description, then this will present you with a trading opportunity in the opposite direction.</p>
 <h3 id="further-information_1">Further information</h3>
-<p>[<em>http://www.investopedia.com/articles/trading/10/adaptive-price-zone-indicator-explained.asp</em>]</p>
+<p><a href="http://www.investopedia.com/articles/trading/10/adaptive-price-zone-indicator-explained.asp*"><em>http://www.investopedia.com/articles/trading/10/adaptive-price-zone-indicator-explained.asp</em></a></p>
 <h3 id="usage_1">Usage</h3>
 <pre><code class="cs">APZ(double barPct, int period)
 APZ(IDataSeries input, double barPct, int period)
@@ -449,7 +449,7 @@ Print(&quot;Value for the lower APZ band: &quot; + APZ(2, 20).Lower[0]);
 <p>The Aroon indicators fluctuate above/below a centerline (50) and are bound between 0 and 100. These three levels are important for interpretation. At its most basic, the bulls have the edge when Aroon-Up is above 50 and Aroon-Down is below 50. This indicates a greater propensity for new x-day highs than lows. The converse is true for a downtrend. The bears have the edge when Aroon-Up is below 50 and Aroon-Down is above 50.</p>
 <p>A surge to 100 indicates that a trend may be emerging. This can be confirmed with a decline in the other Aroon indicator. For example, a move to 100 in Aroon-Up combined with a decline below 30 in Aroon-Down shows upside strength. Consistently high readings mean prices are regularly hitting new highs or new lows for the specified period. Prices are moving consistently higher when Aroon-Up remains in the 70-100 range for an extended period. Conversely, consistently low readings indicate that prices are seldom hitting new highs or lows. Prices are NOT moving lower when Aroon-Down remains in the 0-30 range for an extended period. This does not mean prices are moving higher though. For that we need to check Aroon-Up.</p>
 <h3 id="further-information_2">Further information</h3>
-<p>VTAD: [<em>http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:aroon</em>]</p>
+<p><a href="http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:aroon"><em>VTAD</em></a></p>
 <h3 id="usage_2">Usage</h3>
 <pre><code class="cs">Aroon(int period)
 Aroon(IDataSeries input, int period)
@@ -508,7 +508,7 @@ Print(&quot;Value for the oscillator is: &quot; + AroonOscillator(20)[0]);
 <p>The Average Directional Index (ADX) is used to measure the strength or weakness of a trend, not the actual direction. Directional movement is defined by +DI and -DI. In general, the bulls have the edge when +DI is greater than -DI, while the bears have the edge when -DI is greater. Crosses of these directional indicators can be combined with ADX for a complete trading system.</p>
 <p>It should be kept in mind that Wilder was a commodity and currency trader. The examples in his books are based on these instruments, not stocks. This does not mean his indicators cannot be used with stocks. Some stocks have price characteristics similar to commodities, which tend to be more volatile with short and strong trends. Stocks with low volatility may not generate signals based on Wilder's parameters. Chartists will likely need to adjust the indicator settings or the signal parameters according to the characteristics of the security.</p>
 <h3 id="further-information_3">Further information</h3>
-<p>Wikipedia: [<em>http://de.wikipedia.org/wiki/Average_Directional_Movement_Index</em>]</p>
+<p><a href="http://de.wikipedia.org/wiki/Average_Directional_Movement_Index"><em>Wikipedia</em></a></p>
 <h3 id="usage_4">Usage</h3>
 <pre><code class="cs">ADX(int period)
 ADX(IDataSeries input, int period)
@@ -567,7 +567,7 @@ Print(&quot;Value of the ADXR: &quot; + ADXR(10, 14)[0]);
 -   Method 3: current Low minus the previous close (absolute value)</p>
 <p>Absolute values are used to ensure positive numbers. After all, Wilder was interested in measuring the distance between two points, not the direction. If the current period's high is above the prior period's high and the low is below the prior period's low, then the current period's high-low range will be used as the True Range. This is an outside day that would use method 1 to calculate the TR. This is pretty straightforward. Methods 2 and 3 are used when there is a gap or an inside day. A gap occurs when the previous close is greater than the current high (signaling a potential gap down or limit move) or the previous close is lower than the current low (signaling a potential gap up or limit move). The image below shows examples of when methods 2 and 3 are appropriate.</p>
 <h3 id="further-information_4">Further information</h3>
-<p>VTAD: [<em>http://vtadwiki.vtad.de/index.php/Average_True_Range</em>]</p>
+<p><a href="http://vtadwiki.vtad.de/index.php/Average_True_Range"><em>VTAD</em></a></p>
 <h3 id="usage_6">Usage</h3>
 <pre><code class="cs">ATR(int period)
 ATR(IDataSeries input, int period)
@@ -4344,7 +4344,7 @@ In literature, the abbreviation for the Variable Moving Average (VMA) is often c
 <p>After three successive volume spikes, it becomes much less likely that the situation will continue in the same direction</p>
 <p>Here, you can find more general information about <em>Moving Averages</em>.</p>
 <h3 id="further-information_45">Further information</h3>
-<p><a href="http://www.volumen-analyse.de">http://www.volumen-analyse.de</a></p>
+<p><a href="http://www.volumen-analyse.de"><em>Volumen-Analyse.de</em></a></p>
 <h3 id="usage_101">Usage</h3>
 <pre><code class="cs">VOLMA(int period)
 VOLMA(IDataSeries input, int period)
@@ -4409,7 +4409,7 @@ Interpretation</p>
 <p>Rising prices are accompanied by a rising VROC within the positive area.
 A shrinking VROC during rising prices may hint to a trend change about to occur.</p>
 <h3 id="further-information_46">Further information</h3>
-<p>[<em>http://www.shareholder24.de/boersensoftware-wiki/pages/viewpage.action?pageId=9207904</em>]</p>
+<p><a href="http://www.shareholder24.de/boersensoftware-wiki/pages/viewpage.action?pageId=9207904"><em>http://www.shareholder24.de/boersensoftware-wiki/pages/viewpage.action?pageId=9207904</em></a></p>
 <h3 id="usage_103">Usage</h3>
 <pre><code class="cs">VROC(int period, int smooth)
 VROC(IDataSeries input, int period, int smooth)
@@ -4470,7 +4470,7 @@ The indicator is intended for use with historical data only. To see volume chang
 <p>The centerline, -50, is an important level to watch. Williams %R moves between 0 and -100, which makes -50 the midpoint. Think of it as the 50 yard line in football. The offense has a higher chance of scoring when it crosses the 50 yard line. The defense has an edge as long as it prevents the offense from crossing the 50 yard line. A Williams %R cross above -50 signals that prices are trading in the upper half of their high-low range for the given look-back period. This suggests that the cup is half full. Conversely, a cross below -50 means prices are trading in the bottom half of the given look-back period. This suggests that the cup is half empty.</p>
 <p>Low readings (below -80) indicate that the price is near its low for the given time period. High readings (above -20) indicate that the price is near its high for the given time period.</p>
 <h3 id="further-information_47">Further information</h3>
-<p>[<em>http://www.broker-test.de/finanzwissen/technische-analyse/williams-percent-r/</em>]</p>
+<p><a href="http://www.broker-test.de/finanzwissen/technische-analyse/williams-percent-r/"><em>http://www.broker-test.de/finanzwissen/technische-analyse/williams-percent-r/</em></a></p>
 <h3 id="usage_105">Usage</h3>
 <pre><code class="cs">WilliamsR(int period)
 WilliamsR(IDataSeries input, int period)
@@ -4500,7 +4500,7 @@ WilliamsR(IDataSeries input, int period)[int barsAgo]
 <p>The previous extreme values (local highs or lows) are ideally suited for either entries or stop targets.</p>
 <p><strong>Caution:</strong> The ZigZag is not an indicator in the common sense. Position and direction of the zigzag can change retrospectively (repainting indicator).</p>
 <h3 id="further-information_48">Further information</h3>
-<p>[<em>http://www.robotrading.de/indikatoren/zig-zag-indikator-zeigt-hoch-und-tief-punkte-im-forex-markt</em>]</p>
+<p><a href="http://www.robotrading.de/indikatoren/zig-zag-indikator-zeigt-hoch-und-tief-punkte-im-forex-markt"><em>http://www.robotrading.de/indikatoren/zig-zag-indikator-zeigt-hoch-und-tief-punkte-im-forex-markt</em></a></p>
 <h3 id="usage_106">Usage</h3>
 <pre><code class="cs">//For the upper extreme value
 ZigZag(DeviationType deviationType, double deviationValue, bool useHighLow).ZigZagHigh[int barsAgo]

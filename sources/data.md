@@ -19,7 +19,7 @@ If a new bar is added during the current trading session, then this bar will be 
 
 Within a script (self-created program), the “Close" array is the list of all closing prices. The last closing price is thus Close\[0\] and the preceding closing price (bar to the left of the last bar) is Close\[1\] and so on, with the oldest candle having the value of Close\[501\]. The number within the square brackets here clearly denotes the index of the array. The general term used within AgenaTrader is “barsAgo".
 
-In addition, each bar will not only have a close value, but also a [*High*], [*Low*], [*Open*], [*Median*], [*Typical*], [*Weighted*], *Time* and [*Volume*]. On a daily period timeframe, the high of the candle that occurred 10 periods ago would be High\[10\]; the low of the last day would be Low\[1\].
+In addition, each bar will not only have a close value, but also a [*High*](#high), [*Low*](#low), [*Open*](#open), [*Median*](#median), [*Typical*](#typical), [*Weighted*](#weighted), [*Time*](#time) and [*Volume*](#volume). On a daily period timeframe, the high of the candle that occurred 10 periods ago would be High\[10\]; the low of the last day would be Low\[1\].
 
 **Important note:**
 The examples mentioned concern calculations that are performed at the end of a period. The values for the currently running and unfinished candles are not taken into consideration.
@@ -59,7 +59,7 @@ The following data series are available:
 Open is the data series in which the historical opening prices are saved.
 
 ### Parameter
-barsAgo Index value (see [*Bars*])
+barsAgo Index value (see [*Bars*](#bars-candles))
 
 ### Usage
 ```cs
@@ -87,7 +87,7 @@ Print("SMA(14) Calculated using the opening prices: " + Instrument.Round2TickSiz
 High is the data series in which the historical highs are saved.
 
 ### Parameter
-barsAgo Index value (see [*Bars*])
+barsAgo Index value (see [*Bars*](#bars-candles))
 
 ### usage
 ```cs
@@ -115,7 +115,7 @@ Print("SMA(14) calculated using the high values: " + Instrument.Round2TickSize(S
 Low is the data series in which all historical lows are saved.
 
 ### Parameter
-barsAgo Index value (see [*Bars*])
+barsAgo Index value (see [*Bars*](#bars-candles))
 
 ### Usage
 ```cs
@@ -143,7 +143,7 @@ Print("SMA(14) calculated using the low prices: " + Instrument.Round2TickSize(SM
 Close is the data series in which all historical closing prices are saved.
 
 ### Parameter
-barsAgo Index value (see [*Bars*])
+barsAgo Index value (see [*Bars*](#bars-candles))
 
 ### Usage
 ```cs
@@ -176,7 +176,7 @@ Print("SMA(14) calculated using the closing prices: " + Instrument.Round2TickSiz
 Volume is the data series in which the historical volume records are saved.
 
 ### Parameter
-barsAgo Index value (see [*Bars*])
+barsAgo Index value (see [*Bars*](#bars-candles))
 
 ### Usage
 ```cs
@@ -187,7 +187,7 @@ Volume[int barsAgo]
 ### More information
 The outputted value depends on the property *CalculateOnBarClose*.
 
-The value delivered by the indicator [*VOL()*] is identical to the volume described here.
+The value delivered by the indicator [*VOL()*](#volume-vol) is identical to the volume described here.
 E.g. Vol()\[3\] will deliver the same value as Volume\[3\].
 
 ### Example
@@ -207,10 +207,10 @@ Print("SMA(14) calculated using the volume: " + Instrument.Round2TickSize(SMA(Vo
 Median is the data series in which the historical median values are saved.
 The median price is calculated as (high + low) / 2.
 
-See [*Typical*] and [*Weighted*].
+See [*Typical*](#typical) and [*Weighted*](#weighted).
 
 ### Parameter
-barsAgo Index value (see [*Bars*])
+barsAgo Index value (see [*Bars*](#bars-candles))
 
 ### Usage
 ```cs
@@ -242,10 +242,10 @@ Typical is the data series in which the historical typical values are saved.
 
 The typical price of a bar is calculated as (high + low + close) / 3.
 
-See [*Median*] and [*Weighted*].
+See [*Median*](#median) and [*Weighted*](#weighted).
 
 ### Parameter
-barsAgo Index value (see [*Bars*])
+barsAgo Index value (see [*Bars*](#bars-candles))
 
 ### Usage
 ```cs
@@ -275,10 +275,10 @@ Print("SMA(14)calculated using the typical prices: " + Instrument.Round2TickSize
 ### Description
 Weighted is the data series in which all historical weighted values are saved.
 
-The weighted price of a bar is calculated as (high + low + 2\*close) / 4 and is weighted on the closing price. See [*Median*] & [*Typical*].
+The weighted price of a bar is calculated as (high + low + 2\*close) / 4 and is weighted on the closing price. See [*Median*](#median) & [*Typical*](#typical).
 
 ### Parameter
-barsAgo Index value (see [*Bars*])
+barsAgo Index value (see [*Bars*](#bars-candles))
 
 ### Usage
 ```cs
@@ -307,7 +307,7 @@ Print("SMA(14) calculated using the weighted price: " + Instrument.Round2TickSiz
 
 ## Weighteds
 ### Description
-Weighteds is an array of [*DataSeries*][1] that contains all [*Weighted*] data series.
+Weighteds is an array of [*DataSeries*]\[1\] that contains all [*Weighted*](#weighted) data series.
 
 The array is only of value for indicators and strategies that use data from multiple timeframes.
 
@@ -334,17 +334,17 @@ Weighteds[int barSeriesIndex][int barsAgo]
 ```
 
 ### More Information
-The returned value is dependent upon the property [*CalculateOnBarClose*].
+The returned value is dependent upon the property *CalculateOnBarClose*.
 
 ### Example
 See example under [*Multibars*][*MultiBars*].
 
 ## Time
 ### Description
-Time is a [*DataSeries*][*Data series*] of the type [*DateTimeSeries*], in which the timestamps of the individual bars are saved.
+Time is a [*DataSeries*][*data series*] of the type [*DateTimeSeries*], in which the timestamps of the individual bars are saved.
 
 ### Parameter
-barsAgo Index value (see [*Bars*])
+barsAgo Index value (see [*Bars*](#bars-candles))
 
 ### Usage
 ```cs
@@ -353,7 +353,7 @@ Time[int barsAgo]
 ```
 
 ### More Information
-The returned value is dependent upon the property [*CalculateOnBarClose*].
+The returned value is dependent upon the property *CalculateOnBarClose*.
 
 ### Example
 ```cs
@@ -391,7 +391,7 @@ Times[int barSeriesIndex][int barsAgo]
 ```
 
 ### More Information
-The returned value is dependent upon the property [*CalculateOnBarClose*].
+The returned value is dependent upon the property *CalculateOnBarClose*.
 
 ### Example
 See example [*Multibars*][*MultiBars*].
@@ -401,7 +401,7 @@ See example [*Multibars*][*MultiBars*].
 Volume is a [*DataSeries*][*Data series*] of the type [*DataSeries*], in which the historical volume information is saved.
 
 ### Parameter
-barsAgo Index value (see [*Bars*])
+barsAgo Index value (see [*Bars*](#bars-candles))
 
 ### Usage
 Volume
@@ -409,7 +409,7 @@ Volume
 Volume\[**int** barsAgo\]
 
 ### More Information
-The returned value is dependent upon the property [*CalculateOnBarClose*].
+The returned value is dependent upon the property *CalculateOnBarClose*.
 
 The value returned by the [*VOL()*] indicator is identical with the volume described here;
 for example, Vol()\[3\] will have the same value as Volume\[3\].
@@ -454,7 +454,7 @@ Volumes[int barSeriesIndex][int barsAgo]
 ```
 
 ### More Information
-The returned value is dependent upon the property [*CalculateOnBarClose*].
+The returned value is dependent upon the property *CalculateOnBarClose*.
 
 ### Example
 See example [*Multibars*][*MultiBars*].

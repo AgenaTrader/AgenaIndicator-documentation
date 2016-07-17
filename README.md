@@ -25,7 +25,8 @@ The following things are prerequisites:
 After the installation of all packages we are able to start to parse our data.
 
 ###Parsing markdown to ebook (epub)
-Move to your source folder, open a console and create an ebook in \*.epub format:
+Now open the documents folder and modify the release date in the **epub_title.txt file**.
+Afterward go to your source folder, open a console and create an ebook in \*.epub format:
 ```bash
 pandoc -S --epub-cover-image=../documents/epub_cover.png --epub-stylesheet=../documents/epub_styles.css -o ../documents/agenaindicator-documentation.epub ../documents/epub_title.txt index.md data.md indicators_oscillators.md
 ```
@@ -56,7 +57,7 @@ mkdocs build --clean
 ```
 
 ###Bugfixing links for images
-mkdocs is creating wrong links for images, so we need to change this by **replacing ./media/ to ../media/** manually.
+If you are using *<img> tags* in your markdown file, mkdocs is creating wrong links for these images, so we need to change this by **replacing ./media/ to ../media/** manually.
 Another option is to to this automatic by using **sed** on linux or macintosh:
 ```bash
 sed -i .bak -e 's%./media/%../media/%g' site/indicators_oscillators/index.html  && rm site/indicators_oscillators/index.html.bak

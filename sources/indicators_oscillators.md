@@ -27,7 +27,7 @@ Confirmation of a trend or
 If the ADL is rising in an uptrend, then money is flowing in the direction of the rising prices, thus the uptrend is confirmed. If the ADL is falling in a downward trend, money is being taken out of the stock, thus confirming the downtrend.
 
 ### Further information
-VTADWiki: [*http://vtadwiki.vtad.de/index.php/Accumulation\_Distribution\_Linie*]
+[*VTADWiki*](http://vtadwiki.vtad.de/index.php/Accumulation\_Distribution\_Linie)
 
 ### Usage
 ```cs
@@ -63,7 +63,7 @@ The adaptive price zone is a technical indicator developed by Lee Leibfarth in 2
 The bigger the price movement, the greater the distance between the upper and lower band will be. The smaller the price movement, the smaller the distance between the bands. More widely spaced bands will indicate increased instability and volatility, whereas closely tuned bands will display reduced volatility. If the price action breaks through the upper or lower band then the APZ will tend to return to its statistical average. This will lead to trading opportunities where the market may try to compensate for imbalances. If the price overshoots the bands for example, as mentioned in the description, then this will present you with a trading opportunity in the opposite direction.
 
 ### Further information
-[*http://www.investopedia.com/articles/trading/10/adaptive-price-zone-indicator-explained.asp*]
+[*http://www.investopedia.com/articles/trading/10/adaptive-price-zone-indicator-explained.asp*](http://www.investopedia.com/articles/trading/10/adaptive-price-zone-indicator-explained.asp*)
 
 ### Usage
 ```cs
@@ -109,7 +109,7 @@ The Aroon indicators fluctuate above/below a centerline (50) and are bound betwe
 A surge to 100 indicates that a trend may be emerging. This can be confirmed with a decline in the other Aroon indicator. For example, a move to 100 in Aroon-Up combined with a decline below 30 in Aroon-Down shows upside strength. Consistently high readings mean prices are regularly hitting new highs or new lows for the specified period. Prices are moving consistently higher when Aroon-Up remains in the 70-100 range for an extended period. Conversely, consistently low readings indicate that prices are seldom hitting new highs or lows. Prices are NOT moving lower when Aroon-Down remains in the 0-30 range for an extended period. This does not mean prices are moving higher though. For that we need to check Aroon-Up.
 
 ### Further information
-VTAD: [*http://stockcharts.com/school/doku.php?id=chart\_school:technical\_indicators:aroon*]
+[*VTAD*](http://stockcharts.com/school/doku.php?id=chart\_school:technical\_indicators:aroon)
 
 ### Usage
 ```cs
@@ -189,7 +189,7 @@ The Average Directional Index (ADX) is used to measure the strength or weakness 
 It should be kept in mind that Wilder was a commodity and currency trader. The examples in his books are based on these instruments, not stocks. This does not mean his indicators cannot be used with stocks. Some stocks have price characteristics similar to commodities, which tend to be more volatile with short and strong trends. Stocks with low volatility may not generate signals based on Wilder's parameters. Chartists will likely need to adjust the indicator settings or the signal parameters according to the characteristics of the security.
 
 ### Further information
-Wikipedia: [*http://de.wikipedia.org/wiki/Average\_Directional\_Movement\_Index*]
+[*Wikipedia*](http://de.wikipedia.org/wiki/Average\_Directional\_Movement\_Index)
 
 ### Usage
 ```cs
@@ -270,7 +270,7 @@ Wilder started with a concept called **True Range (TR)**, which is defined as t
 Absolute values are used to ensure positive numbers. After all, Wilder was interested in measuring the distance between two points, not the direction. If the current period's high is above the prior period's high and the low is below the prior period's low, then the current period's high-low range will be used as the True Range. This is an outside day that would use method 1 to calculate the TR. This is pretty straightforward. Methods 2 and 3 are used when there is a gap or an inside day. A gap occurs when the previous close is greater than the current high (signaling a potential gap down or limit move) or the previous close is lower than the current low (signaling a potential gap up or limit move). The image below shows examples of when methods 2 and 3 are appropriate.
 
 ### Further information
-VTAD: [*http://vtadwiki.vtad.de/index.php/Average\_True\_Range*]
+[*VTAD*](http://vtadwiki.vtad.de/index.php/Average\_True\_Range)
 
 ### Usage
 ```cs
@@ -4853,7 +4853,7 @@ After three successive volume spikes, it becomes much less likely that the situa
 Here, you can find more general information about *Moving Averages*.
 
 ### Further information
-<http://www.volumen-analyse.de>
+[*Volumen-Analyse.de*](http://www.volumen-analyse.de)
 
 ### Usage
 ```cs
@@ -4942,7 +4942,7 @@ Rising prices are accompanied by a rising VROC within the positive area.
 A shrinking VROC during rising prices may hint to a trend change about to occur.
 
 ### Further information
-[*http://www.shareholder24.de/boersensoftware-wiki/pages/viewpage.action?pageId=9207904*]
+[*http://www.shareholder24.de/boersensoftware-wiki/pages/viewpage.action?pageId=9207904*](http://www.shareholder24.de/boersensoftware-wiki/pages/viewpage.action?pageId=9207904)
 
 ### Usage
 ```cs
@@ -5024,7 +5024,7 @@ The centerline, -50, is an important level to watch. Williams %R moves between 0
 Low readings (below -80) indicate that the price is near its low for the given time period. High readings (above -20) indicate that the price is near its high for the given time period.
 
 ### Further information
-[*http://www.broker-test.de/finanzwissen/technische-analyse/williams-percent-r/*]
+[*http://www.broker-test.de/finanzwissen/technische-analyse/williams-percent-r/*](http://www.broker-test.de/finanzwissen/technische-analyse/williams-percent-r/)
 
 ### Usage
 ```cs
@@ -5065,7 +5065,7 @@ The previous extreme values (local highs or lows) are ideally suited for either 
 **Caution:** The ZigZag is not an indicator in the common sense. Position and direction of the zigzag can change retrospectively (repainting indicator).
 
 ### Further information
-[*http://www.robotrading.de/indikatoren/zig-zag-indikator-zeigt-hoch-und-tief-punkte-im-forex-markt*]
+[*http://www.robotrading.de/indikatoren/zig-zag-indikator-zeigt-hoch-und-tief-punkte-im-forex-markt*](http://www.robotrading.de/indikatoren/zig-zag-indikator-zeigt-hoch-und-tief-punkte-im-forex-markt)
 
 ### Usage
 ```cs

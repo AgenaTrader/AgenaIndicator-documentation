@@ -238,7 +238,7 @@ Low[int barsAgo]
 <p>The outputted value depends on the property <em>CalculateOnBarClose</em>.</p>
 <h3 id="example_2">Example</h3>
 <pre><code class="cs">// Low prices of the current period
-Print(Time[0] + &quot; &quot; + Low[0];
+Print(Time[0] + &quot; &quot; + Low[0]);
 
 // Low prices of the bar 5 periods ago
 Print(Time[5] + &quot; &quot; + Low[5]);
@@ -450,7 +450,9 @@ Times[int barSeriesIndex][int barsAgo]
 <h3 id="parameter_11">Parameter</h3>
 <p>barsAgo Index value (see <a href="#bars-candles"><em>Bars</em></a>)</p>
 <h3 id="usage_11">Usage</h3>
-<p>Volume</p>
+<pre><code class="cs">Volume
+</code></pre>
+
 <p>Volume[<strong>int</strong> barsAgo]</p>
 <h3 id="more-information_11">More Information</h3>
 <p>The returned value is dependent upon the property <em>CalculateOnBarClose</em>.</p>

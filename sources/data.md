@@ -129,7 +129,7 @@ The outputted value depends on the property *CalculateOnBarClose*.
 ### Example
 ```cs
 // Low prices of the current period
-Print(Time[0] + " " + Low[0];
+Print(Time[0] + " " + Low[0]);
 
 // Low prices of the bar 5 periods ago
 Print(Time[5] + " " + Low[5]);
@@ -138,7 +138,7 @@ Print(Time[5] + " " + Low[5]);
 Print("SMA(14) calculated using the low prices: " + Instrument.Round2TickSize(SMA(Low, 14)[0]));
 ```
 
-##Close
+## Close
 ### Description
 Close is the data series in which all historical closing prices are saved.
 
@@ -304,7 +304,6 @@ Print(Time[5] + " " + Weighted[5]);
 Print("SMA(14) calculated using the weighted price: " + Instrument.Round2TickSize(SMA(Weighted, 14)[0]));
 ```
 
-
 ## Weighteds
 ### Description
 Weighteds is an array of [*DataSeries*]\[1\] that contains all [*Weighted*](#weighted) data series.
@@ -404,7 +403,9 @@ Volume is a [*DataSeries*][*Data series*] of the type [*DataSeries*], in which t
 barsAgo Index value (see [*Bars*](#bars-candles))
 
 ### Usage
+```cs
 Volume
+```
 
 Volume\[**int** barsAgo\]
 

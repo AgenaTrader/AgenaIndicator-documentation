@@ -2,17 +2,17 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Welcome to the official AgenaIndicator repository!\n\n\nWant to learn more about the AgenaTrader indicators? We've got the resources to help you get started.\n\n\n\n\nData\n\n\nBars (Candles)\n\n\nData Series\n\n\nOpen\n\n\nHigh\n\n\nLow\n\n\nClose\n\n\nVolume\n\n\nMedian\n\n\nTypical\n\n\nWeighted\n\n\n\n\n\n\nIndicators \n Oscillators\n\n\nAccumulation/Distribution (ADL)\n\n\nAdaptive Price Zone (APZ)\n\n\nAroon\n\n\nAroon Oscillator\n\n\nAverage Directional Index (ADX)\n\n\nAverage Directional Movement Rating (ADXR)\n\n\nAverage True Range (ATR)\n\n\nBalance of Power (BOP)\n\n\nBollinger Bands\n\n\nBollinger Percent B (%b)\n\n\nBollinger Band Width (BBWidth)\n\n\nBollinger MTF (MultiTimeFrame)\n\n\nBuySellPressure\n\n\nBuySellVolume\n\n\nCandleStickPattern\n\n\nChaikinMoneyFlow (CMF)\n\n\nChaikin Oscillator\n\n\nChaikinVolatility (CVL)\n\n\nChande Momentum Oscillator (CMO)\n\n\nCommodity Channel Index (CCI)\n\n\nDarvas Boxes\n\n\nDirectional Movement (DM)\n\n\nDonchian Channel\n\n\nDirectional Movement Index (DMI)\n\n\nDouble Stochastics (DSS)\n\n\nDynamic Momentum Index (DMIndex)\n\n\nEase of Movement (EOM)\n\n\nFisher Transform\n\n\nForecast Oscillator (FOSC)\n\n\nHighestHighIndex()\n\n\nHighestHighPrice()\n\n\nIchimokuCloud\n\n\nInsideBarsMT\n\n\nKeltner Channel\n\n\nKeyReversalUp\n\n\nKeyReversalDown\n\n\nKeyReversalUpAtSMA\n\n\nKeyReversalDownAtSMA\n\n\nKeyReversalUpAtEMA\n\n\nKeyReversalDownAtEMA\n\n\nLinear Regression\n\n\nLinRegIntercept\n\n\nLinRegSlope\n\n\nLowestLowIndex()\n\n\nLowestLowPrice()\n\n\nMACD\n\n\nMAEnvelopes\n\n\nMarketPhases\n\n\nMomentum (MOM)\n\n\nMoney Flow Index (MFI)\n\n\nMoving Averages\n\n\nDEMA - Double Exponential Moving Average\n\n\nEMA - Exponential Moving Average\n\n\nEMA MTF (MultiTimeFrame)\n\n\nHMA - Hull Moving Average\n\n\nKAMA - Kaufman's Adaptive Moving Average\n\n\nMAMA - Mesa Adaptive Moving Average\n\n\nSMA - Simple Moving Average\n\n\nSMA MTF (MultiTimeFrame)\n\n\nSMMA - Smoothed Moving Average\n\n\nTEMA - Triple Exponential Moving Average\n\n\nTMA - Triangular Moving Average\n\n\nTRIX - Triple Exponential Moving Average\n\n\nT3 - Triple Exponential Moving Average\n\n\nVMA - Variable Moving Average\n\n\nVWMA - Volume Weighted Moving Average\n\n\nWMA - Weighted Moving Average\n\n\nZLEMA - Zero Lag Exponential Moving Average\n\n\nnBarsUp\n\n\nnBarsDown\n\n\nOnBalanceVolume (OBV)\n\n\nOutsideBars\n\n\nP123\n\n\nParabolic SAR\n\n\nPercentage Price Oscillator (PPO)\n\n\nPercentEnvelopes\n\n\nPivot Points\n\n\nPolarized Fractal Efficiency (PFE)\n\n\nPrice Oscillator\n\n\nRange\n\n\nRange Indicator (RIND)\n\n\nRate of Change (ROC)\n\n\nRelative Spread Strength (RSS)\n\n\nRelative Strength Index (RSI)\n\n\nRelative Strength Levy (RSL)\n\n\nRelative Volatility Index (RVI)\n\n\nReversalBars\n\n\nR-Squared\n\n\nStandardDeviation(StdDev)\n\n\nStandard Error (StdError)\n\n\nStochastics\n\n\nStochastics Fast\n\n\nStochastics RSI (StochRSI)\n\n\nSummation (SUM)\n\n\nSuperTrend\n\n\nSupportResistanceAreas\n\n\nSwing\n\n\nTime-Series-Forecast (TSF)\n\n\nTools\n\n\nConstant Lines\n\n\nCurrentDayOHL\n\n\nDaily Performance\n\n\nDayLines\n\n\nDayLinesAdv\n\n\nGetDayBar\n\n\nInfo\n\n\nMaximum (MAX)\n\n\nMinimum (MIN)\n\n\nMTFBoxes\n\n\nPriceLine\n\n\nPriorDayOHLC\n\n\nPriorDayOHLCext\n\n\nSessionBreakLines\n\n\nShowBidAsk\n\n\nTickCounter\n\n\nTrue Strength Index (TSI)\n\n\nUltimate Oscillator\n\n\nVolume (VOL)\n\n\nVolume Moving Average (VOLMA)\n\n\nVolume Oscillator\n\n\nVolume Profile\n\n\nVolume Rate of Change (VROC)\n\n\nVolumeUpDown\n\n\nVolume Zones\n\n\nWilliams %R\n\n\nZigZag", 
+            "text": "Welcome to the official AgenaIndicator repository!\n\n\nWant to learn more about the AgenaTrader indicators? We've got the resources to help you get started.\n\n\n\n\nData\n\n\nBars (Candles)\n\n\nData Series\n\n\nOpen\n\n\nHigh\n\n\nLow\n\n\nClose\n\n\nMedian\n\n\nTypical\n\n\nWeighted\n\n\nWeighteds\n\n\nTime\n\n\nTimes\n\n\nVolume\n\n\nVolumes\n\n\n\n\n\n\nIndicators \n Oscillators\n\n\nAccumulation/Distribution (ADL)\n\n\nAdaptive Price Zone (APZ)\n\n\nAroon\n\n\nAroon Oscillator\n\n\nAverage Directional Index (ADX)\n\n\nAverage Directional Movement Rating (ADXR)\n\n\nAverage True Range (ATR)\n\n\nBalance of Power (BOP)\n\n\nBollinger Bands\n\n\nBollinger Percent B (%b)\n\n\nBollinger Band Width (BBWidth)\n\n\nBollinger MTF (MultiTimeFrame)\n\n\nBuySellPressure\n\n\nBuySellVolume\n\n\nCandleStickPattern\n\n\nChaikinMoneyFlow (CMF)\n\n\nChaikin Oscillator\n\n\nChaikinVolatility (CVL)\n\n\nChande Momentum Oscillator (CMO)\n\n\nCommodity Channel Index (CCI)\n\n\nDarvas Boxes\n\n\nDirectional Movement (DM)\n\n\nDonchian Channel\n\n\nDirectional Movement Index (DMI)\n\n\nDouble Stochastics (DSS)\n\n\nDynamic Momentum Index (DMIndex)\n\n\nEase of Movement (EOM)\n\n\nFisher Transform\n\n\nForecast Oscillator (FOSC)\n\n\nHighestHighIndex()\n\n\nHighestHighPrice()\n\n\nIchimokuCloud\n\n\nInsideBarsMT\n\n\nKeltner Channel\n\n\nKeyReversalUp\n\n\nKeyReversalDown\n\n\nKeyReversalUpAtSMA\n\n\nKeyReversalDownAtSMA\n\n\nKeyReversalUpAtEMA\n\n\nKeyReversalDownAtEMA\n\n\nLinear Regression\n\n\nLinRegIntercept\n\n\nLinRegSlope\n\n\nLowestLowIndex()\n\n\nLowestLowPrice()\n\n\nMACD\n\n\nMAEnvelopes\n\n\nMarketPhases\n\n\nMomentum (MOM)\n\n\nMoney Flow Index (MFI)\n\n\nMoving Averages\n\n\nDEMA - Double Exponential Moving Average\n\n\nEMA - Exponential Moving Average\n\n\nEMA MTF (MultiTimeFrame)\n\n\nHMA - Hull Moving Average\n\n\nKAMA - Kaufman's Adaptive Moving Average\n\n\nMAMA - Mesa Adaptive Moving Average\n\n\nSMA - Simple Moving Average\n\n\nSMA MTF (MultiTimeFrame)\n\n\nSMMA - Smoothed Moving Average\n\n\nTEMA - Triple Exponential Moving Average\n\n\nTMA - Triangular Moving Average\n\n\nTRIX - Triple Exponential Moving Average\n\n\nT3 - Triple Exponential Moving Average\n\n\nVMA - Variable Moving Average\n\n\nVWMA - Volume Weighted Moving Average\n\n\nWMA - Weighted Moving Average\n\n\nZLEMA - Zero Lag Exponential Moving Average\n\n\nnBarsUp\n\n\nnBarsDown\n\n\nOnBalanceVolume (OBV)\n\n\nOutsideBars\n\n\nP123\n\n\nParabolic SAR\n\n\nPercentage Price Oscillator (PPO)\n\n\nPercentEnvelopes\n\n\nPivot Points\n\n\nPolarized Fractal Efficiency (PFE)\n\n\nPrice Oscillator\n\n\nRange\n\n\nRange Indicator (RIND)\n\n\nRate of Change (ROC)\n\n\nRelative Spread Strength (RSS)\n\n\nRelative Strength Index (RSI)\n\n\nRelative Strength Levy (RSL)\n\n\nRelative Volatility Index (RVI)\n\n\nReversalBars\n\n\nR-Squared\n\n\nStandardDeviation(StdDev)\n\n\nStandard Error (StdError)\n\n\nStochastics\n\n\nStochastics Fast\n\n\nStochastics RSI (StochRSI)\n\n\nSummation (SUM)\n\n\nSuperTrend\n\n\nSupportResistanceAreas\n\n\nSwing\n\n\nTime-Series-Forecast (TSF)\n\n\nTools\n\n\nConstant Lines\n\n\nCurrentDayOHL\n\n\nDaily Performance\n\n\nDayLines\n\n\nDayLinesAdv\n\n\nGetDayBar\n\n\nInfo\n\n\nMaximum (MAX)\n\n\nMinimum (MIN)\n\n\nMTFBoxes\n\n\nPriceLine\n\n\nPriorDayOHLC\n\n\nPriorDayOHLCext\n\n\nSessionBreakLines\n\n\nShowBidAsk\n\n\nTickCounter\n\n\nTrue Strength Index (TSI)\n\n\nUltimate Oscillator\n\n\nVolume (VOL)\n\n\nVolume Moving Average (VOLMA)\n\n\nVolume Oscillator\n\n\nVolume Profile\n\n\nVolume Rate of Change (VROC)\n\n\nVolumeUpDown\n\n\nVolume Zones\n\n\nWilliams %R\n\n\nZigZag", 
             "title": "Lets start"
         }, 
         {
             "location": "/#welcome-to-the-official-agenaindicator-repository", 
-            "text": "Want to learn more about the AgenaTrader indicators? We've got the resources to help you get started.   Data  Bars (Candles)  Data Series  Open  High  Low  Close  Volume  Median  Typical  Weighted    Indicators   Oscillators  Accumulation/Distribution (ADL)  Adaptive Price Zone (APZ)  Aroon  Aroon Oscillator  Average Directional Index (ADX)  Average Directional Movement Rating (ADXR)  Average True Range (ATR)  Balance of Power (BOP)  Bollinger Bands  Bollinger Percent B (%b)  Bollinger Band Width (BBWidth)  Bollinger MTF (MultiTimeFrame)  BuySellPressure  BuySellVolume  CandleStickPattern  ChaikinMoneyFlow (CMF)  Chaikin Oscillator  ChaikinVolatility (CVL)  Chande Momentum Oscillator (CMO)  Commodity Channel Index (CCI)  Darvas Boxes  Directional Movement (DM)  Donchian Channel  Directional Movement Index (DMI)  Double Stochastics (DSS)  Dynamic Momentum Index (DMIndex)  Ease of Movement (EOM)  Fisher Transform  Forecast Oscillator (FOSC)  HighestHighIndex()  HighestHighPrice()  IchimokuCloud  InsideBarsMT  Keltner Channel  KeyReversalUp  KeyReversalDown  KeyReversalUpAtSMA  KeyReversalDownAtSMA  KeyReversalUpAtEMA  KeyReversalDownAtEMA  Linear Regression  LinRegIntercept  LinRegSlope  LowestLowIndex()  LowestLowPrice()  MACD  MAEnvelopes  MarketPhases  Momentum (MOM)  Money Flow Index (MFI)  Moving Averages  DEMA - Double Exponential Moving Average  EMA - Exponential Moving Average  EMA MTF (MultiTimeFrame)  HMA - Hull Moving Average  KAMA - Kaufman's Adaptive Moving Average  MAMA - Mesa Adaptive Moving Average  SMA - Simple Moving Average  SMA MTF (MultiTimeFrame)  SMMA - Smoothed Moving Average  TEMA - Triple Exponential Moving Average  TMA - Triangular Moving Average  TRIX - Triple Exponential Moving Average  T3 - Triple Exponential Moving Average  VMA - Variable Moving Average  VWMA - Volume Weighted Moving Average  WMA - Weighted Moving Average  ZLEMA - Zero Lag Exponential Moving Average  nBarsUp  nBarsDown  OnBalanceVolume (OBV)  OutsideBars  P123  Parabolic SAR  Percentage Price Oscillator (PPO)  PercentEnvelopes  Pivot Points  Polarized Fractal Efficiency (PFE)  Price Oscillator  Range  Range Indicator (RIND)  Rate of Change (ROC)  Relative Spread Strength (RSS)  Relative Strength Index (RSI)  Relative Strength Levy (RSL)  Relative Volatility Index (RVI)  ReversalBars  R-Squared  StandardDeviation(StdDev)  Standard Error (StdError)  Stochastics  Stochastics Fast  Stochastics RSI (StochRSI)  Summation (SUM)  SuperTrend  SupportResistanceAreas  Swing  Time-Series-Forecast (TSF)  Tools  Constant Lines  CurrentDayOHL  Daily Performance  DayLines  DayLinesAdv  GetDayBar  Info  Maximum (MAX)  Minimum (MIN)  MTFBoxes  PriceLine  PriorDayOHLC  PriorDayOHLCext  SessionBreakLines  ShowBidAsk  TickCounter  True Strength Index (TSI)  Ultimate Oscillator  Volume (VOL)  Volume Moving Average (VOLMA)  Volume Oscillator  Volume Profile  Volume Rate of Change (VROC)  VolumeUpDown  Volume Zones  Williams %R  ZigZag", 
+            "text": "Want to learn more about the AgenaTrader indicators? We've got the resources to help you get started.   Data  Bars (Candles)  Data Series  Open  High  Low  Close  Median  Typical  Weighted  Weighteds  Time  Times  Volume  Volumes    Indicators   Oscillators  Accumulation/Distribution (ADL)  Adaptive Price Zone (APZ)  Aroon  Aroon Oscillator  Average Directional Index (ADX)  Average Directional Movement Rating (ADXR)  Average True Range (ATR)  Balance of Power (BOP)  Bollinger Bands  Bollinger Percent B (%b)  Bollinger Band Width (BBWidth)  Bollinger MTF (MultiTimeFrame)  BuySellPressure  BuySellVolume  CandleStickPattern  ChaikinMoneyFlow (CMF)  Chaikin Oscillator  ChaikinVolatility (CVL)  Chande Momentum Oscillator (CMO)  Commodity Channel Index (CCI)  Darvas Boxes  Directional Movement (DM)  Donchian Channel  Directional Movement Index (DMI)  Double Stochastics (DSS)  Dynamic Momentum Index (DMIndex)  Ease of Movement (EOM)  Fisher Transform  Forecast Oscillator (FOSC)  HighestHighIndex()  HighestHighPrice()  IchimokuCloud  InsideBarsMT  Keltner Channel  KeyReversalUp  KeyReversalDown  KeyReversalUpAtSMA  KeyReversalDownAtSMA  KeyReversalUpAtEMA  KeyReversalDownAtEMA  Linear Regression  LinRegIntercept  LinRegSlope  LowestLowIndex()  LowestLowPrice()  MACD  MAEnvelopes  MarketPhases  Momentum (MOM)  Money Flow Index (MFI)  Moving Averages  DEMA - Double Exponential Moving Average  EMA - Exponential Moving Average  EMA MTF (MultiTimeFrame)  HMA - Hull Moving Average  KAMA - Kaufman's Adaptive Moving Average  MAMA - Mesa Adaptive Moving Average  SMA - Simple Moving Average  SMA MTF (MultiTimeFrame)  SMMA - Smoothed Moving Average  TEMA - Triple Exponential Moving Average  TMA - Triangular Moving Average  TRIX - Triple Exponential Moving Average  T3 - Triple Exponential Moving Average  VMA - Variable Moving Average  VWMA - Volume Weighted Moving Average  WMA - Weighted Moving Average  ZLEMA - Zero Lag Exponential Moving Average  nBarsUp  nBarsDown  OnBalanceVolume (OBV)  OutsideBars  P123  Parabolic SAR  Percentage Price Oscillator (PPO)  PercentEnvelopes  Pivot Points  Polarized Fractal Efficiency (PFE)  Price Oscillator  Range  Range Indicator (RIND)  Rate of Change (ROC)  Relative Spread Strength (RSS)  Relative Strength Index (RSI)  Relative Strength Levy (RSL)  Relative Volatility Index (RVI)  ReversalBars  R-Squared  StandardDeviation(StdDev)  Standard Error (StdError)  Stochastics  Stochastics Fast  Stochastics RSI (StochRSI)  Summation (SUM)  SuperTrend  SupportResistanceAreas  Swing  Time-Series-Forecast (TSF)  Tools  Constant Lines  CurrentDayOHL  Daily Performance  DayLines  DayLinesAdv  GetDayBar  Info  Maximum (MAX)  Minimum (MIN)  MTFBoxes  PriceLine  PriorDayOHLC  PriorDayOHLCext  SessionBreakLines  ShowBidAsk  TickCounter  True Strength Index (TSI)  Ultimate Oscillator  Volume (VOL)  Volume Moving Average (VOLMA)  Volume Oscillator  Volume Profile  Volume Rate of Change (VROC)  VolumeUpDown  Volume Zones  Williams %R  ZigZag", 
             "title": "Welcome to the official AgenaIndicator repository!"
         }, 
         {
             "location": "/data/", 
-            "text": "Data\n\n\nIn this context, data is understood as information loaded from outside sources as well as data sets originating from internally generated AgenaScripts.\n\n\nBars (Candles)\n\n\nModus Operandi\n\n\nA classical indicator will calculate one or multiple values using the available data series.\n\n\nData series in this sense can consist of closing prices, lows, hourly charts or 10-minute periods etc.\nEach period (candle) will be assigned to a specific indicator(s).\n\n\nIn the following examples and illustrations, we will assume an indicator value generated by something like a simple moving average.\n\n\nTo calculate a moving average, AgenaTrader needs a data series; for this we will use the closing prices. All closing prices for the bars (candles) within a chart will be saved in a list and numerically ordered.\n\n\nThe current closing price of the current bar will be displayed on the right edge of the chart and will be assigned the number 0. The bar to the left of it is assigned the number 1 and so on. The oldest displayed bar will have the number 500 (as an example).\n\n\nIf a new bar is added during the current trading session, then this bar will be assigned the number 0, and the previous bar \u2013 which up to that point was bar number 0 \u2013 will now be reassigned as bar 1, and the oldest bar to the very left will have the number 501.\n\n\nWithin a script (self-created program), the \u201cClose\" array is the list of all closing prices. The last closing price is thus Close[0] and the preceding closing price (bar to the left of the last bar) is Close[1] and so on, with the oldest candle having the value of Close[501]. The number within the square brackets here clearly denotes the index of the array. The general term used within AgenaTrader is \u201cbarsAgo\".\n\n\nIn addition, each bar will not only have a close value, but also a \nHigh\n, \nLow\n, \nOpen\n, \nMedian\n, \nTypical\n, \nWeighted\n, \nTime\n and \nVolume\n. On a daily period timeframe, the high of the candle that occurred 10 periods ago would be High[10]; the low of the last day would be Low[1].\n\n\nImportant note:\n\nThe examples mentioned concern calculations that are performed at the end of a period. The values for the currently running and unfinished candles are not taken into consideration.\n\n\nIf you want the values of the currently running and unfinished candles, you will need to set CalculateOnBarClose = false. As with the previous example, the currently running bar will receive the number 0 and so on.\nClose[0] will provide you with the most recent price transmitted by the data provider. All values of the bars High[0]\u2026Low[0]\u2026 etc. are subject to change until the bar has been finalized and a new bar has begun. The only value that will definitely not change is Open[0].\n\n\nData Series\n\n\nDescription\n\n\nAgenaTrader differentiates between data series used for your self-programmed definitions that will hold values of various types, and on the other hand, data series which are the standard integrated series containing market data and price data for the individual data.\nThe concept of data series is followed up consistently and continuously. All price data for individual bars are organized within the data series.\n\n\nThe following data series are available:\n\n\nOpen\n\n\nHigh\n\n\nLow\n\n\nClose\n\n\nMedian\n\n\nTypical\n\n\nWeighted\n \nWeighteds\n\n\nTime\n \nTimes\n\n\nTimeFrame\n \nTimeFrames\n\n\nVolume\n \nVolumes\n\n\nOpen\n\n\nDescription\n\n\nOpen is the data series in which the historical opening prices are saved.\n\n\nParameter\n\n\nbarsAgo Index value (see \nBars\n)\n\n\nUsage\n\n\nOpen\nOpen[int barsAgo]\n\n\n\n\nMore information\n\n\nThe outputted value depends on the property \nCalculateOnBarClose\n.\n\n\nExample\n\n\n// Opening price of the current period\nPrint(Time[0] + \n \n + Open[0]);\n\n// Opening price of the bar that occurred 5 periods ago\nPrint(Time[5] + \n \n + Open[5]);\n\n// Current value of the SMA 14 above the opening price (rounded)\nPrint(\nSMA(14) Calculated using the opening prices: \n + Instrument.Round2TickSize(SMA(Open, 14)[0]));\n\n\n\n\nHigh\n\n\nDescription\n\n\nHigh is the data series in which the historical highs are saved.\n\n\nParameter\n\n\nbarsAgo Index value (see \nBars\n)\n\n\nusage\n\n\nHigh\nHigh[int barsAgo]\n\n\n\n\nMore information\n\n\nThe outputted value depends on the property \nCalculateOnBarClose\n.\n\n\nExample\n\n\n// High price of the current period\nPrint(Time[0] + \n \n + High[0]);\n\n// High price of the bar 5 periods ago\nPrint(Time[5] + \n \n + High[5]);\n\n// Current value for the SMA 14 using the high prices (rounded)\nPrint(\nSMA(14) calculated using the high values: \n + Instrument.Round2TickSize(SMA(High, 14)[0]));\n\n\n\n\nLow\n\n\nDescription\n\n\nLow is the data series in which all historical lows are saved.\n\n\nParameter\n\n\nbarsAgo Index value (see \nBars\n)\n\n\nUsage\n\n\nLow\nLow[int barsAgo]\n\n\n\n\nMore information\n\n\nThe outputted value depends on the property \nCalculateOnBarClose\n.\n\n\nExample\n\n\n// Low prices of the current period\nPrint(Time[0] + \n \n + Low[0]);\n\n// Low prices of the bar 5 periods ago\nPrint(Time[5] + \n \n + Low[5]);\n\n// Current value for the SMA 14 calculated using the low prices\nPrint(\nSMA(14) calculated using the low prices: \n + Instrument.Round2TickSize(SMA(Low, 14)[0]));\n\n\n\n\nClose\n\n\nDescription\n\n\nClose is the data series in which all historical closing prices are saved.\n\n\nParameter\n\n\nbarsAgo Index value (see \nBars\n)\n\n\nUsage\n\n\nClose\nClose[int barsAgo]\n\n\n\n\nMore information\n\n\nThe outputted value depends on the property \nCalculateOnBarClose\n.\n\n\nIndicators are generally calculated using the closing prices. The selection of the input series can generally be omitted (see example below).\n\n\nExample\n\n\n// Closing prices for the current period\nPrint(Time[0] + \n \n + Close[0]);\n\n// Closing prices for the bar 5 periods ago\nPrint(Time[5] + \n \n + Close[5]);\n\n// Current value for the SMA 14 using the closing prices\nPrint(\nSMA(14) calculated using the closing prices: \n + Instrument.Round2TickSize(SMA(Close, 14)[0]));\n\n// Close can be omitted since it is used by default\nPrint(\nSMA(14) calculated using the closing prices: \n + Instrument.Round2TickSize(SMA(14)[0]));\n\n\n\n\nVolume\n\n\nDescription\n\n\nVolume is the data series in which the historical volume records are saved.\n\n\nParameter\n\n\nbarsAgo Index value (see \nBars\n)\n\n\nUsage\n\n\nVolume\nVolume[int barsAgo]\n\n\n\n\nMore information\n\n\nThe outputted value depends on the property \nCalculateOnBarClose\n.\n\n\nThe value delivered by the indicator \nVOL()\n is identical to the volume described here.\nE.g. Vol()[3] will deliver the same value as Volume[3].\n\n\nExample\n\n\n// Volume of the current period\nPrint(Time[0] + \n \n + Volume[0]]);\n\n// Volume of the bar 5 periods ago\nPrint(Time[5] + \n \n + Volume[5]);\n\n// Current value for the SMA14 based on the volume\nPrint(\nSMA(14) calculated using the volume: \n + Instrument.Round2TickSize(SMA(Volume, 14)[0]));\n\n\n\n\nMedian\n\n\nDescription\n\n\nMedian is the data series in which the historical median values are saved.\nThe median price is calculated as (high + low) / 2.\n\n\nSee \nTypical\n and \nWeighted\n.\n\n\nParameter\n\n\nbarsAgo Index value (see \nBars\n)\n\n\nUsage\n\n\nMedian\nMedian[int barsAgo]\n\n\n\n\nMore information\n\n\nThe outputted value depends on the property \nCalculateOnBarClose\n.\n\n\nFurther information on median, typical and weighted:\n\nhttp://blog.nobletrading.com/2009/12/median-price-typical-price-weighted.html\n\n\nExample\n\n\n// Median price for the current period\nPrint(Time[0] + \n \n + Median[0]);\n\n// Median price for the bar 5 periods ago\nPrint(Time[5] + \n \n + Median[5]);\n\n// Current value for the SMA 14 calculated using the median prices\nPrint(\nSMA(14) calculated using the median prices: \n + Instrument.Round2TickSize(SMA(Median, 14)\\[0\\]));\n\n\n\n\nTypical\n\n\nDescription\n\n\nTypical is the data series in which the historical typical values are saved.\n\n\nThe typical price of a bar is calculated as (high + low + close) / 3.\n\n\nSee \nMedian\n and \nWeighted\n.\n\n\nParameter\n\n\nbarsAgo Index value (see \nBars\n)\n\n\nUsage\n\n\nTypical\nTypical[int barsAgo]\n\n\n\n\nMore information\n\n\nThe outputted value depends on the property \nCalculateOnBarClose\n.\n\n\nFurther information regarding median, typical and weighted:\n\nhttp://blog.nobletrading.com/2009/12/median-price-typical-price-weighted.html\n\n\nExample\n\n\n// Typical price of the current period\nPrint(Time[0] + \n \n + Typical[0]);\n\n// Typical price for the bar 5 periods ago\nPrint(Time[5] + \n \n + Typical[5]);\n\n// Current value for the SMA 14 using the typical price\nPrint(\nSMA(14)calculated using the typical prices: \n + Instrument.Round2TickSize(SMA(Typical, 14)[0]));\n\n\n\n\nWeighted\n\n\nDescription\n\n\nWeighted is the data series in which all historical weighted values are saved.\n\n\nThe weighted price of a bar is calculated as (high + low + 2*close) / 4 and is weighted on the closing price. See \nMedian\n \n \nTypical\n.\n\n\nParameter\n\n\nbarsAgo Index value (see \nBars\n)\n\n\nUsage\n\n\nWeighted\nWeighted[int barsAgo]\n\n\n\n\nMore information\n\n\nThe outputted value depends on the property \nCalculateOnBarClose\n.\n\n\nFurther information on median, typical and weighted:\n\nhttp://blog.nobletrading.com/2009/12/median-price-typical-price-weighted.html\n\n\nExample\n\n\n// Weighted price for the current period\nPrint(Time[0] + \n \n + Weighted[0]);\n\n// Weighted price of the bar 5 periods ago\nPrint(Time[5] + \n \n + Weighted[5]);\n\n// Current value for the SMA(14) using the weighted price\nPrint(\nSMA(14) calculated using the weighted price: \n + Instrument.Round2TickSize(SMA(Weighted, 14)[0]));\n\n\n\n\nWeighteds\n\n\nDescription\n\n\nWeighteds is an array of [\nDataSeries\n][1] that contains all \nWeighted\n data series.\n\n\nThe array is only of value for indicators and strategies that use data from multiple timeframes.\n\n\nA new entry is added to the array whenever a new timeframe is added to an indicator or strategy.\n\n\nWith \n[TimeFrameRequirements((\"1 Day\"), (\"1 Week\"))]\n the array will contain 3 entries:\n\n\nWeighteds[0] the weighted data series of the chart timeframe\nWeighteds[1] the weighted data series of all bars in a daily timeframe\nWeighteds[2] the weighted data series of all bars in a weekly timeframe\n\n\nWeighteds[0][0] is equivalent to Weighteds[0].\n\n\nSee [\nMultiBars\n].\n\n\nParameter\n\n\nbarsAgo Index value of the individual bars within a data series\nbarSeriesIndex Index value for the various timeframes\n\n\nUsage\n\n\nWeighteds[int barSeriesIndex]\nWeighteds[int barSeriesIndex][int barsAgo]\n\n\n\n\nMore Information\n\n\nThe returned value is dependent upon the property \nCalculateOnBarClose\n.\n\n\nExample\n\n\nSee example under [\nMultibars\n][\nMultiBars\n].\n\n\nTime\n\n\nDescription\n\n\nTime is a [\nDataSeries\n][\ndata series\n] of the type [\nDateTimeSeries\n], in which the timestamps of the individual bars are saved.\n\n\nParameter\n\n\nbarsAgo Index value (see \nBars\n)\n\n\nUsage\n\n\nTime\nTime[int barsAgo]\n\n\n\n\nMore Information\n\n\nThe returned value is dependent upon the property \nCalculateOnBarClose\n.\n\n\nExample\n\n\n// Timestamp of the current period\nPrint(Time[0]);\n// Timestamp of the bar from 5 periods ago\nPrint(Time[5]);\n\n\n\n\nTimes\n\n\nDescription\n\n\nTimes is an array of \nDataSeries\n that contains all [\nTime\n] data series.\n\n\nThis array is only of value to indicators and strategies that make use of multiple timeframes.\nA new entry is added to the array whenever a new timeframe is added to an indicator or strategy.\n\n\nWith \n[TimeFrameRequirements((\"1 Day\"), (\"1 Week\"))]\n the array will contain 3 entries:\n\n\nTimes[0] the time data series of the chart timeframe\nTimes[1] the time data series of all bars in a daily timeframe\nTimes[2] the time data series of all bars in a weekly timeframe\n\n\nTimes[0][0] is equivalent to Times[0].\n\n\nSee [\nMultiBars\n].\n\n\nParameter\n\n\nbarsAgo Index value for the individual bars within a data series\nbarSeriesIndex Index value for the various timeframes\n\n\nUsage\n\n\nTimes[int barSeriesIndex]\nTimes[int barSeriesIndex][int barsAgo]\n\n\n\n\nMore Information\n\n\nThe returned value is dependent upon the property \nCalculateOnBarClose\n.\n\n\nExample\n\n\nSee example [\nMultibars\n][\nMultiBars\n].\n\n\nVolume\n\n\nDescription\n\n\nVolume is a [\nDataSeries\n][\nData series\n] of the type [\nDataSeries\n], in which the historical volume information is saved.\n\n\nParameter\n\n\nbarsAgo Index value (see \nBars\n)\n\n\nUsage\n\n\nVolume\n\n\n\n\nVolume[\nint\n barsAgo]\n\n\nMore Information\n\n\nThe returned value is dependent upon the property \nCalculateOnBarClose\n.\n\n\nThe value returned by the [\nVOL()\n] indicator is identical with the volume described here;\nfor example, Vol()[3] will have the same value as Volume[3].\n\n\nExample\n\n\n// Volume for the current period\nPrint(Time[0] + \n \n + Volume[0]);\n// Volume of the bar from 5 periods ago\nPrint(Time[5] + \n \n + Volume[5]);\n// Current value for the SMA 14 calculated using the volume\nPrint(\nSMA(14) calculated using the volume: \n + Instrument.Round2TickSize(SMA(Volume, 14)[0]));\n\n\n\n\nVolumes\n\n\nDescription\n\n\nVolumes is an array of \nDataSeries\n that contains all [\nVolume\n] data series.\n\n\nThis array is only of value for indicators or strategies that use data from multiple timeframes.\n\n\nA new entry is added to the array whenever a new timeframe is added to an indicator or strategy.\n\n\nWith \n[TimeFrameRequirements((\"1 Day\"), (\"1 Week\"))]\n the array will contain 3 entries:\n\n\nVolumes[0] the volume data series of the chart timeframe\nVolumes[1] the volume data series of all bars in the daily timeframe\nVolumes[2] the volume data series of all bars in the weekly timeframe\n\n\nVolumes[0][0] is equivalent to Volumes[0].\n\n\nSee [\nMultiBars\n].\n\n\nParameter\n\n\nbarsAgo Index value of the individual bars within a data series\n\n\nbarSeriesIndex Index value of the various timeframes\n\n\nUsage\n\n\nVolumes[int barSeriesIndex]\nVolumes[int barSeriesIndex][int barsAgo]\n\n\n\n\nMore Information\n\n\nThe returned value is dependent upon the property \nCalculateOnBarClose\n.\n\n\nExample\n\n\nSee example [\nMultibars\n][\nMultiBars\n].", 
+            "text": "Data\n\n\nIn this context, data is understood as information loaded from outside sources as well as data sets originating from internally generated AgenaScripts.\n\n\nBars (Candles)\n\n\nModus Operandi\n\n\nA classical indicator will calculate one or multiple values using the available data series.\n\n\nData series in this sense can consist of closing prices, lows, hourly charts or 10-minute periods etc.\nEach period (candle) will be assigned to a specific indicator(s).\n\n\nIn the following examples and illustrations, we will assume an indicator value generated by something like a simple moving average.\n\n\nTo calculate a moving average, AgenaTrader needs a data series; for this we will use the closing prices. All closing prices for the bars (candles) within a chart will be saved in a list and numerically ordered.\n\n\nThe current closing price of the current bar will be displayed on the right edge of the chart and will be assigned the number 0. The bar to the left of it is assigned the number 1 and so on. The oldest displayed bar will have the number 500 (as an example).\n\n\nIf a new bar is added during the current trading session, then this bar will be assigned the number 0, and the previous bar \u2013 which up to that point was bar number 0 \u2013 will now be reassigned as bar 1, and the oldest bar to the very left will have the number 501.\n\n\nWithin a script (self-created program), the \u201cClose\" array is the list of all closing prices. The last closing price is thus Close[0] and the preceding closing price (bar to the left of the last bar) is Close[1] and so on, with the oldest candle having the value of Close[501]. The number within the square brackets here clearly denotes the index of the array. The general term used within AgenaTrader is \u201cbarsAgo\".\n\n\nIn addition, each bar will not only have a close value, but also a \nHigh\n, \nLow\n, \nOpen\n, \nMedian\n, \nTypical\n, \nWeighted\n, \nTime\n and \nVolume\n. On a daily period timeframe, the high of the candle that occurred 10 periods ago would be High[10]; the low of the last day would be Low[1].\n\n\nImportant note:\n\nThe examples mentioned concern calculations that are performed at the end of a period. The values for the currently running and unfinished candles are not taken into consideration.\n\n\nIf you want the values of the currently running and unfinished candles, you will need to set CalculateOnBarClose = false. As with the previous example, the currently running bar will receive the number 0 and so on.\nClose[0] will provide you with the most recent price transmitted by the data provider. All values of the bars High[0]\u2026Low[0]\u2026 etc. are subject to change until the bar has been finalized and a new bar has begun. The only value that will definitely not change is Open[0].\n\n\nData Series\n\n\nDescription\n\n\nAgenaTrader differentiates between data series used for your self-programmed definitions that will hold values of various types, and on the other hand, data series which are the standard integrated series containing market data and price data for the individual data.\nThe concept of data series is followed up consistently and continuously. All price data for individual bars are organized within the data series.\n\n\nThe following data series are available:\n\n\nOpen\n\n\nHigh\n\n\nLow\n\n\nClose\n\n\nMedian\n\n\nTypical\n\n\nWeighted\n \nWeighteds\n\n\nTime\n \nTimes\n\n\nTimeFrame\n \nTimeFrames\n\n\nVolume\n \nVolumes\n\n\nOpen\n\n\nDescription\n\n\nOpen is the data series in which the historical opening prices are saved.\n\n\nParameter\n\n\nbarsAgo Index value (see \nBars\n)\n\n\nUsage\n\n\nOpen\nOpen[int barsAgo]\n\n\n\n\nMore information\n\n\nThe outputted value depends on the property \nCalculateOnBarClose\n.\n\n\nExample\n\n\n// Opening price of the current period\nPrint(Time[0] + \n \n + Open[0]);\n\n// Opening price of the bar that occurred 5 periods ago\nPrint(Time[5] + \n \n + Open[5]);\n\n// Current value of the SMA 14 above the opening price (rounded)\nPrint(\nSMA(14) Calculated using the opening prices: \n + Instrument.Round2TickSize(SMA(Open, 14)[0]));\n\n\n\n\nHigh\n\n\nDescription\n\n\nHigh is the data series in which the historical highs are saved.\n\n\nParameter\n\n\nbarsAgo Index value (see \nBars\n)\n\n\nusage\n\n\nHigh\nHigh[int barsAgo]\n\n\n\n\nMore information\n\n\nThe outputted value depends on the property \nCalculateOnBarClose\n.\n\n\nExample\n\n\n// High price of the current period\nPrint(Time[0] + \n \n + High[0]);\n\n// High price of the bar 5 periods ago\nPrint(Time[5] + \n \n + High[5]);\n\n// Current value for the SMA 14 using the high prices (rounded)\nPrint(\nSMA(14) calculated using the high values: \n + Instrument.Round2TickSize(SMA(High, 14)[0]));\n\n\n\n\nLow\n\n\nDescription\n\n\nLow is the data series in which all historical lows are saved.\n\n\nParameter\n\n\nbarsAgo Index value (see \nBars\n)\n\n\nUsage\n\n\nLow\nLow[int barsAgo]\n\n\n\n\nMore information\n\n\nThe outputted value depends on the property \nCalculateOnBarClose\n.\n\n\nExample\n\n\n// Low prices of the current period\nPrint(Time[0] + \n \n + Low[0]);\n\n// Low prices of the bar 5 periods ago\nPrint(Time[5] + \n \n + Low[5]);\n\n// Current value for the SMA 14 calculated using the low prices\nPrint(\nSMA(14) calculated using the low prices: \n + Instrument.Round2TickSize(SMA(Low, 14)[0]));\n\n\n\n\nClose\n\n\nDescription\n\n\nClose is the data series in which all historical closing prices are saved.\n\n\nParameter\n\n\nbarsAgo Index value (see \nBars\n)\n\n\nUsage\n\n\nClose\nClose[int barsAgo]\n\n\n\n\nMore information\n\n\nThe outputted value depends on the property \nCalculateOnBarClose\n.\n\n\nIndicators are generally calculated using the closing prices. The selection of the input series can generally be omitted (see example below).\n\n\nExample\n\n\n// Closing prices for the current period\nPrint(Time[0] + \n \n + Close[0]);\n\n// Closing prices for the bar 5 periods ago\nPrint(Time[5] + \n \n + Close[5]);\n\n// Current value for the SMA 14 using the closing prices\nPrint(\nSMA(14) calculated using the closing prices: \n + Instrument.Round2TickSize(SMA(Close, 14)[0]));\n\n// Close can be omitted since it is used by default\nPrint(\nSMA(14) calculated using the closing prices: \n + Instrument.Round2TickSize(SMA(14)[0]));\n\n\n\n\nMedian\n\n\nDescription\n\n\nMedian is the data series in which the historical median values are saved.\nThe median price is calculated as (high + low) / 2.\n\n\nSee \nTypical\n and \nWeighted\n.\n\n\nParameter\n\n\nbarsAgo Index value (see \nBars\n)\n\n\nUsage\n\n\nMedian\nMedian[int barsAgo]\n\n\n\n\nMore information\n\n\nThe outputted value depends on the property \nCalculateOnBarClose\n.\n\n\nFurther information on median, typical and weighted:\n\nhttp://blog.nobletrading.com/2009/12/median-price-typical-price-weighted.html\n\n\nExample\n\n\n// Median price for the current period\nPrint(Time[0] + \n \n + Median[0]);\n\n// Median price for the bar 5 periods ago\nPrint(Time[5] + \n \n + Median[5]);\n\n// Current value for the SMA 14 calculated using the median prices\nPrint(\nSMA(14) calculated using the median prices: \n + Instrument.Round2TickSize(SMA(Median, 14)\\[0\\]));\n\n\n\n\nTypical\n\n\nDescription\n\n\nTypical is the data series in which the historical typical values are saved.\n\n\nThe typical price of a bar is calculated as (high + low + close) / 3.\n\n\nSee \nMedian\n and \nWeighted\n.\n\n\nParameter\n\n\nbarsAgo Index value (see \nBars\n)\n\n\nUsage\n\n\nTypical\nTypical[int barsAgo]\n\n\n\n\nMore information\n\n\nThe outputted value depends on the property \nCalculateOnBarClose\n.\n\n\nFurther information regarding median, typical and weighted:\n\nhttp://blog.nobletrading.com/2009/12/median-price-typical-price-weighted.html\n\n\nExample\n\n\n// Typical price of the current period\nPrint(Time[0] + \n \n + Typical[0]);\n\n// Typical price for the bar 5 periods ago\nPrint(Time[5] + \n \n + Typical[5]);\n\n// Current value for the SMA 14 using the typical price\nPrint(\nSMA(14)calculated using the typical prices: \n + Instrument.Round2TickSize(SMA(Typical, 14)[0]));\n\n\n\n\nWeighted\n\n\nDescription\n\n\nWeighted is the data series in which all historical weighted values are saved.\n\n\nThe weighted price of a bar is calculated as (high + low + 2*close) / 4 and is weighted on the closing price. See \nMedian\n \n \nTypical\n.\n\n\nParameter\n\n\nbarsAgo Index value (see \nBars\n)\n\n\nUsage\n\n\nWeighted\nWeighted[int barsAgo]\n\n\n\n\nMore information\n\n\nThe outputted value depends on the property \nCalculateOnBarClose\n.\n\n\nFurther information on median, typical and weighted:\n\nhttp://blog.nobletrading.com/2009/12/median-price-typical-price-weighted.html\n\n\nExample\n\n\n// Weighted price for the current period\nPrint(Time[0] + \n \n + Weighted[0]);\n\n// Weighted price of the bar 5 periods ago\nPrint(Time[5] + \n \n + Weighted[5]);\n\n// Current value for the SMA(14) using the weighted price\nPrint(\nSMA(14) calculated using the weighted price: \n + Instrument.Round2TickSize(SMA(Weighted, 14)[0]));\n\n\n\n\nWeighteds\n\n\nDescription\n\n\nWeighteds is an array of [\nDataSeries\n][1] that contains all \nWeighted\n data series.\n\n\nThe array is only of value for indicators and strategies that use data from multiple timeframes.\n\n\nA new entry is added to the array whenever a new timeframe is added to an indicator or strategy.\n\n\nWith \n[TimeFrameRequirements((\"1 Day\"), (\"1 Week\"))]\n the array will contain 3 entries:\n\n\nWeighteds[0] the weighted data series of the chart timeframe\nWeighteds[1] the weighted data series of all bars in a daily timeframe\nWeighteds[2] the weighted data series of all bars in a weekly timeframe\n\n\nWeighteds[0][0] is equivalent to Weighteds[0].\n\n\nSee [\nMultiBars\n].\n\n\nParameter\n\n\nbarsAgo Index value of the individual bars within a data series\nbarSeriesIndex Index value for the various timeframes\n\n\nUsage\n\n\nWeighteds[int barSeriesIndex]\nWeighteds[int barSeriesIndex][int barsAgo]\n\n\n\n\nMore Information\n\n\nThe returned value is dependent upon the property \nCalculateOnBarClose\n.\n\n\nExample\n\n\nSee example under [\nMultibars\n][\nMultiBars\n].\n\n\nTime\n\n\nDescription\n\n\nTime is a [\nDataSeries\n][\ndata series\n] of the type [\nDateTimeSeries\n], in which the timestamps of the individual bars are saved.\n\n\nParameter\n\n\nbarsAgo Index value (see \nBars\n)\n\n\nUsage\n\n\nTime\nTime[int barsAgo]\n\n\n\n\nMore Information\n\n\nThe returned value is dependent upon the property \nCalculateOnBarClose\n.\n\n\nExample\n\n\n// Timestamp of the current period\nPrint(Time[0]);\n// Timestamp of the bar from 5 periods ago\nPrint(Time[5]);\n\n\n\n\nTimes\n\n\nDescription\n\n\nTimes is an array of \nDataSeries\n that contains all [\nTime\n] data series.\n\n\nThis array is only of value to indicators and strategies that make use of multiple timeframes.\nA new entry is added to the array whenever a new timeframe is added to an indicator or strategy.\n\n\nWith \n[TimeFrameRequirements((\"1 Day\"), (\"1 Week\"))]\n the array will contain 3 entries:\n\n\nTimes[0] the time data series of the chart timeframe\nTimes[1] the time data series of all bars in a daily timeframe\nTimes[2] the time data series of all bars in a weekly timeframe\n\n\nTimes[0][0] is equivalent to Times[0].\n\n\nSee [\nMultiBars\n].\n\n\nParameter\n\n\nbarsAgo Index value for the individual bars within a data series\nbarSeriesIndex Index value for the various timeframes\n\n\nUsage\n\n\nTimes[int barSeriesIndex]\nTimes[int barSeriesIndex][int barsAgo]\n\n\n\n\nMore Information\n\n\nThe returned value is dependent upon the property \nCalculateOnBarClose\n.\n\n\nExample\n\n\nSee example [\nMultibars\n][\nMultiBars\n].\n\n\nVolume\n\n\nDescription\n\n\nVolume is a [\nDataSeries\n][\nData series\n] of the type [\nDataSeries\n], in which the historical volume information is saved.\n\n\nParameter\n\n\nbarsAgo Index value (see \nBars\n)\n\n\nUsage\n\n\nVolume\nVolume[int barsAgo]\n\n\n\n\nMore Information\n\n\nThe returned value is dependent upon the property \nCalculateOnBarClose\n.\n\n\nThe value returned by the [\nVOL()\n] indicator is identical with the volume described here;\nfor example, Vol()[3] will have the same value as Volume[3].\n\n\nExample\n\n\n// Volume for the current period\nPrint(Time[0] + \n \n + Volume[0]);\n// Volume of the bar from 5 periods ago\nPrint(Time[5] + \n \n + Volume[5]);\n// Current value for the SMA 14 calculated using the volume\nPrint(\nSMA(14) calculated using the volume: \n + Instrument.Round2TickSize(SMA(Volume, 14)[0]));\n\n\n\n\nVolumes\n\n\nDescription\n\n\nVolumes is an array of \nDataSeries\n that contains all [\nVolume\n] data series.\n\n\nThis array is only of value for indicators or strategies that use data from multiple timeframes.\n\n\nA new entry is added to the array whenever a new timeframe is added to an indicator or strategy.\n\n\nWith \n[TimeFrameRequirements((\"1 Day\"), (\"1 Week\"))]\n the array will contain 3 entries:\n\n\nVolumes[0] the volume data series of the chart timeframe\nVolumes[1] the volume data series of all bars in the daily timeframe\nVolumes[2] the volume data series of all bars in the weekly timeframe\n\n\nVolumes[0][0] is equivalent to Volumes[0].\n\n\nSee [\nMultiBars\n].\n\n\nParameter\n\n\nbarsAgo Index value of the individual bars within a data series\n\n\nbarSeriesIndex Index value of the various timeframes\n\n\nUsage\n\n\nVolumes[int barSeriesIndex]\nVolumes[int barSeriesIndex][int barsAgo]\n\n\n\n\nMore Information\n\n\nThe returned value is dependent upon the property \nCalculateOnBarClose\n.\n\n\nExample\n\n\nSee example [\nMultibars\n][\nMultiBars\n].\n\n\nTimeFrames\n\n\nDescription\n\n\nTimeFrames is an array of timeframe objects that contains a timeframe object for each individual bar object.\n\n\nThis array is only of value for indicators or strategies that use data from multiple timeframes.\n\n\nA new entry is added to the array whenever a new timeframe is added to an indicator or strategy.\n\n\nWith \n[TimeFrameRequirements((\"1 Day\"), (\"1 Week\"))]\n the array will contain 3 entries:\n\n\nTimeFrames [0] Timeframe of the primary data series (chart timeframe)\nTimeFrames [1] \nPrint\n(TimeFrames[1]); // returns \"1 Day\"\nTimeFrames [2] \nPrint\n(TimeFrames[2]); // returns \"1 Week\"\n\n\nTimeFrames [0] is equivalent to [\nTimeFrame\n].\n\n\nSee [\nMultiBars\n].\n\n\nParameter\n\n\nbarSeriesIndex Index value for the various timeframes\n\n\nUsage\n\n\nTimeFrames [int barSeriesIndex]", 
             "title": "Data"
         }, 
         {
@@ -161,13 +161,13 @@
             "title": "Example"
         }, 
         {
-            "location": "/data/#volume", 
+            "location": "/data/#median", 
             "text": "", 
-            "title": "Volume"
+            "title": "Median"
         }, 
         {
             "location": "/data/#description_5", 
-            "text": "Volume is the data series in which the historical volume records are saved.", 
+            "text": "Median is the data series in which the historical median values are saved.\nThe median price is calculated as (high + low) / 2.  See  Typical  and  Weighted .", 
             "title": "Description"
         }, 
         {
@@ -177,46 +177,16 @@
         }, 
         {
             "location": "/data/#usage_4", 
-            "text": "Volume\nVolume[int barsAgo]", 
-            "title": "Usage"
-        }, 
-        {
-            "location": "/data/#more-information_4", 
-            "text": "The outputted value depends on the property  CalculateOnBarClose .  The value delivered by the indicator  VOL()  is identical to the volume described here.\nE.g. Vol()[3] will deliver the same value as Volume[3].", 
-            "title": "More information"
-        }, 
-        {
-            "location": "/data/#example_4", 
-            "text": "// Volume of the current period\nPrint(Time[0] +     + Volume[0]]);\n\n// Volume of the bar 5 periods ago\nPrint(Time[5] +     + Volume[5]);\n\n// Current value for the SMA14 based on the volume\nPrint( SMA(14) calculated using the volume:   + Instrument.Round2TickSize(SMA(Volume, 14)[0]));", 
-            "title": "Example"
-        }, 
-        {
-            "location": "/data/#median", 
-            "text": "", 
-            "title": "Median"
-        }, 
-        {
-            "location": "/data/#description_6", 
-            "text": "Median is the data series in which the historical median values are saved.\nThe median price is calculated as (high + low) / 2.  See  Typical  and  Weighted .", 
-            "title": "Description"
-        }, 
-        {
-            "location": "/data/#parameter_5", 
-            "text": "barsAgo Index value (see  Bars )", 
-            "title": "Parameter"
-        }, 
-        {
-            "location": "/data/#usage_5", 
             "text": "Median\nMedian[int barsAgo]", 
             "title": "Usage"
         }, 
         {
-            "location": "/data/#more-information_5", 
+            "location": "/data/#more-information_4", 
             "text": "The outputted value depends on the property  CalculateOnBarClose .  Further information on median, typical and weighted: http://blog.nobletrading.com/2009/12/median-price-typical-price-weighted.html", 
             "title": "More information"
         }, 
         {
-            "location": "/data/#example_5", 
+            "location": "/data/#example_4", 
             "text": "// Median price for the current period\nPrint(Time[0] +     + Median[0]);\n\n// Median price for the bar 5 periods ago\nPrint(Time[5] +     + Median[5]);\n\n// Current value for the SMA 14 calculated using the median prices\nPrint( SMA(14) calculated using the median prices:   + Instrument.Round2TickSize(SMA(Median, 14)\\[0\\]));", 
             "title": "Example"
         }, 
@@ -226,27 +196,27 @@
             "title": "Typical"
         }, 
         {
-            "location": "/data/#description_7", 
+            "location": "/data/#description_6", 
             "text": "Typical is the data series in which the historical typical values are saved.  The typical price of a bar is calculated as (high + low + close) / 3.  See  Median  and  Weighted .", 
             "title": "Description"
         }, 
         {
-            "location": "/data/#parameter_6", 
+            "location": "/data/#parameter_5", 
             "text": "barsAgo Index value (see  Bars )", 
             "title": "Parameter"
         }, 
         {
-            "location": "/data/#usage_6", 
+            "location": "/data/#usage_5", 
             "text": "Typical\nTypical[int barsAgo]", 
             "title": "Usage"
         }, 
         {
-            "location": "/data/#more-information_6", 
+            "location": "/data/#more-information_5", 
             "text": "The outputted value depends on the property  CalculateOnBarClose .  Further information regarding median, typical and weighted: http://blog.nobletrading.com/2009/12/median-price-typical-price-weighted.html", 
             "title": "More information"
         }, 
         {
-            "location": "/data/#example_6", 
+            "location": "/data/#example_5", 
             "text": "// Typical price of the current period\nPrint(Time[0] +     + Typical[0]);\n\n// Typical price for the bar 5 periods ago\nPrint(Time[5] +     + Typical[5]);\n\n// Current value for the SMA 14 using the typical price\nPrint( SMA(14)calculated using the typical prices:   + Instrument.Round2TickSize(SMA(Typical, 14)[0]));", 
             "title": "Example"
         }, 
@@ -256,27 +226,27 @@
             "title": "Weighted"
         }, 
         {
-            "location": "/data/#description_8", 
+            "location": "/data/#description_7", 
             "text": "Weighted is the data series in which all historical weighted values are saved.  The weighted price of a bar is calculated as (high + low + 2*close) / 4 and is weighted on the closing price. See  Median     Typical .", 
             "title": "Description"
         }, 
         {
-            "location": "/data/#parameter_7", 
+            "location": "/data/#parameter_6", 
             "text": "barsAgo Index value (see  Bars )", 
             "title": "Parameter"
         }, 
         {
-            "location": "/data/#usage_7", 
+            "location": "/data/#usage_6", 
             "text": "Weighted\nWeighted[int barsAgo]", 
             "title": "Usage"
         }, 
         {
-            "location": "/data/#more-information_7", 
+            "location": "/data/#more-information_6", 
             "text": "The outputted value depends on the property  CalculateOnBarClose .  Further information on median, typical and weighted: http://blog.nobletrading.com/2009/12/median-price-typical-price-weighted.html", 
             "title": "More information"
         }, 
         {
-            "location": "/data/#example_7", 
+            "location": "/data/#example_6", 
             "text": "// Weighted price for the current period\nPrint(Time[0] +     + Weighted[0]);\n\n// Weighted price of the bar 5 periods ago\nPrint(Time[5] +     + Weighted[5]);\n\n// Current value for the SMA(14) using the weighted price\nPrint( SMA(14) calculated using the weighted price:   + Instrument.Round2TickSize(SMA(Weighted, 14)[0]));", 
             "title": "Example"
         }, 
@@ -286,27 +256,27 @@
             "title": "Weighteds"
         }, 
         {
-            "location": "/data/#description_9", 
+            "location": "/data/#description_8", 
             "text": "Weighteds is an array of [ DataSeries ][1] that contains all  Weighted  data series.  The array is only of value for indicators and strategies that use data from multiple timeframes.  A new entry is added to the array whenever a new timeframe is added to an indicator or strategy.  With  [TimeFrameRequirements((\"1 Day\"), (\"1 Week\"))]  the array will contain 3 entries:  Weighteds[0] the weighted data series of the chart timeframe\nWeighteds[1] the weighted data series of all bars in a daily timeframe\nWeighteds[2] the weighted data series of all bars in a weekly timeframe  Weighteds[0][0] is equivalent to Weighteds[0].  See [ MultiBars ].", 
             "title": "Description"
         }, 
         {
-            "location": "/data/#parameter_8", 
+            "location": "/data/#parameter_7", 
             "text": "barsAgo Index value of the individual bars within a data series\nbarSeriesIndex Index value for the various timeframes", 
             "title": "Parameter"
         }, 
         {
-            "location": "/data/#usage_8", 
+            "location": "/data/#usage_7", 
             "text": "Weighteds[int barSeriesIndex]\nWeighteds[int barSeriesIndex][int barsAgo]", 
             "title": "Usage"
         }, 
         {
-            "location": "/data/#more-information_8", 
+            "location": "/data/#more-information_7", 
             "text": "The returned value is dependent upon the property  CalculateOnBarClose .", 
             "title": "More Information"
         }, 
         {
-            "location": "/data/#example_8", 
+            "location": "/data/#example_7", 
             "text": "See example under [ Multibars ][ MultiBars ].", 
             "title": "Example"
         }, 
@@ -316,27 +286,27 @@
             "title": "Time"
         }, 
         {
-            "location": "/data/#description_10", 
+            "location": "/data/#description_9", 
             "text": "Time is a [ DataSeries ][ data series ] of the type [ DateTimeSeries ], in which the timestamps of the individual bars are saved.", 
             "title": "Description"
         }, 
         {
-            "location": "/data/#parameter_9", 
+            "location": "/data/#parameter_8", 
             "text": "barsAgo Index value (see  Bars )", 
             "title": "Parameter"
         }, 
         {
-            "location": "/data/#usage_9", 
+            "location": "/data/#usage_8", 
             "text": "Time\nTime[int barsAgo]", 
             "title": "Usage"
         }, 
         {
-            "location": "/data/#more-information_9", 
+            "location": "/data/#more-information_8", 
             "text": "The returned value is dependent upon the property  CalculateOnBarClose .", 
             "title": "More Information"
         }, 
         {
-            "location": "/data/#example_9", 
+            "location": "/data/#example_8", 
             "text": "// Timestamp of the current period\nPrint(Time[0]);\n// Timestamp of the bar from 5 periods ago\nPrint(Time[5]);", 
             "title": "Example"
         }, 
@@ -346,57 +316,57 @@
             "title": "Times"
         }, 
         {
-            "location": "/data/#description_11", 
+            "location": "/data/#description_10", 
             "text": "Times is an array of  DataSeries  that contains all [ Time ] data series.  This array is only of value to indicators and strategies that make use of multiple timeframes.\nA new entry is added to the array whenever a new timeframe is added to an indicator or strategy.  With  [TimeFrameRequirements((\"1 Day\"), (\"1 Week\"))]  the array will contain 3 entries:  Times[0] the time data series of the chart timeframe\nTimes[1] the time data series of all bars in a daily timeframe\nTimes[2] the time data series of all bars in a weekly timeframe  Times[0][0] is equivalent to Times[0].  See [ MultiBars ].", 
             "title": "Description"
         }, 
         {
-            "location": "/data/#parameter_10", 
+            "location": "/data/#parameter_9", 
             "text": "barsAgo Index value for the individual bars within a data series\nbarSeriesIndex Index value for the various timeframes", 
             "title": "Parameter"
         }, 
         {
-            "location": "/data/#usage_10", 
+            "location": "/data/#usage_9", 
             "text": "Times[int barSeriesIndex]\nTimes[int barSeriesIndex][int barsAgo]", 
             "title": "Usage"
         }, 
         {
-            "location": "/data/#more-information_10", 
+            "location": "/data/#more-information_9", 
             "text": "The returned value is dependent upon the property  CalculateOnBarClose .", 
             "title": "More Information"
         }, 
         {
-            "location": "/data/#example_10", 
+            "location": "/data/#example_9", 
             "text": "See example [ Multibars ][ MultiBars ].", 
             "title": "Example"
         }, 
         {
-            "location": "/data/#volume_1", 
+            "location": "/data/#volume", 
             "text": "", 
             "title": "Volume"
         }, 
         {
-            "location": "/data/#description_12", 
+            "location": "/data/#description_11", 
             "text": "Volume is a [ DataSeries ][ Data series ] of the type [ DataSeries ], in which the historical volume information is saved.", 
             "title": "Description"
         }, 
         {
-            "location": "/data/#parameter_11", 
+            "location": "/data/#parameter_10", 
             "text": "barsAgo Index value (see  Bars )", 
             "title": "Parameter"
         }, 
         {
-            "location": "/data/#usage_11", 
-            "text": "Volume  Volume[ int  barsAgo]", 
+            "location": "/data/#usage_10", 
+            "text": "Volume\nVolume[int barsAgo]", 
             "title": "Usage"
         }, 
         {
-            "location": "/data/#more-information_11", 
+            "location": "/data/#more-information_10", 
             "text": "The returned value is dependent upon the property  CalculateOnBarClose .  The value returned by the [ VOL() ] indicator is identical with the volume described here;\nfor example, Vol()[3] will have the same value as Volume[3].", 
             "title": "More Information"
         }, 
         {
-            "location": "/data/#example_11", 
+            "location": "/data/#example_10", 
             "text": "// Volume for the current period\nPrint(Time[0] +     + Volume[0]);\n// Volume of the bar from 5 periods ago\nPrint(Time[5] +     + Volume[5]);\n// Current value for the SMA 14 calculated using the volume\nPrint( SMA(14) calculated using the volume:   + Instrument.Round2TickSize(SMA(Volume, 14)[0]));", 
             "title": "Example"
         }, 
@@ -406,29 +376,49 @@
             "title": "Volumes"
         }, 
         {
-            "location": "/data/#description_13", 
+            "location": "/data/#description_12", 
             "text": "Volumes is an array of  DataSeries  that contains all [ Volume ] data series.  This array is only of value for indicators or strategies that use data from multiple timeframes.  A new entry is added to the array whenever a new timeframe is added to an indicator or strategy.  With  [TimeFrameRequirements((\"1 Day\"), (\"1 Week\"))]  the array will contain 3 entries:  Volumes[0] the volume data series of the chart timeframe\nVolumes[1] the volume data series of all bars in the daily timeframe\nVolumes[2] the volume data series of all bars in the weekly timeframe  Volumes[0][0] is equivalent to Volumes[0].  See [ MultiBars ].", 
             "title": "Description"
         }, 
         {
-            "location": "/data/#parameter_12", 
+            "location": "/data/#parameter_11", 
             "text": "barsAgo Index value of the individual bars within a data series  barSeriesIndex Index value of the various timeframes", 
             "title": "Parameter"
         }, 
         {
-            "location": "/data/#usage_12", 
+            "location": "/data/#usage_11", 
             "text": "Volumes[int barSeriesIndex]\nVolumes[int barSeriesIndex][int barsAgo]", 
             "title": "Usage"
         }, 
         {
-            "location": "/data/#more-information_12", 
+            "location": "/data/#more-information_11", 
             "text": "The returned value is dependent upon the property  CalculateOnBarClose .", 
             "title": "More Information"
         }, 
         {
-            "location": "/data/#example_12", 
+            "location": "/data/#example_11", 
             "text": "See example [ Multibars ][ MultiBars ].", 
             "title": "Example"
+        }, 
+        {
+            "location": "/data/#timeframes", 
+            "text": "", 
+            "title": "TimeFrames"
+        }, 
+        {
+            "location": "/data/#description_13", 
+            "text": "TimeFrames is an array of timeframe objects that contains a timeframe object for each individual bar object.  This array is only of value for indicators or strategies that use data from multiple timeframes.  A new entry is added to the array whenever a new timeframe is added to an indicator or strategy.  With  [TimeFrameRequirements((\"1 Day\"), (\"1 Week\"))]  the array will contain 3 entries:  TimeFrames [0] Timeframe of the primary data series (chart timeframe)\nTimeFrames [1]  Print (TimeFrames[1]); // returns \"1 Day\"\nTimeFrames [2]  Print (TimeFrames[2]); // returns \"1 Week\"  TimeFrames [0] is equivalent to [ TimeFrame ].  See [ MultiBars ].", 
+            "title": "Description"
+        }, 
+        {
+            "location": "/data/#parameter_12", 
+            "text": "barSeriesIndex Index value for the various timeframes", 
+            "title": "Parameter"
+        }, 
+        {
+            "location": "/data/#usage_12", 
+            "text": "TimeFrames [int barSeriesIndex]", 
+            "title": "Usage"
         }, 
         {
             "location": "/indicators_oscillators/", 

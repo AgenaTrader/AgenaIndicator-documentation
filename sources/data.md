@@ -1,4 +1,3 @@
-
 # Data
 In this context, data is understood as information loaded from outside sources as well as data sets originating from internally generated AgenaScripts.
 
@@ -169,37 +168,6 @@ Print("SMA(14) calculated using the closing prices: " + Instrument.Round2TickSiz
 
 // Close can be omitted since it is used by default
 Print("SMA(14) calculated using the closing prices: " + Instrument.Round2TickSize(SMA(14)[0]));
-```
-
-## Volume
-### Description
-Volume is the data series in which the historical volume records are saved.
-
-### Parameter
-barsAgo Index value (see [*Bars*](#bars-candles))
-
-### Usage
-```cs
-Volume
-Volume[int barsAgo]
-```
-
-### More information
-The outputted value depends on the property *CalculateOnBarClose*.
-
-The value delivered by the indicator [*VOL()*](#volume-vol) is identical to the volume described here.
-E.g. Vol()\[3\] will deliver the same value as Volume\[3\].
-
-### Example
-```cs
-// Volume of the current period
-Print(Time[0] + " " + Volume[0]]);
-
-// Volume of the bar 5 periods ago
-Print(Time[5] + " " + Volume[5]);
-
-// Current value for the SMA14 based on the volume
-Print("SMA(14) calculated using the volume: " + Instrument.Round2TickSize(SMA(Volume, 14)[0]));
 ```
 
 ## Median
@@ -405,9 +373,8 @@ barsAgo Index value (see [*Bars*](#bars-candles))
 ### Usage
 ```cs
 Volume
+Volume[int barsAgo]
 ```
-
-Volume\[**int** barsAgo\]
 
 ### More Information
 The returned value is dependent upon the property *CalculateOnBarClose*.
@@ -459,3 +426,29 @@ The returned value is dependent upon the property *CalculateOnBarClose*.
 
 ### Example
 See example [*Multibars*][*MultiBars*].
+
+## TimeFrames
+### Description
+TimeFrames is an array of timeframe objects that contains a timeframe object for each individual bar object.
+
+This array is only of value for indicators or strategies that use data from multiple timeframes.
+
+A new entry is added to the array whenever a new timeframe is added to an indicator or strategy.
+
+With **\[TimeFrameRequirements(("1 Day"), ("1 Week"))\]** the array will contain 3 entries:
+
+TimeFrames \[0\] Timeframe of the primary data series (chart timeframe)
+TimeFrames \[1\] **Print**(TimeFrames\[1\]); // returns "1 Day"
+TimeFrames \[2\] **Print**(TimeFrames\[2\]); // returns "1 Week"
+
+TimeFrames \[0\] is equivalent to [*TimeFrame*].
+
+See [*MultiBars*].
+
+### Parameter
+barSeriesIndex Index value for the various timeframes
+
+### Usage
+```cs
+TimeFrames [int barSeriesIndex]
+```

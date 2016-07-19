@@ -83,8 +83,6 @@
                 
                     <li><a class="toctree-l4" href="#close">Close</a></li>
                 
-                    <li><a class="toctree-l4" href="#volume">Volume</a></li>
-                
                     <li><a class="toctree-l4" href="#median">Median</a></li>
                 
                     <li><a class="toctree-l4" href="#typical">Typical</a></li>
@@ -97,9 +95,11 @@
                 
                     <li><a class="toctree-l4" href="#times">Times</a></li>
                 
-                    <li><a class="toctree-l4" href="#volume_1">Volume</a></li>
+                    <li><a class="toctree-l4" href="#volume">Volume</a></li>
                 
                     <li><a class="toctree-l4" href="#volumes">Volumes</a></li>
+                
+                    <li><a class="toctree-l4" href="#timeframes">TimeFrames</a></li>
                 
             
             </ul>
@@ -274,48 +274,23 @@ Print(&quot;SMA(14) calculated using the closing prices: &quot; + Instrument.Rou
 Print(&quot;SMA(14) calculated using the closing prices: &quot; + Instrument.Round2TickSize(SMA(14)[0]));
 </code></pre>
 
-<h2 id="volume">Volume</h2>
-<h3 id="description_5">Description</h3>
-<p>Volume is the data series in which the historical volume records are saved.</p>
-<h3 id="parameter_4">Parameter</h3>
-<p>barsAgo Index value (see <a href="#bars-candles"><em>Bars</em></a>)</p>
-<h3 id="usage_4">Usage</h3>
-<pre><code class="cs">Volume
-Volume[int barsAgo]
-</code></pre>
-
-<h3 id="more-information_4">More information</h3>
-<p>The outputted value depends on the property <em>CalculateOnBarClose</em>.</p>
-<p>The value delivered by the indicator <a href="#volume-vol"><em>VOL()</em></a> is identical to the volume described here.
-E.g. Vol()[3] will deliver the same value as Volume[3].</p>
-<h3 id="example_4">Example</h3>
-<pre><code class="cs">// Volume of the current period
-Print(Time[0] + &quot; &quot; + Volume[0]]);
-
-// Volume of the bar 5 periods ago
-Print(Time[5] + &quot; &quot; + Volume[5]);
-
-// Current value for the SMA14 based on the volume
-Print(&quot;SMA(14) calculated using the volume: &quot; + Instrument.Round2TickSize(SMA(Volume, 14)[0]));
-</code></pre>
-
 <h2 id="median">Median</h2>
-<h3 id="description_6">Description</h3>
+<h3 id="description_5">Description</h3>
 <p>Median is the data series in which the historical median values are saved.
 The median price is calculated as (high + low) / 2.</p>
 <p>See <a href="#typical"><em>Typical</em></a> and <a href="#weighted"><em>Weighted</em></a>.</p>
-<h3 id="parameter_5">Parameter</h3>
+<h3 id="parameter_4">Parameter</h3>
 <p>barsAgo Index value (see <a href="#bars-candles"><em>Bars</em></a>)</p>
-<h3 id="usage_5">Usage</h3>
+<h3 id="usage_4">Usage</h3>
 <pre><code class="cs">Median
 Median[int barsAgo]
 </code></pre>
 
-<h3 id="more-information_5">More information</h3>
+<h3 id="more-information_4">More information</h3>
 <p>The outputted value depends on the property <em>CalculateOnBarClose</em>.</p>
 <p>Further information on median, typical and weighted:
 <a href="http://blog.nobletrading.com/2009/12/median-price-typical-price-weighted.html">http://blog.nobletrading.com/2009/12/median-price-typical-price-weighted.html</a></p>
-<h3 id="example_5">Example</h3>
+<h3 id="example_4">Example</h3>
 <pre><code class="cs">// Median price for the current period
 Print(Time[0] + &quot; &quot; + Median[0]);
 
@@ -327,22 +302,22 @@ Print(&quot;SMA(14) calculated using the median prices: &quot; + Instrument.Roun
 </code></pre>
 
 <h2 id="typical">Typical</h2>
-<h3 id="description_7">Description</h3>
+<h3 id="description_6">Description</h3>
 <p>Typical is the data series in which the historical typical values are saved.</p>
 <p>The typical price of a bar is calculated as (high + low + close) / 3.</p>
 <p>See <a href="#median"><em>Median</em></a> and <a href="#weighted"><em>Weighted</em></a>.</p>
-<h3 id="parameter_6">Parameter</h3>
+<h3 id="parameter_5">Parameter</h3>
 <p>barsAgo Index value (see <a href="#bars-candles"><em>Bars</em></a>)</p>
-<h3 id="usage_6">Usage</h3>
+<h3 id="usage_5">Usage</h3>
 <pre><code class="cs">Typical
 Typical[int barsAgo]
 </code></pre>
 
-<h3 id="more-information_6">More information</h3>
+<h3 id="more-information_5">More information</h3>
 <p>The outputted value depends on the property <em>CalculateOnBarClose</em>.</p>
 <p>Further information regarding median, typical and weighted:
 <a href="http://blog.nobletrading.com/2009/12/median-price-typical-price-weighted.html">http://blog.nobletrading.com/2009/12/median-price-typical-price-weighted.html</a></p>
-<h3 id="example_6">Example</h3>
+<h3 id="example_5">Example</h3>
 <pre><code class="cs">// Typical price of the current period
 Print(Time[0] + &quot; &quot; + Typical[0]);
 
@@ -354,21 +329,21 @@ Print(&quot;SMA(14)calculated using the typical prices: &quot; + Instrument.Roun
 </code></pre>
 
 <h2 id="weighted">Weighted</h2>
-<h3 id="description_8">Description</h3>
+<h3 id="description_7">Description</h3>
 <p>Weighted is the data series in which all historical weighted values are saved.</p>
 <p>The weighted price of a bar is calculated as (high + low + 2*close) / 4 and is weighted on the closing price. See <a href="#median"><em>Median</em></a> &amp; <a href="#typical"><em>Typical</em></a>.</p>
-<h3 id="parameter_7">Parameter</h3>
+<h3 id="parameter_6">Parameter</h3>
 <p>barsAgo Index value (see <a href="#bars-candles"><em>Bars</em></a>)</p>
-<h3 id="usage_7">Usage</h3>
+<h3 id="usage_6">Usage</h3>
 <pre><code class="cs">Weighted
 Weighted[int barsAgo]
 </code></pre>
 
-<h3 id="more-information_7">More information</h3>
+<h3 id="more-information_6">More information</h3>
 <p>The outputted value depends on the property <em>CalculateOnBarClose</em>.</p>
 <p>Further information on median, typical and weighted:
 <a href="http://blog.nobletrading.com/2009/12/median-price-typical-price-weighted.html">http://blog.nobletrading.com/2009/12/median-price-typical-price-weighted.html</a></p>
-<h3 id="example_7">Example</h3>
+<h3 id="example_6">Example</h3>
 <pre><code class="cs">// Weighted price for the current period
 Print(Time[0] + &quot; &quot; + Weighted[0]);
 
@@ -380,7 +355,7 @@ Print(&quot;SMA(14) calculated using the weighted price: &quot; + Instrument.Rou
 </code></pre>
 
 <h2 id="weighteds">Weighteds</h2>
-<h3 id="description_9">Description</h3>
+<h3 id="description_8">Description</h3>
 <p>Weighteds is an array of [<em>DataSeries</em>][1] that contains all <a href="#weighted"><em>Weighted</em></a> data series.</p>
 <p>The array is only of value for indicators and strategies that use data from multiple timeframes.</p>
 <p>A new entry is added to the array whenever a new timeframe is added to an indicator or strategy.</p>
@@ -390,31 +365,31 @@ Weighteds[1] the weighted data series of all bars in a daily timeframe
 Weighteds[2] the weighted data series of all bars in a weekly timeframe</p>
 <p>Weighteds[0][0] is equivalent to Weighteds[0].</p>
 <p>See [<em>MultiBars</em>].</p>
-<h3 id="parameter_8">Parameter</h3>
+<h3 id="parameter_7">Parameter</h3>
 <p>barsAgo Index value of the individual bars within a data series
 barSeriesIndex Index value for the various timeframes</p>
-<h3 id="usage_8">Usage</h3>
+<h3 id="usage_7">Usage</h3>
 <pre><code class="cs">Weighteds[int barSeriesIndex]
 Weighteds[int barSeriesIndex][int barsAgo]
+</code></pre>
+
+<h3 id="more-information_7">More Information</h3>
+<p>The returned value is dependent upon the property <em>CalculateOnBarClose</em>.</p>
+<h3 id="example_7">Example</h3>
+<p>See example under [<em>Multibars</em>][<em>MultiBars</em>].</p>
+<h2 id="time">Time</h2>
+<h3 id="description_9">Description</h3>
+<p>Time is a [<em>DataSeries</em>][<em>data series</em>] of the type [<em>DateTimeSeries</em>], in which the timestamps of the individual bars are saved.</p>
+<h3 id="parameter_8">Parameter</h3>
+<p>barsAgo Index value (see <a href="#bars-candles"><em>Bars</em></a>)</p>
+<h3 id="usage_8">Usage</h3>
+<pre><code class="cs">Time
+Time[int barsAgo]
 </code></pre>
 
 <h3 id="more-information_8">More Information</h3>
 <p>The returned value is dependent upon the property <em>CalculateOnBarClose</em>.</p>
 <h3 id="example_8">Example</h3>
-<p>See example under [<em>Multibars</em>][<em>MultiBars</em>].</p>
-<h2 id="time">Time</h2>
-<h3 id="description_10">Description</h3>
-<p>Time is a [<em>DataSeries</em>][<em>data series</em>] of the type [<em>DateTimeSeries</em>], in which the timestamps of the individual bars are saved.</p>
-<h3 id="parameter_9">Parameter</h3>
-<p>barsAgo Index value (see <a href="#bars-candles"><em>Bars</em></a>)</p>
-<h3 id="usage_9">Usage</h3>
-<pre><code class="cs">Time
-Time[int barsAgo]
-</code></pre>
-
-<h3 id="more-information_9">More Information</h3>
-<p>The returned value is dependent upon the property <em>CalculateOnBarClose</em>.</p>
-<h3 id="example_9">Example</h3>
 <pre><code class="cs">// Timestamp of the current period
 Print(Time[0]);
 // Timestamp of the bar from 5 periods ago
@@ -422,7 +397,7 @@ Print(Time[5]);
 </code></pre>
 
 <h2 id="times">Times</h2>
-<h3 id="description_11">Description</h3>
+<h3 id="description_10">Description</h3>
 <p>Times is an array of <em>DataSeries</em> that contains all [<em>Time</em>] data series.</p>
 <p>This array is only of value to indicators and strategies that make use of multiple timeframes.
 A new entry is added to the array whenever a new timeframe is added to an indicator or strategy.</p>
@@ -432,33 +407,33 @@ Times[1] the time data series of all bars in a daily timeframe
 Times[2] the time data series of all bars in a weekly timeframe</p>
 <p>Times[0][0] is equivalent to Times[0].</p>
 <p>See [<em>MultiBars</em>].</p>
-<h3 id="parameter_10">Parameter</h3>
+<h3 id="parameter_9">Parameter</h3>
 <p>barsAgo Index value for the individual bars within a data series
 barSeriesIndex Index value for the various timeframes</p>
-<h3 id="usage_10">Usage</h3>
+<h3 id="usage_9">Usage</h3>
 <pre><code class="cs">Times[int barSeriesIndex]
 Times[int barSeriesIndex][int barsAgo]
 </code></pre>
 
-<h3 id="more-information_10">More Information</h3>
+<h3 id="more-information_9">More Information</h3>
 <p>The returned value is dependent upon the property <em>CalculateOnBarClose</em>.</p>
-<h3 id="example_10">Example</h3>
+<h3 id="example_9">Example</h3>
 <p>See example [<em>Multibars</em>][<em>MultiBars</em>].</p>
-<h2 id="volume_1">Volume</h2>
-<h3 id="description_12">Description</h3>
+<h2 id="volume">Volume</h2>
+<h3 id="description_11">Description</h3>
 <p>Volume is a [<em>DataSeries</em>][<em>Data series</em>] of the type [<em>DataSeries</em>], in which the historical volume information is saved.</p>
-<h3 id="parameter_11">Parameter</h3>
+<h3 id="parameter_10">Parameter</h3>
 <p>barsAgo Index value (see <a href="#bars-candles"><em>Bars</em></a>)</p>
-<h3 id="usage_11">Usage</h3>
+<h3 id="usage_10">Usage</h3>
 <pre><code class="cs">Volume
+Volume[int barsAgo]
 </code></pre>
 
-<p>Volume[<strong>int</strong> barsAgo]</p>
-<h3 id="more-information_11">More Information</h3>
+<h3 id="more-information_10">More Information</h3>
 <p>The returned value is dependent upon the property <em>CalculateOnBarClose</em>.</p>
 <p>The value returned by the [<em>VOL()</em>] indicator is identical with the volume described here;
 for example, Vol()[3] will have the same value as Volume[3].</p>
-<h3 id="example_11">Example</h3>
+<h3 id="example_10">Example</h3>
 <pre><code class="cs">// Volume for the current period
 Print(Time[0] + &quot; &quot; + Volume[0]);
 // Volume of the bar from 5 periods ago
@@ -468,7 +443,7 @@ Print(&quot;SMA(14) calculated using the volume: &quot; + Instrument.Round2TickS
 </code></pre>
 
 <h2 id="volumes">Volumes</h2>
-<h3 id="description_13">Description</h3>
+<h3 id="description_12">Description</h3>
 <p>Volumes is an array of <em>DataSeries</em> that contains all [<em>Volume</em>] data series.</p>
 <p>This array is only of value for indicators or strategies that use data from multiple timeframes.</p>
 <p>A new entry is added to the array whenever a new timeframe is added to an indicator or strategy.</p>
@@ -478,18 +453,34 @@ Volumes[1] the volume data series of all bars in the daily timeframe
 Volumes[2] the volume data series of all bars in the weekly timeframe</p>
 <p>Volumes[0][0] is equivalent to Volumes[0].</p>
 <p>See [<em>MultiBars</em>].</p>
-<h3 id="parameter_12">Parameter</h3>
+<h3 id="parameter_11">Parameter</h3>
 <p>barsAgo Index value of the individual bars within a data series</p>
 <p>barSeriesIndex Index value of the various timeframes</p>
-<h3 id="usage_12">Usage</h3>
+<h3 id="usage_11">Usage</h3>
 <pre><code class="cs">Volumes[int barSeriesIndex]
 Volumes[int barSeriesIndex][int barsAgo]
 </code></pre>
 
-<h3 id="more-information_12">More Information</h3>
+<h3 id="more-information_11">More Information</h3>
 <p>The returned value is dependent upon the property <em>CalculateOnBarClose</em>.</p>
-<h3 id="example_12">Example</h3>
+<h3 id="example_11">Example</h3>
 <p>See example [<em>Multibars</em>][<em>MultiBars</em>].</p>
+<h2 id="timeframes">TimeFrames</h2>
+<h3 id="description_13">Description</h3>
+<p>TimeFrames is an array of timeframe objects that contains a timeframe object for each individual bar object.</p>
+<p>This array is only of value for indicators or strategies that use data from multiple timeframes.</p>
+<p>A new entry is added to the array whenever a new timeframe is added to an indicator or strategy.</p>
+<p>With <strong>[TimeFrameRequirements(("1 Day"), ("1 Week"))]</strong> the array will contain 3 entries:</p>
+<p>TimeFrames [0] Timeframe of the primary data series (chart timeframe)
+TimeFrames [1] <strong>Print</strong>(TimeFrames[1]); // returns "1 Day"
+TimeFrames [2] <strong>Print</strong>(TimeFrames[2]); // returns "1 Week"</p>
+<p>TimeFrames [0] is equivalent to [<em>TimeFrame</em>].</p>
+<p>See [<em>MultiBars</em>].</p>
+<h3 id="parameter_12">Parameter</h3>
+<p>barSeriesIndex Index value for the various timeframes</p>
+<h3 id="usage_12">Usage</h3>
+<pre><code class="cs">TimeFrames [int barSeriesIndex]
+</code></pre>
               
             </div>
           </div>

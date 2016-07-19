@@ -18,6 +18,8 @@ Want to learn more about the AgenaTrader indicators? We've got the resources to 
     - [Times](./data.md#times)
     - [Volume](./data.md#volume)
     - [Volumes](./data.md#volumes)
+    - [TimeFrame](./data.md#timeframe)
+    - [TimeFrames](./data.md#timeframes)
 - [Indicators & Oscillators](./indicators_oscillators.md#indicators-oscillators)
   	- [Accumulation/Distribution (ADL)](./indicators_oscillators.md#accumulationdistribution-adl)
   	- [Adaptive Price Zone (APZ)](./indicators_oscillators.md#adaptive-price-zone-apz)

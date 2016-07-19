@@ -99,6 +99,8 @@
                 
                     <li><a class="toctree-l4" href="#volumes">Volumes</a></li>
                 
+                    <li><a class="toctree-l4" href="#timeframe">TimeFrame</a></li>
+                
                     <li><a class="toctree-l4" href="#timeframes">TimeFrames</a></li>
                 
             
@@ -465,20 +467,31 @@ Volumes[int barSeriesIndex][int barsAgo]
 <p>The returned value is dependent upon the property <em>CalculateOnBarClose</em>.</p>
 <h3 id="example_11">Example</h3>
 <p>See example [<em>Multibars</em>][<em>MultiBars</em>].</p>
-<h2 id="timeframes">TimeFrames</h2>
+<h2 id="timeframe">TimeFrame</h2>
 <h3 id="description_13">Description</h3>
+<p>TimeFrame is a timeframe object.</p>
+<h3 id="usage_12">Usage</h3>
+<pre><code class="cs">TimeFrame
+</code></pre>
+
+<h2 id="timeframes">TimeFrames</h2>
+<h3 id="description_14">Description</h3>
 <p>TimeFrames is an array of timeframe objects that contains a timeframe object for each individual bar object.</p>
 <p>This array is only of value for indicators or strategies that use data from multiple timeframes.</p>
 <p>A new entry is added to the array whenever a new timeframe is added to an indicator or strategy.</p>
 <p>With <strong>[TimeFrameRequirements(("1 Day"), ("1 Week"))]</strong> the array will contain 3 entries:</p>
-<p>TimeFrames [0] Timeframe of the primary data series (chart timeframe)
-TimeFrames [1] <strong>Print</strong>(TimeFrames[1]); // returns "1 Day"
-TimeFrames [2] <strong>Print</strong>(TimeFrames[2]); // returns "1 Week"</p>
+<pre><code class="cs">TimeFrames [0]; //Timeframe of the primary data series (chart timeframe)
+TimeFrames [1];
+Print(TimeFrames[1]); // returns &quot;1 Day&quot;
+TimeFrames [2];
+Print(TimeFrames[2]); // returns &quot;1 Week&quot;
+</code></pre>
+
 <p>TimeFrames [0] is equivalent to [<em>TimeFrame</em>].</p>
 <p>See [<em>MultiBars</em>].</p>
 <h3 id="parameter_12">Parameter</h3>
 <p>barSeriesIndex Index value for the various timeframes</p>
-<h3 id="usage_12">Usage</h3>
+<h3 id="usage_13">Usage</h3>
 <pre><code class="cs">TimeFrames [int barSeriesIndex]
 </code></pre>
               

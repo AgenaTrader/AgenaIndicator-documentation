@@ -58,7 +58,7 @@ mkdocs build --clean
 
 ### Bugfixing links for images
 If you are using *<img> tags* in your markdown file, mkdocs is creating wrong links for these images, so we need to change this by **replacing ./media/ to ../media/** manually.
-Another option is to to this automatic by using **sed** on linux or macintosh:
+Another option is to do this automatic by using **sed** on linux or macintosh:
 ```bash
 sed -i .bak -e 's%./media/%../media/%g' site/indicators_oscillators/index.html  && rm site/indicators_oscillators/index.html.bak
 sed -i .bak -e 's%./media/%../media/%g' site/data/index.html  && rm site/data/index.html.bak

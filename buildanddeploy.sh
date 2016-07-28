@@ -43,6 +43,9 @@ then
     git push origin `git subtree split --prefix site master 2> /dev/null`:gh-pages --force
     # merge master
     # git commit -a -m "Automatic deploy: $TODAY"
+  else
+    echo "There was an error, no deploy was done and I am going to exit now!"
+    exit
   fi
 
   exit

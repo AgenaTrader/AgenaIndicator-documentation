@@ -82,8 +82,10 @@ sed -i .bak -e 's%./media/%../media/%g' site/data/index.html  && rm site/data/in
 ```
 
 ## Short version on how to deploy
-### Commit to master
-We have created a branch called *gh-pages* and all data from this branch will be displayed on GitHub Pages. *Commit your changes into the master repository and sync* your master repository.
+We have already created a branch called *gh-pages* and all data from this branch will be displayed on GitHub Pages.
+
+### Commit your changes to master
+Commit your changes into the master repository and sync with your remote repository.
 
 ### Build
 Now we are ready to to execute the following shell script to *build the website* from our markdown files.

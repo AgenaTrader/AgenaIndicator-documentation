@@ -3,5 +3,5 @@ title: AgenaIndicator Documentation
 author: INCLUDE Information Technologies GmbH
 rights:  MIT License
 language: en-US
-date: 2016-07-19
+date: Do 28 Jul 2016 11:33:31 CEST
 ...

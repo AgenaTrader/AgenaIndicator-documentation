@@ -82,16 +82,17 @@ sed -i .bak -e 's%./media/%../media/%g' site/data/index.html  && rm site/data/in
 ```
 
 ## Short version on how to deploy
+### Commit to master
+We have created a branch called *gh-pages* and all data from this branch will be displayed on GitHub Pages. *Commit your changes into the master repository and sync* your master repository.
+
 ### Build
-We have created a branch called *gh-pages* and all data from this branch will be displayed on GitHub Pages.
-Commit now your changes into the master repository and sync your master repository.
-Afterwards execute the shell script to build the website.
+Now we are ready to to execute the following shell script to *build the website* from our markdown files.
 ```bash
 ./buildanddeploy.sh -b
 ```
 
 ### Deploy
-Now build process has finished we can start to deploy it to the remote gh-branch.
+If the build process has finished, we can start to *deploy the website* to the gh-branch of our remote repository.
 ```bash
 ./buildanddeploy.sh -d
 ```

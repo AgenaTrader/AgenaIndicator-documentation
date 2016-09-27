@@ -812,6 +812,67 @@ period Number of bars included in the calculations
 //Output for the value of the Chande Momentum Oscillator
 Print("The current value for the Chande Momentum Oscillator is: " + CMO(14)[0]);
 ```
+##Climactic Distance
+### Description
+The Climactic Distance indicator was invented and developed by Mr. Gilbert Kreuzthaler, CEO of Include IT GmbH and founder of AgenaTrader.com. This indicator is used in the Location Point Trading system. It calculates the median course of the current and historical candle in a distance to the simple moving average (SMA) of the last 20 periods. It also measures the average course deviation within the last 80 periods.
+If the median course exceeds the top or bottom course deviation the market counts as climactic and this influences the trading decision of Location Point Trading.
+
+### Calcualtion
+Black line in the middle: SMA 20
+Green moving line: Median Kurs
+Red upper and lower line: Average course deviation oft he last 80 periods.
+
+### More information
+https://www.facebook.com/Location-Point-Trading-344217482287592/?fref=ts
+
+### Usage
+```cs
+ClimacticDistance(int sMAPeriod, int thresholdPercent)
+ClimacticDistance(IDataSeries Input, int sMAPeriod, int thresholdPercent)
+ClimacticDistance(int period, int tresholdPercent, Color climacticColor)
+ClimacticDistance(IDataSeries Input, int sMAPeriod, int thresholdPercent, Color climacticColor)
+//Upper band
+ClimacticDistance(int sMAPeriod, int thresholdPercent).Upper[int barsAgo]
+ClimacticDistance(IDataSeries Input, int sMAPeriod, int thresholdPercent).Upper[int barsAgo]
+ClimacticDistance(int period, int tresholdPercent, Color climacticColor).Upper[int barsAgo]
+ClimacticDistance(IDataSeries Input, int sMAPeriod, int thresholdPercent, Color climacticColor).Upper[int barsAgo]
+//Lower band
+ClimacticDistance(int sMAPeriod, int thresholdPercent).Lower[int barsAgo]
+ClimacticDistance(IDataSeries Input, int sMAPeriod, int thresholdPercent).Lower[int barsAgo]
+ClimacticDistance(int period, int tresholdPercent, Color climacticColor).Lower[int barsAgo]
+ClimacticDistance(IDataSeries Input, int sMAPeriod, int thresholdPercent, Color climacticColor).Lower[int barsAgo]
+
+//MovingAverage
+ClimacticDistance(int sMAPeriod, int thresholdPercent).MovingAverage[int barsAgo]
+ClimacticDistance(IDataSeries Input, int sMAPeriod, int thresholdPercent).MovingAverage[int barsAgo]
+ClimacticDistance(int period, int tresholdPercent, Color climacticColor).MovingAverage[int barsAgo]
+ClimacticDistance(IDataSeries Input, int sMAPeriod, int thresholdPercent, Color climacticColor).MovingAverage[int barsAgo]
+//Distance
+ClimacticDistance(int sMAPeriod, int thresholdPercent).Distance[int barsAgo]
+ClimacticDistance(IDataSeries Input, int sMAPeriod, int thresholdPercent).Distance[int barsAgo]
+ClimacticDistance(int period, int tresholdPercent, Color climacticColor).Distance[int barsAgo]
+ClimacticDistance(IDataSeries Input, int sMAPeriod, int thresholdPercent, Color climacticColor).Distance[int barsAgo]
+```
+### Return value
+**double**
+
+### Parameters
+Image
+
+### Visualization
+Image
+
+### Example
+```cs
+//Output of the value for the Upper climactic distance line
+Print(“Value of the upper band: “ + ClimacticDistnance(20, 80).Upper[0];
+//Output of the value for the Lower climactic distance line
+Print(“Value of the upper band: “ + ClimacticDistnance(20, 80).Lower[0];
+//Output of the value for the Distance climactic distance line
+Print(“Value of the upper band: “ + ClimacticDistnance(20, 80).Distance[0];
+//Output of the value for the Moving Average climactic distance line
+Print(“Value of the upper band: “ + ClimacticDistnance(20, 80).MovingAverage[0];
+```
 
 ##Commodity Channel Index (CCI)
 ### Description

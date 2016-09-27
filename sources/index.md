@@ -40,6 +40,7 @@ Want to learn more about the AgenaTrader indicators? We've got the resources to 
   	- [Chaikin Oscillator](./indicators_oscillators.md#chaikin-oscillator)
   	- [ChaikinVolatility (CVL)](./indicators_oscillators.md#chaikinvolatility-cvl)
   	- [Chande Momentum Oscillator (CMO)](./indicators_oscillators.md#chande-momentum-oscillator-cmo)
+    - [Climactic Distance](./indicators_oscillators.md#climactic-distance)
   	- [Commodity Channel Index (CCI)](./indicators_oscillators.md#commodity-channel-index-cci)
   	- [Darvas Boxes](./indicators_oscillators.md#darvas-boxes)
   	- [Directional Movement (DM)](./indicators_oscillators.md#directional-movement-dm)

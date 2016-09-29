@@ -20,9 +20,9 @@ We recommend the text editor **Atom**. [You can download it here.](https://atom.
 ### Installation
 The following things are prerequisites:
 * Install [GitHub Client](https://desktop.github.com), create a GitHub user and checkout the repository
-* Install [Pandoc](http://pandoc.org/installing.html)
 * Install [Python](https://www.python.org/downloads/)
 * Install Python package [mkdocs](http://www.mkdocs.org) using pip
+* Install [Pandoc](http://pandoc.org/installing.html)
 
 After the installation of all packages we are able to start to parse our data and to deploy our site.
 

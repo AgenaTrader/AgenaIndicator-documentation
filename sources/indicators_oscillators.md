@@ -15,7 +15,7 @@ For each indicator you will find a brief description of its interpretation, oper
 
 ##Accumulation/Distribution (ADL)
 ### Description
-The concept of the Accumulation Distribution Line (ADL) indicator was developed by Marc Chaikin. The ADL is a volume indicator; it represents the money flow. The ADL is a further development of the On-Balance Volume Indicator developed by Joe Granville, which also happens to be one of the first volume indicators.
+The Accumulation Distribution Line (ADL) indicator was developed by Marc Chaikin. The ADL is a volume indicator that represents the money flow. The ADL is an improvement of the On-Balance Volume Indicator created by Joe Granville, which was actually one of the very first volume indicators.
 
 ### Interpretation
 There are two interpretations of the ADL:
@@ -57,7 +57,8 @@ Print("The ADL indicator is rising.");
 
 ##Adaptive Price Zone (APZ)
 ### Description
-The adaptive price zone is a technical indicator developed by Lee Leibfarth in 2006. The APZ is a volatility-based indicator that appears as a set of bands placed over a price chart. Especially useful in non-trending, choppy markets, the APZ was created to help traders find potential turning points in the markets. The APZ is based on a short-term double-smoothed exponential moving average that reacts quickly to price changes with reduced lag. The bands form a channel that surrounds the average price and tracks the price changes. If the price crosses the upper band of the zone then this will present you with an opportunity to trade a reversal. The opposite is true for the lower band.
+This is a technical indicator developed by Lee Leibfarth in 2006. The Adaptive Price Zone is a volatility-based indicator shown as a set of bands laid over a price chart. The APZ, which is particularly useful in non-trending, choppy markets, was developed with the aim of helping traders to find potential turning points in the markets. The APZ is based on a short-term, double-smoothed EMA that reacts rapidly to price changes with reduced lag. It works in the following way: the bands create a channel that envelopes the average price and tracks price changes. If the price crosses over the upper band of the zone, this creates an opportunity for the trader to trade a reversal. For the lower band, the reverse is true.
+
 
 ### Interpretation
 The bigger the price movement, the greater the distance between the upper and lower band will be. The smaller the price movement, the smaller the distance between the bands. More widely spaced bands will indicate increased instability and volatility, whereas closely tuned bands will display reduced volatility. If the price action breaks through the upper or lower band then the APZ will tend to return to its statistical average. This will lead to trading opportunities where the market may try to compensate for imbalances. If the price overshoots the bands for example, as mentioned in the description, then this will present you with a trading opportunity in the opposite direction.
@@ -101,7 +102,7 @@ Print("Value for the lower APZ band: " + APZ(2, 20).Lower[0]);
 
 ##Aroon
 ### Description
-Developed by Tushar Chande in 1995, Aroon is an indicator system that determines whether a stock is trending or not and how strong the trend is. "Aroon" means "Dawn's Early Light" in Sanskrit. Chande chose this name because the indicators are designed to reveal the beginning of a new trend. The Aroon indicators measure the number of periods since the price recorded an x-day high or low. There are two separate indicators: Aroon-Up and Aroon-Down. A 25-day Aroon-Up measures the number of days since a 25-day high. A 25-day Aroon-Down measures the number of days since a 25-day low. In this sense, the Aroon indicators are quite different from typical [momentum oscillators], which focus on price relative to time. Aroon is unique because it focuses on time relative to price. Chartists can use the Aroon indicators to spot emerging trends, identify consolidations, define correction periods and anticipate reversals. **(Source: Stockcharts.com)**
+Aroon, an indicator system that determines whether or not a stock is trending and how strong this trend is, was developed by Tushar Chande in 1995. Its name is derived from the Sanskrit “dawn’s early light”. Chande used this name to signify the indicators’ purpose of revealing the start of a new trend. These indicators measure the number of periods since the last time the price recorded an x-day high or low. There are two distinct indicators: the Aroon-Up and Aroon-Down, whereby a 50-day Aroon-Up measures the number of days since a 50-day high, and a 50-day Aroon-Down measures the days since a 50-day low. This makes the Aroon indicators significantly different from the usual momentum oscillators, which concentrate on price in relation to time. What makes Aroon indicators unique is that they focus on time in relation to price. Aroon indicators can be used to detect emerging trends, identify consolidations, anticipate reversals and define correction periods.
 
 ### Interpretation
 The Aroon indicators fluctuate above/below a centerline (50) and are bound between 0 and 100. These three levels are important for interpretation. At its most basic, the bulls have the edge when Aroon-Up is above 50 and Aroon-Down is below 50. This indicates a greater propensity for new x-day highs than lows. The converse is true for a downtrend. The bears have the edge when Aroon-Up is below 50 and Aroon-Down is above 50.
@@ -145,7 +146,7 @@ Print("Current value for Aroon Down is: " + Aroon(20).Down[0]);
 
 ## Aroon Oscillator
 ### Description
-The Aroon Oscillator is calculated by subtracting the Aroon Down from the Aroon Up. These two indicators are usually plotted together for easy comparison, but chartists can also view the difference of these two indicators with the Aroon Oscillator. This indicator fluctuates between -100 and +100 with zero as the middle line. A bullish trend bias is present when the oscillator is positive, while a bearish trend bias exists when the oscillator is negative. Chartists can also expand the bull-bear threshold to identify stronger signals.
+This oscillator is calculated by subtracting the Aroon-Down from the Aroon-Up. Usually, these two indicators are plotted next to each other for easy comparison, but traders can also view the difference between the two indicators using the Aroon oscillator, which can fluctuate between -100 and +100, with zero as the middle line. When the oscillator is positive, this indicates a bullish trend bias, whilst when the oscillator is negative, this shows a bearish trend bias. Chartists also have the option to extend the bull-bear threshold to spot stronger signals.
 
 ### Interpretation
 The Aroon Oscillator is ideally used as a trend filter and trend strength indicator. It is used analogously to the ADX Indicator.
@@ -179,9 +180,10 @@ Print("Value for the oscillator is: " + AroonOscillator(20)[0]);
 
 ##Average Directional Index (ADX)
 ### Description
-The Average Directional Index (ADX), Minus Directional Indicator (-DI) and Plus Directional Indicator (+DI) represent a group of directional movement indicators that form a trading system developed by Welles Wilder. Wilder designed ADX with commodities and daily prices in mind, but these indicators can also be applied to stocks. The Average Directional Index (ADX) measures trend strength without regard to trend direction. The other two indicators, Plus Directional Indicator (+DI) and Minus Directional Indicator (-DI), complement ADX by defining trend direction. Used together, chartists can determine both the **direction** and **strength** of the trend.
+The ADX is part of a group of directional movement indicators that make up a trading system developed by Welles Wilder: the Average Directional Index, Minus Directional Indicator (-DI) and Plus Directional Indicator (+DI). Wilder designed ADX with daily prices and commodities in mind; however, these indicators can also be applied to stocks. The Average Directional Index measures the trend strength without taking trend direction into account, while the -DI and +DI complement the ADX by defining the trend direction. When used together, traders can find out both the direction and the strength of the trend.
 
-Wilder features the Directional Movement indicators in his 1978 book, [**New Concepts in Technical Trading Systems**]. This book also includes details on Average True Range (ATR), the Parabolic SAR system and [*RSI*]. Despite being developed before the computer age, Wilder's indicators are incredibly detailed in their calculation and have stood the test of time.
+Wilder talks about the Directional Movement indicators in his 1978 book, New Concepts in Technical Trading Systems, which also features details of Average True Range (ATR), the Parabolic SAR system and the RSI. Although he developed them before the computer age, Wilder’s indicators are extremely detailed in their calculation and are still equally effective today.
+
 
 ### Interpretation
 The Average Directional Index (ADX) is used to measure the strength or weakness of a trend, not the actual direction. Directional movement is defined by +DI and -DI. In general, the bulls have the edge when +DI is greater than -DI, while the bears have the edge when -DI is greater. Crosses of these directional indicators can be combined with ADX for a complete trading system.
@@ -220,8 +222,7 @@ Print("Value of the ADX: " + ADX(20)[0]);
 
 ##Average Directional Movement Rating (ADXR)
 ### Description
-This is the ADX Indicator plus the ADX of n days ago divided by 2.
-(Current ADX + ADX n days ago) / 2
+The ADXR is the ADX indicator plus the ADX from n days ago divided by 2. Written as an equation, it looks like this: (current ADX + ADX n days ago) / 2.
 
 ### Interpretation
 The oscillator moves along a guiding line that typically has a value of 20. When the ADXR rises above 20, a trend exists. If the ADXR is below 20, no trend exists and the market is moving sideways.
@@ -258,16 +259,17 @@ Print("Value of the ADXR: " + ADXR(10, 14)[0]);
 
 ##Average True Range (ATR)
 ### Description & Interpretation
-Developed by J. Welles Wilder, the Average True Range (ATR) is an indicator that measures [*volatility*]. As with most of his indicators, Wilder designed ATR with commodities and daily prices in mind. Commodities are frequently more volatile than stocks. They are often subject to gaps and limit moves, which occur when a commodity opens up or down its maximum allowed move for the session. A volatility formula based only on the high-low range would fail to capture volatility from gap or limit moves. Wilder created Average True Range to capture this "missing" volatility. It is important to remember that ATR does not provide an indication of price direction, just volatility.
+The Average True Range (ATR), which was developed by J. Welles Wilder, is an indicator that measures volatility. As is true for most of his indicators, Wilder designed the ATR with commodities and daily prices in mind. Commodities are often more volatile than stocks, and frequently experience gaps and limit moves, which happen when a commodity opens up or down its maximum allowed move for the session. A volatility formula that was based on the high-low range only would be unable to capture volatility from gap or limit moves. Wilder, therefore, developed the Average True Range to capture this "missing" volatility. Keep in mind that ATR does not provide an indication of price direction, but merely volatility.
 
-Wilder features ATR in his 1978 book, [**New Concepts in Technical Trading Systems**]. This book also includes the Parabolic SAR, RSI and the Directional Movement Concept (ADX). Despite being developed before the computer age, Wilder's indicators have stood the test of time and remain extremely popular.
+The ATR is featured in Wilder’s 1978 book, New Concepts in Technical Trading Systems, which also goes into detail about the Parabolic SAR, RSI and the Directional Movement Concept (ADX). Despite having been developed before the computer age, Wilder's indicators are equally functional today and remain extremely popular.
 
-Wilder started with a concept called **True Range (TR)**, which is defined as the greatest of the following:
+
+The starting point for Wilder was a concept called **True Range (TR)**, which is defined as the greatest of the following:
 -   Method 1: current high minus the current low
 -   Method 2: current high minus the previous close (absolute value)
 -   Method 3: current Low minus the previous close (absolute value)
 
-Absolute values are used to ensure positive numbers. After all, Wilder was interested in measuring the distance between two points, not the direction. If the current period's high is above the prior period's high and the low is below the prior period's low, then the current period's high-low range will be used as the True Range. This is an outside day that would use method 1 to calculate the TR. This is pretty straightforward. Methods 2 and 3 are used when there is a gap or an inside day. A gap occurs when the previous close is greater than the current high (signaling a potential gap down or limit move) or the previous close is lower than the current low (signaling a potential gap up or limit move). The image below shows examples of when methods 2 and 3 are appropriate.
+Absolute values are used for ensuring positive numbers, since Wilder was interested in measuring the distance between two points, not the direction. If the current period's high is above the prior period's high and the low is below the prior period's low, then the current period's high-low range will be used as the True Range. This is an outside day that would use method 1 to calculate the TR, and is quite straightforward. Methods 2 and 3 are used whenever there is a gap or inside day. A gap occurs when the previous close is greater than the current high (indicating a potential gap down or limit move) or the previous close is lower than the current low (indicating a potential gap up or limit move). The image below shows examples of when methods 2 and 3 are appropriate.
 
 ### Further information
 VTAD: <http://vtadwiki.vtad.de/index.php/Average\_True\_Range>
@@ -301,8 +303,7 @@ Print("The current ATR value is: " + ATR(14)[0]);
 
 ##Balance of Power (BOP)
 ### Description
-The Balance of Power indicator was developed by Igor Livshin in August 2001. The BOP indicator represents the strengths of the buyers (bulls) vs. the sellers (bears). It oscillates between -100 and 100.
-BOP = (close - open) / (high - low)
+The developer of the Balance of Power indicator was Igor Livshin, who came up with the BOP in August 2001. The BOP indicator represents the strength of the buyers (bulls) vs. the sellers (bears), and oscillates between -100 and 100. The calculation of the BOP = (close - open) / (high - low).
 
 ### Interpretation
 A directional change of the BOP can be interpreted as a warning signal and will generally be followed by a price change.
@@ -336,11 +337,10 @@ Print("The Balance of Power value is: " + BOP(5));
 
 ##Bollinger Bands
 ### Description & Interpretation
-Developed by John Bollinger, Bollinger Bands® are volatility bands placed above and below a moving average. Volatility is based on the [standard deviation], which changes as volatility increases and decreases. The bands automatically widen when volatility increases and narrow when volatility decreases. This dynamic nature of Bollinger Bands also means they can be used on different securities with the standard settings. For signals, Bollinger Bands can be used to identify M-Tops and W-Bottoms or to determine the strength of the trend.
+Bollinger Bands®, which were developed by John Bollinger, are volatility bands that are placed above and below a moving average. The volatility is based on the standard deviation, which fluctuates as volatility increases and decreases. An increase in volatility causes the bands to automatically widen, and a decrease in volatility causes them to automatically narrow. The Bollinger Bands’ dynamic nature means that they can also be used on different securities with the standard settings. When it comes to signals, Bollinger Bands can be used to identify M-Tops and W-Bottoms, or for determining a trend’s strength.
 
-**Bollinger Bands consist of a middle band with two outer bands.** The middle band is a simple moving average that is usually set at 20 periods. A simple moving average is used because the standard deviation formula also uses a simple moving average. The look-back period for the standard deviation is the same as for the simple moving average. The outer bands are usually set 2 standard deviations above and below the middle band. Settings can be adjusted to suit the characteristics of particular securities or trading styles. Bollinger recommends making small incremental adjustments to the standard deviation multiplier. Changing the number of periods for the moving average also affects the number of periods used to calculate the standard deviation. Therefore, only small adjustments are required for the standard deviation **multiplier**. An increase in the moving average period would automatically increase the number of periods used to calculate the standard deviation and would also warrant an increase in the standard deviation **multiplier**. With a 20-day SMA and 20-day Standard Deviation, the standard deviation multiplier is set at 2. Bollinger suggests increasing the standard deviation multiplier to 2.1 for a 50-period SMA and decreasing the standard deviation multiplier to 1.9 for a 10-period SMA.
-
-Bollinger Bands reflect direction with the 20-period SMA and volatility with the upper/lower bands. As such, they can be used to determine if prices are relatively high or low. **According to Bollinger, the bands should contain 88-89% of price action, which makes a move outside the bands significant.** Technically, prices are relatively high when above the upper band and relatively low when below the lower band. However, relatively high should not be regarded as bearish or as a sell signal. Likewise, relatively low should not be considered bullish or as a buy signal. Prices are high or low for a reason. As with other indicators, Bollinger Bands are not meant to be used as a stand-alone tool. Chartists should combine Bollinger Bands with basic trend analysis and other indicators for confirmation. (Source: Stockcharts)
+**Bollinger Bands are made up of a middle band with two outer bands.** The middle band is a simple moving average that is normally set to 20 periods. The reason a simple moving average is used is that the standard deviation formula also uses a simple moving average. The look-back period for the standard deviation is the same as for the simple moving average. The outer bands are generally set 2 standard deviations above and below the middle band, but settings can be adjusted to suit the characteristics of specific securities or trading styles. Bollinger recommends making small, incremental adjustments to the standard deviation multiplier. Changing the number of periods for the moving average also has an effect on the number of periods used to calculate the standard deviation, which is why only small adjustments are required for the standard deviation multiplier. An increase in the moving average period would also automatically increase the number of periods used for calculating the standard deviation, as well as warranting an increase in the standard deviation multiplier. With a 20-day SMA and 20-day Standard Deviation, the standard deviation multiplier is set at 2. Bollinger recommends increasing the standard deviation multiplier to 2.1 for a 50-period SMA and decreasing the standard deviation multiplier to 1.9 for a 10-period SMA.
+**Bollinger Bands reflect direction with the 20-period SMA and volatility with the upper/lower bands**. This means that they can be used to determine whether prices are relatively high or low. Bollinger maintains that the bands should contain 88-89% of price action, rendering a move outside the bands very significant. Technically, prices are relatively high when above the upper band and relatively low when below the lower band. However, relatively high should not be seen as bearish or as a sell signal. Likewise, relatively low should not be regarded as bullish or as a buy signal, since prices are high or low for a reason. As with other indicators, Bollinger Bands are not designed to be used as a stand-alone tool. Traders should combine Bollinger Bands with basic trend analysis and other indicators to confirm a trend.
 
 The calculation is performed in the following manner:
 
@@ -394,20 +394,13 @@ Print("Value of the lower band: " + Bollinger(2, 20).Lower[0]);
 
 ##Bollinger Percent B (%b)
 ### Description
-Bollinger %b is an important indicator derived from John Bollinger's original Bollinger Bands indicator. %b depicts the location of the most recent close price in relation to the Bollinger Bands as well as to what degree it is above or below any of the bands.
-The Bollinger Percent B equation can be constructed as:
-Percent B = ((Close - Bollinger Lower Band) / (Bollinger Upper Band - Bollinger Lower Band))\*100
-If the close price is equal to the upper Bollinger Band, %b will be 100 (percent). If the close price is equal to the lower Bollinger Band, %b will be 0.0 (percent). A %b value of 50 means the close price is equal to the middle Bollinger Band.
-Furthermore, readings above 100 and below 0 indicate that the close price is outside of the Bollinger Bands by a corresponding percentage of the Bollinger Bandwidth. A %b value of 125 means that the close price is above the upper Bollinger Band by 25% of the Bandwidth. A %b value of -25 means that the close price is below the lower Bollinger Band by 25% of the Bandwidth.
+Bollinger %b is an important indicator that is derived from John Bollinger's original Bollinger Bands indicator. %b represents the location of the most recent close price in relation to the Bollinger Bands as well as to what degree it is above or below any of the bands. The Bollinger Percent B equation can be constructed in the following way: Percent B = ((Close - Bollinger Lower Band) / (Bollinger Upper Band - Bollinger Lower Band)) * 100. If the close price is the same as the upper Bollinger Band, %b will be 100 (percent). If the close price is the same as the lower Bollinger Band, %b will be 0.0 (percent). A %b value of 50 indicates that the close price is equal to the middle Bollinger Band. What is more, readings above 100 and below 0 show that the close price is outside of the Bollinger Bands by a corresponding percentage of the Bollinger Bandwidth. A %b value of 125 means that the close price is above the upper Bollinger Band by 25% of the Bandwidth, while a %b value of -25 means that the close price is below the lower Bollinger Band by 25% of the Bandwidth.
 
 See [*Bollinger Bands*], [*BBWidth*][*Bollinger Bands Width*]
 
 **An additional application: normalizing indicators**
 
-Bollinger bands and thus the %b indicator can be applied not only to the prices of stocks, futures etc. but also to time series with fundamental data, volume data and other indicators. This is especially interesting when you need to know if a value is relatively high or low; in this case, the %b indicator will offer you a different perspective. If you want to know whether the volume of a stock is exceedingly high or low you can simply apply it to the volume data.
-John Bollinger sees the application of the %b onto other indicators as one of the most important aspects of the indicator. If you want to normalize an indicator with %b, it is important to first calculate the indicator (e.g. the RSI) using the %b for the calculation of the indicator instead of the price data. The application of the %b essentially unfolds in the same manner as the application of Bollinger bands onto the indicator itself. The intersection points between the bands and the indicators will thus be 1 and 0. Essentially, the relative position of the original indicator will be displayed in relation to its upper and lower bands. Thus the boundaries of the original indicator will be removed.
-John Bollinger himself wrote that: “You’re defining a high or low point on a relative basis, this may allow you to gain a deeper insight and understanding not provided by traditional indicators and guidelines.”
-John Bollinger provides several parameters for the %b calculation, such as 40-day periods and a factor of 2.0 for a 9-day RSI, and a 50-day period with a factor of 2.1 for the calculation of %b.
+Bollinger bands, and therefore the %b indicator, can be applied not only to the prices of stocks, futures etc., but also to time series with fundamental data, volume data and other indicators. This is particularly interesting when you need to know whether a value is relatively high or low – in this case, the %b indicator offers you a different perspective. If you wish to find out whether the volume of a stock is exceedingly high or low, you can simply apply it to the volume data. John Bollinger regards the application of the %b onto other indicators as one of the most important aspects of the indicator. If you wish to normalize an indicator with %b, it is important to first calculate the indicator (e.g. the RSI) with the help of the %b for the calculation of the indicator instead of the price data. The application of the %b essentially works in the same way as the application of Bollinger bands onto the indicator itself. The intersection points between the bands and the indicators will therefore be 1 and 0. In principle, the relative position of the original indicator is displayed in relation to its upper and lower bands. This means that the boundaries of the original indicator will be removed. John Bollinger himself wrote: “You’re defining a high or low point on a relative basis, this may allow you to gain a deeper insight and understanding not provided by traditional indicators and guidelines.” John Bollinger provides several parameters for the %b calculation, such as 40-day periods and a factor of 2.0 for a 9-day RSI, and a 50-day period with a factor of 2.1 for the calculation of %b.
 
 (Sources: Oliver Paesler: "Technische Indikatoren - simplified" and John Bollinger: "Bollinger Bänder")
 
@@ -448,9 +441,9 @@ numStdDev Standard deviation
 
 ##Bollinger Band Width (BBWidth)
 ### Description
-Bollinger Band Width is an indicator derived from Bollinger Bands. In his book, *Bollinger on Bollinger Bands*, John Bollinger refers to Bollinger Band Width as one of two indicators that can be derived from Bollinger Bands. The other indicator is %B.
+This indicator is derived from Bollinger Bands. John Bollinger refers to Bollinger Band Width as one of two indicators that one can derive from Bollinger Bands; the other indicator is %B.
+The Band Width measures the percentage difference between the upper and the lower band. It decreases as Bollinger Bands narrow, and increases as they widen. Since Bollinger Bands are based on the standard deviation, falling Band Width reflects decreasing volatility and rising Band Width reflects the opposite.
 
-Band Width measures the percentage difference between the upper band and the lower band. Band Width decreases as Bollinger Bands narrow and increases as Bollinger Bands widen. Because Bollinger Bands are based on the standard deviation, falling Band Width reflects decreasing volatility and rising Band Width reflects increasing volatility.
 
 ### Interpretation
 John Bollinger uses the Band Width to recognize rising and falling trends. Most trends have their origins within sideway market movements that generally have a low volatility. If a breakout is accompanied by a sudden rise in the Band Width, this means that there is definite support for the move.
@@ -505,8 +498,7 @@ Print("The value of the signal line is: " + BBWidth(2, 20).Threshold[0]);
 
 ##Bollinger MTF (MultiTimeFrame)
 ### Description
-This is the multi-timeframe version of the Bollinger Bands. Its primary use is for intraday trading. Multi-timeframe means that the indicator is calculated in a different timeframe than that displayed in the chart. Displaying an hourly Bollinger band on a 5-minute timeframe would not be possible with the standard Bollinger band indicator. This is where the MTF comes into play.
-BollingerMTF can only be used for display in the chart and cannot be applied/implemented in AgenaScript.
+The Bollinger MTF is the multi-timeframe version of the Bollinger Bands, and its main use is in intraday trading. Multi-timeframe means that the indicator is calculated in a separate timeframe than that which is displayed in the chart. With the standard Bollinger band indicator, displaying an hourly Bollinger band in a 5-minute timeframe would not be possible – this is the point at which the MTF becomes useful. BollingerMTF can only be used for display in the chart and cannot be applied/implemented in AgenaScript.
 
 ### Visualization
 The image shows a 5-minute chart with a 60-minute Bollinger band
@@ -515,7 +507,7 @@ The image shows a 5-minute chart with a 60-minute Bollinger band
 
 ##BuySellPressure
 ### Description
-The BuySellPressure indicator shows the buy or sell pressure for the current bar. In addition, these trades are classified as “buy” or “sell”. For this classification, a “buy” is assumed whenever the transaction has occurred at or above the ask. Inside trades are ignored.
+The BuySellPressure indicator displays the buy or sell pressure for the current bar. Furthermore, these trades are classified as “buy” or “sell”. For this classification, a “buy” is assumed any time the transaction has occurred at or above the ask. Inside trades are not taken into account.
 
 **Caution:
 This is a real-time indicator. It will only work on and with real-time data and cannot therefore be used for historical information.**
@@ -573,7 +565,7 @@ protected override void OnBarUpdate()
 
 ##BuySellVolume
 ### Description
-The BuySellVolume indicator shows the current buy or sell pressure based on the volume. For this, trades are classified as “buy” or “sell”. For this classification, a “buy” is assumed whenever the transaction is executed at or above the ask. A transaction at or below the bid is deemed a “sell”.
+This indicator shows us the current buy or sell pressure based on the volume. For this, trades are classified as “buy” or “sell”, whereby for the classification, a “buy” is assumed any time the transaction is executed at or above the ask. A transaction at or below the bid is considered a “sell”.
 
 **Caution: This is a real-time indicator and will not work with historical data.**
 
@@ -604,7 +596,8 @@ Print("The BuySellVolume is: " + BuySellVolume()[0]);
 
 ##CandleStickPattern
 ### Description
-This indicator searches for specific candlestick formations.
+The CandleStickPattern indicator looks for specific candlestick formations.
+
 
 ### Further information
 Explanations of the formations and their interpretations can be found here:
@@ -670,7 +663,7 @@ Print("Pattern ShootingStar found!");
 
 ##ChaikinMoneyFlow (CMF)
 ### Description
-The Chaikin Money Flow Index was developed by Marc Chaikin. It is a volume indicator that attempts to answer the following question: Where does the money flow into? Into the stock = accumulation, and out of the stock = distribution. Obviously, this applies not only to stocks/shares but also to other instruments. Chaikin attempts to expand on and improve the On-Balance Volume created by Granville. With the CMF, the position of the closing price within the trading range is placed in relation to the volume. Basically, this means that the trading volume is multiplied by the price. The trading volume shows the amount of money that has “flowed” into the stock or has been “removed”; the indicator merely displays whether it has been accumulated (buying pressure) or has been removed (distribution). (Source: VTAD)
+Marc Chaikin was the one to develop the Chaikin Money Flow Index, which is a volume indicator that tries to find an answer to the following question: Where is the money flowing into? Into the stock = accumulation, and out of the stock = distribution. Clearly, this applies not only to stocks/shares but also to other instruments. With this, Chaikin attempts to expand on and improve the On-Balance Volume that was developed by Granville. Using the CMF, the position of the closing price within the trading range is placed in relation to the volume. What this essentially means is that the trading volume is multiplied by the price. The trading volume displays the amount of money that has “flowed” into the stock or has been “removed” from the stock; the indicator simply displays whether it has been accumulated (buying pressure) or removed (distribution).
 
 ### Interpretation
 The CMF oscillates around the zero line and is shown in a separate window with an open scale. Should the CMF be located above the zero line, then it can be interpreted as accumulation. If higher highs are being created, then the buying pressure is increasing. The reverse is true for the selling pressure. The Chaikin Money Flow should always be used in combination with other methods of technical analysis.
@@ -707,7 +700,7 @@ Print("The Chaikin Money Flow value is: " + ChaikinMoneyFlow(21)[0]);
 
 ##Chaikin Oscillator
 ### Description
-The Chaikin Oscillator is a volume indicator that shows if new highs are accompanied by new volumes. The Chaikin Oscillator is a simple MACD applied to the accumulation/distribution line. What is calculated is the difference between a 3-day exponential moving average and a 10-day exponential smoothed average for the accumulation/distribution line.
+The Chaikin Oscillator is a volume indicator that lets the trader know whether new highs are also accompanied by new volumes. This oscillator is a simple MACD that is applied to the accumulation/distribution line. Hereby, the difference between a 3-day exponential moving average and a 10-day exponential smoothed average for the accumulation/distribution line is calculated.
 
 ### Interpretation
 The interpretation of the Chaikin Oscillator is similar to the principle of the accumulation/distribution. All an oscillator does is show the changes in liquidity for the instrument.
@@ -743,8 +736,7 @@ Print("The Chaikin Oscillator value is: " + ChaikinOscillator(3, 10)[0]);
 
 ##ChaikinVolatility (CVL)
 ### Description
-The Chaikin Volatility Indicator is one of several indicators that attempt to measure the fluctuations of price movements.
-Chaikin uses the daily price range (daily high minus daily low) as the fundamental measure of volatility. It is implied that a widening range is associated with a higher volatility.
+The Chaikin Volatility Indicator is one of a few indicators that are designed to try and measure price movement fluctuations. Chaikin takes the daily price range (daily high minus daily low) as the fundamental measure of volatility. With this indicator, a widening range is, by implication, associated with a higher volatility.
 
 ### Interpretation
 The indicator oscillates around the zero line and fluctuates between a scale of +100 to -100. It can be used on a daily chart as well as on a weekly or monthly chart. All values above the zero line represent rising volatility, and the gradient of the rise implies the seriousness of potential floors forming. The Chaikin Volatility is not specifically used to define exact signals, but is considered as more of an assisting tool in the trading system.
@@ -778,7 +770,7 @@ Print("The value of the Chaikin Volatility is: " + ChaikinVolatility(14)[0]);
 
 ##Chande Momentum Oscillator (CMO)
 ### Description
-The CMO is a technical momentum indicator invented by the technical analyst Tushar Chande. It is created by calculating the difference between the sum of all recent gains and the sum of all recent losses and then dividing the result by the sum of all price movement over the period. This oscillator is similar to other momentum indicators such as the Relative Strength Index and the Stochastic Oscillator, since it is also range-bound (+100 and -100).
+The CMO is one of several indicators created by the technical analyst Tushar Chande; it is a technical momentum indicator. This indicator arises from calculating the difference between the total of all recent gains and the total of all recent losses, and then dividing this result by the total of all price movement over the given period. This oscillator shares similarities with other momentum indicators such as the Relative Strength Index and the Stochastic Oscillator, because it is also range-bound (+100 and -100).
 
 ### Interpretation
 **The security is deemed overbought when the momentum oscillator is above +50 and oversold when it is below -50. Many technical traders add a nine-period moving average to this oscillator to act as a signal line. Bullish signals are generated when the oscillator crosses above the signal, and bearish signals are generated when the oscillator crosses down through the signal.**
@@ -814,8 +806,7 @@ Print("The current value for the Chande Momentum Oscillator is: " + CMO(14)[0]);
 ```
 ##Climactic Distance
 ### Description
-The Climactic Distance indicator was invented and developed by Mr. Gilbert Kreuzthaler, CEO of Include IT GmbH and founder of AgenaTrader.com. This indicator is used in the Location Point Trading system. It calculates the median course of the current and historical candle in a distance to the simple moving average (SMA) of the last 20 periods. It also measures the average course deviation within the last 80 periods.
-If the median course exceeds the top or bottom course deviation the market counts as climactic and this influences the trading decision of Location Point Trading.
+The Climactic Distance indicator was invented and developed by Gilbert Kreuzthaler, CEO of Include IT GmbH and founder of AgenaTrader.com. This indicator is used in the Location Point Trading system. It calculates the median course of the current and historical candle at a distance to the simple moving average (SMA) of the last 20 periods. Additionally, it also measures the average course deviation within the last 80 periods. If the median course exceeds the top or bottom course deviation, the market is deemed climactic, and this influences the trading decisions made in Location Point Trading.
 
 ### Calcualtion
 Black line in the middle: SMA 20
@@ -876,7 +867,7 @@ Print(“Value of the upper band: “ + ClimacticDistnance(20, 80).MovingAverage
 
 ##Commodity Channel Index (CCI)
 ### Description
-Developed by Donald Lambert and featured in *Commodities* magazine in 1980, the Commodity Channel Index (CCI) is a versatile indicator that can be used to identify a new trend or warn of extreme conditions. Lambert originally developed CCI to identify cyclical turns in commodities, but the indicator can also be successfully applied to indices, ETFs, stocks and other securities. In general, CCI measures the current price level relative to an [*average*] price level over a given period of time. CCI is relatively high when prices are far above their average. CCI is relatively low when prices are far below their average. In this manner, CCI can be used to identify overbought and oversold levels.
+The Commodity Channel Index (CCI), which was created by Donald Lambert and actually featured in Commodities magazine in 1980, is a versatile indicator that can be used for identifying a new trend or as a warning of extreme conditions. Lambert originally developed the CCI as a means to identify cyclical turns in commodities – however, the indicator can also successfully be applied to ETFs, indices, stocks and various other securities. In general, what CCI does is to measure the current price level relative to an average price level over a specified period of time. When prices are well above their average, CCI is relatively high. When prices are far below their average, CCI is relatively low. This is how CCI can be used for identifying overbought and oversold levels.
 
 ### Interpretation
 CCI measures the difference between a security's price change and its average price change. High positive readings indicate that prices are well above their average, which is a show of strength. Low negative readings indicate that prices are well below their average, which is a show of weakness.
@@ -917,11 +908,10 @@ Print("The value of the Commodity Channel Index is: " + CCI(14));
 
 ##Darvas Boxes
 ### Description
-The Darvas boxes are a trading strategy developed in 1956 by former ballroom dancer Nicolas Darvas. Darvas' trading technique involved buying into stocks that were trading at new 52-week highs with correspondingly high volumes.
-A Darvas box is created when the price of a stock rises above the previous 52-week high, but then falls back to a price not far from that high. If the price falls too much, it can be a signal of a false breakout, otherwise the lower price is used as the bottom of the box and the high as the top.
+Former ballroom dancer Nicolas Darvas developed the Darvas boxes as a trading strategy in 1956. Darvas' trading technique consisted of buying into stocks that were trading at new 52-week highs, with accordingly high volumes. When a stock price rises above the previous 52-week high, but then proceeds to fall back to a price not far from that high, a Darvas box is formed. If the price falls too far, this can signify a false breakout. Otherwise, however, the lower price is used as the bottom of the box and the higher price as the top.
+A box is made up of an upper boundary (top) and a lower boundary (floor). Each new box is created based on a previous box, depicting a “stair” formation. 
+If a new high is not formed after three consecutive days, then the high is labeled as the upper boundary. Following this, the floor is specified based on the lowest price.
 
-A box consists of a top and a lower boundary (floor). Each new box is set up based on a previous box, causing a “stair” formation to be depicted.
-If a stock does not form a new high after three consecutive days, then the high is marked as the upper boundary. After this, the floor is determined based on the lowest price.
 
 ### Interpretation
 This system is similar to a trend-following channel breakout system. As soon as one of these boxes breaks out, a new buy or sell signal is generated.
@@ -965,7 +955,7 @@ Print("The lower boundary for the Darvas box is: " + Darvas().Lower[0]);
 
 ##Directional Movement (DM)
 ### Description
-The Directional Movement indicator is identical to the ADX, the only difference being that the +DM and -DM values are calculated. These will later on be used for the DMI.
+The Directional Movement indicator is almost identical to the ADX, with the only difference that the +DM and -DM values are also calculated. These values are then later on used for the DMI.
 
 ### Interpretation
 The Directional Movement indicator is positive when the difference between the highs is at its largest.
@@ -1009,8 +999,7 @@ Print("The current –DM value is: " + DM(14).DiMinus[0]);
 
 ##Donchian Channel
 ### Description
-The Donchian channel is also known as the 4-week-rule and works in the following manner: when the current price peaks above the high of the past 4 weeks, a new long position is opened. If a short position is open at the time, then this is closed. The reverse applies to shorts.
-The trading system for the Donchian channel is a pure trend-following system based on the concept “buy when it’s strong, sell when it’s weak”. This breakout system was also used by the “Turtles”. With this indicator, the highs and lows of the last n days are displayed as lines above and below the price development. The 20 days represent 4 weeks.
+The Donchian channel can also be called the “4-week-rule”; this is how it works: when the current price reaches a peak above the high of the past 4 weeks, a new long position is opened. If a short position is open simultaneously, it is closed. This works vice versa with shorts. The  Donchian channel trading system is a purely trend-following system based on the concept “buy when it is strong, sell when it is weak”. The famous “Turtles” also employed this breakout system. This indicator displays the highs and lows of the last n days as lines above and below the price development. 20 days represent 4 weeks.
 
 ### Further information
 VTAD: <http://vtadwiki.vtad.de/index.php/Donchian\_Channel>
@@ -1056,7 +1045,7 @@ Print("The lower band is at: " + DonchianChannel(14).Lower[0]);
 
 ##Directional Movement Index (DMI)
 ### Description
-The Directional Movement concept was developed by Welles Wilder Jr. in 1978. The concept contains the following components:
+Welles Wilder Jr. developed the Directional Movement concept in 1978. His concept includes the following components:
 
 Directional Movement Index (DMI)
 
@@ -1064,7 +1053,7 @@ Average Directional Movement Index ([*ADX*])
 
 True Range ([*TR*])
 
-The Directional Movement Index is a precursor to the Average Directional Movement Index. The DMI shows the percentual strengths of the trend-favoring price movements. The standard application is the smoothed ADX.
+The Directional Movement Index comes before the Average Directional Movement Index. The DMI shows the strengths of the trend-favoring price movements in percentages. Its standard application is the smoothed ADX.
 
 ### Interpretation
 The DMI shows the strength of the trend, but not the trend direction. This means that it is particularly suited as a filter for trading systems employing the Parabolic SAR, for example, in order to filter out sideways phases. When the DMI rises (especially above 25), a trend is displayed; anything below that is recognized as a sideways phase. The +DI and the –DI point towards a trend. An uptrend is classified when the +DI is above the –DI. The further apart they drift, the stronger the trend.
@@ -1101,9 +1090,9 @@ Print("The current DMI value is: " + DMI(20)[0]);
 
 ##Double Stochastics (DSS)
 ### Description
-The Double Smoothed Stochastic (DSS) was developed by W. Blau. It is a double-smoothed stochastic indicator. After some time, it was further developed by W. Bressert as a variant of the double-smoothed stochastic. This indicator reacts more sensitively towards smaller changes in the price movements and produces more signals than the one developed by Blau. The Bressert version exemplifies extreme zones with more clarity than the Blau version.
+William Blau was the developer of the Double Smoothed Stochastic (DSS), which is a double-smoothed stochastic indicator. After a while, it was improved upon by Walter Bressert as a variation of the double-smoothed stochastic. Smaller changes in the price movements cause this indicator to react more sensitively, and it also produces more signals than the one Blau developed. The Bressert version therefore also illustrates extreme zones more clearly than the Blau version.
 
-Irrespective of the various calculation methods, the DSS always remains within a scale of 0 to 100. The extreme zones are the same in the developed stochastics as the original stochastics. The upper extreme area is marked at 80 and the lower extreme zone at 20. These values cannot be changed. For many applications, it is smart to add an additional middle line at 50 and to adapt this to the necessary circumstances.
+Regardless of the various calculation methods used, the DSS always stays within a scale of 0 to 100. The extreme zones in the developed stochastics are the same as for the original stochastics. The upper extreme area is marked at 80, and the lower extreme zone at 20 - these values cannot be changed. For many applications, it is wise to include an additional middle line at 50, and to adapt this to the circumstances as needed.
 
 ### Interpretation
 Values above 80 are seen as overbought, and below 20 as oversold. In addition, signals are produced by the signal line’s behavior and movements into and out of the extreme zones.
@@ -1157,8 +1146,7 @@ Print("The value of the DSS Bressert %K is: " + DoubleStochastics(10, DoubleStoc
 
 ##Dynamic Momentum Index (DMIndex)
 ### Description
-The Dynamic Momentum Index was developed by Tushar Chande. It is a specific variation of the Relative Strength Index.
-Chande altered the Dynamic Momentum Index in such a way that the period settings automatically change themselves based on the various factors. He achieved this by coupling it to the RSI so that a volatility component is present. This component is defined based on a 5-day standard deviation of the closing prices. This is then compared to the 10-day average of a 5-day standard deviation.
+The Dynamic Momentum Index, which was developed by Tushar Chande, is a specific variant of the Relative Strength Index. Chande changed the Dynamic Momentum Index in such a way that, based on various factors, the period settings automatically adjust themselves, which he achieved by coupling it to the RSI in order for a volatility component to be present. The definition of this volatility component is based on a 5-day standard deviation of the closing prices. This, in turn, is then compared to the 10-day average of a 5-day standard deviation.
 
 ### Interpretation
 If the DMI is inside the oversold zone, it is reasonable to assume that prices are going to start to fall.
@@ -1195,7 +1183,7 @@ Print("The current value for the DMIndex is: " + DMIndex(3)[0]);
 
 ##Ease of Movement (EOM)
 ### Description
-Developed by Richard Arms, Ease of Movement (EMV) is a volume-based oscillator that fluctuates above and below the zero line. As its name implies, it is designed to measure the "ease" of price movement. Arms created [Equivolume] charts to visually display price ranges and volume. Ease of Movement takes Equivolume to the next level by quantifying the price/volume relationship and showing the results as an oscillator. In general, prices are advancing with relative ease when the oscillator is in positive territory. Conversely, prices are declining with relative ease when the oscillator is in negative territory.
+Ease of Movement (EMV) is a volume-based oscillator created by Richard Arms that constantly moves above and below the zero line. It is intended to measure the "ease" of price movement, as suggested by the name. Arms developed Equivolume charts in order to visually display price ranges and volume. Ease of Movement expands upon Equivolume by quantifying the price/volume relationship and displaying the results in the form of an oscillator. Generally, when the oscillator is in a positive area, prices are advancing with relative ease. On the other hand, when the oscillator is in negative territory, prices are falling with relative ease.
 
 ### Interpretation
 When the EOM is moving away from the zero line (marker) then an impulse has begun in that direction. During a breakout onto the opposite side of the zero line, it is recommended to enter with the trend direction.
@@ -1240,7 +1228,7 @@ Print("The value for the Ease of Movement is: " + EaseOfMovement(14, 10000)[0]);
 
 ##Fisher Transform
 ### Description
-This indicator was developed by the physicist John Ehlers in 2002. The aim of the indicator is to illustrate turning points. This is achieved by using the Inverse Fisher Transform, which changes indicators in such a way that the movements are less random and the signal quality is improved. The transform compresses or stretches the input values of the function in such a way that the output is highly likely to be between -1 and 1. This results in a clearly identifiable pattern where even indicators such as the RSI become clearer and more precise.
+The physicist John Ehlers created the Fisher Transform in 2002. The intention of the indicator is to show where there are turning points, which can be achieved with the help of the Inverse Fisher Transform. This changes indicators in such a way that the movements are less random, and the signal quality is clearer. The Fisher Transform either stretches or compresses the input values of the function so that the output is very likely to be between -1 and 1. This gives us a clearly identifiable pattern where even indicators such as the RSI become better defined and more precise.
 
 ### Interpretation
 A system using the Fisher Transform can be found here:
@@ -1275,9 +1263,9 @@ Print("The current value for the Fisher Transform is: " + FisherTransform(10)[0]
 
 ##Forecast Oscillator (FOSC)
 ### Description
-The Forecast Oscillator compares the current price with the value returned by the Time Series Forecast study. It is calculated as a percentage ratio of the difference between the close price and the value of the Time Series Forecast for the previous bar.
+The FOSC makes a comparison of the current price against the value returned by the Time Series Forecast study. It is calculated as a percentage ratio of the difference between the close price and the Time Series Forecast value for the previous bar.
 
-When the oscillator shows positive values, it suggests that the Time Series Forecast has underestimated the price, and negative values indicate that the actual price is lower than what was predicted by the TSF. Normally, the Forecast Oscillator line is also accompanied by an SMA to search for the oscillator reversals.
+When this oscillator displays positive values, it hints that the Time Series Forecast has underestimated the price, whereas negative values suggest that the TSF has overestimated the price. Usually, an SMA also accompanies the Forecast Oscillator line in the search for oscillator reversals.
 
 ### Further information
 FMLabs: <http://www.fmlabs.com/reference/default.htm?url=ForecastOscillator.htm>
@@ -1315,9 +1303,9 @@ Print("The FOSC is bigger than zero, which indicates rising price movements.");
 
 ##HighestHighIndex()
 ### Description
-Highest High Index prints the index of the bars with the highest high within a predefined number of periods. It differentiates from the HighestBar() function in that it can be visualized within the chart.
+The Highest High Index prints the index for the bars with the highest high within a specified number of periods. It is slightly different from the HighestBar() function in that it can be visualized within the chart.
 
-See [*HighestHighPrice()*], [*LowestLowPrice()*], [*LowestLowIndex]()*, [*HighestBar()*], [*LowestBar()*].
+See [HighestHighPrice()], [LowestLowPrice()], *LowestLowIndex, [HighestBar()], [LowestBar()*].
 
 ### Usage
 ```cs
@@ -1344,11 +1332,11 @@ Print("The highest high in the last 14 bars was " + HighestHighIndex(14)[0] + " 
 
 ##HighestHighPrice()
 ### Description
-Highest High Price displays the highest high reached within a specified number of periods.
+Highest High Price shows the highest high achieved within a predefined number of periods.
 
-In contrast to the *HighestBar()*, this is an indicator that can be displayed within the chart.
+Unlike the HighestBar(), this indicator can be displayed within the chart.
 
-See [*HighestHighIndex()*], [*LowestLowPrice()*], [*LowestLowIndex*](), [*HighestBar()*], [*LowestBar()*].
+See [*HighestHighIndex()*], [*LowestLowPrice()*], *LowestLowIndex*, [*HighestBar()*], [*LowestBar()*].
 
 ### Usage
 ```cs
@@ -1374,29 +1362,18 @@ Print("The highest high for the last 14 bars is " + HighestHighPrice(14)[0]);
 ```
 
 ##IchimokuCloud
-The Ichimoku Cloud, also known as Ichimoku Kinko Hyo, is a versatile indicator that defines support and resistance, identifies trend direction, gauges momentum and provides trading signals. Ichimoku Kinko Hyo translates into "one look equilibrium chart". With one look, chartists can identify the trend and look for potential signals within that trend. The indicator was developed by Goichi Hosoda, a journalist, and published in his 1969 book. Even though the Ichimoku Cloud may seem complicated when viewed on the price chart, it is actually a straight-forward indicator that is very usable. It was, after all, created by a journalist, not a rocket scientist! Moreover, the concepts are easy to understand and the signals are well-defined.
+### Description
+The Ichimoku Cloud, also called Ichimoku Kinko Hyo, is a very adaptable indicator that defines support and resistance, gauges momentum, identifies trend direction and provides trading signals. Ichimoku Kinko Hyo literally means "one look equilibrium chart". With just one look, traders can identify the trend and search for possible signals in that trend. The indicator was developed by the journalist Goichi Hosoda, and published in his 1969 book. Although the Ichimoku Cloud may appear complicated when looked at on the price chart, it is in fact a simple indicator that can be implemented very well – a tribute to the fact that its inventor was a journalist! What is more, the concepts are easily understandable and the signals well-defined.
 
-**1. Tenkan Sen – conversion line**
-This is the median value of the 9-period high and the 9-period low.
-
-**2. Kinjun Sen – the baseline**
-This is the midpoint of the 26-period high and low.
-
-**3. Chikou Span – lagging span**
-This is the closing price plotted 26 days in the past.
-
-**4. Senkou Span A – the first leading line**
-This is the midpoint between the conversion line and the baseline. The leading Span A forms one of the two cloud boundaries. It is referred to as leading because it is plotted 26 periods in the future and thus forms the faster cloud boundary.
-
-**5. Senkou Span B – the second leading line**
-This is the midpoint of the 52-day high-low range projected 26 periods into the future, and forms the slower cloud boundary.
-
-**Kumo – cloud**
-The cloud (Kumo) is the area between Senkou Span A and Senkou Span B. This area is highlighted in color and thus forms a cloud shape.
+**1. Tenkan Sen** – conversion line This is the median value of the 9-period high and the 9-period low.
+**2. Kinjun Sen** – the baseline This is the midpoint of the 26-period high and low.
+**3. Chikou Span** – lagging span This is the closing price plotted 26 days in the past.
+**4. Senkou Span A** – the first leading line This is the midpoint between the conversion line and the baseline. The leading Span A forms one of the two cloud boundaries. It is referred to as leading because it is plotted 26 periods in the future and thus builds the faster cloud boundary.
+**5. Senkou Span B** – the second leading line This is the midpoint of the 52-day high-low range projected 26 periods into the future, forming the slower cloud boundary.
+Kumo – cloud The cloud (Kumo) is the area between Senkou Span A and Senkou Span B. This area is highlighted in color, forming a cloud shape.
 
 **Caution:**
-
-Since the cloud is drawn „into the future“ you must shift the time axis to the left in order to be able to see it.
+Because the cloud is drawn “into the future”, it is necessary to shift the time axis to the left in order to view it.
 
 ### Interpretation
 Similarly to the smoothing averages, the Ichimoku indicator will create a bullish signal when the Tenkan Sen crosses over the Kinjun Sen from below.
@@ -1459,9 +1436,8 @@ periodSlow Number of periods used for the calculation of the Chikou line. Defaul
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
 
 ### Description
-This indicator displays inside bars as defined by Michael Voigt in his book.
-
-The settings are modifiable, and additional adjustments are possible. In addition, there are several data series used in stop calculations for self-developed indicators and strategies.
+InsideBarsMT displays inside bars as defined by Michael Voigt in his book.
+The settings can be modified, and additional adjustments are also possible. Furthermore, there are several data series used in stop calculations for self-developed indicators and strategies.
 
 ### Interpretation
 Inside bars are bars whose body (open-close) are located within the high-low span of the previous bar. The previous bar is generally called an outside bar.
@@ -1521,12 +1497,13 @@ else
 
 ##Keltner Channel
 ### Description
-Keltner Channels are volatility-based envelopes set above and below an exponential moving average. This indicator is similar to Bollinger Bands, which use the standard deviation to set the bands. Instead of using the standard deviation, Keltner Channels use the Average True Range (ATR) to set channel distance. The channels are typically set two Average True Range values above and below the 20-day EMA. The exponential moving average dictates direction and the Average True Range sets channel width. Keltner Channels are a trend-following indicator used to identify reversals with channel breakouts and channel direction. Channels can also be used to identify overbought and oversold levels when the trend is flat.
-
-In his 1960 book, *How to Make Money in Commodities*, Chester Keltner introduced the "Ten-Day Moving Average Trading Rule," which is credited as the original version of Keltner Channels. This original version started with a 10-day SMA of the typical price {(H+L+C)/3)} as the centerline. The 10-day SMA of the high-low range was added and subtracted to set the upper and lower channel lines. Linda Bradford Raschke introduced the newer version of Keltner Channels in the 1980s. Like Bollinger Bands, this new version used a volatility-based indicator, Average True Range (ATR), to set channel width. (Source: StockCharts.com)
+Keltner Channels are volatility-based envelopes placed above and below an EMA. This indicator shares similarities with Bollinger Bands, where the bands are set using the standard deviation. Here, instead of using the standard deviation, Keltner Channels use the Average True Range (ATR) to set the channel distance. Typically, the channels are set two Average True Range values above and two ATRs below the 20-day EMA. The EMA determines the direction and the Average True Range dictates the channel width. Keltner Channels form a trend-following indicator that is applied with the aim of identifying reversals with channel breakouts and channel direction. The channels can also be used to spot overbought and oversold levels when the trend is flat.
+In his 1960 book, *How to Make Money in Commodities,* Chester Keltner featured the "Ten-Day Moving Average Trading Rule," credited as the original version of Keltner Channels. This version started off with a 10-day SMA of the typical price {(H+L+C)/3)} as the center line. The 10-day SMA of the high-low range was added and subtracted to set the upper and lower channel lines respectively. Linda Bradford Raschke then brought in the more recent version of Keltner Channels in the 1980s. Similarly to Bollinger Bands, this new version made use of a volatility-based indicator, Average True Range (ATR), to set channel width.
 Middle line = 20-day exponential moving average
 Upper channel line: 20-day EMA + (2x ATR(10))
 Lower channel line: 20-day EMA – (2xATR(10))
+
+
 
 ### Interpretation
 Indicators based on channels, bands and envelopes are designed to encompass most price action. Therefore, moves above or below the channel lines warrant attention because they are relatively rare. Trends often start with strong moves in one direction or another. A surge above the upper channel line shows extraordinary strength, while a plunge below the lower channel line shows extraordinary weakness. Such strong moves can signal the end of one trend and the beginning of another.
@@ -1592,12 +1569,12 @@ Print("Current value of the lower Keltner Channel band: " + KeltnerChannel(1.5, 
 
 ##KeyReversalUp
 ### Description
-KeyReversalUp searches within a specified number of periods for turning points defined as such:
-
-1. The current close is higher than the previous close
-2. The current low is smaller than or equal to the last low of the last n bars
+The KeyReversalUp indicator searches within a predefined number of periods to find turning points with the following characteristics:
+1	The current close is higher than the previous close
+2	The current low is smaller than or equal to the last low of the last n bars
 
 See [*KeyReversalDown*], [*KeyReversalUpAtSMA*], [*KeyReversalDownAtSMA*], [*KeyReversalUpAtEMA*], [*KeyReversalDownAtEMA*].
+
 
 ### Parameters
 input Input data series for the indicator
@@ -1626,12 +1603,13 @@ Print("A long reversal formation has occurred.");
 
 ##KeyReversalDown
 ### Description
-KeyReversalDown searches within a specified number of periods for turning points defined as such:
+KeyReversalDown searches within a predefined number of periods to find turning points with the following characteristics:
 
-1. The current close is lower than the previous close
-2. The current high is higher than or equal to the highest high of the last n bars
+1	The current close is lower than the previous close
+2	The current high is higher than or equal to the highest high of the last n bars
 
 See [*KeyReversalUp*], [*KeyReversalUpAtSMA*], [*KeyReversalDownAtSMA*], [*KeyReversalUpAtEMA*], [*KeyReversalDownAtEMA*].
+
 
 ### Parameters
 input Input data series for the indicator
@@ -1660,13 +1638,14 @@ Print("A short reversal formation has occurred.");
 
 ##KeyReversalUpAtSMA
 ### Description
-KeyReversalUpAtSMA searches within a specified number of periods for turning points defined as such:
+KeyReversalUpAtSMA searches within a predefined number of periods to find turning points with the following characteristics:
 
-1. The current close is higher than the previous close
-2. The current low is smaller than or equal to the lowest low within n bars
-3. The current low has touched or breached an SMA
+1	The current close is higher than the previous close
+2	The current low is smaller than or equal to the lowest low within n bars
+3	The current low has touched or breached an SMA
 
 See [*KeyReversalUp*], [*KeyReversalDown*], [*KeyReversalDownAtSMA*], [*KeyReversalUpAtEMA*], [*KeyReversalDownAtEMA*].
+
 
 ### Parameters
 input Input data series for the indicator
@@ -1696,13 +1675,14 @@ Print("A long reversal formation has occurred.");
 
 ##KeyReversalDownAtSMA
 ### Description
-KeyReversalDownAtSMA searches within a specified number of periods for a turning point defined as such:
+KeyReversalDownAtSMA searches within a predefined number of periods to find a turning point with the following characteristics:
 
-1. The current close is lower than the previous close
-2. The current high is higher than or equal to the highest high within the last n periods
-3. The current high has touched or breached an SMA
+1	The current close is lower than the previous close
+2	The current high is higher than or equal to the highest high within the last n periods
+3	The current high has touched or breached an SMA
 
 See [*KeyReversalUp*], [*KeyReversalDown*], [*KeyReversalUpAtSMA*], [*KeyReversalUpAtEMA*], [*KeyReversalDownAtEMA*].
+
 
 ### Parameters
 input Input data series for the indicator
@@ -1732,11 +1712,11 @@ Print("A short reversal formation has occurred.");
 
 ##KeyReversalUpAtEMA
 ### Description
-KeyReversalUpAtEMA searches within a specified number of periods for a reversal formation defined as such:
+KeyReversalUpAtEMA searches within a predefined number of periods to find a reversal formation with the following characteristics:
 
-1. The current close is higher than the previous close
-2. The current low is smaller than or equal to the lowest low within the last n bars
-3. The current low has touched or breached an EMA
+1	The current close is higher than the previous close
+2	The current low is smaller than or equal to the lowest low within the last n bars
+3	The current low has touched or breached an EMA
 
 See [*KeyReversalUp*], [*KeyReversalDown*], [*KeyReversalUpAtSMA*], [*KeyReversalDownAtSMA*], [*KeyReversalDownAtEMA*].
 
@@ -1768,11 +1748,11 @@ Print("A long reversal formation has occurred.");
 
 ##KeyReversalDownAtEMA
 ### Description
-KeyReversalDownAtEMA searches within a specified number of periods for a reversal formation defined as such:
+KeyReversalDownAtEMA searches within a predefined number of periods to find a reversal formation with the following characteristics:
 
-1. The current close is lower than the previous close
-2. The current high is larger than or equal to the highest high of the last n bars
-3. The current high has touched or breached an EMA
+1	The current close is lower than the previous close
+2	The current high is larger than or equal to the highest high of the last n bars
+3	The current high has touched or breached an EMA
 
 See [*KeyReversalUp*], [*KeyReversalDown*], [*KeyReversalUpAtSMA*], [*KeyReversalDownAtSMA*], [*KeyReversalUpAtEMA*].
 
@@ -1805,8 +1785,7 @@ Print("A short reversal formation has occurred.");
 
 ##Linear Regression
 ### Description
-The linear regression is used for trend determination. The prices are set as dependent variables and time is set as an independent variable. Using the method to determine the smallest square, a straight line is placed through the price movements in such a way that the distance between the prices and the line deviates minimally. This method also establishes a trend between two points in time. The regression line is found in the middle of the price channel.
-The indicator provides the end values of multiple linear regression trend lines. Every point along this indicator is thus an end value of a linear regression trend line. The result is similar to a smoothing average, with the difference being that the regression line has less lag.
+Linear Regression is used to determine trends. Here, the prices are set as dependent variables, and time is set as an independent variable. Using the method for determination of the smallest square, a straight line is placed through the price movements in such a way that the distance between the prices and the line deviates as little as possible. Using this method also establishes a trend between two points in time. The regression line can be found in the middle of the price channel, and the indicator provides the end values of multiple linear regression trend lines. Each point along this indicator is therefore an end value of a linear regression trend line. What results is quite similar to a smoothing average, with the difference that the regression line exhibits less lag.
 
 See [*R-Squared*], [*LinRegSlope*], [*LinRegIntercept*].
 
@@ -1845,9 +1824,9 @@ Print("The current value for the linear regression is: " + LinReg(14)[0]);
 
 ##LinRegIntercept
 ### Description
-The Linear Regression Intercept delivers the value of the regression constant, meaning the mathematical intersection of the regression line with the price axis.
+The Linear Regression Intercept outputs the value of the regression constant, i.e. the mathematical intersection of where the regression line meets the price axis.
 
-A straight line can be accurately determined by using the slope and intercept values.
+A straight line can be accurately determined with the help of the slope and intercept values.
 
 See [*Linear Regression*], [*R-Squared,*][*R-Squared*] [*LinRegSlope*].
 
@@ -1883,7 +1862,7 @@ Print("The current value of the regression constant is: " + LinRegIntercept(14)[
 
 ##LinRegSlope
 ### Description
-The Linear Regression Slope delivers the slope of the linear regression line. It is a measurement of the “elevation” of the regression line.
+The Linear Regression Slope outputs the slope of the linear regression line, and is a measurement of the regression line’s “elevation”.
 
 See [*Linear Regression*], [*R-Squared*], [*LinRegIntercept*].
 
@@ -1920,9 +1899,9 @@ Print("The current value for the inclination of the linear regression line is: "
 
 ##LowestLowIndex()
 ### Description
-LowestLowIndex outputs the index of the bar with the lowest low within a specified number of periods.
+LowestLowIndex delivers the index of the bar with the lowest low within a predefined number of periods.
 
-In contrast to LowestBar(), this indicator can be displayed within a chart.
+Differently to LowestBar(), one can display this indicator within a chart.
 
 See [*HighestHighPrice()*], [*HighestHighIndex()*], [*LowestLowPrice()*],
 *HighestBar()*, *LowestBar()*.
@@ -1953,9 +1932,9 @@ Print("The lowest low of the last 14 bars was " + LowestLowIndex(14)[0] + " bars
 
 ##LowestLowPrice()
 ### Description
-LowestLowPrice outputs the value of the lowest low within a specified number of periods.
+LowestLowPrice delivers the value of the lowest low within a predefined number of periods.
 
-In contrast to LowestBar(), this indicator can be displayed within the chart.
+Unlike the LowestBar(), this indicator can be viewed within the chart.
 
 See [*HighestHighPrice()*], [*HighestHighIndex()*], *[LowestLowIndex]()*,
 *HighestBar()*, *LowestBar()*.
@@ -1985,9 +1964,11 @@ Print("The lowest low of the last 14 bars is " + LowestLowPrice(14)[0]);
 
 ##MACD
 ### Description
-Developed by Gerald Appel in the late seventies, the Moving Average Convergence-Divergence (MACD) indicator is one of the simplest and most effective momentum indicators available. The MACD turns two trend-following indicators, [moving averages][*average*], into a momentum oscillator by subtracting the longer moving average from the shorter moving average. As a result, the MACD offers the best of both worlds: trend following and momentum. The MACD fluctuates above and below the zero line as the moving averages converge, cross and diverge. Traders can look for signal line crossovers, centerline crossovers and divergences to generate signals. Because the MACD is unbounded, it is not particularly useful for identifying overbought and oversold levels. The MACD line is the 12-day [Exponential Moving Average][*average*] (EMA) less the 26-day EMA. Closing prices are used for these moving averages. A 9-day EMA of the MACD line is plotted with the indicator to act as a signal line and identify turns. The MACD histogram represents the difference between MACD and its 9-day EMA, the signal line. The histogram is positive when the MACD line is above its signal line and negative when the MACD line is below its signal line.
+The Moving Average Convergence-Divergence (MACD) indicator, developed by Gerald Appel in the late 70s, is one of the simplest, most effective momentum indicators out there. The MACD makes two trend-following indicators, [moving averages][average], become a momentum oscillator by subtracting the longer moving average from the shorter moving average. As a result of this, the MACD offers great advantages: trend following and momentum. The MACD moves above and below the zero line as the moving averages converge, cross and diverge again. Signal line crossovers, centerline crossovers and divergences are things that traders can keep an eye out for to generate signals. Since the MACD is unbounded, it is not especially useful for identifying overbought or oversold levels. The MACD line is the 12-day [Exponential Moving Average][average] (EMA) minus the 26-day EMA, and closing prices are used for these moving averages. A 9-day EMA of the MACD line is plotted with the indicator acting as a signal line and identifying turns. The MACD histogram shows the difference between the MACD and its 9-day EMA, i.e. the signal line. When the MACD line is above its signal line, the histogram is positive, and vice versa when the MACD line is below its signal line.
 
-The values of 12, 26 and 9 are the typical settings used with the MACD, however other values can be substituted depending on your trading style and goals.
+The typical settings used with the MACD are the values 12, 26 and 9. However, other values can also be used depending on the trading style and goals in mind.
+
+
 
 ### Interpretation
 As its name implies, the MACD is all about the convergence and divergence of the two moving averages. Convergence occurs when the moving averages move towards each other. Divergence occurs when the moving averages move away from each other. The shorter moving average (12-day) is faster and responsible for most MACD movements. The longer moving average (26-day) is slower and less reactive to price changes in the underlying security.
@@ -2044,13 +2025,14 @@ Print("The difference between the MACD and the signal line is: " + MACD(12,26,9)
 
 ##MAEnvelopes
 ### Description
-Moving Average Envelopes are percentage-based envelopes set above and below a moving average. The moving average, which forms the base for this indicator, can be a simple or exponential moving average. Each envelope is then set the same percentage above or below the moving average. This creates parallel bands that follow price action. With a moving average as the base, Moving Average Envelopes can be used as a trend-following indicator. However, this indicator is not limited to just trend following. The envelopes can also be used to identify overbought and oversold levels when the trend is relatively flat.
+These Moving Average Envelopes are percentage-based envelopes placed above and below a moving average. The moving average forms the base for this indicator, and can be a either simple or exponential moving average. Each MA envelope is set the same percentage above or below the moving average, thereby creating parallel bands that follow price action. Moving Average Envelopes can be used as a trend-following indicator with a moving average as the base. But this indicator is not limited to just trend following: the envelopes can also be used for spotting overbought and oversold levels when the trend is relatively flat.
 
-Indicators based on channels, bands and envelopes are designed to encompass most price action. Therefore, moves above or below the envelopes warrant attention. Trends often start with strong moves in one direction or another. A surge above the upper envelope shows extraordinary strength, while a plunge below the lower envelope shows extraordinary weakness. Such strong moves can signal the end of one trend and the beginning of another.
+Indicators based on channels, bands and envelopes are intended to encompass most price action, which is why moves above or below the envelopes deserve attention. Trends often start with sharp moves in one direction – a surge above the upper envelope shows extraordinary strength, while a dive below the lower envelope exhibits extraordinary weakness. Strong moves such as these can signal the end of one trend and the start of another.
 
-With a [*moving average*][*average*] as its foundation, Moving Average Envelopes are a natural trend-following indicator. As with moving averages, the envelopes will lag price action. The direction of the moving average dictates the direction of the channel. In general, a downtrend is present when the channel moves lower, while an uptrend exists when the channel moves higher. The trend is flat when the channel moves sideways.
+With a [*moving average*][*average*] as the foundation, Moving Average Envelopes are a trend-following indicator. As with moving averages, the envelopes lag price action. The direction of the moving average dictates the direction of the channel, so generally, when the channel moves lower, a downtrend exists, and when the channel goes higher, an uptrend is present. When the channel moves sideways, this signifies that the trend is flat.
 
-Sometimes a strong trend does not take hold after an envelope break and prices move into a trading range. Such trading ranges are marked by a relatively flat moving average. The envelopes can then be used to identify overbought and oversold levels for trading purposes. A move above the upper envelope denotes an overbought situation, while a move below the lower envelope marks an oversold condition.
+Occasionally, it happens that a strong trend does not establish itself after an envelope break, and prices move into a trading range. Trading ranges such as these are characterized by a relatively flat moving average. These envelopes can then be used to spot overbought and oversold levels. A move above the upper envelope shows an overbought situation; a move below the lower envelope signals an oversold situation.
+
 
 ### Usage
 ```cs
@@ -2109,9 +2091,9 @@ Print("Lower band of the MA Envelope: " + MAEnvelopes(1.5, MAEnvelopesMAType.SMA
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
 
 ### Description
-The Market Phases Indicator is another important component of the Technical Analysis Package. It is based on integrated trend detection for the relevant trading market phases.
+The Market Phases Indicator is another important component of the Technical Analysis Package, and is based on integrated trend detection for the various relevant trading market phases.
 
-The market phases are defined according to the book series “*Der Händler*” (“The Trader”) by Michael Voigt.
+The market phases are defined according to the book series “Der Händler” (“The Trader”) by Michael Voigt.
 
 **Phase 3:**
 
@@ -2188,8 +2170,8 @@ You can use the indicator as a filter by using the signals of other indicators w
 
 ##Momentum (MOM)
 ### Description
-Momentum is one of the more popular indicators. Many traders swear by this rather simple indicator, because it measures the attenuation of the motion without having to use complex formulas.
-The momentum indicator is representative of a whole family of indicators that measure the strength of a movement. Other representatives in this case are RSI or CCI etc. In the illustration below, the indicator is a graph that oscillates about a zero point. There is no fixed scale in percentage terms. The value can be removed quite far from the zero point; this generally happens when the price makes an unusually strong jump, thus the indicator primarily shows the direction in which the current prices are moving to.
+Momentum is one of the most popular indicators available, the first choice of many traders. This relatively simple indicator is so popular because it measures the attenuation of the motion without the need for complex formulas. The momentum indicator represents a whole family of indicators that measure a movement’s strength. Other representatives in this case are the RSI or CCI, and so on. In the illustration below, the indicator is a graph that oscillates around a zero point. There is no fixed scale in percentage terms, and the value can be quite far removed from the zero point; this usually happens when the price makes an exceptionally strong leap, which is why the indicator predominantly shows the direction in which the current prices are moving towards.
+
 
 ### Interpretation
 Entry signals are generated when the indicator crosses the zero line.
@@ -2228,7 +2210,8 @@ Print("The current value for the momentum is " + Momentum(14)[0]);
 
 ##Money Flow Index (MFI)
 ### Description
-The Money Flow Index (MFI) is an oscillator that uses both price and volume to measure buying and selling pressure. Created by Gene Quong and Avrum Soudack, MFI is also known as volume-weighted [RSI][*RSI*]. MFI starts with the typical price for each period. Money flow is positive when the typical price rises (buying pressure) and negative when the typical price declines (selling pressure). A ratio of positive and negative money flow is then plugged into an RSI formula to create an oscillator that moves between zero and one hundred. As a momentum oscillator tied to volume, the Money Flow Index (MFI) is best suited to identify reversals and price extremes with a variety of signals.
+The MFI is an oscillator that makes use of both volume and price to measure buying and selling pressure. MFI, which was developed by Gene Quong and Avrum Soudack, is also known as volume-weighted [RSI][RSI]. MFI starts with the typical price for each period. Money flow is then positive when this aforementioned typical price increases (buying pressure) and negative when it decreases (selling pressure). A ratio of positive-negative money flow is then inserted into an RSI formula to come up with an oscillator that fluctuates between 0 and 100. The MFI, which is a momentum oscillator linked to volume, is best used for identifying reversals and price extremes with a variety of different signals.
+
 
 ### Interpretation
 The MFI is interpreted similarly to the RSI indicator. The MFI’s decisive factor is much stronger than the RSI’s when it comes to trend direction, due to the fact that volume is included in the calculation.
@@ -2314,7 +2297,7 @@ Another method is to use three moving averages (Triple Crossover Method). This m
 
 ##DEMA - Double Exponential Moving Average
 ### Description
-The DEMA is a technical indicator developed by Patrick Mulloy. The calculation is based on a simple as well as a double exponential moving average.
+The Double Exponential Moving Average is a technical indicator created by Patrick Mulloy. The calculation hereof is done using a simple as well as a double exponential moving average.
 
 ### Interpretation
 The DEMA is a fast-working moving average that reacts quicker to market changes. The DEMA may be used as a stand-alone indicator or in tandem with other indicators.
@@ -2354,7 +2337,7 @@ Print("The current DEMA value is " + DEMA(20)[0]);
 
 ##EMA - Exponential Moving Average
 ### Description
-Exponential moving averages reduce the lag by applying more weight to recent prices. The weighting applied to the most recent price depends on the number of periods in the moving average. There are three steps to calculating an exponential moving average. First, calculate the simple moving average. An exponential moving average (EMA) has to start somewhere, so a simple moving average is used as the previous period's EMA in the first calculation. Second, calculate the weighting multiplier. Third, calculate the exponential moving average. The formula below is for a 10-day EMA.
+Exponential moving averages work to reduce lag by weighting recent prices more heavily. The weighting given to the most recent price depends on the number of periods in the moving average. Calculating an exponential moving average involves three steps. 1. Calculate the simple moving average. An exponential moving average (EMA) must start somewhere, therefore a simple moving average is used as the previous period's EMA in the beginning calculation. 2. Calculate the weighting multiplier. 3. Calculate the EMA.
 
 ### Interpretation
 The EMA is used by many traders in the most varying of timeframes. It is especially meaningful within the 15, 60 and 240-minute charts. The EMA 200 line is also especially popular with traders.
@@ -2396,13 +2379,13 @@ Print("The current EMA value is " + EMA(20)[0]);
 
 ##EMA MTF (MultiTimeFrame)
 ### Description
-The EMA MTF indicator is the multi-timeframe variant of the standard EMA indicator.
-
-Essentially, this indicator allows you to calculate in a different timeframe than whichever timeframe the chart is currently in.
+The EMA MTF indicator is a multi-timeframe version of the standard EMA indicator.
+This indicator basically allows you to make calculationgs in a different timeframe than that of the current chart.
 
 For more information, see [*EMA*].
 
 Also see [*BollingerMTF*], [*SmaMTF*].
+
 
 ### Visualization
 A 5-minute chart with an EMA(20) calculated with hourly bars as the underlying input:
@@ -2411,7 +2394,7 @@ A 5-minute chart with an EMA(20) calculated with hourly bars as the underlying i
 
 ##HMA - Hull Moving Average
 ### Description
-The Hull Moving Average was developed by Alan Hull and is a fast-working moving average that eliminates most of the delays/lags (zero lag). The calculation is performed using various weighted moving averages, which is why the smoothing effect is partially diminished. Hull’s methodology is to use square roots of the period instead of the period itself.
+The Hull Moving Average, invented by Alan Hull, is a fast-working moving average that gets rid of almost all delays/lags (zero lag). The calculation is carried out using several weighted moving averages, thereby partially reducing the smoothing effect. Hull’s methodology uses square roots of the period instead of the actual period itself.
 
 ### Interpretation
 The same interpretations as for the moving averages apply to the HMA, the only major distinction being the reduced lag. See [*Moving Averages*].
@@ -2453,7 +2436,7 @@ Print("The current HMA value is " + HMA(21)[0]);
 
 ##KAMA - Kaufman's Adaptive Moving Average
 ### Description
-The KAMA is based on an EMA in which the weight of the price changes that are to come is controlled by a trend efficiency ratio. The efficiency ratio (the squared efficiency factor) is a measure that can also be used on its own. The trend efficiency is defined as the ratio of the absolute price change from the beginning to the end of the period, and the sum of the absolute daily price changes. At higher trending efficiencies (meaning straight price movements) without much variation, the additional price will have a higher weighting, which corresponds to a shorter day period setting. Lower trending frequencies will have a smaller weighting.
+The KAMA is based on an EMA in which a trend efficiency ratio controls the weight of future price changes. This efficiency ratio (the squared efficiency factor) is a measure that can also be used by itself. The trend efficiency is the ratio of the absolute price change from the start to the end of the period, and the total of the absolute daily price changes. At higher trending efficiencies (i.e. straight price movements) without too much variation, the extra price carries a higher weighting, according to a shorter day period setting. Lower trending frequencies carry a smaller weighting.
 
 ### Interpretation
 Kaufman mentions that a rising KAMA value can be interpreted as a buying signal, whilst falling KAMA values assume the prices to be falling.
@@ -2497,11 +2480,10 @@ Print("The current value of the KAMA is " + KAMA(2,10,30)[0]);
 
 ##MAMA - Mesa Adaptive Moving Average
 ### Description
-The MAMA indicator is an automatically adapting moving average whose period length is determined via various complex calculations.
-This indicator originates from publications by John Ehlers and is relatively hard to understand. Ehlers calculates cycles for the price movements to determine length and intensity of individual trend phases. Based on the length of the cycles, the weighting factor for the moving average can be established in varying ways.
+This automatically adapting moving average has a period length that is determined by means of various complex calculations. This complex indicator has its origins in publications by John Ehlers. Ehlers calculates cycles for the price movements to determine the length and intensity of single trend phases. Working with the length of the cycles, the weighting factor for the moving average can be established in several different ways.
 
 **FAMA**
-This indicator is a second line that is known as FAMA in various publications. This line is similar to the underlying exponential moving average and acts as a trigger line.
+This indicator is a second line – the name FAMA can be found in various publications. This line is similar to the underlying exponential moving average and can be used as a trigger line.
 
 ### Interpretation
 For more concise information, we recommend that you read Ehler’s paper.
@@ -2548,12 +2530,10 @@ Print("The current value for the FAMA is " + MAMA(0.5, 0.05).Fama[0]);
 
 ##SMA - Simple Moving Average
 ### Description
-The SMA is the “mother of all averages” and represents the easiest way to display the trend direction of a chart. Viewed from a mathematical perspective, this is the arithmetic mean of a number of individual lengths.
-The term “moving” comes from the fact that for this method of establishing an average, the oldest value is always sacrificed to make way for the currently incoming price change. Fundamentally speaking, the length of the period affects the intensity of the smoothing. Shorter periods (e.g. 10 days) will result in the indicator following the price changes relatively closely.
+The SMA is the most well-known average, representing the simplest method of displaying the trend direction in a chart. In mathematical terms, this is the arithmetic mean of a number of individual lengths. It is called “moving” because to establish an average, the oldest value is always sacrificed to make space for the new incoming price change. Fundamentally speaking, the period length influences the intensity of the smoothing. Shorter periods (such as 10 days) will mean that the indicator follows the price changes quite closely.
+The SMA has a few disadvantages, which is why several adaptations of this indicator have been developed in the last few years. One of the biggest disadvantages is the fact that the indicator tends to lag, and the equal weighting for all data inputs across time intervals.
+You can find more general interpretations and meanings here: [*Moving Averages*].
 
-The simple moving average has a couple of drawbacks, which is why several permutations of this indicator have been developed over the course of the years. Primarily, one of the biggest drawbacks is the lagging nature of the indicator and the equal weighting for all data inputs across the time intervals.
-
-More general interpretations and meanings can be found here: [*Moving Averages*].
 
 ### Further information
 <http://www.forex-trading-online.de/indikatoren/simple-moving-average-sma>
@@ -2592,7 +2572,7 @@ Print("The current SMA value is " + SMA(14)[0]);
 
 ##SMA MTF (MultiTimeFrame)
 ### Description
-Just like the other multi-timeframe indicator variations, this allows you to display the SMA of a specific timeframe on a chart of a different timeframe.
+The SMA MTF – as is true for the other multi-timeframe indicator variations – allows traders to display the SMA of a specific timeframe on a chart of a different timeframe.
 
 See [*BollingerMTF*], [*EmaMTF*].
 
@@ -2603,8 +2583,7 @@ The image shows a 5-minute chart with an SMA (14) calculated on 4-hour bars
 
 ##SMMA - Smoothed Moving Average
 ### Description
-The Smoothed Moving Average is a combination of the Simple Moving Average and the Exponential Moving Average. It is generally only used for higher period amounts/inputs.
-Generally speaking, it has about half of the value of an EMA, meaning that an SMMA(20) is similar to an EMA(40).
+The Smoothed Moving Average is combined from both Simple Moving Average and the Exponential Moving Average. Generally speaking, it is only used for higher period amounts/inputs. It normally has roughly half of the value of an EMA, meaning that an SMMA(20) is closer to an EMA(40).
 
 ### Interpretation
 For more general information about moving averages, please see [*Moving Averages*].
@@ -2643,9 +2622,9 @@ Print("The current SMMA value is " + SMMA(14)[0]);
 
 ##TEMA - Triple Exponential Moving Average
 ### Description
-The Triple Exponential Moving Average is a combination of a single EMA, a double EMA and a triple EMA. The combination improves the delay between the indicator and the price movements. TEMA is relatively efficient at smoothing the price changes.
+The TEMA is combined from a single, a double and a triple EMA. This combo improves the delay between the indicator and price movements. The Triple Exponential Moving Average is quite efficient at smoothing price changes.
 
-More information about moving averages in general can be found here: [*Moving Averages*].
+You can find more information about moving averages here: [*Moving Averages*].
 
 ### Usage
 ```cs
@@ -2676,7 +2655,7 @@ Print("The current TEMA value is " + TEMA(14)[0]);
 
 ##TMA - Triangular Moving Average
 ### Description
-The Triangular Moving Average is a specifically weighted average with a special smoothing component. The weightings are not linear but are assigned a triangular pattern. The weighting for a 7-period average would thus be 1,2,3,4,3,2,1. The median value of the time series will be given more weight, and the newest i.e. oldest data less.
+This specifically weighted average has an extra smoothing component. The weightings are not linear, but instead take on a triangular pattern. To demonstrate, the weighting for a 7-period average would be 1,2,3,4,3,2,1. More weight is given to the median value of the time series, and the newest and oldest data is given less weight.
 
 ### Usage
 ```cs
@@ -2707,7 +2686,8 @@ Print("The current value for the TMA is " + TMA(14)[0]);
 
 ##TRIX - Triple Exponential Moving Average
 ### Description
-The TRIX indicator was developed by Jack Hutson. It is a 1-day rate-of-change indicator, meaning that day 2 is divided by day 1, day 3 by day 2 and so on, and this is applied to a triple exponential moving average of the closing prices. The result is a zero line fluctuating oscillator which, based on its stability, is used as trend indicator.
+Jack Hutson developed this TRIX indicator, which is a 1-day rate-of-change indicator. What this means is that day 2 is divided by day 1, day 3 by day 2 and so on and so forth, and this is then applied to a triple exponential moving average of the closing prices. This results in a zero line fluctuating oscillator which is used as trend indicator thanks to its stability.
+
 
 ### Interpretation
 A buy signal is created when the TRIX indicator crosses the zero line from bottom to top. A sell signal is generated when the zero line is broken in a downwards direction.
@@ -2750,9 +2730,7 @@ Print("The current TRIX value is " + TRIX(14, 3).Signal[0]);
 
 ##T3 - Triple Exponential Moving Average
 ### Description
-The Triple Exponential Moving Average T3 (also known as the T3MA) indicator is calculated using the weighted sums of a simple EMA, a double EMA, and a triple EMA. This results in a very smooth, soft indicator line.
-The number of iterations can be set using the parameter tCount.
-The calculation is the same as that of the DEMA, the only difference being that here, a volume factor is added. It accepts values between 0 and 1 (default: 0.7).
+The Triple Exponential Moving Average T3 indicator (also dubbed the T3MA) is calculated by taking the weighted sums of a simple, a double, and a triple EMA. This produces a smooth, soft indicator line. The parameter tCount allows the trader to set the number of reiterations. The calculation is the same as the calculation for the DEMA, with the slight difference that here, a volume factor is also added. It accepts values between 0 and 1 (default: 0.7).
 
 ### Usage
 ```cs
@@ -2787,9 +2765,9 @@ Print("The current T3 value is " + T3(14, 3, 0.7)[0]);
 
 ##VMA - Variable Moving Average
 ### Description
-The Variable Moving Average is an EMA that automatically applies smoothing to the fluctuations in the market. The sensitivity grows as more weight is placed on “fresher” data.
+This variation of an EMA automatically smoothes any fluctuations in the market, and its sensitivity grows as more weight is placed on more recent data.
 
-By automatically regulating the smoothing constant, the VMA attempts to eliminate the drawbacks of other moving averages. Thus the VMA can be used for most of the market conditions, and in some cases is even better than other averages.
+The VMA attempts to get rid of the disadvantages of other moving averages by automatically regulating the smoothing constant. This is why the VMA can be implemented for most of the market conditions, and is in a few cases actually better than other averages.
 
 **Caution**
 The VMA is not to be confused with the Volume Moving Average (VolMA)!
@@ -2825,7 +2803,7 @@ Print("The current VMA value is " + VMA(9, 9)[0]);
 
 ##VWMA - Volume Weighted Moving Average
 ### Description
-VWMA is a non-cumulated smoothed average. This moving average is weighted based on the various volumes for the periods.
+VWMA is a non-cumulated smoothed average that is weighted based on the various volumes for the periods.
 
 ### Usage
 ```cs
@@ -2856,7 +2834,7 @@ Print("The current VWMA value is " + VWMA(14)[0]);
 
 ##WMA - Weighted Moving Average
 ### Description
-The Weighted Moving Average is the most well-known of the weighted averages. It is used to identify and react to price changes more quickly. Current prices are given higher weighting than older values. An additional advantage is that bad signals in sideways markets are minimized. The WMA smoothes the price changes and allows for more efficient trade identification.
+The Weighted Moving Average is the most well-known of the weighted averages, and is implemented to identify and quickly react to price changes. Current prices are given higher weighting than older ones. In addition, bad signals in sideways markets are minimized. The WMA smoothes the price changes and makes more efficient trade identification possible.
 
 ### Further information
 <http://www.tradesignalonline.com/de/lexicon/view.aspx?id=Moving+Average+Weighted+%28WMA%29>
@@ -2890,7 +2868,7 @@ Print("The current value of the WMA is " + WMA(14)[0]);
 
 ##ZLEMA - Zero Lag Exponential Moving Average
 ### Description
-The Zero Lag Exponential Moving Average is another variant of the EMA. Here, zero lag means no delay i.e. the indicator adapts more closely to the price changes. The indicator achieves this by taking out older price data and reducing the cumulative effect to minimize the lag.
+The Zero Lag Exponential Moving Average is another variation of the EMA. Zero lag in this context signifies no delay, which means that the indicator adapts to the price changes more closely. The indicator does so by removing older price data and decreasing the cumulative effect in order to minimize the lag.
 
 ### Further information
 FMLabs: <http://www.fmlabs.com/reference/default.htm?url=ZeroLagExpMA.htm>
@@ -2924,13 +2902,11 @@ Print("The current ZLEMA value is " + ZLEMA(14)[0]);
 
 ##nBarsUp
 ### Description
-The nBarsUp indicator searched for a specific number of rising closing prices.
-In addition, other conditions can be added to the search, such as:
-Continuously rising bars, i.e. close &lt; open (red candles)
-Continuously rising highs
-Continuously rising lows
+The nBarsUp indicator looks for a specified number of rising closing prices. Other conditions can also be added to the search, for example:
+Constantly rising bars, i.e. close < open (red candles)
+Constantly rising highs
+Constantly rising lows
 
-See [*NBarsDown*].
 
 ### Usage
 ```cs
@@ -2971,13 +2947,13 @@ Print("3 successively higher closing prices have occurred.");
 
 ##nBarsDown
 ### Description
-The nBarsDown indicator searches for a specific number of falling closing prices.
+The nBarsDown indicator looks for a specified number of falling closing prices.
 
-In addition, the following conditions can be included in the search:
+The following conditions can also be included in the search:
 
-- Continuously falling bars
-- Continuously falling highs
-- Continuously falling lows
+-	Constantly falling bars
+-	Constantly falling highs
+-	Constantly falling lows
 
 ### Usage
 ```cs
@@ -3019,7 +2995,7 @@ NBarsDown(IDataSeries input, bool barCount, int BarDown, bool lowerHigh, bool lo
 
 ##OnBalanceVolume (OBV)
 ### Description
-The On Balance Volume Indicator shows the buy or sell pressure. The volume is cumulatively added for each day with a positive close, and subtracted for days with a close smaller than the open.
+This indicator displays the buy or sell pressure. For each day with a positive close, the volume is added cumulatively, and it is subtracted for days with a close that is smaller than the open.
 
 ### Interpretation
 Granville theorized that volume precedes price. OBV rises when volume on up days outpaces volume on down days. OBV falls when volume on down days is stronger. A rising OBV reflects positive volume pressure that can lead to higher prices. Conversely, falling OBV reflects negative volume pressure that can foreshadow lower prices. Granville noted in his research that OBV would often move before price. Expect prices to move higher if OBV is rising while prices are either flat or moving down. Expect prices to move lower if OBV is falling while prices are either flat or moving up.
@@ -3053,47 +3029,48 @@ Print("The current value for the OBV is " + OBV()[0]);
 
 ##OutsideBars
 ### Description
-The indicator Outside Bars is an outdated version of the [*InsideBarsMT*].
+The Outside Bars indicator is in fact an outdated version of the [*InsideBarsMT*].
 
 ##P123
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
 
 ### Description
-The P123 indicator’s purpose is to automatically detect a 1,2,3 pattern.
+The goal of the P123 indicator is to automatically detect a 1-2-3 pattern.
 
-**The following features stand out:**
+**The following features make it stand out:**
 
-Innovative recognition of 4 differing trend sizes
+Innovative recognition of 4 different trend sizes
 
-Points 1, 2, and 3 are recognized at the bar
+It recognizes points 1, 2, and 3 at the bar
 
-Recognition of the continuation of a trend in the same direction as a trend break
+Recognition of a trend continuation in the same direction as a trend break
 
-Fully automatic adjustment of the search algorithm for all market conditions (no additional settings/inputs necessary)
+Completely automatic adjustment of the search algorithm for all possible market conditions (no additional settings/inputs required)
 
-Adaptive workflow, it adjusts to the fluctuations in volatility
+Adaptive workflow, adjusting to any volatility fluctuations
 
-Clear view while at the same time displaying the various trend sizes
+Clear overview while simultaneously displaying the various trend sizes
 
-Usable within the Condition Escort and AgenaScript
+Can be implemented within the Condition Escort and AgenaScript
 
 The trend sizes are defined as follows:
 
 T0 = large trend
 
-T1 = middle-sized trend
+T1 = medium-sized trend
 
 T2 = small trend
 
 T3 = smallest trend size
 
-The smallest trend size (T3) is not detectable on all trading instruments. Point 2 is often situated at the high of a bar, and point 3 at the low of the same bar. Depending on the timeframe and the fluctuation range, T0 and T1 are fused into one.
+The smallest trend size (T3) cannot be detected on all trading instruments. Point 2 is often situated at the high of a bar, and point 3 at the low of the same bar. Depending on the timeframe and fluctuation range, T0 and T1 can be fused into one.
 
-The indicator identifies the selected timeframe of the chart, and all trends and trend sizes are labeled accordingly. In times of low volatility, the trend recognition is more sensitive, and the opposite is true for higher volatility. The adaptive methods ensure a balanced recognition of trend sizes.
+The indicator determines the selected timeframe of the chart, and then labels all trends and trend sizes accordingly. When there is low volatility, trend recognition is more sensitive, and the vice versa for higher volatility. The P123’s adaptive methods make for a balanced recognition of trend sizes.
 
 **Important tip:**
 
-In some cases the large trend (T0) is not visible, which may sometimes be due to the fact that not enough candles are visible within the chart. A minimum of 500 candles should be loaded in order to ensure this is not the case.
+In some cases, the large trend (T0) cannot be seen with the naked eye, which may be due to the fact that not enough candles are visible within the chart. A minimum of 500 candles should be loaded to ensure this is not the case.
+
 
 ### Interpretation
 Trading signals often form at points 2 & 3: at point 3 as entry signals into a correction phase within a confirmed trend, and at point 2 as a sub-trend in the trend direction of the superior trade.
@@ -3179,11 +3156,13 @@ The parameters “trendSize” and “occurrence” can be found within the Cond
 
 ##Parabolic SAR
 ### Description
-Developed by Welles Wilder, the Parabolic SAR refers to a price and time-based trading system. Wilder called this the "Parabolic Time/Price System." SAR stands for "stop and reverse," which is the actual indicator used in the system. **SAR trails price as the trend extends over time.** The indicator is below prices when prices are rising and above prices when prices are falling. In this regard, the indicator stops and reverses when the price trend reverses and breaks above or below the indicator.
+Welles Wilder came up with the Parabolic SAR, which denotes a price and time-based trading system. Wilder named this the "Parabolic Time/Price System." SAR signifies "stop and reverse," which is the name of the actual indicator used in his system, where **SAR trails price as the trend extends over time**. When prices are rising, the indicator is below them, and when prices are falling, it is above them. Therefore the indicator stops and reverses when the price trend reverses and breaks either above or below the indicator.
 
-Wilder introduced the Parabolic Time/Price System in his 1978 book, *New Concepts in Technical Trading Systems*. This book also includes RSI, Average True Range (ATR), and the Directional Movement Concept (ADX). Despite being developed before the computer age, Wilder's indicators have stood the test of time and remain extremely popular.
+Wilder used his new book, New Concepts in Technical Trading Systems, to introduce the Parabolic Time/Price System in 1978. The book also discusses RSI, Average True Range, and the Directional Movement Concept (ADX). Although they were created before the computer age, Wilder's indicators function equally well today and have a high reputation.
 
-SAR follows price and can be considered a trend-following indicator. Once a downtrend reverses and starts up, SAR follows prices like a trailing stop. The stop continuously rises as long as the uptrend remains in place. In other words, SAR never decreases in an uptrend and continuously protects profits as prices advance. The indicator acts as a guard against the propensity to lower a stop-loss. Once price stops rising and reverses below SAR, a downtrend starts and SAR is above the price. SAR follows prices lower like a trailing stop. The stop continuously falls as long as the downtrend extends. Because SAR never rises in a downtrend, it continuously protects profits on short positions. (Source: Stockcharts.com)
+SAR follows the price, and can be considered a trend-following indicator. If a downtrend reverses and starts up, SAR follows the prices just like a trailing stop. This stop continues to rise so long as the uptrend remains intact, which means that the SAR never decreases in an uptrend and is always protecting profits as prices move forwards. Once the price stops rising and reverses below SAR, a downtrend starts and SAR is above the price. SAR follows prices lower like a trailing stop, as mentioned before. The stop continuously falls as long as the downtrend continues to exist. Due to the fact that SAR never rises in a downtrend, it always protects profits on short positions.
+
+
 
 ### Further information
 VTAD: <http://vtadwiki.vtad.de/index.php/Parabolic\_SAR>
@@ -3222,9 +3201,7 @@ Print("The current value for the Parabolic SAR is " + ParabolicSAR(0.02, 0.2, 0.
 
 ##Percentage Price Oscillator (PPO)
 ### Description
-The Percentage Price Oscillator shows the percentual difference between two moving averages.
-
-The PPO is classed as a momentum indicator and is similar in its construction to the MACD.
+The Percentage Price Oscillator displays the percentage difference between two moving averages. It is classed as a momentum indicator and is similar to the MACD in its construction.
 
 ### Interpretation
 The PPO can be used for divergence analysis. The divergences have the advantage of having a higher percentual hit rate. On the downside, they often appear too early and thus are hard for newer traders to assess properly.
@@ -3269,10 +3246,9 @@ Print("The current value for the PPO is " + PPO(12, 26, 9).Smoothed[0]);
 
 ##PercentEnvelopes
 ### Description
-The Percent Envelopes indicator draws an upper band and a lower band around a predetermined value with a distance of a given percentual value.
-The entry value can be a data series of your choosing (highs, lows, the closing price, another indicator etc.).
+The Percent Envelopes indicator draws an upper and a lower band around a predefined value with a distance of a specified percentage value. The trader can specify which data series the entry value should be (highs, lows, closing price, another indicator etc.).
 
-It is permitted to use an SMA as the entry value. The upper and the lower bands will then be displayed with a distance of 1.5%.
+It is possible to use an SMA as the entry value. In this case, the upper and lower bands will be displayed with a distance of 1.5%.
 
 ### Interpretation
 Similarly to the Bollinger Bands, the Percent Envelope indicator can be used to make buy or sell decisions and to determine whether the price is under- or overvalued.
@@ -3317,11 +3293,7 @@ Print("Value of the lower percent band is: " + PercentEnvelopes(3).LowerPercentB
 
 ##Pivot Points
 ### Description
-Pivot Points are based on the price zone approach developed by Dr. Bruce Gould, which has been refined over the years. While the price zones were originally calculated based on the price developments of the last 2-3 years, the practical concept of pivot points is based on the calculation of price zones in the daily chart, with the previous day’s periods as the basis. The aim is to define price levels that can be used as potential resistance (R1..R3) or support zones (S1..S3).
-The indicator can be calculated using the following methods:
-Classic, Floor, Woodie, Camarilla, Fibonacci. The calculatory steps are outlined below.
-The Classic and Floor methods are often wrongly named within literature, which is why in AgenaTrader you will find that the Classic method is labeled as “Floor” and vice versa.
-The indicator shows the pivot points for intraday charts, and the “ShowPrices” parameter allows you to display the price on the levels. The “DaysBack” parameter allows you to set the number of periods in the past that should be used for the calculation. The line coloring can be defined manually.
+This indicator, based on the price zone approach invented by Dr. Bruce Gould, has been honed over the years. In the beginning, the price zones were calculated using the price developments of the last 2-3 years. Nowadays, however, the practical concept of pivot points is taken from the calculation of price zones in the daily chart, using the previous day’s periods as the basis. The goal hereby is to determine price levels that one could use as potential resistance zones (R1..R3) or support zones (S1..S3). The following methods can be used to calculate the indicator: Classic, Floor, Woodie, Camarilla, Fibonacci. The Classic and Floor methods are often wrongly named within literature, which is why in AgenaTrader you will find that the Classic method is labeled as “Floor” and vice versa. The indicator displays the pivot points for intraday charts, and the parameter “ShowPrices” allows you to display the price on the levels. The parameter “DaysBack” allows you to set the number of periods in the past that should be used for the calculation. The line coloring can be defined manually
 
 ### Interpretation
 Traders prefer to sell above the resistance lines 1 & 2 (e.g. to build up short positions), and to start building up tactical long positions at the support lines.
@@ -3474,7 +3446,7 @@ s3 = pp - 0.764 \* Range
 
 ##Polarized Fractal Efficiency (PFE)
 ### Description
-Developed by Hans Hannula, the PFE is categorized as a momentum indicator, and uses the methods of fractal geometry and the chaos theory to establish the price efficiency of the movements.
+Hans Hannula developed the PFE, which is categorized as a momentum indicator. It uses the methods of fractal geometry and chaos theory to determine the price efficiency of the movements.
 
 ### Interpretation
 When the PFE zigzags around the zero line, no trend is present. If the PFE is equally formed and running above the zero line, the market is in an uptrend. The higher the value, the stronger the uptrend.
@@ -3508,7 +3480,7 @@ Print("The current value for the PFE is: " + PFE(20)[0]);
 
 ## Price Oscillator
 ### Description
-The Price Oscillator is an indicator based on the difference between two moving averages. The difference is accounted for in absolute values and not in percentages.
+This indicator is based on the difference between two moving averages. The difference is measured in absolute values, not in percentages.
 
 ### Usage
 ```cs
@@ -3545,7 +3517,7 @@ Print("The current value for the smooth is " + PriceOscillator(12, 26, 9).Smooth
 
 ##Range
 ### Description
-Range outputs the span/difference between the high and the low in ticks for each bar. Range is always larger than or equal to 0.
+Range delivers the span/difference between the high and low in ticks for each bar. The range is always greater than or equal to 0.
 
 ### Usage
 ```cs
@@ -3577,7 +3549,7 @@ Print("The current bar has a range of: " + High[0] - Low[0]);
 
 ##Range Indicator (RIND)
 ### Description
-The Range Indicator (RIND) was developed by Jack Weinberg and published in 1954 for the first time. The indicator compares the span (range) between the high and low on an intraday basis to the span (range) between the current closing price and the previous day’s closing price.
+Jack Weinberg created the Range Indicator (RIND), which was first published in 1954. The RIND compares the intraday span (range) between the high and low to the span (range) between the current closing price and the closing price from the day before.
 
 ### Interpretation
 When the span between the current close and the previous days close is bigger than the intraday span between high and low, the indicator will display a high value. This signals a potential trend change...
@@ -3616,8 +3588,8 @@ Print("The current value for the PFE is: " + RIND(3, 10)[0]);
 
 ##Rate of Change (ROC)
 ### Description
-The Rate of Change Indicator is a simple and effective momentum oscillator that measures the relative percentual change of the prices from one period to the next.
-The calculation compares the current price to the price of n periods ago.
+The Rate of Change Indicator is a simple yet effective momentum oscillator. It measures the relative percentage change of the prices from one period to the next. 
+The calculation looks at the current price and compares it to the price of n periods ago.
 
 ### Interpretation
 As long as the ROC is above 0, the uptrend is intact.
@@ -3656,7 +3628,7 @@ Print("The current ROC value is: " + ROC(14)[0]);
 
 ##Relative Spread Strength (RSS)
 ### Description
-The Relative Spread Strength Indicator was developed in 2006 and calculates the value of the RSI based on the difference of two SMAs.
+The Relative Spread Strength Indicator was developed in 2006. It uses the difference of two SMAs to calculates the value of the RSI.
 
 ### Interpretation
 Values above 70 and below 30 mean that the price has the potential of turning. Trades should not be entered into at these points. When it comes to extreme values, you might want to check smaller timeframes for clearer trading signals.
@@ -3702,7 +3674,7 @@ Print("The current RSS is " + RSS (10, 40, 5)[0]);
 
 ##Relative Strength Index (RSI)
 ### Description
-The RSI was developed by J. Welles Wilder and is one of the more popular and useful Momentum Oscillators. It compares the size of the most recent winnings with the size of the most recent losses. This means that it evaluates the relationships between the up and down closing prices. The information is depicted between 0 and 100.
+J. Welles Wilder, the creator of several indicators, also developed the RSI, which is one of the most popular, useful momentum oscillators. It compares the size of the most recent profits with the size of the most recent losses, which means that it assesses the relationships between the up and down closing prices. The values are shown between 0 and 100.
 
 ### Interpretation
 Traditionally, and according to Wilder, RSI is considered overbought when above 70 and oversold when below 30. Signals can also be generated by searching for divergences, failure swings and centerline crossovers. RSI can also be used to identify the general trend. These traditional levels can also be adjusted to better fit the security or analytical requirements. Raising overbought to 80 or lowering oversold to 20 will reduce the number of overbought/oversold readings. Short-term traders sometimes use 2-period RSI to look for overbought readings above 80 and oversold readings below 20.
@@ -3748,9 +3720,10 @@ Print("The current value for the AVG line is: " + RSI(14, 3).Avg[0]);
 
 ##Relative Strength Levy (RSL)
 ### Description
-The concept of the Relative Strength according to Levy is that the past developments contribute greatly to the strength that will be found in the future. Essentially, the current performance is compared to the performance of the past.
+The concept of the Relative Strength according to R.A. Levy is that the past developments play a very important role in the strength that will be seen in the future. The current performance is compared to the past performance.
 
-The calculation is carried out by taking the weekly closes (or daily closes) and dividing these by the arithmetic mean of the closing prices of the inspected period. The result is then balanced around the 10 marker, and a sorted list is created where the first place is filled with the value of the highest RSL.
+The calculation involves taking the weekly closes (or daily closes) and dividing them by the arithmetic mean of the closing prices for the examined period. The result is then balanced around the 10 marker, and an ordered list is created where the value of the highest RSL fills the first place.
+
 
 ### Usage
 ```cs
@@ -3781,8 +3754,7 @@ Print("The Relative Strength as calculated by Levy is " + RSL(27)[0]);
 
 ##Relative Volatility Index (RVI)
 ### Description
-The Relative Volatility Index (RVI) is similar to the RSI indicator. Developed by Donald Dorsey, it is similar to the RSI, but uses the standard deviation instead of the daily price span.
-The standard deviation over a period of 10 is used to determine the underlying volatility of the instrument. The RSI indicator is used on the results. The end result is shown on a scale of 1 to 100. Applying the RSI normalizes the results.
+The Relative Volatility Index (RVI) has many similarities to the RSI indicator. Donald Dorsey developed the RVI, which uses the standard deviation instead of the daily price span. To determine the underlying volatility of the instrument, the RVI uses the standard deviation over a period of 10. The RSI indicator is then used on the results, which normalizes them. What comes from this is displayed on a scale of 1 to 100.
 
 ### Interpretation
 Values above 50 assume an increase in volatility. Values below 50 imply a drop in volatility. Dorsey recommends using the indicator as a filter for other indicators.
@@ -3821,8 +3793,8 @@ Print("The current value for the RVI is: " + RVI(14)[0]);
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
 
 ### Description
-The Reversal Bars indicator assists you in finding reversal bars within the chart.
-The indicator has a plot and will output the value of 1 for long reversal bars, -1 for short reversal bars and 0 for none. You are able to make several changes such as colors, display arrows etc.
+The Reversal Bars indicator helps the trader find reversal bars within a chart. 
+The indicator has a plot, and outputs the value 1 for long reversal bars, -1 for short reversal bars and 0 when there are none present. Traders can make several adjustments such as colors, arrows that are shown, etc.
 
 ### Interpretation
 The interpretation of reversal bars is described in M. Voight’s book.
@@ -3872,9 +3844,9 @@ Print("The last bar is a long reversal bar.");
 
 ##R-Squared
 ### Description
-The R-Squared indicator is one of the indicators belonging to the linear regression series. R-Squared is the correlation coefficient that describes the quality of the linear regression line.
+This indicator belongs to the linear regression series. R-Squared is the correlation coefficient that specifies the quality of the linear regression line.
 
-R-Squared derives its name from the calculation, since the value is the square of the correlation coefficient, which in the discipline of mathematics is prefixed with the Greek letter Rho (P).
+It is the calculation that gives R-Squared its name – the value is the square of the correlation coefficient, which in mathematics is prefixed with the Greek letter Rho (P).
 
 See [*Linear Regression*], [*LinRegSlope*], [*LinRegIntercept*].
 
@@ -3915,7 +3887,7 @@ Print("The current value of R-Squared is: " + RSquared(8)[0]);
 
 ##StandardDeviation(StdDev)
 ### Description
-The Standard Deviation ![StandardDeviation(StdDev)](./media/image91.png)(StdDev) is a tool used in statistics and probability calculation, and is a measurement of the dispersion of the values of a random variable around its median value. The Standard Deviation is used to calculate many indicators, such as the Bollinger Bands etc.
+The Standard Deviation  (StdDev) is a tool used in statistics and probability calculation. It measures the dispersion of the values of a random variable around its median value. The Standard Deviation is used for the calculation of many indicators, such as, for example, the Bollinger Bands.
 
 ### Interpretation
 A lower standard deviation implies that the data points are located very close to their median value. The trading application assumes that prices will return to their median value.
@@ -3952,8 +3924,7 @@ Print("The current value for the standard deviation is: " + StdDev(14)[0]);
 
 ##Standard Error (StdError)
 ### Description
-The Standard Error Bands were developed by Jon Anderson, and are similar to the Bollinger Bands, except that their calculation is different. The bands are created by an upper and a lower boundary around a middle line, also known as the linear regression.
-The subtraction of two standard errors from the final value of the regression line results in the lower standard error band. Since individual closing prices can have a vast influence on the values of the bands, it is necessary to smooth the data using a Simple Moving Average.
+Jon Anderson came up with the Standard Error Bands, which are similar to the Bollinger Bands, but with a different calculation. An upper and a lower boundary around a middle line create the bands – this is also known as the linear regression. The lower standard error band results from the subtraction of two standard errors from the final value of the regression line. Because individual closing prices can have a huge influence on the values of the bands, it is necessary to use a Simple Moving Average to smooth the data.
 
 ### Interpretation
 One of the applications of the standard error bands is the tightening of the bands when prices rise/fall. If the bands tighten, it signifies that a trend is currently in place. A strong trend will continue to tighten the bands.
@@ -4114,7 +4085,7 @@ Print("The stochastic line %D is currently at: " + StochasticsFast(3, 14).D[0]);
 
 ##Stochastics RSI (StochRSI)
 ### Description
-This is a calculation of the stochastic based on of the RSI indicator.
+Stochastics RSI is a calculation of the stochastic based on the RSI indicator.
 
 ### Interpretation
 The indicator provides fast and precise extreme values/points in the price movements. The StochRSI can be used as a trend filter in higher timeframes as well as a tool for better entry timing.
@@ -4151,7 +4122,7 @@ Print("The current value for the StochRSI is: " + StochRSI(14)[0]);
 
 ##Summation (SUM)
 ### Description
-Summation is the sum over a specific number of periods.
+Summation is the sum over a predefined number of periods.
 
 ### Usage
 ```cs
@@ -4182,7 +4153,8 @@ Print(SUM(Volume,10)[0]);
 
 ##SuperTrend
 ### Description
-The SuperTrend indicator was developed by a French trader and is similar to the Parabolic Stop and Reverse System (Parabolic SAR). It is based on the median values of the candles and measures the volatility as a span between high and low, ignoring potential price gaps. Originating from a starting value, the indicator will continue to run in one direction until the market turns direction in combination with rising volatility. The indicator then changes its starting value to that of the counter-direction. The indicator is programmed so that only the trend direction can initiate a change. Dropping volatility and movements against a trend direction will lead to the indicator moving along horizontally.
+The SuperTrend indicator was invented by a French trader. SuperTrend is similar to the Parabolic Stop and Reverse System (Parabolic SAR), and is based on the median values of the candles. It measures volatility as a span between high and low, not taking potential price gaps into account. The indicator, which originates from a starting value, continues to proceed in one direction until the market changes direction, combined with rising volatility. This causes the indicator to adjust its starting value to match that of the counter-direction. The indicator is programmed in such a way that nothing but the trend direction can bring about a change. Dropping volatility combined with movements against the trend direction cause the indicator to move horizontally.
+
 
 ### Interpretation
 There are multiple interpretations and applications for the SuperTrend. Forex traders prefer to trade the crosses directly. This way, the system will continuously be inside the market and only needs to be complemented by a stop and further trading logic settings.
@@ -4253,7 +4225,7 @@ if (Close[0] < SuperTrend(SuperTrendMode.ATR, 14, 2.618, MovingAverageType.HMA, 
 
 ##SupportResistanceAreas
 ### Description
-The Support Resistance Areas indicator draws support and resistance areas for the chart. There are 4 types of supports and resistances available, all distinguished by varying colors.
+This indicator draws support and resistance areas in the chart. There are 4 different types of possible supports and resistances, which are differentiated by various colors.
 
 Support due to a lower high (ColorLowerHigh)
 
@@ -4285,8 +4257,7 @@ Once broken, these areas tend to reverse their function, meaning that a broken s
 
 ##Swing
 ### Description
-The swing indicator draws a line at the swing highs or swing lows based on the strength of these points. The strength is determined by the number of bars to the left and right of the extreme point.
-Methods for these indicators can be used for other scripts.
+Based on the strength of the swing highs or the swing lows, the swing indicator draws a line at these points. The number of bars to the left and right of the extreme point is the determining factor for the strength. Methods for these indicators can also be implemented for other scripts.
 
 ### Interpretation
 The methods for these indicators can be used in scripts to determine the last extreme point and its corresponding price value. The highs and lows of these points may then be used as entry, stop or target markers.
@@ -4332,7 +4303,7 @@ Print("The last swing high was at " + High[barsAgo]);
 
 ##Time-Series-Forecast (TSF)
 ### Description
-The Time-Series-Forecast is similar to a moving average. The trend is established according to a regression equation using the smallest square formula. The aim is to extrapolate the future price movements based on the currently existing data.
+The Time-Series-Forecast is quite similar to a moving average. Here, the trend is established based on a regression equation that uses the smallest square formula. The goal of the TSF is to anticipate future price movements with the help of currently existing data.
 
 ### Interpretation
 The TSF reacts faster than the moving averages. These always have time delays when depicting the pre-existing trends. The TSF formula never allows the distance to the current price to become too large, thus permitting sharper trade reversal recognition.
@@ -4374,7 +4345,7 @@ Print("The current value for the TSF is: " + TSF(3, 14)[0]);
 ##Tools
 ##Constant Lines
 ### Description
-The Constant Lines tool draws up to four freely configurable horizontal lines within the chart. It is generally used to mark specific price levels in order to keep track of them.
+The Constant Lines tool can draw a maximum of four freely configurable horizontal lines within a chart. In general, it is used to label certain price levels in order to keep an eye on them.
 
 ### Usage
 ```cs
@@ -4396,9 +4367,9 @@ When using this method with an index (e.g. **ConstantLines**(1,2,3,4)\[**int** b
 
 ##CurrentDayOHL
 ### Description
-This function outputs the values for the open, high and low of the current day (session).
+This function delivers the values for the open, high and low of the current day i.e. session.
 
-CurrentDayOHL is designed to be used with intraday data series.
+CurrentDayOHL is intended for use with intraday data series.
 
 See [*PriorDayOHLC*], [*DayLines*].
 
@@ -4438,11 +4409,11 @@ Print("The low of the current session is at " + CurrentDayOHL().CurrentLow[0]);
 
 ##Daily Performance
 ### Description
-The Daily Performance indicator provides information about the changes in the price movements based on either a close in the past or an open for the current day compared to the current price level.
+This indicator delivers information concerning the changes in the price movements based on either a past close or a current-day open in comparison to the current price level.
 
-The performance can be displayed in points, ticks, percent, or a currency value.
+The Daily Performance can be displayed in points, ticks, percent, or a currency value.
 
-Colors and other settings can be freely selected.
+Colors and other settings can be freely adjusted.
 
 See [*Momentum*], [*ROC*].
 
@@ -4506,9 +4477,8 @@ DailyPerformance(DailyPerformanceReference.PreviousClose, DailyPerformanceCalcul
 
 ##DayLines
 ### Description
-The DayLines indicator draws lines for yesterday’s high, low, and close, as well as the current day’s open. These lines often provide a reaction to the market.
-
-Each line can be turned on/off, and the colors and line strengths are freely configurable.
+The DayLines indicator draws lines for the previous day’s high, low, and close. It also draws a line for the current day’s open. These lines often show a reaction to the market. 
+Each line can be turned on or off, and the colors and line strengths can be freely set.
 
 See [*CurrentDayOHL*], [*PriorDayOHLC*].
 
@@ -4517,7 +4487,7 @@ See [*CurrentDayOHL*], [*PriorDayOHLC*].
 
 ##DayLinesAdv
 ### Description
-The DayLinesAdv draws horizontal lines for yesterday’s high, low, and close, as well as the current day’s open.
+DayLinesAdv draws horizontal lines for the previous day’s high, low, and close, as well as the current day’s open.
 
 [*CurrentDayOHL*], [*PriorDayOHLC*].
 
@@ -4550,13 +4520,13 @@ If set to “true”, the highs and lows that have not yet been „breached“ b
 
 ##GetDayBar
 ### Description
-The function GetDayBar() provides all values (open, high, low, close, time, median, typical, volume, and weighted) for a specific day (session) in the past or for the current session.
-GetDayBar() is not recommended for use inside the chart. DayLinesAdv should be used for this purpose instead.
-GetDayBar is primarily used as a high-performance replacement for [*PriorDayOHLC()*][*PriorDayOHLC*].
+The function GetDayBar() outputs all values (open, high, low, close, time, median, typical, volume, and weighted) for a specified past or current day i.e. session. GetDayBar() is not intended to be used inside the chart. For this purpose, DayLinesAdv should be used instead. GetDayBar is mainly used as a high-performance replacement for [*PriorDayOHLC()*][*PriorDayOHLC*].
 
-Some data feed providers also offer historical data. If this is the case, we recommend that you use GetDayBar. If intraday data is offered, it is still ok to use *[PriorDayOHLC()][*PriorDayOHLC*].*
+Several data feed providers also offer historical data, in which case we recommend that you use GetDayBar. If it is intraday data that is offered, it still works adequately to use [*PriorDayOHLC()*][*PriorDayOHLC*].
 
-If the output data varies, the primary culprit is generally assumed to be the difference between Session Begin and Session End.
+If the outputted data varies, the main cause is normally assumed to be the difference between Session Begin and Session End.
+
+
 
 ### Parameters
 daysAgo Number of days in the past
@@ -4596,15 +4566,14 @@ The attribute *TimeFrameRequirements* must also always be used for the class doi
 
 ##Info
 ### Description
-Info is not an indicator in the classic sense, but can be considered as more of a tool.
-The background of the chart may (depending on the underlying instrument) display additional information.
+Info is not an indicator in the classic sense of the word, but is actually more similar to a tool. Depending on the underlying instrument, the background of the chart may show additional information.
 
 ### Visualization
 ![GetDayBar](./media/image112.png)
 
 ##Maximum (MAX)
 ### Description
-Max (MAX) outputs the highest value for a specified number of periods.
+Max (MAX) delivers the highest value for a predefined number of periods.
 
 ### Usage
 ```cs
@@ -4636,7 +4605,7 @@ Print("The highest value of the last 20 periods is " + MAX(High, 20)[0]);
 
 ##Minimum (MIN)
 ### Description
-Minimum (MIN) provides the smallest value for a specified number of periods.
+Minimum (MIN) outputs the lowest value for a predefined number of periods.
 
 ### Usage
 ```cs
@@ -4667,11 +4636,9 @@ Print("The lowest value of the last 20 periods is " + MIN(Low, 20)[0]);
 
 ##MTFBoxes
 ### Description
-MTFBoxes draws a colored area behind the bars that represent a candle of a higher timeframe.
+What MTFBoxes does is to draw a colored area behind the bars that signify a candle from a higher timeframe. This therefore makes it possible to depict an hourly candle inside a 5-minute chart. The area would contain all 5-minute bars that are located within said hourly candle.
 
-This allows you to draw an hourly candle inside a 5-minute chart. The area contains all 5-minute bars located within the hourly candle.
-
-If the candle of the higher timeframe is rising, the area turns greener. A Doji will be colored in grey.
+The area turns greener if the candle of the higher timeframe is rising. A Doji would be shown in grey.
 
 ### Parameters
 TimeFrame Timeframe of the “virtual” candle (second, minute, hour, day, week, month)
@@ -4682,22 +4649,19 @@ TimeFrameValue Value of the timeframe (number)
 
 ##PriceLine
 ### Description
-PriceLine is considered as more of a tool rather than an indicator.
-
-A horizontal line is placed within the chart on top of the current market price.
-
-The colors and line widths can be freely modified.
+PriceLine is not so much an indicator, but more of a tool. 
+It places a horizontal line on top of the current market price within the chart. 
+The colors and line widths are freely configurable.
 
 ### Visualization
 ![PriceLine](./media/image116.png)
 
 ##PriorDayOHLC
 ### Description
-The function PriorDayOHLC displays the values for the previous day’s (or the previous session’s) open, high, low, and close.
-PriorDayOHLC is intended for use with the intraday data series.
+PriorDayOHLC shows the values for yesterday’s (i.e. the previous session’s) open, high, low, and close. PriorDayOHLC works best when used together with the intraday data series.
 
 **PriorDayOHLCext**
-For people in different time zones, PriorDayOHLCext allows you to set the IncludeWeekend parameter to “true” so that all data originating from a Saturday or Sunday is treated as if it belongs to the previous Friday’s session.
+PriorDayOHLCext For people in different time zones, PriorDayOHLCext makes it possible to set the IncludeWeekend parameter to “true”, which is helpful because all data originating from a Saturday or Sunday is treated as if it comes from the previous Friday’s session.
 
 See [*CurrentDayOHL*], [*DayLines*].
 
@@ -4757,16 +4721,14 @@ See [*PriorDayOHLCext*].
 
 ##ShowBidAsk
 ### Description
-The indicator ShowBidAsk shows the current bid and ask prices as well as the corresponding volume within the lower half of the chart. Changes in volume are also displayed even if a trade has not occurred.
+The ShowBidAsk indicator displays the current bid and ask prices as well as the corresponding volume within the lower part of the chart. It also shows changes in volume even if a trade has not occurred.
 
 ### Visualization
 ![ShowBidAsk](./media/image119.png)
 
 ##TickCounter
 ### Description
-TickCounter provides information about the current number of ticks contained within the bar.
-The indicator can count starting from 0, but can also count down from a predefined number to 0. The value can be displayed either as absolute or a percentage.
-The indicator will only work with candle charts in which the bars are constructed based on a fixed number of ticks.
+TickCounter provides information regarding the current number of ticks that are contained within the bar. The indicator can not only count starting from 0, but can also be set to count from a specified number down to 0. TickCounter can display the value either as absolute or as a percentage. It only works with candle charts in which the bars are established based on a fixed number of ticks.
 
 When programming your own scripts, please use Bars, TickCount or Bars, PercentComplete.
 
@@ -4775,8 +4737,8 @@ When programming your own scripts, please use Bars, TickCount or Bars, PercentCo
 
 ##True Strength Index (TSI)
 ### Description
-The True Strength Index (TSI) is a momentum indicator and is used as an indicator for the trend direction and the display of overbought/oversold situations.
-Typically, momentum oscillators are early/preemptive indicators of price changes, and moving averages are characteristically known to lag behind the price. The TSI combines the advantages of both indicator groups.
+The True Strength Index (TSI) is a momentum indicator. It is used as an indicator for trend direction and for displaying overbought or oversold conditions.
+As a rule, momentum oscillators preemptively indicate price changes, whereas moving averages generally lag behind the price. The TSI brings together the advantages of these two indicator groups.
 
 ### Interpretation
 The TSI line moves between 100 and -100. Most values are between +25 and -25. These trigger lines can be used to anticipate overbought or oversold situations. A rising TSI signals an uptrend, while falling TSI suggests a downtrend.
@@ -4815,7 +4777,7 @@ Print("The current value for the TSI is " + TSI(3, 14)[0]);
 
 ##Ultimate Oscillator
 ### Description
-The Ultimate Oscillator was developed by Larry Williams and published in 1985 for the first time. The indicator is calculated using the weighted sum of three oscillators in various timeframes. The three timeframes represent short-term, middle and long-term market cycles. The typical period lengths are 7, 14 and 28. The value of the indicator fluctuates between 0 and 100. Values above 70 are overbought, and values below 30 are oversold.
+Larry Williams developed the Ultimate Oscillator, which was first published in 1985. The Ultimate Oscillator is calculated by means of taking the weighted sum of three oscillators in different timeframes. These three timeframes are the short-term, middle and long-term market cycles. The typical period lengths used are 7, 14 and 28, and the value of the indicator moves between 0 and 100. Values above 70 signify an overbought situation, and values below 30 show that it is oversold.
 
 ### Interpretation
 Williams defined the following criteria for a buy signal:
@@ -4863,7 +4825,8 @@ Print("The current value for the Ultimate Oscillator is " + UltimateOscillator(7
 
 ##Volume (VOL)
 ### Description
-This is the volume for the shares, futures, ETFs etc. traded within a certain time period.
+This is the volume for the shares, futures, ETFs and so on that are traded within a specified time period.
+
 
 ### Further information
 <http://de.wikipedia.org/wiki/Volumenanalyse>
@@ -4895,10 +4858,10 @@ Print("The current volume is " + VOL()[0]);
 
 ##Volume Moving Average (VOLMA)
 ### Description
-The Volume Moving Average is calculated by applying an exponential moving average to the respective volume of each individual period, i.e. their EMA (volume).
+The VOLMA calculation is carried out by applying an exponential moving average to the respective volume of each period, that is to say its EMA (volume).
 
 **Caution:**
-In literature, the abbreviation for the Variable Moving Average (VMA) is often confused with the Volume Moving Average (VOLMA).
+In trading literature, the Volume Moving Average is often confused with the abbreviation for the Variable Moving Average (VMA).
 
 ### Interpretation
 The VOLMA indicator helps you to find and assess the relative volume of a period.
@@ -4945,7 +4908,7 @@ Print("The current VOLMA value is " + VOLMA(14)[0]);
 
 ##Volume Oscillator
 ### Description
-The Volume Oscillator uses the difference between the moving averages based on the trading volume. The result is similar to the MACD or any other oscillator where moving averages are applied.
+The Volume Oscillator makes use of the difference between the moving averages based on the trading volume, with a similar result to the MACD or to any other oscillator in which moving averages are used for calculation.
 
 ### Interpretation
 The Volume Oscillator is used to determine the trend strength. If developments in the price of the share are accompanied by disproportionate volume oscillator values, this should be regarded as highly relevant. In this way, the indicator can be used to filter out false signals.
@@ -4982,9 +4945,9 @@ Print("The current value for the Volume Oscillator is: " + VolumeOszillator(12,2
 
 ##Volume Profile
 ### Description
-The VolumeProfile indicator shows the real-time volume profile in the form of a vertical histogram on the chart. Each bar inside the histogram represents the cumulative traded volume for a specific price level. The bar at which the calculations have started are marked with a “\#” symbol.
-The histogram bars have different coloring: executions at or above the ask are interpreted as buys and are colored in green. Trades at or below the bid are interpreted as sells and are colored in red. Neutral executions are colored in grey.
-The indicator only works with a real-time data feed. After you make changes in the properties window, the indicator will be restarted and all calculated values up to this point will be lost.
+The VolumeProfile indicator displays the real-time volume profile as a vertical histogram on the chart. In this histogram, every bar depicts the cumulative traded volume for a certain price level. The starting bar for the calculations is labeled with a “#”. 
+These bars inside the histogram have various colors: green indicates executions at or above the ask, which are interpreted as buys. Red means trades at or below the bid, which are interpreted as sells. Grey signifies neutral executions. 
+It is important to note that the Volume Profile indicator only works together with a real-time data feed. After changes have been made in the properties window, the indicator is restarted and all values that have been calculated up to this point are lost.
 
 See: [*VolumeZones*]
 
@@ -4996,11 +4959,7 @@ Prices with especially high trading volume will have a more satiated accumulatio
 
 ##Volume Rate of Change (VROC)
 ### Description
-The Volume Rate of Change (VROC) is identical to the ROC indicator, with the primary difference being that instead of price data, the volume data (VOL) is used. In addition, a smoothing component is applied.
-Interpretation
-
-Rising prices are accompanied by a rising VROC within the positive area.
-A shrinking VROC during rising prices may hint to a trend change about to occur.
+The Volume Rate of Change (VROC) is almost exactly the same as the ROC indicator, with the exception that instead of price data, volume data (VOL) is used. A smoothing component is also applied.
 
 ### Further information
 <http://www.shareholder24.de/boersensoftware-wiki/pages/viewpage.action?pageId=9207904>
@@ -5036,10 +4995,7 @@ Print("The current value for the Volume ROC is: " + VROC(14, 3)[0]);
 
 ##VolumeUpDown
 ### Description
-This indicator is a variant of the volume indicator. The only difference is that the volume bars are colored depending on whether the price movement creates an up bar or a down bar.
-A rising bar displays the volume in green.
-A falling bar displays the volume in red.
-A Doji (open = close) displays the volume in blue.
+This indicator is a variation of the volume indicator, with the slight difference that the volume bars are shown in different colors depending on whether the price movement forms an up or down bar. An up (rising) bar shows the volume in green, while a down (falling) bar shows the volume in red. A Doji, where open = close, shows the volume in blue.
 
 ### Usage
 ```cs
@@ -5068,14 +5024,13 @@ Print("The current volume is " + VolumeUpDown()[0]);
 
 ##Volume Zones
 ### Description
-The Volume Zones indicator draws a histogram on the left side of the chart containing the historical volume.
-The length of the bars represents the cumulative volume. The price series (open, high, low etc.) can be configured using the properties dialog box.
-A rising bar (close above open) colors the bar green. Falling bars are colored in red.
-The indicator is intended for use with historical data only. To see volume changes in real-time, please consider using the VolumeProfile.
+This indicator draws a histogram on the left side of the chart. This histogram contains the historical volume, and inside the histogram, the length of the bars shows the cumulative volume. Traders can configure the price series (open, high, low etc.) with the help of the properties dialog box. 
+An up bar (where the close is above the open) shows the bar in green, and falling bars are displayed in red. The indicator is only designed to be used with historical data. In order to view volume changes in real-time, it is wise to consider using the VolumeProfile.
+
 
 ##Williams %R
 ### Description
-Developed by Larry Williams, Williams %R is a momentum indicator that is the inverse of the Fast [Stochastic Oscillator]. Also referred to as %R, Williams %R reflects the level of the close relative to the highest high for the look-back period. In contrast, the Stochastic Oscillator reflects the level of the close relative to the lowest low. %R corrects for the inversion by multiplying the raw value by -100. As a result, the Fast Stochastic Oscillator and Williams %R produce the exact same lines, only the scaling is different. Williams %R oscillates between 0 to -100. Readings from 0 to -20 are considered overbought. Readings from -80 to -100 are considered oversold. Unsurprisingly, signals derived from the Stochastic Oscillator are also applicable to Williams %R. (Source: Stockcharts.com)
+Larry Williams developed the Williams %R. It is a momentum indicator, and is the inverse of the Fast [Stochastic Oscillator]. Williams %R, which is also called simply %R, reflects the level of the close relative to the highest high for the look-back period. The Stochastic Oscillator, on the other hand, reflects the level of the close relative to the lowest low. %R multiplies the raw value by -100 as a means of correcting for the inversion. This means that the Fast Stochastic Oscillator and Williams %R actually produce the exact same lines, with different scaling. The Williams %R fluctuates between 0 and -100. Values between 0 to -20 are deemed overbought, and values from -80 to -100 are seen as oversold. Naturally, signals taken from the Stochastic Oscillator can also be applied to Williams %R.
 
 ### Interpretation
 As with the Stochastic Oscillator, Williams %R reflects the level of the close relative to the high-low range over a given period of time. Assume that the highest high equals 110, the lowest low equals 100 and the close equals 108. The high-low range is 10 (110 - 100), which is the denominator in the %R formula. The highest high less the close equals 2 (110 - 108), which is the numerator. 2 divided by 10 equals 0.20. Multiply this number by -100 to get -20 for %R. Williams %R would equal -30 if the close was 103 (0.30 x -100).
@@ -5118,7 +5073,7 @@ WilliamsR(IDataSeries input, int period)[int barsAgo]
 
 ##ZigZag
 ### Description
-The ZigZag indicator finds extreme points for various timeframes. These are found using threshold values that you can define yourself. The threshold values define the extent to which the market direction must change before the ZigZag line changes its orientation and creates another extreme point.
+The ZigZag indicator searched for extreme points in different timeframes. It finds the extreme points by using threshold values that traders themselves define. These specified threshold values determine the extent to which the market direction needs to change before the ZigZag line alters its orientation and forms a further extreme point.
 
 ### Interpretation
 The previous extreme values (local highs or lows) are ideally suited for either entries or stop targets.

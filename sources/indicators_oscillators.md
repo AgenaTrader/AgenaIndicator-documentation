@@ -5105,10 +5105,9 @@ A return value of 0 indicates that no high or low point has been found yet.
 |                |                                                                                                                    |
 |----------------|--------------------------------------------------------------------------------------------------------------------|
 | input          | Input data series for the indicator                                                                                |
-| deviationType  | The change in points or percent                                                                                    
-                  DeviationType.Points and                                                                                            
-                  DeviationType.Percent                                                                                               |
+| deviationType  | The change in points or percent                                                                                    |
 | deviationValue | Value of the deviation                                                                                             |
+| label          | Defines labels (ChangeInPrice, ChangeInPricePercent,    ChangeInTicks, EndPrice, NumberOfBars, VolumeAverage, VolumeDifference)                                                                                                                   |
 | useHighLow     | Defines whether the high/low of a bar will be used for extreme values or if you want to use closing prices instead |
 
 ### Visualization

@@ -90,7 +90,7 @@ Create a commit and send all of your changes into the master repository and sync
 ### Build
 Now we are ready to to execute the following shell script to *build the website* from our markdown files.
 ```bash
-./buildanddeploy.sh -b
+./buildanddeploy.sh -build
 ```
 
 ### Commit build
@@ -100,7 +100,7 @@ Create a commit, send all of your changes into the master repository and sync wi
 ### Deploy
 If the build process has finished, we can start to *deploy the website* to the gh-branch of our remote repository.
 ```bash
-./buildanddeploy.sh -d
+./buildanddeploy.sh -deploy
 ```
 
 Congrats! We are done. All changes are now online on GitHub Pages.

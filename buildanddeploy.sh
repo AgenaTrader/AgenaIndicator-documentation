@@ -8,10 +8,15 @@ if [ "$1" = "" ] ; then
 fi
 
 # echo "$1"
-if [ "$1" = "-b" ] ;
+if [ "$1" = "-build" ] ;
 then
   # echo "let's build"
+  # build new static sites via mkdocs
+  mkdocs build --clean
 
+  exit
+elif [ "$1" = "-books" ] ;
+then
   # variables
   TODAY=$(date)
 
@@ -21,18 +26,14 @@ then
   cd ..
 
   ## build epub ebook with pandoc
-  # cd sources
-  # pandoc -S --epub-cover-image=../documents/epub_cover.png --epub-stylesheet=../documents/epub_styles.css -o ../documents/agenaindicator-documentation.epub ../documents/epub_title.txt index.md data.md indicators_oscillators.md
-  # cd ..
+  cd sources
+  pandoc -S --epub-cover-image=../documents/epub_cover.png --epub-stylesheet=../documents/epub_styles.css -o ../documents/agenaindicator-documentation.epub ../documents/epub_title.txt index.md data.md indicators_oscillators.md
+  cd ..
 
   # build word file with pandoc
-  # pandoc -S -o ../documents/agenaindicator-documentation.docx ../documents/epub_title.txt index.md data.md indicators_oscillators.md
-
-  # build new static sites via mkdocs
-  mkdocs build --clean
-
+  pandoc -S -o ../documents/agenaindicator-documentation.docx ../documents/epub_title.txt index.md data.md indicators_oscillators.md
   exit
-elif [ "$1" = "-d" ] ;
+elif [ "$1" = "-deploy" ] ;
 then
   # echo "let's deploy"
 

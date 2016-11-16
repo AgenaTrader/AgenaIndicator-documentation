@@ -2127,6 +2127,16 @@ The term Prom Queen is also taken from the book series “*Der Händler*”. A 5
 
 Market phases 1, 2, 6, and 9 are not relevant for successful trading.
 
+### MarketPhases Pro Description
+
+**Phase5Level** 
+
+How far the price correction must be to become a valid market phase 5.
+
+**Phase4Level**  
+
+How far the price correction must be to become a valid market phase 4.
+
 ### Depiction in the chart
 No parameters are required.
 

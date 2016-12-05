@@ -4443,7 +4443,7 @@ When using this method with an index (e.g. **DailyPerformance**(...)\[**int** ba
 input Input data series for the indicator
 
 reference Possible values are:
-- DailyPerformanceReference.TodaysOpen
+- DailyPerformanceReference.Open
 - DailyPerformanceReference.PreviousClose
 
 mode Possible values are:
@@ -4460,7 +4460,7 @@ daysAgo Number of days in the past
 ### Example
 ```cs
 //How many ticks are between today’s open and the current price?
-DailyPerformance(DailyPerformanceReference.TodaysOpen, DailyPerformanceCalculationMode.Ticks, 1)[0]
+DailyPerformance(DailyPerformanceReference.Open, DailyPerformanceCalculationMode.Ticks, 1)[0]
 
 //By how much percent did the stock rise/fall since the last closing price?
 DailyPerformance(DailyPerformanceReference.PreviousClose, DailyPerformanceCalculationMode.Percent, 1)[0]

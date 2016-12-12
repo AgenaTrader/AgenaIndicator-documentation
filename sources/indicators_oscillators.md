@@ -3514,6 +3514,33 @@ Print("The current value for the PPO is " + PriceOscillator(12, 26, 9)[0]);
 //Output for the value of the smooth price oscillator
 Print("The current value for the smooth is " + PriceOscillator(12, 26, 9).Smoothed[0]);
 ```
+## Rainbow
+### Description
+The rainbow indicator is represented by the set of the moving average indicator lines. Each of these lines is placed closer or further from the chart depending on the time period taken into the account for calculation of moving averages.
+
+### Introduction
+The rainbow indicator has some advantages comparing to the single moving average lines because it shows better, where the trend reversal occurs. When divergence in all lines is substantial - this is a signal of a strong up- or downtrend movement. 
+By default red lines are the closest to the chart and represent the moving average line with the smallest time period.  Yellow lines indicate short-term trends. Blue display the area for short-term traders’ activity. Green is typify for medium-term trends. Pink lines can be usefull for traders who hold positions for a long period.
+
+### Return value
+Colors:
+
+Yellow ЕМА: 2,3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15;
+Blue ЕМА: 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41;
+Green ЕМА: 44, 47, 50, 53, 56, 59, 62, 65, 68, 71, 74;
+Red ЕМА: 78, 82, 86, 90, 94, 98, 102, 106, 110, 114, 118, 122;
+Pink ЕМА: 125, 130, 135, 140, 145, 150, 155, 160, 165, 170, 175, 180, 185, 190, 195, 200.
+
+### Parameters
+|                |                                                                                                                    |
+|----------------|--------------------------------------------------------------------------------------------------------------------|
+| MA Type        | Allows to select between the types of the moving average lines that shape a rainbow indicator. Default setting is the EMA (exponential moving average) but it is possible to choose a simple (SMA), hull (HMA) and weighted (WMA) moving average lines  |
+| Low MA Period  |  Shows the smallest amount of time periods for which the moving average will be calculated. For example, the setting “2” for the daily chart indicates the two latest daily closing prices.                                                                | 
+| High MA Period | Shows the largest amount of time periods for which the moving average will be calculated.                          |
+| Step           | Defines the amount of moving average lines shown on a chart within the rainbow indicator. The smaller is this number the larger amount of lines will be plotted. In our example, step 2 would mean that the indicator will contain 80 EMA lines: EMA(2), EMA(4), EMA(6) and so on.                                                                                                             |
+
+### Visualisation
+
 
 ##Range
 ### Description

@@ -19,10 +19,10 @@ We recommend the text editor **Atom**. [You can download it here.](https://atom.
 
 ### Installation
 The following things are prerequisites:
-* Install [GitHub Client](https://desktop.github.com), create a GitHub user and checkout the repository
-* Install [Python](https://www.python.org/downloads/)
-* Install Python package [mkdocs](http://www.mkdocs.org) using pip
-* Install [Pandoc](http://pandoc.org/installing.html)
+*   Install [GitHub Client](https://desktop.github.com), create a GitHub user and checkout the repository
+*   Install [Python](https://www.python.org/downloads/)
+*   Install Python package [mkdocs](http://www.mkdocs.org) using pip
+*   Install [Pandoc](http://pandoc.org/installing.html)
 
 After the installation of all packages we are able to start to parse our data and to deploy our site.
 
@@ -83,6 +83,18 @@ sed -i .bak -e 's%./media/%../media/%g' site/data/index.html  && rm site/data/in
 
 ## Short version on how to deploy
 We have already created a branch called *gh-pages* and all data from this branch will be displayed on GitHub Pages.
+
+### Check mkdocs version
+The latest deploy of this documentation was created with **mkdocs version 0.16.0 (2016-11-04)**.
+Please use the following command to check your mkdocs version.
+```bash
+mkdocs --version
+```
+
+If you are running an older mkdocs version, please use the following command to update to a newer version.
+```bash
+pip install --upgrade mkdocs
+```
 
 ### Commit changes
 Create a commit and send all of your changes into the master repository and sync with your remote repository.

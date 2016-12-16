@@ -7,6 +7,7 @@ use_directory_urls: true
 repo_url: https://github.com/AgenaTrader/AgenaIndicator-documentation
 site_url: https://agenatrader.github.io/AgenaIndicator-documentation/index.html
 strict: true
+google_analytics: ['UA-74646070-1', 'agenatrader.github.io']
 pages:
     - 'Lets start': 'index.md'
     - 'Data': 'data.md'

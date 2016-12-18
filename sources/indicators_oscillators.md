@@ -20,14 +20,12 @@ The Accumulation Distribution Line (ADL) indicator was developed by Marc Chaikin
 ### Interpretation
 There are two interpretations of the ADL:
 
-Confirmation of a trend or
-
-1.  The depiction of [*divergence*]
+Confirmation of a trend or the depiction of *divergence*.
 
 If the ADL is rising in an uptrend, then money is flowing in the direction of the rising prices, thus the uptrend is confirmed. If the ADL is falling in a downward trend, money is being taken out of the stock, thus confirming the downtrend.
 
 ### Further information
-<http://vtadwiki.vtad.de/index.php/Accumulation\_Distribution\_Linie>
+[vtad wiki ADL](http://vtadwiki.vtad.de/index.php/Accumulation_Distribution_Linie)
 
 ### Usage
 ```cs
@@ -348,10 +346,10 @@ Upper band = middle band + 2 standard deviations
 Middle band = average of 20 periods
 Lower band = middle period – 2 standard deviations
 
-More information can be found here: [*BollingerMTF*], [*Bollinger Percent %B*], [*Bollinger Bands Width*]
+More information can be found here: [*BollingerMTF*](#bollingermtf), [*Bollinger Percent %B*](#bollingerpercentb), [*Bollinger Bands Width*](#bollingerbandswidth)
 
 ### Further information
-VTAD: <http://vtadwiki.vtad.de/index.php/Bollinger\_B%C3%A4nder>
+[vtat](http://vtadwiki.vtad.de/index.php/Bollinger_Bänder)
 
 Book "Technische Indikatoren - simplified" by Oliver Paesler (German only)
 
@@ -396,7 +394,7 @@ Print("Value of the lower band: " + Bollinger(2, 20).Lower[0]);
 ### Description
 Bollinger %b is an important indicator that is derived from John Bollinger's original Bollinger Bands indicator. %b represents the location of the most recent close price in relation to the Bollinger Bands as well as to what degree it is above or below any of the bands. The Bollinger Percent B equation can be constructed in the following way: Percent B = ((Close - Bollinger Lower Band) / (Bollinger Upper Band - Bollinger Lower Band)) * 100. If the close price is the same as the upper Bollinger Band, %b will be 100 (percent). If the close price is the same as the lower Bollinger Band, %b will be 0.0 (percent). A %b value of 50 indicates that the close price is equal to the middle Bollinger Band. What is more, readings above 100 and below 0 show that the close price is outside of the Bollinger Bands by a corresponding percentage of the Bollinger Bandwidth. A %b value of 125 means that the close price is above the upper Bollinger Band by 25% of the Bandwidth, while a %b value of -25 means that the close price is below the lower Bollinger Band by 25% of the Bandwidth.
 
-See [*Bollinger Bands*], [*BBWidth*][*Bollinger Bands Width*]
+See [*Bollinger Bands*](#bollingerbands), [*BBWidth*](#bbwidth)
 
 **An additional application: normalizing indicators**
 
@@ -404,10 +402,10 @@ Bollinger bands, and therefore the %b indicator, can be applied not only to the 
 
 (Sources: Oliver Paesler: "Technische Indikatoren - simplified" and John Bollinger: "Bollinger Bänder")
 
-(Source: [*tradesignalonline*])
+(Source: *tradesignalonline*)
 
 ### Further information
-VTAD: <http://vtadwiki.vtad.de/index.php/Bollinger\_B%C3%A4nder>
+[vtat](http://vtadwiki.vtad.de/index.php/Bollinger_Bänder)
 
 Book "Technische Indikatoren - simplified" by Oliver Paesler (German only)
 
@@ -449,7 +447,7 @@ The Band Width measures the percentage difference between the upper and the lowe
 John Bollinger uses the Band Width to recognize rising and falling trends. Most trends have their origins within sideway market movements that generally have a low volatility. If a breakout is accompanied by a sudden rise in the Band Width, this means that there is definite support for the move.
 
 ### Further information
-VTAD: <http://vtadwiki.vtad.de/index.php/Bollinger\_B%C3%A4nder>
+[vtat](http://vtadwiki.vtad.de/index.php/Bollinger_Bänder)
 
 Book "Technische Indikatoren - simplified" by Oliver Paesler (German only)
 
@@ -514,7 +512,7 @@ This is a real-time indicator. It will only work on and with real-time data and 
 
 **When the properties dialog for the indicator is open and changes are made, then the indicator must be reloaded. Doing so will delete all previously accumulated data.**
 
-See [*BuySellVolume*].
+See [*BuySellVolume*](buysellvolume).
 
 ### Usage
 ```cs
@@ -537,8 +535,8 @@ When using this method with an index (e.g. **BuySellPressure**().BuyPressure\[**
 
 **Caution:**
 **If BuySellPressure is used with EoD data, the value 50 will always be outputted.**
-- BuySellPressure().SellPressure\[0\] = 50
-- BuySellPressure().SellPressure\[0\] = 50
+-   BuySellPressure().SellPressure\[0\] = 50
+-   BuySellPressure().SellPressure\[0\] = 50
 
 ### Parameters
 input Input data series for the indicator
@@ -569,7 +567,7 @@ This indicator shows us the current buy or sell pressure based on the volume. Fo
 
 **Caution: This is a real-time indicator and will not work with historical data.**
 
-Similar conditions as with the [*BuySellPressure*] apply.
+Similar conditions as with the [*BuySellPressure()*](#buysellpressure) apply.
 
 ### Usage
 ```cs
@@ -909,7 +907,7 @@ Print("The value of the Commodity Channel Index is: " + CCI(14));
 ##Darvas Boxes
 ### Description
 Former ballroom dancer Nicolas Darvas developed the Darvas boxes as a trading strategy in 1956. Darvas' trading technique consisted of buying into stocks that were trading at new 52-week highs, with accordingly high volumes. When a stock price rises above the previous 52-week high, but then proceeds to fall back to a price not far from that high, a Darvas box is formed. If the price falls too far, this can signify a false breakout. Otherwise, however, the lower price is used as the bottom of the box and the higher price as the top.
-A box is made up of an upper boundary (top) and a lower boundary (floor). Each new box is created based on a previous box, depicting a “stair” formation. 
+A box is made up of an upper boundary (top) and a lower boundary (floor). Each new box is created based on a previous box, depicting a “stair” formation.
 If a new high is not formed after three consecutive days, then the high is labeled as the upper boundary. Following this, the floor is specified based on the lowest price.
 
 
@@ -2065,12 +2063,12 @@ period Number of bars included in the calculations
 envelopePercentage Distance of the upper and lower bands from the middle line in percent
 
 maType Type of moving average used, possible choices are:
-- EMA
-- HMA
-- SMA (default)
-- TMA
-- TEMA
-- WMA
+-   EMA
+-   HMA
+-   SMA (default)
+-   TMA
+-   TEMA
+-   WMA
 
 ### Visualization
 ![MAEnvelopes](./media/image43.png)
@@ -2248,33 +2246,33 @@ Print("The current value for the MFI is: " + MFI(14)[0]);
 
 ##Moving Averages
 ### Variants
-[*DEMA*] - Double Exponential Moving Average
+[*DEMA*](#dema) - Double Exponential Moving Average
 
-[*EMA*] - Exponential Moving Average
+[*EMA*](#ema) - Exponential Moving Average
 
-[*HMA*] - Hull Moving Average
+[*HMA*](#hma) - Hull Moving Average
 
-[*KAMA*] - Kaufman's Adaptive Moving Average
+[*KAMA*](#kama) - Kaufman's Adaptive Moving Average
 
-[*MAMA*] - Mesa Adaptive Moving Average
+[*MAMA*](#mama) - Mesa Adaptive Moving Average
 
-[*SMA*] - Simple Moving Average
+[*SMA*](#sma) - Simple Moving Average
 
-[*TEMA*] - Triple Exponential Moving Average
+[*TEMA*](#tema) - Triple Exponential Moving Average
 
-[*TMA*] - Triangular Moving Average
+[*TMA*](#tma) - Triangular Moving Average
 
-[*TRIX*] - Triple Exponential Moving Average
+[*TRIX*](#trix) - Triple Exponential Moving Average
 
-[*T3*] - Triple Exponential Moving Average
+[*T3*](#t3) - Triple Exponential Moving Average
 
-[*VMA*] - Variable Moving Average
+[*VMA*](#vma) - Variable Moving Average
 
-[*VWMA*] - Volume Weighted Moving Average
+[*VWMA*](#vwma) - Volume Weighted Moving Average
 
-[*WMA*][*VMA*] - Weighted Moving Average
+[*WMA*](#wma)[*VMA*](#vma) - Weighted Moving Average
 
-[*ZLEMA*] - Zero Lag Exponential Moving Average
+[*ZLEMA*](#zlema) - Zero Lag Exponential Moving Average
 
 ### Interpretation
 The arithmetic average, also known as the moving average or simple moving average, smoothes the progression of the price for better trend detection. Moving averages are trend-following indicators; they follow the course and do not lead. Rising averages show uptrends, whereas falling averages display downtrends.
@@ -3615,7 +3613,7 @@ Print("The current value for the PFE is: " + RIND(3, 10)[0]);
 
 ##Rate of Change (ROC)
 ### Description
-The Rate of Change Indicator is a simple yet effective momentum oscillator. It measures the relative percentage change of the prices from one period to the next. 
+The Rate of Change Indicator is a simple yet effective momentum oscillator. It measures the relative percentage change of the prices from one period to the next.
 The calculation looks at the current price and compares it to the price of n periods ago.
 
 ### Interpretation
@@ -3662,11 +3660,10 @@ Values above 70 and below 30 mean that the price has the potential of turning. T
 
 In the long-term analysis, the following methodology should be applied:
 
-- below 30: long entry
-- above 70: for more than 5 days: exit long
-
-- above 95: short entry
-- below 30: for more than 5 days: exit short
+-   below 30: long entry
+-   above 70: for more than 5 days: exit long
+-   above 95: short entry
+-   below 30: for more than 5 days: exit short
 
 ### Usage
 ```cs
@@ -3820,7 +3817,7 @@ Print("The current value for the RVI is: " + RVI(14)[0]);
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
 
 ### Description
-The Reversal Bars indicator helps the trader find reversal bars within a chart. 
+The Reversal Bars indicator helps the trader find reversal bars within a chart.
 The indicator has a plot, and outputs the value 1 for long reversal bars, -1 for short reversal bars and 0 when there are none present. Traders can make several adjustments such as colors, arrows that are shown, etc.
 
 ### Interpretation
@@ -4470,14 +4467,14 @@ When using this method with an index (e.g. **DailyPerformance**(...)\[**int** ba
 input Input data series for the indicator
 
 reference Possible values are:
-- DailyPerformanceReference.TodaysOpen
-- DailyPerformanceReference.PreviousClose
+-   DailyPerformanceReference.TodaysOpen
+-   DailyPerformanceReference.PreviousClose
 
 mode Possible values are:
-- DailyPerformanceCalculationMode.Points
-- DailyPerformanceCalculationMode.Ticks
-- DailyPerformanceCalculationMode.Percent
-- DailyPerformanceCalculationMode.Currency
+-   DailyPerformanceCalculationMode.Points
+-   DailyPerformanceCalculationMode.Ticks
+-   DailyPerformanceCalculationMode.Percent
+-   DailyPerformanceCalculationMode.Currency
 
 daysAgo Number of days in the past
 
@@ -4504,7 +4501,7 @@ DailyPerformance(DailyPerformanceReference.PreviousClose, DailyPerformanceCalcul
 
 ##DayLines
 ### Description
-The DayLines indicator draws lines for the previous day’s high, low, and close. It also draws a line for the current day’s open. These lines often show a reaction to the market. 
+The DayLines indicator draws lines for the previous day’s high, low, and close. It also draws a line for the current day’s open. These lines often show a reaction to the market.
 Each line can be turned on or off, and the colors and line strengths can be freely set.
 
 See [*CurrentDayOHL*], [*PriorDayOHLC*].
@@ -4676,8 +4673,8 @@ TimeFrameValue Value of the timeframe (number)
 
 ##PriceLine
 ### Description
-PriceLine is not so much an indicator, but more of a tool. 
-It places a horizontal line on top of the current market price within the chart. 
+PriceLine is not so much an indicator, but more of a tool.
+It places a horizontal line on top of the current market price within the chart.
 The colors and line widths are freely configurable.
 
 ### Visualization
@@ -4972,8 +4969,8 @@ Print("The current value for the Volume Oscillator is: " + VolumeOszillator(12,2
 
 ##Volume Profile
 ### Description
-The VolumeProfile indicator displays the real-time volume profile as a vertical histogram on the chart. In this histogram, every bar depicts the cumulative traded volume for a certain price level. The starting bar for the calculations is labeled with a “#”. 
-These bars inside the histogram have various colors: green indicates executions at or above the ask, which are interpreted as buys. Red means trades at or below the bid, which are interpreted as sells. Grey signifies neutral executions. 
+The VolumeProfile indicator displays the real-time volume profile as a vertical histogram on the chart. In this histogram, every bar depicts the cumulative traded volume for a certain price level. The starting bar for the calculations is labeled with a “#”.
+These bars inside the histogram have various colors: green indicates executions at or above the ask, which are interpreted as buys. Red means trades at or below the bid, which are interpreted as sells. Grey signifies neutral executions.
 It is important to note that the Volume Profile indicator only works together with a real-time data feed. After changes have been made in the properties window, the indicator is restarted and all values that have been calculated up to this point are lost.
 
 See: [*VolumeZones*]
@@ -5051,7 +5048,7 @@ Print("The current volume is " + VolumeUpDown()[0]);
 
 ##Volume Zones
 ### Description
-This indicator draws a histogram on the left side of the chart. This histogram contains the historical volume, and inside the histogram, the length of the bars shows the cumulative volume. Traders can configure the price series (open, high, low etc.) with the help of the properties dialog box. 
+This indicator draws a histogram on the left side of the chart. This histogram contains the historical volume, and inside the histogram, the length of the bars shows the cumulative volume. Traders can configure the price series (open, high, low etc.) with the help of the properties dialog box.
 An up bar (where the close is above the open) shows the bar in green, and falling bars are displayed in red. The indicator is only designed to be used with historical data. In order to view volume changes in real-time, it is wise to consider using the VolumeProfile.
 
 

@@ -620,14 +620,14 @@ When using this method with an index (e.g. **CandleStickPattern**(...)\[**int** 
 ### Parameters
 |               |                                                                                                                                                                                                                    |
 |---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| input         | Input data series for the indicator
+| input         | Input data series for the indicator 
 |
 | pattern       | Possible values are:
                 ChartPattern.BearishBeltHold
-                 ChartPattern.BearishEngulfing
-                 ChartPattern.BearishHarami
-                 ChartPattern.BearishHaramiCross
-                 ChartPattern.BullishBeltHold
+                ChartPattern.BearishEngulfing
+                ChartPattern.BearishHarami
+                ChartPattern.BearishHaramiCross
+                ChartPattern.BullishBeltHold
                 ChartPattern.BullishEngulfing
                 ChartPattern.BullishHarami
                 ChartPattern.BullishHaramiCross  
@@ -649,6 +649,37 @@ When using this method with an index (e.g. **CandleStickPattern**(...)\[**int** 
                 ChartPattern.UpsideGapTwoCrows
                 ChartPattern.UpsideTasukiGap    |
 | trendStrength | Signifies the number of bars to the left and right of the swing high or swing low that are used to identify a trend. The value 0 turns off the search, meaning that the only thing searched for is chart patterns. |
+
+For your convenience there is a posibility to choose these pattern indicators separately.
+
+**List of indicators:**     
+-   CandleSticksBearishBeltHold
+-   CandleSticksBearishEngulfing
+-   CandleSticksBearishHarami
+-   CandleSticksBearishHaramiCross
+-   CandleSticksBullishBeltHold
+-   CandleSticksBullishEngulfing
+-   CandleSticksBullishHarami
+-   CandleSticksBullishHaramiCross  
+-   CandleSticksDarkCloudCover
+-   CandleSticksDoji
+-   CandleSticksDownsideTasukiGap
+-   CandleSticksEveningStar
+-   CandleSticksFallingThreeMethods
+-   CandleSticksHammer
+-   CandleSticksHangingMan
+-   CandleSticksInvertedHammer
+-   CandleSticksMorningStart
+-   CandleSticksPiercingLine
+-   CandleSticksRisingThreeMethods
+-   CandleSticksShootingStar
+-   CandleSticksStickSandwich
+-   CandleSticksThreeBlackCrows
+-   CandleSticksThreeWhiteSoldiers
+-   CandleSticksUpsideGapTwoCrows
+-   CandleSticksUpsideTasukiGap 
+    
+
 
 ### Visualization
 ![CandleStickPattern](./media/image16.png)

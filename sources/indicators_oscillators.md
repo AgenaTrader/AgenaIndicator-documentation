@@ -20,14 +20,12 @@ The Accumulation Distribution Line (ADL) indicator was developed by Marc Chaikin
 ### Interpretation
 There are two interpretations of the ADL:
 
-Confirmation of a trend or
-
-1.  The depiction of [*divergence*]
+Confirmation of a trend or the depiction of *divergence*.
 
 If the ADL is rising in an uptrend, then money is flowing in the direction of the rising prices, thus the uptrend is confirmed. If the ADL is falling in a downward trend, money is being taken out of the stock, thus confirming the downtrend.
 
 ### Further information
-<http://vtadwiki.vtad.de/index.php/Accumulation\_Distribution\_Linie>
+[vtad wiki ADL](http://vtadwiki.vtad.de/index.php/Accumulation_Distribution_Linie)
 
 ### Usage
 ```cs
@@ -348,10 +346,10 @@ Upper band = middle band + 2 standard deviations
 Middle band = average of 20 periods
 Lower band = middle period – 2 standard deviations
 
-More information can be found here: [*BollingerMTF*], [*Bollinger Percent %B*], [*Bollinger Bands Width*]
+More information can be found here: [*BollingerMTF*](#bollingermtf), [*Bollinger Percent %B*](#bollingerpercentb), [*Bollinger Bands Width*](#bollingerbandswidth)
 
 ### Further information
-VTAD: <http://vtadwiki.vtad.de/index.php/Bollinger\_B%C3%A4nder>
+[vtat](http://vtadwiki.vtad.de/index.php/Bollinger_Bänder)
 
 Book "Technische Indikatoren - simplified" by Oliver Paesler (German only)
 
@@ -396,7 +394,7 @@ Print("Value of the lower band: " + Bollinger(2, 20).Lower[0]);
 ### Description
 Bollinger %b is an important indicator that is derived from John Bollinger's original Bollinger Bands indicator. %b represents the location of the most recent close price in relation to the Bollinger Bands as well as to what degree it is above or below any of the bands. The Bollinger Percent B equation can be constructed in the following way: Percent B = ((Close - Bollinger Lower Band) / (Bollinger Upper Band - Bollinger Lower Band)) * 100. If the close price is the same as the upper Bollinger Band, %b will be 100 (percent). If the close price is the same as the lower Bollinger Band, %b will be 0.0 (percent). A %b value of 50 indicates that the close price is equal to the middle Bollinger Band. What is more, readings above 100 and below 0 show that the close price is outside of the Bollinger Bands by a corresponding percentage of the Bollinger Bandwidth. A %b value of 125 means that the close price is above the upper Bollinger Band by 25% of the Bandwidth, while a %b value of -25 means that the close price is below the lower Bollinger Band by 25% of the Bandwidth.
 
-See [*Bollinger Bands*], [*BBWidth*][*Bollinger Bands Width*]
+See [*Bollinger Bands*](#bollingerbands), [*BBWidth*](#bbwidth)
 
 **An additional application: normalizing indicators**
 
@@ -404,10 +402,10 @@ Bollinger bands, and therefore the %b indicator, can be applied not only to the 
 
 (Sources: Oliver Paesler: "Technische Indikatoren - simplified" and John Bollinger: "Bollinger Bänder")
 
-(Source: [*tradesignalonline*])
+(Source: *tradesignalonline*)
 
 ### Further information
-VTAD: <http://vtadwiki.vtad.de/index.php/Bollinger\_B%C3%A4nder>
+[vtat](http://vtadwiki.vtad.de/index.php/Bollinger_Bänder)
 
 Book "Technische Indikatoren - simplified" by Oliver Paesler (German only)
 
@@ -449,7 +447,7 @@ The Band Width measures the percentage difference between the upper and the lowe
 John Bollinger uses the Band Width to recognize rising and falling trends. Most trends have their origins within sideway market movements that generally have a low volatility. If a breakout is accompanied by a sudden rise in the Band Width, this means that there is definite support for the move.
 
 ### Further information
-VTAD: <http://vtadwiki.vtad.de/index.php/Bollinger\_B%C3%A4nder>
+[vtat](http://vtadwiki.vtad.de/index.php/Bollinger_Bänder)
 
 Book "Technische Indikatoren - simplified" by Oliver Paesler (German only)
 
@@ -514,7 +512,7 @@ This is a real-time indicator. It will only work on and with real-time data and 
 
 **When the properties dialog for the indicator is open and changes are made, then the indicator must be reloaded. Doing so will delete all previously accumulated data.**
 
-See [*BuySellVolume*].
+See [*BuySellVolume*](buysellvolume).
 
 ### Usage
 ```cs
@@ -537,8 +535,8 @@ When using this method with an index (e.g. **BuySellPressure**().BuyPressure\[**
 
 **Caution:**
 **If BuySellPressure is used with EoD data, the value 50 will always be outputted.**
-- BuySellPressure().SellPressure\[0\] = 50
-- BuySellPressure().SellPressure\[0\] = 50
+-   BuySellPressure().SellPressure\[0\] = 50
+-   BuySellPressure().SellPressure\[0\] = 50
 
 ### Parameters
 input Input data series for the indicator
@@ -569,7 +567,7 @@ This indicator shows us the current buy or sell pressure based on the volume. Fo
 
 **Caution: This is a real-time indicator and will not work with historical data.**
 
-Similar conditions as with the [*BuySellPressure*] apply.
+Similar conditions as with the [*BuySellPressure()*](#buysellpressure) apply.
 
 ### Usage
 ```cs
@@ -622,14 +620,14 @@ When using this method with an index (e.g. **CandleStickPattern**(...)\[**int** 
 ### Parameters
 |               |                                                                                                                                                                                                                    |
 |---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| input         | Input data series for the indicator
+| input         | Input data series for the indicator 
 |
 | pattern       | Possible values are:
                 ChartPattern.BearishBeltHold
-                 ChartPattern.BearishEngulfing
-                 ChartPattern.BearishHarami
-                 ChartPattern.BearishHaramiCross
-                 ChartPattern.BullishBeltHold
+                ChartPattern.BearishEngulfing
+                ChartPattern.BearishHarami
+                ChartPattern.BearishHaramiCross
+                ChartPattern.BullishBeltHold
                 ChartPattern.BullishEngulfing
                 ChartPattern.BullishHarami
                 ChartPattern.BullishHaramiCross  
@@ -651,6 +649,37 @@ When using this method with an index (e.g. **CandleStickPattern**(...)\[**int** 
                 ChartPattern.UpsideGapTwoCrows
                 ChartPattern.UpsideTasukiGap    |
 | trendStrength | Signifies the number of bars to the left and right of the swing high or swing low that are used to identify a trend. The value 0 turns off the search, meaning that the only thing searched for is chart patterns. |
+
+For your convenience there is a posibility to choose these pattern indicators separately.
+
+**List of indicators:**     
+-   CandleSticksBearishBeltHold
+-   CandleSticksBearishEngulfing
+-   CandleSticksBearishHarami
+-   CandleSticksBearishHaramiCross
+-   CandleSticksBullishBeltHold
+-   CandleSticksBullishEngulfing
+-   CandleSticksBullishHarami
+-   CandleSticksBullishHaramiCross  
+-   CandleSticksDarkCloudCover
+-   CandleSticksDoji
+-   CandleSticksDownsideTasukiGap
+-   CandleSticksEveningStar
+-   CandleSticksFallingThreeMethods
+-   CandleSticksHammer
+-   CandleSticksHangingMan
+-   CandleSticksInvertedHammer
+-   CandleSticksMorningStart
+-   CandleSticksPiercingLine
+-   CandleSticksRisingThreeMethods
+-   CandleSticksShootingStar
+-   CandleSticksStickSandwich
+-   CandleSticksThreeBlackCrows
+-   CandleSticksThreeWhiteSoldiers
+-   CandleSticksUpsideGapTwoCrows
+-   CandleSticksUpsideTasukiGap 
+    
+
 
 ### Visualization
 ![CandleStickPattern](./media/image16.png)
@@ -776,7 +805,7 @@ The CMO is one of several indicators created by the technical analyst Tushar Cha
 **The security is deemed overbought when the momentum oscillator is above +50 and oversold when it is below -50. Many technical traders add a nine-period moving average to this oscillator to act as a signal line. Bullish signals are generated when the oscillator crosses above the signal, and bearish signals are generated when the oscillator crosses down through the signal.**
 
 ### Further information
-<http://www.boersenwissen.de/content/content\_bin/cont\_bin18.html>
+[boersenwissen.de](http://www.boersenwissen.de/content/content_bin/cont_bin18.html)
 
 ### Usage
 ```cs
@@ -814,7 +843,7 @@ Green moving line: Median Kurs
 Red upper and lower line: Average course deviation oft he last 80 periods.
 
 ### More information
-https://www.facebook.com/Location-Point-Trading-344217482287592/?fref=ts
+[https://www.facebook.com/Location-Point-Trading-344217482287592/?fref=ts](https://www.facebook.com/Location-Point-Trading-344217482287592/?fref=ts)
 
 ### Usage
 ```cs
@@ -856,13 +885,13 @@ Image
 ### Example
 ```cs
 //Output of the value for the Upper climactic distance line
-Print(“Value of the upper band: “ + ClimacticDistnance(20, 80).Upper[0];
+Print("Value of the upper band: " + ClimacticDistnance(20, 80).Upper[0]);
 //Output of the value for the Lower climactic distance line
-Print(“Value of the upper band: “ + ClimacticDistnance(20, 80).Lower[0];
+Print("Value of the upper band: " + ClimacticDistnance(20, 80).Lower[0]);
 //Output of the value for the Distance climactic distance line
-Print(“Value of the upper band: “ + ClimacticDistnance(20, 80).Distance[0];
+Print("Value of the upper band: " + ClimacticDistnance(20, 80).Distance[0]);
 //Output of the value for the Moving Average climactic distance line
-Print(“Value of the upper band: “ + ClimacticDistnance(20, 80).MovingAverage[0];
+Print("Value of the upper band: " + ClimacticDistnance(20, 80).MovingAverage[0]);
 ```
 
 ##Commodity Channel Index (CCI)
@@ -870,14 +899,14 @@ Print(“Value of the upper band: “ + ClimacticDistnance(20, 80).MovingAverage
 The Commodity Channel Index (CCI), which was created by Donald Lambert and actually featured in Commodities magazine in 1980, is a versatile indicator that can be used for identifying a new trend or as a warning of extreme conditions. Lambert originally developed the CCI as a means to identify cyclical turns in commodities – however, the indicator can also successfully be applied to ETFs, indices, stocks and various other securities. In general, what CCI does is to measure the current price level relative to an average price level over a specified period of time. When prices are well above their average, CCI is relatively high. When prices are far below their average, CCI is relatively low. This is how CCI can be used for identifying overbought and oversold levels.
 
 ### Interpretation
-CCI measures the difference between a security's price change and its average price change. High positive readings indicate that prices are well above their average, which is a show of strength. Low negative readings indicate that prices are well below their average, which is a show of weakness.
+CCI measures the difference between a security\`s price change and its average price change. High positive readings indicate that prices are well above their average, which is a show of strength. Low negative readings indicate that prices are well below their average, which is a show of weakness.
 
 The Commodity Channel Index (CCI) can be used as either a coincident or leading indicator. As a coincident indicator, surges above +100 reflect strong price action that can signal the start of an uptrend. Plunges below -100 reflect weak price action that can signal the start of a downtrend.
 
-As a [*leading indicator*][momentum oscillators], chartists can look for overbought or oversold conditions that may foreshadow a mean reversion. Similarly, bullish and bearish divergences can be used to detect early momentum shifts and anticipate trend reversals.
+As a *leading indicator*, *momentum oscillators*, chartists can look for overbought or oversold conditions that may foreshadow a mean reversion. Similarly, bullish and bearish divergences can be used to detect early momentum shifts and anticipate trend reversals.
 
 ### Further information
-VTAD: <http://vtadwiki.vtad.de/index.php/Commodity\_Channel\_Index>
+[VTAD](http://vtadwiki.vtad.de/index.php/Commodity_Channel_Index)
 
 ### Usage
 ```cs
@@ -908,8 +937,8 @@ Print("The value of the Commodity Channel Index is: " + CCI(14));
 
 ##Darvas Boxes
 ### Description
-Former ballroom dancer Nicolas Darvas developed the Darvas boxes as a trading strategy in 1956. Darvas' trading technique consisted of buying into stocks that were trading at new 52-week highs, with accordingly high volumes. When a stock price rises above the previous 52-week high, but then proceeds to fall back to a price not far from that high, a Darvas box is formed. If the price falls too far, this can signify a false breakout. Otherwise, however, the lower price is used as the bottom of the box and the higher price as the top.
-A box is made up of an upper boundary (top) and a lower boundary (floor). Each new box is created based on a previous box, depicting a “stair” formation. 
+Former ballroom dancer Nicolas Darvas developed the Darvas boxes as a trading strategy in 1956. Darvas´s trading technique consisted of buying into stocks that were trading at new 52-week highs, with accordingly high volumes. When a stock price rises above the previous 52-week high, but then proceeds to fall back to a price not far from that high, a Darvas box is formed. If the price falls too far, this can signify a false breakout. Otherwise, however, the lower price is used as the bottom of the box and the higher price as the top.
+A box is made up of an upper boundary (top) and a lower boundary (floor). Each new box is created based on a previous box, depicting a “stair” formation.
 If a new high is not formed after three consecutive days, then the high is labeled as the upper boundary. Following this, the floor is specified based on the lowest price.
 
 
@@ -918,7 +947,7 @@ This system is similar to a trend-following channel breakout system. As soon as 
 
 ### Further information
 Here you can read about a trading system based on the Darvas boxes. (German only)
-<http://www.eusdoni.de/index.php?option=com\_content&view=article&catid=13:eusdoni-version-3&id=42:darvas-boxen>
+[eusdoni.de](http://www.eusdoni.de/index.php?option=com_content&view=article&catid=13:eusdoni-version-3&id=42:darvas-boxen)
 
 ### Usage
 ```cs
@@ -961,7 +990,7 @@ The Directional Movement indicator is almost identical to the ADX, with the only
 The Directional Movement indicator is positive when the difference between the highs is at its largest.
 
 ### Further information
-See: Directional Movement Index ([*DMI*])
+See: Directional Movement Index ([*DMI*](#dmi))
 
 ### Usage
 ```cs
@@ -1049,9 +1078,9 @@ Welles Wilder Jr. developed the Directional Movement concept in 1978. His concep
 
 Directional Movement Index (DMI)
 
-Average Directional Movement Index ([*ADX*])
+Average Directional Movement Index ([*ADX*](#adx))
 
-True Range ([*TR*])
+True Range ([*TR*](#tr))
 
 The Directional Movement Index comes before the Average Directional Movement Index. The DMI shows the strengths of the trend-favoring price movements in percentages. Its standard application is the smoothed ADX.
 
@@ -1059,7 +1088,7 @@ The Directional Movement Index comes before the Average Directional Movement Ind
 The DMI shows the strength of the trend, but not the trend direction. This means that it is particularly suited as a filter for trading systems employing the Parabolic SAR, for example, in order to filter out sideways phases. When the DMI rises (especially above 25), a trend is displayed; anything below that is recognized as a sideways phase. The +DI and the –DI point towards a trend. An uptrend is classified when the +DI is above the –DI. The further apart they drift, the stronger the trend.
 
 ### Further information
-VTAD: <http://vtadwiki.vtad.de/index.php/DMI\_-\_Directional\_Movement\_Index>
+[VTAD](http://vtadwiki.vtad.de/index.php/DMI_-_Directional_Movement_Index>)
 
 ### Usage
 ```cs
@@ -1305,7 +1334,7 @@ Print("The FOSC is bigger than zero, which indicates rising price movements.");
 ### Description
 The Highest High Index prints the index for the bars with the highest high within a specified number of periods. It is slightly different from the HighestBar() function in that it can be visualized within the chart.
 
-See [HighestHighPrice()], [LowestLowPrice()], *LowestLowIndex, [HighestBar()], [LowestBar()*].
+See [*HighestHighPrice()*](#highesthighprice), [*LowestLowPrice()*](#lowestlowprice), [*LowestLowIndex*](#lowestlowindex), [*HighestBar()*](#highestbar)(#highestbar), [*LowestBar()*](#lowestbar)(#lowest).
 
 ### Usage
 ```cs
@@ -1336,7 +1365,7 @@ Highest High Price shows the highest high achieved within a predefined number of
 
 Unlike the HighestBar(), this indicator can be displayed within the chart.
 
-See [*HighestHighIndex()*], [*LowestLowPrice()*], *LowestLowIndex*, [*HighestBar()*], [*LowestBar()*].
+See [*HighestHighIndex()*](#highesthighindex), [*LowestLowPrice()*](#lowestlowprice), [*LowestLowIndex()*](#lowestlowindex), [*HighestBar()*](#highestbar), [*LowestBar()*](#lowestbar).
 
 ### Usage
 ```cs
@@ -1447,8 +1476,32 @@ Inside bars will sometimes reflect sideways phases, and will also display trend 
 ```cs
 InsideBarsMT().isInsideBar[int barsAgo]
 InsideBarsMT().isOutsideBar[int barsAgo]
+InsideBarsMT().OutsideBarHigh[int barsAgo]
+InsideBarsMT().OutsideBarLow[int barsAgo]
 InsideBarsMT().HighBeforeOutsideBar[int barsAgo]
 InsideBarsMT().LowBeforeOutsideBar[int barsAgo]
+
+InsideBarsMT(input).isInsideBar[int barsAgo]
+InsideBarsMT(input).isOutsideBar[int barsAgo]
+InsideBarsMT(input).OutsideBarHigh[int barsAgo]
+InsideBarsMT(input).OutsideBarLow[int barsAgo]
+InsideBarsMT(input).HighBeforeOutsideBar[int barsAgo]
+InsideBarsMT(input).LowBeforeOutsideBar[int barsAgo]
+
+InsideBarsMT(InsideBarsMTToleranceUnit unit, double value).isInsideBar[int barsAgo]
+InsideBarsMT(InsideBarsMTToleranceUnit unit, double value).isOutsideBar[int barsAgo]
+InsideBarsMT(InsideBarsMTToleranceUnit unit, double value).OutsideBarHigh[int barsAgo]
+InsideBarsMT(InsideBarsMTToleranceUnit unit, double value).OutsideBarLow[int barsAgo]
+InsideBarsMT(InsideBarsMTToleranceUnit unit, double value).HighBeforeOutsideBar[int barsAgo]
+InsideBarsMT(InsideBarsMTToleranceUnit unit, double value).LowBeforeOutsideBar[int barsAgo]
+
+InsideBarsMT(input, InsideBarsMTToleranceUnit unit, double value).isInsideBar[int barsAgo]
+InsideBarsMT(input, InsideBarsMTToleranceUnit unit, double value).isOutsideBar[int barsAgo]
+InsideBarsMT(input, InsideBarsMTToleranceUnit unit, double value).OutsideBarHigh[int barsAgo]
+InsideBarsMT(input, InsideBarsMTToleranceUnit unit, double value).OutsideBarLow[int barsAgo]
+InsideBarsMT(input, InsideBarsMTToleranceUnit unit, double value).HighBeforeOutsideBar[int barsAgo]
+InsideBarsMT(input, InsideBarsMTToleranceUnit unit, double value).LowBeforeOutsideBar[int barsAgo]
+
 ```
 
 ### Settings
@@ -1513,7 +1566,7 @@ With an exponential [*moving average*][*average*] as their foundation, the Kel
 A channel upturn and break above the upper trend line can signal the start of an uptrend. A channel downturn and break below the lower trend line can signal the start a downtrend. Sometimes a strong trend does not take hold after a channel breakout and prices oscillate between the channel lines. Such trading ranges are marked by a relatively flat moving average. The channel boundaries can then be used to identify overbought and oversold levels for trading purposes.
 
 ### Further information
-VTAD: <http://vtadwiki.vtad.de/index.php/Keltner\_Channel>
+[VTAD](http://vtadwiki.vtad.de/index.php/Keltner_Channel)
 
 ### Usage
 ```cs
@@ -1573,7 +1626,7 @@ The KeyReversalUp indicator searches within a predefined number of periods to fi
 1	The current close is higher than the previous close
 2	The current low is smaller than or equal to the last low of the last n bars
 
-See [*KeyReversalDown*], [*KeyReversalUpAtSMA*], [*KeyReversalDownAtSMA*], [*KeyReversalUpAtEMA*], [*KeyReversalDownAtEMA*].
+See [*KeyReversalDown*](#keyreversaldown), [*KeyReversalUpAtSMA*](#keyreversalupatsma), [*KeyReversalDownAtSMA*](#keyreversaldownatsma), [*KeyReversalUpAtEMA*](#keyreversalupatema), [*KeyReversalDownAtEMA*](#keyreversaldownatema).
 
 
 ### Parameters
@@ -1608,7 +1661,7 @@ KeyReversalDown searches within a predefined number of periods to find turning p
 1	The current close is lower than the previous close
 2	The current high is higher than or equal to the highest high of the last n bars
 
-See [*KeyReversalUp*], [*KeyReversalUpAtSMA*], [*KeyReversalDownAtSMA*], [*KeyReversalUpAtEMA*], [*KeyReversalDownAtEMA*].
+See [*KeyReversalUp*](#keyreversalup), [*KeyReversalUpAtSMA*](#keyreversalupatsma), [*KeyReversalDownAtSMA*](#keyreversaldownatsma), [*KeyReversalUpAtEMA*](#keyreversalupatema), [*KeyReversalDownAtEMA*](#keyreversaldownatema).
 
 
 ### Parameters
@@ -1644,7 +1697,7 @@ KeyReversalUpAtSMA searches within a predefined number of periods to find turnin
 2	The current low is smaller than or equal to the lowest low within n bars
 3	The current low has touched or breached an SMA
 
-See [*KeyReversalUp*], [*KeyReversalDown*], [*KeyReversalDownAtSMA*], [*KeyReversalUpAtEMA*], [*KeyReversalDownAtEMA*].
+See [*KeyReversalUp*](#keyreversalup), [*KeyReversalDown*](#keyreversaldown), [*KeyReversalDownAtSMA*](#keyreversaldownatsma), [*KeyReversalUpAtEMA*](#keyreversalupatema), [*KeyReversalDownAtEMA*](#keyreversaldownatema).
 
 
 ### Parameters
@@ -1681,7 +1734,7 @@ KeyReversalDownAtSMA searches within a predefined number of periods to find a tu
 2	The current high is higher than or equal to the highest high within the last n periods
 3	The current high has touched or breached an SMA
 
-See [*KeyReversalUp*], [*KeyReversalDown*], [*KeyReversalUpAtSMA*], [*KeyReversalUpAtEMA*], [*KeyReversalDownAtEMA*].
+See [*KeyReversalUp*](#keyreversalup), [*KeyReversalDown*](#keyreversaldown), [*KeyReversalUpAtSMA*](#keyreversalupatsma), [*KeyReversalUpAtEMA*](#keyreversalupatema), [*KeyReversalDownAtEMA*](#keyreversaldownatema).
 
 
 ### Parameters
@@ -1718,7 +1771,7 @@ KeyReversalUpAtEMA searches within a predefined number of periods to find a reve
 2	The current low is smaller than or equal to the lowest low within the last n bars
 3	The current low has touched or breached an EMA
 
-See [*KeyReversalUp*], [*KeyReversalDown*], [*KeyReversalUpAtSMA*], [*KeyReversalDownAtSMA*], [*KeyReversalDownAtEMA*].
+See [*KeyReversalUp*](#keyreversalup), [*KeyReversalDown*](#keyreversaldown), [*KeyReversalUpAtSMA*](#keyreversalupatsma), [*KeyReversalDownAtSMA*](#keyreversaldownatsma), [*KeyReversalDownAtEMA*](#keyreversaldownatema).
 
 ### Parameters
 input Input data series for the indicator
@@ -1754,7 +1807,7 @@ KeyReversalDownAtEMA searches within a predefined number of periods to find a re
 2	The current high is larger than or equal to the highest high of the last n bars
 3	The current high has touched or breached an EMA
 
-See [*KeyReversalUp*], [*KeyReversalDown*], [*KeyReversalUpAtSMA*], [*KeyReversalDownAtSMA*], [*KeyReversalUpAtEMA*].
+See [*KeyReversalUp*](#keyreversalup), [*KeyReversalDown*](#keyreversaldown), [*KeyReversalUpAtSMA*](#keyreversalupatsma), [*KeyReversalDownAtSMA*](#keyreversaldownatsma), [*KeyReversalUpAtEMA*](#keyreversalupatema).
 
 ### Parameters
 input Input data series for the indicator
@@ -1790,7 +1843,7 @@ Linear Regression is used to determine trends. Here, the prices are set as depen
 See [*R-Squared*], [*LinRegSlope*], [*LinRegIntercept*].
 
 ### Further information
-<http://www.vtad.de/sites/files/forschung/vtad\_Award\_2011\_Joachim\_Lenz\_Veroeffentlichung.pdf>
+[VTAD](http://www.vtad.de/sites/files/forschung/vtad_Award_2011_Joachim_Lenz_Veroeffentlichung.pdf)
 
 ### Interpretation
 The linear regression indicator is used as a prognosis tool for the future developments of the instrument. If the prices are rising or falling steadily, then it can be expected that they will return to a more realistic/reasonable level. In other words: the indicator shows where the price should be, a deviation from the regression is assumed to be short-lived and to be corrected soon.
@@ -1903,8 +1956,8 @@ LowestLowIndex delivers the index of the bar with the lowest low within a predef
 
 Differently to LowestBar(), one can display this indicator within a chart.
 
-See [*HighestHighPrice()*], [*HighestHighIndex()*], [*LowestLowPrice()*],
-*HighestBar()*, *LowestBar()*.
+See [*HighestHighPrice()*](#highesthighprice), [*HighestHighIndex()*](#highesthighindex), [*LowestLowPrice()*](#lowestlowprice),
+[*HighestBar()*](#highestbar), [*LowestBar()*](#lowestbar).
 
 ### Usage
 ```cs
@@ -1936,8 +1989,8 @@ LowestLowPrice delivers the value of the lowest low within a predefined number o
 
 Unlike the LowestBar(), this indicator can be viewed within the chart.
 
-See [*HighestHighPrice()*], [*HighestHighIndex()*], *[LowestLowIndex]()*,
-*HighestBar()*, *LowestBar()*.
+See [*HighestHighPrice()*](#highesthighprice), [*HighestHighIndex()*](#highesthighindex), *[LowestLowIndex]()*,
+[*HighestBar()*](#highestbar), [*LowestBar()*](#lowestbar).
 
 ### Usage
 ```cs
@@ -2065,12 +2118,12 @@ period Number of bars included in the calculations
 envelopePercentage Distance of the upper and lower bands from the middle line in percent
 
 maType Type of moving average used, possible choices are:
-- EMA
-- HMA
-- SMA (default)
-- TMA
-- TEMA
-- WMA
+-   EMA
+-   HMA
+-   SMA (default)
+-   TMA
+-   TEMA
+-   WMA
 
 ### Visualization
 ![MAEnvelopes](./media/image43.png)
@@ -2126,6 +2179,16 @@ The term Prom Queen is also taken from the book series “*Der Händler*”. A 5
 ![MarketPhases Phase 5+ (Prom Queen)](./media/image48.png)
 
 Market phases 1, 2, 6, and 9 are not relevant for successful trading.
+
+### MarketPhases Pro Description
+
+**Phase5Level** 
+
+How far the price correction must be to become a valid market phase 5.
+
+**Phase4Level**  
+
+How far the price correction must be to become a valid market phase 4.
 
 ### Depiction in the chart
 No parameters are required.
@@ -2248,33 +2311,33 @@ Print("The current value for the MFI is: " + MFI(14)[0]);
 
 ##Moving Averages
 ### Variants
-[*DEMA*] - Double Exponential Moving Average
+[*DEMA*](#dema) - Double Exponential Moving Average
 
-[*EMA*] - Exponential Moving Average
+[*EMA*](#ema) - Exponential Moving Average
 
-[*HMA*] - Hull Moving Average
+[*HMA*](#hma) - Hull Moving Average
 
-[*KAMA*] - Kaufman's Adaptive Moving Average
+[*KAMA*](#kama) - Kaufman's Adaptive Moving Average
 
-[*MAMA*] - Mesa Adaptive Moving Average
+[*MAMA*](#mama) - Mesa Adaptive Moving Average
 
-[*SMA*] - Simple Moving Average
+[*SMA*](#sma) - Simple Moving Average
 
-[*TEMA*] - Triple Exponential Moving Average
+[*TEMA*](#tema) - Triple Exponential Moving Average
 
-[*TMA*] - Triangular Moving Average
+[*TMA*](#tma) - Triangular Moving Average
 
-[*TRIX*] - Triple Exponential Moving Average
+[*TRIX*](#trix) - Triple Exponential Moving Average
 
-[*T3*] - Triple Exponential Moving Average
+[*T3*](#t3) - Triple Exponential Moving Average
 
-[*VMA*] - Variable Moving Average
+[*VMA*](#vma) - Variable Moving Average
 
-[*VWMA*] - Volume Weighted Moving Average
+[*VWMA*](#vwma) - Volume Weighted Moving Average
 
-[*WMA*][*VMA*] - Weighted Moving Average
+[*WMA*](#wma)[*VMA*](#vma) - Weighted Moving Average
 
-[*ZLEMA*] - Zero Lag Exponential Moving Average
+[*ZLEMA*](#zlema) - Zero Lag Exponential Moving Average
 
 ### Interpretation
 The arithmetic average, also known as the moving average or simple moving average, smoothes the progression of the price for better trend detection. Moving averages are trend-following indicators; they follow the course and do not lead. Rising averages show uptrends, whereas falling averages display downtrends.
@@ -2951,9 +3014,9 @@ The nBarsDown indicator looks for a specified number of falling closing prices.
 
 The following conditions can also be included in the search:
 
--	Constantly falling bars
--	Constantly falling highs
--	Constantly falling lows
+-	   Constantly falling bars
+-	   Constantly falling highs
+-	   Constantly falling lows
 
 ### Usage
 ```cs
@@ -3514,6 +3577,33 @@ Print("The current value for the PPO is " + PriceOscillator(12, 26, 9)[0]);
 //Output for the value of the smooth price oscillator
 Print("The current value for the smooth is " + PriceOscillator(12, 26, 9).Smoothed[0]);
 ```
+## Rainbow
+### Description
+The rainbow indicator is represented by the set of the moving average indicator lines. Each of these lines is placed closer or further from the chart depending on the time period taken into the account for calculation of moving averages.
+
+### Introduction
+The rainbow indicator has some advantages comparing to the single moving average lines because it shows better, where the trend reversal occurs. When divergence in all lines is substantial - this is a signal of a strong up- or downtrend movement.
+By default red lines are the closest to the chart and represent the moving average line with the smallest time period.  Yellow lines indicate short-term trends. Blue display the area for short-term traders’ activity. Green is typify for medium-term trends. Pink lines can be usefull for traders who hold positions for a long period.
+
+### Return value
+Colors:
+
+Yellow ЕМА: 2,3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15;
+Blue ЕМА: 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41;
+Green ЕМА: 44, 47, 50, 53, 56, 59, 62, 65, 68, 71, 74;
+Red ЕМА: 78, 82, 86, 90, 94, 98, 102, 106, 110, 114, 118, 122;
+Pink ЕМА: 125, 130, 135, 140, 145, 150, 155, 160, 165, 170, 175, 180, 185, 190, 195, 200.
+
+### Parameters
+|                |                                                                                                                    |
+|----------------|--------------------------------------------------------------------------------------------------------------------|
+| MA Type        | Allows to select between the types of the moving average lines that shape a rainbow indicator. Default setting is the EMA (exponential moving average) but it is possible to choose a simple (SMA), hull (HMA) and weighted (WMA) moving average lines  |
+| Low MA Period  |  Shows the smallest amount of time periods for which the moving average will be calculated. For example, the setting “2” for the daily chart indicates the two latest daily closing prices.                                                                |
+| High MA Period | Shows the largest amount of time periods for which the moving average will be calculated.                          |
+| Step           | Defines the amount of moving average lines shown on a chart within the rainbow indicator. The smaller is this number the larger amount of lines will be plotted. In our example, step 2 would mean that the indicator will contain 80 EMA lines: EMA(2), EMA(4), EMA(6) and so on.                                                                                                             |
+
+### Visualisation
+
 
 ##Range
 ### Description
@@ -3588,7 +3678,7 @@ Print("The current value for the PFE is: " + RIND(3, 10)[0]);
 
 ##Rate of Change (ROC)
 ### Description
-The Rate of Change Indicator is a simple yet effective momentum oscillator. It measures the relative percentage change of the prices from one period to the next. 
+The Rate of Change Indicator is a simple yet effective momentum oscillator. It measures the relative percentage change of the prices from one period to the next.
 The calculation looks at the current price and compares it to the price of n periods ago.
 
 ### Interpretation
@@ -3635,11 +3725,10 @@ Values above 70 and below 30 mean that the price has the potential of turning. T
 
 In the long-term analysis, the following methodology should be applied:
 
-- below 30: long entry
-- above 70: for more than 5 days: exit long
-
-- above 95: short entry
-- below 30: for more than 5 days: exit short
+-   below 30: long entry
+-   above 70: for more than 5 days: exit long
+-   above 95: short entry
+-   below 30: for more than 5 days: exit short
 
 ### Usage
 ```cs
@@ -3793,7 +3882,7 @@ Print("The current value for the RVI is: " + RVI(14)[0]);
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
 
 ### Description
-The Reversal Bars indicator helps the trader find reversal bars within a chart. 
+The Reversal Bars indicator helps the trader find reversal bars within a chart.
 The indicator has a plot, and outputs the value 1 for long reversal bars, -1 for short reversal bars and 0 when there are none present. Traders can make several adjustments such as colors, arrows that are shown, etc.
 
 ### Interpretation
@@ -4443,14 +4532,14 @@ When using this method with an index (e.g. **DailyPerformance**(...)\[**int** ba
 input Input data series for the indicator
 
 reference Possible values are:
-- DailyPerformanceReference.Open
-- DailyPerformanceReference.PreviousClose
+-   DailyPerformanceReference.TodaysOpen
+-   DailyPerformanceReference.PreviousClose
 
 mode Possible values are:
-- DailyPerformanceCalculationMode.Points
-- DailyPerformanceCalculationMode.Ticks
-- DailyPerformanceCalculationMode.Percent
-- DailyPerformanceCalculationMode.Currency
+-   DailyPerformanceCalculationMode.Points
+-   DailyPerformanceCalculationMode.Ticks
+-   DailyPerformanceCalculationMode.Percent
+-   DailyPerformanceCalculationMode.Currency
 
 daysAgo Number of days in the past
 
@@ -4477,7 +4566,7 @@ DailyPerformance(DailyPerformanceReference.PreviousClose, DailyPerformanceCalcul
 
 ##DayLines
 ### Description
-The DayLines indicator draws lines for the previous day’s high, low, and close. It also draws a line for the current day’s open. These lines often show a reaction to the market. 
+The DayLines indicator draws lines for the previous day’s high, low, and close. It also draws a line for the current day’s open. These lines often show a reaction to the market.
 Each line can be turned on or off, and the colors and line strengths can be freely set.
 
 See [*CurrentDayOHL*], [*PriorDayOHLC*].
@@ -4649,8 +4738,8 @@ TimeFrameValue Value of the timeframe (number)
 
 ##PriceLine
 ### Description
-PriceLine is not so much an indicator, but more of a tool. 
-It places a horizontal line on top of the current market price within the chart. 
+PriceLine is not so much an indicator, but more of a tool.
+It places a horizontal line on top of the current market price within the chart.
 The colors and line widths are freely configurable.
 
 ### Visualization
@@ -4945,8 +5034,8 @@ Print("The current value for the Volume Oscillator is: " + VolumeOszillator(12,2
 
 ##Volume Profile
 ### Description
-The VolumeProfile indicator displays the real-time volume profile as a vertical histogram on the chart. In this histogram, every bar depicts the cumulative traded volume for a certain price level. The starting bar for the calculations is labeled with a “#”. 
-These bars inside the histogram have various colors: green indicates executions at or above the ask, which are interpreted as buys. Red means trades at or below the bid, which are interpreted as sells. Grey signifies neutral executions. 
+The VolumeProfile indicator displays the real-time volume profile as a vertical histogram on the chart. In this histogram, every bar depicts the cumulative traded volume for a certain price level. The starting bar for the calculations is labeled with a “#”.
+These bars inside the histogram have various colors: green indicates executions at or above the ask, which are interpreted as buys. Red means trades at or below the bid, which are interpreted as sells. Grey signifies neutral executions.
 It is important to note that the Volume Profile indicator only works together with a real-time data feed. After changes have been made in the properties window, the indicator is restarted and all values that have been calculated up to this point are lost.
 
 See: [*VolumeZones*]
@@ -5024,7 +5113,7 @@ Print("The current volume is " + VolumeUpDown()[0]);
 
 ##Volume Zones
 ### Description
-This indicator draws a histogram on the left side of the chart. This histogram contains the historical volume, and inside the histogram, the length of the bars shows the cumulative volume. Traders can configure the price series (open, high, low etc.) with the help of the properties dialog box. 
+This indicator draws a histogram on the left side of the chart. This histogram contains the historical volume, and inside the histogram, the length of the bars shows the cumulative volume. Traders can configure the price series (open, high, low etc.) with the help of the properties dialog box.
 An up bar (where the close is above the open) shows the bar in green, and falling bars are displayed in red. The indicator is only designed to be used with historical data. In order to view volume changes in real-time, it is wise to consider using the VolumeProfile.
 
 
@@ -5105,10 +5194,9 @@ A return value of 0 indicates that no high or low point has been found yet.
 |                |                                                                                                                    |
 |----------------|--------------------------------------------------------------------------------------------------------------------|
 | input          | Input data series for the indicator                                                                                |
-| deviationType  | The change in points or percent                                                                                    
-                  DeviationType.Points and                                                                                            
-                  DeviationType.Percent                                                                                               |
+| deviationType  | The change in points or percent                                                                                    |
 | deviationValue | Value of the deviation                                                                                             |
+| label          | Defines labels (ChangeInPrice, ChangeInPricePercent,    ChangeInTicks, EndPrice, NumberOfBars, VolumeAverage, VolumeDifference)                                                                                                                   |
 | useHighLow     | Defines whether the high/low of a bar will be used for extreme values or if you want to use closing prices instead |
 
 ### Visualization

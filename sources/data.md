@@ -274,7 +274,7 @@ Print("SMA(14) calculated using the weighted price: " + Instrument.Round2TickSiz
 
 ## Weighteds
 ### Description
-Weighteds is an array of [*DataSeries*]\[1\] that contains all [*Weighted*](#weighted) data series.
+Weighteds is an array of *DataSeries*\[1\] that contains all [*Weighted*](#weighted) data series.
 
 The array is only of value for indicators and strategies that use data from multiple timeframes.
 
@@ -282,13 +282,13 @@ A new entry is added to the array whenever a new timeframe is added to an indica
 
 With **\[TimeFrameRequirements(("1 Day"), ("1 Week"))\]** the array will contain 3 entries:
 
-Weighteds\[0\] the weighted data series of the chart timeframe
-Weighteds\[1\] the weighted data series of all bars in a daily timeframe
-Weighteds\[2\] the weighted data series of all bars in a weekly timeframe
+*Weighteds*\[0\] the weighted data series of the chart timeframe
+*Weighteds*\[1\] the weighted data series of all bars in a daily timeframe
+*Weighteds*\[2\] the weighted data series of all bars in a weekly timeframe
 
-Weighteds\[0\]\[0\] is equivalent to Weighteds\[0\].
+*Weighteds*\[0\]\[0\] is equivalent to *Weighteds*\[0\].
 
-See [*MultiBars*].
+See [*MultiBars*](#multibars).
 
 ### Parameter
 barsAgo Index value of the individual bars within a data series
@@ -304,11 +304,11 @@ Weighteds[int barSeriesIndex][int barsAgo]
 The returned value is dependent upon the property *CalculateOnBarClose*.
 
 ### Example
-See example under [*Multibars*][*MultiBars*].
+See example under [*Multibars*](#multibars).
 
 ## Time
 ### Description
-Time is a [*DataSeries*][*data series*] of the type [*DateTimeSeries*], in which the timestamps of the individual bars are saved.
+Time is a [*DataSeries*](#dataseries) of the type [*DateTimeSeries*](#datetimeseries), in which the timestamps of the individual bars are saved.
 
 ### Parameter
 barsAgo Index value (see [*Bars*](#bars-candles))
@@ -332,20 +332,20 @@ Print(Time[5]);
 
 ## Times
 ### Description
-Times is an array of *DataSeries* that contains all [*Time*] data series.
+Times is an array of *DataSeries* that contains all [*Time*](#time) data series.
 
 This array is only of value to indicators and strategies that make use of multiple timeframes.
 A new entry is added to the array whenever a new timeframe is added to an indicator or strategy.
 
 With **\[TimeFrameRequirements(("1 Day"), ("1 Week"))\]** the array will contain 3 entries:
 
-Times\[0\] the time data series of the chart timeframe
-Times\[1\] the time data series of all bars in a daily timeframe
-Times\[2\] the time data series of all bars in a weekly timeframe
+*Times*\[0\] the time data series of the chart timeframe
+*Times*\[1\] the time data series of all bars in a daily timeframe
+*Times*\[2\] the time data series of all bars in a weekly timeframe
 
-Times\[0\]\[0\] is equivalent to Times\[0\].
+*Times*\[0\]\[0\] is equivalent to *Times*\[0\].
 
-See [*MultiBars*].
+See [*MultiBars*](#multibars).
 
 ### Parameter
 barsAgo Index value for the individual bars within a data series
@@ -361,11 +361,11 @@ Times[int barSeriesIndex][int barsAgo]
 The returned value is dependent upon the property *CalculateOnBarClose*.
 
 ### Example
-See example [*Multibars*][*MultiBars*].
+See example [*Multibars*](#multibars).
 
 ## Volume
 ### Description
-Volume is a [*DataSeries*][*Data series*] of the type [*DataSeries*], in which the historical volume information is saved.
+Volume is a [*DataSeries*](#dataseries) of the type [*DataSeries*](#dataseries), in which the historical volume information is saved.
 
 ### Parameter
 barsAgo Index value (see [*Bars*](#bars-candles))
@@ -379,8 +379,8 @@ Volume[int barsAgo]
 ### More Information
 The returned value is dependent upon the property *CalculateOnBarClose*.
 
-The value returned by the [*VOL()*] indicator is identical with the volume described here;
-for example, Vol()\[3\] will have the same value as Volume\[3\].
+The value returned by the [*VOL()*](#vol) indicator is identical with the volume described here;
+for example, *Vol()*\[3\] will have the same value as *Volume*\[3\].
 
 ### Example
 ```cs
@@ -394,7 +394,7 @@ Print("SMA(14) calculated using the volume: " + Instrument.Round2TickSize(SMA(Vo
 
 ## Volumes
 ### Description
-Volumes is an array of *DataSeries* that contains all [*Volume*] data series.
+Volumes is an array of *DataSeries* that contains all [*Volume*](#volume) data series.
 
 This array is only of value for indicators or strategies that use data from multiple timeframes.
 
@@ -408,7 +408,7 @@ Volumes\[2\] the volume data series of all bars in the weekly timeframe
 
 Volumes\[0\]\[0\] is equivalent to Volumes\[0\].
 
-See [*MultiBars*].
+See [*MultiBars*](#multibars).
 
 ### Parameter
 barsAgo Index value of the individual bars within a data series
@@ -425,7 +425,7 @@ Volumes[int barSeriesIndex][int barsAgo]
 The returned value is dependent upon the property *CalculateOnBarClose*.
 
 ### Example
-See example [*Multibars*][*MultiBars*].
+See example [*Multibars*](#multibars).
 
 ## TimeFrame
 ### Description
@@ -454,9 +454,9 @@ TimeFrames [2];
 Print(TimeFrames[2]); // returns "1 Week"
 ```
 
-TimeFrames \[0\] is equivalent to [*TimeFrame*].
+TimeFrames \[0\] is equivalent to [*TimeFrame*](#timeframe).
 
-See [*MultiBars*].
+See [*MultiBars*](#multibars).
 
 ### Parameter
 barSeriesIndex Index value for the various timeframes

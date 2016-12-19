@@ -805,7 +805,7 @@ The CMO is one of several indicators created by the technical analyst Tushar Cha
 **The security is deemed overbought when the momentum oscillator is above +50 and oversold when it is below -50. Many technical traders add a nine-period moving average to this oscillator to act as a signal line. Bullish signals are generated when the oscillator crosses above the signal, and bearish signals are generated when the oscillator crosses down through the signal.**
 
 ### Further information
-<http://www.boersenwissen.de/content/content\_bin/cont\_bin18.html>
+[boersenwissen.de](http://www.boersenwissen.de/content/content_bin/cont_bin18.html)
 
 ### Usage
 ```cs
@@ -843,7 +843,7 @@ Green moving line: Median Kurs
 Red upper and lower line: Average course deviation oft he last 80 periods.
 
 ### More information
-https://www.facebook.com/Location-Point-Trading-344217482287592/?fref=ts
+[https://www.facebook.com/Location-Point-Trading-344217482287592/?fref=ts](https://www.facebook.com/Location-Point-Trading-344217482287592/?fref=ts)
 
 ### Usage
 ```cs
@@ -885,13 +885,13 @@ Image
 ### Example
 ```cs
 //Output of the value for the Upper climactic distance line
-Print(“Value of the upper band: “ + ClimacticDistnance(20, 80).Upper[0];
+Print("Value of the upper band: " + ClimacticDistnance(20, 80).Upper[0]);
 //Output of the value for the Lower climactic distance line
-Print(“Value of the upper band: “ + ClimacticDistnance(20, 80).Lower[0];
+Print("Value of the upper band: " + ClimacticDistnance(20, 80).Lower[0]);
 //Output of the value for the Distance climactic distance line
-Print(“Value of the upper band: “ + ClimacticDistnance(20, 80).Distance[0];
+Print("Value of the upper band: " + ClimacticDistnance(20, 80).Distance[0]);
 //Output of the value for the Moving Average climactic distance line
-Print(“Value of the upper band: “ + ClimacticDistnance(20, 80).MovingAverage[0];
+Print("Value of the upper band: " + ClimacticDistnance(20, 80).MovingAverage[0]);
 ```
 
 ##Commodity Channel Index (CCI)
@@ -899,14 +899,14 @@ Print(“Value of the upper band: “ + ClimacticDistnance(20, 80).MovingAverage
 The Commodity Channel Index (CCI), which was created by Donald Lambert and actually featured in Commodities magazine in 1980, is a versatile indicator that can be used for identifying a new trend or as a warning of extreme conditions. Lambert originally developed the CCI as a means to identify cyclical turns in commodities – however, the indicator can also successfully be applied to ETFs, indices, stocks and various other securities. In general, what CCI does is to measure the current price level relative to an average price level over a specified period of time. When prices are well above their average, CCI is relatively high. When prices are far below their average, CCI is relatively low. This is how CCI can be used for identifying overbought and oversold levels.
 
 ### Interpretation
-CCI measures the difference between a security's price change and its average price change. High positive readings indicate that prices are well above their average, which is a show of strength. Low negative readings indicate that prices are well below their average, which is a show of weakness.
+CCI measures the difference between a security\`s price change and its average price change. High positive readings indicate that prices are well above their average, which is a show of strength. Low negative readings indicate that prices are well below their average, which is a show of weakness.
 
 The Commodity Channel Index (CCI) can be used as either a coincident or leading indicator. As a coincident indicator, surges above +100 reflect strong price action that can signal the start of an uptrend. Plunges below -100 reflect weak price action that can signal the start of a downtrend.
 
-As a [*leading indicator*][momentum oscillators], chartists can look for overbought or oversold conditions that may foreshadow a mean reversion. Similarly, bullish and bearish divergences can be used to detect early momentum shifts and anticipate trend reversals.
+As a *leading indicator*, *momentum oscillators*, chartists can look for overbought or oversold conditions that may foreshadow a mean reversion. Similarly, bullish and bearish divergences can be used to detect early momentum shifts and anticipate trend reversals.
 
 ### Further information
-VTAD: <http://vtadwiki.vtad.de/index.php/Commodity\_Channel\_Index>
+[VTAD](http://vtadwiki.vtad.de/index.php/Commodity_Channel_Index)
 
 ### Usage
 ```cs
@@ -937,7 +937,7 @@ Print("The value of the Commodity Channel Index is: " + CCI(14));
 
 ##Darvas Boxes
 ### Description
-Former ballroom dancer Nicolas Darvas developed the Darvas boxes as a trading strategy in 1956. Darvas' trading technique consisted of buying into stocks that were trading at new 52-week highs, with accordingly high volumes. When a stock price rises above the previous 52-week high, but then proceeds to fall back to a price not far from that high, a Darvas box is formed. If the price falls too far, this can signify a false breakout. Otherwise, however, the lower price is used as the bottom of the box and the higher price as the top.
+Former ballroom dancer Nicolas Darvas developed the Darvas boxes as a trading strategy in 1956. Darvas´s trading technique consisted of buying into stocks that were trading at new 52-week highs, with accordingly high volumes. When a stock price rises above the previous 52-week high, but then proceeds to fall back to a price not far from that high, a Darvas box is formed. If the price falls too far, this can signify a false breakout. Otherwise, however, the lower price is used as the bottom of the box and the higher price as the top.
 A box is made up of an upper boundary (top) and a lower boundary (floor). Each new box is created based on a previous box, depicting a “stair” formation.
 If a new high is not formed after three consecutive days, then the high is labeled as the upper boundary. Following this, the floor is specified based on the lowest price.
 
@@ -947,7 +947,7 @@ This system is similar to a trend-following channel breakout system. As soon as 
 
 ### Further information
 Here you can read about a trading system based on the Darvas boxes. (German only)
-<http://www.eusdoni.de/index.php?option=com\_content&view=article&catid=13:eusdoni-version-3&id=42:darvas-boxen>
+[eusdoni.de](http://www.eusdoni.de/index.php?option=com_content&view=article&catid=13:eusdoni-version-3&id=42:darvas-boxen)
 
 ### Usage
 ```cs
@@ -990,7 +990,7 @@ The Directional Movement indicator is almost identical to the ADX, with the only
 The Directional Movement indicator is positive when the difference between the highs is at its largest.
 
 ### Further information
-See: Directional Movement Index ([*DMI*])
+See: Directional Movement Index ([*DMI*](#dmi))
 
 ### Usage
 ```cs
@@ -1078,9 +1078,9 @@ Welles Wilder Jr. developed the Directional Movement concept in 1978. His concep
 
 Directional Movement Index (DMI)
 
-Average Directional Movement Index ([*ADX*])
+Average Directional Movement Index ([*ADX*](#adx))
 
-True Range ([*TR*])
+True Range ([*TR*](#tr))
 
 The Directional Movement Index comes before the Average Directional Movement Index. The DMI shows the strengths of the trend-favoring price movements in percentages. Its standard application is the smoothed ADX.
 
@@ -1088,7 +1088,7 @@ The Directional Movement Index comes before the Average Directional Movement Ind
 The DMI shows the strength of the trend, but not the trend direction. This means that it is particularly suited as a filter for trading systems employing the Parabolic SAR, for example, in order to filter out sideways phases. When the DMI rises (especially above 25), a trend is displayed; anything below that is recognized as a sideways phase. The +DI and the –DI point towards a trend. An uptrend is classified when the +DI is above the –DI. The further apart they drift, the stronger the trend.
 
 ### Further information
-VTAD: <http://vtadwiki.vtad.de/index.php/DMI\_-\_Directional\_Movement\_Index>
+[VTAD](http://vtadwiki.vtad.de/index.php/DMI_-_Directional_Movement_Index>)
 
 ### Usage
 ```cs
@@ -1334,7 +1334,7 @@ Print("The FOSC is bigger than zero, which indicates rising price movements.");
 ### Description
 The Highest High Index prints the index for the bars with the highest high within a specified number of periods. It is slightly different from the HighestBar() function in that it can be visualized within the chart.
 
-See [HighestHighPrice()], [LowestLowPrice()], *LowestLowIndex, [HighestBar()], [LowestBar()*].
+See [*HighestHighPrice()*](#highesthighprice), [*LowestLowPrice()*](#lowestlowprice), [*LowestLowIndex*](#lowestlowindex), [*HighestBar()*](#highestbar)(#highestbar), [*LowestBar()*](#lowestbar)(#lowest).
 
 ### Usage
 ```cs
@@ -1365,7 +1365,7 @@ Highest High Price shows the highest high achieved within a predefined number of
 
 Unlike the HighestBar(), this indicator can be displayed within the chart.
 
-See [*HighestHighIndex()*], [*LowestLowPrice()*], *LowestLowIndex*, [*HighestBar()*], [*LowestBar()*].
+See [*HighestHighIndex()*](#highesthighindex), [*LowestLowPrice()*](#lowestlowprice), [*LowestLowIndex()*](#lowestlowindex), [*HighestBar()*](#highestbar), [*LowestBar()*](#lowestbar).
 
 ### Usage
 ```cs
@@ -1566,7 +1566,7 @@ With an exponential [*moving average*][*average*] as their foundation, the Kel
 A channel upturn and break above the upper trend line can signal the start of an uptrend. A channel downturn and break below the lower trend line can signal the start a downtrend. Sometimes a strong trend does not take hold after a channel breakout and prices oscillate between the channel lines. Such trading ranges are marked by a relatively flat moving average. The channel boundaries can then be used to identify overbought and oversold levels for trading purposes.
 
 ### Further information
-VTAD: <http://vtadwiki.vtad.de/index.php/Keltner\_Channel>
+[VTAD](http://vtadwiki.vtad.de/index.php/Keltner_Channel)
 
 ### Usage
 ```cs
@@ -1626,7 +1626,7 @@ The KeyReversalUp indicator searches within a predefined number of periods to fi
 1	The current close is higher than the previous close
 2	The current low is smaller than or equal to the last low of the last n bars
 
-See [*KeyReversalDown*], [*KeyReversalUpAtSMA*], [*KeyReversalDownAtSMA*], [*KeyReversalUpAtEMA*], [*KeyReversalDownAtEMA*].
+See [*KeyReversalDown*](#keyreversaldown), [*KeyReversalUpAtSMA*](#keyreversalupatsma), [*KeyReversalDownAtSMA*](#keyreversaldownatsma), [*KeyReversalUpAtEMA*](#keyreversalupatema), [*KeyReversalDownAtEMA*](#keyreversaldownatema).
 
 
 ### Parameters
@@ -1661,7 +1661,7 @@ KeyReversalDown searches within a predefined number of periods to find turning p
 1	The current close is lower than the previous close
 2	The current high is higher than or equal to the highest high of the last n bars
 
-See [*KeyReversalUp*], [*KeyReversalUpAtSMA*], [*KeyReversalDownAtSMA*], [*KeyReversalUpAtEMA*], [*KeyReversalDownAtEMA*].
+See [*KeyReversalUp*](#keyreversalup), [*KeyReversalUpAtSMA*](#keyreversalupatsma), [*KeyReversalDownAtSMA*](#keyreversaldownatsma), [*KeyReversalUpAtEMA*](#keyreversalupatema), [*KeyReversalDownAtEMA*](#keyreversaldownatema).
 
 
 ### Parameters
@@ -1697,7 +1697,7 @@ KeyReversalUpAtSMA searches within a predefined number of periods to find turnin
 2	The current low is smaller than or equal to the lowest low within n bars
 3	The current low has touched or breached an SMA
 
-See [*KeyReversalUp*], [*KeyReversalDown*], [*KeyReversalDownAtSMA*], [*KeyReversalUpAtEMA*], [*KeyReversalDownAtEMA*].
+See [*KeyReversalUp*](#keyreversalup), [*KeyReversalDown*](#keyreversaldown), [*KeyReversalDownAtSMA*](#keyreversaldownatsma), [*KeyReversalUpAtEMA*](#keyreversalupatema), [*KeyReversalDownAtEMA*](#keyreversaldownatema).
 
 
 ### Parameters
@@ -1734,7 +1734,7 @@ KeyReversalDownAtSMA searches within a predefined number of periods to find a tu
 2	The current high is higher than or equal to the highest high within the last n periods
 3	The current high has touched or breached an SMA
 
-See [*KeyReversalUp*], [*KeyReversalDown*], [*KeyReversalUpAtSMA*], [*KeyReversalUpAtEMA*], [*KeyReversalDownAtEMA*].
+See [*KeyReversalUp*](#keyreversalup), [*KeyReversalDown*](#keyreversaldown), [*KeyReversalUpAtSMA*](#keyreversalupatsma), [*KeyReversalUpAtEMA*](#keyreversalupatema), [*KeyReversalDownAtEMA*](#keyreversaldownatema).
 
 
 ### Parameters
@@ -1771,7 +1771,7 @@ KeyReversalUpAtEMA searches within a predefined number of periods to find a reve
 2	The current low is smaller than or equal to the lowest low within the last n bars
 3	The current low has touched or breached an EMA
 
-See [*KeyReversalUp*], [*KeyReversalDown*], [*KeyReversalUpAtSMA*], [*KeyReversalDownAtSMA*], [*KeyReversalDownAtEMA*].
+See [*KeyReversalUp*](#keyreversalup), [*KeyReversalDown*](#keyreversaldown), [*KeyReversalUpAtSMA*](#keyreversalupatsma), [*KeyReversalDownAtSMA*](#keyreversaldownatsma), [*KeyReversalDownAtEMA*](#keyreversaldownatema).
 
 ### Parameters
 input Input data series for the indicator
@@ -1807,7 +1807,7 @@ KeyReversalDownAtEMA searches within a predefined number of periods to find a re
 2	The current high is larger than or equal to the highest high of the last n bars
 3	The current high has touched or breached an EMA
 
-See [*KeyReversalUp*], [*KeyReversalDown*], [*KeyReversalUpAtSMA*], [*KeyReversalDownAtSMA*], [*KeyReversalUpAtEMA*].
+See [*KeyReversalUp*](#keyreversalup), [*KeyReversalDown*](#keyreversaldown), [*KeyReversalUpAtSMA*](#keyreversalupatsma), [*KeyReversalDownAtSMA*](#keyreversaldownatsma), [*KeyReversalUpAtEMA*](#keyreversalupatema).
 
 ### Parameters
 input Input data series for the indicator
@@ -1843,7 +1843,7 @@ Linear Regression is used to determine trends. Here, the prices are set as depen
 See [*R-Squared*], [*LinRegSlope*], [*LinRegIntercept*].
 
 ### Further information
-<http://www.vtad.de/sites/files/forschung/vtad\_Award\_2011\_Joachim\_Lenz\_Veroeffentlichung.pdf>
+[VTAD](http://www.vtad.de/sites/files/forschung/vtad_Award_2011_Joachim_Lenz_Veroeffentlichung.pdf)
 
 ### Interpretation
 The linear regression indicator is used as a prognosis tool for the future developments of the instrument. If the prices are rising or falling steadily, then it can be expected that they will return to a more realistic/reasonable level. In other words: the indicator shows where the price should be, a deviation from the regression is assumed to be short-lived and to be corrected soon.
@@ -1956,8 +1956,8 @@ LowestLowIndex delivers the index of the bar with the lowest low within a predef
 
 Differently to LowestBar(), one can display this indicator within a chart.
 
-See [*HighestHighPrice()*], [*HighestHighIndex()*], [*LowestLowPrice()*],
-*HighestBar()*, *LowestBar()*.
+See [*HighestHighPrice()*](#highesthighprice), [*HighestHighIndex()*](#highesthighindex), [*LowestLowPrice()*](#lowestlowprice),
+[*HighestBar()*](#highestbar), [*LowestBar()*](#lowestbar).
 
 ### Usage
 ```cs
@@ -1989,8 +1989,8 @@ LowestLowPrice delivers the value of the lowest low within a predefined number o
 
 Unlike the LowestBar(), this indicator can be viewed within the chart.
 
-See [*HighestHighPrice()*], [*HighestHighIndex()*], *[LowestLowIndex]()*,
-*HighestBar()*, *LowestBar()*.
+See [*HighestHighPrice()*](#highesthighprice), [*HighestHighIndex()*](#highesthighindex), *[LowestLowIndex]()*,
+[*HighestBar()*](#highestbar), [*LowestBar()*](#lowestbar).
 
 ### Usage
 ```cs
@@ -3014,9 +3014,9 @@ The nBarsDown indicator looks for a specified number of falling closing prices.
 
 The following conditions can also be included in the search:
 
--	Constantly falling bars
--	Constantly falling highs
--	Constantly falling lows
+-	   Constantly falling bars
+-	   Constantly falling highs
+-	   Constantly falling lows
 
 ### Usage
 ```cs
@@ -3582,7 +3582,7 @@ Print("The current value for the smooth is " + PriceOscillator(12, 26, 9).Smooth
 The rainbow indicator is represented by the set of the moving average indicator lines. Each of these lines is placed closer or further from the chart depending on the time period taken into the account for calculation of moving averages.
 
 ### Introduction
-The rainbow indicator has some advantages comparing to the single moving average lines because it shows better, where the trend reversal occurs. When divergence in all lines is substantial - this is a signal of a strong up- or downtrend movement. 
+The rainbow indicator has some advantages comparing to the single moving average lines because it shows better, where the trend reversal occurs. When divergence in all lines is substantial - this is a signal of a strong up- or downtrend movement.
 By default red lines are the closest to the chart and represent the moving average line with the smallest time period.  Yellow lines indicate short-term trends. Blue display the area for short-term traders’ activity. Green is typify for medium-term trends. Pink lines can be usefull for traders who hold positions for a long period.
 
 ### Return value
@@ -3598,7 +3598,7 @@ Pink ЕМА: 125, 130, 135, 140, 145, 150, 155, 160, 165, 170, 175, 180, 185, 19
 |                |                                                                                                                    |
 |----------------|--------------------------------------------------------------------------------------------------------------------|
 | MA Type        | Allows to select between the types of the moving average lines that shape a rainbow indicator. Default setting is the EMA (exponential moving average) but it is possible to choose a simple (SMA), hull (HMA) and weighted (WMA) moving average lines  |
-| Low MA Period  |  Shows the smallest amount of time periods for which the moving average will be calculated. For example, the setting “2” for the daily chart indicates the two latest daily closing prices.                                                                | 
+| Low MA Period  |  Shows the smallest amount of time periods for which the moving average will be calculated. For example, the setting “2” for the daily chart indicates the two latest daily closing prices.                                                                |
 | High MA Period | Shows the largest amount of time periods for which the moving average will be calculated.                          |
 | Step           | Defines the amount of moving average lines shown on a chart within the rainbow indicator. The smaller is this number the larger amount of lines will be plotted. In our example, step 2 would mean that the indicator will contain 80 EMA lines: EMA(2), EMA(4), EMA(6) and so on.                                                                                                             |
 

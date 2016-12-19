@@ -1476,8 +1476,32 @@ Inside bars will sometimes reflect sideways phases, and will also display trend 
 ```cs
 InsideBarsMT().isInsideBar[int barsAgo]
 InsideBarsMT().isOutsideBar[int barsAgo]
+InsideBarsMT().OutsideBarHigh[int barsAgo]
+InsideBarsMT().OutsideBarLow[int barsAgo]
 InsideBarsMT().HighBeforeOutsideBar[int barsAgo]
 InsideBarsMT().LowBeforeOutsideBar[int barsAgo]
+
+InsideBarsMT(input).isInsideBar[int barsAgo]
+InsideBarsMT(input).isOutsideBar[int barsAgo]
+InsideBarsMT(input).OutsideBarHigh[int barsAgo]
+InsideBarsMT(input).OutsideBarLow[int barsAgo]
+InsideBarsMT(input).HighBeforeOutsideBar[int barsAgo]
+InsideBarsMT(input).LowBeforeOutsideBar[int barsAgo]
+
+InsideBarsMT(InsideBarsMTToleranceUnit unit, double value).isInsideBar[int barsAgo]
+InsideBarsMT(InsideBarsMTToleranceUnit unit, double value).isOutsideBar[int barsAgo]
+InsideBarsMT(InsideBarsMTToleranceUnit unit, double value).OutsideBarHigh[int barsAgo]
+InsideBarsMT(InsideBarsMTToleranceUnit unit, double value).OutsideBarLow[int barsAgo]
+InsideBarsMT(InsideBarsMTToleranceUnit unit, double value).HighBeforeOutsideBar[int barsAgo]
+InsideBarsMT(InsideBarsMTToleranceUnit unit, double value).LowBeforeOutsideBar[int barsAgo]
+
+InsideBarsMT(input, InsideBarsMTToleranceUnit unit, double value).isInsideBar[int barsAgo]
+InsideBarsMT(input, InsideBarsMTToleranceUnit unit, double value).isOutsideBar[int barsAgo]
+InsideBarsMT(input, InsideBarsMTToleranceUnit unit, double value).OutsideBarHigh[int barsAgo]
+InsideBarsMT(input, InsideBarsMTToleranceUnit unit, double value).OutsideBarLow[int barsAgo]
+InsideBarsMT(input, InsideBarsMTToleranceUnit unit, double value).HighBeforeOutsideBar[int barsAgo]
+InsideBarsMT(input, InsideBarsMTToleranceUnit unit, double value).LowBeforeOutsideBar[int barsAgo]
+
 ```
 
 ### Settings

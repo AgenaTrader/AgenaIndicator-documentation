@@ -1,5 +1,7 @@
 ![AgenaTrader](./images/logo_100.png)
 
+**The following API documentation requires AgenaTrader in version 1.9.0.563**
+
 #Welcome to the official AgenaIndicator repository!
 Want to learn more about the AgenaTrader indicators? We've got the resources to help you get started.
 

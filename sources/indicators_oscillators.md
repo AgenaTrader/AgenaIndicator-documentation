@@ -22,7 +22,7 @@ There are two interpretations of the ADL:
 
 Confirmation of a trend or
 
-1.  The depiction of [*divergence*]
+1.  The depiction of *divergence*
 
 If the ADL is rising in an uptrend, then money is flowing in the direction of the rising prices, thus the uptrend is confirmed. If the ADL is falling in a downward trend, money is being taken out of the stock, thus confirming the downtrend.
 
@@ -2065,12 +2065,12 @@ period Number of bars included in the calculations
 envelopePercentage Distance of the upper and lower bands from the middle line in percent
 
 maType Type of moving average used, possible choices are:
-- EMA
-- HMA
-- SMA (default)
-- TMA
-- TEMA
-- WMA
+-   EMA
+-   HMA
+-   SMA (default)
+-   TMA
+-   TEMA
+-   WMA
 
 ### Visualization
 ![MAEnvelopes](./media/image43.png)
@@ -2272,7 +2272,7 @@ Print("The current value for the MFI is: " + MFI(14)[0]);
 
 [*VWMA*] - Volume Weighted Moving Average
 
-[*WMA*][*VMA*] - Weighted Moving Average
+[*WMA*], [*VMA*] - Weighted Moving Average
 
 [*ZLEMA*] - Zero Lag Exponential Moving Average
 

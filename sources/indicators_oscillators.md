@@ -27,7 +27,7 @@ Confirmation of a trend or
 If the ADL is rising in an uptrend, then money is flowing in the direction of the rising prices, thus the uptrend is confirmed. If the ADL is falling in a downward trend, money is being taken out of the stock, thus confirming the downtrend.
 
 ### Further information
-<http://vtadwiki.vtad.de/index.php/Accumulation\_Distribution\_Linie>
+[vtadwiki.vtad.de](http://vtadwiki.vtad.de/index.php/Accumulation_Distribution_Linie)
 
 ### Usage
 ```cs
@@ -909,7 +909,7 @@ Print("The value of the Commodity Channel Index is: " + CCI(14));
 ##Darvas Boxes
 ### Description
 Former ballroom dancer Nicolas Darvas developed the Darvas boxes as a trading strategy in 1956. Darvas' trading technique consisted of buying into stocks that were trading at new 52-week highs, with accordingly high volumes. When a stock price rises above the previous 52-week high, but then proceeds to fall back to a price not far from that high, a Darvas box is formed. If the price falls too far, this can signify a false breakout. Otherwise, however, the lower price is used as the bottom of the box and the higher price as the top.
-A box is made up of an upper boundary (top) and a lower boundary (floor). Each new box is created based on a previous box, depicting a “stair” formation. 
+A box is made up of an upper boundary (top) and a lower boundary (floor). Each new box is created based on a previous box, depicting a “stair” formation.
 If a new high is not formed after three consecutive days, then the high is labeled as the upper boundary. Following this, the floor is specified based on the lowest price.
 
 
@@ -3519,7 +3519,7 @@ Print("The current value for the smooth is " + PriceOscillator(12, 26, 9).Smooth
 The rainbow indicator is represented by the set of the moving average indicator lines. Each of these lines is placed closer or further from the chart depending on the time period taken into the account for calculation of moving averages.
 
 ### Introduction
-The rainbow indicator has some advantages comparing to the single moving average lines because it shows better, where the trend reversal occurs. When divergence in all lines is substantial - this is a signal of a strong up- or downtrend movement. 
+The rainbow indicator has some advantages comparing to the single moving average lines because it shows better, where the trend reversal occurs. When divergence in all lines is substantial - this is a signal of a strong up- or downtrend movement.
 By default red lines are the closest to the chart and represent the moving average line with the smallest time period.  Yellow lines indicate short-term trends. Blue display the area for short-term traders’ activity. Green is typify for medium-term trends. Pink lines can be usefull for traders who hold positions for a long period.
 
 ### Return value
@@ -3535,7 +3535,7 @@ Pink ЕМА: 125, 130, 135, 140, 145, 150, 155, 160, 165, 170, 175, 180, 185, 19
 |                |                                                                                                                    |
 |----------------|--------------------------------------------------------------------------------------------------------------------|
 | MA Type        | Allows to select between the types of the moving average lines that shape a rainbow indicator. Default setting is the EMA (exponential moving average) but it is possible to choose a simple (SMA), hull (HMA) and weighted (WMA) moving average lines  |
-| Low MA Period  |  Shows the smallest amount of time periods for which the moving average will be calculated. For example, the setting “2” for the daily chart indicates the two latest daily closing prices.                                                                | 
+| Low MA Period  |  Shows the smallest amount of time periods for which the moving average will be calculated. For example, the setting “2” for the daily chart indicates the two latest daily closing prices.                                                                |
 | High MA Period | Shows the largest amount of time periods for which the moving average will be calculated.                          |
 | Step           | Defines the amount of moving average lines shown on a chart within the rainbow indicator. The smaller is this number the larger amount of lines will be plotted. In our example, step 2 would mean that the indicator will contain 80 EMA lines: EMA(2), EMA(4), EMA(6) and so on.                                                                                                             |
 
@@ -3615,7 +3615,7 @@ Print("The current value for the PFE is: " + RIND(3, 10)[0]);
 
 ##Rate of Change (ROC)
 ### Description
-The Rate of Change Indicator is a simple yet effective momentum oscillator. It measures the relative percentage change of the prices from one period to the next. 
+The Rate of Change Indicator is a simple yet effective momentum oscillator. It measures the relative percentage change of the prices from one period to the next.
 The calculation looks at the current price and compares it to the price of n periods ago.
 
 ### Interpretation
@@ -3820,7 +3820,7 @@ Print("The current value for the RVI is: " + RVI(14)[0]);
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
 
 ### Description
-The Reversal Bars indicator helps the trader find reversal bars within a chart. 
+The Reversal Bars indicator helps the trader find reversal bars within a chart.
 The indicator has a plot, and outputs the value 1 for long reversal bars, -1 for short reversal bars and 0 when there are none present. Traders can make several adjustments such as colors, arrows that are shown, etc.
 
 ### Interpretation
@@ -4504,7 +4504,7 @@ DailyPerformance(DailyPerformanceReference.PreviousClose, DailyPerformanceCalcul
 
 ##DayLines
 ### Description
-The DayLines indicator draws lines for the previous day’s high, low, and close. It also draws a line for the current day’s open. These lines often show a reaction to the market. 
+The DayLines indicator draws lines for the previous day’s high, low, and close. It also draws a line for the current day’s open. These lines often show a reaction to the market.
 Each line can be turned on or off, and the colors and line strengths can be freely set.
 
 See [*CurrentDayOHL*], [*PriorDayOHLC*].
@@ -4676,8 +4676,8 @@ TimeFrameValue Value of the timeframe (number)
 
 ##PriceLine
 ### Description
-PriceLine is not so much an indicator, but more of a tool. 
-It places a horizontal line on top of the current market price within the chart. 
+PriceLine is not so much an indicator, but more of a tool.
+It places a horizontal line on top of the current market price within the chart.
 The colors and line widths are freely configurable.
 
 ### Visualization
@@ -4972,8 +4972,8 @@ Print("The current value for the Volume Oscillator is: " + VolumeOszillator(12,2
 
 ##Volume Profile
 ### Description
-The VolumeProfile indicator displays the real-time volume profile as a vertical histogram on the chart. In this histogram, every bar depicts the cumulative traded volume for a certain price level. The starting bar for the calculations is labeled with a “#”. 
-These bars inside the histogram have various colors: green indicates executions at or above the ask, which are interpreted as buys. Red means trades at or below the bid, which are interpreted as sells. Grey signifies neutral executions. 
+The VolumeProfile indicator displays the real-time volume profile as a vertical histogram on the chart. In this histogram, every bar depicts the cumulative traded volume for a certain price level. The starting bar for the calculations is labeled with a “#”.
+These bars inside the histogram have various colors: green indicates executions at or above the ask, which are interpreted as buys. Red means trades at or below the bid, which are interpreted as sells. Grey signifies neutral executions.
 It is important to note that the Volume Profile indicator only works together with a real-time data feed. After changes have been made in the properties window, the indicator is restarted and all values that have been calculated up to this point are lost.
 
 See: [*VolumeZones*]
@@ -5051,7 +5051,7 @@ Print("The current volume is " + VolumeUpDown()[0]);
 
 ##Volume Zones
 ### Description
-This indicator draws a histogram on the left side of the chart. This histogram contains the historical volume, and inside the histogram, the length of the bars shows the cumulative volume. Traders can configure the price series (open, high, low etc.) with the help of the properties dialog box. 
+This indicator draws a histogram on the left side of the chart. This histogram contains the historical volume, and inside the histogram, the length of the bars shows the cumulative volume. Traders can configure the price series (open, high, low etc.) with the help of the properties dialog box.
 An up bar (where the close is above the open) shows the bar in green, and falling bars are displayed in red. The indicator is only designed to be used with historical data. In order to view volume changes in real-time, it is wise to consider using the VolumeProfile.
 
 

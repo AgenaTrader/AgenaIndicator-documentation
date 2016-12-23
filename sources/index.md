@@ -103,6 +103,7 @@ Want to learn more about the AgenaTrader indicators? We've got the resources to 
 -   [Pivot Points](./indicators_oscillators.md#pivot-points)
 -   [Polarized Fractal Efficiency (PFE)](./indicators_oscillators.md#polarized-fractal-efficiency-pfe)
 -   [Price Oscillator](./indicators_oscillators.md#price-oscillator)
+-   [Rainbow](./indicators_oscillators.md#rainbow)
 -   [Range](./indicators_oscillators.md#range)
 -   [Range Indicator (RIND)](./indicators_oscillators.md#range-indicator-rind)
 -   [Rate of Change (ROC)](./indicators_oscillators.md#rate-of-change-roc)

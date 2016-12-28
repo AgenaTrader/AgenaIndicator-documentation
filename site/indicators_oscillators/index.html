@@ -1452,7 +1452,7 @@ Print(&quot;The FOSC is bigger than zero, which indicates rising price movements
 <h2 id="highesthighindex">HighestHighIndex()</h2>
 <h3 id="description_28">Description</h3>
 <p>The Highest High Index prints the index for the bars with the highest high within a specified number of periods. It is slightly different from the GetSerieHighestValue() function in that it can be visualized within the chart.</p>
-<p>See <a href="#highesthighprice"><em>HighestHighPrice()</em></a>, <a href="#lowestlowprice"><em>LowestLowPrice()</em></a>, [<em>LowestLowIndex</em>], [<em>GetSerieHighestValue()</em>], [<em>GetSerieLowestValue()</em>].</p>
+<p>See <a href="#highesthighprice"><em>HighestHighPrice()</em></a>, <a href="#lowestlowprice"><em>LowestLowPrice()</em></a>, <a href="#lowestlowindex"><em>LowestLowIndex</em></a>, <a href="#getseriehighestvalue"><em>GetSerieHighestValue()</em></a>, <a href="#getserielowestvalue"><em>GetSerieLowestValue()</em></a>.</p>
 <h3 id="usage_29">Usage</h3>
 <pre><code class="cs">HighestHighIndex(int BarsBack)
 HighestHighIndex(int BarsBack)[int barsAgo]
@@ -2089,7 +2089,7 @@ Print(&quot;Lower band of the MA Envelope: &quot; + MAEnvelopes(1.5, MAEnvelopes
 <p>Momentum is one of the most popular indicators available, the first choice of many traders. This relatively simple indicator is so popular because it measures the attenuation of the motion without the need for complex formulas. The momentum indicator represents a whole family of indicators that measure a movement’s strength. Other representatives in this case are the RSI or CCI, and so on. In the illustration below, the indicator is a graph that oscillates around a zero point. There is no fixed scale in percentage terms, and the value can be quite far removed from the zero point; this usually happens when the price makes an exceptionally strong leap, which is why the indicator predominantly shows the direction in which the current prices are moving towards.</p>
 <h3 id="interpretation_27">Interpretation</h3>
 <p>Entry signals are generated when the indicator crosses the zero line.</p>
-<p>See [<em>ROC</em>].</p>
+<p>See <a href="#rate-of-change-roc"><em>ROC</em></a>.</p>
 <h3 id="further-information_22">Further information</h3>
 <p><a href="http://de.wikipedia.org/wiki/Momentum_%28Chartanalyse%29">http://de.wikipedia.org/wiki/Momentum_%28Chartanalyse%29</a></p>
 <h3 id="usage_48">Usage</h3>
@@ -2114,11 +2114,11 @@ Print(&quot;The current value for the momentum is &quot; + Momentum(14)[0]);
 
 <h2 id="money-flow-index-mfi">Money Flow Index (MFI)</h2>
 <h3 id="description_48">Description</h3>
-<p>The MFI is an oscillator that makes use of both volume and price to measure buying and selling pressure. MFI, which was developed by Gene Quong and Avrum Soudack, is also known as volume-weighted [RSI][RSI]. MFI starts with the typical price for each period. Money flow is then positive when this aforementioned typical price increases (buying pressure) and negative when it decreases (selling pressure). A ratio of positive-negative money flow is then inserted into an RSI formula to come up with an oscillator that fluctuates between 0 and 100. The MFI, which is a momentum oscillator linked to volume, is best used for identifying reversals and price extremes with a variety of different signals.</p>
+<p>The MFI is an oscillator that makes use of both volume and price to measure buying and selling pressure. MFI, which was developed by Gene Quong and Avrum Soudack, is also known as volume-weighted <a href="#relative-strength-index-rsi"><em>RSI</em></a>. MFI starts with the typical price for each period. Money flow is then positive when this aforementioned typical price increases (buying pressure) and negative when it decreases (selling pressure). A ratio of positive-negative money flow is then inserted into an RSI formula to come up with an oscillator that fluctuates between 0 and 100. The MFI, which is a momentum oscillator linked to volume, is best used for identifying reversals and price extremes with a variety of different signals.</p>
 <h3 id="interpretation_28">Interpretation</h3>
 <p>The MFI is interpreted similarly to the RSI indicator. The MFI’s decisive factor is much stronger than the RSI’s when it comes to trend direction, due to the fact that volume is included in the calculation.</p>
 <h3 id="further-information_23">Further information</h3>
-<p>VTAD: <a href="http://vtadwiki.vtad.de/index.php/ Money_Flow_Index">http://vtadwiki.vtad.de/index.php/ Money_Flow_Index</a></p>
+<p>VTAD: <a href="http://vtadwiki.vtad.de/index.php/Money_Flow_Index">http://vtadwiki.vtad.de/index.php/Money_Flow_Index</a></p>
 <h3 id="usage_49">Usage</h3>
 <pre><code class="cs">MFI(int period)
 MFI(IDataSeries input, int period)
@@ -2141,20 +2141,20 @@ Print(&quot;The current value for the MFI is: &quot; + MFI(14)[0]);
 
 <h2 id="moving-averages">Moving Averages</h2>
 <h3 id="variants">Variants</h3>
-<p>[<em>DEMA</em>] - Double Exponential Moving Average</p>
-<p>[<em>EMA</em>] - Exponential Moving Average</p>
-<p>[<em>HMA</em>] - Hull Moving Average</p>
-<p>[<em>KAMA</em>] - Kaufman's Adaptive Moving Average</p>
-<p>[<em>MAMA</em>] - Mesa Adaptive Moving Average</p>
-<p>[<em>SMA</em>] - Simple Moving Average</p>
-<p>[<em>TEMA</em>] - Triple Exponential Moving Average</p>
-<p>[<em>TMA</em>] - Triangular Moving Average</p>
-<p>[<em>TRIX</em>] - Triple Exponential Moving Average</p>
-<p>[<em>T3</em>] - Triple Exponential Moving Average</p>
-<p>[<em>VMA</em>] - Variable Moving Average</p>
-<p>[<em>VWMA</em>] - Volume Weighted Moving Average</p>
-<p>[<em>WMA</em>], [<em>VMA</em>] - Weighted Moving Average</p>
-<p>[<em>ZLEMA</em>] - Zero Lag Exponential Moving Average</p>
+<p><a href="#dema-double-exponential-moving-average"><em>DEMA</em></a> - Double Exponential Moving Average</p>
+<p><a href="#ema-exponential-moving-average"><em>EMA</em></a> - Exponential Moving Average</p>
+<p><a href="#hma-hull-moving-average"><em>HMA</em></a> - Hull Moving Average</p>
+<p><a href="#kama-kaufmans-adaptive-moving-average"><em>KAMA</em></a> - Kaufman's Adaptive Moving Average</p>
+<p><a href="#mama-mesa-adaptive-moving-average"><em>MAMA</em></a> - Mesa Adaptive Moving Average</p>
+<p><a href="#sma-simple-moving-average"><em>SMA</em></a> - Simple Moving Average</p>
+<p><a href="#tema-triple-exponential-moving-average"><em>TEMA</em></a> - Triple Exponential Moving Average</p>
+<p><a href="#tma-triangular-moving-average"><em>TMA</em></a> - Triangular Moving Average</p>
+<p><a href="#trix-triple-exponential-moving-average"><em>TRIX</em></a> - Triple Exponential Moving Average</p>
+<p><a href="#t3-triple-exponential-moving-average"><em>T3</em></a> - Triple Exponential Moving Average</p>
+<p><a href="#vma-variable-moving-average"><em>VMA</em></a> - Variable Moving Average</p>
+<p><a href="#vwma-volume-weighted-moving-average"><em>VWMA</em></a> - Volume Weighted Moving Average</p>
+<p><a href="#wma-weighted-moving-average"><em>WMA</em></a>, <a href="#vma-variable-moving-average"><em>VMA</em></a> - Weighted Moving Average</p>
+<p><a href="#zlema-zero-lag-exponential-moving-average"><em>ZLEMA</em></a> - Zero Lag Exponential Moving Average</p>
 <h3 id="interpretation_29">Interpretation</h3>
 <p>The arithmetic average, also known as the moving average or simple moving average, smoothes the progression of the price for better trend detection. Moving averages are trend-following indicators; they follow the course and do not lead. IsSerieRising averages show uptrends, whereas falling averages display downtrends.
 By varying the period input, the time delay of the average can be changed. The smaller the period interval, the quicker the reaction time will be, but as a consequence, the smoothing effect will also be diminished. The opposite is true when increasing the period selection. The most popular choices are: 38, 50, 100 and 200 days. The 200-day moving average in particular has a significant importance for institutional traders, since it displays the long-term trend. 200 trading days are equal to a trading year. When the 200 MA is broken, then buy/sell signals are generated.</p>
@@ -2232,7 +2232,7 @@ Print(&quot;The current EMA value is &quot; + EMA(20)[0]);
 <h3 id="description_51">Description</h3>
 <p>The EMA MTF indicator is a multi-timeframe version of the standard EMA indicator.
 This indicator basically allows you to make calculationgs in a different timeframe than that of the current chart.</p>
-<p>For more information, see [<em>EMA</em>].</p>
+<p>For more information, see <a href="#ema-exponential-moving-average"><em>EMA</em></a>.</p>
 <p>Also see <a href="#bollingermtf"><em>BollingerMTF</em></a>, <a href="#smamtf"><em>SmaMTF</em></a>.</p>
 <h3 id="visualization_46">Visualization</h3>
 <p>A 5-minute chart with an EMA(20) calculated with hourly bars as the underlying input:</p>
@@ -2241,7 +2241,7 @@ This indicator basically allows you to make calculationgs in a different timefra
 <h3 id="description_52">Description</h3>
 <p>The Hull Moving Average, invented by Alan Hull, is a fast-working moving average that gets rid of almost all delays/lags (zero lag). The calculation is carried out using several weighted moving averages, thereby partially reducing the smoothing effect. Hull’s methodology uses square roots of the period instead of the actual period itself.</p>
 <h3 id="interpretation_32">Interpretation</h3>
-<p>The same interpretations as for the moving averages apply to the HMA, the only major distinction being the reduced lag. See [<em>Moving Averages</em>].</p>
+<p>The same interpretations as for the moving averages apply to the HMA, the only major distinction being the reduced lag. See <a href="#moving-averages"><em>Moving Averages</em></a>.</p>
 <h3 id="usage_52">Usage</h3>
 <pre><code class="cs">HMA(int period)
 HMA(IDataSeries InSeries, int period)
@@ -2275,7 +2275,7 @@ Print(&quot;The current HMA value is &quot; + HMA(21)[0]);
 <h3 id="interpretation_33">Interpretation</h3>
 <p>Kaufman mentions that a rising KAMA value can be interpreted as a buying signal, whilst falling KAMA values assume the prices to be falling.
 Kaufman also defines a maximum and minimum value for the calculation of the smoothing components. The efficiency ratio is converted using specified maximum and minimum values, which are applied to newly incoming price changes. Kaufman uses 2 (short period) as a minimum value and 30 (long period) as a maximum value. The number of days for the determination of the efficiency ratio is one of the more important parameters for the KAMA.</p>
-<p>For a more general interpretation of moving averages, please see the following chapter: [<em>Moving Averages</em>].</p>
+<p>For a more general interpretation of moving averages, please see the following chapter: <a href="#moving-averages"><em>Moving Averages</em></a>.</p>
 <h3 id="further-information_24">Further information</h3>
 <p><a href="http://www.investor-verlag.de/boersenwissen/kama/">http://www.investor-verlag.de/boersenwissen/kama/</a></p>
 <h3 id="usage_53">Usage</h3>
@@ -2307,7 +2307,7 @@ Print(&quot;The current value of the KAMA is &quot; + KAMA(2,10,30)[0]);
 This indicator is a second line – the name FAMA can be found in various publications. This line is similar to the underlying exponential moving average and can be used as a trigger line.</p>
 <h3 id="interpretation_34">Interpretation</h3>
 <p>For more concise information, we recommend that you read Ehler’s paper.</p>
-<p>General information about moving averages can be found here: [<em>Moving Averages</em>].</p>
+<p>General information about moving averages can be found here: <a href="#moving-averages"><em>Moving Averages</em></a>.</p>
 <h3 id="further-information_25">Further information</h3>
 <p><a href="http://www.tradesignalonline.com/de/lexicon/view.aspx?id=MAMA+adaptive+Moving+Average">http://www.tradesignalonline.com/de/lexicon/view.aspx?id=MAMA+adaptive+Moving+Average</a></p>
 <h3 id="usage_54">Usage</h3>
@@ -2341,7 +2341,7 @@ Print(&quot;The current value for the FAMA is &quot; + MAMA(0.5, 0.05).Fama[0]);
 <h3 id="description_55">Description</h3>
 <p>The SMA is the most well-known average, representing the simplest method of displaying the trend direction in a chart. In mathematical terms, this is the arithmetic mean of a number of individual lengths. It is called “moving” because to establish an average, the oldest value is always sacrificed to make space for the new incoming price change. Fundamentally speaking, the period length influences the intensity of the smoothing. Shorter periods (such as 10 days) will mean that the indicator follows the price changes quite closely.
 The SMA has a few disadvantages, which is why several adaptations of this indicator have been developed in the last few years. One of the biggest disadvantages is the fact that the indicator tends to lag, and the equal weighting for all data inputs across time intervals.
-You can find more general interpretations and meanings here: [<em>Moving Averages</em>].</p>
+You can find more general interpretations and meanings here: <a href="#moving-averages"><em>Moving Averages</em></a>.</p>
 <h3 id="further-information_26">Further information</h3>
 <p><a href="http://www.forex-trading-online.de/indikatoren/simple-moving-average-sma">http://www.forex-trading-online.de/indikatoren/simple-moving-average-sma</a></p>
 <p><a href="http://vtadwiki.vtad.de/index.php/SMA#Average-Off-Berechnungsverfahren_.28MMA.29">http://vtadwiki.vtad.de/index.php/SMA#Average-Off-Berechnungsverfahren_.28MMA.29</a></p>
@@ -2370,7 +2370,7 @@ Print(&quot;The current SMA value is &quot; + SMA(14)[0]);
 <h2 id="sma-mtf-multitimeframe">SMA MTF (MultiTimeFrame)</h2>
 <h3 id="description_56">Description</h3>
 <p>The SMA MTF – as is true for the other multi-timeframe indicator variations – allows traders to display the SMA of a specific timeframe on a chart of a different timeframe.</p>
-<p>See <a href="#bollingermtf"><em>BollingerMTF</em></a>, [<em>EmaMTF</em>].</p>
+<p>See <a href="#bollingermtf"><em>BollingerMTF</em></a>, <a href="#ema-mtf-multitimeframe"><em>EmaMTF</em></a>.</p>
 <h3 id="visualization_51">Visualization</h3>
 <p>The image shows a 5-minute chart with an SMA (14) calculated on 4-hour bars</p>
 <p><img alt="SMA MTF (MultiTimeFrame)" src="../media/image60.png" /></p>
@@ -2378,8 +2378,8 @@ Print(&quot;The current SMA value is &quot; + SMA(14)[0]);
 <h3 id="description_57">Description</h3>
 <p>The Smoothed Moving Average is combined from both Simple Moving Average and the Exponential Moving Average. Generally speaking, it is only used for higher period amounts/inputs. It normally has roughly half of the value of an EMA, meaning that an SMMA(20) is closer to an EMA(40).</p>
 <h3 id="interpretation_35">Interpretation</h3>
-<p>For more general information about moving averages, please see [<em>Moving Averages</em>].</p>
-<p>The SMMA is often used with the [<em>SuperTrend</em>] indicator.</p>
+<p>For more general information about moving averages, please see <a href="#moving-averages"><em>Moving Averages</em></a>.</p>
+<p>The SMMA is often used with the <a href="#supertrend"><em>SuperTrend</em></a> indicator.</p>
 <h3 id="further-information_27">Further information</h3>
 <p><a href="http://www2.wealth-lab.com/wiki/SMMA.ashx">http://www2.wealth-lab.com/wiki/SMMA.ashx</a></p>
 <h3 id="usage_56">Usage</h3>
@@ -2405,7 +2405,7 @@ Print(&quot;The current SMMA value is &quot; + SMMA(14)[0]);
 <h2 id="tema-triple-exponential-moving-average">TEMA - Triple Exponential Moving Average</h2>
 <h3 id="description_58">Description</h3>
 <p>The TEMA is combined from a single, a double and a triple EMA. This combo improves the delay between the indicator and price movements. The Triple Exponential Moving Average is quite efficient at smoothing price changes.</p>
-<p>You can find more information about moving averages here: [<em>Moving Averages</em>].</p>
+<p>You can find more information about moving averages here: <a href="#moving-averages"><em>Moving Averages</em></a>.</p>
 <h3 id="usage_57">Usage</h3>
 <pre><code class="cs">TEMA(int period)
 TEMA(IDataSeries input, int period)
@@ -2643,9 +2643,9 @@ Print(&quot;3 successively higher closing prices have occurred.&quot;);
 <h3 id="description_67">Description</h3>
 <p>The nBarsDown indicator looks for a specified number of falling closing prices.</p>
 <p>The following conditions can also be included in the search:
--     Constantly falling bars
--     Constantly falling highs
--     Constantly falling lows</p>
+-   Constantly falling bars
+-   Constantly falling highs
+-   Constantly falling lows</p>
 <h3 id="usage_66">Usage</h3>
 <pre><code class="cs">NBarsDown(int barCount, bool BarDown, bool lowerHigh, bool lowerLow)
 NBarsDown(IDataSeries input, int barCount, bool BarDown, bool lowerHigh, bool lowerLow)
@@ -2723,7 +2723,7 @@ Print(&quot;The current value for the OBV is &quot; + OBV()[0]);
 <p><strong>Important tip:</strong></p>
 <p>In some cases, the large trend (T0) cannot be seen with the naked eye, which may be due to the fact that not enough candles are visible within the chart. A minimum of 500 candles should be loaded to ensure this is not the case.</p>
 <h3 id="interpretation_38">Interpretation</h3>
-<p>Trading signals often form at points 2 &amp; 3: at point 3 as entry signals into a correction phase within a confirmed trend, and at point 2 as a sub-trend in the trend direction of the superior trade. The definition of a trend at points 1 to 3 can be read in "[<em>Das große Buch der Markttechnik</em>]" by Michael Voigt (German only).</p>
+<p>Trading signals often form at points 2 &amp; 3: at point 3 as entry signals into a correction phase within a confirmed trend, and at point 2 as a sub-trend in the trend direction of the superior trade. The definition of a trend at points 1 to 3 can be read in "<em>Das große Buch der Markttechnik</em>" by Michael Voigt (German only).</p>
 <h3 id="visualization-in-the-chart">Visualization in the chart</h3>
 <p>The parameter input settings define which trend sizes are shown in the chart and whether or not they are connected by a line.</p>
 <p>For the default settings, the trend T2 is enabled by default.</p>
@@ -3594,7 +3594,7 @@ Print(&quot;The stochastic line %D is currently at: &quot; + Stochastics(3, 14, 
 
 <h2 id="stochastics-fast">Stochastics Fast</h2>
 <h3 id="description_90">Description</h3>
-<p>See [<em>stochastics</em>].</p>
+<p>See <a href="#stochastics"><em>stochastics</em></a>.</p>
 <h3 id="interpretation_53">Interpretation</h3>
 <p>Closing prices that are constantly in the upper area indicate accumulation (i.e. buying pressure), whilst the distribution (i.e. selling pressure) is shown by an indicator value in the lower area.</p>
 <h3 id="further-information_40">Further information</h3>
@@ -3754,72 +3754,23 @@ SuperTrend(IDataSeries input, SuperTrendMode stMode, int length, double multipli
 <td>SuperTrendMAType.WMA</td>
 <td></td>
 </tr>
-<tr>
-<td>Also see: [<em>HMA</em>], [<em>SMA</em>], [<em>SMMA</em>], [<em>TEMA</em>], [<em>TMA</em>], [<em>VMA</em>], [<em>VWMA</em>], [<em>WMA</em>][<em>VMA</em>].</td>
-<td></td>
-</tr>
-<tr>
-<td>Default: HMA</td>
-<td></td>
-</tr>
-<tr>
-<td>multiplier</td>
-<td>This is a multiplier for the internal calculation of the offset. This is only used when the method is set to ATR and DualThrust.</td>
-</tr>
-<tr>
-<td>(In the adaptive mode, the multiplier uses the Homodyne Discriminator)</td>
-<td></td>
-</tr>
-<tr>
-<td>Default: 2.618</td>
-<td></td>
-</tr>
-<tr>
-<td>Period</td>
-<td>Number of bars used for the calculation of the moving average</td>
-</tr>
-<tr>
-<td>Default: 14</td>
-<td></td>
-</tr>
-<tr>
-<td>smooth</td>
-<td>Values for additional smoothing</td>
-</tr>
-<tr>
-<td>If no smoothing is necessary, this value can be set to 1</td>
-<td></td>
-</tr>
-<tr>
-<td>Default: 14</td>
-<td></td>
-</tr>
-<tr>
-<td>stMode</td>
-<td>The following methods can be chosen:</td>
-</tr>
-<tr>
-<td>SuperTrendMode.ATR,</td>
-<td></td>
-</tr>
-<tr>
-<td>SuperTrendMode.DualThrust,</td>
-<td></td>
-</tr>
-<tr>
-<td>SuperTrendMode.Adaptive</td>
-<td></td>
-</tr>
-<tr>
-<td>The Period Parameter will have a huge influence when the DualThrustMode is selected. The smaller the period, the tighter the indicator will follow price developments.</td>
-<td></td>
-</tr>
-<tr>
-<td>Default: SuperTrendMode.ATR</td>
-<td></td>
-</tr>
 </tbody>
 </table>
+<p>Also see: <a href="#hma-hull-moving-average"><em>HMA</em></a>, <a href="#sma-simple-moving-average"><em>SMA</em></a>, <a href="#smma-smoothed-moving-average"><em>SMMA</em></a>, <a href="#tema-triple-exponential-moving-average"><em>TEMA</em></a>, <a href="#tma-triangular-moving-average"><em>TMA</em></a>, <a href="#vma-variable-moving-average"><em>VMA</em></a>, <a href="#vwma-volume-weighted-moving-average"><em>VWMA</em></a>, <a href="#wma-weighted-moving-average"><em>WMA</em></a>.
+Default:
+              HMA  |
+| multiplier | This is a multiplier for the internal calculation of the offset. This is only used when the method is set to ATR and DualThrust.
+(In the adaptive mode, the multiplier uses the Homodyne Discriminator)
+Default: 2.618      |
+| Period     | Number of bars used for the calculation of the moving average
+Default: 14    |
+| smooth     | Values for additional smoothing
+If no smoothing is necessary, this value can be set to 1
+Default: 14     |
+| stMode     | The following methods can be chosen:
+SuperTrendMode.ATR, SuperTrendMode.DualThrust,  SuperTrendMode.Adaptive
+The Period Parameter will have a huge influence when the DualThrustMode is selected. The smaller the period, the tighter the indicator will follow price developments.
+Default: SuperTrendMode.ATR     |</p>
 <h3 id="visualization_85">Visualization</h3>
 <p><img alt="SuperTrend" src="../media/image98.png" /></p>
 <h3 id="example_86">Example</h3>
@@ -3995,7 +3946,7 @@ ConstantLines(double line1Value, double line2Value, double line3Value, double li
 <h3 id="description_98">Description</h3>
 <p>This function delivers the values for the open, high and low of the current day i.e. session.</p>
 <p>CurrentDayOHL is intended for use with intraday data series.</p>
-<p>See [<em>PriorDayOHLC</em>], [<em>DayLines</em>].</p>
+<p>See <a href="#priordayohlc"><em>PriorDayOHLC</em></a>, <a href="#daylines"><em>DayLines</em></a>.</p>
 <h3 id="parameter_8">Parameter</h3>
 <p>input Input data series for the indicator</p>
 <h3 id="return-value_92">Return value</h3>
@@ -4029,7 +3980,7 @@ CurrentDayOHL(IDataSeries input).CurrentLow[int barsAgo]
 <p>This indicator delivers information concerning the changes in the price movements based on either a past close or a current-day open in comparison to the current price level.</p>
 <p>The Daily Performance can be displayed in points, ticks, percent, or a currency value.</p>
 <p>Colors and other settings can be freely adjusted.</p>
-<p>See [<em>Momentum</em>], [<em>ROC</em>].</p>
+<p>See <a href="#momentum"><em>Momentum</em></a>, <a href="#rate-of-change-roc"><em>ROC</em></a>.</p>
 <p><strong>Regarding usage with a scanner:</strong>
 To get a list of your favorite stocks and their daily percentual changes, please set CalculateOnClosedBar to “False”, TimeFrame to “1 Day”, Calculation mode to “Percent” and Days ago to “0”.</p>
 <p><img alt="settings" src="../media/image104.png" /></p>
@@ -4079,13 +4030,13 @@ DailyPerformance(DailyPerformanceReference.PreviousClose, DailyPerformanceCalcul
 <h3 id="description_100">Description</h3>
 <p>The DayLines indicator draws lines for the previous day’s high, low, and close. It also draws a line for the current day’s open. These lines often show a reaction to the market.
 Each line can be turned on or off, and the colors and line strengths can be freely set.</p>
-<p>See [<em>CurrentDayOHL</em>], [<em>PriorDayOHLC</em>].</p>
+<p>See <a href="#currentdayohl"><em>CurrentDayOHL</em></a>, <a href="#priordayohlc"><em>PriorDayOHLC</em></a>.</p>
 <h3 id="visualization_92">Visualization</h3>
 <p><img alt="DayLines" src="../media/image107.png" /></p>
 <h2 id="daylinesadv">DayLinesAdv</h2>
 <h3 id="description_101">Description</h3>
 <p>DayLinesAdv draws horizontal lines for the previous day’s high, low, and close, as well as the current day’s open.</p>
-<p>[<em>CurrentDayOHL</em>], [<em>PriorDayOHLC</em>].</p>
+<p><a href="#currentdayohl"><em>CurrentDayOHL</em></a>, <a href="#priordayohlc"><em>PriorDayOHLC</em></a>.</p>
 <p><strong>DaysBack parameter</strong></p>
 <p>The DaysBack parameter sets the number of days in the past for which the lines are to be placed onto the chart.</p>
 <p><strong>Include Weekends parameter</strong>
@@ -4104,8 +4055,8 @@ If set to “true”, the highs and lows that have not yet been „breached“ b
 <p><img alt="highs and lows" src="../media/image111.png" /></p>
 <h2 id="getdaybar">GetDayBar</h2>
 <h3 id="description_102">Description</h3>
-<p>The function GetDayBar() outputs all values (open, high, low, close, time, median, typical, volume, and weighted) for a specified past or current day i.e. session. GetDayBar() is not intended to be used inside the chart. For this purpose, DayLinesAdv should be used instead. GetDayBar is mainly used as a high-performance replacement for [<em>PriorDayOHLC()</em>][<em>PriorDayOHLC</em>].</p>
-<p>Several data feed providers also offer historical data, in which case we recommend that you use GetDayBar. If it is intraday data that is offered, it still works adequately to use [<em>PriorDayOHLC()</em>][<em>PriorDayOHLC</em>].</p>
+<p>The function GetDayBar() outputs all values (open, high, low, close, time, median, typical, volume, and weighted) for a specified past or current day i.e. session. GetDayBar() is not intended to be used inside the chart. For this purpose, DayLinesAdv should be used instead. GetDayBar is mainly used as a high-performance replacement for <a href="#priordayohlc"><em>PriorDayOHLC</em></a>.</p>
+<p>Several data feed providers also offer historical data, in which case we recommend that you use GetDayBar. If it is intraday data that is offered, it still works adequately to use <a href="#priordayohlc"><em>PriorDayOHLC</em></a>.</p>
 <p>If the outputted data varies, the main cause is normally assumed to be the difference between Session Begin and Session End.</p>
 <h3 id="parameters_84">Parameters</h3>
 <p>daysAgo Number of days in the past
@@ -4210,7 +4161,7 @@ The colors and line widths are freely configurable.</p>
 <p>PriorDayOHLC shows the values for yesterday’s (i.e. the previous session’s) open, high, low, and close. PriorDayOHLC works best when used together with the intraday data series.</p>
 <p><strong>PriorDayOHLCext</strong>
 PriorDayOHLCext For people in different time zones, PriorDayOHLCext makes it possible to set the IncludeWeekend parameter to “true”, which is helpful because all data originating from a Saturday or Sunday is treated as if it comes from the previous Friday’s session.</p>
-<p>See [<em>CurrentDayOHL</em>], [<em>DayLines</em>].</p>
+<p>See <a href="#currentdayohl"><em>CurrentDayOHL</em></a>, <a href="#daylines"><em>DayLines</em></a>.</p>
 <h3 id="parameter_9">Parameter</h3>
 <p>input Input data series for the indicator</p>
 <h3 id="return-value_97">Return value</h3>
@@ -4248,12 +4199,12 @@ Print(&quot;Yesterday’s close was &quot; + PriorDayOHLC().PriorClose[0]);
 </code></pre>
 
 <h2 id="priordayohlcext">PriorDayOHLCext</h2>
-<p>See [<em>PriorDayOHLC</em>][<em>PriorDayOHLC</em>].</p>
+<p>See <a href="#priordayohlc"><em>PriorDayOHLC</em></a>.</p>
 <h2 id="sessionbreaklines">SessionBreakLines</h2>
 <h3 id="description_109">Description</h3>
 <p>The indicator SessionBreakLines draws a vertical line at the first candle of a new trading session.
 What is special about this indicator is that you can manually set how the so-called “weekend sessions” should be handled. If the parameter IncludeWeekends is set to “true”, then the Sunday sessions will be added to the Friday’s session.
-See [<em>PriorDayOHLCext</em>].</p>
+See <a href="#priordayohlc"><em>PriorDayOHLC</em></a>.</p>
 <h3 id="visualization_99">Visualization</h3>
 <p><img alt="PriorDayOHLCext" src="../media/image118.png" /></p>
 <h2 id="showbidask">ShowBidAsk</h2>
@@ -4441,7 +4392,7 @@ Print(&quot;The current value for the Volume Oscillator is: &quot; + VolumeOszil
 <p>The VolumeProfile indicator displays the real-time volume profile as a vertical histogram on the chart. In this histogram, every bar depicts the cumulative traded volume for a certain price level. The starting bar for the calculations is labeled with a “#”.
 These bars inside the histogram have various colors: green indicates executions at or above the ask, which are interpreted as buys. Red means trades at or below the bid, which are interpreted as sells. Grey signifies neutral executions.
 It is important to note that the Volume Profile indicator only works together with a real-time data feed. After changes have been made in the properties window, the indicator is restarted and all values that have been calculated up to this point are lost.</p>
-<p>See: [<em>VolumeZones</em>]</p>
+<p>See: <a href="#volumezones"><em>VolumeZones</em></a></p>
 <h3 id="interpretation_63">Interpretation</h3>
 <p>Prices with especially high trading volume will have a more satiated accumulation and distribution at their respective levels. This leads to price resistance/support zones being formed.</p>
 <h3 id="visualization_107">Visualization</h3>
@@ -4500,7 +4451,7 @@ Print(&quot;The current volume is &quot; + VolumeUpDown()[0]);
 An up bar (where the close is above the open) shows the bar in green, and falling bars are displayed in red. The indicator is only designed to be used with historical data. In order to view volume changes in real-time, it is wise to consider using the VolumeProfile.</p>
 <h2 id="williams-r">Williams %R</h2>
 <h3 id="description_121">Description</h3>
-<p>Larry Williams developed the Williams %R. It is a momentum indicator, and is the inverse of the Fast [Stochastic Oscillator]. Williams %R, which is also called simply %R, reflects the level of the close relative to the highest high for the look-back period. The Stochastic Oscillator, on the other hand, reflects the level of the close relative to the lowest low. %R multiplies the raw value by -100 as a means of correcting for the inversion. This means that the Fast Stochastic Oscillator and Williams %R actually produce the exact same lines, with different scaling. The Williams %R fluctuates between 0 and -100. Values between 0 to -20 are deemed overbought, and values from -80 to -100 are seen as oversold. Naturally, signals taken from the Stochastic Oscillator can also be applied to Williams %R.</p>
+<p>Larry Williams developed the Williams %R. It is a momentum indicator, and is the inverse of the Fast Stochastic Oscillator. Williams %R, which is also called simply %R, reflects the level of the close relative to the highest high for the look-back period. The Stochastic Oscillator, on the other hand, reflects the level of the close relative to the lowest low. %R multiplies the raw value by -100 as a means of correcting for the inversion. This means that the Fast Stochastic Oscillator and Williams %R actually produce the exact same lines, with different scaling. The Williams %R fluctuates between 0 and -100. Values between 0 to -20 are deemed overbought, and values from -80 to -100 are seen as oversold. Naturally, signals taken from the Stochastic Oscillator can also be applied to Williams %R.</p>
 <h3 id="interpretation_64">Interpretation</h3>
 <p>As with the Stochastic Oscillator, Williams %R reflects the level of the close relative to the high-low range over a given period of time. Assume that the highest high equals 110, the lowest low equals 100 and the close equals 108. The high-low range is 10 (110 - 100), which is the denominator in the %R formula. The highest high less the close equals 2 (110 - 108), which is the numerator. 2 divided by 10 equals 0.20. Multiply this number by -100 to get -20 for %R. Williams %R would equal -30 if the close was 103 (0.30 x -100).</p>
 <p>The centerline, -50, is an important level to watch. Williams %R moves between 0 and -100, which makes -50 the midpoint. Think of it as the 50 yard line in football. The offense has a higher chance of scoring when it crosses the 50 yard line. The defense has an edge as long as it prevents the offense from crossing the 50 yard line. A Williams %R cross above -50 signals that prices are trading in the upper half of their high-low range for the given look-back period. This suggests that the cup is half full. Conversely, a cross below -50 means prices are trading in the bottom half of the given look-back period. This suggests that the cup is half empty.</p>

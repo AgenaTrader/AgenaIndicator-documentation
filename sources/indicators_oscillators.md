@@ -2167,6 +2167,15 @@ You can use the indicator as a filter by using the signals of other indicators w
 
 ![Condition Escort](./media/image50.png)
 
+### MarketPhases Pro Description
+
+**Phase5Level**
+How far the price correction must be to become a valid market phase 5.
+
+**Phase4Level**
+How far the price correction must be to become a valid market phase 4.
+
+
 ##Momentum (MOM)
 ### Description
 Momentum is one of the most popular indicators available, the first choice of many traders. This relatively simple indicator is so popular because it measures the attenuation of the motion without the need for complex formulas. The momentum indicator represents a whole family of indicators that measure a movement’s strength. Other representatives in this case are the RSI or CCI, and so on. In the illustration below, the indicator is a graph that oscillates around a zero point. There is no fixed scale in percentage terms, and the value can be quite far removed from the zero point; this usually happens when the price makes an exceptionally strong leap, which is why the indicator predominantly shows the direction in which the current prices are moving towards.

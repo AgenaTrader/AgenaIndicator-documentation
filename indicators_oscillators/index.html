@@ -1108,7 +1108,7 @@ ClimacticDistance(IDataSeries InSeries, int sMAPeriod, int thresholdPercent, Col
 <h3 id="return-value_18">Return value</h3>
 <p><strong>double</strong></p>
 <h3 id="parameters_16">Parameters</h3>
-<p>Image</p>
+<p>Int</p>
 <h3 id="visualization_19">Visualization</h3>
 <p>Image</p>
 <h3 id="example_18">Example</h3>
@@ -2084,6 +2084,11 @@ Print(&quot;Lower band of the MA Envelope: &quot; + MAEnvelopes(1.5, MAEnvelopes
 <p>When using market phases within AgenaScript, the indicator provides a data series that has the aforementioned values of +/-3, 4, 5, 55, 66.</p>
 <p>You can use the indicator as a filter by using the signals of other indicators when they are inside the market phases 55 or 66 (long):</p>
 <p><img alt="Condition Escort" src="../media/image50.png" /></p>
+<h3 id="marketphases-pro-description">MarketPhases Pro Description</h3>
+<p><strong>Phase5Level</strong>
+How far the price correction must be to become a valid market phase 5.</p>
+<p><strong>Phase4Level</strong>
+How far the price correction must be to become a valid market phase 4.</p>
 <h2 id="momentum-mom">Momentum (MOM)</h2>
 <h3 id="description_47">Description</h3>
 <p>Momentum is one of the most popular indicators available, the first choice of many traders. This relatively simple indicator is so popular because it measures the attenuation of the motion without the need for complex formulas. The momentum indicator represents a whole family of indicators that measure a movement’s strength. Other representatives in this case are the RSI or CCI, and so on. In the illustration below, the indicator is a graph that oscillates around a zero point. There is no fixed scale in percentage terms, and the value can be quite far removed from the zero point; this usually happens when the price makes an exceptionally strong leap, which is why the indicator predominantly shows the direction in which the current prices are moving towards.</p>
@@ -2832,6 +2837,150 @@ Print(&quot;The current value for the OBV is &quot; + OBV()[0]);
 <p>All public variables are available to you inside the Condition Escort as data series; they can be found under „Series &amp; Output Values“.
 The name has an underscore ("_") suffix in order to differentiate it.</p>
 <p>The parameters “trendSize” and “occurrence” can be found within the Condition Escort.</p>
+<h3 id="p123pro">P123Pro</h3>
+<p>The parameter TrendSize can be found under the parameter settings (see figure). It is only intended to be used within the Condition Escort. This parameter is not relevant for display in the chart. The display is only controlled by the following settings: "Display 123" and "Display Lines".</p>
+<p><img alt="parameter settings" src="../media/P123Pro.png" /></p>
+<p>You can see in the respectful description fields for each parameter to which extend the particular parameters may influence the chart or Condition Escort as well as AgenaScript.</p>
+<h3 id="usage-in-the-agenascript">Usage in the AgenaScript</h3>
+<p>For the AgenaScript purposes several data series of the same type are doubled. For each of these data series the common notation with ...[barsAgo] can be used.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TrendDirection</td>
+<td>1 = Uptrend -1 = Downtrend 0 = no trend defined according to the market technique</td>
+</tr>
+<tr>
+<td>IsP21</td>
+<td>If a bar represents an old point 2 and at the same time a new point 1, it will be labelled in the chart as "(2) 1". The value of this bar (and all subsequent bars up to the next point 2) will be 1, and 0 otherwise.</td>
+</tr>
+<tr>
+<td>IsTrendValid</td>
+<td>1 = defines a confirmed trend, i.e. at least a point sequence 1 - 2 - 3 - 2. 0 = there is no confirmed trend yet. (Phase 1 and 2 according to market technique)</td>
+</tr>
+<tr>
+<td>LastPoint</td>
+<td>Provides the latest point of the trend, i.e. 1, 2, or 3</td>
+</tr>
+<tr>
+<td>LastPointPrice</td>
+<td>Provides the corresponding market value of the latest point according to the market technique</td>
+</tr>
+<tr>
+<td>LastPointDateTime</td>
+<td>Provides the corresponding date and time related to the latest point according to the market technique</td>
+</tr>
+<tr>
+<td>LastPointExtInfo</td>
+<td>Provides the corresponding label of the latest point according to the market technique. The labelling should be additionally defined in Parameter tab. The slope is a chart-only feature therefore it is neither in Conditions, nor in the AgenaScript available.</td>
+</tr>
+<tr>
+<td>P1Price</td>
+<td>Provides the market value of the latest point 1</td>
+</tr>
+<tr>
+<td>P1DateTime</td>
+<td>Provides the date and time of the latest point 2</td>
+</tr>
+<tr>
+<td>PriorP2Price</td>
+<td>efert die Datums- und Zeitangabe des vorletzten Punkt 2</td>
+</tr>
+<tr>
+<td>TempP3Price</td>
+<td>Provides the date and time of the second last point 2</td>
+</tr>
+<tr>
+<td>TempP3DateTime</td>
+<td>Provides the date and time of the last preliminary point 3</td>
+</tr>
+<tr>
+<td>ValidP3Price</td>
+<td>Provides the market value of the last valid point 3. This market value defines the stop movement according to the market techniques. When this point is crossed, there is a trend break from the market technique perspective.</td>
+</tr>
+<tr>
+<td>ValidP3DateTime</td>
+<td>Provides the date and time of the last valid point 3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameters_58">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>trendsize</td>
+<td>Trend size of 0 .. 3</td>
+</tr>
+<tr>
+<td>breakageP2</td>
+<td>Shows an arrow in the chart, when a break of P2 occurs or has been already completed. The figure is expressed as a percentage between -100 and +100. -20 alerts e.g. 20% before the P2 will be reached</td>
+</tr>
+<tr>
+<td>extInfo</td>
+<td>Selection of a labelling</td>
+</tr>
+<tr>
+<td>p2Distance</td>
+<td><strong>Uncertainty:</strong> this is a factor (between 0 and 1) that defines, how far has to be the P2 from the "old" valid P2 in order to be treated as valid. The previous movement is decisive in this case.</td>
+</tr>
+<tr>
+<td>p3Distance</td>
+<td><strong>Uncertainty:</strong> this is a factor (between 0 and 1) that defines, how far has to be the P3 from the "old" valid P2 in order to be treated as valid. The previous movement is decisive in this case..</td>
+</tr>
+<tr>
+<td>p3BreakageDistance</td>
+<td><strong>Uncertainty:</strong> this is a factor (between 0 and 1) that defines when a trend brake is valid. The previous movement is decisive in this case. So, for instance, the breakout of the latest P3 (with one tick only) will not be considered as the breakout anymore.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples_1">Examples</h3>
+<pre><code class="cs">private void PrintOutTrendProperties(int trendSize)
+private void PrintOutTrendProperties(int trendSize)
+{
+    // revers order of prints fills output window in correct order
+    Print(&quot;&quot;);
+    Print(&quot;IsP21: &quot; +  P123Pro(trendSize).IsP21[0]);
+    Print(&quot;valid P3 date: &quot; +  P123Pro(trendSize).ValidP3DateTime[0]);
+    Print(&quot;valid P3 price: &quot; +  P123Pro(trendSize).ValidP3Price[0]);
+    Print(&quot;temp P3 date: &quot; +  P123Pro(trendSize).TempP3DateTime[0]);
+    Print(&quot;temp P3 price: &quot; +  P123Pro(trendSize).TempP3Price[0]);
+    Print(&quot;P2 date: &quot; +  P123Pro(trendSize).P2DateTime[0]);
+    Print(&quot;P2 price: &quot; +  P123Pro(trendSize).P2Price[0]);
+    Print(&quot;P1 date: &quot; +  P123Pro(trendSize).P1DateTime[0]);
+    Print(&quot;P1 price: &quot; +  P123Pro(trendSize).P1Price[0]);
+    Print(&quot;last point date: &quot; +  P123Pro(trendSize).LastPointDateTime[0]);
+    Print(&quot;last point price: &quot; +  P123Pro(trendSize).LastPointPrice[0]);
+    Print(&quot;last point: &quot; +  P123Pro(trendSize).LastPoint[0]);
+    Print(&quot;Is trend valid: &quot; +  P123Pro(trendSize).IsTrendValid[0]);
+    Print(&quot;Trend direction: &quot; +  P123Pro(trendSize).TrendDirection[0]);
+    Print(&quot;P2Breakout: &quot; +  P123Pro(trendSize).P2Breakout[0]);
+    Print(&quot;Extended Information: &quot; +  P123Pro(trendSize).LastPointExtInfo[0]);
+}
+</code></pre>
+
+<h3 id="usage-in-the-condition-escort">Usage in the Condition Escort</h3>
+<p>All data series (excluding the DateTime series) are available in the Condition Escort under the "Series &amp; Output Values".</p>
+<p>Logical variables (true and false) are replaced by the numbers 1 and 0. The "TrendSize" parameter is available in the Condition Escort as well. The description you will find below.</p>
+<h3 id="examples_2">Examples</h3>
+<p>Inquiry whether the currently active in the chart middle trend is a downtrend: 
+P123Pro(Close, 1).TrendDirection[0] - Inh. TimeFrame   ==   1</p>
+<p>Inquiry whether the latest point of the currently active in the chart smallest trend is a Point2: 
+P123Pro(Close, 3).LastPoint[0] - Inh. TimeFrame   ==   2</p>
+<p>Inquiry whether the latest bar under the valid point 3 (not the 3?) of the small trend has been closed: 
+P123Pro(Close, 2).isTrendValid[0] - Inh. TimeFrame   ==   1 
+UND (also neue Zeile)
+Close[0] - Inh. TimeFrame   &lt;   P123Pro(Close, 2).ValidP3Price[0] - Inh. TimeFrame </p>
 <h2 id="parabolic-sar">Parabolic SAR</h2>
 <h3 id="description_71">Description</h3>
 <p>Welles Wilder came up with the Parabolic SAR, which denotes a price and time-based trading system. Wilder named this the "Parabolic Time/Price System." SAR signifies "stop and reverse," which is the name of the actual indicator used in his system, where <strong>SAR trails price as the trend extends over time</strong>. When prices are rising, the indicator is below them, and when prices are falling, it is above them. Therefore the indicator stops and reverses when the price trend reverses and breaks either above or below the indicator.</p>
@@ -2850,7 +2999,7 @@ ParabolicSAR(IDataSeries input, double acceleration, double accelerationStep, do
 <h3 id="return-value_66">Return value</h3>
 <p><strong>double</strong></p>
 <p>When using this method with an index (e.g. <strong>ParabolicSAR</strong>(...)[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
-<h3 id="parameters_58">Parameters</h3>
+<h3 id="parameters_59">Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -2903,7 +3052,7 @@ PPO(IDataSeries input, int fast, int slow, int smooth).Smoothed[int barsAgo]
 <h3 id="return-value_67">Return value</h3>
 <p><strong>double</strong></p>
 <p>When using this method with an index (e.g. <strong>PPO</strong>(12,26,9)[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
-<h3 id="parameters_59">Parameters</h3>
+<h3 id="parameters_60">Parameters</h3>
 <p>input Input data series for the indicator</p>
 <p>fast Number of bars for the calculation of the fast EMA</p>
 <p>slow Number of bars for the calculation of the slow EMA</p>
@@ -2941,7 +3090,7 @@ PercentEnvelopes(IDataSeries input, double percent).LowerPercentBand[int barsAgo
 <h3 id="return-value_68">Return value</h3>
 <p><strong>double</strong></p>
 <p>When using this method with an index (e.g. <strong>PercentEnvelopes</strong>(2)[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
-<h3 id="parameters_60">Parameters</h3>
+<h3 id="parameters_61">Parameters</h3>
 <p>input Input data series for the indicator</p>
 <p>percent Difference in % for the bands (from the input value)</p>
 <h3 id="visualization_66">Visualization</h3>
@@ -2982,7 +3131,7 @@ PivotPoints(IDataSeries input, PivotPointsMode mode, int LineWidth, bool ShowPri
 PivotPoints(PivotPointsMode.Classic).S3[int barsAgo]
 </code></pre>
 
-<h3 id="parameters_61">Parameters</h3>
+<h3 id="parameters_62">Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -3124,7 +3273,7 @@ PFE(IDataSeries input, int period)[int barsAgo]
 <h3 id="return-value_70">Return value</h3>
 <p><strong>double</strong></p>
 <p>When using this method with an index (e.g. <strong>PFE</strong>(20)[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
-<h3 id="parameters_62">Parameters</h3>
+<h3 id="parameters_63">Parameters</h3>
 <p>input Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_68">Visualization</h3>
@@ -3147,7 +3296,7 @@ PriceOscillator(IDataSeries input, int fast, int slow, int smooth)[int barsAgo]
 <h3 id="return-value_71">Return value</h3>
 <p><strong>double</strong></p>
 <p>When using this method with an index (e.g. <strong>PriceOscillator</strong>(12,26,9)[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
-<h3 id="parameters_63">Parameters</h3>
+<h3 id="parameters_64">Parameters</h3>
 <p>input Input data series for the indicator</p>
 <p>fast Number of bars used for the calculation of the fast EMA</p>
 <p>slow Number of bars used for the calculation of the slow EMA</p>
@@ -3174,7 +3323,7 @@ Blue ЕМА: 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41;
 Green ЕМА: 44, 47, 50, 53, 56, 59, 62, 65, 68, 71, 74;
 Red ЕМА: 78, 82, 86, 90, 94, 98, 102, 106, 110, 114, 118, 122;
 Pink ЕМА: 125, 130, 135, 140, 145, 150, 155, 160, 165, 170, 175, 180, 185, 190, 195, 200.</p>
-<h3 id="parameters_64">Parameters</h3>
+<h3 id="parameters_65">Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -3202,6 +3351,7 @@ Pink ЕМА: 125, 130, 135, 140, 145, 150, 155, 160, 165, 170, 175, 180, 185, 19
 </tbody>
 </table>
 <h3 id="visualisation">Visualisation</h3>
+<p><img alt="Rainbow" src="../media/rainbow.png" /></p>
 <h2 id="range">Range</h2>
 <h3 id="description_78">Description</h3>
 <p>Range delivers the span/difference between the high and low in ticks for each bar. The range is always greater than or equal to 0.</p>
@@ -3244,7 +3394,7 @@ RIND(IDataSeries input, int periodQ, int smooth)[int barsAgo]
 <h3 id="return-value_74">Return value</h3>
 <p><strong>double</strong></p>
 <p>When using this method with an index (e.g. <strong>RIND</strong>(3,10)[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
-<h3 id="parameters_65">Parameters</h3>
+<h3 id="parameters_66">Parameters</h3>
 <p>input Input data series for the indicator</p>
 <p>periodQ Number of bars used for the short-term stochastic</p>
 <p>smooth Number of bars used for smoothing the indicator (using an EMA)</p>
@@ -3275,7 +3425,7 @@ ROC(IDataSeries input, int period)[int barsAgo]
 <h3 id="return-value_75">Return value</h3>
 <p><strong>double</strong></p>
 <p>When using this method with an index (e.g. <strong>ROC</strong>(14)[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
-<h3 id="parameters_66">Parameters</h3>
+<h3 id="parameters_67">Parameters</h3>
 <p>input Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_72">Visualization</h3>
@@ -3311,7 +3461,7 @@ RSS(IDataSeries input, int eMA1, int eMA2, int length)[int barsAgo]
 <h3 id="return-value_76">Return value</h3>
 <p><strong>double</strong></p>
 <p>When using this method with an index (e.g. <strong>RSS</strong>(10,40,5)[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
-<h3 id="parameters_67">Parameters</h3>
+<h3 id="parameters_68">Parameters</h3>
 <p>input Input data series for the indicator</p>
 <p>length Number of bars used in the calculation</p>
 <p>eMA1 Number of periods for the first EMA</p>
@@ -3344,7 +3494,7 @@ RSI(IDataSeries input, int period, int smooth).Avg[int barsAgo]
 <h3 id="return-value_77">Return value</h3>
 <p><strong>double</strong></p>
 <p>When using this method with an index (e.g. <strong>RSI</strong>(14,3)[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
-<h3 id="parameters_68">Parameters</h3>
+<h3 id="parameters_69">Parameters</h3>
 <p>input Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <p>smooth Number of periods for the smoothing</p>
@@ -3372,7 +3522,7 @@ RSL(IDataSeries input, int period)[int barsAgo]
 <h3 id="return-value_78">Return value</h3>
 <p><strong>double</strong></p>
 <p>When using this method with an index (e.g. <strong>RSL</strong>(27)[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
-<h3 id="parameters_69">Parameters</h3>
+<h3 id="parameters_70">Parameters</h3>
 <p>input Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_75">Visualization</h3>
@@ -3399,7 +3549,7 @@ RVI(IDataSeries input, int period)[int barsAgo]
 <h3 id="return-value_79">Return value</h3>
 <p><strong>double</strong></p>
 <p>When using this method with an index (e.g. <strong>RVI</strong>(14)[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
-<h3 id="parameters_70">Parameters</h3>
+<h3 id="parameters_71">Parameters</h3>
 <p>input Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_76">Visualization</h3>
@@ -3433,7 +3583,7 @@ Reversalbars(IDataSeries input, int tolerance)[int barsAgo]
 <p>-1 = short reversal bar</p>
 <p>0 = no reversal bar</p>
 <p>When using this method with an index (e.g. <strong>Reversalbars</strong>()[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
-<h3 id="parameters_71">Parameters</h3>
+<h3 id="parameters_72">Parameters</h3>
 <p>input Input data series for the indicator</p>
 <p>tolerance See the following description below</p>
 <h3 id="visualization_77">Visualization</h3>
@@ -3468,7 +3618,7 @@ RSquared(IDataSeries input, int period)[int barsAgo]
 <h3 id="return-value_81">Return value</h3>
 <p><strong>double</strong></p>
 <p>When using this method with an index (e.g. <strong>RSquared</strong>(8)[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
-<h3 id="parameters_72">Parameters</h3>
+<h3 id="parameters_73">Parameters</h3>
 <p>input Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_78">Visualization</h3>
@@ -3495,7 +3645,7 @@ StdDev (IDataSeries input, int period)[int barsAgo]
 <h3 id="return-value_82">Return value</h3>
 <p><strong>double</strong></p>
 <p>When using this method with an index (e.g. <strong>StdDev</strong>(14)[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
-<h3 id="parameters_73">Parameters</h3>
+<h3 id="parameters_74">Parameters</h3>
 <p>input Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_79">Visualization</h3>
@@ -3530,7 +3680,7 @@ StdError(IDataSeries input, int period).Lower[int barsAgo]
 <h3 id="return-value_83">Return value</h3>
 <p><strong>double</strong></p>
 <p>When using this method with an index (e.g. <strong>StdError</strong>(21)[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
-<h3 id="parameters_74">Parameters</h3>
+<h3 id="parameters_75">Parameters</h3>
 <p>input Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_80">Visualization</h3>
@@ -3577,7 +3727,7 @@ Stochastics(IDataSeries input, int periodD, int periodK, int smooth).K[int barsA
 <h3 id="return-value_84">Return value</h3>
 <p><strong>double</strong></p>
 <p>When using this method with an index (e.g. <strong>Stochastics</strong>(7,14,3)[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
-<h3 id="parameters_75">Parameters</h3>
+<h3 id="parameters_76">Parameters</h3>
 <p>input Input data series for the indicator</p>
 <p>periodD Number of periods to be used for the %K smoothing</p>
 <p>periodK Number of bars included in the %K calculation</p>
@@ -3616,7 +3766,7 @@ StochasticsFast(IDataSeries input, int periodD, int periodK).K[int barsAgo]
 <h3 id="return-value_85">Return value</h3>
 <p><strong>double</strong></p>
 <p>When using this method with an index (e.g. <strong>StochasticsFast</strong>(7,14)[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
-<h3 id="parameters_76">Parameters</h3>
+<h3 id="parameters_77">Parameters</h3>
 <p>input Input data series for the indicator</p>
 <p>periodD Number of periods for the smoothing of %K</p>
 <p>periodK Number of periods included in the calculation of %K</p>
@@ -3647,7 +3797,7 @@ StochRSI(IDataSeries input, int period)[int barsAgo]
 <h3 id="return-value_86">Return value</h3>
 <p><strong>double</strong></p>
 <p>When using this method with an index (e.g. <strong>StochRSI</strong>(14)[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
-<h3 id="parameters_77">Parameters</h3>
+<h3 id="parameters_78">Parameters</h3>
 <p>input Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_83">Visualization</h3>
@@ -3670,7 +3820,7 @@ SUM(IDataSeries input, int period)[int barsAgo]
 <h3 id="return-value_87">Return value</h3>
 <p><strong>double</strong></p>
 <p>When using this method with an index (e.g. <strong>SUM</strong>(14)[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
-<h3 id="parameters_78">Parameters</h3>
+<h3 id="parameters_79">Parameters</h3>
 <p>input Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_84">Visualization</h3>
@@ -3705,7 +3855,7 @@ SuperTrend(IDataSeries input, SuperTrendMode stMode, int length, double multipli
 <h3 id="return-value_88">Return value</h3>
 <p><strong>double</strong></p>
 <p>When using this method with an index (e.g. <strong>SuperTrend</strong>(...).UpTrend[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
-<h3 id="parameters_79">Parameters</h3>
+<h3 id="parameters_80">Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -3791,7 +3941,7 @@ if (Close[0] &lt; SuperTrend(SuperTrendMode.ATR, 14, 2.618, MovingAverageType.HM
 <p>S/R zones play an important role in technical analysis. Clearly defined and identifiable support areas provide favorable entry opportunities, while resistance areas provide target zones to exit those trades.
 Once broken, these areas tend to reverse their function, meaning that a broken support zone becomes a resistance zone.</p>
 <p><a href="http://finanzportal.wiwi.uni-saarland.de/tech/Kapitel5_4.htm">http://finanzportal.wiwi.uni-saarland.de/tech/Kapitel5_4.htm</a></p>
-<h3 id="parameters_80">Parameters</h3>
+<h3 id="parameters_81">Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -3851,7 +4001,7 @@ Swing(IDataSeries input, int strength).SwingLowBar(int barsAgo, int instance, in
 <p><strong>double</strong></p>
 <p>When using this method with an index (e.g. <strong>Swing</strong>(5)[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
 <p><strong>When the current bar is smaller than the parameter strength, or if no swing high/low has been found, the return value is -1.</strong></p>
-<h3 id="parameters_81">Parameters</h3>
+<h3 id="parameters_82">Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -3913,7 +4063,7 @@ TSF(IDataSeries input, int forecast, int period)[int barsAgo]
 <h3 id="return-value_90">Return value</h3>
 <p><strong>double</strong></p>
 <p>When using this method with an index (e.g. <strong>TSF</strong>(3,14)[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
-<h3 id="parameters_82">Parameters</h3>
+<h3 id="parameters_83">Parameters</h3>
 <p>forecast Number of bars used for the forecast</p>
 <p>input Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
@@ -3996,7 +4146,7 @@ DailyPerformance(IDataSeries input,DailyPerformanceReference reference, DailyPer
 <h3 id="return-value_93">Return value</h3>
 <p><strong>double</strong></p>
 <p>When using this method with an index (e.g. <strong>DailyPerformance</strong>(...)[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
-<h3 id="parameters_83">Parameters</h3>
+<h3 id="parameters_84">Parameters</h3>
 <p>input Input data series for the indicator</p>
 <p>reference Possible values are:
 -   DailyPerformanceReference.Open
@@ -4058,7 +4208,7 @@ If set to “true”, the highs and lows that have not yet been „breached“ b
 <p>The function GetDayBar() outputs all values (open, high, low, close, time, median, typical, volume, and weighted) for a specified past or current day i.e. session. GetDayBar() is not intended to be used inside the chart. For this purpose, DayLinesAdv should be used instead. GetDayBar is mainly used as a high-performance replacement for <a href="#priordayohlc"><em>PriorDayOHLC</em></a>.</p>
 <p>Several data feed providers also offer historical data, in which case we recommend that you use GetDayBar. If it is intraday data that is offered, it still works adequately to use <a href="#priordayohlc"><em>PriorDayOHLC</em></a>.</p>
 <p>If the outputted data varies, the main cause is normally assumed to be the difference between Session Begin and Session End.</p>
-<h3 id="parameters_84">Parameters</h3>
+<h3 id="parameters_85">Parameters</h3>
 <p>daysAgo Number of days in the past
 (0 for the current value)</p>
 <h3 id="return-value_94">Return value</h3>
@@ -4106,7 +4256,7 @@ MAX (IDataSeries input, int period)[int barsAgo]
 <h3 id="return-value_95">Return value</h3>
 <p><strong>double</strong></p>
 <p>When using this method with an index (e.g. <strong>MAX</strong>(Close, 10)[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
-<h3 id="parameters_85">Parameters</h3>
+<h3 id="parameters_86">Parameters</h3>
 <p>input Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_94">Visualization</h3>
@@ -4130,7 +4280,7 @@ MIN (IDataSeries input, int period)[int barsAgo]
 <h3 id="return-value_96">Return value</h3>
 <p><strong>double</strong></p>
 <p>When using this method with an index (e.g. <strong>MIN</strong>(Close, 10)[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
-<h3 id="parameters_86">Parameters</h3>
+<h3 id="parameters_87">Parameters</h3>
 <p>input Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_95">Visualization</h3>
@@ -4144,7 +4294,7 @@ Print(&quot;The lowest value of the last 20 periods is &quot; + MIN(Low, 20)[0])
 <h3 id="description_106">Description</h3>
 <p>What MTFBoxes does is to draw a colored area behind the bars that signify a candle from a higher timeframe. This therefore makes it possible to depict an hourly candle inside a 5-minute chart. The area would contain all 5-minute bars that are located within said hourly candle.</p>
 <p>The area turns greener if the candle of the higher timeframe is rising. A Doji would be shown in grey.</p>
-<h3 id="parameters_87">Parameters</h3>
+<h3 id="parameters_88">Parameters</h3>
 <p>TimeFrame Timeframe of the “virtual” candle (second, minute, hour, day, week, month)
 TimeFrameValue Value of the timeframe (number)</p>
 <h3 id="visualization_96">Visualization</h3>
@@ -4236,7 +4386,7 @@ TSI(IDataSeries input, int fast, int slow)[int barsAgo]
 <h3 id="return-value_98">Return value</h3>
 <p><strong>double</strong></p>
 <p>When using this method with an index (e.g. <strong>TSI</strong>(3,14)[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
-<h3 id="parameters_88">Parameters</h3>
+<h3 id="parameters_89">Parameters</h3>
 <p>input Input data series for the indicator</p>
 <p>fast Number of bars included in the calculation of the fast EMA</p>
 <p>slow Number of bars included in the calculation of the slow EMA</p>
@@ -4268,7 +4418,7 @@ UltimateOscillator(IDataSeries input, int fast, int intermediate, int slow)[int 
 <h3 id="return-value_99">Return value</h3>
 <p><strong>double</strong></p>
 <p>When using this method with an index (e.g. <strong>UltimateOscillator</strong> (5)[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
-<h3 id="parameters_89">Parameters</h3>
+<h3 id="parameters_90">Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -4350,7 +4500,7 @@ VOLMA(IDataSeries input, int period)[int barsAgo]
 <h3 id="return-value_101">Return value</h3>
 <p><strong>double</strong></p>
 <p>When using this method with an index (e.g. <strong>VOLMA</strong>(14)[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
-<h3 id="parameters_90">Parameters</h3>
+<h3 id="parameters_91">Parameters</h3>
 <p>input Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_105">Visualization</h3>
@@ -4376,7 +4526,7 @@ VolumeOscillator(IDataSeries input, int fast, int slow)[int barsAgo]
 <h3 id="return-value_102">Return value</h3>
 <p><strong>double</strong></p>
 <p>When using this method with an index (e.g. <strong>VolumeOszillator</strong>(12,26)[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
-<h3 id="parameters_91">Parameters</h3>
+<h3 id="parameters_92">Parameters</h3>
 <p>input Input data series for the indicator</p>
 <p>fast Number of bars for the calculation of the fast moving average</p>
 <p>slow Number of bars for the calculation of the slow moving average</p>
@@ -4412,7 +4562,7 @@ VROC(IDataSeries input, int period, int smooth)[int barsAgo]
 <h3 id="return-value_103">Return value</h3>
 <p><strong>double</strong></p>
 <p>When using this method with an index (e.g. <strong>VROC</strong>(14,3)[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
-<h3 id="parameters_92">Parameters</h3>
+<h3 id="parameters_93">Parameters</h3>
 <p>input Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <p>smooth Number of Bars included in the calculation for the smoothing</p>
@@ -4468,7 +4618,7 @@ WilliamsR(IDataSeries input, int period)[int barsAgo]
 <h3 id="return-value_105">Return value</h3>
 <p><strong>double</strong></p>
 <p>When using this method with an index (e.g. <strong>WilliamsR</strong>(14)[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
-<h3 id="parameters_93">Parameters</h3>
+<h3 id="parameters_94">Parameters</h3>
 <p>input Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_110">Visualization</h3>
@@ -4502,7 +4652,7 @@ ZigZag(IDataSeries input, DeviationType deviationType, double deviationValue, bo
 <p><strong>double</strong></p>
 <p>When using this method with an index (e.g. <strong>ZigZag</strong>(...)[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
 <p>A return value of 0 indicates that no high or low point has been found yet.</p>
-<h3 id="parameters_94">Parameters</h3>
+<h3 id="parameters_95">Parameters</h3>
 <table>
 <thead>
 <tr>

@@ -5240,6 +5240,8 @@ It screens for 3 signals (listed are the sub-criteria that must be met for the r
  6.11..3. Bar with small range 
  6.11..4. Above-average high volume 
  6.11..5. Close larger than or equal to the middle of the bar
+ 
+The VolumeSentiments provide the foundation for the calculation of the volume condition; see point 5. When a bullish VolumeSentiment occurs, the bar is colored in the respective color of the signal; you can change this color in the parameter setting
 
 ### Parameters
 to be announced
@@ -5281,7 +5283,8 @@ It screens for 3 signals (listed are the sub-criteria that must be met for the r
  6.12..3. Bar with small range 
  6.12..4.Above-average high volume 
  6.12..5.Close smaller than or equal the middle of the bar
-
+ 
+The VolumeSentiments provide the foundation for the calculation of the volume conditions; see point 5. When a bearish VolumeSentiment occurs, the bar is colored in the respective color of the signal; you can change this color in the parameter settings.
 
 ### Parameters
 to be announced
@@ -5480,7 +5483,11 @@ WilliamsR(IDataSeries input, int period)[int barsAgo]
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
 
 ### Description
-The WyckoffWave indicator adds the volume for each following bar until a price wave is over / finished. You can set the sensitivity of the price waves. When the  volume of a wave rises to particularly high values, is it very often because a turning point in the chart has been reached. When the volume bars are colored red, we are dealing with a short wave; green volume bars indicate a long wave. Using the parameter “MedianPeriod” you can select how sensitively the indicator should determine the individual price waves. The smaller the value, the larger the price waves that the indicator calculates. The parameter Poles serves to fine-tune the display of the volume waves; you can select a parameter between 1-4. Changing this value usually causes only imperceptible changes.
+The WyckoffWave indicator adds the volume for each following bar until a price wave is over / finished. You can set the sensitivity of the price waves. When the  volume of a wave rises to particularly high values, is it very often because a turning point in the chart has been reached. When the volume bars are colored red, we are dealing with a short wave; green volume bars indicate a long wave. 
+
+Using the parameter “MedianPeriod” you can select how sensitively the indicator should determine the individual price waves. The smaller the value, the larger the price waves that the indicator calculates. 
+
+The parameter Poles serves to fine-tune the display of the volume waves; you can select a parameter between 1-4. Changing this value usually causes only imperceptible changes.
 
 ### Parameters
 to be announced

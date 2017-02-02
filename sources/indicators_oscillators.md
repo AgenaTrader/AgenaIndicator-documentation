@@ -1782,6 +1782,27 @@ if (KeyReversalDownAtEMA(10)[0] == 1)
 Print("A short reversal formation has occurred.");
 ```
 
+##KlingerVolumeOscillator
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+The KlingerVolumeOscillator is a technical indicator that was developed by Stephen Klinger in order to determine long-term trends of the money flow. At the same time, the indicator is sensitive enough to also identify short-term fluctuations, thereby giving the trader the possibility to detect even short-term reversals in the market. The indicator compares the influent and effluent volume of an instrument with its price movements, and is outputted as an oscillator. A signal line (13-period moving average) is used for generating signals. Divergences in the KlingerVolumeOscillator in comparison to the price movement can also be used for entry and exit decisions. A bullish signal is formed when the KlingerVolumeOscillator start to rise while the price continues to fall; the opposite goes for a bearish signal.
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![KlingerVolumeOscillator](./media/KlingerVolumeOscillator.png)
+
+### Example
+to be announced
+
 ##Linear Regression
 ### Description
 Linear Regression is used to determine trends. Here, the prices are set as dependent variables, and time is set as an independent variable. Using the method for determination of the smallest square, a straight line is placed through the price movements in such a way that the distance between the prices and the line deviates as little as possible. Using this method also establishes a trend between two points in time. The regression line can be found in the middle of the price channel, and the indicator provides the end values of multiple linear regression trend lines. Each point along this indicator is therefore an end value of a linear regression trend line. What results is quite similar to a smoothing average, with the difference that the regression line exhibits less lag.

@@ -5127,6 +5127,257 @@ smooth Number of Bars included in the calculation for the smoothing
 Print("The current value for the Volume ROC is: " + VROC(14, 3)[0]);
 ```
 
+##VolumeArea
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+Similarly, with this indicator you can also have your own volume profiles displayed. Here you can now determine the start and end time completely freely by clicking on your desired position. There are no restrictions as to where the calculation should start and end. In the upper right corner you have the setting options with which you can switch between the profile types (for a description of these, read more under VolumeSessionPro). With a click on the little red “+” under the profile settings, you can add a further volume profile to your chart; you do so by once again determining the start and end time by left-clicking.
+ The settings and the display of the indicator are exactly equivalent to the VolumeSessionPro: via ProfileType you select which calculation method should be used; via ValueArea you determine the percentage for what portion of the volume area should be colored with the highest activity. 
+The most effective way of working with the VolumeArea is to place this indicator in the action bar and assign it a hot key. In this way, if necessary, the indicator can be quickly called up and you can specify the desired volume area.
+
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![VolumeArea](./media/VolumeArea.png)
+
+### Example
+to be announced
+
+##VolumeGraph
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+This indicator contains a normal volume histogram, but here, the coloring takes place based on price trends. The VolumeGraph determines short- or long-term price trends; you can set the sensitivity for this using the parameter “SlopeLength”. A high value delivers long-term trends; low values represent short-term price trends. Using the setting “Exponential”, you can select whether the calculation for trend determination should be based on an exponential (=True) or linear (=False) algorithm. This is about the fine-tuning, and no large changes should be expected with this parameter. In addition, the volume histogram also contains a moving average, for which you can enter the period using the parameter “AvgLength”.
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![VolumeGraph](./media/VolumeGraph.png)
+
+### Example
+to be announced
+
+##VolumeKeltnerChannels
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+The VolumeKeltnerChannels are a great tool to determine very high or very low volume in comparison to past periods. Beginning with an upper Keltner channel line calculated with volume data, this line is shifted ever further upwards or downwards using special multipliers. Volume that is higher than the highest Keltner channel line can be interpreted as extremely high volume that shows that huge numbers of trades have been carried out in the current price period and that an unusually large number of traders are buying or selling positions at the current price level.
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![VolumeKeltnerChannels](./media/VolumeKeltnerChannels.png)
+
+### Example
+to be announced
+
+
+##VolumeRiseFall
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+The VolumeRiseFall indicator is a normal volume display as volume bars, with, however, a different coloring than normal. A volume bar is drawn in green when the volume of this bar is higher than the volume of the previous bar, meaning that rising volume is present. A volume bar is drawn in gray when the volume of this bar is lower than the volume of the previous bar, thereby showing falling volume.
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![VolumeRiseFall](./media/VolumeRiseFall.png)
+
+### Example
+to be announced
+
+##VolumeSentimentLong
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+This indicator detects bullish volume activity based on the analysis of the volume of a period, the price span of a bar and the close of the bar (=VolumeSpreadAnalysis). 
+
+It screens for 3 signals (listed are the sub-criteria that must be met for the respective signal):
+
+- SellingClimax (dark green)
+ 6.11..1. Lowest low since 50 periods 
+ 6.11..2. Bar with large range 
+ 6.11..3. Extremely high volume 
+ 
+- DemandComingIn (lime green) 
+ 6.11..1. UpBar (current close larger than previous close) 
+ 6.11..2. Previous Bar: DownBar (close smaller than previous close) 
+ 6.11..3. Previous Bar: Bar with large range 
+ 6.11..4. Previous Bar: Above-average high volume
+ 
+- BagHolding (light green) 
+ 6.11..1. Lowest low since 50 periods 
+ 6.11..2. DownBar 
+ 6.11..3. Bar with small range 
+ 6.11..4. Above-average high volume 
+ 6.11..5. Close larger than or equal to the middle of the bar
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![VolumeSentimentLong](./media/VolumeSentimentLong.png)
+
+### Example
+to be announced
+
+##VolumeSentimentShort
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+This indicator is the counterpart to the VolumeSentimentLong and detects bearish volume activity based on the analysis of the volume of a period, the price span of a bar and the close of the bar (=VolumeSpreadAnalysis). 
+
+It screens for 3 signals (listed are the sub-criteria that must be met for the respective signal):
+
+- BuyingClimax (dark red) 
+ 6.12..1. Highest high since 50 periods 
+ 6.12..2. Bar with large range 
+ 6.12..3. Extremely high volume 
+
+- SupplyComingIn (red) 
+ 6.12..1. DownBar 
+ 6.12..2. Previous Bar: UpBar 
+ 6.12..3. Previous Bar: Bar with large range 
+ 6.12..4.Previous Bar: Above-average high volume
+
+- EndOfRisingMarket (coral) 
+ 6.12..1. Highest high since 50 periods 
+ 6.12..2. UpBar 
+ 6.12..3. Bar with small range 
+ 6.12..4.Above-average high volume 
+ 6.12..5.Close smaller than or equal the middle of the bar
+
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![VolumeSentimentShort](./media/VolumeSentimentShort.png)
+
+### Example
+to be announced
+
+##VolumeSessionPro 
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+This indicator is equivalent to the well-known VolumeProfile indicator with a display for a specific time span (session). You can determine the start time and the length of a session however you wish. For each session, the VolumeProfile is then shown. Use this indicator only in timeframes smaller than 1 day; the smaller the timeframe selected, the more detailed the display of the VolumeProfile. The price at which the most volume was traded in the respective session is shown as a red bar. The price area in which, for example, 70% of the trading activity for the respective session took place, is colored light blue. You can determine this percentage yourself as you wish under the parameter “ValueArea”. Furthermore, you have four different options for displaying the volume information:
+
+Furthermore, you have four different options for displaying the volume information: 
+
+**4.1.1. VOC (Volume on close):** Loads the entire volume of a bar at the closing price of this bar – e.g. if a 5-minute bar has a volume of 280 and a range of 1.5 points with a closing price at 1534.25, all 280 volume units are counted at the closing price of 1534.24.
+
+**4.1.2. TPO (Time price opportunity):** This method does not take the actual traded volume into account, but instead counts an individual volume unit for each price in the traded range of the bar – e.g. if a 5-minute bar has its high at 1534 and its low at 1532.5, then one volume unit is counted for each of the following prices: 1532.50, 1532.75, 1533.0, 1533.25, 1533.50, 1533.75, and 1534. 
+
+**4.1.3. VWTPO (Volume weighted time price opportunity):** This version distributes the traded volume of a bar across its price range – e.g. if a 5-minute bar exhibits a volume of 280 with a range of 1.5 points, with its high at 1534 and low at 1532.5, then 40 volume units (=280/7) are added to each of the seven prices in this range: 1532.50, 1532.75, 1533.0, 1533.25, 1533.50, 1533.75, and 1534.
+
+**4.1.4. VTPO (Volume time price opportunity):** Here, the traded volume is added to each price of the range – e.g. if a 5-minute bar has 280 volume units, a range of 1.5 points with a high at 1534 and low at 1532.5, then 280 volume units are added to each of the seven prices of the range:: 1532.50, 1532.75, 1533.0, 1533.25, 1533.50, 1533.75, and 1534.
+
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![VolumeSessionPro](./media/VolumeSessionPro.png)
+
+### Example
+to be announced
+
+##VolumeTickSpeed 
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+**ATTENTION!** You can only use this indicator in the tick chart! The indicator measures the number of ticks that are traded during a number of seconds defined by the user. You can set the number of seconds under the parameter “Period”. A high tick speed can, therefore, be equated with high trading intensity, which can in turn often be observed at turning points in the market. With the parameter “LimitValue”, you can specify from which number of ticks during the selected period the background should be colored in order to display extreme values.
+
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![VolumeTickSpeed](./media/VolumeTickSpeed.png)
+
+### Example
+to be announced
+
+##VolumeUDR 
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+The VolumeUpDownRatio is the relationship between UpVolume and DownVolume, displayed as an oscillator. Volume is classified as UpVolume when the current close of the price candle is located above the close of the prior candle; the opposite applies for DownVolume. Values above 80 are to be graded as a bearish signal; values under 20 as a bullish signal. Besides this, a moving average can be shown, which can serve as an additional signal generator. 
+
+- Using “DrawCandleOutline”, you can have the border of your candles colored accordingly when bullish/bearish extreme values occur.
+
+- PriceWeightChange regulates whether you would like to have the weighted change of the market price flow into the calculation of the indicator.
+
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![VolumeUDR](./media/VolumeUDR.png)
+
+### Example
+to be announced
+
 ##VolumeUpDown
 ### Description
 This indicator is a variation of the volume indicator, with the slight difference that the volume bars are shown in different colors depending on whether the price movement forms an up or down bar. An up (rising) bar shows the volume in green, while a down (falling) bar shows the volume in red. A Doji, where open = close, shows the volume in blue.
@@ -5161,6 +5412,26 @@ Print("The current volume is " + VolumeUpDown()[0]);
 This indicator draws a histogram on the left side of the chart. This histogram contains the historical volume, and inside the histogram, the length of the bars shows the cumulative volume. Traders can configure the price series (open, high, low etc.) with the help of the properties dialog box.
 An up bar (where the close is above the open) shows the bar in green, and falling bars are displayed in red. The indicator is only designed to be used with historical data. In order to view volume changes in real-time, it is wise to consider using the VolumeProfile.
 
+##VolumeZoneOscillator
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+The VolumeZoneOscillator divides the volume activity into UpVolume and DownVolume, similarly to the VolumeUDR. Volume is ranked as UpVolume when the current closing price is located above the prior closing price; vice versa for DownVolume. The oscillator calculated hereby outputs relative percentage values. An instrument is in a positive trend when the VolumeZoneOscillator rises above a level of 5% and vice versa in a negative trend, when it falls below -5%. Values above 40% show overbought situations, while values above 60% are an indication for an extreme exaggeration in the market. On the other hand, values smaller than -40% are deemed oversold and values smaller than -60% to be classified as enormously oversold and exaggerated.
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![VolumeZoneOscillator](./media/VolumeZoneOscillator.png)
+
+### Example
+to be announced
 
 ##Williams %R
 ### Description
@@ -5204,6 +5475,28 @@ WilliamsR(IDataSeries input, int period)
 WilliamsR(int period)[int barsAgo]
 WilliamsR(IDataSeries input, int period)[int barsAgo]
 ```
+##WyckoffWave
+
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+The WyckoffWave indicator adds the volume for each following bar until a price wave is over / finished. You can set the sensitivity of the price waves. When the  volume of a wave rises to particularly high values, is it very often because a turning point in the chart has been reached. When the volume bars are colored red, we are dealing with a short wave; green volume bars indicate a long wave. Using the parameter “MedianPeriod” you can select how sensitively the indicator should determine the individual price waves. The smaller the value, the larger the price waves that the indicator calculates. The parameter Poles serves to fine-tune the display of the volume waves; you can select a parameter between 1-4. Changing this value usually causes only imperceptible changes.
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![WyckoffWave](./media/WyckoffWave.png)
+
+### Example
+to be announced
+
 
 ##ZigZag
 ### Description

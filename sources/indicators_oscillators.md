@@ -909,7 +909,7 @@ Print("The value of the Commodity Channel Index is: " + CCI(14));
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
 
 ### Description
-This indicator also works in the same way as the COTAggregatedIndexPositionLegacy; for interpretation and more detailed information, please read more under 2.3) COTAggregatedIndexPositionLegacy. The difference here, in turn, consists in the usage of the detailed disaggregated data for calculating the indicator.
+This indicator also works in the same way as the COTAggregatedIndexPositionLegacy; for interpretation and more detailed information, please read more under  [*COTAggregatedIndexPositionLegacy*](#COTAggregatedIndexPositionLegacy). The difference here, in turn, consists in the usage of the detailed disaggregated data for calculating the indicator.
 
 For the COTAggregatedIndexPositionDisaggregated, the following parameters are available:
 
@@ -924,7 +924,7 @@ For the COTAggregatedIndexPositionDisaggregated, the following parameters are av
   - Select [True] for the categories for which the positions for the selected markets should be added up and displayed.
   
 - Data base:
-  - **ReportType:** see 2.1) COTReportLegacy – CotType
+  - **ReportType:** see [*COTReportLegacy*](#COTReportLegacy) – CotType
   
 - Display:
   - **LongPosition:** select [True] to display the long positions of the desired market participants 
@@ -956,9 +956,9 @@ The CommercialIndex is a very telling COT indicator. It puts two of the most imp
 
 The following parameters are available for the COTCommercialIndex:
 
-- **CotType**: see COTReportLegacy – CotType
-- **ReportType:** see COTReportLegacy - ReportType
-- **StochasticPeriod:** see  COTReportLegacy – ComparativePeriod
+- **CotType**: see [*COTReportLegacy*](#COTReportLegacy) – CotType
+- **ReportType:** see [*COTReportLegacy*](#COTReportLegacy) – ReportType
+- **StochasticPeriod:** see [*COTReportLegacy*](#COTReportLegacy)  – ComparativePeriod
 - **OpenInterestType:** Here you can choose between [Native/Stochastic], which determines whether absolute values or the stochastic values of the positions of the commercials should be used for the calculation. The default setting is “Native”; do not change this if you wish to keep the informative value of the indicator.
 
 ### Parameters
@@ -981,7 +981,7 @@ to be announced
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
 
 ### Description
-This indicator corresponds to the mode of operation of the COTOpenInterestLegacy, instead using, however, the more finely broken down data of the disaggregated reports. For the functionality and interpretation of the open interest, please read more under 2.2) COTOpenInterestLegacy.
+This indicator corresponds to the mode of operation of the COTOpenInterestLegacy, instead using, however, the more finely broken down data of the disaggregated reports. For the functionality and interpretation of the open interest, please read more under see [*COTOpenInterestLegacy*](#COTOpenInterestLegacy).
  The calculation also occurs analogously to the legacy reports, and since for each long contract, there must also be a market participant on the short side, two calculation methods are possible (here for commodity futures):
  
 1) Producer[Long] + SwapDealer[Long] + SwapDealer[Spread] + ManagedMoney[Long] + ManagedMoney[Spread] + OtherReportables[Long] + OtherReportables[Spread] + NonReportable[Long] = OpenInterest 
@@ -1003,9 +1003,9 @@ The following parameters are available for the COTOpenInterestDisaggregated:
 - **Categories: Financial**
   - All parameters work analogously to the settings under “Categories: Commodity”; the only difference lies in the division into various groups of market participants
 - **Data base:** 
-  - **CotType:** see COTReportLegacy - CotType 
-  - **ReportType:** see COTReportLegacy - ReportType 
-  - **StochasticPeriod:** see COTReportLegacy – ComparativePeriod
+  - **CotType:** [*COTReportLegacy*](#COTReportLegacy) - CotType 
+  - **ReportType:** [*COTReportLegacy*](#COTReportLegacy) - ReportType 
+  - **StochasticPeriod:** [*COTReportLegacy*](#COTReportLegacy) – ComparativePeriod
 
 ### Parameters
 to be announced
@@ -1037,11 +1037,11 @@ Since for every long contract, there is also a market participant on the short s
 
 The following parameters are available for the OpenInterestLegacy:
 
-- **CotType:** see  COTReportLegacy – CotType
+- **CotType:** [*COTReportLegacy*](#COTReportLegacy) – CotType
 
-- **ReportType:** see  COTReportLegacy – ReportType
+- **ReportType:** [*COTReportLegacy*](#COTReportLegacy) – ReportType
 
-- **StochasticPeriod:** see  COTReportLegacy – ComparativePeriod - IsNative: outputs the OpenInterest as an absolute number, just as it is read out from the CFTC reports
+- **StochasticPeriod:** [*COTReportLegacy*](#COTReportLegacy)– ComparativePeriod - IsNative: outputs the OpenInterest as an absolute number, just as it is read out from the CFTC reports
 
 - **IsStochastic:** the OpenInterest is outputted and calculated as an oscillator with values between 0-100. With the StochasticPeriod, you can set with which period the Stochastic should be calculated.
 
@@ -1096,7 +1096,7 @@ For the **financial futures**, there are the following groups:
 - Leveraged Funds 
 - Other Reportables 
 - Nonreportabes
-- You can find more information about the classification of the financials HERE
+- You can find more information about the classification of the financials [HERE](http://www.cftc.gov/idc/groups/public/@commitmentsoftraders/documents/file/tfmexplanatorynotes.pdf)
 
 The following parameters are available for the COTReportDisaggregated:
 

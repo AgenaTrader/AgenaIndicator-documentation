@@ -983,8 +983,11 @@ to be announced
 ### Description
 This indicator corresponds to the mode of operation of the COTOpenInterestLegacy, instead using, however, the more finely broken down data of the disaggregated reports. For the functionality and interpretation of the open interest, please read more under 2.2) COTOpenInterestLegacy.
  The calculation also occurs analogously to the legacy reports, and since for each long contract, there must also be a market participant on the short side, two calculation methods are possible (here for commodity futures):
+ 
 1) Producer[Long] + SwapDealer[Long] + SwapDealer[Spread] + ManagedMoney[Long] + ManagedMoney[Spread] + OtherReportables[Long] + OtherReportables[Spread] + NonReportable[Long] = OpenInterest 
+
 2) Producer[Short] + SwapDealer[Short] + SwapDealer[Spread] + ManagedMoney[Short] + ManagedMoney[Spread] + OtherReportables[Short] + OtherReportables[Spread] + NonReportable[Short] = OpenInterest
+
 The following parameters are available for the COTOpenInterestDisaggregated:
 
 - **Categories: Commodity** 

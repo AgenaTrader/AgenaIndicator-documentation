@@ -905,7 +905,6 @@ period Number of bars included in the calculations
 Print("The value of the Commodity Channel Index is: " + CCI(14));
 ```
 ##COTAggregatedIndexPositionDisaggregated
-
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
 
 ### Description
@@ -917,7 +916,7 @@ For the COTAggregatedIndexPositionDisaggregated, the following parameters are av
   - **DowJones:** select [True] if the positions of the DowJones should be added to the overall result. 
   - **Nasdaq100:** select [True] if the positions of the Nasdaq100 should be added to the overall result. 
   - **Russell2000:** select [True] if the positions of the Russell2000 should be added to the overall  result. 
-  - **SP500: select** [True] if the positions of the SP500 should be added to the overall result.
+  - **SP500:**  select [True] if the positions of the SP500 should be added to the overall result.
   
 - Categories: Financial
   - Here you can only select the categories of the Financials, since this indicator addresses 4 financial markets. However, you can load the indicator in Financials AND Commodities.
@@ -948,7 +947,6 @@ to be announced
 
 
 ##COTCommercialIndex
-
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
 
 ### Description
@@ -977,7 +975,6 @@ to be announced
 to be announced
 
 ##COTOpenInterestDisaggregated
-
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
 
 ### Description
@@ -1023,7 +1020,6 @@ to be announced
 to be announced
 
 ##COTOpenInterestLegacy
-
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
 
 ### Description
@@ -1041,7 +1037,9 @@ The following parameters are available for the OpenInterestLegacy:
 
 - **ReportType:** [*COTReportLegacy*](#COTReportLegacy) – ReportType
 
-- **StochasticPeriod:** [*COTReportLegacy*](#COTReportLegacy)– ComparativePeriod - IsNative: outputs the OpenInterest as an absolute number, just as it is read out from the CFTC reports
+- **StochasticPeriod:** [*COTReportLegacy*](#COTReportLegacy)– ComparativePeriod 
+
+- **IsNative:** outputs the OpenInterest as an absolute number, just as it is read out from the CFTC reports
 
 - **IsStochastic:** the OpenInterest is outputted and calculated as an oscillator with values between 0-100. With the StochasticPeriod, you can set with which period the Stochastic should be calculated.
 
@@ -1071,7 +1069,6 @@ to be announced
 
 
 ##COTReportDisaggregated
-
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
 
 ### Description
@@ -1100,6 +1097,19 @@ For the **financial futures**, there are the following groups:
 
 The following parameters are available for the COTReportDisaggregated:
 
+ - **Categories Commodity/Categories Financial:** 
+   - Select [True] for the groups that you would like to have displayed in the chart. If you have opened a commodity chart, only settings made under “Categories Commodity” will be taken into account, and vice versa if you have opened a financial chart.
+
+- **Database:**
+  - **CotType:** [*COTReportLegacy*](#COTReportLegacy) – CotType
+  - **IndexType:** [*COTReportLegacy*](#COTReportLegacy) – IndexType
+  - **ReportType:** [*COTReportLegacy*](#COTReportLegacy) – ReportType
+  - **StochasticPeriod:** [*COTReportLegacy*](#COTReportLegacy)– ComparativePeriod 
+
+- **Display:** 
+  - **LongPosition:** select [True] to display the long positions of the desired market participants 
+  - **ShortPosition:** select [True] to display the short positions of the desired market participants 
+  - **NetPosition:** select [True] to display the net positions of the desired market participants
 
 ### Parameters
 to be announced
@@ -1118,7 +1128,6 @@ to be announced
 
 
 ##COTReportLegacy
-
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
 
 ### Description
@@ -1165,7 +1174,6 @@ to be announced
 
 
 ##COTStockDummy
-
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
 
 ### Description
@@ -1176,9 +1184,7 @@ The following parameters are available for the COTStockDummy:
 
 - **ComparativePeriod:** input period for the stochastic calculation
 - **Stochastic:** [True] outputs normalized values (values between 0-100)
-- **Period:** this is a period that is necessary for calculating the data. 
-
-If you do not have detailed information about how this indicator works, please leave this period on the default setting.
+- **Period:** this is a period that is necessary for calculating the data. If you do not have detailed information about how this indicator works, please leave this period on the default setting.
 
 ### Parameters
 to be announced
@@ -1196,7 +1202,6 @@ to be announced
 to be announced
 
 ##COTLargeTraderActivity
-
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
 
 ### Description
@@ -2514,7 +2519,6 @@ How far the price correction must be to become a valid market phase 5.
 How far the price correction must be to become a valid market phase 4.
 
 ##MarketValue
-
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
 
 ### Description

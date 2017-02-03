@@ -1019,6 +1019,205 @@ to be announced
 ### Example
 to be announced
 
+##COTOpenInterestLegacy
+
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+The open interest specifies the number of all currently held contracts; a high open interest, therefore, indicates that the market participants have great interest in this value; vice versa, low open interest shows that a value has only few held contracts and therefore little activity from the market participants. 
+There are two options for calculating the OpenInterest:
+
+ 1) Commercial[Long] + NonCommercial[Long] + NonCommercial[Spread] + NonReportable[Long] = OpenInterest
+ 2) Commercial[Short] + NonCommercial[Short] + NonCommercial[Spread] + NonReportable[Short] = OpenInterest
+
+Since for every long contract, there is also a market participant on the short side, both calculation methods yield exactly the same value. Additional info: with the CFTC, the open interest is not calculated; the CFTC can simply see the open interest by counting all contracts that are open in the market. With known open interest, the NonReportable positions are then calculated, since the following equation must be valid: TotalReportable + NonReportable = OpenInterest. TotalReportable and OpenInterest are known, allowing the NonReportables to be calculated.
+
+The following parameters are available for the OpenInterestLegacy:
+
+- **CotType:** see  COTReportLegacy – CotType
+
+- **ReportType:** see  COTReportLegacy – ReportType
+
+- **StochasticPeriod:** see  COTReportLegacy – ComparativePeriod - IsNative: outputs the OpenInterest as an absolute number, just as it is read out from the CFTC reports
+
+- **IsStochastic:** the OpenInterest is outputted and calculated as an oscillator with values between 0-100. With the StochasticPeriod, you can set with which period the Stochastic should be calculated.
+
+- **IsCommercialLong/IsCommercialShort:** select [True] if you would like to have the data for the NonCommercials displayed. The outputted values are percentages; if, for example, you set IsCommercialLong=True, the percentage of long positions of the Commercials that make up the total OpenInterest is outputted. A value of 0.5, for example, means that the OpenInterest consists of 50% long positions of the Commercials, which can be considered a very large long position of the Commercials.
+
+- **IsNonCommercialLong/IsNonCommercialShort:** if you select [True], the percentage of NonCommercial long positions i.e. NonCommercial short positions that make up the total OpenInterest is outputted.
+
+- **IsNonReportableLong/IsNonReportableShort:** if you select [True], the percentage of NonReportable long positions i.e. NonReportable short positions that make up the total OpenInterest it outputted.
+
+- **IsTotalReportableLong/IsTotalReportableShort:** if you select [True], the percentage of TotalReportable long positions i.e. TotalReportable short positions that make up the total OpenInterest is outputted. (TotalReportable = Commercials+NonCommercials).
+
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![COTOpenInterestLegacy](./media/COTOpenInterestLegacy.png)
+
+### Example
+to be announced
+
+
+##COTReportDisaggregated
+
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+The COTReportDisaggregated accesses the detailed disaggregated reports of the CFTC, which have been published since 2009 and can be regarded as a further development of the legacy reports. The necessity for improvement has resulted in the drastically changing and constantly developing market environment since the introduction of the COT reports in 1986. 
+The market participants are now divided more subtly and are organized into 5 categories. These 5 categories vary according to whether we are dealing with a commodity future or a financial future.
+
+
+The market participants are now divided more subtly and are organized into 5 categories. These 5 categories vary according to whether we are dealing with a commodity future or a financial future.
+
+The **commodity futures** are divided into the following groups: 
+
+- Producer/Merchant/Processor/User 
+- SwapDealers o ManagedMoney 
+- Other Reportables 
+- Nonreportables 
+- You can find more information about the classification of the commodities [HERE](http://www.cftc.gov/idc/groups/public/@commitmentsoftraders/documents/file/disaggregatedcotexplanatorynot.pdf)
+
+For the **financial futures**, there are the following groups: 
+
+- Dealer/Intermediary 
+- AssetManager/Institutional 
+- Leveraged Funds 
+- Other Reportables 
+- Nonreportabes
+- You can find more information about the classification of the financials HERE
+
+The following parameters are available for the COTReportDisaggregated:
+
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![COTReportDisaggregated](./media/COTReportDisaggregated.png)
+
+### Example
+to be announced
+
+
+##COTReportLegacy
+
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+This indicator is the core element of the COT analysis, with which one can directly display the pure data that the indicator reads from the reports published weekly by the CFTC (www.cftc.gov/CommitmentsofTraders). 
+The published reports can be viewed by every market participant. The legacy data is published in the so called short reports you can find on the CFTC-website. The following parameters are available in the COTReportLegacy:
+
+- **Comparative Period:** with this setting, you can enter a comparative period with which the stochastic display is calculated (=StochasticPeriod). The system only triggers this parameter when “IndexType = Stochastic” is set.
+
+- **CotType:** under [All/Other/Old], select which contracts should be used for the display; more details are available [HERE](http://www.cftc.gov/MarketReports/CommitmentsofTraders/ExplanatoryNotes/index.htm)
+
+- **IndexType:** choose between [Absolute/Stochastic] as to how the values should be outputted.
+  - Absolute = the values are outputted in whole numbers, just as they are read out from the reports. 
+  - Stochastic = the values are outputted and calculated as an oscillator with values between 0-100. With the ComparativePeriod, you can set with which period the Stochastic should be calculated.
+ 
+- **ReportType:** under this parameter, you select whether the data from the reports should be read out only for futures, or for futures + options.
+
+- **ReturnType:** 
+  - Net: outputs the net position (=LongContracts – ShortContracts) of the selected market participants
+  - Long/Short: outputs the long i.e. short contracts of the selected market participants
+  - OI: outputs the total OpenInterest of this instrument; for a more precise and advanced display of the OpenInterest, please use the indicator OpenInterestLegacy
+  
+ - **ShowCommercials:** select [True] if you would like to have the data for the Commercials displayed. For detailed information on the definition of which market participants are classified as Commercials, please have a look [HERE](http://www.cftc.gov/MarketReports/CommitmentsofTraders/ExplanatoryNotes/index.htm)
+ 
+ - **ShowNonCommercials:** select [True] if you would like to have the data for the NonCommercials displayed. For detailed information on the definition of which market participants are classified as NonCommercials please have a look at the link provided above.
+ 
+ - **ShowNonReportables:** select [True] if you would like to have the data for the NonReportables displayed. For detailed information on the definition of which market participants are classified as NonCommercials please have a look at the link provided above.
+
+
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![COTReportLegacy](./media/COTReportLegacy.png)
+
+### Example
+to be announced
+
+
+##COTStockDummy
+
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+This indicator attempts to simulate the behavior of the commercials in stock markets using a special algorithm. The values are outputted as Stochastic, meaning that they oscillate between values of 0-100. The interpretation of this indicator is analogous to
+the interpretation of the commercial data in the standard COT indicators. The output of this indicator should be confirmed with other indicators; you must be aware that we are not talking about real COT data from market participants, but about calculations from the price data. As for the COT data, an analysis in the weekly chart is also recommended for the COTStockDummy.
+
+The following parameters are available for the COTStockDummy:
+
+- **ComparativePeriod:** input period for the stochastic calculation
+- **Stochastic:** [True] outputs normalized values (values between 0-100)
+- **Period:** this is a period that is necessary for calculating the data. 
+
+If you do not have detailed information about how this indicator works, please leave this period on the default setting.
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![COTStockDummy&large](./media/COTStockDummy&large.png)
+
+### Example
+to be announced
+
+##COTLargeTraderActivity
+
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+The COTLargeTraderActivity indicator, like the COTStockDummy, is based not on real COT data, but instead on algorithmically calculated outputs. This indicator attempts to simulate the behavior of the large traders in markets for which no COT data is available. Here, the interpretation takes place analogously to the analysis of the NonCommercials in the standard COT indicators.As with the COTStockDummy, we point out that other indicators should be consulted, since we are not dealing with real COT data.
+
+The following parameters are available for the COTLargeTraderActivity:
+
+- **Period:** this is a period that is necessary for calculating the data. If you do not have detailed information about how this indicator works, please leave this period on the default setting.
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![COTStockDummy&large](./media/COTStockDummy&large.png)
+
+### Example
+to be announced
+
 
 ## Darvas Boxes
 ### Description
@@ -2310,6 +2509,42 @@ How far the price correction must be to become a valid market phase 5.
 
 **Phase4Level**
 How far the price correction must be to become a valid market phase 4.
+
+##MarketValue
+
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+This indicator compares the value of a market with the current price of gold or the dollar index. This means that markets are placed in relation to the gold price or the dollar, whereby over- and undervaluation can be determined very well in instruments. 
+
+A low MarketValue means that a market is cheap relative to gold/dollar index; vice versa, a higher value means that the market is relatively expensive. 
+
+In general, commodities should be compared to the gold price, and financials to the dollar index. However, depending on the market environment, it may be useful to deviate from this rule.
+
+The following parameters are available for the MarketValue: 
+
+- **CompareTo:** select [Gold/Dollar Index] depending on which market the current symbol should be placed in relation to. 
+
+- **EMA1:** this is a period that is necessary for calculating the data. If you do not have detailed information about how this indicator works, please leave this period on the default settings. (Default value = 21) 
+
+- **EMA2:** this is an EMA period that is necessary for calculating the data. If you do not have detailed information about how this indicator works, please leave this period on the standard settings. (Default value = 3)
+
+It is not yet possible to use the MarketValue indicator in the ConditionEscort, since a multi-instrument indicator cannot be depicted there. Since the MarketValue requires the price data from the current chart and also from gold i.e. the dollar index, this is a multi-instrument indicator, which, as mentioned, currently cannot be represented in the ConditionEscort.
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![MarketValue](./media/MarketValue.png)
+
+### Example
+to be announced
 
 
 ##Momentum (MOM)

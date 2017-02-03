@@ -904,6 +904,121 @@ period Number of bars included in the calculations
 //Output for the CCI value calculated using 14 periods
 Print("The value of the Commodity Channel Index is: " + CCI(14));
 ```
+##COTAggregatedIndexPositionDisaggregated
+
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+This indicator also works in the same way as the COTAggregatedIndexPositionLegacy; for interpretation and more detailed information, please read more under 2.3) COTAggregatedIndexPositionLegacy. The difference here, in turn, consists in the usage of the detailed disaggregated data for calculating the indicator.
+
+For the COTAggregatedIndexPositionDisaggregated, the following parameters are available:
+
+- AddIndices: 
+  - **DowJones:** select [True] if the positions of the DowJones should be added to the overall result. 
+  - **Nasdaq100:** select [True] if the positions of the Nasdaq100 should be added to the overall result. 
+  - **Russell2000:** select [True] if the positions of the Russell2000 should be added to the overall  result. 
+  - **SP500: select** [True] if the positions of the SP500 should be added to the overall result.
+  
+- Categories: Financial
+  - Here you can only select the categories of the Financials, since this indicator addresses 4 financial markets. However, you can load the indicator in Financials AND Commodities.
+  - Select [True] for the categories for which the positions for the selected markets should be added up and displayed.
+  
+- Data base:
+  - **ReportType:** see 2.1) COTReportLegacy – CotType
+  
+- Display:
+  - **LongPosition:** select [True] to display the long positions of the desired market participants 
+  - **ShortPosition:** select [True] to display the short positions of the desired market participants 
+  - **NetPosition:** select [True] to display the net positions of the desired market participants
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![COTAggregatedIndexPositionDisaggregated](./media/COTAggregatedIndexPositionDisaggregated.png)
+
+### Example
+to be announced
+
+
+##COTCommercialIndex
+
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+The CommercialIndex is a very telling COT indicator. It puts two of the most important COT-parameters in relation to each other – the net position of the commercials to the open interest. These values are normalized and subsequently outputted. A high value of the CommercialIndex shows strong buying behavior of the commercials, whereas a low value shows strong sell pressure from the commercials. The parameters are similarly structured as with the COTReport. 
+
+The following parameters are available for the COTCommercialIndex:
+
+- **CotType**: see COTReportLegacy – CotType
+- **ReportType:** see COTReportLegacy - ReportType
+- **StochasticPeriod:** see  COTReportLegacy – ComparativePeriod
+- **OpenInterestType:** Here you can choose between [Native/Stochastic], which determines whether absolute values or the stochastic values of the positions of the commercials should be used for the calculation. The default setting is “Native”; do not change this if you wish to keep the informative value of the indicator.
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![COTCommercialIndex](./media/COTCommercialIndex.png)
+
+### Example
+to be announced
+
+##COTOpenInterestDisaggregated
+
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+This indicator corresponds to the mode of operation of the COTOpenInterestLegacy, instead using, however, the more finely broken down data of the disaggregated reports. For the functionality and interpretation of the open interest, please read more under 2.2) COTOpenInterestLegacy.
+ The calculation also occurs analogously to the legacy reports, and since for each long contract, there must also be a market participant on the short side, two calculation methods are possible (here for commodity futures):
+1) Producer[Long] + SwapDealer[Long] + SwapDealer[Spread] + ManagedMoney[Long] + ManagedMoney[Spread] + OtherReportables[Long] + OtherReportables[Spread] + NonReportable[Long] = OpenInterest 
+2) Producer[Short] + SwapDealer[Short] + SwapDealer[Spread] + ManagedMoney[Short] + ManagedMoney[Spread] + OtherReportables[Short] + OtherReportables[Spread] + NonReportable[Short] = OpenInterest
+The following parameters are available for the COTOpenInterestDisaggregated:
+
+- **Categories: Commodity** 
+  - **OpenInterest_Comm:** (=total OpenInterest for Commodities) 
+      - [Absolute]: outputs the OpenInterest as an absolute number
+      - [Stochastic]: OpenInterest as an oscillator with values between 0-100 
+      - [None]: no output for the OpenInterest.
+  - **%ofOIProd Long/Short/Spread:** (=Percent of OpenInterest for Producer Long/Short/Spread – Position) – select [True] if this value should be displayed. This here is the percentage that the positions of the producers have of the overall OpenInterest. A value of 0.5, for example, means that the producers have built up long positions in the size of 50% of the entire OpenInterest.
+  -  **%ofOISwapDealer Long/Short/Spread:** (=Percent of OpenInterest for SwapDealers Long/Short/Spread – Position) – select [True] if this value should be displayed.
+  - **%ofOIManagedMoney Long/Short/Spread**: (=Percent of OpenInterest for ManagedMoney Long/Short/Spread – Position) – select [True] if this value should be displayed. 
+  - **%ofOIComOther Long/Short/Spread:** (=Percent of OpenInterest for Other Traders in Commodities Long/Short/Spread – Position) – select [True] if this value should be displayed. 
+  - **%ofOIComNonreportables Long/Short/Spread**: (=Percent of OpenInterest for NonReportables in Commodites Long/Short/Spread – Position) select [True] if this value should be displayed.
+- **Categories: Financial**
+  - All parameters work analogously to the settings under “Categories: Commodity”; the only difference lies in the division into various groups of market participants
+- **Data base:** 
+  - **CotType:** see COTReportLegacy - CotType 
+  - **ReportType:** see COTReportLegacy - ReportType 
+  - **StochasticPeriod:** see COTReportLegacy – ComparativePeriod
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![COTOpenInterestDisaggregated](./media/COTOpenInterestDisaggregated.png)
+
+### Example
+to be announced
+
 
 ## Darvas Boxes
 ### Description

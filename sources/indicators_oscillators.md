@@ -2516,11 +2516,11 @@ You can use the indicator as a filter by using the signals of other indicators w
 **Important tip** 
 If you want to use  MarketPhases (also Pro and Advanced version) indicator in conjunction with the scanner, the following settings are required:
 
-- Charging position:
+- Chart settings:
   - Bars count
   - Time frame
 
-- Column Setting Scanner:
+- Scanner column settings:
   - Bars required
   - Time frame
   

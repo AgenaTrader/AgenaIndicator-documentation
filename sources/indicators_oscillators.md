@@ -2437,6 +2437,9 @@ The Market Phases Indicator is another important component of the Technical Anal
 
 The market phases are defined according to the book series “Der Händler” (“The Trader”) by Michael Voigt.
 
+**Important tip** 
+MarketPhases indicators  are very history sensitive and need at least up to 2000 intraday candles to see good results.
+
 **Phase 3:**
 
 The market is located far away from the movement; a correction is imminent.
@@ -2509,6 +2512,20 @@ When using market phases within AgenaScript, the indicator provides a data serie
 You can use the indicator as a filter by using the signals of other indicators when they are inside the market phases 55 or 66 (long):
 
 ![Condition Escort](./media/image50.png)
+
+**Important tip** 
+If you want to use  MarketPhases (also Pro and Advanced version) indicator in conjunction with the scanner, the following settings are required:
+- Charging position:
+  - Bars count
+  - Time frame
+
+- Column Setting Scanner:
+  - Bars required
+  - Time frame
+These chart and column settings should be identical.  
+
+![MarketPhasesChart](./media/MarketPhases_chart.png)
+![MarketPhasesScanner](./media/MarketPhases_scanner.png)
 
 ### MarketPhases Pro Description
 

@@ -4728,9 +4728,9 @@ Default: SuperTrendMode.ATR     |
 
 ### Example
 ```cs
-if (Close[0] > SuperTrend(SuperTrendMode.ATR, 14, 2.618, MovingAverageType.HMA, 14).UpTrend[0])
+if (Close[0] > SuperTrend(SuperTrendMAType.HMA, SuperTrendMode.ATR, 14, 2.618, 14).UpTrend[0])
   Print("The market is in an uptrend.");
-if (Close[0] < SuperTrend(SuperTrendMode.ATR, 14, 2.618, MovingAverageType.HMA, 14).DownTrend[0])
+if (Close[0] < SuperTrend(SuperTrendMAType.HMA, SuperTrendMode.ATR, 14, 2.618, 14).DownTrend[0])
   Print("The market is in a downtrend.");
 ```
 

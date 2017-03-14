@@ -2430,7 +2430,7 @@ Print("Lower band of the MA Envelope: " + MAEnvelopes(1.5, MAEnvelopesMAType.SMA
 ```
 
 ##MarketPhases
-**The installation of the Technical Analysis Package is required in order to access this indicator.**
+**The installation of the Dow Theory Standard or Professional Package is required in order to access this indicator.**
 
 ### Description
 The Market Phases Indicator is another important component of the Technical Analysis Package, and is based on integrated trend detection for the various relevant trading market phases.

@@ -1237,6 +1237,20 @@ If a new high is not formed after three consecutive days, then the high is label
 ### Interpretation
 This system is similar to a trend-following channel breakout system. As soon as one of these boxes breaks out, a new buy or sell signal is generated.
 
+### Explanation
+Initial box top is the high of day 1. First you should find a new high that have to be higher than the high of 1 day. There is no matter when the high can be located - even after 5 days. However if the bottom detect, the box has been completed.
+ To detect the bottom, low have to be after day 2 of the last day box top was detect and should be lower than the low of original day 1 low.
+ The bottom usually detect last and a new high may not be detect till the bottom is locked in. The Darvas box has been complete.
+If the price breaks out of bottom or top,  new box would be started. The bottom stop loss box has been drawn as the last price percentage.
+
+We should take first day high value as a top border. Next day we look if the high of the day is higher than previous border top. In case high -> top border  =  high. Incase top is going up for a last 3 steps, and the next is lower. It will be box top. Start looking for the bottom border. It identical to the top(search for  a trend  low after which daily low would be higher than previous. In that case previous low would be box  bottom). Now we have Darvas coridor. If some of the next bars high value is higher than top box or lower than bottom box -> box closed (a new box will be started when the price breaks out of top or bottom of the box).
+
+#### Buy Signal
+![DarvasBuySignal](./media/DarvasBuySignal.png)
+
+#### Sell Signal
+![DarvasSellSignal](./media/DarvasSellSignal.png)
+
 ### Further information
 Here you can read about a trading system based on the Darvas boxes. (German only)
 [http://www.eusdoni.de/index.php?option=com_content&view=article&catid=13:eusdoni-version-3&id=42:darvas-boxen](http://www.eusdoni.de/index.php?option=com_content&view=article&catid=13:eusdoni-version-3&id=42:darvas-boxen)

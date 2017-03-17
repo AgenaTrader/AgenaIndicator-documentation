@@ -1238,12 +1238,15 @@ If a new high is not formed after three consecutive days, then the high is label
 This system is similar to a trend-following channel breakout system. As soon as one of these boxes breaks out, a new buy or sell signal is generated.
 
 ### Explanation
-Initial box top is the high of day 1. First you should find a new high that have to be higher than the high of 1 day. There is no matter when the high can be located - even after 5 days. However if the bottom detect, the box has been completed.
- To detect the bottom, low have to be after day 2 of the last day box top was detect and should be lower than the low of original day 1 low.
- The bottom usually detect last and a new high may not be detect till the bottom is locked in. The Darvas box has been complete.
-If the price breaks out of bottom or top,  new box would be started. The bottom stop loss box has been drawn as the last price percentage.
+The initial box top is the high of day 1. First, you should find a new high that must be higher than the high of day 1. It does not matter when the high is located - even if it is after 5 days. However, if the bottom is detected, the box has been completed.
+To detect the bottom, the low must be after the day 2 since the last day’s box top was detected, and should be lower than the low of the original day 1 low.
 
-We should take first day high value as a top border. Next day we look if the high of the day is higher than previous border top. In case high -> top border  =  high. Incase top is going up for a last 3 steps, and the next is lower. It will be box top. Start looking for the bottom border. It identical to the top(search for  a trend  low after which daily low would be higher than previous. In that case previous low would be box  bottom). Now we have Darvas coridor. If some of the next bars high value is higher than top box or lower than bottom box -> box closed (a new box will be started when the price breaks out of top or bottom of the box).
+The bottom is usually detected last, and a new high may not be detected until the bottom is locked in. The Darvas box has then been completed.
+
+If the price breaks out of the bottom or top, a new box will be started. The bottom stop loss box has been drawn as the last price percentage.
+
+We should take the first day’s high value as the top border. The next day, we check if the high of the day is higher than the previous border top. In the case that it is higher -> top border = high. In the case that the top is going up for the last 3 steps, and the next is then lower, it will be a box top. Start looking for the bottom border. It is identical to the top (search for a trend low after which the daily low would be higher than the previous. In this case, the previous low would be the box bottom). Now we have a Darvas corridor. If one of the next bar’s high values is higher than the top box or lower than the bottom box -> box is closed (a new box will be started when the price breaks out of the top or bottom of the box).
+
 
 #### Buy Signal
 ![DarvasBuySignal](./media/DarvasBuySignal.png)

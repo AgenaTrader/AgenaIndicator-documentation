@@ -136,6 +136,7 @@ Want to learn more about the AgenaTrader indicators? We've got the resources to 
 -   [Constant Lines](./indicators_oscillators.md#constant-lines)
 -   [CurrentDayOHL](./indicators_oscillators.md#currentdayohl)
 -   [Daily Performance](./indicators_oscillators.md#daily-performance)
+-   [ DailyQuoteMoves](./indicators_oscillators.md#dailyquotemoves)
 -   [DayLines](./indicators_oscillators.md#daylines)
 -   [DayLinesAdv](./indicators_oscillators.md#daylinesadv)
 -   [GetDayBar](./indicators_oscillators.md#getdaybar)

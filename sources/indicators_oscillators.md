@@ -505,7 +505,7 @@ The image shows a 5-minute chart with a 60-minute Bollinger band
 
 ![Bollinger MTF (MultiTimeFrame)](./media/image13.png)
 
-##BuySellPressure
+## BuySellPressure
 ### Description
 The BuySellPressure indicator displays the buy or sell pressure for the current bar. Furthermore, these trades are classified as "buy" or “sell”. For this classification, a "buy" is assumed any time the transaction has occurred at or above the ask. Inside trades are not taken into account.
 
@@ -1770,7 +1770,7 @@ periodSlow Number of periods used for the calculation of the Chikou line. Defaul
 ### Visualization
 ![IchimokuCloud](./media/image33.png)
 
-##InsideBarsMT
+## InsideBarsMT
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
 
 ### Description
@@ -2555,7 +2555,7 @@ How far the price correction must be to become a valid market phase 5.
 **Phase4Level**
 How far the price correction must be to become a valid market phase 4.
 
-##MarketValue
+## MarketValue
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
 
 ### Description
@@ -2815,7 +2815,7 @@ A 5-minute chart with an EMA(20) calculated with hourly bars as the underlying i
 
 ![EMA MTF (MultiTimeFrame)](./media/image55.png)
 
-##HMA - Hull Moving Average
+## HMA - Hull Moving Average
 ### Description
 The Hull Moving Average, invented by Alan Hull, is a fast-working moving average that gets rid of almost all delays/lags (zero lag). The calculation is carried out using several weighted moving averages, thereby partially reducing the smoothing effect. Hull’s methodology uses square roots of the period instead of the actual period itself.
 
@@ -3453,7 +3453,7 @@ Print("The current value for the OBV is " + OBV()[0]);
 ### Description
 The Outside Bars indicator is in fact an outdated version of the [*InsideBarsMT*](#insidebarsmt).
 
-##P123
+## P123
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
 
 ### Description
@@ -4043,7 +4043,7 @@ Pink ЕМА: 125, 130, 135, 140, 145, 150, 155, 160, 165, 170, 175, 180, 185, 19
 ### Visualisation
 ![Rainbow](./media/rainbow.png)
 
-##Range
+## Range
 ### Description
 Range delivers the span/difference between the high and low in ticks for each bar. The range is always greater than or equal to 0.
 
@@ -5049,7 +5049,7 @@ See [*CurrentDayOHL*](#currentdayohl), [*PriorDayOHLC*](#priordayohlc).
 ### Visualization
 ![DayLines](./media/image107.png)
 
-##DayLinesAdv
+## DayLinesAdv
 ### Description
 DayLinesAdv draws horizontal lines for the previous day’s high, low, and close, as well as the current day’s open.
 
@@ -5218,7 +5218,7 @@ The colors and line widths are freely configurable.
 ### Visualization
 ![PriceLine](./media/image116.png)
 
-##PriorDayOHLC
+## PriorDayOHLC
 ### Description
 PriorDayOHLC shows the values for yesterday’s (i.e. the previous session’s) open, high, low, and close. PriorDayOHLC works best when used together with the intraday data series.
 
@@ -5288,7 +5288,7 @@ The ShowBidAsk indicator displays the current bid and ask prices as well as the 
 ### Visualization
 ![ShowBidAsk](./media/image119.png)
 
-##TickCounter
+## TickCounter
 ### Description
 TickCounter provides information regarding the current number of ticks that are contained within the bar. The indicator can not only count starting from 0, but can also be set to count from a specified number down to 0. TickCounter can display the value either as absolute or as a percentage. It only works with candle charts in which the bars are established based on a fixed number of ticks.
 

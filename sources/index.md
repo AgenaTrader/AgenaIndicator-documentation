@@ -31,6 +31,7 @@ Want to learn more about the AgenaTrader indicators? We've got the resources to 
 -   [Average Directional Movement Rating (ADXR)](./indicators_oscillators.md#average-directional-movement-rating-adxr)
 -   [Average True Range (ATR)](./indicators_oscillators.md#average-true-range-atr)
 -   [Balance of Power (BOP)](./indicators_oscillators.md#balance-of-power-bop)
+-   [BBBreakOutSpeed](./indicators_oscillators.md#bbbreakoutspeed)
 -   [Bollinger Bands](./indicators_oscillators.md#bollinger-bands)
 -   [Bollinger Percent B (%b)](./indicators_oscillators.md#bollinger-percent-b-b)
 -   [Bollinger Band Width (BBWidth)](./indicators_oscillators.md#bollinger-band-width-bbwidth)

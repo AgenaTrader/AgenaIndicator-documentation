@@ -301,6 +301,51 @@ period Number of bars included in the calculation
 Print("The current ATR value is: " + ATR(14)[0]);
 ```
 
+## BBBreakOutSpeed
+### Description
+Shows the change in the width of the Bollinger Bands in comparison to the width of the Bollinger Bands of the previous bar.
+Negative (red) means that the Bollinger Bands are drawing together. (Larger than SignalSize -> Short, characterized by a more intense red)
+Positive (green) means that the Bollinger Bands are diverging. (Larger than SignalSize -> Long, characterized by a more intense green)
+
+
+### Usage
+```cs
+BBBreakOutSpeed(double bandsDeviation, int bandsPeriod, int signalsize) 
+BBBreakOutSpeed(IDataSeries input, double bandsDeviation, int bandsPeriod, int signalsize) 
+BBBreakOutSpeed(double bandsDeviation, int bandsPeriod, int signalsize)[int barsAgo]
+BBBreakOutSpeed(IDataSeries input, double bandsDeviation, int bandsPeriod, int signalsize)[int barsAgo] 
+```
+
+### Return value
+**double**
+
+When using this method with an index (e.g. **BBBreakOutSpeed**(5)\[**int** barsAgo\] ), the value of the indicator will be outputted for the referenced bar.
+
+### Parameters
+input Input data series for the indicator
+bandsDeviation Standard deviation for the Bollinger Bands
+bandsPeriod Periods for the Bollinger Bands
+signalsize The minimum height of the bar in order for it to produce a signal (long, short)
+
+
+### Visualization
+![BBBreakOutSpeed](./media/BBBreakOutSpeed.png)
+
+### Example
+```cs
+//If the width between the Bollinger Bands (standard deviation 2, period 20) has significantly (value > 15) increased in comparison to the previous period, a long position is opened.
+
+if(BBBreakOutSpeed(2, 20, 15).BandWidthEntrySignalBuffer[0] != 0)
+{
+ 	OpenLong("BBBreakOutSpeedLong");
+}
+//If the width between the Bollinger Bands (standard deviation 2, period 20) has significantly (value > 15) decreased in comparison to the previous period, a short position is opened.
+
+if(BBBreakOutSpeed(2, 20, 15).BandWidthExitSignalBuffer[0] != 0)
+{
+ 	OpenShort("BBBreakOutSpeedShort");
+}
+```
 ## Balance of Power (BOP)
 ### Description
 The developer of the Balance of Power indicator was Igor Livshin, who came up with the BOP in August 2001. The BOP indicator represents the strength of the buyers (bulls) vs. the sellers (bears), and oscillates between -100 and 100. The calculation of the BOP = (close - open) / (high - low).

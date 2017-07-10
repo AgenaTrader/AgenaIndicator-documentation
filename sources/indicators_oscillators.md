@@ -323,8 +323,11 @@ When using this method with an index (e.g. **BBBreakOutSpeed**(5)\[**int** barsA
 
 ### Parameters
 input Input data series for the indicator
+
 bandsDeviation Standard deviation for the Bollinger Bands
+
 bandsPeriod Periods for the Bollinger Bands
+
 signalsize The minimum height of the bar in order for it to produce a signal (long, short)
 
 

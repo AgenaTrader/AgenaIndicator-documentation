@@ -4196,11 +4196,37 @@ period Number of bars included in the calculations
 ### Visualization
 ![Rate of Change (ROC)](./media/image83.png)
 
-### Example
+
+## Relative Performance
+### Description
+Calculates the price ratio between current and selected symbols.
+
+
+### Further information
+http://stockcharts.com/articles/mailbag/2012/01/how-can-i-chart-relative-performance-qqq-underperforms-spy-.html?st=relative+performance
+
+http://www.wikinvest.com/wiki/Relative_performance
+
+
+### Usage
 ```cs
-//Output of the value for the ROC indicator
-Print("The current ROC value is: " + ROC(14)[0]);
+RelativePerformance (Instrument)
+RelativePerformance (Instrument)[int barsAgo]
+
 ```
+
+### Return value
+**double**
+
+
+### Parameters
+IInstrument 
+
+### Visualization
+![Relative Performance](./media/RelativePerformance.png)
+
+
+
 
 ## Relative Spread Strength (RSS)
 ### Description

@@ -2553,7 +2553,7 @@ Phase 5: 5
 
 Phase 5+ 5.1
 
-Prom Queen 66
+Prom Queen 5.2
 
 In a downtrend, the values are prefixed with a “-“ sign. If the market phase is not defined, then the value 0 is returned.
 ```cs

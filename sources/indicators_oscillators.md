@@ -2551,7 +2551,7 @@ Phase 4: 4
 
 Phase 5: 5
 
-Phase 5+ 55
+Phase 5+ 5.1
 
 Prom Queen 66
 
@@ -2566,17 +2566,17 @@ trendsize: trend size from 0 .. 3
 
 **Caution:**
 
-For a comparison of double values such as: **if** (**MarketPhases**(1)\[0\] == 55) ...we recommend that you use the following instead:
+For a comparison of double values such as: **if** (**MarketPhases**(1)\[0\] == 5.1) ...we recommend that you use the following instead:
 ```cs
-bool goLong = Math.Abs(MarketPhases(1)[0] - 55) <= Double.Epsilon;
+bool goLong = Math.Abs(MarketPhases(1)[0] - 5.1) <= Double.Epsilon;
 ```
 
 ### Usage within the Condition Escort
-When using market phases within AgenaScript, the indicator provides a data series that has the aforementioned values of +/-3, 4, 5, 55, 66.
+When using market phases within AgenaScript, the indicator provides a data series that has the aforementioned values of +/-3, 4, 5, 5.1, 5.2.
 
-You can use the indicator as a filter by using the signals of other indicators when they are inside the market phases 55 or 66 (long):
+You can use the indicator as a filter by using the signals of other indicators when they are inside the market phases 5.1 or 5.2(long):
 
-![Condition Escort](./media/image50.png)
+![Condition Escort](./media/MarketPhases.png)
 
 **Important tip** 
 If you want to use  MarketPhases (also Pro and Advanced version) indicator in conjunction with the scanner, the following settings are required:

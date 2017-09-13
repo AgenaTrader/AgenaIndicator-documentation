@@ -117,6 +117,7 @@ Want to learn more about the AgenaTrader indicators? We've got the resources to 
 -   [Range](./indicators_oscillators.md#range)
 -   [Range Indicator (RIND)](./indicators_oscillators.md#range-indicator-rind)
 -   [Rate of Change (ROC)](./indicators_oscillators.md#rate-of-change-roc)
+-   [Relative Performance](./indicators_oscillators.md#relative-performance)
 -   [Relative Spread Strength (RSS)](./indicators_oscillators.md#relative-spread-strength-rss)
 -   [Relative Strength Index (RSI)](./indicators_oscillators.md#relative-strength-index-rsi)
 -   [Relative Strength Levy (RSL)](./indicators_oscillators.md#relative-strength-levy-rsl)

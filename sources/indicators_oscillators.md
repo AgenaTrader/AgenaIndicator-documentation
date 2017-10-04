@@ -4346,7 +4346,7 @@ input Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![Relative Strength Levy (RSL)](./media/image86.png)
+![Relative Strength Levy (RSL)](./media/RSL.png)
 
 ### Example
 ```cs

@@ -4221,7 +4221,7 @@ weaken; in addition, the dollar is oversold, which means we can predict rising s
 part of the USD. By finding the strongest and weakest currency, one trades the currency pair
 that currently contains the highest probability of a value adjustment
 
-### INSTRUCTIONS FOR PACKAGE INSTALLATION
+### Instructions for package installation
 1. As the first step, activate your license: to do so, click on the blue question mark icon in
 the AgenaTrader menu bar and select “About -> enter activation key”.
 2. In the next window, search for the RelativeCurrencyStrength AddOn under “Packages
@@ -4249,7 +4249,7 @@ indicators”.
 
 
 
-### SIGNALS
+### Signals
 #### Extreme points in the valuation of 2 currencies
 
 ![Extreme points in the valuation of 2 currencies](./media/relative_extreme.png)

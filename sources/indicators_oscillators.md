@@ -4221,23 +4221,6 @@ weaken; in addition, the dollar is oversold, which means we can predict rising s
 part of the USD. By finding the strongest and weakest currency, one trades the currency pair
 that currently contains the highest probability of a value adjustment
 
-### Instructions for package installation
-1. As the first step, activate your license: to do so, click on the blue question mark icon in
-the AgenaTrader menu bar and select “About -> enter activation key”.
-2. In the next window, search for the RelativeCurrencyStrength AddOn under “Packages
-& Mentors”, click on the item and then enter your activation key at the very bottom in
-the field “activation key”.
-3. Click on “Activate”.
-4. Now select Tools->Packages->Import package.
-5. Navigate to the storage location of the .atpack file of the RelativeCurrencyStrength
-package that you have been sent by email.
-6. Click on “Open”.
-7. Confirm the prompt to restart AgenaTrader.
-8. After restarting, the RelativeCurrencyStrength indicator is available under “Scripted
-indicators”.
-
-
-
 ### Parameters
 01. Moving Average Type: [SMA/EMA] – calculation of the Relative Strength based on an SMA (Simple Moving Average) or EMA (Exponential Moving Average).
 
@@ -4246,7 +4229,6 @@ indicators”.
 03. Fast Period: see Slow Period.
 
 04. – 11. Set the currencies that you wish to have displayed in the chart to “True”.
-
 
 
 ### Signals

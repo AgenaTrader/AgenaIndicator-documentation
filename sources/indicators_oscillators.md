@@ -32,9 +32,9 @@ If the ADL is rising in an uptrend, then money is flowing in the direction of th
 ### Usage
 ```cs
 ADL()
-ADL(IDataSeries input)
+ADL(IDataSeries inSeries)
 ADL()[int barsAgo]
-ADL(IDataSeries input)[int barsAgo]
+ADL(IDataSeries inSeries)[int barsAgo]
 ```
 
 ### Return value
@@ -43,7 +43,7 @@ ADL(IDataSeries input)[int barsAgo]
 When using the method with an index (e.g. ADL()\[int barsAgo\] ), the value of the indicator will be outputted for the referenced bar.
 
 ### Parameter
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 ### Visualization
 ![Accumulation/Distribution (ADL)](./media/image2.png)
@@ -69,13 +69,13 @@ The bigger the price movement, the greater the distance between the upper and lo
 ### Usage
 ```cs
 APZ(double barPct, int period)
-APZ(IDataSeries input, double barPct, int period)
+APZ(IDataSeries inSeries, double barPct, int period)
 Upper Band
 APZ(double barPct, int period).Upper[int barsAgo]
-APZ(IDataSeries input, double barPct, int period).Upper[int barsAgo]
+APZ(IDataSeries inSeries, double barPct, int period).Upper[int barsAgo]
 Lower Band
 APZ(double barPct, int period).Lower[int barsAgo]
-APZ(IDataSeries input, double barPct, int period).Lower[int barsAgo]
+APZ(IDataSeries inSeries, double barPct, int period).Lower[int barsAgo]
 ```
 
 ### Return value
@@ -86,7 +86,7 @@ When using the method with an index (e.g. **APZ**(2, 20)\[**int** barsAgo\] ), t
 ### Parameters
 barPct Standard deviation
 
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculation
 
@@ -115,13 +115,13 @@ A surge to 100 indicates that a trend may be emerging. This can be confirmed wit
 ### Usage
 ```cs
 Aroon(int period)
-Aroon(IDataSeries input, int period)
+Aroon(IDataSeries inSeries, int period)
 //For the upper value
 Aroon(int period).Up[int barsAgo]
-Aroon(IDataSeries input, int period).Up[int barsAgo]
+Aroon(IDataSeries inSeries, int period).Up[int barsAgo]
 //For the lower value
 Aroon(int period).Down[int barsAgo]
-Aroon(IDataSeries input, int period).Down[int barsAgo]
+Aroon(IDataSeries inSeries, int period).Down[int barsAgo]
 ```
 
 ### Return value
@@ -130,7 +130,7 @@ Aroon(IDataSeries input, int period).Down[int barsAgo]
 When using this method with an index (e.g. **Aroon**(20)\[**int** barsAgo\] ) the value of the indicator will be displayed for the last referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars taken into consideration when calculating the values
 
@@ -154,9 +154,9 @@ The Aroon Oscillator is ideally used as a trend filter and trend strength indica
 ### Usage
 ```cs
 AroonOscillator(int period)
-AroonOscillator(IDataSeries input, int period)
+AroonOscillator(IDataSeries inSeries, int period)
 AroonOscillator(int period)[int barsAgo]
-AroonOscillator(IDataSeries input, int period)[int barsAgo]
+AroonOscillator(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -165,7 +165,7 @@ AroonOscillator(IDataSeries input, int period)[int barsAgo]
 When using this method with an index such as (**AroonOcsillator**(20)\[**int** barsAgo\] ), the value of the indicator will be outputted for the bar that was referenced.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars taken into consideration for the calculations
 
@@ -196,9 +196,9 @@ It should be kept in mind that Wilder was a commodity and currency trader. The e
 ### Usage
 ```cs
 ADX(int period)
-ADX(IDataSeries input, int period)
+ADX(IDataSeries inSeries, int period)
 ADX(int period)[int barsAgo]
-ADX(IDataSeries input, int period)[int barsAgo]
+ADX(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -207,7 +207,7 @@ ADX(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **ADX**(20)\[**int** barsAgo\] ), the value of the indicator will be outputted for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculation
 
@@ -231,9 +231,9 @@ Welles Wilder recommends buying into the market at a value of 25 and higher, and
 ### Usage
 ```cs
 ADXR(int interval, int period)
-ADXR(IDataSeries input, int interval, int period)
+ADXR(IDataSeries inSeries, int interval, int period)
 ADXR(int interval, int period)[int barsAgo]
-ADXR(IDataSeries input, int interval, int period)[int barsAgo]
+ADXR(IDataSeries inSeries, int interval, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -242,7 +242,7 @@ ADXR(IDataSeries input, int interval, int period)[int barsAgo]
 When using this method with an index (e.g. **ADXR**(10, 14)\[**int** barsAgo\]), the value of the indicator will be outputted for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 interval Interval between the first ADX value and the current ADX value
 
@@ -277,9 +277,9 @@ VTAD: <http://vtadwiki.vtad.de/index.php/Average\_True\_Range>
 ### Usage
 ```cs
 ATR(int period)
-ATR(IDataSeries input, int period)
+ATR(IDataSeries inSeries, int period)
 ATR(int period)[int barsAgo]
-ATR(IDataSeries input, int period)[int barsAgo]
+ATR(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -288,7 +288,7 @@ ATR(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **ATR**(14)\[**int** barsAgo\] ), the value of the indicator will be outputted for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculation
 
@@ -311,9 +311,9 @@ Positive (green) means that the Bollinger Bands are diverging. (Larger than Sign
 ### Usage
 ```cs
 BBBreakOutSpeed(double bandsDeviation, int bandsPeriod, int signalsize) 
-BBBreakOutSpeed(IDataSeries input, double bandsDeviation, int bandsPeriod, int signalsize) 
+BBBreakOutSpeed(IDataSeries inSeries, double bandsDeviation, int bandsPeriod, int signalsize) 
 BBBreakOutSpeed(double bandsDeviation, int bandsPeriod, int signalsize)[int barsAgo]
-BBBreakOutSpeed(IDataSeries input, double bandsDeviation, int bandsPeriod, int signalsize)[int barsAgo] 
+BBBreakOutSpeed(IDataSeries inSeries, double bandsDeviation, int bandsPeriod, int signalsize)[int barsAgo] 
 ```
 
 ### Return value
@@ -322,7 +322,7 @@ BBBreakOutSpeed(IDataSeries input, double bandsDeviation, int bandsPeriod, int s
 When using this method with an index (e.g. **BBBreakOutSpeed**(5)\[**int** barsAgo\] ), the value of the indicator will be outputted for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 bandsDeviation Standard deviation for the Bollinger Bands
 
@@ -359,9 +359,9 @@ A directional change of the BOP can be interpreted as a warning signal and will 
 ### Usage
 ```cs
 BOP(int smooth)
-BOP(IDataSeries input, int smooth)
+BOP(IDataSeries inSeries, int smooth)
 BOP(int smooth)[int barsAgo]
-BOP(IDataSeries input, int smooth)[int barsAgo]
+BOP(IDataSeries inSeries, int smooth)[int barsAgo]
 ```
 
 ### Return value
@@ -370,7 +370,7 @@ BOP(IDataSeries input, int smooth)[int barsAgo]
 When using this method with an index (e.g. **BOP**(5)\[**int** barsAgo\] ), the value of the indicator will be outputted for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 smooth Settings for the smoothing
 
@@ -406,13 +406,13 @@ Book "Technische Indikatoren - simplified" by Oliver Paesler (German only)
 ### Usage
 ```cs
 Bollinger(double numStdDev, int period)
-Bollinger(IDataSeries input, double numStdDev, int period)
+Bollinger(IDataSeries inSeries, double numStdDev, int period)
 //For the upper band
 Bollinger(double numStdDev, int period).Upper[int barsAgo]
-Bollinger(IDataSeries input, double numStdDev, int period).Upper[int barsAgo]
+Bollinger(IDataSeries inSeries, double numStdDev, int period).Upper[int barsAgo]
 //For the lower band
 Bollinger(double numStdDev, int period).Lower[int barsAgo]
-Bollinger(IDataSeries input, double numStdDev, int period).Lower[int barsAgo]
+Bollinger(IDataSeries inSeries, double numStdDev, int period).Lower[int barsAgo]
 ```
 
 ### Return value
@@ -421,7 +421,7 @@ Bollinger(IDataSeries input, double numStdDev, int period).Lower[int barsAgo]
 When using this method with an index (e.g. **Bollinger**(2, 20)\[**int** barsAgo\] ), the value of the indicator will be displayed for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 numStdDev Standard deviation
 
@@ -462,9 +462,9 @@ Book "Technische Indikatoren - simplified" by Oliver Paesler (German only)
 ### Usage
 ```cs
 BollingerPercentB(int period, double numStdDev)
-BollingerPercentB(IDataSeries input, int period, double numStdDev)
+BollingerPercentB(IDataSeries inSeries, int period, double numStdDev)
 BollingerPercentB(int period, double numStdDev) [int barsAgo]
-BollingerPercentB(IDataSeries input, int period, double numStdDev)[int barsAgo]
+BollingerPercentB(IDataSeries inSeries, int period, double numStdDev)[int barsAgo]
 ```
 
 ### Return value
@@ -473,7 +473,7 @@ BollingerPercentB(IDataSeries input, int period, double numStdDev)[int barsAgo]
 When using this method with an index (e.g. **BollingerPercentB**(20, 2)\[**int** barsAgo\] ), the value of the indicator will be outputted for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculation
 
@@ -504,21 +504,21 @@ Book "Technische Indikatoren - simplified" by Oliver Paesler (German only)
 ### Usage
 ```cs
 BBWidth(double numStdDev, int period)
-BBWidth(IDataSeries input, double numStdDev, int period)
+BBWidth(IDataSeries inSeries, double numStdDev, int period)
 BBWidth(double numStdDev, int period)[int barsAgo]
-BBWidth(IDataSeries input, double numStdDev, int period)[int barsAgo]
+BBWidth(IDataSeries inSeries, double numStdDev, int period)[int barsAgo]
 
 //For the value of the upper Band Width
 BBWidth(double numStdDev, int period).BandWidth
-BBWidth(IDataSeries input, double numStdDev, int period).BandWidth
+BBWidth(IDataSeries inSeries, double numStdDev, int period).BandWidth
 BBWidth(double numStdDev, int period).BandWidth[int barsAgo]
-BBWidth(IDataSeries input, double numStdDev, int period).BandWidth[int barsAgo]
+BBWidth(IDataSeries inSeries, double numStdDev, int period).BandWidth[int barsAgo]
 
 //For the value of the trigger line (threshold)
 BBWidth(double numStdDev, int period).Threshold
-BBWidth(IDataSeries input, double numStdDev, int period).Threshold
+BBWidth(IDataSeries inSeries, double numStdDev, int period).Threshold
 BBWidth(double numStdDev, int period).Threshold[int barsAgo]
-BBWidth(IDataSeries input, double numStdDev, int period).Threshold[int barsAgo]
+BBWidth(IDataSeries inSeries, double numStdDev, int period).Threshold[int barsAgo]
 ```
 
 ### Return value
@@ -527,7 +527,7 @@ BBWidth(IDataSeries input, double numStdDev, int period).Threshold[int barsAgo]
 When using the method with an index (e.g. **BBWidth**(2, 20)\[**int** barsAgo\] ), the value of the indicator will be outputted for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculation
 
@@ -567,15 +567,15 @@ See [*BuySellVolume*](#buysellvolume).
 ### Usage
 ```cs
 BuySellPressure()
-BuySellPressure(IDataSeries input)
+BuySellPressure(IDataSeries inSeries)
 
 //For the values of buy pressure
 BuySellPressure().BuyPressure[int barsAgo]
-BuySellPressure(IDataSeries input).BuyPressure[int barsAgo]
+BuySellPressure(IDataSeries inSeries).BuyPressure[int barsAgo]
 
 //For the values of sell Pressure
 BuySellPressure().SellPressure[int barsAgo]
-BuySellPressure(IDataSeries input).SellPressure[int barsAgo]
+BuySellPressure(IDataSeries inSeries).SellPressure[int barsAgo]
 ```
 
 ### Return value
@@ -589,7 +589,7 @@ When using this method with an index (e.g. **BuySellPressure**().BuyPressure\[**
 -   BuySellPressure().SellPressure\[0\] = 50
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 ### Visualization
 ![BuySellPressure](./media/image14.png)
@@ -622,7 +622,7 @@ Similar conditions as with the [*BuySellPressure*](#buysellpressure) apply.
 ### Usage
 ```cs
 BuySellVolume BuySellVolume()
-BuySellVolume BuySellVolume(IDataSeries input)
+BuySellVolume BuySellVolume(IDataSeries inSeries)
 ```
 
 ### Return value
@@ -631,7 +631,7 @@ BuySellVolume BuySellVolume(IDataSeries input)
 When using this method with an index (e.g. **BuySellVolume**().BuyVolume\[**int** barsAgo\] ), the value of the indicator will be outputted for the referenced bar.
 
 ### Parameter
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 ### Visualization
 ![BuySellVolume](./media/image15.png)
@@ -653,9 +653,9 @@ Explanations of the formations and their interpretations can be found here: [htt
 ### Usage
 ```cs
 CandleStickPattern(ChartPattern pattern, int trendStrength)
-CandleStickPattern(IDataSeries input, ChartPattern pattern, int trendStrength)
+CandleStickPattern(IDataSeries inSeries, ChartPattern pattern, int trendStrength)
 CandleStickPattern(ChartPattern pattern, int trendStrength)[int barsAgo]
-CandleStickPattern(IDataSeries input, ChartPattern pattern, int trendStrength)[int barsAgo]
+CandleStickPattern(IDataSeries inSeries, ChartPattern pattern, int trendStrength)[int barsAgo]
 ```
 
 ### Return value
@@ -721,9 +721,9 @@ VTAD: <http://vtadwiki.vtad.de/index.php/Chaikin\_Money\_Flow>
 ### Usage
 ```cs
 ChaikinMoneyFlow(int period)
-ChaikinMoneyFlow(IDataSeries input, int period)
+ChaikinMoneyFlow(IDataSeries inSeries, int period)
 ChaikinMoneyFlow(int period)[int barsAgo]
-ChaikinMoneyFlow(IDataSeries input, int period)[int barsAgo]
+ChaikinMoneyFlow(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -732,7 +732,7 @@ ChaikinMoneyFlow(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **ChaikinMoneyFlow**(21)\[**int** barsAgo\] ), the value of the indicator will be outputted for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculation
 
@@ -755,9 +755,9 @@ The interpretation of the Chaikin Oscillator is similar to the principle of the 
 ### Usage
 ```cs
 ChaikinOscillator(int fast, int slow)
-ChaikinOscillator(IDataSeries input, int fast, int slow)
+ChaikinOscillator(IDataSeries inSeries, int fast, int slow)
 ChaikinOscillator(int fast, int slow)[int barsAgo]
-ChaikinOscillator(IDataSeries input, int fast, int slow)[int barsAgo]
+ChaikinOscillator(IDataSeries inSeries, int fast, int slow)[int barsAgo]
 ```
 
 ### Return value
@@ -766,7 +766,7 @@ ChaikinOscillator(IDataSeries input, int fast, int slow)[int barsAgo]
 When using this method with an index (e.g. **ChaikinOscillator**(3, 10)\[**int** barsAgo\] ), the value of the indicator will be outputted for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 fast Number of bars included in the calculation for the fast EMA
 
@@ -791,9 +791,9 @@ The indicator oscillates around the zero line and fluctuates between a scale of 
 ### Usage
 ```cs
 ChaikinVolatility(int fast, int slow)
-ChaikinVolatility(IDataSeries input, int fast, int slow)
+ChaikinVolatility(IDataSeries inSeries, int fast, int slow)
 ChaikinVolatility(int fast, int slow)[int barsAgo]
-ChaikinVolatility(IDataSeries input, int fast, int slow)[int barsAgo]
+ChaikinVolatility(IDataSeries inSeries, int fast, int slow)[int barsAgo]
 ```
 
 ### Return value
@@ -802,7 +802,7 @@ ChaikinVolatility(IDataSeries input, int fast, int slow)[int barsAgo]
 When using this method with an index (e.g. **ChaikinVolatility**(14)\[**int** barsAgo\] ), the value of the indicator will be outputted for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -828,9 +828,9 @@ The CMO is one of several indicators created by the technical analyst Tushar Cha
 ### Usage
 ```cs
 CMO(int period)
-CMO(IDataSeries input, int period)
+CMO(IDataSeries inSeries, int period)
 CMO(int period)[int barsAgo]
-CMO(IDataSeries input, int period)[int barsAgo]
+CMO(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -839,7 +839,7 @@ CMO(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **CMO**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -929,9 +929,9 @@ VTAD: [http://vtadwiki.vtad.de/index.php/Commodity_Channel_Index](http://vtadwik
 ### Usage
 ```cs
 CCI(int period)
-CCI(IDataSeries input, int period)
+CCI(IDataSeries inSeries, int period)
 CCI(int period)[int barsAgo]
-CCI(IDataSeries input, int period)[int barsAgo]
+CCI(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -940,7 +940,7 @@ CCI(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **CCI**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -1309,15 +1309,15 @@ Here you can read about a trading system based on the Darvas boxes. (German only
 ### Usage
 ```cs
 Darvas()
-Darvas(IDataSeries input)
+Darvas(IDataSeries inSeries)
 
 //For the upper Box boundary
 Darvas().Upper[int barsAgo]
-Darvas(IDataSeries input).Upper[int barsAgo]
+Darvas(IDataSeries inSeries).Upper[int barsAgo]
 
 //Returns the lower value
 Darvas().Lower[int barsAgo]
-Darvas(IDataSeries input).Lower[int barsAgo]
+Darvas(IDataSeries inSeries).Lower[int barsAgo]
 ```
 
 ### Return value
@@ -1326,7 +1326,7 @@ Darvas(IDataSeries input).Lower[int barsAgo]
 When using this method with an index (e.g. **Darvas**()\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameter
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 ### Visualization
 ![Darvas Boxes](./media/image22.png)
@@ -1352,15 +1352,15 @@ See: Directional Movement Index ([*DMI*](#directional-movement-index-dmi))
 ### Usage
 ```cs
 DM(int period)
-DM(IDataSeries input, int period)
+DM(IDataSeries inSeries, int period)
 DM(int period)[int barsAgo]
-DM(IDataSeries input, int period)[int barsAgo]
+DM(IDataSeries inSeries, int period)[int barsAgo]
 //For the value of +DM
 DM(int period).DiPlus[int barsAgo]
-DM(IDataSeries input, int period).DiPlus[int barsAgo]
+DM(IDataSeries inSeries, int period).DiPlus[int barsAgo]
 //For the value of -DM
 DM(int period).DiMinus[int barsAgo]
-DM(IDataSeries input, int period).DiMinus[int barsAgo]
+DM(IDataSeries inSeries, int period).DiMinus[int barsAgo]
 ```
 
 ### Return value
@@ -1369,7 +1369,7 @@ DM(IDataSeries input, int period).DiMinus[int barsAgo]
 When using this method with an index (e.g. **DM**(14).DiPlus\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -1393,19 +1393,19 @@ VTAD: <http://vtadwiki.vtad.de/index.php/Donchian\_Channel>
 ### Usage
 ```cs
 DonchianChannel(int period)
-DonchianChannel(IDataSeries input, int period)
+DonchianChannel(IDataSeries inSeries, int period)
 
 //Upper band
 DonchianChannel(int period).Upper[int barsAgo]
-DonchianChannel(IDataSeries input, int period).Upper[int barsAgo]
+DonchianChannel(IDataSeries inSeries, int period).Upper[int barsAgo]
 
 //Middle band
 DonchianChannel(int period)[int barsAgo]
-DonchianChannel(IDataSeries input, int period)[int barsAgo]
+DonchianChannel(IDataSeries inSeries, int period)[int barsAgo]
 
 //Lower band
 DonchianChannel(int period).Lower[int barsAgo]
-DonchianChannel(IDataSeries input, int period).Lower[int barsAgo]
+DonchianChannel(IDataSeries inSeries, int period).Lower[int barsAgo]
 ```
 
 ### Return value
@@ -1414,7 +1414,7 @@ DonchianChannel(IDataSeries input, int period).Lower[int barsAgo]
 When using this method with an index (e.g. **DonchianChannel**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -1450,9 +1450,9 @@ VTAD: [http://vtadwiki.vtad.de/index.php/DMI_-_Directional_Movement_Index](http:
 ### Usage
 ```cs
 DMI(int period)
-DMI(IDataSeries input, int period)
+DMI(IDataSeries inSeries, int period)
 DMI(int period)[int barsAgo]
-DMI(IDataSeries input, int period)[int barsAgo]
+DMI(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -1461,7 +1461,7 @@ DMI(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **DMI**(20)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -1488,21 +1488,21 @@ Values above 80 are seen as overbought, and below 20 as oversold. In addition, s
 DoubleStochastics(int period)
 DoubleStochastics(int period)[int barsAgo]
 DoubleStochastics(int period, DoubleStochasticsMode mode, int EMA-Period1)
-DoubleStochastics(IDataSeries input, int period, DoubleStochasticsMode mode, int EMA-Period1)
+DoubleStochastics(IDataSeries inSeries, int period, DoubleStochasticsMode mode, int EMA-Period1)
 DoubleStochastics(int period, DoubleStochasticsMode mode, int EMA-Period1)[int barsAgo]
-DoubleStochastics(IDataSeries input, int period, DoubleStochasticsMode mode, int EMA-Period1)[int barsAgo]
+DoubleStochastics(IDataSeries inSeries, int period, DoubleStochasticsMode mode, int EMA-Period1)[int barsAgo]
 DoubleStochastics(int period, DoubleStochasticsMode mode, int EMA-Period1, int EMA-Period2)
-DoubleStochastics(IDataSeries input, int period, DoubleStochasticsMode mode, int EMA-Period1, int EMA-Period2)
+DoubleStochastics(IDataSeries inSeries, int period, DoubleStochasticsMode mode, int EMA-Period1, int EMA-Period2)
 DoubleStochastics(int period, DoubleStochasticsMode mode, int EMA-Period1, int EMA-Period2)[int barsAgo]
-DoubleStochastics(IDataSeries input, int period, DoubleStochasticsMode mode, int EMA-Period1, int EMA-Period2)[int barsAgo]
+DoubleStochastics(IDataSeries inSeries, int period, DoubleStochasticsMode mode, int EMA-Period1, int EMA-Period2)[int barsAgo]
 
 //For the value of %K
 DoubleStochastics(int period).K[int barsAgo]
-DoubleStochastics(IDataSeries input, int period).K[int barsAgo]
+DoubleStochastics(IDataSeries inSeries, int period).K[int barsAgo]
 DoubleStochastics(int period, DoubleStochasticsMode mode, int EMA-Period1).K[int barsAgo]
-DoubleStochastics(IDataSeries input, int period, DoubleStochasticsMode mode, int EMA-Period1).K[int barsAgo]
+DoubleStochastics(IDataSeries inSeries, int period, DoubleStochasticsMode mode, int EMA-Period1).K[int barsAgo]
 DoubleStochastics(int period, DoubleStochasticsMode mode, int EMA-Period1, int EMA-Period2).K[int barsAgo]
-DoubleStochastics(IDataSeries input, int period, DoubleStochasticsMode mode, int EMA-Period1, int EMA-Period2).K[int barsAgo]
+DoubleStochastics(IDataSeries inSeries, int period, DoubleStochasticsMode mode, int EMA-Period1, int EMA-Period2).K[int barsAgo]
 ```
 
 ### Return value
@@ -1511,11 +1511,11 @@ DoubleStochastics(IDataSeries input, int period, DoubleStochasticsMode mode, int
 When using this method with an index (e.g. **DoubleStochastics**(...)\[**int** barsAgo\] or **DoubleStochastics**(...).K\[**int** barsAgo\]), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations (default: 10)
 
-mode Method of calculation, possible inputs are Blau, Blau2, Bressert
+mode Method of calculation, possible inSeries are Blau, Blau2, Bressert
 
 EMA-Period1 Periods for the EMA
 
@@ -1543,9 +1543,9 @@ VTAD: <http://vtadwiki.vtad.de/index.php/Dynamic\_Momentum\_Index>
 ### Usage
 ```cs
 DMIndex(int smooth)
-DMIndex(IDataSeries input, int smooth)
+DMIndex(IDataSeries inSeries, int smooth)
 DMIndex(int smooth)[int barsAgo]
-DMIndex(IDataSeries input, int smooth)[int barsAgo]
+DMIndex(IDataSeries inSeries, int smooth)[int barsAgo]
 ```
 
 ### Return value
@@ -1554,7 +1554,7 @@ DMIndex(IDataSeries input, int smooth)[int barsAgo]
 When using this method with an index (e.g. **DMIndex**(3)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 smooth Smoothing settings
 
@@ -1580,9 +1580,9 @@ When the EOM is moving away from the zero line (marker) then an impulse has begu
 ### Usage
 ```cs
 EaseOfMovement(int smoothing, int volDivisor)
-EaseOfMovement(IDataSeries input, int smoothing, int volDivisor)
+EaseOfMovement(IDataSeries inSeries, int smoothing, int volDivisor)
 EaseOfMovement(int smoothing, int volDivisor)[int barsAgo]
-EaseOfMovement(IDataSeries input, int smoothing, int volDivisor)[int barsAgo]
+EaseOfMovement(IDataSeries inSeries, int smoothing, int volDivisor)[int barsAgo]
 ```
 
 ### Return value
@@ -1591,7 +1591,7 @@ EaseOfMovement(IDataSeries input, int smoothing, int volDivisor)[int barsAgo]
 When using this method with an index (e.g. **EaseOfMovement**(14, 10000)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 smoothing Smoothing settings
 
@@ -1621,7 +1621,7 @@ A system using the Fisher Transform can be found here:
 <https://www.prorealtime.com/de/pdf/probacktest.pdf>
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -1633,9 +1633,9 @@ When using this method with an index (e.g. **FisherTransform**(10)\[**int** bars
 ### Usage
 ```cs
 FisherTransform(int period)
-FisherTransform(IDataSeries input, int period)
+FisherTransform(IDataSeries inSeries, int period)
 FisherTransform(int period)[int barsAgo]
-FisherTransform(IDataSeries input, int period)[int barsAgo]
+FisherTransform(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Visualization
@@ -1657,7 +1657,7 @@ When this oscillator displays positive values, it hints that the Time Series For
 FMLabs: <http://www.fmlabs.com/reference/default.htm?url=ForecastOscillator.htm>
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -1669,9 +1669,9 @@ When using this method with an index (e.g. **FOSC**(14)\[**int** barsAgo\] ), th
 ### Usage
 ```cs
 FOSC(int period)
-FOSC(IDataSeries input, int period)
+FOSC(IDataSeries inSeries, int period)
 FOSC(int period)[int barsAgo]
-FOSC(IDataSeries input, int period)[int barsAgo]
+FOSC(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Visualization
@@ -1778,27 +1778,27 @@ Similarly to the smoothing averages, the Ichimoku indicator will create a bullis
 ### Usage
 ```cs
 IchimokuCloud(int periodFast, int periodMedium, int periodSlow)
-IchimokuCloud(IDataSeries input, int periodFast, int periodMedium, int periodSlow)
+IchimokuCloud(IDataSeries inSeries, int periodFast, int periodMedium, int periodSlow)
 
 //TenkanSen
 IchimokuCloud(int periodFast, int periodMedium, int periodSlow).TenkanSen[int barsAgo]
-IchimokuCloud(IDataSeries input, int periodFast, int periodMedium, int periodSlow).TenkanSen[int barsAgo]
+IchimokuCloud(IDataSeries inSeries, int periodFast, int periodMedium, int periodSlow).TenkanSen[int barsAgo]
 
 //KijunSen
 IchimokuCloud(int periodFast, int periodMedium, int periodSlow).KijunSen[int barsAgo]
-IchimokuCloud(IDataSeries input, int periodFast, int periodMedium, int periodSlow).KijunSen[int barsAgo]
+IchimokuCloud(IDataSeries inSeries, int periodFast, int periodMedium, int periodSlow).KijunSen[int barsAgo]
 
 //ChikouSpan
 IchimokuCloud(int periodFast, int periodMedium, int periodSlow).ChikouSpan[int barsAgo]
-IchimokuCloud(IDataSeries input, int periodFast, int periodMedium, int periodSlow).ChikouSpan[int barsAgo]
+IchimokuCloud(IDataSeries inSeries, int periodFast, int periodMedium, int periodSlow).ChikouSpan[int barsAgo]
 
 //SenkouSpanA
 IchimokuCloud(int periodFast, int periodMedium, int periodSlow).SenkouSpanA[int barsAgo]
-IchimokuCloud(IDataSeries input, int periodFast, int periodMedium, int periodSlow).SenkouSpanA[int barsAgo]
+IchimokuCloud(IDataSeries inSeries, int periodFast, int periodMedium, int periodSlow).SenkouSpanA[int barsAgo]
 
 //SenkouSpanB
 IchimokuCloud(int periodFast, int periodMedium, int periodSlow).SenkouSpanB[int barsAgo]
-IchimokuCloud(IDataSeries input, int periodFast, int periodMedium, int periodSlow).SenkouSpanB[int barsAgo]
+IchimokuCloud(IDataSeries inSeries, int periodFast, int periodMedium, int periodSlow).SenkouSpanB[int barsAgo]
 ```
 
 ### Return value
@@ -1807,7 +1807,7 @@ IchimokuCloud(IDataSeries input, int periodFast, int periodMedium, int periodSlo
 When using this method with an index (e.g. **IchimokuCloud**(9,26,52)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 periodFast Period setting for the Tenkan line. Default: 9
 
@@ -1904,19 +1904,19 @@ VTAD: <http://vtadwiki.vtad.de/index.php/Keltner\_Channel>
 ### Usage
 ```cs
 KeltnerChannel(double offsetMutiplier, int period)
-KeltnerChannel(IDataSeries input, double offsetMutiplier, int period)
+KeltnerChannel(IDataSeries inSeries, double offsetMutiplier, int period)
 
 //Returns midline value
 KeltnerChannel(double offsetMutiplier, int period)[int barsAgo]
-KeltnerChannel(IDataSeries input, double offsetMutiplier, int period)[int barsAgo]
+KeltnerChannel(IDataSeries inSeries, double offsetMutiplier, int period)[int barsAgo]
 
 //Returns upper band value
 KeltnerChannel(double offsetMutiplier, int period).Upper[int barsAgo]
-KeltnerChannel(IDataSeries input, double offsetMutiplier, int period).Upper[int barsAgo]
+KeltnerChannel(IDataSeries inSeries, double offsetMutiplier, int period).Upper[int barsAgo]
 
 //Returns lower band value
 KeltnerChannel(double offsetMutiplier, int period).Lower[int barsAgo]
-KeltnerChannel(IDataSeries input, double offsetMutiplier, int period).Lower[int barsAgo]
+KeltnerChannel(IDataSeries inSeries, double offsetMutiplier, int period).Lower[int barsAgo]
 ```
 
 ### Return value
@@ -1925,7 +1925,7 @@ KeltnerChannel(IDataSeries input, double offsetMutiplier, int period).Lower[int 
 When using this method with an index (e.g. **KeltnerChannel**(1.5, 15)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 offsetMultiplier Multiplier for the SMA
 
@@ -1963,7 +1963,7 @@ See [*KeyReversalDown*](#keyreversaldown), [*KeyReversalUpAtSMA*](#keyreversalup
 
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Return value
@@ -1975,9 +1975,9 @@ period Number of bars included in the calculations
 ### Usage
 ```cs
 KeyReversalUp(int period)
-KeyReversalUp(IDataSeries input, int period)
+KeyReversalUp(IDataSeries inSeries, int period)
 KeyReversalUp(int period)[int barsAgo]
-KeyReversalUp(IDataSeries input, int period)[int barsAgo]
+KeyReversalUp(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Example
@@ -1998,7 +1998,7 @@ See [*KeyReversalUp*](#keyreversalup), [*KeyReversalUpAtSMA*](#keyreversalupatsm
 
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Return value
@@ -2010,9 +2010,9 @@ period Number of bars included in the calculations
 ### Usage
 ```cs
 KeyReversalDown(int period)
-KeyReversalDown(IDataSeries input, int period)
+KeyReversalDown(IDataSeries inSeries, int period)
 KeyReversalDown(int period)[int barsAgo]
-KeyReversalDown(IDataSeries input, int period)[int barsAgo]
+KeyReversalDown(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Example
@@ -2034,7 +2034,7 @@ See [*KeyReversalUp*](#keyreversalup), [*KeyReversalDown*](#keyreversaldown), [*
 
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 period Number of bars included in the calculations
 SMAperiod Number of periods included in the calculation of the SMA
 
@@ -2047,9 +2047,9 @@ SMAperiod Number of periods included in the calculation of the SMA
 ### Usage
 ```cs
 KeyReversalUpAtSMA(int period, int SMAperiod)
-KeyReversalUpAtSMA(IDataSeries input, int period, int SMAperiod)
+KeyReversalUpAtSMA(IDataSeries inSeries, int period, int SMAperiod)
 KeyReversalUpAtSMA(int period, int SMAperiod)[int barsAgo]
-KeyReversalUpAtSMA(IDataSeries input, int period, int SMAperiod)[int barsAgo]
+KeyReversalUpAtSMA(IDataSeries inSeries, int period, int SMAperiod)[int barsAgo]
 ```
 
 ### Example
@@ -2071,7 +2071,7 @@ See [*KeyReversalUp*](#keyreversalup), [*KeyReversalDown*](#keyreversaldown), [*
 
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 period Number of bars included in the calculations
 SMAperiod Number of periods included in the SMA calculation
 
@@ -2084,9 +2084,9 @@ SMAperiod Number of periods included in the SMA calculation
 ### Usage
 ```cs
 KeyReversalDownAtSMA(int period, int SMAperiod)
-KeyReversalDownAtSMA(IDataSeries input, int period, int SMAperiod)
+KeyReversalDownAtSMA(IDataSeries inSeries, int period, int SMAperiod)
 KeyReversalDownAtSMA(int period, int SMAperiod)[int barsAgo]
-KeyReversalDownAtSMA(IDataSeries input, int period, int SMAperiod)[int barsAgo]
+KeyReversalDownAtSMA(IDataSeries inSeries, int period, int SMAperiod)[int barsAgo]
 ```
 
 ### Example
@@ -2107,7 +2107,7 @@ KeyReversalUpAtEMA searches within a predefined number of periods to find a reve
 See [*KeyReversalUp*](#keyreversalup), [*KeyReversalDown*](#keyreversaldown), [*KeyReversalUpAtSMA*](#keyreversalupatsma), [*KeyReversalDownAtSMA*](#keyreversaldownatsma), [*KeyReversalDownAtEMA*](#keyreversaldownatema).
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 period Number of bars included in the calculations
 EMAperiod Number of periods included in the EMA calculation
 
@@ -2120,9 +2120,9 @@ EMAperiod Number of periods included in the EMA calculation
 ### Usage
 ```cs
 KeyReversalUpAtEMA(int period, int EMAperiod)
-KeyReversalUpAtEMA(IDataSeries input, int period, int EMAperiod)
+KeyReversalUpAtEMA(IDataSeries inSeries, int period, int EMAperiod)
 KeyReversalUpAtEMA(int period, int EMAperiod)[int barsAgo]
-KeyReversalUpAtEMA(IDataSeries input, int period, int EMAperiod)[int barsAgo]
+KeyReversalUpAtEMA(IDataSeries inSeries, int period, int EMAperiod)[int barsAgo]
 ```
 
 ### Example
@@ -2143,7 +2143,7 @@ KeyReversalDownAtEMA searches within a predefined number of periods to find a re
 See [*KeyReversalUp*](#keyreversalup), [*KeyReversalDown*](#keyreversaldown), [*KeyReversalUpAtSMA*](#keyreversalupatsma), [*KeyReversalDownAtSMA*](#keyreversaldownatsma), [*KeyReversalUpAtEMA*](#keyreversalupatema).
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 period Number of bars included in the calculations
 EMAperiod Number of periods used to calculate the EMA
 
@@ -2157,9 +2157,9 @@ EMAperiod Number of periods used to calculate the EMA
 ### Usage
 ```cs
 KeyReversalDownAtEMA(int period, int EMAperiod)
-KeyReversalDownAtEMA(IDataSeries input, int period, int EMAperiod)
+KeyReversalDownAtEMA(IDataSeries inSeries, int period, int EMAperiod)
 KeyReversalDownAtEMA(int period, int EMAperiod)[int barsAgo]
-KeyReversalDownAtEMA(IDataSeries input, int period, int EMAperiod)[int barsAgo]
+KeyReversalDownAtEMA(IDataSeries inSeries, int period, int EMAperiod)[int barsAgo]
 ```
 
 ### Example
@@ -2205,9 +2205,9 @@ The linear regression indicator is used as a prognosis tool for the future devel
 ### Usage
 ```cs
 LinReg(int period)
-LinReg(IDataSeries input, int period)
+LinReg(IDataSeries inSeries, int period)
 LinReg(int period)[int barsAgo]
-LinReg(IDataSeries input, int period)[int barsAgo]
+LinReg(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -2216,7 +2216,7 @@ LinReg(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **LinReg**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -2243,9 +2243,9 @@ The indicator is not used by itself, but is simply a component of trading system
 ### Usage
 ```cs
 LinRegIntercept(int period)
-LinRegIntercept(IDataSeries input, int period)
+LinRegIntercept(IDataSeries inSeries, int period)
 LinRegIntercept(int period)[int barsAgo]
-LinRegIntercept(IDataSeries input, int period)[int barsAgo]
+LinRegIntercept(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -2254,7 +2254,7 @@ LinRegIntercept(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **LinRegIntercept**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -2280,9 +2280,9 @@ This indicator is not very useful for determining overbought or oversold areas, 
 ### Usage
 ```cs
 LinRegSlope(int period)
-LinRegSlope(IDataSeries input, int period)
+LinRegSlope(IDataSeries inSeries, int period)
 LinRegSlope(int period)[int barsAgo]
-LinRegSlope(IDataSeries input, int period)[int barsAgo]
+LinRegSlope(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -2291,7 +2291,7 @@ LinRegSlope(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **LinRegSlope**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -2390,19 +2390,19 @@ VTAD: <http://vtadwiki.vtad.de/index.php/MACD>
 ### Usage
 ```cs
 MACD(int fast, int slow, int smooth)
-MACD(IDataSeries input, int fast, int slow, int smooth)
+MACD(IDataSeries inSeries, int fast, int slow, int smooth)
 
 //For the value of the MACD line
 MACD(int fast, int slow, int smooth)[int barsAgo]
-MACD(IDataSeries input, int fast, int slow, int smooth)[int barsAgo]
+MACD(IDataSeries inSeries, int fast, int slow, int smooth)[int barsAgo]
 
 //For the value of the signal line
 MACD(int fast, int slow, int smooth).Avg[int barsAgo]
-MACD(IDataSeries input, int fast, int slow, int smooth).Avg[int barsAgo]
+MACD(IDataSeries inSeries, int fast, int slow, int smooth).Avg[int barsAgo]
 
 //For the difference between the MACD and the signal line
 MACD(int fast, int slow, int smooth).Diff[int barsAgo]
-MACD(IDataSeries input, int fast, int slow, int smooth).Diff[int barsAgo]
+MACD(IDataSeries inSeries, int fast, int slow, int smooth).Diff[int barsAgo]
 ```
 
 ### Return value
@@ -2411,7 +2411,7 @@ MACD(IDataSeries input, int fast, int slow, int smooth).Diff[int barsAgo]
 When using this method with an index (e.g. **MACD**(12,26,9)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 fast Number of periods for the fast EMA calculation
 
@@ -2444,19 +2444,19 @@ Occasionally, it happens that a strong trend does not establish itself after an 
 ### Usage
 ```cs
 MAEnvelopes(double envelopePercentage, MAEnvelopesMAType maType, int period)
-MAEnvelopes(IDataSeries input, double envelopePercentage, MAEnvelopesMAType maType, int period)
+MAEnvelopes(IDataSeries inSeries, double envelopePercentage, MAEnvelopesMAType maType, int period)
 
 //For the upper band
 MAEnvelopes(double envelopePercentage, MAEnvelopesMAType maType, int period).Upper[int barsAgo]
-MAEnvelopes(IDataSeries input, double envelopePercentage, MAEnvelopesMAType maType, int period).Upper[int barsAgo]
+MAEnvelopes(IDataSeries inSeries, double envelopePercentage, MAEnvelopesMAType maType, int period).Upper[int barsAgo]
 
 //For the middle band
 MAEnvelopes(double envelopePercentage, MAEnvelopesMAType maType, int period).Middle[int barsAgo]
-MAEnvelopes(IDataSeries input, double envelopePercentage, MAEnvelopesMAType maType, int period).Middle[int barsAgo]
+MAEnvelopes(IDataSeries inSeries, double envelopePercentage, MAEnvelopesMAType maType, int period).Middle[int barsAgo]
 
 //For the lower band
 MAEnvelopes(double envelopePercentage, MAEnvelopesMAType maType, int period).Lower[int barsAgo]
-MAEnvelopes(IDataSeries input, double envelopePercentage, MAEnvelopesMAType maType, int period).Lower[int barsAgo]
+MAEnvelopes(IDataSeries inSeries, double envelopePercentage, MAEnvelopesMAType maType, int period).Lower[int barsAgo]
 ```
 
 ### Return value
@@ -2465,7 +2465,7 @@ MAEnvelopes(IDataSeries input, double envelopePercentage, MAEnvelopesMAType maTy
 When using this method with an index (e.g. **MAEnvelopes**(14,SMA,1.5)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+v Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -2655,9 +2655,9 @@ See [*ROC*](#rate-of-change-roc).
 ### Usage
 ```cs
 Momentum(int period)
-Momentum (IDataSeries input, int period)
+Momentum (IDataSeries inSeries, int period)
 Momentum (int period)[int barsAgo]
-Momentum (IDataSeries input, int period)[int barsAgo]
+Momentum (IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -2666,7 +2666,7 @@ Momentum (IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **Momentum**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -2693,9 +2693,9 @@ VTAD: [http://vtadwiki.vtad.de/index.php/Money_Flow_Index](http://vtadwiki.vtad.
 ### Usage
 ```cs
 MFI(int period)
-MFI(IDataSeries input, int period)
+MFI(IDataSeries inSeries, int period)
 MFI(int period)[int barsAgo]
-MFI(IDataSeries input, int period)[int barsAgo]
+MFI(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -2704,7 +2704,7 @@ MFI(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **MFI**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -2777,9 +2777,9 @@ The general interpretations are the same as for regular moving averages.
 ### Usage
 ```cs
 DEMA(int period)
-DEMA(IDataSeries input, int period)
+DEMA(IDataSeries inSeries, int period)
 DEMA(int period)[int barsAgo]
-DEMA(IDataSeries input, int period)[int barsAgo]
+DEMA(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -2788,7 +2788,7 @@ DEMA(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **DEMA**(20)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -2797,7 +2797,7 @@ period Number of bars included in the calculations
 
 ### Calculation
 ```cs
-Value.Set(2 * EMA(Inputs[0], Period)[0] - EMA(EMA(Inputs[0], Period), Period)[0]);
+Value.Set(2 * EMA(InSeries[0], Period)[0] - EMA(EMA(InSeries[0], Period), Period)[0]);
 ```
 
 ### Example
@@ -2819,9 +2819,9 @@ General interpretations of the moving averages also apply to the EMA.
 ### Usage
 ```cs
 EMA(int period)
-EMA(IDataSeries input, int period)
+EMA(IDataSeries inSeries, int period)
 EMA(int period)[int barsAgo]
-EMA(IDataSeries input, int period)[int barsAgo]
+EMA(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -2830,7 +2830,7 @@ EMA(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **EMA**(20)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -2884,7 +2884,7 @@ HMA(IDataSeries InSeries, int period)[int barsAgo]
 When using this method with an index (e.g. **HMA**(21)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -2893,8 +2893,8 @@ period Number of bars included in the calculations
 
 ### Calculation
 ```cs
-double value1 = 2 * WMA(Inputs[0], (int)(Period / 2))[0];
-double value2 = WMA(Inputs[0], Period)[0];
+double value1 = 2 * WMA(InSeries, (int)(Period / 2))[0];
+double value2 = WMA(InSeries, Period)[0];
 diffSeries.Set(value1 - value2);
 Value.Set(WMA(diffSeries, (int) Math.Sqrt(Period))[0]);
 ```
@@ -2921,9 +2921,9 @@ For a more general interpretation of moving averages, please see the following c
 ### Usage
 ```cs
 KAMA(int fast, int period, int slow)
-KAMA(IDataSeries input, int fast, int period, int slow)
+KAMA(IDataSeries inSeries, int fast, int period, int slow)
 KAMA(int fast, int period, int slow)[int barsAgo]
-KAMA(IDataSeries input, int fast, int period, int slow)[int barsAgo]
+KAMA(IDataSeries inSeries, int fast, int period, int slow)[int barsAgo]
 ```
 
 ### Return value
@@ -2932,7 +2932,7 @@ KAMA(IDataSeries input, int fast, int period, int slow)[int barsAgo]
 When using this method with an index (e.g. **KAMA**(2,10,30)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -2967,13 +2967,13 @@ General information about moving averages can be found here: [*Moving Averages*]
 ### Usage
 ```cs
 MAMA(double fastLimit, double slowLimit)
-MAMA(IDataSeries input, double fastLimit, double slowLimit)
+MAMA(IDataSeries inSeries, double fastLimit, double slowLimit)
 MAMA(double fastLimit, double slowLimit)[int barsAgo]
-MAMA(IDataSeries input, double fastLimit, double slowLimit)[int barsAgo]
+MAMA(IDataSeries inSeries, double fastLimit, double slowLimit)[int barsAgo]
 
 //Value of the Following Adaptive Moving Average (FAMA)
 MAMA(double fastLimit, double slowLimit).Fama[int barsAgo]
-MAMA(IDataSeries input, double fastLimit, double slowLimit).Fama[int barsAgo]
+MAMA(IDataSeries inSeries, double fastLimit, double slowLimit).Fama[int barsAgo]
 ```
 
 ### Return value
@@ -2982,7 +2982,7 @@ MAMA(IDataSeries input, double fastLimit, double slowLimit).Fama[int barsAgo]
 When using this method with an index (e.g. **MAMA**(0.5,0.05)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 fastLimit Upper limit for the alpha value
 
@@ -3025,7 +3025,7 @@ SMA(IDataSeries InSeries, int period)[int barsAgo]
 When using this method with an index (e.g. **SMA**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -3067,9 +3067,9 @@ The SMMA is often used with the [*SuperTrend*](#supertrend) indicator.
 ### Usage
 ```cs
 SMMA(int period)
-SMMA(IDataSeries input, int period)
+SMMA(IDataSeries inSeries, int period)
 SMMA(int period)[int barsAgo]
-SMMA(IDataSeries input, int period)[int barsAgo]
+SMMA(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -3078,7 +3078,7 @@ SMMA(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **SMMA**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -3100,9 +3100,9 @@ You can find more information about moving averages here: [*Moving Averages*](#m
 ### Usage
 ```cs
 TEMA(int period)
-TEMA(IDataSeries input, int period)
+TEMA(IDataSeries inSeries, int period)
 TEMA(int period)[int barsAgo]
-TEMA(IDataSeries input, int period)[int barsAgo]
+TEMA(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -3111,7 +3111,7 @@ TEMA(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **TEMA**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -3131,9 +3131,9 @@ This specifically weighted average has an extra smoothing component. The weighti
 ### Usage
 ```cs
 TMA(int period)
-TMA(IDataSeries input, int period)
+TMA(IDataSeries inSeries, int period)
 TMA(int period)[int barsAgo]
-TMA(IDataSeries input, int period)[int barsAgo]
+TMA(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -3142,7 +3142,7 @@ TMA(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **TMA**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -3166,13 +3166,13 @@ A buy signal is created when the TRIX indicator crosses the zero line from botto
 ### Usage
 ```cs
 TRIX(int period, int signalPeriod)
-TRIX(IDataSeries input, int period, int signalPeriod)
+TRIX(IDataSeries inSeries, int period, int signalPeriod)
 TRIX(int period, int signalPeriod)[int barsAgo]
-TRIX(IDataSeries input, int period, int signalPeriod)[int barsAgo]
+TRIX(IDataSeries inSeries, int period, int signalPeriod)[int barsAgo]
 
 //For the signal line
 TRIX(int period, int signalPeriod).Signal[int barsAgo]
-TRIX(IDataSeries input, int period, int signalPeriod).Signal[int barsAgo]
+TRIX(IDataSeries inSeries, int period, int signalPeriod).Signal[int barsAgo]
 ```
 
 ### Return value
@@ -3181,7 +3181,7 @@ TRIX(IDataSeries input, int period, int signalPeriod).Signal[int barsAgo]
 When using this method with an index (e.g. **TRIX**(14, 3)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -3206,9 +3206,9 @@ The Triple Exponential Moving Average T3 indicator (also dubbed the T3MA) is cal
 ### Usage
 ```cs
 T3(int period, int tCount, double vFactor)
-T3(IDataSeries input, int period, int tCount, double vFactor)
+T3(IDataSeries inSeries, int period, int tCount, double vFactor)
 T3(int period, int tCount, double vFactor)[int barsAgo]
-T3(IDataSeries input, int period, int tCount, double vFactor)[int barsAgo]
+T3(IDataSeries inSeries, int period, int tCount, double vFactor)[int barsAgo]
 ```
 
 ### Return value
@@ -3217,7 +3217,7 @@ T3(IDataSeries input, int period, int tCount, double vFactor)[int barsAgo]
 When using this method with an index (e.g. **T3**(14,3,0.7)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -3246,9 +3246,9 @@ The VMA is not to be confused with the Volume Moving Average (VolMA)!
 ### Usage
 ```cs
 VMA(int period, int volatilityPeriod)
-VMA(IDataSeries input, int period, int volatilityPeriod)
+VMA(IDataSeries inSeries, int period, int volatilityPeriod)
 VMA(int period, int volatilityPeriod)[int barsAgo]
-VMA(IDataSeries input, int period, int volatilityPeriod)[int barsAgo]
+VMA(IDataSeries inSeries, int period, int volatilityPeriod)[int barsAgo]
 ```
 
 ### Return value
@@ -3257,7 +3257,7 @@ VMA(IDataSeries input, int period, int volatilityPeriod)[int barsAgo]
 When using this method with an index (e.g. **VMA**(9,9)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -3279,9 +3279,9 @@ VWMA is a non-cumulated smoothed average that is weighted based on the various v
 ### Usage
 ```cs
 VWMA(int period)
-VWMA(IDataSeries input, int period)
+VWMA(IDataSeries inSeries, int period)
 VWMA(int period)[int barsAgo]
-VWMA(IDataSeries input, int period)[int barsAgo]
+VWMA(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -3290,7 +3290,7 @@ VWMA(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **VWMA**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -3313,9 +3313,9 @@ The Weighted Moving Average is the most well-known of the weighted averages, and
 ### Usage
 ```cs
 WMA(int period)
-WMA(IDataSeries input, int period)
+WMA(IDataSeries inSeries, int period)
 WMA(int period)[int barsAgo]
-WMA(IDataSeries input, int period)[int barsAgo]
+WMA(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -3324,7 +3324,7 @@ WMA(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **WMA**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -3347,9 +3347,9 @@ FMLabs: <http://www.fmlabs.com/reference/default.htm?url=ZeroLagExpMA.htm>
 ### Usage
 ```cs
 ZLEMA(int period)
-ZLEMA(IDataSeries input, int period)
+ZLEMA(IDataSeries inSeries, int period)
 ZLEMA(int period)[int barsAgo]
-ZLEMA(IDataSeries input, int period)[int barsAgo]
+ZLEMA(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -3358,7 +3358,7 @@ ZLEMA(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **ZLEMA**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -3382,9 +3382,9 @@ Constantly rising lows
 ### Usage
 ```cs
 NBarsUp(int barCount, bool BarUp, bool higherHigh, bool higherLow)
-NBarsUp(IDataSeries input, int barCount, bool BarUp, bool higherHigh, bool higherLow)
+NBarsUp(IDataSeries inSeries, int barCount, bool BarUp, bool higherHigh, bool higherLow)
 NBarsUp(int barCount, int barCount, bool BarUp, bool higherHigh, bool higherLow)[int barsAgo]
-NBarsUp(IDataSeries input, int barCount, bool BarUp, bool higherHigh, bool higherLow)[int barsAgo]
+NBarsUp(IDataSeries inSeries, int barCount, bool BarUp, bool higherHigh, bool higherLow)[int barsAgo]
 ```
 
 ### Return value
@@ -3396,7 +3396,7 @@ When using this method with an index (e.g. **NBarsUp**(...)\[**int** barsAgo\] )
 0 – The condition does not apply
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 barCount Number of successively rising closing prices
 
@@ -3428,9 +3428,9 @@ The following conditions can also be included in the search:
 ### Usage
 ```cs
 NBarsDown(int barCount, bool BarDown, bool lowerHigh, bool lowerLow)
-NBarsDown(IDataSeries input, int barCount, bool BarDown, bool lowerHigh, bool lowerLow)
+NBarsDown(IDataSeries inSeries, int barCount, bool BarDown, bool lowerHigh, bool lowerLow)
 NBarsDown(int barCount, bool BarDown, bool lowerHigh, bool lowerLow)[int barsAgo]
-NBarsDown(IDataSeries input, bool barCount, int BarDown, bool lowerHigh, bool lowerLow)[int barsAgo]
+NBarsDown(IDataSeries inSeries, bool barCount, int BarDown, bool lowerHigh, bool lowerLow)[int barsAgo]
 ```
 
 ### Return value
@@ -3442,7 +3442,7 @@ When using this method with an index (e.g. **NBarsDown**(...)\[**int** barsAgo\]
 0 – The condition does not apply
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 barCount Required number of successively lower closing prices
 
@@ -3458,9 +3458,9 @@ lowerLow Additional condition (true); continuously falling lows
 ### Example
 ```cs
 NBarsDown(int barCount, bool BarDown, bool lowerHigh, bool lowerLow)
-NBarsDown(IDataSeries input, int barCount, bool BarDown, bool lowerHigh, bool lowerLow)
+NBarsDown(IDataSeries inSeries, int barCount, bool BarDown, bool lowerHigh, bool lowerLow)
 NBarsDown(int barCount, bool BarDown, bool lowerHigh, bool lowerLow)[int barsAgo]
-NBarsDown(IDataSeries input, bool barCount, int BarDown, bool lowerHigh, bool lowerLow)[int barsAgo]
+NBarsDown(IDataSeries inSeries, bool barCount, int BarDown, bool lowerHigh, bool lowerLow)[int barsAgo]
 ```
 
 ## OnBalanceVolume (OBV)
@@ -3475,9 +3475,9 @@ The absolute value of OBV is not important. Chartists should instead focus on th
 ### Usage
 ```cs
 OBV()
-OBV(IDataSeries input)
+OBV(IDataSeries inSeries)
 OBV()[int barsAgo]
-OBV(IDataSeries input)[int barsAgo]
+OBV(IDataSeries inSeries)[int barsAgo]
 ```
 
 ### Return value
@@ -3486,7 +3486,7 @@ OBV(IDataSeries input)[int barsAgo]
 When using this method with an index (e.g. **OBV**()\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameter
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 ### Visualization
 ![OnBalanceVolume (OBV)](./media/image72.png)
@@ -3721,9 +3721,9 @@ Wikipedia: <http://en.wikipedia.org/wiki/Parabolic\_SAR>
 ### Usage
 ```cs
 ParabolicSAR(double acceleration, double accelerationStep, double accelerationMax)
-ParabolicSAR(IDataSeries input, double acceleration, double accelerationStep, double accelerationMax)
+ParabolicSAR(IDataSeries inSeries, double acceleration, double accelerationStep, double accelerationMax)
 ParabolicSAR(double acceleration, double accelerationStep, double accelerationMax)[int barsAgo]
-ParabolicSAR(IDataSeries input, double acceleration, double accelerationStep, double accelerationMax)[int barsAgo]
+ParabolicSAR(IDataSeries inSeries, double acceleration, double accelerationStep, double accelerationMax)[int barsAgo]
 ```
 
 ### Return value
@@ -3758,13 +3758,13 @@ The PPO can be used for divergence analysis. The divergences have the advantage 
 ### Usage
 ```cs
 PPO(int fast, int slow, int smooth)
-PPO(IDataSeries input, int fast, int slow, int smooth)
+PPO(IDataSeries inSeries, int fast, int slow, int smooth)
 PPO(int fast, int slow, int smooth)[int barsAgo]
-PPO(IDataSeries input, int fast, int slow, int smooth)[int barsAgo]
+PPO(IDataSeries inSeries, int fast, int slow, int smooth)[int barsAgo]
 
 //For the smoothed value
 PPO(int fast, int slow, int smooth).Smoothed[int barsAgo]
-PPO(IDataSeries input, int fast, int slow, int smooth).Smoothed[int barsAgo]
+PPO(IDataSeries inSeries, int fast, int slow, int smooth).Smoothed[int barsAgo]
 ```
 
 ### Return value
@@ -3773,7 +3773,7 @@ PPO(IDataSeries input, int fast, int slow, int smooth).Smoothed[int barsAgo]
 When using this method with an index (e.g. **PPO**(12,26,9)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 fast Number of bars for the calculation of the fast EMA
 
@@ -3807,15 +3807,15 @@ The Percent Envelope should never be used to make decisions based solely on the 
 ### Usage
 ```cs
 PercentEnvelopes(double percent)
-PercentEnvelopes(IDataSeries input, double percent)
+PercentEnvelopes(IDataSeries inSeries, double percent)
 
 //For the upper band
 PercentEnvelopes(double percent).UpperPercentBand[int barsAgo]
-PercentEnvelopes(IDataSeries input, double percent).UpperPercentBand[int barsAgo]
+PercentEnvelopes(IDataSeries inSeries, double percent).UpperPercentBand[int barsAgo]
 
 //For the lower band
 PercentEnvelopes(double percent).LowerPercentBand[int barsAgo]
-PercentEnvelopes(IDataSeries input, double percent).LowerPercentBand[int barsAgo]
+PercentEnvelopes(IDataSeries inSeries, double percent).LowerPercentBand[int barsAgo]
 ```
 
 ### Return value
@@ -3824,7 +3824,7 @@ PercentEnvelopes(IDataSeries input, double percent).LowerPercentBand[int barsAgo
 When using this method with an index (e.g. **PercentEnvelopes**(2)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 percent Difference in % for the bands (from the input value)
 
@@ -3859,11 +3859,11 @@ Traders prefer to sell above the resistance lines 1 & 2 (e.g. to build up short 
 PivotPoints()
 PivotPoints(PivotPointsMode mode)
 PivotPoints(PivotPointsMode mode, int LineWidth, bool ShowPrices, int DaysBack, Color RColor, Color PPColor, Color SColor)
-PivotPoints(IDataSeries input, PivotPointsMode mode, int LineWidth, bool ShowPrices, int DaysBack, Color RColor, Color PPColor, Color SColor)
+PivotPoints(IDataSeries inSeries, PivotPointsMode mode, int LineWidth, bool ShowPrices, int DaysBack, Color RColor, Color PPColor, Color SColor)
 PivotPoints()[barsAgo]
 PivotPoints(PivotPointsMode mode)[barsAgo]
 PivotPoints(PivotPointsMode mode, int LineWidth, bool ShowPrices, int DaysBack, Color RColor, Color PPColor, Color SColor)[barsAgo]
-PivotPoints(IDataSeries input, PivotPointsMode mode, int LineWidth, bool ShowPrices, int DaysBack, Color RColor, Color PPColor, Color SColor)[barsAgo]
+PivotPoints(IDataSeries inSeries, PivotPointsMode mode, int LineWidth, bool ShowPrices, int DaysBack, Color RColor, Color PPColor, Color SColor)[barsAgo]
 ```
 
 ### Return value
@@ -4003,9 +4003,9 @@ When the PFE zigzags around the zero line, no trend is present. If the PFE is eq
 ### Usage
 ```cs
 PFE(int period)
-PFE(IDataSeries input, int period)
+PFE(IDataSeries inSeries, int period)
 PFE(int period)[int barsAgo]
-PFE(IDataSeries input, int period)[int barsAgo]
+PFE(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -4014,7 +4014,7 @@ PFE(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **PFE**(20)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -4034,9 +4034,9 @@ This indicator is based on the difference between two moving averages. The diffe
 ### Usage
 ```cs
 PriceOscillator(int fast, int slow, int smooth)
-PriceOscillator(IDataSeries input, int fast, int slow, int smooth)
+PriceOscillator(IDataSeries inSeries, int fast, int slow, int smooth)
 PriceOscillator(int fast, int slow, int smooth)[int barsAgo]
-PriceOscillator(IDataSeries input, int fast, int slow, int smooth)[int barsAgo]
+PriceOscillator(IDataSeries inSeries, int fast, int slow, int smooth)[int barsAgo]
 ```
 
 ### Return value
@@ -4045,7 +4045,7 @@ PriceOscillator(IDataSeries input, int fast, int slow, int smooth)[int barsAgo]
 When using this method with an index (e.g. **PriceOscillator**(12,26,9)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 fast Number of bars used for the calculation of the fast EMA
 
@@ -4098,9 +4098,9 @@ Range delivers the span/difference between the high and low in ticks for each ba
 ### Usage
 ```cs
 Range()
-Range(IDataSeries input)
+Range(IDataSeries inSeries)
 Range()[int barsAgo]
-Range(IDataSeries input)[int barsAgo]
+Range(IDataSeries inSeries)[int barsAgo]
 ```
 
 ### Return value
@@ -4109,7 +4109,7 @@ Range(IDataSeries input)[int barsAgo]
 When using this method with an index (e.g. **Range**()\[**int** barsAgo\] ), the range value for the referenced bar will be outputted.
 
 ### Parameter
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 ### Visualization
 ![Range](./media/image81.png)
@@ -4136,9 +4136,9 @@ When the span between the current close and the previous days close is bigger th
 ### Usage
 ```cs
 RIND(int periodQ, int smooth)
-RIND(IDataSeries input, int periodQ, int smooth)
+RIND(IDataSeries inSeries, int periodQ, int smooth)
 RIND(int periodQ, int smooth)[int barsAgo]
-RIND(IDataSeries input, int periodQ, int smooth)[int barsAgo]
+RIND(IDataSeries inSeries, int periodQ, int smooth)[int barsAgo]
 ```
 
 ### Return value
@@ -4147,7 +4147,7 @@ RIND(IDataSeries input, int periodQ, int smooth)[int barsAgo]
 When using this method with an index (e.g. **RIND**(3,10)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 periodQ Number of bars used for the short-term stochastic
 
@@ -4178,9 +4178,9 @@ VTAD: [http://vtadwiki.vtad.de/index.php/RoC](http://vtadwiki.vtad.de/index.php/
 ### Usage
 ```cs
 ROC(int period)
-ROC(IDataSeries input, int period)
+ROC(IDataSeries inSeries, int period)
 ROC(int period)[int barsAgo]
-ROC(IDataSeries input, int period)[int barsAgo]
+ROC(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -4189,7 +4189,7 @@ ROC(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **ROC**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -4318,9 +4318,9 @@ In the long-term analysis, the following methodology should be applied:
 ### Usage
 ```cs
 RSS(int eMA1, int eMA2, int length)
-RSS(IDataSeries input, int eMA1, int eMA2, int length)
+RSS(IDataSeries inSeries, int eMA1, int eMA2, int length)
 RSS(int eMA1, int eMA2, int length)[int barsAgo]
-RSS(IDataSeries input, int eMA1, int eMA2, int length)[int barsAgo]
+RSS(IDataSeries inSeries, int eMA1, int eMA2, int length)[int barsAgo]
 ```
 
 ### Return value
@@ -4329,7 +4329,7 @@ RSS(IDataSeries input, int eMA1, int eMA2, int length)[int barsAgo]
 When using this method with an index (e.g. **RSS**(10,40,5)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 length Number of bars used in the calculation
 
@@ -4359,13 +4359,13 @@ Traditionally, and according to Wilder, RSI is considered overbought when above 
 ### Usage
 ```cs
 RSI(int period, int smooth)
-RSI(IDataSeries input, int period, int smooth)
+RSI(IDataSeries inSeries, int period, int smooth)
 RSI(int period, int smooth)[int barsAgo]
-RSI(IDataSeries input, int period, int smooth)[int barsAgo]
+RSI(IDataSeries inSeries, int period, int smooth)[int barsAgo]
 
 //For the average value
 RSI(int period, int smooth).Avg[int barsAgo]
-RSI(IDataSeries input, int period, int smooth).Avg[int barsAgo]
+RSI(IDataSeries inSeries, int period, int smooth).Avg[int barsAgo]
 ```
 
 ### Return value
@@ -4374,7 +4374,7 @@ RSI(IDataSeries input, int period, int smooth).Avg[int barsAgo]
 When using this method with an index (e.g. **RSI**(14,3)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -4402,9 +4402,9 @@ The calculation involves taking the weekly closes (or daily closes) and dividing
 ### Usage
 ```cs
 RSL(int period)
-RSLDataSeries input, int period)
+RSLDataSeries inSeries, int period)
 RSLnt period)[int barsAgo]
-RSL(IDataSeries input, int period)[int barsAgo]
+RSL(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -4413,7 +4413,7 @@ RSL(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **RSL**(27)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -4439,9 +4439,9 @@ Values above 50 assume an increase in volatility. Values below 50 imply a drop i
 ### Usage
 ```cs
 RVI(int period)
-RVI(IDataSeries input, int period)
+RVI(IDataSeries inSeries, int period)
 RVI(int period)[int barsAgo]
-RVI(IDataSeries input, int period)[int barsAgo]
+RVI(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -4450,7 +4450,7 @@ RVI(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **RVI**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -4476,13 +4476,13 @@ The interpretation of reversal bars is described in M. Voight’s book.
 ### Usage
 ```cs
 Reversalbars()
-Reversalbars(IDataSeries input)
+Reversalbars(IDataSeries inSeries)
 Reversalbars()[int barsAgo]
-Reversalbars(IDataSeries input)[int barsAgo]
+Reversalbars(IDataSeries inSeries)[int barsAgo]
 Reversalbars(int tolerance)
-Reversalbars(IDataSeries input, int tolreance)
+Reversalbars(IDataSeries inSeries, int tolreance)
 Reversalbars(int tolerance)[int barsAgo]
-Reversalbars(IDataSeries input, int tolerance)[int barsAgo]
+Reversalbars(IDataSeries inSeries, int tolerance)[int barsAgo]
 ```
 
 ### Return value
@@ -4497,7 +4497,7 @@ Reversalbars(IDataSeries input, int tolerance)[int barsAgo]
 When using this method with an index (e.g. **Reversalbars**()\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 tolerance See the following description below
 
@@ -4535,9 +4535,9 @@ In a strong trend phase, the prices will remain within a tight range for an exte
 ### Usage
 ```cs
 RSquared(int period)
-RSquared(IDataSeries input, int period)
+RSquared(IDataSeries inSeries, int period)
 RSquared(int period)[int barsAgo]
-RSquared(IDataSeries input, int period)[int barsAgo]
+RSquared(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -4546,7 +4546,7 @@ RSquared(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **RSquared**(8)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -4572,9 +4572,9 @@ VTAD: <http://vtadwiki.vtad.de/index.php/Standard\_Abweichung>
 ### Usage
 ```cs
 StdDev (int period)
-StdDev (IDataSeries input, int period)
+StdDev (IDataSeries inSeries, int period)
 StdDev (int period)[int barsAgo]
-StdDev (IDataSeries input, int period)[int barsAgo]
+StdDev (IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -4583,7 +4583,7 @@ StdDev (IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **StdDev**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -4609,17 +4609,17 @@ One of the applications of the standard error bands is the tightening of the ban
 ### Usage
 ```cs
 StdError(int period)
-StdError(IDataSeries input, int period)
+StdError(IDataSeries inSeries, int period)
 StdError(int period)[int barsAgo]
-StdError(IDataSeries input, int period)[int barsAgo]
+StdError(IDataSeries inSeries, int period)[int barsAgo]
 
 //Upper band
 StdError(int period).Upper[int barsAgo]
-StdError(IDataSeries input, int period).Upper[int barsAgo]
+StdError(IDataSeries inSeries, int period).Upper[int barsAgo]
 
 //Lower band
 StdError(int period).Lower[int barsAgo]
-StdError(IDataSeries input, int period).Lower[int barsAgo]
+StdError(IDataSeries inSeries, int period).Lower[int barsAgo]
 ```
 
 ### Return value
@@ -4628,7 +4628,7 @@ StdError(IDataSeries input, int period).Lower[int barsAgo]
 When using this method with an index (e.g. **StdError**(21)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -4670,15 +4670,15 @@ VTAD: <http://vtadwiki.vtad.de/index.php/Stochastik>
 ### Usage
 ```cs
 Stochastics(int periodD, int periodK, int smooth)
-Stochastics(IDataSeries input, int periodD, int periodK, int smooth)
+Stochastics(IDataSeries inSeries, int periodD, int periodK, int smooth)
 
 //For the %D line
 Stochastics(int periodD, int periodK, int smooth).D[int barsAgo]
-Stochastics(IDataSeries input, int periodD, int periodK, int smooth).D[int barsAgo]
+Stochastics(IDataSeries inSeries, int periodD, int periodK, int smooth).D[int barsAgo]
 
 //For the %K line
 Stochastics(int periodD, int periodK, int smooth).K[int barsAgo]
-Stochastics(IDataSeries input, int periodD, int periodK, int smooth).K[int barsAgo]
+Stochastics(IDataSeries inSeries, int periodD, int periodK, int smooth).K[int barsAgo]
 ```
 
 ### Return value
@@ -4687,7 +4687,7 @@ Stochastics(IDataSeries input, int periodD, int periodK, int smooth).K[int barsA
 When using this method with an index (e.g. **Stochastics**(7,14,3)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 periodD Number of periods to be used for the %K smoothing
 
@@ -4722,15 +4722,15 @@ Charttec: [http://www.charttec.de/html/indikator_stochastics.php](http://www.cha
 ### Usage
 ```cs
 StochasticsFast(int periodD, int periodK)
-StochasticsFast(IDataSeries input, int periodD, int periodK)
+StochasticsFast(IDataSeries inSeries, int periodD, int periodK)
 
 //For the %D line
 StochasticsFast(int periodD, int periodK).D[int barsAgo]
-StochasticsFast(IDataSeries input, int periodD, int periodK).D[int barsAgo]
+StochasticsFast(IDataSeries inSeries, int periodD, int periodK).D[int barsAgo]
 
 //For the %K line
 StochasticsFast(int periodD, int periodK).K[int barsAgo]
-StochasticsFast(IDataSeries input, int periodD, int periodK).K[int barsAgo]
+StochasticsFast(IDataSeries inSeries, int periodD, int periodK).K[int barsAgo]
 ```
 
 ### Return value
@@ -4739,7 +4739,7 @@ StochasticsFast(IDataSeries input, int periodD, int periodK).K[int barsAgo]
 When using this method with an index (e.g. **StochasticsFast**(7,14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 periodD Number of periods for the smoothing of %K
 
@@ -4770,9 +4770,9 @@ The indicator provides fast and precise extreme values/points in the price movem
 ### Usage
 ```cs
 StochRSI(int period)
-StochRSI(IDataSeries input, int period)
+StochRSI(IDataSeries inSeries, int period)
 StochRSI(int period)[int barsAgo]
-StochRSI(IDataSeries input, int period)[int barsAgo]
+StochRSI(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -4781,7 +4781,7 @@ StochRSI(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **StochRSI**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -4801,9 +4801,9 @@ Summation is the sum over a predefined number of periods.
 ### Usage
 ```cs
 SUM(int period)
-SUM(IDataSeries input, int period)
+SUM(IDataSeries inSeries, int period)
 SUM(int period)[int barsAgo]
-SUM(IDataSeries input, int period)[int barsAgo]
+SUM(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -4812,7 +4812,7 @@ SUM(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **SUM**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -4838,17 +4838,17 @@ The indicator can be used as an exit for additional trading systems, meaning tha
 ### Usage
 ```cs
 SuperTrend(SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth)
-SuperTrend(IDataSeries input, SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth)
+SuperTrend(IDataSeries inSeries, SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth)
 SuperTrend(SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth)[int barsAgo]
-SuperTrend(IDataSeries input, SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth)[int barsAgo]
+SuperTrend(IDataSeries inSeries, SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth)[int barsAgo]
 
 //For the values of the uptrend:
 SuperTrend(SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth).UpTrend[int barsAgo]
-SuperTrend(IDataSeries input, SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth).UpTrend[int barsAgo]
+SuperTrend(IDataSeries inSeries, SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth).UpTrend[int barsAgo]
 
 //For the values of the downtrend:
 SuperTrend(SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth).DownTrend[int barsAgo]
-SuperTrend(IDataSeries input, SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth).DownTrend[int barsAgo]
+SuperTrend(IDataSeries inSeries, SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth).DownTrend[int barsAgo]
 ```
 
 ### Return value
@@ -4940,11 +4940,11 @@ The methods for these indicators can be used in scripts to determine the last ex
 ```cs
 //For a high
 Swing(int strength).SwingHighBar(int barsAgo, int instance, int lookBackPeriod)
-Swing(IDataSeries input, int strength).SwingHighBar(int barsAgo, int instance, int lookBackPeriod)
+Swing(IDataSeries inSeries, int strength).SwingHighBar(int barsAgo, int instance, int lookBackPeriod)
 
 //For a low
 Swing(int strength).SwingLowBar(int barsAgo, int instance, int lookBackPeriod)
-Swing(IDataSeries input, int strength).SwingLowBar(int barsAgo, int instance, int lookBackPeriod)
+Swing(IDataSeries inSeries, int strength).SwingLowBar(int barsAgo, int instance, int lookBackPeriod)
 ```
 
 ### Return value
@@ -4990,9 +4990,9 @@ An entry is placed when the price breaks the TSF line from bottom to top.
 ### Usage
 ```cs
 TSF(int forecast, int period)
-TSF(IDataSeries input, int forecast, int period)
+TSF(IDataSeries inSeries, int forecast, int period)
 TSF(int forecast, int period)[int barsAgo]
-TSF(IDataSeries input, int forecast, int period)[int barsAgo]
+TSF(IDataSeries inSeries, int forecast, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -5003,7 +5003,7 @@ When using this method with an index (e.g. **TSF**(3,14)\[**int** barsAgo\] ), t
 ### Parameters
 forecast Number of bars used for the forecast
 
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -5048,7 +5048,7 @@ CurrentDayOHL is intended for use with intraday data series.
 See [*PriorDayOHLC*](#priordayohlc), [*DayLines*](#daylines).
 
 ### Parameter
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 ### Return value
 **double**
@@ -5058,19 +5058,19 @@ When using this method with an index (e.g. **CurrentDayOHL**.CurrentOpen(...)\[*
 ### Usage
 ```cs
 CurrentDayOHL()
-CurrentDayOHL(IDataSeries input)
+CurrentDayOHL(IDataSeries inSeries)
 
 //For the open value
 CurrentDayOHL().CurrentOpen[int barsAgo]
-CurrentDayOHL(IDataSeries input).CurrentOpen[int barsAgo]
+CurrentDayOHL(IDataSeries inSeries).CurrentOpen[int barsAgo]
 
 //For the high value
 CurrentDayOHL().CurrentHigh[int barsAgo]
-CurrentDayOHL(IDataSeries input).CurrentHigh[int barsAgo]
+CurrentDayOHL(IDataSeries inSeries).CurrentHigh[int barsAgo]
 
 //For the low value
 CurrentDayOHL().CurrentLow[int barsAgo]
-CurrentDayOHL(IDataSeries input).CurrentLow[int barsAgo]
+CurrentDayOHL(IDataSeries inSeries).CurrentLow[int barsAgo]
 ```
 
 ### Visualization
@@ -5103,9 +5103,9 @@ The result will look similar to this:
 ### Usage
 ```cs
 DailyPerformance(DailyPerformanceReference reference, DailyPerformanceCalculationMode mode, int daysAgo)
-DailyPerformance(IDataSeries input,DailyPerformanceReference reference, DailyPerformanceCalculationMode mode, int daysAgo)
+DailyPerformance(IDataSeries inSeries,DailyPerformanceReference reference, DailyPerformanceCalculationMode mode, int daysAgo)
 DailyPerformance(DailyPerformanceReference reference, DailyPerformanceCalculationMode mode, int daysAgo)[int barsAgo]
-DailyPerformance(IDataSeries input,DailyPerformanceReference reference, DailyPerformanceCalculationMode mode, int daysAgo)[int barsAgo]
+DailyPerformance(IDataSeries inSeries,DailyPerformanceReference reference, DailyPerformanceCalculationMode mode, int daysAgo)[int barsAgo]
 ```
 
 ### Return value
@@ -5114,7 +5114,7 @@ DailyPerformance(IDataSeries input,DailyPerformanceReference reference, DailyPer
 When using this method with an index (e.g. **DailyPerformance**(...)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 reference Possible values are:
 -   DailyPerformanceReference.Open
@@ -5161,9 +5161,9 @@ e.g. the FDAX has the character that after reaching the 100, 200, 400 level, the
 ### Usage
 ```cs
 DailyQuoteMoves()
-DailyQuoteMoves(IDataSeries input)
+DailyQuoteMoves(IDataSeries inSeries)
 DailyQuoteMoves()[int barsAgo]
-DailyQuoteMoves(IDataSeries input) [int barsAgo]
+DailyQuoteMoves(IDataSeries inSeries) [int barsAgo]
 
 ```
 
@@ -5173,7 +5173,7 @@ DailyQuoteMoves(IDataSeries input) [int barsAgo]
 When using this method with an index (e.g. **DailyQuoteMoves**(...)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 ### Visualization
 ![DailyQuoteMoves](./media/DailyQuoteMoves.png)
@@ -5286,9 +5286,9 @@ Max (MAX) delivers the highest value for a predefined number of periods.
 ### Usage
 ```cs
 MAX(int period)
-MAX (IDataSeries input, int period)
+MAX (IDataSeries inSeries, int period)
 MAX (int period)[int barsAgo]
-MAX (IDataSeries input, int period)[int barsAgo]
+MAX (IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -5297,7 +5297,7 @@ MAX (IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **MAX**(Close, 10)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -5318,9 +5318,9 @@ Minimum (MIN) outputs the lowest value for a predefined number of periods.
 ### Usage
 ```cs
 MIN (int period)
-MIN (IDataSeries input, int period)
+MIN (IDataSeries inSeries, int period)
 MIN (int period)[int barsAgo]
-MIN (IDataSeries input, int period)[int barsAgo]
+MIN (IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -5329,7 +5329,7 @@ MIN (IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **MIN**(Close, 10)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -5374,7 +5374,7 @@ PriorDayOHLCext For people in different time zones, PriorDayOHLCext makes it pos
 See [*CurrentDayOHL*](#currentdayohl), [*DayLines*](#daylines).
 
 ### Parameter
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 ### Return value
 **double**
@@ -5384,23 +5384,23 @@ When using this method with an index (e.g. **PriorDayOHLC**().PriorHigh\[**int**
 ### Usage
 ```cs
 PriorDayOHLC()
-PriorDayOHLC(IDataSeries input)
+PriorDayOHLC(IDataSeries inSeries)
 
 //For the value of open
 PriorDayOHLC().PriorOpen[int barsAgo]
-PriorDayOHLC(IDataSeries input).PriorOpen[int barsAgo]
+PriorDayOHLC(IDataSeries inSeries).PriorOpen[int barsAgo]
 
 //For the value of high
 PriorDayOHLC().PriorHigh[int barsAgo]
-PriorDayOHLC(IDataSeries input).PriorHigh[int barsAgo]
+PriorDayOHLC(IDataSeries inSeries).PriorHigh[int barsAgo]
 
 //For the value of low
 PriorDayOHLC().PriorLow[int barsAgo]
-PriorDayOHLC(IDataSeries input).PriorLow[int barsAgo]
+PriorDayOHLC(IDataSeries inSeries).PriorLow[int barsAgo]
 
 //For the value of close
 PriorDayOHLC().PriorClose[int barsAgo]
-PriorDayOHLC(IDataSeries input).PriorClose[int barsAgo]
+PriorDayOHLC(IDataSeries inSeries).PriorClose[int barsAgo]
 ```
 
 ### Visualization
@@ -5457,9 +5457,9 @@ The TSI line moves between 100 and -100. Most values are between +25 and -25. Th
 ### Usage
 ```cs
 TSI(int fast, int slow)
-TSI(IDataSeries input, int fast, int slow)
+TSI(IDataSeries inSeries, int fast, int slow)
 TSI(int fast, int slow)[int barsAgo]
-TSI(IDataSeries input, int fast, int slow)[int barsAgo]
+TSI(IDataSeries inSeries, int fast, int slow)[int barsAgo]
 ```
 
 ### Return value
@@ -5468,7 +5468,7 @@ TSI(IDataSeries input, int fast, int slow)[int barsAgo]
 When using this method with an index (e.g. **TSI**(3,14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 fast Number of bars included in the calculation of the fast EMA
 
@@ -5504,9 +5504,9 @@ A sell signal consists of bearish divergences forming above 70. These positions 
 ### Usage
 ```cs
 UltimateOscillator(int fast, int intermediate, int slow)
-UltimateOscillator(IDataSeries input, int fast, int intermediate, int slow)
+UltimateOscillator(IDataSeries inSeries, int fast, int intermediate, int slow)
 UltimateOscillator(int fast, int intermediate, int slow)[int barsAgo]
-UltimateOscillator(IDataSeries input, int fast, int intermediate, int slow)[int barsAgo]
+UltimateOscillator(IDataSeries inSeries, int fast, int intermediate, int slow)[int barsAgo]
 ```
 
 ### Return value
@@ -5517,7 +5517,7 @@ When using this method with an index (e.g. **UltimateOscillator** (5)\[**int** b
 ### Parameters
 |              |                                                                   |
 |--------------|-------------------------------------------------------------------|
-| input        | Input data series for the indicator                               |
+| inSeries        | Input data series for the indicator                               |
 | fast         | Number of bars for the calculation of the short-term oscillator   |
 | intermediate | Number of bars for the calculation of the intermediate oscillator |
 | slow         | Number of bars for the calculation of the slow indicator          |
@@ -5542,9 +5542,9 @@ This is the volume for the shares, futures, ETFs and so on that are traded withi
 ### Usage
 ```cs
 VOL()
-VOL(IDataSeries input)
+VOL(IDataSeries inSeries)
 VOL()[int barsAgo]
-VOL(IDataSeries input)[int barsAgo]
+VOL(IDataSeries inSeries)[int barsAgo]
 ```
 
 ### Return value
@@ -5553,7 +5553,7 @@ VOL(IDataSeries input)[int barsAgo]
 When using this method with an index (e.g. **VOL**()\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameter
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 ### Visualization
 ![Volume (VOL)](./media/image123.png)
@@ -5590,9 +5590,9 @@ Volumen-Analyse.de: [http://www.volumen-analyse.de](http://www.volumen-analyse.d
 ### Usage
 ```cs
 VOLMA(int period)
-VOLMA(IDataSeries input, int period)
+VOLMA(IDataSeries inSeries, int period)
 VOLMA(int period)[int barsAgo]
-VOLMA(IDataSeries input, int period)[int barsAgo]
+VOLMA(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -5601,7 +5601,7 @@ VOLMA(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **VOLMA**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -5625,9 +5625,9 @@ Values above zero mean that the shortest moving average of the volume is above t
 ### Usage
 ```cs
 VolumeOscillator(int fast, int slow)
-VolumeOscillator(IDataSeries input, int fast, int slow)
+VolumeOscillator(IDataSeries inSeries, int fast, int slow)
 VolumeOscillator(int fast, int slow)[int barsAgo]
-VolumeOscillator(IDataSeries input, int fast, int slow)[int barsAgo]
+VolumeOscillator(IDataSeries inSeries, int fast, int slow)[int barsAgo]
 ```
 
 ### Return value
@@ -5636,7 +5636,7 @@ VolumeOscillator(IDataSeries input, int fast, int slow)[int barsAgo]
 When using this method with an index (e.g. **VolumeOszillator**(12,26)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 fast Number of bars for the calculation of the fast moving average
 
@@ -5675,9 +5675,9 @@ The Volume Rate of Change (VROC) is almost exactly the same as the ROC indicator
 ### Usage
 ```cs
 VROC(int period, int smooth)
-VROC(IDataSeries input, int period, int smooth)
+VROC(IDataSeries inSeries, int period, int smooth)
 VROC(int period, int smooth)[int barsAgo]
-VROC(IDataSeries input, int period, int smooth)[int barsAgo]
+VROC(IDataSeries inSeries, int period, int smooth)[int barsAgo]
 ```
 
 ### Return value
@@ -5686,7 +5686,7 @@ VROC(IDataSeries input, int period, int smooth)[int barsAgo]
 When using this method with an index (e.g. **VROC**(14,3)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -5962,9 +5962,9 @@ This indicator is a variation of the volume indicator, with the slight differenc
 ### Usage
 ```cs
 VolumeUpDown()
-VolumeUpDown(IDataSeries input)
+VolumeUpDown(IDataSeries inSeries)
 VolumeUpDown()[int barsAgo]
-VolumeUpDown(IDataSeries input)[int barsAgo]
+VolumeUpDown(IDataSeries inSeries)[int barsAgo]
 ```
 
 ### Return value
@@ -5973,7 +5973,7 @@ VolumeUpDown(IDataSeries input)[int barsAgo]
 When using this method with an index (e.g. **VolumeUpDown**()\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameter
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 ### Visualization
 ![Volume Rate of Change (VROC)](./media/image128.png)
@@ -6027,9 +6027,9 @@ Low readings (below -80) indicate that the price is near its low for the given t
 ### Usage
 ```cs
 WilliamsR(int period)
-WilliamsR(IDataSeries input, int period)
+WilliamsR(IDataSeries inSeries, int period)
 WilliamsR(int period)[int barsAgo]
-WilliamsR(IDataSeries input, int period)[int barsAgo]
+WilliamsR(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -6038,7 +6038,7 @@ WilliamsR(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **WilliamsR**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -6048,9 +6048,9 @@ period Number of bars included in the calculations
 ### Example
 ```cs
 WilliamsR(int period)
-WilliamsR(IDataSeries input, int period)
+WilliamsR(IDataSeries inSeries, int period)
 WilliamsR(int period)[int barsAgo]
-WilliamsR(IDataSeries input, int period)[int barsAgo]
+WilliamsR(IDataSeries inSeries, int period)[int barsAgo]
 ```
 ## WyckoffWave
 
@@ -6095,11 +6095,11 @@ The previous extreme values (local highs or lows) are ideally suited for either 
 ```cs
 //For the upper extreme value
 ZigZag(DeviationType deviationType, double deviationValue, bool useHighLow).ZigZagHigh[int barsAgo]
-ZigZag(IDataSeries input, DeviationType deviationType, double deviationValue, bool useHighLow).ZigZagHigh[int barsAgo]
+ZigZag(IDataSeries inSeries, DeviationType deviationType, double deviationValue, bool useHighLow).ZigZagHigh[int barsAgo]
 
 //For the lower extreme value
 ZigZag(DeviationType deviationType, double deviationValue, bool useHighLow).ZigZagLow[int barsAgo]
-ZigZag(IDataSeries input, DeviationType deviationType, double deviationValue, bool useHighLow).ZigZagLow[int barsAgo]
+ZigZag(IDataSeries inSeries, DeviationType deviationType, double deviationValue, bool useHighLow).ZigZagLow[int barsAgo]
 ```
 
 ### Return value
@@ -6112,7 +6112,7 @@ A return value of 0 indicates that no high or low point has been found yet.
 ### Parameters
 |                |                                                                                                                    |
 |----------------|--------------------------------------------------------------------------------------------------------------------|
-| input          | Input data series for the indicator                                                                                |
+| inSeries       | Input data series for the indicator                                                                                |
 | deviationType  | The change in points or percent
 DeviationType.Points and DeviationType.Percent       |
 | deviationValue | Value of the deviation                                                                                             |

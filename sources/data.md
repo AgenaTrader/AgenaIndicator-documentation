@@ -153,7 +153,7 @@ Close[int barsAgo]
 ### More information
 The outputted value depends on the property *CalculateOnBarClose*.
 
-Indicators are generally calculated using the closing prices. The selection of the input series can generally be omitted (see example below).
+Indicators are generally calculated using the closing prices. The selection of the inseries can generally be omitted (see example below).
 
 ### Example
 ```cs

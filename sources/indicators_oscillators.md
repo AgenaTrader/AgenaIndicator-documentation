@@ -2603,6 +2603,48 @@ How far the price correction must be to become a valid market phase 5.
 **Phase4Level**
 How far the price correction must be to become a valid market phase 4.
 
+### Usage
+As this indicator ignores the input series, user can use only these 2 methods:
+
+```cs
+public MarketPhasesPro MarketPhasesPro(Int32 trendSize,
+            double phase4Level,
+            double phase5Level,
+            P123ProValidationMethod validationMethod,
+            double p2Distance,
+            double p3Distance,
+            double p3BreakageDistance,
+            bool breakTheTrendByCS)
+
+public MarketPhasesPro MarketPhasesPro(Int32 trendSize,
+            P123ProValidationMethod validationMethod,
+            double p2Distance,
+            double p3Distance,
+            double p3BreakageDistance,
+            bool breakTheTrendByCS)
+```
+### Return Value
+
+phase4Level = 0.2
+phase5Level = 0.5
+
+The parameters trendSize, validationMethod, p2Distance, p3Distance, p3BreakageDistance and breakTheTrendByCS are only for the P123 indicator which is used within the MarketPhasesPro.
+These parameters can be checked under P123Pro descripption.
+
+The most important parameter is the "int trendSize" parameter. It defines which trend is checked
+
+The output value is the phase in the specific trend (1, 2, 3, 4, 5, 5.1, 5.2, 5.3 / as well as the negative values when short direction, see screenshot)
+
+![MarketPhasesPro](./media/MarketPhasesPro.png)
+
+### Example
+```cs
+MarketPhasesPro(0, P123ProValidationMethod.Correction, 0, 0, 0, false)[0] == 4 //check if the big trend is in phase 4 (Long)
+
+            MarketPhasesPro(3, 0.3, 0.6, P123ProValidationMethod.Correction, 0, 0, 0, false)[0] == -5.3 //check if the smallest trend is in phase 5+ (Prom Queen) (Short, phase4Level = 0.3, phase5Level = 0.6)
+          
+```
+
 ## MarketValue
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
 

@@ -2623,7 +2623,7 @@ public MarketPhasesPro MarketPhasesPro(Int32 trendSize,
             double p3BreakageDistance,
             bool breakTheTrendByCS)
 ```
-### Return Value
+### Parameter
 
 phase4Level = 0.2
 phase5Level = 0.5

@@ -2579,6 +2579,7 @@ You can use the indicator as a filter by using the signals of other indicators w
 ![Condition Escort](./media/MarketPhases.png)
 
 **Important tip** 
+The scanner and chart use a different history calculation. Since Dow Theory indicators are very bar sensitive we cannot guarantee 100% synchronization between results show in the chart and the scanner. We recommend to reload the data in the scanner from time to time to avoid to big discrepancies.
 If you want to use  MarketPhases (also Pro and Advanced version) indicator in conjunction with the scanner, the following settings are required:
 
 - Chart settings:

@@ -1535,7 +1535,7 @@ Print("The value of the DSS Bressert %K is: " + DoubleStochastics(10, DoubleStoc
 The Dynamic Momentum Index, which was developed by Tushar Chande, is a specific variant of the Relative Strength Index. Chande changed the Dynamic Momentum Index in such a way that, based on various factors, the period settings automatically adjust themselves, which he achieved by coupling it to the RSI in order for a volatility component to be present. The definition of this volatility component is based on a 5-day standard deviation of the closing prices. This, in turn, is then compared to the 10-day average of a 5-day standard deviation.
 
 ### Interpretation
-If the DMI is inside the oversold zone, it is reasonable to assume that prices are going to start to fall.
+If the Dynamic Momentum Index is showing the overbought area, one speculates on falling prices; if the Dynamic Momentum Index is showing the oversold area, the speculation is on rising prices. Trading in this way makes sense if other indicators such as absCMO are showing a trendless phase, so the point is to trade against the trend. During a strong trend phase, it is recommended to trade in the trend direction; in the phase of an upward trend, one should wait for an oversold situation until a buy signal occurs.
 
 ### Further and more concise information
 VTAD: <http://vtadwiki.vtad.de/index.php/Dynamic\_Momentum\_Index>

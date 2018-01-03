@@ -5104,16 +5104,16 @@ CurrentDayOHL()
 CurrentDayOHL(IDataSeries inSeries)
 
 //For the open value
-CurrentDayOHL().CurrentOpen[int barsAgo]
-CurrentDayOHL(IDataSeries inSeries).CurrentOpen[int barsAgo]
+CurrentDayOHL().GetCurrentBar().Open[int barsAgo]
+CurrentDayOHL(IDataSeries inSeries).GetCurrentBar().Open[int barsAgo]
 
 //For the high value
-CurrentDayOHL().CurrentHigh[int barsAgo]
-CurrentDayOHL(IDataSeries inSeries).CurrentHigh[int barsAgo]
+CurrentDayOHL().GetCurrentBar().High[int barsAgo]
+CurrentDayOHL(IDataSeries inSeries).GetCurrentBar().High[int barsAgo]
 
 //For the low value
-CurrentDayOHL().CurrentLow[int barsAgo]
-CurrentDayOHL(IDataSeries inSeries).CurrentLow[int barsAgo]
+CurrentDayOHL().GetCurrentBar().Low[int barsAgo]
+CurrentDayOHL(IDataSeries inSeries).GetCurrentBar().Low[int barsAgo]
 ```
 
 ### Visualization
@@ -5121,7 +5121,7 @@ CurrentDayOHL(IDataSeries inSeries).CurrentLow[int barsAgo]
 
 ### Example
 ```cs
-Print("The low of the current session is at " + CurrentDayOHL().CurrentLow[0]);
+Print("The low of the current session is at " + CurrentDayOHL().GetCurrentBar().Low[0]);
 ```
 
 ## Daily Performance

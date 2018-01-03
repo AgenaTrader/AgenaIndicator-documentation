@@ -5096,7 +5096,7 @@ inSeries Input data series for the indicator
 ### Return value
 **double**
 
-When using this method with an index (e.g. **CurrentDayOHL**.CurrentOpen(...)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
+When using this method with an index (e.g. **CurrentDayOHL**.GetCurrentBar().Open\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Usage
 ```cs

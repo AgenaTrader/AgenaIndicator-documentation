@@ -2599,10 +2599,10 @@ These chart and column settings should be identical.
 ### MarketPhases Pro Description
 
 **Phase5Level**
-How far the price correction must be to become a valid market phase 5.
+How many percents the price correction must be to become a valid market phase 5.
 
 **Phase4Level**
-How far the price correction must be to become a valid market phase 4.
+How many percents the price correction must be to become a valid market phase 4.
 
 ### Usage
 As this indicator ignores the input series, user can use only these 2 methods:
@@ -2626,8 +2626,8 @@ public MarketPhasesPro MarketPhasesPro(Int32 trendSize,
 ```
 ### Parameter
 
-phase4Level = 0.2
-phase5Level = 0.5
+phase4Level = 0.2 (0.2 = 20%)
+phase5Level = 0.5 (0.5 = 50%)
 
 The parameters trendSize, validationMethod, p2Distance, p3Distance, p3BreakageDistance and breakTheTrendByCS are only for the P123 indicator which is used within the MarketPhasesPro.
 These parameters can be checked under P123Pro descripption.

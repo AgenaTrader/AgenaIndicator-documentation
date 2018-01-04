@@ -4664,28 +4664,28 @@ ConstantLines(double line1Value, double line2Value, double line3Value, double li
 <p>inSeries Input data series for the indicator</p>
 <h3 id="return-value_104">Return value</h3>
 <p><strong>double</strong></p>
-<p>When using this method with an index (e.g. <strong>CurrentDayOHL</strong>.CurrentOpen(...)[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
+<p>When using this method with an index (e.g. <strong>CurrentDayOHL</strong>.GetCurrentBar().Open[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
 <h3 id="usage_106">Usage</h3>
 <pre><code class="cs">CurrentDayOHL()
 CurrentDayOHL(IDataSeries inSeries)
 
 //For the open value
-CurrentDayOHL().CurrentOpen[int barsAgo]
-CurrentDayOHL(IDataSeries inSeries).CurrentOpen[int barsAgo]
+CurrentDayOHL().GetCurrentBar().Open[int barsAgo]
+CurrentDayOHL(IDataSeries inSeries).GetCurrentBar().Open[int barsAgo]
 
 //For the high value
-CurrentDayOHL().CurrentHigh[int barsAgo]
-CurrentDayOHL(IDataSeries inSeries).CurrentHigh[int barsAgo]
+CurrentDayOHL().GetCurrentBar().High[int barsAgo]
+CurrentDayOHL(IDataSeries inSeries).GetCurrentBar().High[int barsAgo]
 
 //For the low value
-CurrentDayOHL().CurrentLow[int barsAgo]
-CurrentDayOHL(IDataSeries inSeries).CurrentLow[int barsAgo]
+CurrentDayOHL().GetCurrentBar().Low[int barsAgo]
+CurrentDayOHL(IDataSeries inSeries).GetCurrentBar().Low[int barsAgo]
 </code></pre>
 
 <h3 id="visualization_102">Visualization</h3>
 <p><img alt="CurrentDayOHL" src="../media/image103.png" /></p>
 <h3 id="example_100">Example</h3>
-<pre><code class="cs">Print(&quot;The low of the current session is at &quot; + CurrentDayOHL().CurrentLow[0]);
+<pre><code class="cs">Print(&quot;The low of the current session is at &quot; + CurrentDayOHL().GetCurrentBar().Low[0]);
 </code></pre>
 
 <h2 id="daily-performance">Daily Performance</h2>

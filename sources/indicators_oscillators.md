@@ -5135,7 +5135,7 @@ Colors and other settings can be freely adjusted.
 See [*Momentum*](#momentum), [*ROC*](#rate-of-change-roc).
 
 **Regarding usage with a scanner:**
-To get a list of your favorite stocks and their daily percentual changes, please set CalculateOnClosedBar to “False”, TimeFrame to “1 Day”, Calculation mode to “Percent” and Days ago to “0”.
+To get a list of your favorite stocks and their daily percentual changes, please set CalculateOnFinishedBar to “False”, TimeFrame to “1 Day”, Calculation mode to “Percent” and Days ago to “0”.
 
 ![settings](./media/Daily_Performance.jpg)
 

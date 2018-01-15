@@ -3222,7 +3222,7 @@ Print(&quot;The current value for the OBV is &quot; + OBV()[0]);
 <p><img alt="Visualization in the chart" src="../media/image73.png" /></p>
 <p>The parameter settings are not relevant for the display in the chart and are primarily used for the Condition Escort.</p>
 <p>The depiction in the chart is primarily influenced by the settings “Display 123” and “Display Lines”.</p>
-<p><img alt="parameter settings" src="../media/image74.png" /></p>
+<p><img alt="parameter settings" src="../media/P123.jpg" /></p>
 <p>The settings highlighted in yellow have no influence on the chart. No changes need to be made.</p>
 <h3 id="usage-in-agenascript_1">Usage in AgenaScript</h3>
 <p>When using P123 in AgenaScript, multiple public variables are available.</p>
@@ -3325,7 +3325,7 @@ The name has an underscore ("_") suffix in order to differentiate it.</p>
 <p>The parameters “trendSize” and “occurrence” can be found within the Condition Escort.</p>
 <h3 id="p123pro">P123Pro</h3>
 <p>The parameter TrendSize can be found under the parameter settings (see figure). It is only intended to be used within the Condition Escort. This parameter is not relevant for display in the chart. The display is only controlled by the following settings: "Display 123" and "Display Lines".</p>
-<p><img alt="parameter settings" src="../media/P123Pro.png" /></p>
+<p><img alt="parameter settings" src="../media/p123Pro_settings.jpg" /></p>
 <p>You can see in the respectful description fields for each parameter to which extend the particular parameters may influence the chart or Condition Escort as well as AgenaScript.</p>
 <h3 id="usage-in-the-agenascript">Usage in the AgenaScript</h3>
 <p>For the AgenaScript purposes several data series of the same type are doubled. For each of these data series the common notation with ...[barsAgo] can be used.</p>
@@ -4695,8 +4695,8 @@ CurrentDayOHL(IDataSeries inSeries).GetCurrentBar().Low[int barsAgo]
 <p>Colors and other settings can be freely adjusted.</p>
 <p>See <a href="#momentum"><em>Momentum</em></a>, <a href="#rate-of-change-roc"><em>ROC</em></a>.</p>
 <p><strong>Regarding usage with a scanner:</strong>
-To get a list of your favorite stocks and their daily percentual changes, please set CalculateOnClosedBar to “False”, TimeFrame to “1 Day”, Calculation mode to “Percent” and Days ago to “0”.</p>
-<p><img alt="settings" src="../media/image104.png" /></p>
+To get a list of your favorite stocks and their daily percentual changes, please set CalculateOnFinishedBar to “False”, TimeFrame to “1 Day”, Calculation mode to “Percent” and Days ago to “0”.</p>
+<p><img alt="settings" src="../media/Daily_Performance.jpg" /></p>
 <p>The result will look similar to this:</p>
 <p><img alt="scanner" src="../media/image105.png" /></p>
 <h3 id="usage_107">Usage</h3>

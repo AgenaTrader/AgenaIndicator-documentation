@@ -2509,9 +2509,9 @@ If you want to use  MarketPhases (also Pro and Advanced version) indicator in co
 <p><img alt="MarketPhasesScanner" src="../media/MarketPhases_scanner.png" /></p>
 <h3 id="marketphases-pro-description">MarketPhases Pro Description</h3>
 <p><strong>Phase5Level</strong>
-How far the price correction must be to become a valid market phase 5.</p>
+How many percents the price correction must be to become a valid market phase 5.</p>
 <p><strong>Phase4Level</strong>
-How far the price correction must be to become a valid market phase 4.</p>
+How many percents the price correction must be to become a valid market phase 4.</p>
 <h3 id="usage_58">Usage</h3>
 <p>As this indicator ignores the input series, user can use only these 2 methods:</p>
 <pre><code class="cs">public MarketPhasesPro MarketPhasesPro(Int32 trendSize,
@@ -2532,8 +2532,8 @@ public MarketPhasesPro MarketPhasesPro(Int32 trendSize,
 </code></pre>
 
 <h3 id="parameter_6">Parameter</h3>
-<p>phase4Level = 0.2
-phase5Level = 0.5</p>
+<p>phase4Level = 0.2 (0.2 = 20%)
+phase5Level = 0.5 (0.5 = 50%)</p>
 <p>The parameters trendSize, validationMethod, p2Distance, p3Distance, p3BreakageDistance and breakTheTrendByCS are only for the P123 indicator which is used within the MarketPhasesPro.
 These parameters can be checked under P123Pro descripption.</p>
 <p>The most important parameter is the "int trendSize" parameter. It defines which trend is checked</p>

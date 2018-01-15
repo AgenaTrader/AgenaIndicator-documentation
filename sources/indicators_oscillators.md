@@ -3601,7 +3601,7 @@ The parameter settings are not relevant for the display in the chart and are pri
 
 The depiction in the chart is primarily influenced by the settings “Display 123” and “Display Lines”.
 
-![parameter settings](./media/image74.png)
+![parameter settings](./media/P123.jpg)
 
 The settings highlighted in yellow have no influence on the chart. No changes need to be made.
 
@@ -3669,7 +3669,7 @@ The parameters “trendSize” and “occurrence” can be found within the Cond
 ### P123Pro
 The parameter TrendSize can be found under the parameter settings (see figure). It is only intended to be used within the Condition Escort. This parameter is not relevant for display in the chart. The display is only controlled by the following settings: "Display 123" and "Display Lines".
 
-![parameter settings](./media/P123Pro.png)
+![parameter settings](./media/p123Pro_settings.jpg)
 
 You can see in the respectful description fields for each parameter to which extend the particular parameters may influence the chart or Condition Escort as well as AgenaScript.
 
@@ -5137,7 +5137,7 @@ See [*Momentum*](#momentum), [*ROC*](#rate-of-change-roc).
 **Regarding usage with a scanner:**
 To get a list of your favorite stocks and their daily percentual changes, please set CalculateOnClosedBar to “False”, TimeFrame to “1 Day”, Calculation mode to “Percent” and Days ago to “0”.
 
-![settings](./media/image104.png)
+![settings](./media/Daily_Performance.jpg)
 
 The result will look similar to this:
 

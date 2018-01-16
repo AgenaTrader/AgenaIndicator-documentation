@@ -11,7 +11,7 @@ Indicators can be used in
 
 For each indicator you will find a brief description of its interpretation, operation and functionality, a graphical representation on a chart and further technical details for its usage with AgenaScript.
 
-![indicators](./media/image1.png)
+![indicators](./media/image1.jpg)
 
 ## Accumulation/Distribution (ADL)
 ### Description
@@ -46,7 +46,7 @@ When using the method with an index (e.g. ADL()\[int barsAgo\] ), the value of t
 inSeries Input data series for the indicator
 
 ### Visualization
-![Accumulation/Distribution (ADL)](./media/image2.png)
+![Accumulation/Distribution (ADL)](./media/ADL.jpg)
 
 ### Example
 ```cs
@@ -91,7 +91,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculation
 
 ### Visualization
-![Adaptive Price Zone (APZ)](./media/image3.png)
+![Adaptive Price Zone (APZ)](./media/APZ.jpg)
 
 ### Example
 ```cs
@@ -135,7 +135,7 @@ inSeries Input data series for the indicator
 period Number of bars taken into consideration when calculating the values
 
 ### Visualization
-![Aroon](./media/image4.png)
+![Aroon](./media/aroon.jpg)
 
 ### Example
 ```cs
@@ -170,7 +170,7 @@ inSeries Input data series for the indicator
 period Number of bars taken into consideration for the calculations
 
 ### Visualization
-![Aroon Oscillator](./media/image5.png)
+![Aroon Oscillator](./media/ArronOscillator.jpg)
 
 ### Example
 ```cs

@@ -5484,7 +5484,7 @@ TickCounter provides information regarding the current number of ticks that are 
 When programming your own scripts, please use Bars, TicksCountForLastBar or Bars, LastBarCompleteness.
 
 ### Visualization
-![TickCounter](./media/image120.png)
+![TickCounter](./media/TickCounter.jpg)
 
 ## True Strength Index (TSI)
 ### Description
@@ -5518,7 +5518,7 @@ fast Number of bars included in the calculation of the fast EMA
 slow Number of bars included in the calculation of the slow EMA
 
 ### Visualization
-![True Strength Index (TSI)](./media/image121.png)
+![True Strength Index (TSI)](./media/TSI.jpg)
 
 ### Example
 ```cs
@@ -5566,7 +5566,7 @@ When using this method with an index (e.g. **UltimateOscillator** (5)\[**int** b
 | slow         | Number of bars for the calculation of the slow indicator          |
 
 ### Visualization
-![Ultimate Oscillator](./media/image122.png)
+![Ultimate Oscillator](./media/UltimateOscillator.jpg)
 
 ### Example
 ```cs
@@ -5599,7 +5599,7 @@ When using this method with an index (e.g. **VOL**()\[**int** barsAgo\] ), the v
 inSeries Input data series for the indicator
 
 ### Visualization
-![Volume (VOL)](./media/image123.png)
+![Volume (VOL)](./media/VOL.jpg)
 
 ### Example
 ```cs
@@ -5649,7 +5649,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![Volume Moving Average (VOLMA)](./media/image124.png)
+![Volume Moving Average (VOLMA)](./media/VOLMA.jpg)
 
 ### Example
 ```cs
@@ -5686,7 +5686,7 @@ fast Number of bars for the calculation of the fast moving average
 slow Number of bars for the calculation of the slow moving average
 
 ### Visualization
-![Volume Oscillator](./media/image125.png)
+![Volume Oscillator](./media/VolumeOscillator.jpg)
 
 ### Example
 ```cs
@@ -5706,7 +5706,7 @@ See: [*VolumeZones*](#volumezones)
 Prices with especially high trading volume will have a more satiated accumulation and distribution at their respective levels. This leads to price resistance/support zones being formed.
 
 ### Visualization
-![Volume Profile](./media/image126.png)
+![Volume Profile](./media/VolumeProfile.jpg)
 
 ## Volume Rate of Change (VROC)
 ### Description
@@ -5736,7 +5736,7 @@ period Number of bars included in the calculations
 smooth Number of Bars included in the calculation for the smoothing
 
 ### Visualization
-![Volume Rate of Change (VROC)](./media/image127.png)
+![Volume Rate of Change (VROC)](./media/VROC.jpg)
 
 ### Example
 ```cs
@@ -6019,7 +6019,7 @@ When using this method with an index (e.g. **VolumeUpDown**()\[**int** barsAgo\]
 inSeries Input data series for the indicator
 
 ### Visualization
-![Volume Rate of Change (VROC)](./media/image128.png)
+![VolumeUpDown](./media/VolumeUpDown.jpg)
 
 ### Example
 ```cs
@@ -6086,7 +6086,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![Williams %R](./media/image129.png)
+![Williams %R](./media/WilliamsR.jpg)
 
 ### Example
 ```cs
@@ -6162,7 +6162,7 @@ DeviationType.Points and DeviationType.Percent       |
 | useHighLow     | Defines whether the high/low of a bar will be used for extreme values or if you want to use closing prices instead |
 
 ### Visualization
-![ZigZag](./media/image130.png)
+![ZigZag](./media/ZigZag.jpg)
 
 ### Example
 ```cs

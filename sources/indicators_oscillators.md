@@ -700,7 +700,7 @@ When using this method with an index (e.g. **CandleStickPattern**(...)\[**int** 
 | trendStrength | Signifies the number of bars to the left and right of the swing high or swing low that are used to identify a trend. The value 0 turns off the search, meaning that the only thing searched for is chart patterns. |
 
 ### Visualization
-![CandleStickPattern](./media/image16.png)
+![CandleStickPattern](./media/CandleStickPattern.jpg)
 
 ### Example
 ```cs

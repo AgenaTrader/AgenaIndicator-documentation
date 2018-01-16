@@ -737,7 +737,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculation
 
 ### Visualization
-![ChaikinMoneyFlow (CMF)](./media/image17.png)
+![ChaikinMoneyFlow (CMF)](./media/ChaikinMoneyFlow.jpg)
 
 ### Example
 ```cs
@@ -773,7 +773,7 @@ fast Number of bars included in the calculation for the fast EMA
 slow Number of bars included in the calculation for the slow EMA
 
 ### Visualization
-![Chaikin Oscillator](./media/image18.png)
+![Chaikin Oscillator](./media/ChaikinOscillator.jpg)
 
 ### Example
 ```cs
@@ -807,7 +807,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![ChaikinVolatility (CVL)](./media/image19.png)
+![ChaikinVolatility (CVL)](./media/ChaikinVolatility.jpg)
 
 ### Example
 ```cs
@@ -898,7 +898,7 @@ ClimacticDistance(IDataSeries InSeries, int sMAPeriod, int thresholdPercent, Col
 Int
 
 ### Visualization
-Image
+![Climactic Distance](./media/ClimacticDistance.jpg)
 
 ### Example
 ```cs
@@ -1598,7 +1598,7 @@ smoothing Smoothing settings
 volDivisor For calculation of the box ratio (see “Calculation” below)
 
 ### Visualization
-![Ease of Movement (EOM)](./media/image28.png)
+![Ease of Movement (EOM)](./media/EaseOfMovement.jpg)
 
 ### Calculation
 Midpoint = (High + Low) / 2
@@ -1863,7 +1863,7 @@ The tolerance parameter defines the number of ticks by which the inside bars may
 
 Tolerance default setting = 0.
 
-![InsideBarsMT](./media/image35.png)
+![InsideBarsMT](./media/InsideBarsMT.jpg)
 
 ### Example
 ```cs
@@ -3307,7 +3307,7 @@ period Number of bars included in the calculations
 volatility period Number of bars included in the calculation for the signal line
 
 ### Visualization
-![VMA - Variable Moving Average](./media/image66.png)
+![VMA - Variable Moving Average](./media/VMA.jpg)
 
 ### Example
 ```cs

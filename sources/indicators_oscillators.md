@@ -293,7 +293,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculation
 
 ### Visualization
-![Average True Range (ATR)](./media/image8.png)
+![Average True Range (ATR)](./media/ATR.jpg)
 
 ### Example
 ```cs

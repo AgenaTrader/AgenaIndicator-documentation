@@ -5320,7 +5320,7 @@ The attribute *TimeFrameRequirements* must also always be used for the class doi
 Info is not an indicator in the classic sense of the word, but is actually more similar to a tool. Depending on the underlying instrument, the background of the chart may show additional information.
 
 ### Visualization
-![GetDayBar](./media/image112.png)
+![Info](./media/Info.jpg)
 
 ## Maximum (MAX)
 ### Description
@@ -5468,7 +5468,7 @@ What is special about this indicator is that you can manually set how the so-cal
 See [*PriorDayOHLC*](#priordayohlc).
 
 ### Visualization
-![PriorDayOHLCext](./media/image118.png)
+![SessionBreakLines](./media/SessionBreakLines.jpg)
 
 ## ShowBidAsk
 ### Description

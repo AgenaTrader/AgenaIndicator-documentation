@@ -11,7 +11,7 @@ Indicators can be used in
 
 For each indicator you will find a brief description of its interpretation, operation and functionality, a graphical representation on a chart and further technical details for its usage with AgenaScript.
 
-![indicators](./media/image1.jpg)
+![indicators](./media/1image.jpg)
 
 ## Accumulation/Distribution (ADL)
 ### Description
@@ -332,7 +332,7 @@ signalsize The minimum height of the bar in order for it to produce a signal (lo
 
 
 ### Visualization
-![BBBreakOutSpeed](./media/BBBreakOutSpeed.png)
+![BBBreakOutSpeed](./media/BBBreakOutSpeed.jpg)
 
 ### Example
 ```cs
@@ -375,7 +375,7 @@ inSeries Input data series for the indicator
 smooth Settings for the smoothing
 
 ### Visualization
-![Balance of Power (BOP)](./media/image9.png)
+![Balance of Power (BOP)](./media/BOP.jpg)
 
 ### Example
 ```cs
@@ -428,7 +428,7 @@ numStdDev Standard deviation
 period Number of bars included in the calculation
 
 ### Visualization
-![Bollinger Bands](./media/image10.png)
+![Bollinger Bands](./media/BollingerBands.jpg)
 
 ### Example
 ```cs
@@ -480,7 +480,7 @@ period Number of bars included in the calculation
 numStdDev Standard deviation
 
 ### Visualization
-![Bollinger Percent B (%b)](./media/image11.png)
+![Bollinger Percent B (%b)](./media/BollingerPercentB.jpg)
 
 ### Example
 //Output for the value of Bollinger %B
@@ -534,7 +534,7 @@ period Number of bars included in the calculation
 numStdDev Standard deviation
 
 ### Visualization
-![Bollinger Band Width (BBWidth)](./media/image12.png)
+![Bollinger Band Width (BBWidth)](./media/BBWidth.jpg)
 
 ### Example
 ```cs
@@ -592,7 +592,7 @@ When using this method with an index (e.g. **BuySellPressure**().BuyPressure\[**
 inSeries Input data series for the indicator
 
 ### Visualization
-![BuySellPressure](./media/image14.png)
+![BuySellPressure](./media/BuySellPressure.jpg)
 
 ### Example
 ```cs
@@ -844,7 +844,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![Chande Momentum Oscillator (CMO)](./media/image20.png)
+![Chande Momentum Oscillator (CMO)](./media/CMO.jpg)
 
 ### Example
 ```cs
@@ -945,7 +945,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![Commodity Channel Index (CCI)](./media/image21.png)
+![Commodity Channel Index (CCI)](./media/CCI.jpg)
 
 ### Example
 ```cs
@@ -1329,7 +1329,7 @@ When using this method with an index (e.g. **Darvas**()\[**int** barsAgo\] ), th
 inSeries Input data series for the indicator
 
 ### Visualization
-![Darvas Boxes](./media/image22.png)
+![Darvas Boxes](./media/Darvas.jpg)
 
 ### Example
 ```cs
@@ -1374,7 +1374,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![Directional Movement (DM)](./media/image23.png)
+![Directional Movement (DM)](./media/DM.jpg)
 
 ### Example
 ```cs
@@ -1419,7 +1419,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![Donchian Channel](./media/image24.png)
+![Donchian Channel](./media/DonchianChannel.jpg)
 
 ### Example
 ```cs
@@ -1466,7 +1466,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![Directional Movement Index (DMI)](./media/image25.png)
+![Directional Movement Index (DMI)](./media/DMI.jpg)
 
 ### Example
 ```cs
@@ -1522,7 +1522,7 @@ EMA-Period1 Periods for the EMA
 EMA-Period2 Periods for the second EMA
 
 ### Visualization
-![Double Stochastics (DSS)](./media/image26.png)
+![Double Stochastics (DSS)](./media/DSS.jpg)
 
 ### Example
 ```cs
@@ -1559,7 +1559,7 @@ inSeries Input data series for the indicator
 smooth Smoothing settings
 
 ### Visualization
-![Dynamic Momentum Index (DMIndex)](./media/image27.png)
+![Dynamic Momentum Index (DMIndex)](./media/DMIindex.jpg)
 
 ### Example
 ```cs
@@ -1639,7 +1639,7 @@ FisherTransform(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Visualization
-![Fisher Transform](./media/image29.png)
+![Fisher Transform](./media/FisherTransform.jpg)
 
 ### Example
 ```cs
@@ -1675,7 +1675,7 @@ FOSC(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Visualization
-![Forecast Oscillator (FOSC)](./media/image30.png)
+![Forecast Oscillator (FOSC)](./media/FOSC.jpg)
 
 ### Examples
 ```cs
@@ -1708,7 +1708,7 @@ When using this method with an index (e.g. **HighestHighIndex**(14)\[**int** bar
 BarsBack Number of periods in which the highest high will be searched for
 
 ### Visualization
-![HighestHighIndex()](./media/image31.png)
+![HighestHighIndex()](./media/HighestHighIndex.jpg)
 
 ### Example
 ```cs
@@ -1739,7 +1739,7 @@ When using this method with an index (e.g. **HighestHighPrice**(14)\[**int** bar
 BarsBack Number of periods in which the highest high will be searched for
 
 ### Visualization
-![HighestHighPrice()](./media/image32.png)
+![HighestHighPrice()](./media/HighestHighPrice.jpg)
 
 ### Example
 ```cs
@@ -1816,7 +1816,7 @@ periodMedium Period setting for the Kijun line. Default: 29
 periodSlow Number of periods used for the calculation of the Chikou line. Default: 52
 
 ### Visualization
-![IchimokuCloud](./media/image33.png)
+![IchimokuCloud](./media/IchimokuCloud.jpg)
 
 ## InsideBarsMT
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
@@ -1932,7 +1932,7 @@ offsetMultiplier Multiplier for the SMA
 period Number of bars included in the calculations
 
 ### Visualization
-![Keltner Channel](./media/image36.png)
+![Keltner Channel](./media/KeltnerChannel.jpg)
 
 ### Calculation
 diff.**Set**(High\[0\] - Low\[0\]);
@@ -2221,7 +2221,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![Linear Regression](./media/image37.png)
+![Linear Regression](./media/LinReg.jpg)
 
 ### Example
 ```cs
@@ -2259,7 +2259,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![LinRegIntercept](./media/image38.png)
+![LinRegIntercept](./media/LinRegIntercept.jpg)
 
 ### Example
 ```cs
@@ -2296,7 +2296,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![LinRegSlope](./media/image39.png)
+![LinRegSlope](./media/LinRegSlope.jpg)
 
 ### Example
 ```cs
@@ -2329,7 +2329,7 @@ When using this method with an index (e.g. **LowestLowIndex**(14)\[**int** barsA
 BarsBack Number of periods within which the highest high shall be searched for
 
 ### Visualization
-![LowestLowIndex()](./media/image40.png)
+![LowestLowIndex()](./media/LowestLowIndex.jpg)
 
 ### Example
 ```cs
@@ -2361,7 +2361,7 @@ When using this method with an index (e.g. **LowestLowPrice**(14)\[**int** barsA
 BarsBack Number of periods within which the low will be searched for
 
 ### Visualization
-![LowestLowPrice()](./media/image41.png)
+![LowestLowPrice()](./media/LowestLowPrice.jpg)
 
 ### Example
 ```cs
@@ -2420,7 +2420,7 @@ slow Number of periods for the slow EMA calculation
 smooth Number of periods for the EMA calculation of the signal line
 
 ### Visualization
-![MACD](./media/image42.png)
+![MACD](./media/MACD.jpg)
 
 ### Example
 ```cs
@@ -2480,7 +2480,7 @@ maType Type of moving average used, possible choices are:
 -   WMA
 
 ### Visualization
-![MAEnvelopes](./media/image43.png)
+![MAEnvelopes](./media/MAEnvelopes.jpg)
 
 ### Usage
 ```cs
@@ -2540,7 +2540,7 @@ Market phases 1, 2, 6, and 9 are not relevant for successful trading.
 ### Depiction in the chart
 No parameters are required.
 
-![MarketPhases in chart window](./media/image49.png)
+![MarketPhases in chart window](./media/MarketPhases.jpg)
 
 ### Usage in AgenaScript
 The indicator provides the following values for the market phases:
@@ -2714,7 +2714,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![Momentum (MOM)](./media/image51.png)
+![Momentum (MOM)](./media/Momentum.jpg)
 
 ### Example
 ```cs
@@ -2752,7 +2752,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![Money Flow Index (MFI)](./media/image52.png)
+![Money Flow Index (MFI)](./media/MoneyFlowIndex.jpg)
 
 ### Example
 ```cs
@@ -2836,7 +2836,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![DEMA - Double Exponential Moving Average](./media/image53.png)
+![DEMA - Double Exponential Moving Average](./media/DEMA.jpg)
 
 ### Calculation
 ```cs
@@ -2878,7 +2878,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![EMA - Exponential Moving Average](./media/image54.png)
+![EMA - Exponential Moving Average](./media/EMA.jpg)
 
 ### Calculation
 ```cs
@@ -2932,7 +2932,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![HMA - Hull Moving Average](./media/image56.png)
+![HMA - Hull Moving Average](./media/HMA.jpg)
 
 ### Calculation
 ```cs
@@ -2984,7 +2984,7 @@ fast Short period
 slow Long period
 
 ### Visualization
-![KAMA - Kaufman](./media/image57.png)
+![KAMA - Kaufman](./media/KAMA.jpg)
 
 ### Example
 ```cs
@@ -3032,7 +3032,7 @@ fastLimit Upper limit for the alpha value
 slowLimit Lower limit for the alpha value
 
 ### Visualization
-![MAMA - Mesa Adaptive Moving Average](./media/image58.png)
+![MAMA - Mesa Adaptive Moving Average](./media/MAMA.jpg)
 
 ### Example
 ```cs
@@ -3073,7 +3073,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![SMA - Simple Moving Average](./media/image59.png)
+![SMA - Simple Moving Average](./media/SMA.jpg)
 
 ### Calculation
 Value.**Set**((last + InSeries\[0\] - InSeries\[Period\]) / Math.**Min**(ProcessingBarIndex, Period));
@@ -3126,7 +3126,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![SMMA - Smoothed Moving Average](./media/image61.png)
+![SMMA - Smoothed Moving Average](./media/SMMA.jpg)
 
 ### Example
 ```cs
@@ -3159,7 +3159,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![TEMA - Triple Exponential Moving Average](./media/image62.png)
+![TEMA - Triple Exponential Moving Average](./media/TEMA.jpg)
 
 ### Example
 ```cs
@@ -3190,7 +3190,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![TMA - Triangular Moving Average](./media/image63.png)
+![TMA - Triangular Moving Average](./media/TMA.jpg)
 
 ### Example
 ```cs
@@ -3231,7 +3231,7 @@ period Number of bars included in the calculations
 signal period Number of bars included in the signal line calculation
 
 ### Visualization
-![TRIX - Triple Exponential Moving Average](./media/image64.png)
+![TRIX - Triple Exponential Moving Average](./media/TRIX.jpg)
 
 ### Example
 ```cs
@@ -3269,7 +3269,7 @@ tCount Number of iterations for the smoothing
 vFactor Volume factor (multiplier)
 
 ### Visualization
-![T3 - Triple Exponential Moving Average](./media/image65.png)
+![T3 - Triple Exponential Moving Average](./media/T3.jpg)
 
 ### Example
 ```cs
@@ -3338,7 +3338,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![VWMA - Volume Weighted Moving Average](./media/image67.png)
+![VWMA - Volume Weighted Moving Average](./media/VWMA.jpg)
 
 ### Example
 ```cs
@@ -3372,7 +3372,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![WMA - Weighted Moving Average](./media/image68.png)
+![WMA - Weighted Moving Average](./media/WMA.jpg)
 
 ### Example
 ```cs
@@ -3406,7 +3406,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![ZLEMA - Zero Lag Exponential Moving Average](./media/image69.png)
+![ZLEMA - Zero Lag Exponential Moving Average](./media/ZLEMA.jpg)
 
 ### Example
 ```cs
@@ -3450,7 +3450,7 @@ higherHigh Additional condition (true): continuously rising highs
 higherLow Additional condition (true): continuously rising lows
 
 ### Visualization
-![nBarsUp](./media/image70.png)
+![nBarsUp](./media/nBarsUp.jpg)
 
 ### Example
 ```cs
@@ -3496,7 +3496,7 @@ lowerHigh Additional condition (true): continuously falling highs
 lowerLow Additional condition (true); continuously falling lows
 
 ### Visualization
-![nBarsDown](./media/image71.png)
+![nBarsDown](./media/nBarsDown.jpg)
 
 ### Example
 ```cs
@@ -3532,7 +3532,7 @@ When using this method with an index (e.g. **OBV**()\[**int** barsAgo\] ), the v
 inSeries Input data series for the indicator
 
 ### Visualization
-![OnBalanceVolume (OBV)](./media/image72.png)
+![OnBalanceVolume (OBV)](./media/OBV.jpg)
 
 ### Example
 ```cs

@@ -212,7 +212,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculation
 
 ### Visualization
-![Average Directional Index (ADX)](./media/image6.png)
+![Average Directional Index (ADX)](./media/ADX.jpg)
 
 ### Example
 ```cs
@@ -249,7 +249,7 @@ interval Interval between the first ADX value and the current ADX value
 period Number of bars included in the calculation
 
 ### Visualization
-![Average Directional Movement Rating (ADXR)](./media/image7.png)
+![Average Directional Movement Rating (ADXR)](./media/ADXR.jpg)
 
 ### Example
 ```cs

@@ -551,7 +551,7 @@ The Bollinger MTF is the multi-timeframe version of the Bollinger Bands, and its
 ### Visualization
 The image shows a 5-minute chart with a 60-minute Bollinger band
 
-![Bollinger MTF (MultiTimeFrame)](./media/image13.png)
+![Bollinger MTF (MultiTimeFrame)](./media/BollingerMTF.jpg)
 
 ## BuySellPressure
 ### Description
@@ -2904,7 +2904,7 @@ Also see [*BollingerMTF*](#bollingermtf), [*SmaMTF*](#smamtf).
 ### Visualization
 A 5-minute chart with an EMA(20) calculated with hourly bars as the underlying input:
 
-![EMA MTF (MultiTimeFrame)](./media/image55.png)
+![EMA MTF (MultiTimeFrame)](./media/EMAmtf.jpg)
 
 ## HMA - Hull Moving Average
 ### Description
@@ -3093,7 +3093,7 @@ See [*BollingerMTF*](#bollingermtf), [*EmaMTF*](#ema-mtf-multitimeframe).
 ### Visualization
 The image shows a 5-minute chart with an SMA (14) calculated on 4-hour bars
 
-![SMA MTF (MultiTimeFrame)](./media/image60.png)
+![SMA MTF (MultiTimeFrame)](./media/SMAmtf.jpg)
 
 ## SMMA - Smoothed Moving Average
 ### Description
@@ -5255,21 +5255,21 @@ This is generally applicable to traders in different time zones. For example, a 
 To add the couple of hours that are transcribed on Sunday to the previous Friday’s session, you simply need to set IncludeWeekends = true.
 The first picture shows IncludeWeekends = false:
 
-![IncludeWeekends = false](./media/image108.png)
+![IncludeWeekends = false](./media/DayLinesAdvFalse.jpg)
 
 The second picture shows IncludeWeekends = true:
 
-![IncludeWeekends = true](./media/image109.png)
+![IncludeWeekends = true](./media/DayLinesAdvTrue.jpg)
 
 **Show Prices parameter**
 If set to “true”, prices are displayed in addition to the line itself.
 
-![prices are displayed](./media/image110.png)
+![prices are displayed](./media/DayLinesAdvTrueShowPrice.jpg)
 
 **Extend high lines and Extend low lines parameters.**
 If set to “true”, the highs and lows that have not yet been „breached“ by the price will be extended onto the right-hand side of the chart using dotted lines.
 
-![highs and lows](./media/image111.png)
+![highs and lows](./media/DayLinesAdvExtend.jpg)
 
 ## GetDayBar
 ### Description

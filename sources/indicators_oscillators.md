@@ -3595,13 +3595,13 @@ For the default settings, the trend T2 is enabled by default.
 
 The depiction in the chart may change with the changing market movements. If the market moves below the last point 3 and breaks the uptrend, the point is marked with a “3?”. The newly created low becomes the new point 2 and the last point 2 becomes point 1.
 
-![Visualization in the chart](./media/image73.png)
+![Visualization in the chart](./media/P123.jpg)
 
 The parameter settings are not relevant for the display in the chart and are primarily used for the Condition Escort.
 
 The depiction in the chart is primarily influenced by the settings “Display 123” and “Display Lines”.
 
-![parameter settings](./media/P123.jpg)
+![parameter settings](./media/P123settings.jpg)
 
 The settings highlighted in yellow have no influence on the chart. No changes need to be made.
 
@@ -3783,7 +3783,7 @@ When using this method with an index (e.g. **ParabolicSAR**(...)\[**int** barsAg
 | InSeries         | Input data series for the indicator |
 
 ### Visualization
-![Parabolic SAR](./media/image75.png)
+![Parabolic SAR](./media/ParabolicSAR.jpg)
 
 ### Example
 ```cs
@@ -3825,7 +3825,7 @@ slow Number of bars for the calculation of the slow EMA
 smooth Number of bars for the calculation of the EMA signal line
 
 ### Visualization
-![Percentage Price Oscillator (PPO)](./media/image76.png)
+![Percentage Price Oscillator (PPO)](./media/PPO.jpg)
 
 ### Example
 ```cs
@@ -3872,7 +3872,7 @@ inSeries Input data series for the indicator
 percent Difference in % for the bands (from the input value)
 
 ### Visualization
-![PercentEnvelopes](./media/image77.png)
+![PercentEnvelopes](./media/PercentEnvelopes.jpg)
 
 ### Example
 ```cs
@@ -3941,7 +3941,7 @@ Default: false                                                                  
 | SColor          | Support line color                                                                |
 
 ### Visualization
-![Pivot Points](./media/image78.png)
+![Pivot Points](./media/PivotPoints.jpg)
 
 ### Example
 ```cs
@@ -4062,7 +4062,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![Polarized Fractal Efficiency (PFE)](./media/image79.png)
+![Polarized Fractal Efficiency (PFE)](./media/PFE.jpg)
 
 ### Example
 ```cs
@@ -4097,7 +4097,7 @@ slow Number of bars used for the calculation of the slow EMA
 smooth Number of bars used for the calculation of the EMA signal line
 
 ### Visualization
-![Price Oscillator](./media/image80.png)
+![Price Oscillator](./media/PriceOscillator.jpg)
 
 ### Example
 ```cs
@@ -4132,7 +4132,7 @@ Pink ЕМА: 125, 130, 135, 140, 145, 150, 155, 160, 165, 170, 175, 180, 185, 19
 | Step           | Defines the amount of moving average lines shown on a chart within the rainbow indicator. The smaller is this number the larger amount of lines will be plotted. In our example, step 2 would mean that the indicator will contain 80 EMA lines: EMA(2), EMA(4), EMA(6) and so on.                                                                                                             |
 
 ### Visualisation
-![Rainbow](./media/rainbow.png)
+![Rainbow](./media/Rainbow.jpg)
 
 ## Range
 ### Description
@@ -4155,7 +4155,7 @@ When using this method with an index (e.g. **Range**()\[**int** barsAgo\] ), the
 inSeries Input data series for the indicator
 
 ### Visualization
-![Range](./media/image81.png)
+![Range](./media/Range.jpg)
 
 ### Example
 ```cs
@@ -4197,7 +4197,7 @@ periodQ Number of bars used for the short-term stochastic
 smooth Number of bars used for smoothing the indicator (using an EMA)
 
 ### Visualization
-![Range Indicator (RIND)](./media/image82.png)
+![Range Indicator (RIND)](./media/Rind.jpg)
 
 ### Example
 ```cs
@@ -4237,7 +4237,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![Rate of Change (ROC)](./media/image83.png)
+![Rate of Change (ROC)](./media/ROC.jpg)
 
 
 ## Relative Currency Strength (RCS)
@@ -4381,7 +4381,7 @@ eMA1 Number of periods for the first EMA
 eMA2 Number of periods for the second EMA
 
 ### Visualization
-![Relative Spread Strength (RSS)](./media/image84.png)
+![Relative Spread Strength (RSS)](./media/RSS.jpg)
 
 ### Example
 ```cs
@@ -4424,7 +4424,7 @@ period Number of bars included in the calculations
 smooth Number of periods for the smoothing
 
 ### Visualization
-![Relative Strength Index (RSI)](./media/image85.png)
+![Relative Strength Index (RSI)](./media/RSI.jpg)
 
 ### Example
 ```cs
@@ -4498,7 +4498,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![Relative Volatility Index (RVI)](./media/image87.png)
+![Relative Volatility Index (RVI)](./media/RVI.jpg)
 
 ### Example
 ```cs
@@ -4545,7 +4545,7 @@ inSeries Input data series for the indicator
 tolerance See the following description below
 
 ### Visualization
-![ReversalBars](./media/image88.png)
+![ReversalBars](./media/ReversalBars.jpg)
 
 ### The tolerance parameter
 The reversal bars must exceed their previous bars by at least 1 tick. The tolerance parameter allows you to define/add a certain number of ticks; the parameter is set to 0 by default, but in a sideways market this will lead to a relatively large number of reversal bars being marked.
@@ -4594,7 +4594,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![R-Squared](./media/image90.png)
+![R-Squared](./media/RSquared.jpg)
 
 ### Example
 ```cs
@@ -4631,7 +4631,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![StandardDeviation(StdDev)](./media/image92.png)
+![StandardDeviation(StdDev)](./media/StdDev.jpg)
 
 ### Example
 ```cs
@@ -4676,7 +4676,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![Standard Error (StdError)](./media/image93.png)
+![Standard Error (StdError)](./media/StdError.jpg)
 
 ### Example
 ```cs
@@ -4739,7 +4739,7 @@ periodK Number of bars included in the %K calculation
 smooth Number of periods for the smoothing of %D
 
 ### Visualization
-![Stochastics](./media/image94.png)
+![Stochastics](./media/Stochastics.jpg)
 
 ### Example
 ```cs
@@ -4789,7 +4789,7 @@ periodD Number of periods for the smoothing of %K
 periodK Number of periods included in the calculation of %K
 
 ### Visualization
-![Stochastics Fast](./media/image95.png)
+![Stochastics Fast](./media/StochasticsFast.jpg)
 
 ### Example
 ```cs
@@ -4829,7 +4829,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![Stochastics RSI (StochRSI)](./media/image96.png)
+![Stochastics RSI (StochRSI)](./media/StochRSI.jpg)
 
 ### Example
 ```cs
@@ -4860,7 +4860,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![Summation (SUM)](./media/image97.png)
+![Summation (SUM)](./media/SUM.jpg)
 
 ### Example
 ```cs
@@ -4930,7 +4930,7 @@ The Period Parameter will have a huge influence when the DualThrustMode is selec
 Default: SuperTrendMode.ATR     |
 
 ### Visualization
-![SuperTrend](./media/image98.png)
+![SuperTrend](./media/SuperTrend.jpg)
 
 ### Example
 ```cs
@@ -4970,7 +4970,7 @@ Once broken, these areas tend to reverse their function, meaning that a broken s
                      The smallest setting is 1; the default is 5                                                       |
 
 ### Visualization
-![SupportResistanceAreas](./media/image99.png)
+![SupportResistanceAreas](./media/SupportResistanceAreas.jpg)
 
 ## Swing
 ### Description
@@ -5008,7 +5008,7 @@ When using this method with an index (e.g. **Swing**(5)\[**int** barsAgo\] ), th
 | strength       | Number of bars to the left and right of the extreme points                                                   |
 
 ### Visualization
-![Swing](./media/image100.png)
+![Swing](./media/Swing.jpg)
 
 ### Example
 ```cs
@@ -5051,7 +5051,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![Time-Series-Forecast (TSF)](./media/image101.png)
+![Time-Series-Forecast (TSF)](./media/TSF.jpg)
 
 ### Example
 ```cs
@@ -5080,7 +5080,7 @@ ConstantLines(double line1Value, double line2Value, double line3Value, double li
 When using this method with an index (e.g. **ConstantLines**(1,2,3,4)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Visualization
-![Constant Lines](./media/image102.png)
+![Constant Lines](./media/ConstantLines.jpg)
 
 ## CurrentDayOHL
 ### Description
@@ -5117,7 +5117,7 @@ CurrentDayOHL(IDataSeries inSeries).GetCurrentBar().Low[int barsAgo]
 ```
 
 ### Visualization
-![CurrentDayOHL](./media/image103.png)
+![CurrentDayOHL](./media/CurrentDayOHL.jpg)
 
 ### Example
 ```cs
@@ -5172,7 +5172,7 @@ mode Possible values are:
 daysAgo Number of days in the past
 
 ### Visualization
-![DailyPerformance](./media/image106.png)
+![DailyPerformance](./media/DailyPerformance.jpg)
 
 ### Example
 ```cs
@@ -5219,7 +5219,7 @@ When using this method with an index (e.g. **DailyQuoteMoves**(...)\[**int** bar
 inSeries Input data series for the indicator
 
 ### Visualization
-![DailyQuoteMoves](./media/DailyQuoteMoves.png)
+![DailyQuoteMoves](./media/DailyQuoteMoves.jpg)
 
 ### Example
 ```cs
@@ -5236,7 +5236,7 @@ Each line can be turned on or off, and the colors and line strengths can be free
 See [*CurrentDayOHL*](#currentdayohl), [*PriorDayOHLC*](#priordayohlc).
 
 ### Visualization
-![DayLines](./media/image107.png)
+![DayLines](./media/DayLines.jpg)
 
 ## DayLinesAdv
 ### Description
@@ -5345,7 +5345,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![Maximum (MAX)](./media/image113.png)
+![Maximum (MAX)](./media/MAX.jpg)
 
 ### Example
 ```cs
@@ -5377,7 +5377,7 @@ inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Visualization
-![Minimum (MIN)](./media/image114.png)
+![Minimum (MIN)](./media/MIN.jpg)
 
 ### Example
 ```cs
@@ -5396,7 +5396,7 @@ TimeFrame Timeframe of the “virtual” candle (second, minute, hour, day, week
 TimeFrameValue Value of the timeframe (number)
 
 ### Visualization
-![MTFBoxes](./media/image115.png)
+![MTFBoxes](./media/MTFBoxes.jpg)
 
 ## PriceLine
 ### Description
@@ -5405,7 +5405,7 @@ It places a horizontal line on top of the current market price within the chart.
 The colors and line widths are freely configurable.
 
 ### Visualization
-![PriceLine](./media/image116.png)
+![PriceLine](./media/PriceLine.jpg)
 
 ## PriorDayOHLC
 ### Description
@@ -5447,7 +5447,7 @@ PriorDayOHLC(IDataSeries inSeries).PriorClose[int barsAgo]
 ```
 
 ### Visualization
-![PriorDayOHLC](./media/image117.png)
+![PriorDayOHLC](./media/PriorDayOHLC.jpg)
 
 ### Example
 ```cs
@@ -5475,7 +5475,7 @@ See [*PriorDayOHLC*](#priordayohlc).
 The ShowBidAsk indicator displays the current bid and ask prices as well as the corresponding volume within the lower part of the chart. It also shows changes in volume even if a trade has not occurred.
 
 ### Visualization
-![ShowBidAsk](./media/image119.png)
+![ShowBidAsk](./media/ShowBidAsk.jpg)
 
 ## TickCounter
 ### Description

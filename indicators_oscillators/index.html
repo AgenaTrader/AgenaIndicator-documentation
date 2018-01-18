@@ -433,7 +433,7 @@
 -   Condition Escort
 -   AgenaScript</p>
 <p>For each indicator you will find a brief description of its interpretation, operation and functionality, a graphical representation on a chart and further technical details for its usage with AgenaScript.</p>
-<p><img alt="indicators" src="../media/image1.png" /></p>
+<p><img alt="indicators" src="../media/1image.jpg" /></p>
 <h2 id="accumulationdistribution-adl">Accumulation/Distribution (ADL)</h2>
 <h3 id="description">Description</h3>
 <p>The Accumulation Distribution LevelLine (ADL) indicator was developed by Marc Chaikin. The ADL is a volume indicator that represents the money flow. The ADL is an improvement of the On-Balance Volume Indicator created by Joe Granville, which was actually one of the very first volume indicators.</p>
@@ -459,7 +459,7 @@ ADL(IDataSeries inSeries)[int barsAgo]
 <h3 id="parameter">Parameter</h3>
 <p>inSeries Input data series for the indicator</p>
 <h3 id="visualization">Visualization</h3>
-<p><img alt="Accumulation/Distribution (ADL)" src="../media/image2.png" /></p>
+<p><img alt="Accumulation/Distribution (ADL)" src="../media/ADL.jpg" /></p>
 <h3 id="example">Example</h3>
 <pre><code class="cs">//Testing the direction of the ADL
 if (IsSerieRising(ADL())
@@ -492,7 +492,7 @@ APZ(IDataSeries inSeries, double barPct, int period).Lower[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculation</p>
 <h3 id="visualization_1">Visualization</h3>
-<p><img alt="Adaptive Price Zone (APZ)" src="../media/image3.png" /></p>
+<p><img alt="Adaptive Price Zone (APZ)" src="../media/APZ.jpg" /></p>
 <h3 id="example_1">Example</h3>
 <pre><code class="cs">//Output for the current values for the upper and lower band of a 20-period APZ
 Print(&quot;Value for the upper APZ band : &quot; + APZ(2, 20).Upper[0]);
@@ -525,7 +525,7 @@ Aroon(IDataSeries inSeries, int period).Down[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars taken into consideration when calculating the values</p>
 <h3 id="visualization_2">Visualization</h3>
-<p><img alt="Aroon" src="../media/image4.png" /></p>
+<p><img alt="Aroon" src="../media/aroon.jpg" /></p>
 <h3 id="example_2">Example</h3>
 <pre><code class="cs">//Output of the current up or down values for the 20 period Aroon
 Print(&quot;Current value for Aroon Up is : &quot; + Aroon(20).Up[0]);
@@ -551,7 +551,7 @@ AroonOscillator(IDataSeries inSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars taken into consideration for the calculations</p>
 <h3 id="visualization_3">Visualization</h3>
-<p><img alt="Aroon Oscillator" src="../media/image5.png" /></p>
+<p><img alt="Aroon Oscillator" src="../media/ArronOscillator.jpg" /></p>
 <h3 id="example_3">Example</h3>
 <pre><code class="cs">//Output for the current value for a 20 period Aroon Oscillator
 Print(&quot;Value for the oscillator is: &quot; + AroonOscillator(20)[0]);
@@ -580,7 +580,7 @@ ADX(IDataSeries inSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculation</p>
 <h3 id="visualization_4">Visualization</h3>
-<p><img alt="Average Directional Index (ADX)" src="../media/image6.png" /></p>
+<p><img alt="Average Directional Index (ADX)" src="../media/ADX.jpg" /></p>
 <h3 id="example_4">Example</h3>
 <pre><code class="cs">//Output of the current value of a 20 period ADX
 Print(&quot;Value of the ADX: &quot; + ADX(20)[0]);
@@ -607,7 +607,7 @@ ADXR(IDataSeries inSeries, int interval, int period)[int barsAgo]
 <p>interval Interval between the first ADX value and the current ADX value</p>
 <p>period Number of bars included in the calculation</p>
 <h3 id="visualization_5">Visualization</h3>
-<p><img alt="Average Directional Movement Rating (ADXR)" src="../media/image7.png" /></p>
+<p><img alt="Average Directional Movement Rating (ADXR)" src="../media/ADXR.jpg" /></p>
 <h3 id="example_5">Example</h3>
 <pre><code class="cs">//Output of the current value of the ADXR
 Print(&quot;Value of the ADXR: &quot; + ADXR(10, 14)[0]);
@@ -638,7 +638,7 @@ ATR(IDataSeries inSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculation</p>
 <h3 id="visualization_6">Visualization</h3>
-<p><img alt="Average True Range (ATR)" src="../media/image8.png" /></p>
+<p><img alt="Average True Range (ATR)" src="../media/ATR.jpg" /></p>
 <h3 id="example_6">Example</h3>
 <pre><code class="cs">//Output of the current value of a 14 period ATR
 Print(&quot;The current ATR value is: &quot; + ATR(14)[0]);
@@ -665,7 +665,7 @@ BBBreakOutSpeed(IDataSeries inSeries, double bandsDeviation, int bandsPeriod, in
 <p>bandsPeriod Periods for the Bollinger Bands</p>
 <p>signalsize The minimum height of the bar in order for it to produce a signal (long, short)</p>
 <h3 id="visualization_7">Visualization</h3>
-<p><img alt="BBBreakOutSpeed" src="../media/BBBreakOutSpeed.png" /></p>
+<p><img alt="BBBreakOutSpeed" src="../media/BBBreakOutSpeed.jpg" /></p>
 <h3 id="example_7">Example</h3>
 <pre><code class="cs">//If the width between the Bollinger Bands (standard deviation 2, period 20) has significantly (value &gt; 15) increased in comparison to the previous period, a long position is opened.
 
@@ -700,7 +700,7 @@ BOP(IDataSeries inSeries, int smooth)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>smooth Settings for the smoothing</p>
 <h3 id="visualization_8">Visualization</h3>
-<p><img alt="Balance of Power (BOP)" src="../media/image9.png" /></p>
+<p><img alt="Balance of Power (BOP)" src="../media/BOP.jpg" /></p>
 <h3 id="example_8">Example</h3>
 <pre><code class="cs">//Output of the value for the BOP with a smoothing of 5 periods
 Print(&quot;The Balance of Power value is: &quot; + BOP(5));
@@ -738,7 +738,7 @@ Bollinger(IDataSeries inSeries, double numStdDev, int period).Lower[int barsAgo]
 <p>numStdDev Standard deviation</p>
 <p>period Number of bars included in the calculation</p>
 <h3 id="visualization_9">Visualization</h3>
-<p><img alt="Bollinger Bands" src="../media/image10.png" /></p>
+<p><img alt="Bollinger Bands" src="../media/BollingerBands.jpg" /></p>
 <h3 id="example_9">Example</h3>
 <pre><code class="cs">//Output of the value for the upper Bollinger Band
 Print(&quot;Value of the upper band: &quot; + Bollinger(2, 20).Upper[0]);
@@ -774,7 +774,7 @@ BollingerPercentB(IDataSeries inSeries, int period, double numStdDev)[int barsAg
 <p>period Number of bars included in the calculation</p>
 <p>numStdDev Standard deviation</p>
 <h3 id="visualization_10">Visualization</h3>
-<p><img alt="Bollinger Percent B (%b)" src="../media/image11.png" /></p>
+<p><img alt="Bollinger Percent B (%b)" src="../media/BollingerPercentB.jpg" /></p>
 <h3 id="example_10">Example</h3>
 <p>//Output for the value of Bollinger %B</p>
 <p><strong>Print</strong>("Value of the Bollinger Percent B is: " + <strong>BollingerPercentB</strong>(20, 2)[0]);</p>
@@ -814,7 +814,7 @@ BBWidth(IDataSeries inSeries, double numStdDev, int period).Threshold[int barsAg
 <p>period Number of bars included in the calculation</p>
 <p>numStdDev Standard deviation</p>
 <h3 id="visualization_11">Visualization</h3>
-<p><img alt="Bollinger Band Width (BBWidth)" src="../media/image12.png" /></p>
+<p><img alt="Bollinger Band Width (BBWidth)" src="../media/BBWidth.jpg" /></p>
 <h3 id="example_11">Example</h3>
 <pre><code class="cs">//Output for the values of Bollinger Band Width
 Print(&quot;The value of the Bollinger Band Width is: &quot; + BBWidth(2, 20).BandWidth[0]);
@@ -827,7 +827,7 @@ Print(&quot;The value of the signal line is: &quot; + BBWidth(2, 20).Threshold[0
 <p>The Bollinger MTF is the multi-timeframe version of the Bollinger Bands, and its main use is in intraday trading. Multi-timeframe means that the indicator is calculated in a separate timeframe than that which is displayed in the chart. With the standard Bollinger band indicator, displaying an hourly Bollinger band in a 5-minute timeframe would not be possible – this is the point at which the MTF becomes useful. BollingerMTF can only be used for display in the chart and cannot be applied/implemented in AgenaScript.</p>
 <h3 id="visualization_12">Visualization</h3>
 <p>The image shows a 5-minute chart with a 60-minute Bollinger band</p>
-<p><img alt="Bollinger MTF (MultiTimeFrame)" src="../media/image13.png" /></p>
+<p><img alt="Bollinger MTF (MultiTimeFrame)" src="../media/BollingerMTF.jpg" /></p>
 <h2 id="buysellpressure">BuySellPressure</h2>
 <h3 id="description_11">Description</h3>
 <p>The BuySellPressure indicator displays the buy or sell pressure for the current bar. Furthermore, these trades are classified as "buy" or “sell”. For this classification, a "buy" is assumed any time the transaction has occurred at or above the ask. Inside trades are not taken into account.</p>
@@ -858,7 +858,7 @@ BuySellPressure(IDataSeries inSeries).SellPressure[int barsAgo]
 <h3 id="parameters_11">Parameters</h3>
 <p>inSeries Input data series for the indicator</p>
 <h3 id="visualization_13">Visualization</h3>
-<p><img alt="BuySellPressure" src="../media/image14.png" /></p>
+<p><img alt="BuySellPressure" src="../media/BuySellPressure.jpg" /></p>
 <h3 id="example_12">Example</h3>
 <pre><code class="cs">protected override void OnInit()
 {
@@ -1042,7 +1042,7 @@ CandleStickPattern(IDataSeries inSeries, ChartPattern pattern, int trendStrength
 </tbody>
 </table>
 <h3 id="visualization_15">Visualization</h3>
-<p><img alt="CandleStickPattern" src="../media/image16.png" /></p>
+<p><img alt="CandleStickPattern" src="../media/CandleStickPattern.jpg" /></p>
 <h3 id="example_14">Example</h3>
 <pre><code class="cs">if (CandelStickPattern(ChartPattern.ShootingStar, 5)[0] == 1)
 Print(&quot;Pattern ShootingStar found!&quot;);
@@ -1069,7 +1069,7 @@ ChaikinMoneyFlow(IDataSeries inSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculation</p>
 <h3 id="visualization_16">Visualization</h3>
-<p><img alt="ChaikinMoneyFlow (CMF)" src="../media/image17.png" /></p>
+<p><img alt="ChaikinMoneyFlow (CMF)" src="../media/ChaikinMoneyFlow.jpg" /></p>
 <h3 id="example_15">Example</h3>
 <pre><code class="cs">//Output for the Money Flow value
 Print(&quot;The Chaikin Money Flow value is: &quot; + ChaikinMoneyFlow(21)[0]);
@@ -1095,7 +1095,7 @@ ChaikinOscillator(IDataSeries inSeries, int fast, int slow)[int barsAgo]
 <p>fast Number of bars included in the calculation for the fast EMA</p>
 <p>slow Number of bars included in the calculation for the slow EMA</p>
 <h3 id="visualization_17">Visualization</h3>
-<p><img alt="Chaikin Oscillator" src="../media/image18.png" /></p>
+<p><img alt="Chaikin Oscillator" src="../media/ChaikinOscillator.jpg" /></p>
 <h3 id="example_16">Example</h3>
 <pre><code class="cs">//Output for the oscillator for the fast and slow values of 3 and 10
 Print(&quot;The Chaikin Oscillator value is: &quot; + ChaikinOscillator(3, 10)[0]);
@@ -1120,7 +1120,7 @@ ChaikinVolatility(IDataSeries inSeries, int fast, int slow)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_18">Visualization</h3>
-<p><img alt="ChaikinVolatility (CVL)" src="../media/image19.png" /></p>
+<p><img alt="ChaikinVolatility (CVL)" src="../media/ChaikinVolatility.jpg" /></p>
 <h3 id="example_17">Example</h3>
 <pre><code class="cs">//Chaikin output for a period of 14
 Print(&quot;The value of the Chaikin Volatility is: &quot; + ChaikinVolatility(14)[0]);
@@ -1147,7 +1147,7 @@ CMO(IDataSeries inSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_19">Visualization</h3>
-<p><img alt="Chande Momentum Oscillator (CMO)" src="../media/image20.png" /></p>
+<p><img alt="Chande Momentum Oscillator (CMO)" src="../media/CMO.jpg" /></p>
 <h3 id="example_18">Example</h3>
 <pre><code class="cs">//Output for the value of the Chande Momentum Oscillator
 Print(&quot;The current value for the Chande Momentum Oscillator is: &quot; + CMO(14)[0]);
@@ -1195,7 +1195,7 @@ ClimacticDistance(IDataSeries InSeries, int sMAPeriod, int thresholdPercent, Col
 <h3 id="parameters_17">Parameters</h3>
 <p>Int</p>
 <h3 id="visualization_20">Visualization</h3>
-<p>Image</p>
+<p><img alt="Climactic Distance" src="../media/ClimacticDistance.jpg" /></p>
 <h3 id="example_19">Example</h3>
 <pre><code class="cs">//Output of the value for the Upper climactic distance line
 Print(“Value of the upper band: “ + ClimacticDistnance(20, 80).Upper[0]);
@@ -1230,7 +1230,7 @@ CCI(IDataSeries inSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_21">Visualization</h3>
-<p><img alt="Commodity Channel Index (CCI)" src="../media/image21.png" /></p>
+<p><img alt="Commodity Channel Index (CCI)" src="../media/CCI.jpg" /></p>
 <h3 id="example_20">Example</h3>
 <pre><code class="cs">//Output for the CCI value calculated using 14 periods
 Print(&quot;The value of the Commodity Channel Index is: &quot; + CCI(14));
@@ -1569,7 +1569,7 @@ Darvas(IDataSeries inSeries).Lower[int barsAgo]
 <h3 id="parameter_2">Parameter</h3>
 <p>inSeries Input data series for the indicator</p>
 <h3 id="visualization_30">Visualization</h3>
-<p><img alt="Darvas Boxes" src="../media/image22.png" /></p>
+<p><img alt="Darvas Boxes" src="../media/Darvas.jpg" /></p>
 <h3 id="example_29">Example</h3>
 <pre><code class="cs">//Output for the values for the upper markings (box top)
 Print(&quot;The upper boundary for the Darvas box is: &quot; + Darvas().Upper[0]);
@@ -1604,7 +1604,7 @@ DM(IDataSeries inSeries, int period).DiMinus[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_31">Visualization</h3>
-<p><img alt="Directional Movement (DM)" src="../media/image23.png" /></p>
+<p><img alt="Directional Movement (DM)" src="../media/DM.jpg" /></p>
 <h3 id="example_30">Example</h3>
 <pre><code class="cs">//Output of the DM values
 Print(&quot;The current +DM value is: &quot; + DM(14).DiPlus[0]);
@@ -1640,7 +1640,7 @@ DonchianChannel(IDataSeries inSeries, int period).Lower[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_32">Visualization</h3>
-<p><img alt="Donchian Channel" src="../media/image24.png" /></p>
+<p><img alt="Donchian Channel" src="../media/DonchianChannel.jpg" /></p>
 <h3 id="example_31">Example</h3>
 <pre><code class="cs">//Output for the values of the Donchian Channel
 Print(&quot;The upper band is at: &quot; + DonchianChannel(14).Upper[0]);
@@ -1673,7 +1673,7 @@ DMI(IDataSeries inSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_33">Visualization</h3>
-<p><img alt="Directional Movement Index (DMI)" src="../media/image25.png" /></p>
+<p><img alt="Directional Movement Index (DMI)" src="../media/DMI.jpg" /></p>
 <h3 id="example_32">Example</h3>
 <pre><code class="cs">//Output for the DMI
 Print(&quot;The current DMI value is: &quot; + DMI(20)[0]);
@@ -1716,7 +1716,7 @@ DoubleStochastics(IDataSeries inSeries, int period, DoubleStochasticsMode mode, 
 <p>EMA-Period1 Periods for the EMA</p>
 <p>EMA-Period2 Periods for the second EMA</p>
 <h3 id="visualization_34">Visualization</h3>
-<p><img alt="Double Stochastics (DSS)" src="../media/image26.png" /></p>
+<p><img alt="Double Stochastics (DSS)" src="../media/DSS.jpg" /></p>
 <h3 id="example_33">Example</h3>
 <pre><code class="cs">//Output for %K
 Print(&quot;The value of the DSS Bressert %K is: &quot; + DoubleStochastics(10, DoubleStochasticsMode.Bressert, 2)[0]);
@@ -1743,7 +1743,7 @@ DMIndex(IDataSeries inSeries, int smooth)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>smooth Smoothing settings</p>
 <h3 id="visualization_35">Visualization</h3>
-<p><img alt="Dynamic Momentum Index (DMIndex)" src="../media/image27.png" /></p>
+<p><img alt="Dynamic Momentum Index (DMIndex)" src="../media/DMIindex.jpg" /></p>
 <h3 id="example_34">Example</h3>
 <pre><code class="cs">//Output of the value for the DMIndex Indicator with a smoothing factor of 3
 Print(&quot;The current value for the DMIndex is: &quot; + DMIndex(3)[0]);
@@ -1771,7 +1771,7 @@ EaseOfMovement(IDataSeries inSeries, int smoothing, int volDivisor)[int barsAgo]
 <p>smoothing Smoothing settings</p>
 <p>volDivisor For calculation of the box ratio (see “Calculation” below)</p>
 <h3 id="visualization_36">Visualization</h3>
-<p><img alt="Ease of Movement (EOM)" src="../media/image28.png" /></p>
+<p><img alt="Ease of Movement (EOM)" src="../media/EaseOfMovement.jpg" /></p>
 <h3 id="calculation">Calculation</h3>
 <p>Midpoint = (High + Low) / 2
 MidpointMove = Midpoint [today] – Midpoint [yesterday]
@@ -1802,7 +1802,7 @@ FisherTransform(IDataSeries inSeries, int period)[int barsAgo]
 </code></pre>
 
 <h3 id="visualization_37">Visualization</h3>
-<p><img alt="Fisher Transform" src="../media/image29.png" /></p>
+<p><img alt="Fisher Transform" src="../media/FisherTransform.jpg" /></p>
 <h3 id="example_36">Example</h3>
 <pre><code class="cs">//Output values for the Fisher Transform
 Print(&quot;The current value for the Fisher Transform is: &quot; + FisherTransform(10)[0]);
@@ -1828,7 +1828,7 @@ FOSC(IDataSeries inSeries, int period)[int barsAgo]
 </code></pre>
 
 <h3 id="visualization_38">Visualization</h3>
-<p><img alt="Forecast Oscillator (FOSC)" src="../media/image30.png" /></p>
+<p><img alt="Forecast Oscillator (FOSC)" src="../media/FOSC.jpg" /></p>
 <h3 id="examples">Examples</h3>
 <pre><code class="cs">//Output for the Forecast Oscillator
 Print(&quot;The current value for the Forecast Oscillator is: &quot; + FOSC(14)[0]);
@@ -1853,7 +1853,7 @@ HighestHighIndex(int BarsBack)[int barsAgo]
 <h3 id="parameter_3"><strong>Parameter</strong></h3>
 <p>BarsBack Number of periods in which the highest high will be searched for</p>
 <h3 id="visualization_39">Visualization</h3>
-<p><img alt="HighestHighIndex()" src="../media/image31.png" /></p>
+<p><img alt="HighestHighIndex()" src="../media/HighestHighIndex.jpg" /></p>
 <h3 id="example_37">Example</h3>
 <pre><code class="cs">// How many bars back is the bar with the highest high of the last 14 bars located?
 Print(&quot;The highest high in the last 14 bars was &quot; + HighestHighIndex(14)[0] + &quot; bars ago.&quot;);
@@ -1875,7 +1875,7 @@ HighestHighPrice(int BarsBack)[int barsAgo]
 <h3 id="parameter_4">Parameter</h3>
 <p>BarsBack Number of periods in which the highest high will be searched for</p>
 <h3 id="visualization_40">Visualization</h3>
-<p><img alt="HighestHighPrice()" src="../media/image32.png" /></p>
+<p><img alt="HighestHighPrice()" src="../media/HighestHighPrice.jpg" /></p>
 <h3 id="example_38">Example</h3>
 <pre><code class="cs">// What was the value of the highest high in the last 14 periods?
 Print(&quot;The highest high for the last 14 bars is &quot; + HighestHighPrice(14)[0]);
@@ -1934,7 +1934,7 @@ IchimokuCloud(IDataSeries inSeries, int periodFast, int periodMedium, int period
 <p>periodMedium Period setting for the Kijun line. Default: 29</p>
 <p>periodSlow Number of periods used for the calculation of the Chikou line. Default: 52</p>
 <h3 id="visualization_41">Visualization</h3>
-<p><img alt="IchimokuCloud" src="../media/image33.png" /></p>
+<p><img alt="IchimokuCloud" src="../media/IchimokuCloud.jpg" /></p>
 <h2 id="insidebarsmt">InsideBarsMT</h2>
 <p><strong>The installation of the Technical Analysis Package is required in order to access this indicator.</strong></p>
 <h3 id="description_40">Description</h3>
@@ -1973,7 +1973,7 @@ InsideBarsMT().LowBeforeOutsideBar[int barsAgo]
 <p>In the image below you will see a longer “phase” where the market is within an inside bar. The bar marked with the arrow opens the low of the outside bar. If the open of the green candle had been a tick lower, then the marked bar would not be an inside bar and the red bar would clearly not be an outside bar.
 The tolerance parameter defines the number of ticks by which the inside bars may “breach” the high-low span of the outside bar and still be recognized as an inside bar.</p>
 <p>Tolerance default setting = 0.</p>
-<p><img alt="InsideBarsMT" src="../media/image35.png" /></p>
+<p><img alt="InsideBarsMT" src="../media/InsideBarsMT.jpg" /></p>
 <h3 id="example_39">Example</h3>
 <pre><code class="cs">double StopPrice;
 protected override void OnCalculate()
@@ -2027,7 +2027,7 @@ KeltnerChannel(IDataSeries inSeries, double offsetMutiplier, int period).Lower[i
 <p>offsetMultiplier Multiplier for the SMA</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_43">Visualization</h3>
-<p><img alt="Keltner Channel" src="../media/image36.png" /></p>
+<p><img alt="Keltner Channel" src="../media/KeltnerChannel.jpg" /></p>
 <h3 id="calculation_1">Calculation</h3>
 <p>diff.<strong>Set</strong>(High[0] - Low[0]);</p>
 <p><strong>double</strong> middle = <strong>SMA</strong>(Typical, Period)[0];</p>
@@ -2241,7 +2241,7 @@ LinReg(IDataSeries inSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_45">Visualization</h3>
-<p><img alt="Linear Regression" src="../media/image37.png" /></p>
+<p><img alt="Linear Regression" src="../media/LinReg.jpg" /></p>
 <h3 id="example_48">Example</h3>
 <pre><code class="cs">//Show the current values of the regression line
 Print(&quot;The current value for the linear regression is: &quot; + LinReg(14)[0]);
@@ -2268,7 +2268,7 @@ LinRegIntercept(IDataSeries inSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_46">Visualization</h3>
-<p><img alt="LinRegIntercept" src="../media/image38.png" /></p>
+<p><img alt="LinRegIntercept" src="../media/LinRegIntercept.jpg" /></p>
 <h3 id="example_49">Example</h3>
 <pre><code class="cs">//Show current value
 Print(&quot;The current value of the regression constant is: &quot; + LinRegIntercept(14)[0]);
@@ -2295,7 +2295,7 @@ LinRegSlope(IDataSeries inSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_47">Visualization</h3>
-<p><img alt="LinRegSlope" src="../media/image39.png" /></p>
+<p><img alt="LinRegSlope" src="../media/LinRegSlope.jpg" /></p>
 <h3 id="example_50">Example</h3>
 <pre><code class="cs">//Current value for the slope:
 Print(&quot;The current value for the inclination of the linear regression line is: &quot; + LinRegSlope(14)[0]);
@@ -2318,7 +2318,7 @@ LowestLowIndex(int BarsBack)[int barsAgo]
 <p><strong>Parameter</strong></p>
 <p>BarsBack Number of periods within which the highest high shall be searched for</p>
 <h3 id="visualization_48">Visualization</h3>
-<p><img alt="LowestLowIndex()" src="../media/image40.png" /></p>
+<p><img alt="LowestLowIndex()" src="../media/LowestLowIndex.jpg" /></p>
 <h3 id="example_51">Example</h3>
 <pre><code class="cs">// How many bars back is the lowest low of the last 14 bars located?
 Print(&quot;The lowest low of the last 14 bars was &quot; + LowestLowIndex(14)[0] + &quot; bars ago.&quot;);
@@ -2341,7 +2341,7 @@ LowestLowPrice(int BarsBack)[int barsAgo]
 <h3 id="parameter_5">Parameter</h3>
 <p>BarsBack Number of periods within which the low will be searched for</p>
 <h3 id="visualization_49">Visualization</h3>
-<p><img alt="LowestLowPrice()" src="../media/image41.png" /></p>
+<p><img alt="LowestLowPrice()" src="../media/LowestLowPrice.jpg" /></p>
 <h3 id="example_52">Example</h3>
 <pre><code class="cs">// What value did the lowest low of the last 14 periods have?
 Print(&quot;The lowest low of the last 14 bars is &quot; + LowestLowPrice(14)[0]);
@@ -2383,7 +2383,7 @@ MACD(IDataSeries inSeries, int fast, int slow, int smooth).Diff[int barsAgo]
 <p>slow Number of periods for the slow EMA calculation</p>
 <p>smooth Number of periods for the EMA calculation of the signal line</p>
 <h3 id="visualization_50">Visualization</h3>
-<p><img alt="MACD" src="../media/image42.png" /></p>
+<p><img alt="MACD" src="../media/MACD.jpg" /></p>
 <h3 id="example_53">Example</h3>
 <pre><code class="cs">//Show the current values for the MACD
 Print(&quot;The current value for the MACD line is: &quot; + MACD(12,26,9)[0]);
@@ -2429,7 +2429,7 @@ MAEnvelopes(IDataSeries inSeries, double envelopePercentage, MAEnvelopesMAType m
 -   TEMA
 -   WMA</p>
 <h3 id="visualization_51">Visualization</h3>
-<p><img alt="MAEnvelopes" src="../media/image43.png" /></p>
+<p><img alt="MAEnvelopes" src="../media/MAEnvelopes.jpg" /></p>
 <h3 id="usage_57">Usage</h3>
 <pre><code class="cs">//Value output for the upper band
 Print(&quot;Upper band of the MA Envelope: &quot; + MAEnvelopes(1.5, MAEnvelopesMAType.SMA, 14).Upper[0]);
@@ -2466,7 +2466,7 @@ MarketPhases indicators  are very history sensitive and need at least up to 2000
 <p>Market phases 1, 2, 6, and 9 are not relevant for successful trading.</p>
 <h3 id="depiction-in-the-chart">Depiction in the chart</h3>
 <p>No parameters are required.</p>
-<p><img alt="MarketPhases in chart window" src="../media/image49.png" /></p>
+<p><img alt="MarketPhases in chart window" src="../media/MarketPhases.jpg" /></p>
 <h3 id="usage-in-agenascript">Usage in AgenaScript</h3>
 <p>The indicator provides the following values for the market phases:</p>
 <p>Phase 3: 3</p>
@@ -2597,7 +2597,7 @@ Momentum (IDataSeries inSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_53">Visualization</h3>
-<p><img alt="Momentum (MOM)" src="../media/image51.png" /></p>
+<p><img alt="Momentum (MOM)" src="../media/Momentum.jpg" /></p>
 <h3 id="example_56">Example</h3>
 <pre><code class="cs">//Output of the values for the momentum indicator.
 Print(&quot;The current value for the momentum is &quot; + Momentum(14)[0]);
@@ -2624,7 +2624,7 @@ MFI(IDataSeries inSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_54">Visualization</h3>
-<p><img alt="Money Flow Index (MFI)" src="../media/image52.png" /></p>
+<p><img alt="Money Flow Index (MFI)" src="../media/MoneyFlowIndex.jpg" /></p>
 <h3 id="example_57">Example</h3>
 <pre><code class="cs">//Current MFI value
 Print(&quot;The current value for the MFI is: &quot; + MFI(14)[0]);
@@ -2678,7 +2678,7 @@ DEMA(IDataSeries inSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_55">Visualization</h3>
-<p><img alt="DEMA - Double Exponential Moving Average" src="../media/image53.png" /></p>
+<p><img alt="DEMA - Double Exponential Moving Average" src="../media/DEMA.jpg" /></p>
 <h3 id="calculation_2">Calculation</h3>
 <pre><code class="cs">Value.Set(2 * EMA(InSeries[0], Period)[0] - EMA(EMA(InSeries[0], Period), Period)[0]);
 </code></pre>
@@ -2709,7 +2709,7 @@ EMA(IDataSeries inSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_56">Visualization</h3>
-<p><img alt="EMA - Exponential Moving Average" src="../media/image54.png" /></p>
+<p><img alt="EMA - Exponential Moving Average" src="../media/EMA.jpg" /></p>
 <h3 id="calculation_3">Calculation</h3>
 <pre><code class="cs">Value.Set(ProcessingBarIndex == 0 ? InSeries[0] : InSeries[0] * (2.0 / (1 + Period)) + (1 - (2.0 / (1 + Period))) * Value[1]);
 </code></pre>
@@ -2727,7 +2727,7 @@ This indicator basically allows you to make calculationgs in a different timefra
 <p>Also see <a href="#bollingermtf"><em>BollingerMTF</em></a>, <a href="#smamtf"><em>SmaMTF</em></a>.</p>
 <h3 id="visualization_57">Visualization</h3>
 <p>A 5-minute chart with an EMA(20) calculated with hourly bars as the underlying input:</p>
-<p><img alt="EMA MTF (MultiTimeFrame)" src="../media/image55.png" /></p>
+<p><img alt="EMA MTF (MultiTimeFrame)" src="../media/EMAmtf.jpg" /></p>
 <h2 id="hma-hull-moving-average">HMA - Hull Moving Average</h2>
 <h3 id="description_63">Description</h3>
 <p>The Hull Moving Average, invented by Alan Hull, is a fast-working moving average that gets rid of almost all delays/lags (zero lag). The calculation is carried out using several weighted moving averages, thereby partially reducing the smoothing effect. Hull’s methodology uses square roots of the period instead of the actual period itself.</p>
@@ -2747,7 +2747,7 @@ HMA(IDataSeries InSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_58">Visualization</h3>
-<p><img alt="HMA - Hull Moving Average" src="../media/image56.png" /></p>
+<p><img alt="HMA - Hull Moving Average" src="../media/HMA.jpg" /></p>
 <h3 id="calculation_4">Calculation</h3>
 <pre><code class="cs">double value1 = 2 * WMA(InSeries, (int)(Period / 2))[0];
 double value2 = WMA(InSeries, Period)[0];
@@ -2785,7 +2785,7 @@ KAMA(IDataSeries inSeries, int fast, int period, int slow)[int barsAgo]
 <p>fast Short period</p>
 <p>slow Long period</p>
 <h3 id="visualization_59">Visualization</h3>
-<p><img alt="KAMA - Kaufman" src="../media/image57.png" /></p>
+<p><img alt="KAMA - Kaufman" src="../media/KAMA.jpg" /></p>
 <h3 id="example_61">Example</h3>
 <pre><code class="cs">//Output for the value of the Kaufman Moving Average(KAMA)
 Print(&quot;The current value of the KAMA is &quot; + KAMA(2,10,30)[0]);
@@ -2820,7 +2820,7 @@ MAMA(IDataSeries inSeries, double fastLimit, double slowLimit).Fama[int barsAgo]
 <p>fastLimit Upper limit for the alpha value</p>
 <p>slowLimit Lower limit for the alpha value</p>
 <h3 id="visualization_60">Visualization</h3>
-<p><img alt="MAMA - Mesa Adaptive Moving Average" src="../media/image58.png" /></p>
+<p><img alt="MAMA - Mesa Adaptive Moving Average" src="../media/MAMA.jpg" /></p>
 <h3 id="example_62">Example</h3>
 <pre><code class="cs">//Output values for (MAMA)
 Print(&quot;The current value for the MAMA is &quot; + MAMA(0.5, 0.05)[0]);
@@ -2850,7 +2850,7 @@ SMA(IDataSeries InSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_61">Visualization</h3>
-<p><img alt="SMA - Simple Moving Average" src="../media/image59.png" /></p>
+<p><img alt="SMA - Simple Moving Average" src="../media/SMA.jpg" /></p>
 <h3 id="calculation_5">Calculation</h3>
 <p>Value.<strong>Set</strong>((last + InSeries[0] - InSeries[Period]) / Math.<strong>Min</strong>(ProcessingBarIndex, Period));</p>
 <h3 id="example_63">Example</h3>
@@ -2864,7 +2864,7 @@ Print(&quot;The current SMA value is &quot; + SMA(14)[0]);
 <p>See <a href="#bollingermtf"><em>BollingerMTF</em></a>, <a href="#ema-mtf-multitimeframe"><em>EmaMTF</em></a>.</p>
 <h3 id="visualization_62">Visualization</h3>
 <p>The image shows a 5-minute chart with an SMA (14) calculated on 4-hour bars</p>
-<p><img alt="SMA MTF (MultiTimeFrame)" src="../media/image60.png" /></p>
+<p><img alt="SMA MTF (MultiTimeFrame)" src="../media/SMAmtf.jpg" /></p>
 <h2 id="smma-smoothed-moving-average">SMMA - Smoothed Moving Average</h2>
 <h3 id="description_68">Description</h3>
 <p>The Smoothed Moving Average is combined from both Simple Moving Average and the Exponential Moving Average. Generally speaking, it is only used for higher period amounts/inputs. It normally has roughly half of the value of an EMA, meaning that an SMMA(20) is closer to an EMA(40).</p>
@@ -2887,7 +2887,7 @@ SMMA(IDataSeries inSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_63">Visualization</h3>
-<p><img alt="SMMA - Smoothed Moving Average" src="../media/image61.png" /></p>
+<p><img alt="SMMA - Smoothed Moving Average" src="../media/SMMA.jpg" /></p>
 <h3 id="example_64">Example</h3>
 <pre><code class="cs">//Output for the value of the SMMA
 Print(&quot;The current SMMA value is &quot; + SMMA(14)[0]);
@@ -2911,7 +2911,7 @@ TEMA(IDataSeries inSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_64">Visualization</h3>
-<p><img alt="TEMA - Triple Exponential Moving Average" src="../media/image62.png" /></p>
+<p><img alt="TEMA - Triple Exponential Moving Average" src="../media/TEMA.jpg" /></p>
 <h3 id="example_65">Example</h3>
 <pre><code class="cs">//Output for the Triple Exponential Moving Average
 Print(&quot;The current TEMA value is &quot; + TEMA(14)[0]);
@@ -2934,7 +2934,7 @@ TMA(IDataSeries inSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_65">Visualization</h3>
-<p><img alt="TMA - Triangular Moving Average" src="../media/image63.png" /></p>
+<p><img alt="TMA - Triangular Moving Average" src="../media/TMA.jpg" /></p>
 <h3 id="example_66">Example</h3>
 <pre><code class="cs">//Output for the value of the TMA
 Print(&quot;The current value for the TMA is &quot; + TMA(14)[0]);
@@ -2964,7 +2964,7 @@ TRIX(IDataSeries inSeries, int period, int signalPeriod).Signal[int barsAgo]
 <p>period Number of bars included in the calculations</p>
 <p>signal period Number of bars included in the signal line calculation</p>
 <h3 id="visualization_66">Visualization</h3>
-<p><img alt="TRIX - Triple Exponential Moving Average" src="../media/image64.png" /></p>
+<p><img alt="TRIX - Triple Exponential Moving Average" src="../media/TRIX.jpg" /></p>
 <h3 id="example_67">Example</h3>
 <pre><code class="cs">//Output for the TRIX EMA
 Print(&quot;The current TRIX value is &quot; + TRIX(14, 3)[0]);
@@ -2992,7 +2992,7 @@ T3(IDataSeries inSeries, int period, int tCount, double vFactor)[int barsAgo]
 <p>tCount Number of iterations for the smoothing</p>
 <p>vFactor Volume factor (multiplier)</p>
 <h3 id="visualization_67">Visualization</h3>
-<p><img alt="T3 - Triple Exponential Moving Average" src="../media/image65.png" /></p>
+<p><img alt="T3 - Triple Exponential Moving Average" src="../media/T3.jpg" /></p>
 <h3 id="example_68">Example</h3>
 <pre><code class="cs">//Output of the value for the T3 indicator
 Print(&quot;The current T3 value is &quot; + T3(14, 3, 0.7)[0]);
@@ -3019,7 +3019,7 @@ VMA(IDataSeries inSeries, int period, int volatilityPeriod)[int barsAgo]
 <p>period Number of bars included in the calculations</p>
 <p>volatility period Number of bars included in the calculation for the signal line</p>
 <h3 id="visualization_68">Visualization</h3>
-<p><img alt="VMA - Variable Moving Average" src="../media/image66.png" /></p>
+<p><img alt="VMA - Variable Moving Average" src="../media/VMA.jpg" /></p>
 <h3 id="example_69">Example</h3>
 <pre><code class="cs">//Output the VMA value
 Print(&quot;The current VMA value is &quot; + VMA(9, 9)[0]);
@@ -3042,7 +3042,7 @@ VWMA(IDataSeries inSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_69">Visualization</h3>
-<p><img alt="VWMA - Volume Weighted Moving Average" src="../media/image67.png" /></p>
+<p><img alt="VWMA - Volume Weighted Moving Average" src="../media/VWMA.jpg" /></p>
 <h3 id="example_70">Example</h3>
 <pre><code class="cs">//Output for the VWMA
 Print(&quot;The current VWMA value is &quot; + VWMA(14)[0]);
@@ -3067,7 +3067,7 @@ WMA(IDataSeries inSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_70">Visualization</h3>
-<p><img alt="WMA - Weighted Moving Average" src="../media/image68.png" /></p>
+<p><img alt="WMA - Weighted Moving Average" src="../media/WMA.jpg" /></p>
 <h3 id="example_71">Example</h3>
 <pre><code class="cs">//Output for the WMA
 Print(&quot;The current value of the WMA is &quot; + WMA(14)[0]);
@@ -3092,7 +3092,7 @@ ZLEMA(IDataSeries inSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_71">Visualization</h3>
-<p><img alt="ZLEMA - Zero Lag Exponential Moving Average" src="../media/image69.png" /></p>
+<p><img alt="ZLEMA - Zero Lag Exponential Moving Average" src="../media/ZLEMA.jpg" /></p>
 <h3 id="example_72">Example</h3>
 <pre><code class="cs">//Output for the value of the Zero Lag Exponential Moving Average
 Print(&quot;The current ZLEMA value is &quot; + ZLEMA(14)[0]);
@@ -3123,7 +3123,7 @@ NBarsUp(IDataSeries inSeries, int barCount, bool BarUp, bool higherHigh, bool hi
 <p>higherHigh Additional condition (true): continuously rising highs</p>
 <p>higherLow Additional condition (true): continuously rising lows</p>
 <h3 id="visualization_72">Visualization</h3>
-<p><img alt="nBarsUp" src="../media/image70.png" /></p>
+<p><img alt="nBarsUp" src="../media/nBarsUp.jpg" /></p>
 <h3 id="example_73">Example</h3>
 <pre><code class="cs">// Look for 3 successively rising closing prices
 if (NBarsUp(3, true, true, true)[0] == 1)
@@ -3156,7 +3156,7 @@ NBarsDown(IDataSeries inSeries, bool barCount, int BarDown, bool lowerHigh, bool
 <p>lowerHigh Additional condition (true): continuously falling highs</p>
 <p>lowerLow Additional condition (true); continuously falling lows</p>
 <h3 id="visualization_73">Visualization</h3>
-<p><img alt="nBarsDown" src="../media/image71.png" /></p>
+<p><img alt="nBarsDown" src="../media/nBarsDown.jpg" /></p>
 <h3 id="example_74">Example</h3>
 <pre><code class="cs">NBarsDown(int barCount, bool BarDown, bool lowerHigh, bool lowerLow)
 NBarsDown(IDataSeries inSeries, int barCount, bool BarDown, bool lowerHigh, bool lowerLow)
@@ -3183,7 +3183,7 @@ OBV(IDataSeries inSeries)[int barsAgo]
 <h3 id="parameter_7">Parameter</h3>
 <p>inSeries Input data series for the indicator</p>
 <h3 id="visualization_74">Visualization</h3>
-<p><img alt="OnBalanceVolume (OBV)" src="../media/image72.png" /></p>
+<p><img alt="OnBalanceVolume (OBV)" src="../media/OBV.jpg" /></p>
 <h3 id="example_75">Example</h3>
 <pre><code class="cs">//Output the value for the On Balance Volume (OBV)
 Print(&quot;The current value for the OBV is &quot; + OBV()[0]);
@@ -3219,10 +3219,10 @@ Print(&quot;The current value for the OBV is &quot; + OBV()[0]);
 <p>The parameter input settings define which trend sizes are shown in the chart and whether or not they are connected by a line.</p>
 <p>For the default settings, the trend T2 is enabled by default.</p>
 <p>The depiction in the chart may change with the changing market movements. If the market moves below the last point 3 and breaks the uptrend, the point is marked with a “3?”. The newly created low becomes the new point 2 and the last point 2 becomes point 1.</p>
-<p><img alt="Visualization in the chart" src="../media/image73.png" /></p>
+<p><img alt="Visualization in the chart" src="../media/P123.jpg" /></p>
 <p>The parameter settings are not relevant for the display in the chart and are primarily used for the Condition Escort.</p>
 <p>The depiction in the chart is primarily influenced by the settings “Display 123” and “Display Lines”.</p>
-<p><img alt="parameter settings" src="../media/P123.jpg" /></p>
+<p><img alt="parameter settings" src="../media/P123settings.jpg" /></p>
 <p>The settings highlighted in yellow have no influence on the chart. No changes need to be made.</p>
 <h3 id="usage-in-agenascript_1">Usage in AgenaScript</h3>
 <p>When using P123 in AgenaScript, multiple public variables are available.</p>
@@ -3513,7 +3513,7 @@ ParabolicSAR(IDataSeries inSeries, double acceleration, double accelerationStep,
 </tbody>
 </table>
 <h3 id="visualization_75">Visualization</h3>
-<p><img alt="Parabolic SAR" src="../media/image75.png" /></p>
+<p><img alt="Parabolic SAR" src="../media/ParabolicSAR.jpg" /></p>
 <h3 id="example_76">Example</h3>
 <pre><code class="cs">//Output of the value for the PSAR
 Print(&quot;The current value for the Parabolic SAR is &quot; + ParabolicSAR(0.02, 0.2, 0.02)[0]);
@@ -3544,7 +3544,7 @@ PPO(IDataSeries inSeries, int fast, int slow, int smooth).Smoothed[int barsAgo]
 <p>slow Number of bars for the calculation of the slow EMA</p>
 <p>smooth Number of bars for the calculation of the EMA signal line</p>
 <h3 id="visualization_76">Visualization</h3>
-<p><img alt="Percentage Price Oscillator (PPO)" src="../media/image76.png" /></p>
+<p><img alt="Percentage Price Oscillator (PPO)" src="../media/PPO.jpg" /></p>
 <h3 id="example_77">Example</h3>
 <pre><code class="cs">//Output for the PPO
 Print(&quot;The current value for the PPO is &quot; + PPO(12, 26, 9)[0]);
@@ -3580,7 +3580,7 @@ PercentEnvelopes(IDataSeries inSeries, double percent).LowerPercentBand[int bars
 <p>inSeries Input data series for the indicator</p>
 <p>percent Difference in % for the bands (from the input value)</p>
 <h3 id="visualization_77">Visualization</h3>
-<p><img alt="PercentEnvelopes" src="../media/image77.png" /></p>
+<p><img alt="PercentEnvelopes" src="../media/PercentEnvelopes.jpg" /></p>
 <h3 id="example_78">Example</h3>
 <pre><code class="cs">//Output for the upper band
 Print(&quot;Value of the upper percent band is: &quot; + PercentEnvelopes(3).UpperPercentBand[0]);
@@ -3693,7 +3693,7 @@ PivotPoints(PivotPointsMode.Classic).S3[int barsAgo]
 </tbody>
 </table>
 <h3 id="visualization_78">Visualization</h3>
-<p><img alt="Pivot Points" src="../media/image78.png" /></p>
+<p><img alt="Pivot Points" src="../media/PivotPoints.jpg" /></p>
 <h3 id="example_80">Example</h3>
 <pre><code class="cs">//Output current pivot point
 Print(&quot;The floor pivot point is located at: &quot; + PivotPoints()[0]);
@@ -3763,7 +3763,7 @@ PFE(IDataSeries inSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_79">Visualization</h3>
-<p><img alt="Polarized Fractal Efficiency (PFE)" src="../media/image79.png" /></p>
+<p><img alt="Polarized Fractal Efficiency (PFE)" src="../media/PFE.jpg" /></p>
 <h3 id="example_81">Example</h3>
 <pre><code class="cs">//Output for the value of the Polarized Fractal Efficiency (PFE)
 Print(&quot;The current value for the PFE is: &quot; + PFE(20)[0]);
@@ -3788,7 +3788,7 @@ PriceOscillator(IDataSeries inSeries, int fast, int slow, int smooth)[int barsAg
 <p>slow Number of bars used for the calculation of the slow EMA</p>
 <p>smooth Number of bars used for the calculation of the EMA signal line</p>
 <h3 id="visualization_80">Visualization</h3>
-<p><img alt="Price Oscillator" src="../media/image80.png" /></p>
+<p><img alt="Price Oscillator" src="../media/PriceOscillator.jpg" /></p>
 <h3 id="example_82">Example</h3>
 <pre><code class="cs">//Output for the value of the price oscillator
 Print(&quot;The current value for the PPO is &quot; + PriceOscillator(12, 26, 9)[0]);
@@ -3837,7 +3837,7 @@ Pink ЕМА: 125, 130, 135, 140, 145, 150, 155, 160, 165, 170, 175, 180, 185, 19
 </tbody>
 </table>
 <h3 id="visualisation">Visualisation</h3>
-<p><img alt="Rainbow" src="../media/rainbow.png" /></p>
+<p><img alt="Rainbow" src="../media/Rainbow.jpg" /></p>
 <h2 id="range">Range</h2>
 <h3 id="description_89">Description</h3>
 <p>Range delivers the span/difference between the high and low in ticks for each bar. The range is always greater than or equal to 0.</p>
@@ -3854,7 +3854,7 @@ Range(IDataSeries inSeries)[int barsAgo]
 <h3 id="parameter_8">Parameter</h3>
 <p>inSeries Input data series for the indicator</p>
 <h3 id="visualization_81">Visualization</h3>
-<p><img alt="Range" src="../media/image81.png" /></p>
+<p><img alt="Range" src="../media/Range.jpg" /></p>
 <h3 id="example_83">Example</h3>
 <pre><code class="cs">//Output for the value of the range
 Print(&quot;The current bar has a range of: &quot; + Range()[0]);
@@ -3885,7 +3885,7 @@ RIND(IDataSeries inSeries, int periodQ, int smooth)[int barsAgo]
 <p>periodQ Number of bars used for the short-term stochastic</p>
 <p>smooth Number of bars used for smoothing the indicator (using an EMA)</p>
 <h3 id="visualization_82">Visualization</h3>
-<p><img alt="Range Indicator (RIND)" src="../media/image82.png" /></p>
+<p><img alt="Range Indicator (RIND)" src="../media/Rind.jpg" /></p>
 <h3 id="example_84">Example</h3>
 <pre><code class="cs">//Output
 Print(&quot;The current value for the PFE is: &quot; + RIND(3, 10)[0]);
@@ -3915,7 +3915,7 @@ ROC(IDataSeries inSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_83">Visualization</h3>
-<p><img alt="Rate of Change (ROC)" src="../media/image83.png" /></p>
+<p><img alt="Rate of Change (ROC)" src="../media/ROC.jpg" /></p>
 <h2 id="relative-currency-strength-rcs">Relative Currency Strength (RCS)</h2>
 <h3 id="description_92">Description</h3>
 <p>The Relative Currency Strength indicator is a tool used for technical analysis for the Forex
@@ -4030,7 +4030,7 @@ RSS(IDataSeries inSeries, int eMA1, int eMA2, int length)[int barsAgo]
 <p>eMA1 Number of periods for the first EMA</p>
 <p>eMA2 Number of periods for the second EMA</p>
 <h3 id="visualization_85">Visualization</h3>
-<p><img alt="Relative Spread Strength (RSS)" src="../media/image84.png" /></p>
+<p><img alt="Relative Spread Strength (RSS)" src="../media/RSS.jpg" /></p>
 <h3 id="example_85">Example</h3>
 <pre><code class="cs">//Output for the RSS
 Print(&quot;The current RSS is &quot; + RSS (10, 40, 5)[0]);
@@ -4062,7 +4062,7 @@ RSI(IDataSeries inSeries, int period, int smooth).Avg[int barsAgo]
 <p>period Number of bars included in the calculations</p>
 <p>smooth Number of periods for the smoothing</p>
 <h3 id="visualization_86">Visualization</h3>
-<p><img alt="Relative Strength Index (RSI)" src="../media/image85.png" /></p>
+<p><img alt="Relative Strength Index (RSI)" src="../media/RSI.jpg" /></p>
 <h3 id="example_86">Example</h3>
 <pre><code class="cs">//Output for the RSI
 Print(&quot;The current value for the RSI is: &quot; + RSI(14, 3)[0]);
@@ -4116,7 +4116,7 @@ RVI(IDataSeries inSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_88">Visualization</h3>
-<p><img alt="Relative Volatility Index (RVI)" src="../media/image87.png" /></p>
+<p><img alt="Relative Volatility Index (RVI)" src="../media/RVI.jpg" /></p>
 <h3 id="example_88">Example</h3>
 <pre><code class="cs">//Output of the RVI value
 Print(&quot;The current value for the RVI is: &quot; + RVI(14)[0]);
@@ -4150,7 +4150,7 @@ Reversalbars(IDataSeries inSeries, int tolerance)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>tolerance See the following description below</p>
 <h3 id="visualization_89">Visualization</h3>
-<p><img alt="ReversalBars" src="../media/image88.png" /></p>
+<p><img alt="ReversalBars" src="../media/ReversalBars.jpg" /></p>
 <h3 id="the-tolerance-parameter">The tolerance parameter</h3>
 <p>The reversal bars must exceed their previous bars by at least 1 tick. The tolerance parameter allows you to define/add a certain number of ticks; the parameter is set to 0 by default, but in a sideways market this will lead to a relatively large number of reversal bars being marked.</p>
 <p><img alt="The tolerance parameter" src="../media/image89.png" /></p>
@@ -4185,7 +4185,7 @@ RSquared(IDataSeries inSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_90">Visualization</h3>
-<p><img alt="R-Squared" src="../media/image90.png" /></p>
+<p><img alt="R-Squared" src="../media/RSquared.jpg" /></p>
 <h3 id="example_90">Example</h3>
 <pre><code class="cs">//Output for the value of R-Squared
 Print(&quot;The current value of R-Squared is: &quot; + RSquared(8)[0]);
@@ -4212,7 +4212,7 @@ StdDev (IDataSeries inSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_91">Visualization</h3>
-<p><img alt="StandardDeviation(StdDev)" src="../media/image92.png" /></p>
+<p><img alt="StandardDeviation(StdDev)" src="../media/StdDev.jpg" /></p>
 <h3 id="example_91">Example</h3>
 <pre><code class="cs">//Output for the StdDev
 Print(&quot;The current value for the standard deviation is: &quot; + StdDev(14)[0]);
@@ -4247,7 +4247,7 @@ StdError(IDataSeries inSeries, int period).Lower[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_92">Visualization</h3>
-<p><img alt="Standard Error (StdError)" src="../media/image93.png" /></p>
+<p><img alt="Standard Error (StdError)" src="../media/StdError.jpg" /></p>
 <h3 id="example_92">Example</h3>
 <pre><code class="cs">//Output for the values of the middle line
 Print(&quot;The middle line is currently at: &quot; + StdError(21)[0]);
@@ -4296,7 +4296,7 @@ Stochastics(IDataSeries inSeries, int periodD, int periodK, int smooth).K[int ba
 <p>periodK Number of bars included in the %K calculation</p>
 <p>smooth Number of periods for the smoothing of %D</p>
 <h3 id="visualization_93">Visualization</h3>
-<p><img alt="Stochastics" src="../media/image94.png" /></p>
+<p><img alt="Stochastics" src="../media/Stochastics.jpg" /></p>
 <h3 id="example_93">Example</h3>
 <pre><code class="cs">//Output for the %K line
 Print(&quot;The stochastic line %K is currently at: &quot; + Stochastics(3, 14, 7).K[0]);
@@ -4334,7 +4334,7 @@ StochasticsFast(IDataSeries inSeries, int periodD, int periodK).K[int barsAgo]
 <p>periodD Number of periods for the smoothing of %K</p>
 <p>periodK Number of periods included in the calculation of %K</p>
 <h3 id="visualization_94">Visualization</h3>
-<p><img alt="Stochastics Fast" src="../media/image95.png" /></p>
+<p><img alt="Stochastics Fast" src="../media/StochasticsFast.jpg" /></p>
 <h3 id="example_94">Example</h3>
 <pre><code class="cs">//Output for the %K line of the fast stochastic
 Print(&quot;The stochastic line %K is currently at: &quot; + StochasticsFast(3, 14).K[0]);
@@ -4364,7 +4364,7 @@ StochRSI(IDataSeries inSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_95">Visualization</h3>
-<p><img alt="Stochastics RSI (StochRSI)" src="../media/image96.png" /></p>
+<p><img alt="Stochastics RSI (StochRSI)" src="../media/StochRSI.jpg" /></p>
 <h3 id="example_95">Example</h3>
 <pre><code class="cs">//Output for the StochRSI
 Print(&quot;The current value for the StochRSI is: &quot; + StochRSI(14)[0]);
@@ -4387,7 +4387,7 @@ SUM(IDataSeries inSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_96">Visualization</h3>
-<p><img alt="Summation (SUM)" src="../media/image97.png" /></p>
+<p><img alt="Summation (SUM)" src="../media/SUM.jpg" /></p>
 <h3 id="example_96">Example</h3>
 <pre><code class="cs">// Sum of the volume for the last 10 trading days
 Print(SUM(Volume,10)[0]);
@@ -4485,7 +4485,7 @@ SuperTrendMode.ATR, SuperTrendMode.DualThrust,  SuperTrendMode.Adaptive
 The Period Parameter will have a huge influence when the DualThrustMode is selected. The smaller the period, the tighter the indicator will follow price developments.
 Default: SuperTrendMode.ATR     |</p>
 <h3 id="visualization_97">Visualization</h3>
-<p><img alt="SuperTrend" src="../media/image98.png" /></p>
+<p><img alt="SuperTrend" src="../media/SuperTrend.jpg" /></p>
 <h3 id="example_97">Example</h3>
 <pre><code class="cs">if (Close[0] &gt; SuperTrend(SuperTrendMAType.HMA, SuperTrendMode.ATR, 14, 2.618, 14).UpTrend[0])
   Print(&quot;The market is in an uptrend.&quot;);
@@ -4544,7 +4544,7 @@ Once broken, these areas tend to reverse their function, meaning that a broken s
 </tbody>
 </table>
 <h3 id="visualization_98">Visualization</h3>
-<p><img alt="SupportResistanceAreas" src="../media/image99.png" /></p>
+<p><img alt="SupportResistanceAreas" src="../media/SupportResistanceAreas.jpg" /></p>
 <h2 id="swing">Swing</h2>
 <h3 id="description_108">Description</h3>
 <p>Based on the strength of the swing highs or the swing lows, the swing indicator draws a line at these points. The number of bars to the left and right of the extreme point is the determining factor for the strength. Methods for these indicators can also be implemented for other scripts.</p>
@@ -4600,7 +4600,7 @@ Swing(IDataSeries inSeries, int strength).SwingLowBar(int barsAgo, int instance,
 </tbody>
 </table>
 <h3 id="visualization_99">Visualization</h3>
-<p><img alt="Swing" src="../media/image100.png" /></p>
+<p><img alt="Swing" src="../media/Swing.jpg" /></p>
 <h3 id="example_98">Example</h3>
 <pre><code class="cs">// Position and price of the last swing high
 int barsAgo = Swing(5).SwingHighBar(0, 1, 10);
@@ -4631,7 +4631,7 @@ TSF(IDataSeries inSeries, int forecast, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_100">Visualization</h3>
-<p><img alt="Time-Series-Forecast (TSF)" src="../media/image101.png" /></p>
+<p><img alt="Time-Series-Forecast (TSF)" src="../media/TSF.jpg" /></p>
 <h3 id="example_99">Example</h3>
 <pre><code class="cs">//Output the TSF values
 Print(&quot;The current value for the TSF is: &quot; + TSF(3, 14)[0]);
@@ -4654,7 +4654,7 @@ ConstantLines(double line1Value, double line2Value, double line3Value, double li
 <p><strong>double</strong></p>
 <p>When using this method with an index (e.g. <strong>ConstantLines</strong>(1,2,3,4)[<strong>int</strong> barsAgo] ), the value of the indicator will be issued for the referenced bar.</p>
 <h3 id="visualization_101">Visualization</h3>
-<p><img alt="Constant Lines" src="../media/image102.png" /></p>
+<p><img alt="Constant Lines" src="../media/ConstantLines.jpg" /></p>
 <h2 id="currentdayohl">CurrentDayOHL</h2>
 <h3 id="description_111">Description</h3>
 <p>This function delivers the values for the open, high and low of the current day i.e. session.</p>
@@ -4683,7 +4683,7 @@ CurrentDayOHL(IDataSeries inSeries).GetCurrentBar().Low[int barsAgo]
 </code></pre>
 
 <h3 id="visualization_102">Visualization</h3>
-<p><img alt="CurrentDayOHL" src="../media/image103.png" /></p>
+<p><img alt="CurrentDayOHL" src="../media/CurrentDayOHL.jpg" /></p>
 <h3 id="example_100">Example</h3>
 <pre><code class="cs">Print(&quot;The low of the current session is at &quot; + CurrentDayOHL().GetCurrentBar().Low[0]);
 </code></pre>
@@ -4721,7 +4721,7 @@ DailyPerformance(IDataSeries inSeries,DailyPerformanceReference reference, Daily
 -   DailyPerformanceCalculationMode.Currency</p>
 <p>daysAgo Number of days in the past</p>
 <h3 id="visualization_103">Visualization</h3>
-<p><img alt="DailyPerformance" src="../media/image106.png" /></p>
+<p><img alt="DailyPerformance" src="../media/DailyPerformance.jpg" /></p>
 <h3 id="example_101">Example</h3>
 <pre><code class="cs">//How many ticks are between today’s open and the current price?
 DailyPerformance(DailyPerformanceReference.Open, DailyPerformanceCalculationMode.Ticks, 1)[0]
@@ -4759,7 +4759,7 @@ DailyQuoteMoves(IDataSeries inSeries) [int barsAgo]
 <h3 id="parameters_98">Parameters</h3>
 <p>inSeries Input data series for the indicator</p>
 <h3 id="visualization_104">Visualization</h3>
-<p><img alt="DailyQuoteMoves" src="../media/DailyQuoteMoves.png" /></p>
+<p><img alt="DailyQuoteMoves" src="../media/DailyQuoteMoves.jpg" /></p>
 <h3 id="example_102">Example</h3>
 <pre><code class="cs">//How many ticks are in between closing price of current bar and opening price of the current day? If this bar is the first of the day, the difference will be shown Open-Close of the bar
 DailyQuoteMoves()[0]
@@ -4772,7 +4772,7 @@ DailyQuoteMoves()[0]
 Each line can be turned on or off, and the colors and line strengths can be freely set.</p>
 <p>See <a href="#currentdayohl"><em>CurrentDayOHL</em></a>, <a href="#priordayohlc"><em>PriorDayOHLC</em></a>.</p>
 <h3 id="visualization_105">Visualization</h3>
-<p><img alt="DayLines" src="../media/image107.png" /></p>
+<p><img alt="DayLines" src="../media/DayLines.jpg" /></p>
 <h2 id="daylinesadv">DayLinesAdv</h2>
 <h3 id="description_115">Description</h3>
 <p>DayLinesAdv draws horizontal lines for the previous day’s high, low, and close, as well as the current day’s open.</p>
@@ -4784,15 +4784,15 @@ This parameter manages the interaction with weekend price data. If IncludeWeeken
 <p>This is generally applicable to traders in different time zones. For example, a trader located in Germany will receive EURUSD data that beginning on Sunday evenings in America.
 To add the couple of hours that are transcribed on Sunday to the previous Friday’s session, you simply need to set IncludeWeekends = true.
 The first picture shows IncludeWeekends = false:</p>
-<p><img alt="IncludeWeekends = false" src="../media/image108.png" /></p>
+<p><img alt="IncludeWeekends = false" src="../media/DayLinesAdvFalse.jpg" /></p>
 <p>The second picture shows IncludeWeekends = true:</p>
-<p><img alt="IncludeWeekends = true" src="../media/image109.png" /></p>
+<p><img alt="IncludeWeekends = true" src="../media/DayLinesAdvTrue.jpg" /></p>
 <p><strong>Show Prices parameter</strong>
 If set to “true”, prices are displayed in addition to the line itself.</p>
-<p><img alt="prices are displayed" src="../media/image110.png" /></p>
+<p><img alt="prices are displayed" src="../media/DayLinesAdvTrueShowPrice.jpg" /></p>
 <p><strong>Extend high lines and Extend low lines parameters.</strong>
 If set to “true”, the highs and lows that have not yet been „breached“ by the price will be extended onto the right-hand side of the chart using dotted lines.</p>
-<p><img alt="highs and lows" src="../media/image111.png" /></p>
+<p><img alt="highs and lows" src="../media/DayLinesAdvExtend.jpg" /></p>
 <h2 id="getdaybar">GetDayBar</h2>
 <h3 id="description_116">Description</h3>
 <p>The function GetDayBar() outputs all values (open, high, low, close, time, median, typical, volume, and weighted) for a specified past or current day i.e. session. GetDayBar() is not intended to be used inside the chart. For this purpose, DayLinesAdv should be used instead. GetDayBar is mainly used as a high-performance replacement for <a href="#priordayohlc"><em>PriorDayOHLC</em></a>.</p>
@@ -4832,7 +4832,7 @@ The attribute <em>TimeFrameRequirements</em> must also always be used for the cl
 <h3 id="description_117">Description</h3>
 <p>Info is not an indicator in the classic sense of the word, but is actually more similar to a tool. Depending on the underlying instrument, the background of the chart may show additional information.</p>
 <h3 id="visualization_106">Visualization</h3>
-<p><img alt="GetDayBar" src="../media/image112.png" /></p>
+<p><img alt="Info" src="../media/Info.jpg" /></p>
 <h2 id="maximum-max">Maximum (MAX)</h2>
 <h3 id="description_118">Description</h3>
 <p>Max (MAX) delivers the highest value for a predefined number of periods.</p>
@@ -4850,7 +4850,7 @@ MAX (IDataSeries inSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_107">Visualization</h3>
-<p><img alt="Maximum (MAX)" src="../media/image113.png" /></p>
+<p><img alt="Maximum (MAX)" src="../media/MAX.jpg" /></p>
 <h3 id="example_104">Example</h3>
 <pre><code class="cs">// Output of the highest value of the last 20 periods
 // The output is identical to high [GetSerieHighestValue(High,20)]
@@ -4874,7 +4874,7 @@ MIN (IDataSeries inSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_108">Visualization</h3>
-<p><img alt="Minimum (MIN)" src="../media/image114.png" /></p>
+<p><img alt="Minimum (MIN)" src="../media/MIN.jpg" /></p>
 <h3 id="example_105">Example</h3>
 <pre><code class="cs">// Outputs the lowest value for the last 20 periods
 Print(&quot;The lowest value of the last 20 periods is &quot; + MIN(Low, 20)[0]);
@@ -4888,14 +4888,14 @@ Print(&quot;The lowest value of the last 20 periods is &quot; + MIN(Low, 20)[0])
 <p>TimeFrame Timeframe of the “virtual” candle (second, minute, hour, day, week, month)
 TimeFrameValue Value of the timeframe (number)</p>
 <h3 id="visualization_109">Visualization</h3>
-<p><img alt="MTFBoxes" src="../media/image115.png" /></p>
+<p><img alt="MTFBoxes" src="../media/MTFBoxes.jpg" /></p>
 <h2 id="priceline">PriceLine</h2>
 <h3 id="description_121">Description</h3>
 <p>PriceLine is not so much an indicator, but more of a tool.
 It places a horizontal line on top of the current market price within the chart.
 The colors and line widths are freely configurable.</p>
 <h3 id="visualization_110">Visualization</h3>
-<p><img alt="PriceLine" src="../media/image116.png" /></p>
+<p><img alt="PriceLine" src="../media/PriceLine.jpg" /></p>
 <h2 id="priordayohlc">PriorDayOHLC</h2>
 <h3 id="description_122">Description</h3>
 <p>PriorDayOHLC shows the values for yesterday’s (i.e. the previous session’s) open, high, low, and close. PriorDayOHLC works best when used together with the intraday data series.</p>
@@ -4929,7 +4929,7 @@ PriorDayOHLC(IDataSeries inSeries).PriorClose[int barsAgo]
 </code></pre>
 
 <h3 id="visualization_111">Visualization</h3>
-<p><img alt="PriorDayOHLC" src="../media/image117.png" /></p>
+<p><img alt="PriorDayOHLC" src="../media/PriorDayOHLC.jpg" /></p>
 <h3 id="example_106">Example</h3>
 <pre><code class="cs">// Value from the previous trading day
 Print(&quot;Yesterday’s open was &quot; + PriorDayOHLC().PriorOpen[0]);
@@ -4946,18 +4946,18 @@ Print(&quot;Yesterday’s close was &quot; + PriorDayOHLC().PriorClose[0]);
 What is special about this indicator is that you can manually set how the so-called “weekend sessions” should be handled. If the parameter IncludeWeekends is set to “true”, then the Sunday sessions will be added to the Friday’s session.
 See <a href="#priordayohlc"><em>PriorDayOHLC</em></a>.</p>
 <h3 id="visualization_112">Visualization</h3>
-<p><img alt="PriorDayOHLCext" src="../media/image118.png" /></p>
+<p><img alt="SessionBreakLines" src="../media/SessionBreakLines.jpg" /></p>
 <h2 id="showbidask">ShowBidAsk</h2>
 <h3 id="description_124">Description</h3>
 <p>The ShowBidAsk indicator displays the current bid and ask prices as well as the corresponding volume within the lower part of the chart. It also shows changes in volume even if a trade has not occurred.</p>
 <h3 id="visualization_113">Visualization</h3>
-<p><img alt="ShowBidAsk" src="../media/image119.png" /></p>
+<p><img alt="ShowBidAsk" src="../media/ShowBidAsk.jpg" /></p>
 <h2 id="tickcounter">TickCounter</h2>
 <h3 id="description_125">Description</h3>
 <p>TickCounter provides information regarding the current number of ticks that are contained within the bar. The indicator can not only count starting from 0, but can also be set to count from a specified number down to 0. TickCounter can display the value either as absolute or as a percentage. It only works with candle charts in which the bars are established based on a fixed number of ticks.</p>
 <p>When programming your own scripts, please use Bars, TicksCountForLastBar or Bars, LastBarCompleteness.</p>
 <h3 id="visualization_114">Visualization</h3>
-<p><img alt="TickCounter" src="../media/image120.png" /></p>
+<p><img alt="TickCounter" src="../media/TickCounter.jpg" /></p>
 <h2 id="true-strength-index-tsi">True Strength Index (TSI)</h2>
 <h3 id="description_126">Description</h3>
 <p>The True Strength Index (TSI) is a momentum indicator. It is used as an indicator for trend direction and for displaying overbought or oversold conditions.
@@ -4981,7 +4981,7 @@ TSI(IDataSeries inSeries, int fast, int slow)[int barsAgo]
 <p>fast Number of bars included in the calculation of the fast EMA</p>
 <p>slow Number of bars included in the calculation of the slow EMA</p>
 <h3 id="visualization_115">Visualization</h3>
-<p><img alt="True Strength Index (TSI)" src="../media/image121.png" /></p>
+<p><img alt="True Strength Index (TSI)" src="../media/TSI.jpg" /></p>
 <h3 id="example_107">Example</h3>
 <pre><code class="cs">//Output of the current value for the True Strength Index (TSI)
 Print(&quot;The current value for the TSI is &quot; + TSI(3, 14)[0]);
@@ -5036,7 +5036,7 @@ UltimateOscillator(IDataSeries inSeries, int fast, int intermediate, int slow)[i
 </tbody>
 </table>
 <h3 id="visualization_116">Visualization</h3>
-<p><img alt="Ultimate Oscillator" src="../media/image122.png" /></p>
+<p><img alt="Ultimate Oscillator" src="../media/UltimateOscillator.jpg" /></p>
 <h3 id="example_108">Example</h3>
 <pre><code class="cs">// Output of the values for the UltimateOscillator with settings of 7,14,28
 Print(&quot;The current value for the Ultimate Oscillator is &quot; + UltimateOscillator(7, 14, 28)[0]);
@@ -5060,7 +5060,7 @@ VOL(IDataSeries inSeries)[int barsAgo]
 <h3 id="parameter_11">Parameter</h3>
 <p>inSeries Input data series for the indicator</p>
 <h3 id="visualization_117">Visualization</h3>
-<p><img alt="Volume (VOL)" src="../media/image123.png" /></p>
+<p><img alt="Volume (VOL)" src="../media/VOL.jpg" /></p>
 <h3 id="example_109">Example</h3>
 <pre><code class="cs">//Output of the current volume
 Print(&quot;The current volume is &quot; + VOL()[0]);
@@ -5094,7 +5094,7 @@ VOLMA(IDataSeries inSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_118">Visualization</h3>
-<p><img alt="Volume Moving Average (VOLMA)" src="../media/image124.png" /></p>
+<p><img alt="Volume Moving Average (VOLMA)" src="../media/VOLMA.jpg" /></p>
 <h3 id="example_110">Example</h3>
 <pre><code class="cs">//Output for the value of the Volume Moving Average (VOLMA)
 Print(&quot;The current VOLMA value is &quot; + VOLMA(14)[0]);
@@ -5121,7 +5121,7 @@ VolumeOscillator(IDataSeries inSeries, int fast, int slow)[int barsAgo]
 <p>fast Number of bars for the calculation of the fast moving average</p>
 <p>slow Number of bars for the calculation of the slow moving average</p>
 <h3 id="visualization_119">Visualization</h3>
-<p><img alt="Volume Oscillator" src="../media/image125.png" /></p>
+<p><img alt="Volume Oscillator" src="../media/VolumeOscillator.jpg" /></p>
 <h3 id="example_111">Example</h3>
 <pre><code class="cs">//Output of the current value for the Volume Oscillator
 Print(&quot;The current value for the Volume Oscillator is: &quot; + VolumeOszillator(12,26)[0]);
@@ -5136,7 +5136,7 @@ It is important to note that the Volume Profile indicator only works together wi
 <h3 id="interpretation_63">Interpretation</h3>
 <p>Prices with especially high trading volume will have a more satiated accumulation and distribution at their respective levels. This leads to price resistance/support zones being formed.</p>
 <h3 id="visualization_120">Visualization</h3>
-<p><img alt="Volume Profile" src="../media/image126.png" /></p>
+<p><img alt="Volume Profile" src="../media/VolumeProfile.jpg" /></p>
 <h2 id="volume-rate-of-change-vroc">Volume Rate of Change (VROC)</h2>
 <h3 id="description_132">Description</h3>
 <p>The Volume Rate of Change (VROC) is almost exactly the same as the ROC indicator, with the exception that instead of price data, volume data (VOL) is used. A smoothing component is also applied.</p>
@@ -5157,7 +5157,7 @@ VROC(IDataSeries inSeries, int period, int smooth)[int barsAgo]
 <p>period Number of bars included in the calculations</p>
 <p>smooth Number of Bars included in the calculation for the smoothing</p>
 <h3 id="visualization_121">Visualization</h3>
-<p><img alt="Volume Rate of Change (VROC)" src="../media/image127.png" /></p>
+<p><img alt="Volume Rate of Change (VROC)" src="../media/VROC.jpg" /></p>
 <h3 id="example_112">Example</h3>
 <pre><code class="cs">//Output of the current value for the Volume ROC
 Print(&quot;The current value for the Volume ROC is: &quot; + VROC(14, 3)[0]);
@@ -5370,7 +5370,7 @@ VolumeUpDown(IDataSeries inSeries)[int barsAgo]
 <h3 id="parameter_12">Parameter</h3>
 <p>inSeries Input data series for the indicator</p>
 <h3 id="visualization_131">Visualization</h3>
-<p><img alt="Volume Rate of Change (VROC)" src="../media/image128.png" /></p>
+<p><img alt="VolumeUpDown" src="../media/VolumeUpDown.jpg" /></p>
 <h3 id="example_122">Example</h3>
 <pre><code class="cs">//Output of the current volume
 Print(&quot;The current volume is &quot; + VolumeUpDown()[0]);
@@ -5417,7 +5417,7 @@ WilliamsR(IDataSeries inSeries, int period)[int barsAgo]
 <p>inSeries Input data series for the indicator</p>
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_133">Visualization</h3>
-<p><img alt="Williams %R" src="../media/image129.png" /></p>
+<p><img alt="Williams %R" src="../media/WilliamsR.jpg" /></p>
 <h3 id="example_124">Example</h3>
 <pre><code class="cs">WilliamsR(int period)
 WilliamsR(IDataSeries inSeries, int period)
@@ -5495,7 +5495,7 @@ ZigZag(IDataSeries inSeries, DeviationType deviationType, double deviationValue,
 </tbody>
 </table>
 <h3 id="visualization_135">Visualization</h3>
-<p><img alt="ZigZag" src="../media/image130.png" /></p>
+<p><img alt="ZigZag" src="../media/ZigZag.jpg" /></p>
 <h3 id="example_126">Example</h3>
 <pre><code class="cs">//Output of the market value for the last high point
 Print(&quot;The last high of the ZigZag indicator was at &quot; + ZigZag(DeviationType.Percent, 1, true).ZigZagHigh[0]);

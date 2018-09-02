@@ -51,14 +51,14 @@ inSeries Input data series for the indicator
 ### Example
 ```cs
 //Testing the direction of the ADL
-if (IsSerieRising(ADL())
+if (IsSerieRising(ADL()) {
 Print("The ADL indicator is rising.");
+}
 ```
 
 ## Adaptive Price Zone (APZ)
 ### Description
 This is a technical indicator developed by Lee Leibfarth in 2006. The Adaptive Price Zone is a volatility-based indicator shown as a set of bands laid over a price chart. The APZ, which is particularly useful in non-trending, choppy markets, was developed with the aim of helping traders to find potential turning points in the markets. The APZ is based on a short-term, double-smoothed EMA that reacts rapidly to price changes with reduced lag. It works in the following way: the bands create a channel that envelopes the average price and tracks price changes. If the price crosses over the upper band of the zone, this creates an opportunity for the trader to trade a reversal. For the lower band, the reverse is true.
-
 
 ### Interpretation
 The bigger the price movement, the greater the distance between the upper and lower band will be. The smaller the price movement, the smaller the distance between the bands. More widely spaced bands will indicate increased instability and volatility, whereas closely tuned bands will display reduced volatility. If the price action breaks through the upper or lower band then the APZ will tend to return to its statistical average. This will lead to trading opportunities where the market may try to compensate for imbalances. If the price overshoots the bands for example, as mentioned in the description, then this will present you with a trading opportunity in the opposite direction.
@@ -70,10 +70,10 @@ The bigger the price movement, the greater the distance between the upper and lo
 ```cs
 APZ(double barPct, int period)
 APZ(IDataSeries inSeries, double barPct, int period)
-Upper Band
+//Upper Band
 APZ(double barPct, int period).Upper[int barsAgo]
 APZ(IDataSeries inSeries, double barPct, int period).Upper[int barsAgo]
-Lower Band
+//Lower Band
 APZ(double barPct, int period).Lower[int barsAgo]
 APZ(IDataSeries inSeries, double barPct, int period).Lower[int barsAgo]
 ```
@@ -483,9 +483,10 @@ numStdDev Standard deviation
 ![Bollinger Percent B (%b)](./media/BollingerPercentB.jpg)
 
 ### Example
+```cs
 //Output for the value of Bollinger %B
-
-**Print**("Value of the Bollinger Percent B is: " + **BollingerPercentB**(20, 2)\[0\]);
+Print("Value of the Bollinger Percent B is: " + BollingerPercentB(20, 2)[0]);
+```
 
 ## Bollinger Band Width (BBWidth)
 ### Description
@@ -671,32 +672,7 @@ When using this method with an index (e.g. **CandleStickPattern**(...)\[**int** 
 |---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | InSeries      | Input data series for the indicator
 |
-| pattern       | Possible values are:
-                ChartPattern.BearishBeltHold
-                 ChartPattern.BearishEngulfing
-                 ChartPattern.BearishHarami
-                 ChartPattern.BearishHaramiCross
-                 ChartPattern.BullishBeltHold
-                ChartPattern.BullishEngulfing
-                ChartPattern.BullishHarami
-                ChartPattern.BullishHaramiCross  
-                ChartPattern.DarkCloudCover
-                ChartPattern.Doji
-                ChartPattern.DownsideTasukiGap
-                ChartPattern.EveningStar
-                ChartPattern.FallingThreeMethods
-                ChartPattern.Hammer
-                ChartPattern.HangingMan
-                ChartPattern.InvertedHammer
-                ChartPattern.MorningStart
-                ChartPattern.PiercingLine
-                ChartPattern.RisingThreeMethods
-                ChartPattern.ShootingStar
-                ChartPattern.StickSandwich
-                ChartPattern.ThreeBlackCrows
-                ChartPattern.ThreeWhiteSoldiers
-                ChartPattern.UpsideGapTwoCrows
-                ChartPattern.UpsideTasukiGap    |
+| pattern       | Possible values are: ChartPattern.BearishBeltHold, ChartPattern.BearishEngulfing, ChartPattern.BearishHarami, ChartPattern.BearishHaramiCross, ChartPattern.BullishBeltHold ChartPattern.BullishEngulfing,  ChartPattern.BullishHarami,  ChartPattern.BullishHaramiCross,  ChartPattern.DarkCloudCover, ChartPattern.Doji,ChartPattern.DownsideTasukiGapChartPattern.EveningStar,  ChartPattern.FallingThreeMethods,  ChartPattern.Hammer,  ChartPattern.HangingMan,  ChartPattern.InvertedHammer,  ChartPattern.MorningStart  ChartPattern.PiercingLine,  ChartPattern.RisingThreeMethods,  ChartPattern.ShootingStar,  ChartPattern.StickSandwich,ChartPattern.ThreeBlackCrows,ChartPattern.ThreeWhiteSoldiers, ChartPattern.UpsideGapTwoCrows,  ChartPattern.UpsideTasukiGap    |
 | trendStrength | Signifies the number of bars to the left and right of the swing high or swing low that are used to identify a trend. The value 0 turns off the search, meaning that the only thing searched for is chart patterns. |
 
 ### Visualization

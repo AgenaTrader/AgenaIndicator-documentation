@@ -1,4 +1,4 @@
-#Indicators & Oscillators
+# Indicators & Oscillators
 
 **Trade like the professionals!**
 
@@ -11,30 +11,30 @@ Indicators can be used in
 
 For each indicator you will find a brief description of its interpretation, operation and functionality, a graphical representation on a chart and further technical details for its usage with AgenaScript.
 
-![indicators](./media/image1.png)
+![indicators](./media/1image.jpg)
 
-##Accumulation/Distribution (ADL)
+## Accumulation/Distribution (ADL)
 ### Description
-The concept of the Accumulation Distribution Line (ADL) indicator was developed by Marc Chaikin. The ADL is a volume indicator; it represents the money flow. The ADL is a further development of the On-Balance Volume Indicator developed by Joe Granville, which also happens to be one of the first volume indicators.
+The Accumulation Distribution LevelLine (ADL) indicator was developed by Marc Chaikin. The ADL is a volume indicator that represents the money flow. The ADL is an improvement of the On-Balance Volume Indicator created by Joe Granville, which was actually one of the very first volume indicators.
 
 ### Interpretation
 There are two interpretations of the ADL:
 
 Confirmation of a trend or
 
-1.  The depiction of [*divergence*]
+1.  The depiction of *divergence*
 
 If the ADL is rising in an uptrend, then money is flowing in the direction of the rising prices, thus the uptrend is confirmed. If the ADL is falling in a downward trend, money is being taken out of the stock, thus confirming the downtrend.
 
 ### Further information
-<http://vtadwiki.vtad.de/index.php/Accumulation\_Distribution\_Linie>
+[vtadwiki.vtad.de](http://vtadwiki.vtad.de/index.php/Accumulation_Distribution_Linie)
 
 ### Usage
 ```cs
 ADL()
-ADL(IDataSeries input)
+ADL(IDataSeries inSeries)
 ADL()[int barsAgo]
-ADL(IDataSeries input)[int barsAgo]
+ADL(IDataSeries inSeries)[int barsAgo]
 ```
 
 ### Return value
@@ -43,21 +43,22 @@ ADL(IDataSeries input)[int barsAgo]
 When using the method with an index (e.g. ADL()\[int barsAgo\] ), the value of the indicator will be outputted for the referenced bar.
 
 ### Parameter
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 ### Visualization
-![Accumulation/Distribution (ADL)](./media/image2.png)
+![Accumulation/Distribution (ADL)](./media/ADL.jpg)
 
 ### Example
 ```cs
 //Testing the direction of the ADL
-if (Rising(ADL())
+if (IsSerieRising(ADL()) {
 Print("The ADL indicator is rising.");
+}
 ```
 
-##Adaptive Price Zone (APZ)
+## Adaptive Price Zone (APZ)
 ### Description
-The adaptive price zone is a technical indicator developed by Lee Leibfarth in 2006. The APZ is a volatility-based indicator that appears as a set of bands placed over a price chart. Especially useful in non-trending, choppy markets, the APZ was created to help traders find potential turning points in the markets. The APZ is based on a short-term double-smoothed exponential moving average that reacts quickly to price changes with reduced lag. The bands form a channel that surrounds the average price and tracks the price changes. If the price crosses the upper band of the zone then this will present you with an opportunity to trade a reversal. The opposite is true for the lower band.
+This is a technical indicator developed by Lee Leibfarth in 2006. The Adaptive Price Zone is a volatility-based indicator shown as a set of bands laid over a price chart. The APZ, which is particularly useful in non-trending, choppy markets, was developed with the aim of helping traders to find potential turning points in the markets. The APZ is based on a short-term, double-smoothed EMA that reacts rapidly to price changes with reduced lag. It works in the following way: the bands create a channel that envelopes the average price and tracks price changes. If the price crosses over the upper band of the zone, this creates an opportunity for the trader to trade a reversal. For the lower band, the reverse is true.
 
 ### Interpretation
 The bigger the price movement, the greater the distance between the upper and lower band will be. The smaller the price movement, the smaller the distance between the bands. More widely spaced bands will indicate increased instability and volatility, whereas closely tuned bands will display reduced volatility. If the price action breaks through the upper or lower band then the APZ will tend to return to its statistical average. This will lead to trading opportunities where the market may try to compensate for imbalances. If the price overshoots the bands for example, as mentioned in the description, then this will present you with a trading opportunity in the opposite direction.
@@ -68,13 +69,13 @@ The bigger the price movement, the greater the distance between the upper and lo
 ### Usage
 ```cs
 APZ(double barPct, int period)
-APZ(IDataSeries input, double barPct, int period)
-Upper Band
+APZ(IDataSeries inSeries, double barPct, int period)
+//Upper Band
 APZ(double barPct, int period).Upper[int barsAgo]
-APZ(IDataSeries input, double barPct, int period).Upper[int barsAgo]
-Lower Band
+APZ(IDataSeries inSeries, double barPct, int period).Upper[int barsAgo]
+//Lower Band
 APZ(double barPct, int period).Lower[int barsAgo]
-APZ(IDataSeries input, double barPct, int period).Lower[int barsAgo]
+APZ(IDataSeries inSeries, double barPct, int period).Lower[int barsAgo]
 ```
 
 ### Return value
@@ -85,12 +86,12 @@ When using the method with an index (e.g. **APZ**(2, 20)\[**int** barsAgo\] ), t
 ### Parameters
 barPct Standard deviation
 
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculation
 
 ### Visualization
-![Adaptive Price Zone (APZ)](./media/image3.png)
+![Adaptive Price Zone (APZ)](./media/APZ.jpg)
 
 ### Example
 ```cs
@@ -99,9 +100,9 @@ Print("Value for the upper APZ band : " + APZ(2, 20).Upper[0]);
 Print("Value for the lower APZ band: " + APZ(2, 20).Lower[0]);
 ```
 
-##Aroon
+## Aroon
 ### Description
-Developed by Tushar Chande in 1995, Aroon is an indicator system that determines whether a stock is trending or not and how strong the trend is. "Aroon" means "Dawn's Early Light" in Sanskrit. Chande chose this name because the indicators are designed to reveal the beginning of a new trend. The Aroon indicators measure the number of periods since the price recorded an x-day high or low. There are two separate indicators: Aroon-Up and Aroon-Down. A 25-day Aroon-Up measures the number of days since a 25-day high. A 25-day Aroon-Down measures the number of days since a 25-day low. In this sense, the Aroon indicators are quite different from typical [momentum oscillators], which focus on price relative to time. Aroon is unique because it focuses on time relative to price. Chartists can use the Aroon indicators to spot emerging trends, identify consolidations, define correction periods and anticipate reversals. **(Source: Stockcharts.com)**
+Aroon, an indicator system that determines whether or not a stock is trending and how strong this trend is, was developed by Tushar Chande in 1995. Its name is derived from the Sanskrit “dawn’s early light”. Chande used this name to signify the indicators’ purpose of revealing the start of a new trend. These indicators measure the number of periods since the last time the price recorded an x-day high or low. There are two distinct indicators: the Aroon-Up and Aroon-Down, whereby a 50-day Aroon-Up measures the number of days since a 50-day high, and a 50-day Aroon-Down measures the days since a 50-day low. This makes the Aroon indicators significantly different from the usual momentum oscillators, which concentrate on price in relation to time. What makes Aroon indicators unique is that they focus on time in relation to price. Aroon indicators can be used to detect emerging trends, identify consolidations, anticipate reversals and define correction periods.
 
 ### Interpretation
 The Aroon indicators fluctuate above/below a centerline (50) and are bound between 0 and 100. These three levels are important for interpretation. At its most basic, the bulls have the edge when Aroon-Up is above 50 and Aroon-Down is below 50. This indicates a greater propensity for new x-day highs than lows. The converse is true for a downtrend. The bears have the edge when Aroon-Up is below 50 and Aroon-Down is above 50.
@@ -114,13 +115,13 @@ A surge to 100 indicates that a trend may be emerging. This can be confirmed wit
 ### Usage
 ```cs
 Aroon(int period)
-Aroon(IDataSeries input, int period)
+Aroon(IDataSeries inSeries, int period)
 //For the upper value
 Aroon(int period).Up[int barsAgo]
-Aroon(IDataSeries input, int period).Up[int barsAgo]
+Aroon(IDataSeries inSeries, int period).Up[int barsAgo]
 //For the lower value
 Aroon(int period).Down[int barsAgo]
-Aroon(IDataSeries input, int period).Down[int barsAgo]
+Aroon(IDataSeries inSeries, int period).Down[int barsAgo]
 ```
 
 ### Return value
@@ -129,12 +130,12 @@ Aroon(IDataSeries input, int period).Down[int barsAgo]
 When using this method with an index (e.g. **Aroon**(20)\[**int** barsAgo\] ) the value of the indicator will be displayed for the last referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars taken into consideration when calculating the values
 
 ### Visualization
-![Aroon](./media/image4.png)
+![Aroon](./media/aroon.jpg)
 
 ### Example
 ```cs
@@ -145,7 +146,7 @@ Print("Current value for Aroon Down is: " + Aroon(20).Down[0]);
 
 ## Aroon Oscillator
 ### Description
-The Aroon Oscillator is calculated by subtracting the Aroon Down from the Aroon Up. These two indicators are usually plotted together for easy comparison, but chartists can also view the difference of these two indicators with the Aroon Oscillator. This indicator fluctuates between -100 and +100 with zero as the middle line. A bullish trend bias is present when the oscillator is positive, while a bearish trend bias exists when the oscillator is negative. Chartists can also expand the bull-bear threshold to identify stronger signals.
+This oscillator is calculated by subtracting the Aroon-Down from the Aroon-Up. Usually, these two indicators are plotted next to each other for easy comparison, but traders can also view the difference between the two indicators using the Aroon oscillator, which can fluctuate between -100 and +100, with zero as the middle line. When the oscillator is positive, this indicates a bullish trend bias, whilst when the oscillator is negative, this shows a bearish trend bias. Chartists also have the option to extend the bull-bear threshold to spot stronger signals.
 
 ### Interpretation
 The Aroon Oscillator is ideally used as a trend filter and trend strength indicator. It is used analogously to the ADX Indicator.
@@ -153,9 +154,9 @@ The Aroon Oscillator is ideally used as a trend filter and trend strength indica
 ### Usage
 ```cs
 AroonOscillator(int period)
-AroonOscillator(IDataSeries input, int period)
+AroonOscillator(IDataSeries inSeries, int period)
 AroonOscillator(int period)[int barsAgo]
-AroonOscillator(IDataSeries input, int period)[int barsAgo]
+AroonOscillator(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -164,12 +165,12 @@ AroonOscillator(IDataSeries input, int period)[int barsAgo]
 When using this method with an index such as (**AroonOcsillator**(20)\[**int** barsAgo\] ), the value of the indicator will be outputted for the bar that was referenced.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars taken into consideration for the calculations
 
 ### Visualization
-![Aroon Oscillator](./media/image5.png)
+![Aroon Oscillator](./media/ArronOscillator.jpg)
 
 ### Example
 ```cs
@@ -177,11 +178,12 @@ period Number of bars taken into consideration for the calculations
 Print("Value for the oscillator is: " + AroonOscillator(20)[0]);
 ```
 
-##Average Directional Index (ADX)
+## Average Directional Index (ADX)
 ### Description
-The Average Directional Index (ADX), Minus Directional Indicator (-DI) and Plus Directional Indicator (+DI) represent a group of directional movement indicators that form a trading system developed by Welles Wilder. Wilder designed ADX with commodities and daily prices in mind, but these indicators can also be applied to stocks. The Average Directional Index (ADX) measures trend strength without regard to trend direction. The other two indicators, Plus Directional Indicator (+DI) and Minus Directional Indicator (-DI), complement ADX by defining trend direction. Used together, chartists can determine both the **direction** and **strength** of the trend.
+The ADX is part of a group of directional movement indicators that make up a trading system developed by Welles Wilder: the Average Directional Index, Minus Directional Indicator (-DI) and Plus Directional Indicator (+DI). Wilder designed ADX with daily prices and commodities in mind; however, these indicators can also be applied to stocks. The Average Directional Index measures the trend strength without taking trend direction into account, while the -DI and +DI complement the ADX by defining the trend direction. When used together, traders can find out both the direction and the strength of the trend.
 
-Wilder features the Directional Movement indicators in his 1978 book, [**New Concepts in Technical Trading Systems**]. This book also includes details on Average True Range (ATR), the Parabolic SAR system and [*RSI*]. Despite being developed before the computer age, Wilder's indicators are incredibly detailed in their calculation and have stood the test of time.
+Wilder talks about the Directional Movement indicators in his 1978 book, New Concepts in Technical Trading Systems, which also features details of Average True Range (ATR), the Parabolic SAR system and the RSI. Although he developed them before the computer age, Wilder’s indicators are extremely detailed in their calculation and are still equally effective today.
+
 
 ### Interpretation
 The Average Directional Index (ADX) is used to measure the strength or weakness of a trend, not the actual direction. Directional movement is defined by +DI and -DI. In general, the bulls have the edge when +DI is greater than -DI, while the bears have the edge when -DI is greater. Crosses of these directional indicators can be combined with ADX for a complete trading system.
@@ -194,9 +196,9 @@ It should be kept in mind that Wilder was a commodity and currency trader. The e
 ### Usage
 ```cs
 ADX(int period)
-ADX(IDataSeries input, int period)
+ADX(IDataSeries inSeries, int period)
 ADX(int period)[int barsAgo]
-ADX(IDataSeries input, int period)[int barsAgo]
+ADX(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -205,12 +207,12 @@ ADX(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **ADX**(20)\[**int** barsAgo\] ), the value of the indicator will be outputted for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculation
 
 ### Visualization
-![Average Directional Index (ADX)](./media/image6.png)
+![Average Directional Index (ADX)](./media/ADX.jpg)
 
 ### Example
 ```cs
@@ -218,10 +220,9 @@ period Number of bars included in the calculation
 Print("Value of the ADX: " + ADX(20)[0]);
 ```
 
-##Average Directional Movement Rating (ADXR)
+## Average Directional Movement Rating (ADXR)
 ### Description
-This is the ADX Indicator plus the ADX of n days ago divided by 2.
-(Current ADX + ADX n days ago) / 2
+The ADXR is the ADX indicator plus the ADX from n days ago divided by 2. Written as an equation, it looks like this: (current ADX + ADX n days ago) / 2.
 
 ### Interpretation
 The oscillator moves along a guiding line that typically has a value of 20. When the ADXR rises above 20, a trend exists. If the ADXR is below 20, no trend exists and the market is moving sideways.
@@ -230,9 +231,9 @@ Welles Wilder recommends buying into the market at a value of 25 and higher, and
 ### Usage
 ```cs
 ADXR(int interval, int period)
-ADXR(IDataSeries input, int interval, int period)
+ADXR(IDataSeries inSeries, int interval, int period)
 ADXR(int interval, int period)[int barsAgo]
-ADXR(IDataSeries input, int interval, int period)[int barsAgo]
+ADXR(IDataSeries inSeries, int interval, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -241,14 +242,14 @@ ADXR(IDataSeries input, int interval, int period)[int barsAgo]
 When using this method with an index (e.g. **ADXR**(10, 14)\[**int** barsAgo\]), the value of the indicator will be outputted for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 interval Interval between the first ADX value and the current ADX value
 
 period Number of bars included in the calculation
 
 ### Visualization
-![Average Directional Movement Rating (ADXR)](./media/image7.png)
+![Average Directional Movement Rating (ADXR)](./media/ADXR.jpg)
 
 ### Example
 ```cs
@@ -256,18 +257,19 @@ period Number of bars included in the calculation
 Print("Value of the ADXR: " + ADXR(10, 14)[0]);
 ```
 
-##Average True Range (ATR)
+## Average True Range (ATR)
 ### Description & Interpretation
-Developed by J. Welles Wilder, the Average True Range (ATR) is an indicator that measures [*volatility*]. As with most of his indicators, Wilder designed ATR with commodities and daily prices in mind. Commodities are frequently more volatile than stocks. They are often subject to gaps and limit moves, which occur when a commodity opens up or down its maximum allowed move for the session. A volatility formula based only on the high-low range would fail to capture volatility from gap or limit moves. Wilder created Average True Range to capture this "missing" volatility. It is important to remember that ATR does not provide an indication of price direction, just volatility.
+The Average True Range (ATR), which was developed by J. Welles Wilder, is an indicator that measures volatility. As is true for most of his indicators, Wilder designed the ATR with commodities and daily prices in mind. Commodities are often more volatile than stocks, and frequently experience gaps and limit moves, which happen when a commodity opens up or down its maximum allowed move for the session. A volatility formula that was based on the high-low range only would be unable to capture volatility from gap or limit moves. Wilder, therefore, developed the Average True Range to capture this "missing" volatility. Keep in mind that ATR does not provide an indication of price direction, but merely volatility.
 
-Wilder features ATR in his 1978 book, [**New Concepts in Technical Trading Systems**]. This book also includes the Parabolic SAR, RSI and the Directional Movement Concept (ADX). Despite being developed before the computer age, Wilder's indicators have stood the test of time and remain extremely popular.
+The ATR is featured in Wilder’s 1978 book, New Concepts in Technical Trading Systems, which also goes into detail about the Parabolic SAR, RSI and the Directional Movement Concept (ADX). Despite having been developed before the computer age, Wilder's indicators are equally functional today and remain extremely popular.
 
-Wilder started with a concept called **True Range (TR)**, which is defined as the greatest of the following:
+
+The starting point for Wilder was a concept called **True Range (TR)**, which is defined as the greatest of the following:
 -   Method 1: current high minus the current low
 -   Method 2: current high minus the previous close (absolute value)
 -   Method 3: current Low minus the previous close (absolute value)
 
-Absolute values are used to ensure positive numbers. After all, Wilder was interested in measuring the distance between two points, not the direction. If the current period's high is above the prior period's high and the low is below the prior period's low, then the current period's high-low range will be used as the True Range. This is an outside day that would use method 1 to calculate the TR. This is pretty straightforward. Methods 2 and 3 are used when there is a gap or an inside day. A gap occurs when the previous close is greater than the current high (signaling a potential gap down or limit move) or the previous close is lower than the current low (signaling a potential gap up or limit move). The image below shows examples of when methods 2 and 3 are appropriate.
+Absolute values are used for ensuring positive numbers, since Wilder was interested in measuring the distance between two points, not the direction. If the current period's high is above the prior period's high and the low is below the prior period's low, then the current period's high-low range will be used as the True Range. This is an outside day that would use method 1 to calculate the TR, and is quite straightforward. Methods 2 and 3 are used whenever there is a gap or inside day. A gap occurs when the previous close is greater than the current high (indicating a potential gap down or limit move) or the previous close is lower than the current low (indicating a potential gap up or limit move). The image below shows examples of when methods 2 and 3 are appropriate.
 
 ### Further information
 VTAD: <http://vtadwiki.vtad.de/index.php/Average\_True\_Range>
@@ -275,9 +277,9 @@ VTAD: <http://vtadwiki.vtad.de/index.php/Average\_True\_Range>
 ### Usage
 ```cs
 ATR(int period)
-ATR(IDataSeries input, int period)
+ATR(IDataSeries inSeries, int period)
 ATR(int period)[int barsAgo]
-ATR(IDataSeries input, int period)[int barsAgo]
+ATR(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -286,12 +288,12 @@ ATR(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **ATR**(14)\[**int** barsAgo\] ), the value of the indicator will be outputted for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculation
 
 ### Visualization
-![Average True Range (ATR)](./media/image8.png)
+![Average True Range (ATR)](./media/ATR.jpg)
 
 ### Example
 ```cs
@@ -299,10 +301,57 @@ period Number of bars included in the calculation
 Print("The current ATR value is: " + ATR(14)[0]);
 ```
 
-##Balance of Power (BOP)
+## BBBreakOutSpeed
 ### Description
-The Balance of Power indicator was developed by Igor Livshin in August 2001. The BOP indicator represents the strengths of the buyers (bulls) vs. the sellers (bears). It oscillates between -100 and 100.
-BOP = (close - open) / (high - low)
+Shows the change in the width of the Bollinger Bands in comparison to the width of the Bollinger Bands of the previous bar.
+Negative (red) means that the Bollinger Bands are drawing together. (Larger than SignalSize -> Short, characterized by a more intense red)
+Positive (green) means that the Bollinger Bands are diverging. (Larger than SignalSize -> Long, characterized by a more intense green)
+
+
+### Usage
+```cs
+BBBreakOutSpeed(double bandsDeviation, int bandsPeriod, int signalsize)
+BBBreakOutSpeed(IDataSeries inSeries, double bandsDeviation, int bandsPeriod, int signalsize)
+BBBreakOutSpeed(double bandsDeviation, int bandsPeriod, int signalsize)[int barsAgo]
+BBBreakOutSpeed(IDataSeries inSeries, double bandsDeviation, int bandsPeriod, int signalsize)[int barsAgo]
+```
+
+### Return value
+**double**
+
+When using this method with an index (e.g. **BBBreakOutSpeed**(5)\[**int** barsAgo\] ), the value of the indicator will be outputted for the referenced bar.
+
+### Parameters
+inSeries Input data series for the indicator
+
+bandsDeviation Standard deviation for the Bollinger Bands
+
+bandsPeriod Periods for the Bollinger Bands
+
+signalsize The minimum height of the bar in order for it to produce a signal (long, short)
+
+
+### Visualization
+![BBBreakOutSpeed](./media/BBBreakOutSpeed.jpg)
+
+### Example
+```cs
+//If the width between the Bollinger Bands (standard deviation 2, period 20) has significantly (value > 15) increased in comparison to the previous period, a long position is opened.
+
+if(BBBreakOutSpeed(2, 20, 15).BandWidthEntrySignalBuffer[0] != 0)
+{
+ 	OpenLong("BBBreakOutSpeedLong");
+}
+//If the width between the Bollinger Bands (standard deviation 2, period 20) has significantly (value > 15) decreased in comparison to the previous period, a short position is opened.
+
+if(BBBreakOutSpeed(2, 20, 15).BandWidthExitSignalBuffer[0] != 0)
+{
+ 	OpenShort("BBBreakOutSpeedShort");
+}
+```
+## Balance of Power (BOP)
+### Description
+The developer of the Balance of Power indicator was Igor Livshin, who came up with the BOP in August 2001. The BOP indicator represents the strength of the buyers (bulls) vs. the sellers (bears), and oscillates between -100 and 100. The calculation of the BOP = (close - open) / (high - low).
 
 ### Interpretation
 A directional change of the BOP can be interpreted as a warning signal and will generally be followed by a price change.
@@ -310,9 +359,9 @@ A directional change of the BOP can be interpreted as a warning signal and will 
 ### Usage
 ```cs
 BOP(int smooth)
-BOP(IDataSeries input, int smooth)
+BOP(IDataSeries inSeries, int smooth)
 BOP(int smooth)[int barsAgo]
-BOP(IDataSeries input, int smooth)[int barsAgo]
+BOP(IDataSeries inSeries, int smooth)[int barsAgo]
 ```
 
 ### Return value
@@ -321,12 +370,12 @@ BOP(IDataSeries input, int smooth)[int barsAgo]
 When using this method with an index (e.g. **BOP**(5)\[**int** barsAgo\] ), the value of the indicator will be outputted for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 smooth Settings for the smoothing
 
 ### Visualization
-![Balance of Power (BOP)](./media/image9.png)
+![Balance of Power (BOP)](./media/BOP.jpg)
 
 ### Example
 ```cs
@@ -334,13 +383,12 @@ smooth Settings for the smoothing
 Print("The Balance of Power value is: " + BOP(5));
 ```
 
-##Bollinger Bands
+## Bollinger Bands
 ### Description & Interpretation
-Developed by John Bollinger, Bollinger Bands® are volatility bands placed above and below a moving average. Volatility is based on the [standard deviation], which changes as volatility increases and decreases. The bands automatically widen when volatility increases and narrow when volatility decreases. This dynamic nature of Bollinger Bands also means they can be used on different securities with the standard settings. For signals, Bollinger Bands can be used to identify M-Tops and W-Bottoms or to determine the strength of the trend.
+Bollinger Bands®, which were developed by John Bollinger, are volatility bands that are placed above and below a moving average. The volatility is based on the standard deviation, which fluctuates as volatility increases and decreases. An increase in volatility causes the bands to automatically widen, and a decrease in volatility causes them to automatically narrow. The Bollinger Bands’ dynamic nature means that they can also be used on different securities with the standard settings. When it comes to signals, Bollinger Bands can be used to identify M-Tops and W-Bottoms, or for determining a trend’s strength.
 
-**Bollinger Bands consist of a middle band with two outer bands.** The middle band is a simple moving average that is usually set at 20 periods. A simple moving average is used because the standard deviation formula also uses a simple moving average. The look-back period for the standard deviation is the same as for the simple moving average. The outer bands are usually set 2 standard deviations above and below the middle band. Settings can be adjusted to suit the characteristics of particular securities or trading styles. Bollinger recommends making small incremental adjustments to the standard deviation multiplier. Changing the number of periods for the moving average also affects the number of periods used to calculate the standard deviation. Therefore, only small adjustments are required for the standard deviation **multiplier**. An increase in the moving average period would automatically increase the number of periods used to calculate the standard deviation and would also warrant an increase in the standard deviation **multiplier**. With a 20-day SMA and 20-day Standard Deviation, the standard deviation multiplier is set at 2. Bollinger suggests increasing the standard deviation multiplier to 2.1 for a 50-period SMA and decreasing the standard deviation multiplier to 1.9 for a 10-period SMA.
-
-Bollinger Bands reflect direction with the 20-period SMA and volatility with the upper/lower bands. As such, they can be used to determine if prices are relatively high or low. **According to Bollinger, the bands should contain 88-89% of price action, which makes a move outside the bands significant.** Technically, prices are relatively high when above the upper band and relatively low when below the lower band. However, relatively high should not be regarded as bearish or as a sell signal. Likewise, relatively low should not be considered bullish or as a buy signal. Prices are high or low for a reason. As with other indicators, Bollinger Bands are not meant to be used as a stand-alone tool. Chartists should combine Bollinger Bands with basic trend analysis and other indicators for confirmation. (Source: Stockcharts)
+**Bollinger Bands are made up of a middle band with two outer bands.** The middle band is a simple moving average that is normally set to 20 periods. The reason a simple moving average is used is that the standard deviation formula also uses a simple moving average. The look-back period for the standard deviation is the same as for the simple moving average. The outer bands are generally set 2 standard deviations above and below the middle band, but settings can be adjusted to suit the characteristics of specific securities or trading styles. Bollinger recommends making small, incremental adjustments to the standard deviation multiplier. Changing the number of periods for the moving average also has an effect on the number of periods used to calculate the standard deviation, which is why only small adjustments are required for the standard deviation multiplier. An increase in the moving average period would also automatically increase the number of periods used for calculating the standard deviation, as well as warranting an increase in the standard deviation multiplier. With a 20-day SMA and 20-day Standard Deviation, the standard deviation multiplier is set at 2. Bollinger recommends increasing the standard deviation multiplier to 2.1 for a 50-period SMA and decreasing the standard deviation multiplier to 1.9 for a 10-period SMA.
+**Bollinger Bands reflect direction with the 20-period SMA and volatility with the upper/lower bands**. This means that they can be used to determine whether prices are relatively high or low. Bollinger maintains that the bands should contain 88-89% of price action, rendering a move outside the bands very significant. Technically, prices are relatively high when above the upper band and relatively low when below the lower band. However, relatively high should not be seen as bearish or as a sell signal. Likewise, relatively low should not be regarded as bullish or as a buy signal, since prices are high or low for a reason. As with other indicators, Bollinger Bands are not designed to be used as a stand-alone tool. Traders should combine Bollinger Bands with basic trend analysis and other indicators to confirm a trend.
 
 The calculation is performed in the following manner:
 
@@ -348,23 +396,23 @@ Upper band = middle band + 2 standard deviations
 Middle band = average of 20 periods
 Lower band = middle period – 2 standard deviations
 
-More information can be found here: [*BollingerMTF*], [*Bollinger Percent %B*], [*Bollinger Bands Width*]
+More information can be found here: [*BollingerMTF*](#bollingermtf), [*Bollinger Percent %B*](#bollinger-percent-b-b), [*Bollinger Bands Width*](#bollinger-band-width-bbwidth)
 
 ### Further information
-VTAD: <http://vtadwiki.vtad.de/index.php/Bollinger\_B%C3%A4nder>
+VTAD: [http://vtadwiki.vtad.de/index.php/Bollinger_B%C3%A4nder](http://vtadwiki.vtad.de/index.php/Bollinger_B%C3%A4nder)
 
 Book "Technische Indikatoren - simplified" by Oliver Paesler (German only)
 
 ### Usage
 ```cs
 Bollinger(double numStdDev, int period)
-Bollinger(IDataSeries input, double numStdDev, int period)
+Bollinger(IDataSeries inSeries, double numStdDev, int period)
 //For the upper band
 Bollinger(double numStdDev, int period).Upper[int barsAgo]
-Bollinger(IDataSeries input, double numStdDev, int period).Upper[int barsAgo]
+Bollinger(IDataSeries inSeries, double numStdDev, int period).Upper[int barsAgo]
 //For the lower band
 Bollinger(double numStdDev, int period).Lower[int barsAgo]
-Bollinger(IDataSeries input, double numStdDev, int period).Lower[int barsAgo]
+Bollinger(IDataSeries inSeries, double numStdDev, int period).Lower[int barsAgo]
 ```
 
 ### Return value
@@ -373,14 +421,14 @@ Bollinger(IDataSeries input, double numStdDev, int period).Lower[int barsAgo]
 When using this method with an index (e.g. **Bollinger**(2, 20)\[**int** barsAgo\] ), the value of the indicator will be displayed for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 numStdDev Standard deviation
 
 period Number of bars included in the calculation
 
 ### Visualization
-![Bollinger Bands](./media/image10.png)
+![Bollinger Bands](./media/BollingerBands.jpg)
 
 ### Example
 ```cs
@@ -392,38 +440,31 @@ Print("Value of the middle band: " + Bollinger(2, 20)[0]);
 Print("Value of the lower band: " + Bollinger(2, 20).Lower[0]);
 ```
 
-##Bollinger Percent B (%b)
+## Bollinger Percent B (%b)
 ### Description
-Bollinger %b is an important indicator derived from John Bollinger's original Bollinger Bands indicator. %b depicts the location of the most recent close price in relation to the Bollinger Bands as well as to what degree it is above or below any of the bands.
-The Bollinger Percent B equation can be constructed as:
-Percent B = ((Close - Bollinger Lower Band) / (Bollinger Upper Band - Bollinger Lower Band))\*100
-If the close price is equal to the upper Bollinger Band, %b will be 100 (percent). If the close price is equal to the lower Bollinger Band, %b will be 0.0 (percent). A %b value of 50 means the close price is equal to the middle Bollinger Band.
-Furthermore, readings above 100 and below 0 indicate that the close price is outside of the Bollinger Bands by a corresponding percentage of the Bollinger Bandwidth. A %b value of 125 means that the close price is above the upper Bollinger Band by 25% of the Bandwidth. A %b value of -25 means that the close price is below the lower Bollinger Band by 25% of the Bandwidth.
+Bollinger %b is an important indicator that is derived from John Bollinger's original Bollinger Bands indicator. %b represents the location of the most recent close price in relation to the Bollinger Bands as well as to what degree it is above or below any of the bands. The Bollinger Percent B equation can be constructed in the following way: Percent B = ((Close - Bollinger Lower Band) / (Bollinger Upper Band - Bollinger Lower Band)) * 100. If the close price is the same as the upper Bollinger Band, %b will be 100 (percent). If the close price is the same as the lower Bollinger Band, %b will be 0.0 (percent). A %b value of 50 indicates that the close price is equal to the middle Bollinger Band. What is more, readings above 100 and below 0 show that the close price is outside of the Bollinger Bands by a corresponding percentage of the Bollinger Bandwidth. A %b value of 125 means that the close price is above the upper Bollinger Band by 25% of the Bandwidth, while a %b value of -25 means that the close price is below the lower Bollinger Band by 25% of the Bandwidth.
 
-See [*Bollinger Bands*], [*BBWidth*][*Bollinger Bands Width*]
+See [*Bollinger Bands*](#bollingerbands), [*BBWidth*](#bbwidth)
 
 **An additional application: normalizing indicators**
 
-Bollinger bands and thus the %b indicator can be applied not only to the prices of stocks, futures etc. but also to time series with fundamental data, volume data and other indicators. This is especially interesting when you need to know if a value is relatively high or low; in this case, the %b indicator will offer you a different perspective. If you want to know whether the volume of a stock is exceedingly high or low you can simply apply it to the volume data.
-John Bollinger sees the application of the %b onto other indicators as one of the most important aspects of the indicator. If you want to normalize an indicator with %b, it is important to first calculate the indicator (e.g. the RSI) using the %b for the calculation of the indicator instead of the price data. The application of the %b essentially unfolds in the same manner as the application of Bollinger bands onto the indicator itself. The intersection points between the bands and the indicators will thus be 1 and 0. Essentially, the relative position of the original indicator will be displayed in relation to its upper and lower bands. Thus the boundaries of the original indicator will be removed.
-John Bollinger himself wrote that: “You’re defining a high or low point on a relative basis, this may allow you to gain a deeper insight and understanding not provided by traditional indicators and guidelines.”
-John Bollinger provides several parameters for the %b calculation, such as 40-day periods and a factor of 2.0 for a 9-day RSI, and a 50-day period with a factor of 2.1 for the calculation of %b.
+Bollinger bands, and therefore the %b indicator, can be applied not only to the prices of stocks, futures etc., but also to time series with fundamental data, volume data and other indicators. This is particularly interesting when you need to know whether a value is relatively high or low – in this case, the %b indicator offers you a different perspective. If you wish to find out whether the volume of a stock is exceedingly high or low, you can simply apply it to the volume data. John Bollinger regards the application of the %b onto other indicators as one of the most important aspects of the indicator. If you wish to normalize an indicator with %b, it is important to first calculate the indicator (e.g. the RSI) with the help of the %b for the calculation of the indicator instead of the price data. The application of the %b essentially works in the same way as the application of Bollinger bands onto the indicator itself. The intersection points between the bands and the indicators will therefore be 1 and 0. In principle, the relative position of the original indicator is displayed in relation to its upper and lower bands. This means that the boundaries of the original indicator will be removed. John Bollinger himself wrote: “You’re defining a high or low point on a relative basis, this may allow you to gain a deeper insight and understanding not provided by traditional indicators and guidelines.” John Bollinger provides several parameters for the %b calculation, such as 40-day periods and a factor of 2.0 for a 9-day RSI, and a 50-day period with a factor of 2.1 for the calculation of %b.
 
 (Sources: Oliver Paesler: "Technische Indikatoren - simplified" and John Bollinger: "Bollinger Bänder")
 
-(Source: [*tradesignalonline*])
+(Source: *tradesignalonline*)
 
 ### Further information
-VTAD: <http://vtadwiki.vtad.de/index.php/Bollinger\_B%C3%A4nder>
+VTAD: [http://vtadwiki.vtad.de/index.php/Bollinger_B%C3%A4nder](http://vtadwiki.vtad.de/index.php/Bollinger_B%C3%A4nder)
 
 Book "Technische Indikatoren - simplified" by Oliver Paesler (German only)
 
 ### Usage
 ```cs
 BollingerPercentB(int period, double numStdDev)
-BollingerPercentB(IDataSeries input, int period, double numStdDev)
+BollingerPercentB(IDataSeries inSeries, int period, double numStdDev)
 BollingerPercentB(int period, double numStdDev) [int barsAgo]
-BollingerPercentB(IDataSeries input, int period, double numStdDev)[int barsAgo]
+BollingerPercentB(IDataSeries inSeries, int period, double numStdDev)[int barsAgo]
 ```
 
 ### Return value
@@ -432,52 +473,53 @@ BollingerPercentB(IDataSeries input, int period, double numStdDev)[int barsAgo]
 When using this method with an index (e.g. **BollingerPercentB**(20, 2)\[**int** barsAgo\] ), the value of the indicator will be outputted for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculation
 
 numStdDev Standard deviation
 
 ### Visualization
-![Bollinger Percent B (%b)](./media/image11.png)
+![Bollinger Percent B (%b)](./media/BollingerPercentB.jpg)
 
 ### Example
+```cs
 //Output for the value of Bollinger %B
+Print("Value of the Bollinger Percent B is: " + BollingerPercentB(20, 2)[0]);
+```
 
-**Print**("Value of the Bollinger Percent B is: " + **BollingerPercentB**(20, 2)\[0\]);
-
-##Bollinger Band Width (BBWidth)
+## Bollinger Band Width (BBWidth)
 ### Description
-Bollinger Band Width is an indicator derived from Bollinger Bands. In his book, *Bollinger on Bollinger Bands*, John Bollinger refers to Bollinger Band Width as one of two indicators that can be derived from Bollinger Bands. The other indicator is %B.
+This indicator is derived from Bollinger Bands. John Bollinger refers to Bollinger Band Width as one of two indicators that one can derive from Bollinger Bands; the other indicator is %B.
+The Band Width measures the percentage difference between the upper and the lower band. It decreases as Bollinger Bands narrow, and increases as they widen. Since Bollinger Bands are based on the standard deviation, falling Band Width reflects decreasing volatility and rising Band Width reflects the opposite.
 
-Band Width measures the percentage difference between the upper band and the lower band. Band Width decreases as Bollinger Bands narrow and increases as Bollinger Bands widen. Because Bollinger Bands are based on the standard deviation, falling Band Width reflects decreasing volatility and rising Band Width reflects increasing volatility.
 
 ### Interpretation
 John Bollinger uses the Band Width to recognize rising and falling trends. Most trends have their origins within sideway market movements that generally have a low volatility. If a breakout is accompanied by a sudden rise in the Band Width, this means that there is definite support for the move.
 
 ### Further information
-VTAD: <http://vtadwiki.vtad.de/index.php/Bollinger\_B%C3%A4nder>
+VTAD: [*http://vtadwiki.vtad.de/index.php/Bollinger\_B%C3%A4nder*](http://vtadwiki.vtad.de/index.php/Bollinger_B%C3%A4nder)
 
 Book "Technische Indikatoren - simplified" by Oliver Paesler (German only)
 
 ### Usage
 ```cs
 BBWidth(double numStdDev, int period)
-BBWidth(IDataSeries input, double numStdDev, int period)
+BBWidth(IDataSeries inSeries, double numStdDev, int period)
 BBWidth(double numStdDev, int period)[int barsAgo]
-BBWidth(IDataSeries input, double numStdDev, int period)[int barsAgo]
+BBWidth(IDataSeries inSeries, double numStdDev, int period)[int barsAgo]
 
 //For the value of the upper Band Width
 BBWidth(double numStdDev, int period).BandWidth
-BBWidth(IDataSeries input, double numStdDev, int period).BandWidth
+BBWidth(IDataSeries inSeries, double numStdDev, int period).BandWidth
 BBWidth(double numStdDev, int period).BandWidth[int barsAgo]
-BBWidth(IDataSeries input, double numStdDev, int period).BandWidth[int barsAgo]
+BBWidth(IDataSeries inSeries, double numStdDev, int period).BandWidth[int barsAgo]
 
 //For the value of the trigger line (threshold)
 BBWidth(double numStdDev, int period).Threshold
-BBWidth(IDataSeries input, double numStdDev, int period).Threshold
+BBWidth(IDataSeries inSeries, double numStdDev, int period).Threshold
 BBWidth(double numStdDev, int period).Threshold[int barsAgo]
-BBWidth(IDataSeries input, double numStdDev, int period).Threshold[int barsAgo]
+BBWidth(IDataSeries inSeries, double numStdDev, int period).Threshold[int barsAgo]
 ```
 
 ### Return value
@@ -486,14 +528,14 @@ BBWidth(IDataSeries input, double numStdDev, int period).Threshold[int barsAgo]
 When using the method with an index (e.g. **BBWidth**(2, 20)\[**int** barsAgo\] ), the value of the indicator will be outputted for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculation
 
 numStdDev Standard deviation
 
 ### Visualization
-![Bollinger Band Width (BBWidth)](./media/image12.png)
+![Bollinger Band Width (BBWidth)](./media/BBWidth.jpg)
 
 ### Example
 ```cs
@@ -503,39 +545,38 @@ Print("The value of the Bollinger Band Width is: " + BBWidth(2, 20).BandWidth[0]
 Print("The value of the signal line is: " + BBWidth(2, 20).Threshold[0]);
 ```
 
-##Bollinger MTF (MultiTimeFrame)
+## Bollinger MTF (MultiTimeFrame)
 ### Description
-This is the multi-timeframe version of the Bollinger Bands. Its primary use is for intraday trading. Multi-timeframe means that the indicator is calculated in a different timeframe than that displayed in the chart. Displaying an hourly Bollinger band on a 5-minute timeframe would not be possible with the standard Bollinger band indicator. This is where the MTF comes into play.
-BollingerMTF can only be used for display in the chart and cannot be applied/implemented in AgenaScript.
+The Bollinger MTF is the multi-timeframe version of the Bollinger Bands, and its main use is in intraday trading. Multi-timeframe means that the indicator is calculated in a separate timeframe than that which is displayed in the chart. With the standard Bollinger band indicator, displaying an hourly Bollinger band in a 5-minute timeframe would not be possible – this is the point at which the MTF becomes useful. BollingerMTF can only be used for display in the chart and cannot be applied/implemented in AgenaScript.
 
 ### Visualization
 The image shows a 5-minute chart with a 60-minute Bollinger band
 
-![Bollinger MTF (MultiTimeFrame)](./media/image13.png)
+![Bollinger MTF (MultiTimeFrame)](./media/BollingerMTF.jpg)
 
-##BuySellPressure
+## BuySellPressure
 ### Description
-The BuySellPressure indicator shows the buy or sell pressure for the current bar. In addition, these trades are classified as “buy” or “sell”. For this classification, a “buy” is assumed whenever the transaction has occurred at or above the ask. Inside trades are ignored.
+The BuySellPressure indicator displays the buy or sell pressure for the current bar. Furthermore, these trades are classified as "buy" or “sell”. For this classification, a "buy" is assumed any time the transaction has occurred at or above the ask. Inside trades are not taken into account.
 
 **Caution:
 This is a real-time indicator. It will only work on and with real-time data and cannot therefore be used for historical information.**
 
 **When the properties dialog for the indicator is open and changes are made, then the indicator must be reloaded. Doing so will delete all previously accumulated data.**
 
-See [*BuySellVolume*].
+See [*BuySellVolume*](#buysellvolume).
 
 ### Usage
 ```cs
 BuySellPressure()
-BuySellPressure(IDataSeries input)
+BuySellPressure(IDataSeries inSeries)
 
 //For the values of buy pressure
 BuySellPressure().BuyPressure[int barsAgo]
-BuySellPressure(IDataSeries input).BuyPressure[int barsAgo]
+BuySellPressure(IDataSeries inSeries).BuyPressure[int barsAgo]
 
 //For the values of sell Pressure
 BuySellPressure().SellPressure[int barsAgo]
-BuySellPressure(IDataSeries input).SellPressure[int barsAgo]
+BuySellPressure(IDataSeries inSeries).SellPressure[int barsAgo]
 ```
 
 ### Return value
@@ -545,44 +586,44 @@ When using this method with an index (e.g. **BuySellPressure**().BuyPressure\[**
 
 **Caution:**
 **If BuySellPressure is used with EoD data, the value 50 will always be outputted.**
-- BuySellPressure().SellPressure\[0\] = 50
-- BuySellPressure().SellPressure\[0\] = 50
+-   BuySellPressure().SellPressure\[0\] = 50
+-   BuySellPressure().SellPressure\[0\] = 50
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 ### Visualization
-![BuySellPressure](./media/image14.png)
+![BuySellPressure](./media/BuySellPressure.jpg)
 
 ### Example
 ```cs
-protected override void Initialize()
+protected override void OnInit()
 {
-  BuySellPressure().CalculateOnBarClose = false;
+  BuySellPressure().CalculateOnClosedBar = false;
 }
 
-protected override void OnBarUpdate()
+protected override void OnCalculate()
 {
   if (Close[0] > DonchianChannel(20).Upper[5])
   {
-    if (Historical || BuySellPressure().BuyPressure[0] > 70)
-    EnterLong();
+    if (IsHistoricalMode || BuySellPressure().BuyPressure[0] > 70)
+    OpenLong();
   }
 }
 ```
 
-##BuySellVolume
+## BuySellVolume
 ### Description
-The BuySellVolume indicator shows the current buy or sell pressure based on the volume. For this, trades are classified as “buy” or “sell”. For this classification, a “buy” is assumed whenever the transaction is executed at or above the ask. A transaction at or below the bid is deemed a “sell”.
+This indicator shows us the current buy or sell pressure based on the volume. For this, trades are classified as "buy" or "sell", whereby for the classification, a "buy" is assumed any time the transaction is executed at or above the ask. A transaction at or below the bid is considered a "sell".
 
 **Caution: This is a real-time indicator and will not work with historical data.**
 
-Similar conditions as with the [*BuySellPressure*] apply.
+Similar conditions as with the [*BuySellPressure*](#buysellpressure) apply.
 
 ### Usage
 ```cs
 BuySellVolume BuySellVolume()
-BuySellVolume BuySellVolume(IDataSeries input)
+BuySellVolume BuySellVolume(IDataSeries inSeries)
 ```
 
 ### Return value
@@ -591,7 +632,7 @@ BuySellVolume BuySellVolume(IDataSeries input)
 When using this method with an index (e.g. **BuySellVolume**().BuyVolume\[**int** barsAgo\] ), the value of the indicator will be outputted for the referenced bar.
 
 ### Parameter
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 ### Visualization
 ![BuySellVolume](./media/image15.png)
@@ -602,20 +643,22 @@ input Input data series for the indicator
 Print("The BuySellVolume is: " + BuySellVolume()[0]);
 ```
 
-##CandleStickPattern
+## CandleStickPattern
 ### Description
-This indicator searches for specific candlestick formations.
+The CandleStickPattern indicator looks for specific candlestick formations.
+
 
 ### Further information
-Explanations of the formations and their interpretations can be found here:
-<http://en.wikipedia.org/wiki/Candlestick\_pattern>
+Explanations of the formations and their interpretations can be found here: [http://en.wikipedia.org/wiki/Candlestick_pattern](http://en.wikipedia.org/wiki/Candlestick_pattern)
 
 ### Usage
 ```cs
+
 CandleStickPattern(CandleStickPattern pattern, int trendStrength)
 CandleStickPattern(IDataSeries input, CandleStickPattern pattern, int trendStrength)
 CandleStickPattern(CandleStickPattern pattern, int trendStrength)[int barsAgo]
 CandleStickPattern(IDataSeries input, CandleStickPattern pattern, int trendStrength)[int barsAgo]
+
 ```
 
 ### Return value
@@ -629,8 +672,7 @@ When using this method with an index (e.g. **CandleStickPattern**(...)\[**int** 
 ### Parameters
 |               |                                                                                                                                                                                                                    |
 |---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| input         | Input data series for the indicator
-|
+| InSeries      | Input data series for the indicator|
 | pattern       | Possible values are:
 				CandleStickPattern.BearishBeltHold
                  CandleStickPattern.BearishEngulfing
@@ -645,22 +687,23 @@ When using this method with an index (e.g. **CandleStickPattern**(...)\[**int** 
                 CandleStickPattern.DownsideTasukiGap
                 CandleStickPattern.EveningStar
                 CandleStickPattern.FallingThreeMethods
-                ChartPattern.Hammer
-                ChartPattern.HangingMan
-                ChartPattern.InvertedHammer
-                ChartPattern.MorningStart
-                ChartPattern.PiercingLine
-                ChartPattern.RisingThreeMethods
-                ChartPattern.ShootingStar
-                ChartPattern.StickSandwich
-                ChartPattern.ThreeBlackCrows
-                ChartPattern.ThreeWhiteSoldiers
-                ChartPattern.UpsideGapTwoCrows
-                ChartPattern.UpsideTasukiGap   |
+                CandleStickPattern.Hammer
+                CandleStickPattern.HangingMan
+                CandleStickPattern.InvertedHammer
+                CandleStickPattern.MorningStart
+                CandleStickPattern.PiercingLine
+                CandleStickPattern.RisingThreeMethods
+                CandleStickPattern.ShootingStar
+                CandleStickPattern.StickSandwich
+                CandleStickPattern.ThreeBlackCrows
+                CandleStickPattern.ThreeWhiteSoldiers
+                CandleStickPattern.UpsideGapTwoCrows
+                CandleStickPattern.UpsideTasukiGap   |
+| pattern       | Possible values are: CandleStickPattern.BearishBeltHold, CandleStickPattern.BearishEngulfing, ChartPattern.BearishHarami, ChartPattern.BearishHaramiCross, ChartPattern.BullishBeltHold ChartPattern.BullishEngulfing,  ChartPattern.BullishHarami,  ChartPattern.BullishHaramiCross,  ChartPattern.DarkCloudCover, ChartPattern.Doji,ChartPattern.DownsideTasukiGapChartPattern.EveningStar,  ChartPattern.FallingThreeMethods,  ChartPattern.Hammer,  ChartPattern.HangingMan,  ChartPattern.InvertedHammer,  ChartPattern.MorningStart  ChartPattern.PiercingLine,  ChartPattern.RisingThreeMethods,  ChartPattern.ShootingStar,  ChartPattern.StickSandwich,ChartPattern.ThreeBlackCrows,ChartPattern.ThreeWhiteSoldiers, ChartPattern.UpsideGapTwoCrows,  ChartPattern.UpsideTasukiGap    |
 | trendStrength | Signifies the number of bars to the left and right of the swing high or swing low that are used to identify a trend. The value 0 turns off the search, meaning that the only thing searched for is chart patterns. |
 
 ### Visualization
-![CandleStickPattern](./media/image16.png)
+![CandleStickPattern](./media/CandleStickPattern.jpg)
 
 ### Example
 ```cs
@@ -668,9 +711,9 @@ if (CandelStickPattern(CandleStickPattern.ShootingStar, 5)[0] == 1)
 Print("Pattern ShootingStar found!");
 ```
 
-##ChaikinMoneyFlow (CMF)
+## ChaikinMoneyFlow (CMF)
 ### Description
-The Chaikin Money Flow Index was developed by Marc Chaikin. It is a volume indicator that attempts to answer the following question: Where does the money flow into? Into the stock = accumulation, and out of the stock = distribution. Obviously, this applies not only to stocks/shares but also to other instruments. Chaikin attempts to expand on and improve the On-Balance Volume created by Granville. With the CMF, the position of the closing price within the trading range is placed in relation to the volume. Basically, this means that the trading volume is multiplied by the price. The trading volume shows the amount of money that has “flowed” into the stock or has been “removed”; the indicator merely displays whether it has been accumulated (buying pressure) or has been removed (distribution). (Source: VTAD)
+Marc Chaikin was the one to develop the Chaikin Money Flow Index, which is a volume indicator that tries to find an answer to the following question: Where is the money flowing into? Into the stock = accumulation, and out of the stock = distribution. Clearly, this applies not only to stocks/shares but also to other instruments. With this, Chaikin attempts to expand on and improve the On-Balance Volume that was developed by Granville. Using the CMF, the position of the closing price within the trading range is placed in relation to the volume. What this essentially means is that the trading volume is multiplied by the price. The trading volume displays the amount of money that has “flowed” into the stock or has been “removed” from the stock; the indicator simply displays whether it has been accumulated (buying pressure) or removed (distribution).
 
 ### Interpretation
 The CMF oscillates around the zero line and is shown in a separate window with an open scale. Should the CMF be located above the zero line, then it can be interpreted as accumulation. If higher highs are being created, then the buying pressure is increasing. The reverse is true for the selling pressure. The Chaikin Money Flow should always be used in combination with other methods of technical analysis.
@@ -681,9 +724,9 @@ VTAD: <http://vtadwiki.vtad.de/index.php/Chaikin\_Money\_Flow>
 ### Usage
 ```cs
 ChaikinMoneyFlow(int period)
-ChaikinMoneyFlow(IDataSeries input, int period)
+ChaikinMoneyFlow(IDataSeries inSeries, int period)
 ChaikinMoneyFlow(int period)[int barsAgo]
-ChaikinMoneyFlow(IDataSeries input, int period)[int barsAgo]
+ChaikinMoneyFlow(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -692,12 +735,12 @@ ChaikinMoneyFlow(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **ChaikinMoneyFlow**(21)\[**int** barsAgo\] ), the value of the indicator will be outputted for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculation
 
 ### Visualization
-![ChaikinMoneyFlow (CMF)](./media/image17.png)
+![ChaikinMoneyFlow (CMF)](./media/ChaikinMoneyFlow.jpg)
 
 ### Example
 ```cs
@@ -705,9 +748,9 @@ period Number of bars included in the calculation
 Print("The Chaikin Money Flow value is: " + ChaikinMoneyFlow(21)[0]);
 ```
 
-##Chaikin Oscillator
+## Chaikin Oscillator
 ### Description
-The Chaikin Oscillator is a volume indicator that shows if new highs are accompanied by new volumes. The Chaikin Oscillator is a simple MACD applied to the accumulation/distribution line. What is calculated is the difference between a 3-day exponential moving average and a 10-day exponential smoothed average for the accumulation/distribution line.
+The Chaikin Oscillator is a volume indicator that lets the trader know whether new highs are also accompanied by new volumes. This oscillator is a simple MACD that is applied to the accumulation/distribution line. Hereby, the difference between a 3-day exponential moving average and a 10-day exponential smoothed average for the accumulation/distribution line is calculated.
 
 ### Interpretation
 The interpretation of the Chaikin Oscillator is similar to the principle of the accumulation/distribution. All an oscillator does is show the changes in liquidity for the instrument.
@@ -715,9 +758,9 @@ The interpretation of the Chaikin Oscillator is similar to the principle of the 
 ### Usage
 ```cs
 ChaikinOscillator(int fast, int slow)
-ChaikinOscillator(IDataSeries input, int fast, int slow)
+ChaikinOscillator(IDataSeries inSeries, int fast, int slow)
 ChaikinOscillator(int fast, int slow)[int barsAgo]
-ChaikinOscillator(IDataSeries input, int fast, int slow)[int barsAgo]
+ChaikinOscillator(IDataSeries inSeries, int fast, int slow)[int barsAgo]
 ```
 
 ### Return value
@@ -726,14 +769,14 @@ ChaikinOscillator(IDataSeries input, int fast, int slow)[int barsAgo]
 When using this method with an index (e.g. **ChaikinOscillator**(3, 10)\[**int** barsAgo\] ), the value of the indicator will be outputted for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 fast Number of bars included in the calculation for the fast EMA
 
 slow Number of bars included in the calculation for the slow EMA
 
 ### Visualization
-![Chaikin Oscillator](./media/image18.png)
+![Chaikin Oscillator](./media/ChaikinOscillator.jpg)
 
 ### Example
 ```cs
@@ -741,10 +784,9 @@ slow Number of bars included in the calculation for the slow EMA
 Print("The Chaikin Oscillator value is: " + ChaikinOscillator(3, 10)[0]);
 ```
 
-##ChaikinVolatility (CVL)
+## ChaikinVolatility (CVL)
 ### Description
-The Chaikin Volatility Indicator is one of several indicators that attempt to measure the fluctuations of price movements.
-Chaikin uses the daily price range (daily high minus daily low) as the fundamental measure of volatility. It is implied that a widening range is associated with a higher volatility.
+The Chaikin Volatility Indicator is one of a few indicators that are designed to try and measure price movement fluctuations. Chaikin takes the daily price range (daily high minus daily low) as the fundamental measure of volatility. With this indicator, a widening range is, by implication, associated with a higher volatility.
 
 ### Interpretation
 The indicator oscillates around the zero line and fluctuates between a scale of +100 to -100. It can be used on a daily chart as well as on a weekly or monthly chart. All values above the zero line represent rising volatility, and the gradient of the rise implies the seriousness of potential floors forming. The Chaikin Volatility is not specifically used to define exact signals, but is considered as more of an assisting tool in the trading system.
@@ -752,9 +794,9 @@ The indicator oscillates around the zero line and fluctuates between a scale of 
 ### Usage
 ```cs
 ChaikinVolatility(int fast, int slow)
-ChaikinVolatility(IDataSeries input, int fast, int slow)
+ChaikinVolatility(IDataSeries inSeries, int fast, int slow)
 ChaikinVolatility(int fast, int slow)[int barsAgo]
-ChaikinVolatility(IDataSeries input, int fast, int slow)[int barsAgo]
+ChaikinVolatility(IDataSeries inSeries, int fast, int slow)[int barsAgo]
 ```
 
 ### Return value
@@ -763,12 +805,12 @@ ChaikinVolatility(IDataSeries input, int fast, int slow)[int barsAgo]
 When using this method with an index (e.g. **ChaikinVolatility**(14)\[**int** barsAgo\] ), the value of the indicator will be outputted for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![ChaikinVolatility (CVL)](./media/image19.png)
+![ChaikinVolatility (CVL)](./media/ChaikinVolatility.jpg)
 
 ### Example
 ```cs
@@ -776,9 +818,9 @@ period Number of bars included in the calculations
 Print("The value of the Chaikin Volatility is: " + ChaikinVolatility(14)[0]);
 ```
 
-##Chande Momentum Oscillator (CMO)
+## Chande Momentum Oscillator (CMO)
 ### Description
-The CMO is a technical momentum indicator invented by the technical analyst Tushar Chande. It is created by calculating the difference between the sum of all recent gains and the sum of all recent losses and then dividing the result by the sum of all price movement over the period. This oscillator is similar to other momentum indicators such as the Relative Strength Index and the Stochastic Oscillator, since it is also range-bound (+100 and -100).
+The CMO is one of several indicators created by the technical analyst Tushar Chande; it is a technical momentum indicator. This indicator arises from calculating the difference between the total of all recent gains and the total of all recent losses, and then dividing this result by the total of all price movement over the given period. This oscillator shares similarities with other momentum indicators such as the Relative Strength Index and the Stochastic Oscillator, because it is also range-bound (+100 and -100).
 
 ### Interpretation
 **The security is deemed overbought when the momentum oscillator is above +50 and oversold when it is below -50. Many technical traders add a nine-period moving average to this oscillator to act as a signal line. Bullish signals are generated when the oscillator crosses above the signal, and bearish signals are generated when the oscillator crosses down through the signal.**
@@ -789,9 +831,9 @@ The CMO is a technical momentum indicator invented by the technical analyst Tush
 ### Usage
 ```cs
 CMO(int period)
-CMO(IDataSeries input, int period)
+CMO(IDataSeries inSeries, int period)
 CMO(int period)[int barsAgo]
-CMO(IDataSeries input, int period)[int barsAgo]
+CMO(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -800,39 +842,99 @@ CMO(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **CMO**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![Chande Momentum Oscillator (CMO)](./media/image20.png)
+![Chande Momentum Oscillator (CMO)](./media/CMO.jpg)
 
 ### Example
 ```cs
 //Output for the value of the Chande Momentum Oscillator
 Print("The current value for the Chande Momentum Oscillator is: " + CMO(14)[0]);
 ```
-
-##Commodity Channel Index (CCI)
+## Climactic Distance
 ### Description
-Developed by Donald Lambert and featured in *Commodities* magazine in 1980, the Commodity Channel Index (CCI) is a versatile indicator that can be used to identify a new trend or warn of extreme conditions. Lambert originally developed CCI to identify cyclical turns in commodities, but the indicator can also be successfully applied to indices, ETFs, stocks and other securities. In general, CCI measures the current price level relative to an [*average*] price level over a given period of time. CCI is relatively high when prices are far above their average. CCI is relatively low when prices are far below their average. In this manner, CCI can be used to identify overbought and oversold levels.
+The Climactic Distance indicator was invented and developed by Gilbert Kreuzthaler, CEO of Include IT GmbH and founder of AgenaTrader.com. This indicator is used in the Location Point Trading system. It calculates the median course of the current and historical candle at a distance to the simple moving average (SMA) of the last 20 periods. Additionally, it also measures the average course deviation within the last 80 periods. If the median course exceeds the top or bottom course deviation, the market is deemed climactic, and this influences the trading decisions made in Location Point Trading.
+
+### Calcualtion
+Black line in the middle: SMA 20
+Green moving line: Median Kurs
+Red upper and lower line: Average course deviation oft he last 80 periods.
+
+### More information
+[https://www.facebook.com/Location-Point-Trading-344217482287592/?fref=ts](https://www.facebook.com/Location-Point-Trading-344217482287592/?fref=ts)
+
+### Usage
+```cs
+ClimacticDistance(int sMAPeriod, int thresholdPercent)
+ClimacticDistance(IDataSeries InSeries, int sMAPeriod, int thresholdPercent)
+ClimacticDistance(int period, int tresholdPercent, Color climacticColor)
+ClimacticDistance(IDataSeries InSeries, int sMAPeriod, int thresholdPercent, Color climacticColor)
+//Upper band
+ClimacticDistance(int sMAPeriod, int thresholdPercent).Upper[int barsAgo]
+ClimacticDistance(IDataSeries InSeries, int sMAPeriod, int thresholdPercent).Upper[int barsAgo]
+ClimacticDistance(int period, int tresholdPercent, Color climacticColor).Upper[int barsAgo]
+ClimacticDistance(IDataSeries InSeries, int sMAPeriod, int thresholdPercent, Color climacticColor).Upper[int barsAgo]
+//Lower band
+ClimacticDistance(int sMAPeriod, int thresholdPercent).Lower[int barsAgo]
+ClimacticDistance(IDataSeries InSeries, int sMAPeriod, int thresholdPercent).Lower[int barsAgo]
+ClimacticDistance(int period, int tresholdPercent, Color climacticColor).Lower[int barsAgo]
+ClimacticDistance(IDataSeries InSeries, int sMAPeriod, int thresholdPercent, Color climacticColor).Lower[int barsAgo]
+
+//MovingAverage
+ClimacticDistance(int sMAPeriod, int thresholdPercent).MovingAverage[int barsAgo]
+ClimacticDistance(IDataSeries InSeries, int sMAPeriod, int thresholdPercent).MovingAverage[int barsAgo]
+ClimacticDistance(int period, int tresholdPercent, Color climacticColor).MovingAverage[int barsAgo]
+ClimacticDistance(IDataSeries InSeries, int sMAPeriod, int thresholdPercent, Color climacticColor).MovingAverage[int barsAgo]
+//Distance
+ClimacticDistance(int sMAPeriod, int thresholdPercent).Distance[int barsAgo]
+ClimacticDistance(IDataSeries InSeries, int sMAPeriod, int thresholdPercent).Distance[int barsAgo]
+ClimacticDistance(int period, int tresholdPercent, Color climacticColor).Distance[int barsAgo]
+ClimacticDistance(IDataSeries InSeries, int sMAPeriod, int thresholdPercent, Color climacticColor).Distance[int barsAgo]
+```
+### Return value
+**double**
+
+### Parameters
+Int
+
+### Visualization
+![Climactic Distance](./media/ClimacticDistance.jpg)
+
+### Example
+```cs
+//Output of the value for the Upper climactic distance line
+Print(“Value of the upper band: “ + ClimacticDistnance(20, 80).Upper[0]);
+//Output of the value for the Lower climactic distance line
+Print(“Value of the upper band: “ + ClimacticDistnance(20, 80).Lower[0]);
+//Output of the value for the Distance climactic distance line
+Print(“Value of the upper band: “ + ClimacticDistnance(20, 80).Distance[0]);
+//Output of the value for the Moving Average climactic distance line
+Print(“Value of the upper band: “ + ClimacticDistnance(20, 80).MovingAverage[0]);
+```
+
+## Commodity Channel Index (CCI)
+### Description
+The Commodity Channel Index (CCI), which was created by Donald Lambert and actually featured in Commodities magazine in 1980, is a versatile indicator that can be used for identifying a new trend or as a warning of extreme conditions. Lambert originally developed the CCI as a means to identify cyclical turns in commodities – however, the indicator can also successfully be applied to ETFs, indices, stocks and various other securities. In general, what CCI does is to measure the current price level relative to an average price level over a specified period of time. When prices are well above their average, CCI is relatively high. When prices are far below their average, CCI is relatively low. This is how CCI can be used for identifying overbought and oversold levels.
 
 ### Interpretation
-CCI measures the difference between a security's price change and its average price change. High positive readings indicate that prices are well above their average, which is a show of strength. Low negative readings indicate that prices are well below their average, which is a show of weakness.
+CCI measures the difference between a securitys price change and its average price change. High positive readings indicate that prices are well above their average, which is a show of strength. Low negative readings indicate that prices are well below their average, which is a show of weakness.
 
 The Commodity Channel Index (CCI) can be used as either a coincident or leading indicator. As a coincident indicator, surges above +100 reflect strong price action that can signal the start of an uptrend. Plunges below -100 reflect weak price action that can signal the start of a downtrend.
 
-As a [*leading indicator*][momentum oscillators], chartists can look for overbought or oversold conditions that may foreshadow a mean reversion. Similarly, bullish and bearish divergences can be used to detect early momentum shifts and anticipate trend reversals.
+As a *leading indicator*, *momentum oscillators*, chartists can look for overbought or oversold conditions that may foreshadow a mean reversion. Similarly, bullish and bearish divergences can be used to detect early momentum shifts and anticipate trend reversals.
 
 ### Further information
-VTAD: <http://vtadwiki.vtad.de/index.php/Commodity\_Channel\_Index>
+VTAD: [http://vtadwiki.vtad.de/index.php/Commodity_Channel_Index](http://vtadwiki.vtad.de/index.php/Commodity_Channel_Index)
 
 ### Usage
 ```cs
 CCI(int period)
-CCI(IDataSeries input, int period)
+CCI(IDataSeries inSeries, int period)
 CCI(int period)[int barsAgo]
-CCI(IDataSeries input, int period)[int barsAgo]
+CCI(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -841,46 +943,384 @@ CCI(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **CCI**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![Commodity Channel Index (CCI)](./media/image21.png)
+![Commodity Channel Index (CCI)](./media/CCI.jpg)
 
 ### Example
 ```cs
 //Output for the CCI value calculated using 14 periods
 Print("The value of the Commodity Channel Index is: " + CCI(14));
 ```
+## COTAggregatedIndexPositionDisaggregated
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
 
-##Darvas Boxes
 ### Description
-The Darvas boxes are a trading strategy developed in 1956 by former ballroom dancer Nicolas Darvas. Darvas' trading technique involved buying into stocks that were trading at new 52-week highs with correspondingly high volumes.
-A Darvas box is created when the price of a stock rises above the previous 52-week high, but then falls back to a price not far from that high. If the price falls too much, it can be a signal of a false breakout, otherwise the lower price is used as the bottom of the box and the high as the top.
+This indicator also works in the same way as the COTAggregatedIndexPositionLegacy; for interpretation and more detailed information, please read more under  [*COTAggregatedIndexPositionLegacy*](#COTAggregatedIndexPositionLegacy). The difference here, in turn, consists in the usage of the detailed disaggregated data for calculating the indicator.
 
-A box consists of a top and a lower boundary (floor). Each new box is set up based on a previous box, causing a “stair” formation to be depicted.
-If a stock does not form a new high after three consecutive days, then the high is marked as the upper boundary. After this, the floor is determined based on the lowest price.
+For the COTAggregatedIndexPositionDisaggregated, the following parameters are available:
+
+- AddIndices:
+  - **DowJones:** select [True] if the positions of the DowJones should be added to the overall result.
+  - **Nasdaq100:** select [True] if the positions of the Nasdaq100 should be added to the overall result.
+  - **Russell2000:** select [True] if the positions of the Russell2000 should be added to the overall  result.
+  - **SP500:**  select [True] if the positions of the SP500 should be added to the overall result.
+
+- Categories: Financial
+  - Here you can only select the categories of the Financials, since this indicator addresses 4 financial markets. However, you can load the indicator in Financials AND Commodities.
+  - Select [True] for the categories for which the positions for the selected markets should be added up and displayed.
+
+- Data base:
+  - **ReportType:** see [*COTReportLegacy*](#COTReportLegacy) – CotType
+
+- Display:
+  - **LongPosition:** select [True] to display the long positions of the desired market participants
+  - **ShortPosition:** select [True] to display the short positions of the desired market participants
+  - **NetPosition:** select [True] to display the net positions of the desired market participants
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![COTAggregatedIndexPositionDisaggregated](./media/COTAggregatedIndexPositionDisaggregated.png)
+
+### Example
+to be announced
+
+
+## COTCommercialIndex
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+The CommercialIndex is a very telling COT indicator. It puts two of the most important COT-parameters in relation to each other – the net position of the commercials to the open interest. These values are normalized and subsequently outputted. A high value of the CommercialIndex shows strong buying behavior of the commercials, whereas a low value shows strong sell pressure from the commercials. The parameters are similarly structured as with the COTReport.
+
+The following parameters are available for the COTCommercialIndex:
+
+- **CotType**: see [*COTReportLegacy*](#COTReportLegacy) – CotType
+- **ReportType:** see [*COTReportLegacy*](#COTReportLegacy) – ReportType
+- **StochasticPeriod:** see [*COTReportLegacy*](#COTReportLegacy)  – ComparativePeriod
+- **OpenInterestType:** Here you can choose between [Native/Stochastic], which determines whether absolute values or the stochastic values of the positions of the commercials should be used for the calculation. The default setting is “Native”; do not change this if you wish to keep the informative value of the indicator.
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![COTCommercialIndex](./media/COTCommercialIndex.png)
+
+### Example
+to be announced
+
+## COTOpenInterestDisaggregated
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+This indicator corresponds to the mode of operation of the COTOpenInterestLegacy, instead using, however, the more finely broken down data of the disaggregated reports. For the functionality and interpretation of the open interest, please read more under see [*COTOpenInterestLegacy*](#COTOpenInterestLegacy).
+ The calculation also occurs analogously to the legacy reports, and since for each long contract, there must also be a market participant on the short side, two calculation methods are possible (here for commodity futures):
+
+1) Producer[Long] + SwapDealer[Long] + SwapDealer[Spread] + ManagedMoney[Long] + ManagedMoney[Spread] + OtherReportables[Long] + OtherReportables[Spread] + NonReportable[Long] = OpenInterest
+
+2) Producer[Short] + SwapDealer[Short] + SwapDealer[Spread] + ManagedMoney[Short] + ManagedMoney[Spread] + OtherReportables[Short] + OtherReportables[Spread] + NonReportable[Short] = OpenInterest
+
+The following parameters are available for the COTOpenInterestDisaggregated:
+
+- **Categories: Commodity**
+  - **OpenInterest_Comm:** (=total OpenInterest for Commodities)
+      - [Absolute]: outputs the OpenInterest as an absolute number
+      - [Stochastic]: OpenInterest as an oscillator with values between 0-100
+      - [None]: no output for the OpenInterest.
+  - **%ofOIProd Long/Short/Spread:** (=Percent of OpenInterest for Producer Long/Short/Spread – Position) – select [True] if this value should be displayed. This here is the percentage that the positions of the producers have of the overall OpenInterest. A value of 0.5, for example, means that the producers have built up long positions in the size of 50% of the entire OpenInterest.
+  -  **%ofOISwapDealer Long/Short/Spread:** (=Percent of OpenInterest for SwapDealers Long/Short/Spread – Position) – select [True] if this value should be displayed.
+  - **%ofOIManagedMoney Long/Short/Spread**: (=Percent of OpenInterest for ManagedMoney Long/Short/Spread – Position) – select [True] if this value should be displayed.
+  - **%ofOIComOther Long/Short/Spread:** (=Percent of OpenInterest for Other Traders in Commodities Long/Short/Spread – Position) – select [True] if this value should be displayed.
+  - **%ofOIComNonreportables Long/Short/Spread**: (=Percent of OpenInterest for NonReportables in Commodites Long/Short/Spread – Position) select [True] if this value should be displayed.
+- **Categories: Financial**
+  - All parameters work analogously to the settings under “Categories: Commodity”; the only difference lies in the division into various groups of market participants
+- **Data base:**
+  - **CotType:** [*COTReportLegacy*](#COTReportLegacy) - CotType
+  - **ReportType:** [*COTReportLegacy*](#COTReportLegacy) - ReportType
+  - **StochasticPeriod:** [*COTReportLegacy*](#COTReportLegacy) – ComparativePeriod
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![COTOpenInterestDisaggregated](./media/COTOpenInterestDisaggregated.png)
+
+### Example
+to be announced
+
+## COTOpenInterestLegacy
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+The open interest specifies the number of all currently held contracts; a high open interest, therefore, indicates that the market participants have great interest in this value; vice versa, low open interest shows that a value has only few held contracts and therefore little activity from the market participants.
+There are two options for calculating the OpenInterest:
+
+ 1) Commercial[Long] + NonCommercial[Long] + NonCommercial[Spread] + NonReportable[Long] = OpenInterest
+ 2) Commercial[Short] + NonCommercial[Short] + NonCommercial[Spread] + NonReportable[Short] = OpenInterest
+
+Since for every long contract, there is also a market participant on the short side, both calculation methods yield exactly the same value. Additional info: with the CFTC, the open interest is not calculated; the CFTC can simply see the open interest by counting all contracts that are open in the market. With known open interest, the NonReportable positions are then calculated, since the following equation must be valid: TotalReportable + NonReportable = OpenInterest. TotalReportable and OpenInterest are known, allowing the NonReportables to be calculated.
+
+The following parameters are available for the OpenInterestLegacy:
+
+- **CotType:** [*COTReportLegacy*](#COTReportLegacy) – CotType
+
+- **ReportType:** [*COTReportLegacy*](#COTReportLegacy) – ReportType
+
+- **StochasticPeriod:** [*COTReportLegacy*](#COTReportLegacy)– ComparativePeriod
+
+- **IsNative:** outputs the OpenInterest as an absolute number, just as it is read out from the CFTC reports
+
+- **IsStochastic:** the OpenInterest is outputted and calculated as an oscillator with values between 0-100. With the StochasticPeriod, you can set with which period the Stochastic should be calculated.
+
+- **IsCommercialLong/IsCommercialShort:** select [True] if you would like to have the data for the NonCommercials displayed. The outputted values are percentages; if, for example, you set IsCommercialLong=True, the percentage of long positions of the Commercials that make up the total OpenInterest is outputted. A value of 0.5, for example, means that the OpenInterest consists of 50% long positions of the Commercials, which can be considered a very large long position of the Commercials.
+
+- **IsNonCommercialLong/IsNonCommercialShort:** if you select [True], the percentage of NonCommercial long positions i.e. NonCommercial short positions that make up the total OpenInterest is outputted.
+
+- **IsNonReportableLong/IsNonReportableShort:** if you select [True], the percentage of NonReportable long positions i.e. NonReportable short positions that make up the total OpenInterest it outputted.
+
+- **IsTotalReportableLong/IsTotalReportableShort:** if you select [True], the percentage of TotalReportable long positions i.e. TotalReportable short positions that make up the total OpenInterest is outputted. (TotalReportable = Commercials+NonCommercials).
+
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![COTOpenInterestLegacy](./media/COTOpenInterestLegacy.png)
+
+### Example
+to be announced
+
+
+## COTReportDisaggregated
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+The COTReportDisaggregated accesses the detailed disaggregated reports of the CFTC, which have been published since 2009 and can be regarded as a further development of the legacy reports. The necessity for improvement has resulted in the drastically changing and constantly developing market environment since the introduction of the COT reports in 1986.
+The market participants are now divided more subtly and are organized into 5 categories. These 5 categories vary according to whether we are dealing with a commodity future or a financial future.
+
+
+The market participants are now divided more subtly and are organized into 5 categories. These 5 categories vary according to whether we are dealing with a commodity future or a financial future.
+
+The **commodity futures** are divided into the following groups:
+
+- Producer/Merchant/Processor/User
+- SwapDealers o ManagedMoney
+- Other Reportables
+- Nonreportables
+- You can find more information about the classification of the commodities [HERE](http://www.cftc.gov/idc/groups/public/@commitmentsoftraders/documents/file/disaggregatedcotexplanatorynot.pdf)
+
+For the **financial futures**, there are the following groups:
+
+- Dealer/Intermediary
+- AssetManager/Institutional
+- Leveraged Funds
+- Other Reportables
+- Nonreportabes
+- You can find more information about the classification of the financials [HERE](http://www.cftc.gov/idc/groups/public/@commitmentsoftraders/documents/file/tfmexplanatorynotes.pdf)
+
+The following parameters are available for the COTReportDisaggregated:
+
+ - **Categories Commodity/Categories Financial:**
+   - Select [True] for the groups that you would like to have displayed in the chart. If you have opened a commodity chart, only settings made under “Categories Commodity” will be taken into account, and vice versa if you have opened a financial chart.
+
+- **Database:**
+  - **CotType:** [*COTReportLegacy*](#COTReportLegacy) – CotType
+  - **IndexType:** [*COTReportLegacy*](#COTReportLegacy) – IndexType
+  - **ReportType:** [*COTReportLegacy*](#COTReportLegacy) – ReportType
+  - **StochasticPeriod:** [*COTReportLegacy*](#COTReportLegacy)– ComparativePeriod
+
+- **Display:**
+  - **LongPosition:** select [True] to display the long positions of the desired market participants
+  - **ShortPosition:** select [True] to display the short positions of the desired market participants
+  - **NetPosition:** select [True] to display the net positions of the desired market participants
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![COTReportDisaggregated](./media/COTReportDisaggregated.png)
+
+### Example
+to be announced
+
+
+## COTReportLegacy
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+This indicator is the core element of the COT analysis, with which one can directly display the pure data that the indicator reads from the reports published weekly by the CFTC (www.cftc.gov/CommitmentsofTraders).
+The published reports can be viewed by every market participant. The legacy data is published in the so called short reports you can find on the CFTC-website. The following parameters are available in the COTReportLegacy:
+
+- **Comparative Period:** with this setting, you can enter a comparative period with which the stochastic display is calculated (=StochasticPeriod). The system only triggers this parameter when “IndexType = Stochastic” is set.
+
+- **CotType:** under [All/Other/Old], select which contracts should be used for the display; more details are available [HERE](http://www.cftc.gov/MarketReports/CommitmentsofTraders/ExplanatoryNotes/index.htm)
+
+- **IndexType:** choose between [Absolute/Stochastic] as to how the values should be outputted.
+  - Absolute = the values are outputted in whole numbers, just as they are read out from the reports.
+  - Stochastic = the values are outputted and calculated as an oscillator with values between 0-100. With the ComparativePeriod, you can set with which period the Stochastic should be calculated.
+
+- **ReportType:** under this parameter, you select whether the data from the reports should be read out only for futures, or for futures + options.
+
+- **ReturnType:**
+  - Net: outputs the net position (=LongContracts – ShortContracts) of the selected market participants
+  - Long/Short: outputs the long i.e. short contracts of the selected market participants
+  - OI: outputs the total OpenInterest of this instrument; for a more precise and advanced display of the OpenInterest, please use the indicator OpenInterestLegacy
+
+ - **ShowCommercials:** select [True] if you would like to have the data for the Commercials displayed. For detailed information on the definition of which market participants are classified as Commercials, please have a look [HERE](http://www.cftc.gov/MarketReports/CommitmentsofTraders/ExplanatoryNotes/index.htm)
+
+ - **ShowNonCommercials:** select [True] if you would like to have the data for the NonCommercials displayed. For detailed information on the definition of which market participants are classified as NonCommercials please have a look at the link provided above.
+
+ - **ShowNonReportables:** select [True] if you would like to have the data for the NonReportables displayed. For detailed information on the definition of which market participants are classified as NonCommercials please have a look at the link provided above.
+
+
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![COTReportLegacy](./media/COTReportLegacy.png)
+
+### Example
+to be announced
+
+
+## COTStockDummy
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+This indicator attempts to simulate the behavior of the commercials in stock markets using a special algorithm. The values are outputted as Stochastic, meaning that they oscillate between values of 0-100. The interpretation of this indicator is analogous to
+the interpretation of the commercial data in the standard COT indicators. The output of this indicator should be confirmed with other indicators; you must be aware that we are not talking about real COT data from market participants, but about calculations from the price data. As for the COT data, an analysis in the weekly chart is also recommended for the COTStockDummy.
+
+The following parameters are available for the COTStockDummy:
+
+- **ComparativePeriod:** input period for the stochastic calculation
+- **Stochastic:** [True] outputs normalized values (values between 0-100)
+- **Period:** this is a period that is necessary for calculating the data. If you do not have detailed information about how this indicator works, please leave this period on the default setting.
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![COTStockDummy&large](./media/COTStockDummy&large.png)
+
+### Example
+to be announced
+
+## COTLargeTraderActivity
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+The COTLargeTraderActivity indicator, like the COTStockDummy, is based not on real COT data, but instead on algorithmically calculated outputs. This indicator attempts to simulate the behavior of the large traders in markets for which no COT data is available. Here, the interpretation takes place analogously to the analysis of the NonCommercials in the standard COT indicators.As with the COTStockDummy, we point out that other indicators should be consulted, since we are not dealing with real COT data.
+
+The following parameters are available for the COTLargeTraderActivity:
+
+- **Period:** this is a period that is necessary for calculating the data. If you do not have detailed information about how this indicator works, please leave this period on the default setting.
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![COTStockDummy&large](./media/COTStockDummy&large.png)
+
+### Example
+to be announced
+
+
+## Darvas Boxes
+### Description
+Former ballroom dancer Nicolas Darvas developed the Darvas boxes as a trading strategy in 1956. Darvas' trading technique consisted of buying into stocks that were trading at new 52-week highs, with accordingly high volumes. When a stock price rises above the previous 52-week high, but then proceeds to fall back to a price not far from that high, a Darvas box is formed. If the price falls too far, this can signify a false breakout. Otherwise, however, the lower price is used as the bottom of the box and the higher price as the top.
+A box is made up of an upper boundary (top) and a lower boundary (floor). Each new box is created based on a previous box, depicting a “stair” formation.
+If a new high is not formed after three consecutive days, then the high is labeled as the upper boundary. Following this, the floor is specified based on the lowest price.
+
 
 ### Interpretation
 This system is similar to a trend-following channel breakout system. As soon as one of these boxes breaks out, a new buy or sell signal is generated.
 
+### Explanation
+The initial box top is the high of day 1. First, you should find a new high that must be higher than the high of day 1. It does not matter when the high is located - even if it is after 5 days. However, if the bottom is detected, the box has been completed.
+To detect the bottom, the low must be after the day 2 since the last day’s box top was detected, and should be lower than the low of the original day 1 low.
+
+The bottom is usually detected last, and a new high may not be detected until the bottom is locked in. The Darvas box has then been completed.
+
+If the price breaks out of the bottom or top, a new box will be started. The bottom stop loss box has been drawn as the last price percentage.
+
+We should take the first day’s high value as the top border. The next day, we check if the high of the day is higher than the previous border top. In the case that it is higher -> top border = high. In the case that the top is going up for the last 3 steps, and the next is then lower, it will be a box top. Start looking for the bottom border. It is identical to the top (search for a trend low after which the daily low would be higher than the previous. In this case, the previous low would be the box bottom). Now we have a Darvas corridor. If one of the next bar’s high values is higher than the top box or lower than the bottom box -> box is closed (a new box will be started when the price breaks out of the top or bottom of the box).
+
+
+#### Buy Signal
+![DarvasBuySignal](./media/DarvasBuySignal.png)
+
+#### Sell Signal
+![DarvasSellSignal](./media/DarvasSellSignal.png)
+
 ### Further information
 Here you can read about a trading system based on the Darvas boxes. (German only)
-<http://www.eusdoni.de/index.php?option=com\_content&view=article&catid=13:eusdoni-version-3&id=42:darvas-boxen>
+[http://www.eusdoni.de/index.php?option=com_content&view=article&catid=13:eusdoni-version-3&id=42:darvas-boxen](http://www.eusdoni.de/index.php?option=com_content&view=article&catid=13:eusdoni-version-3&id=42:darvas-boxen)
 
 ### Usage
 ```cs
 Darvas()
-Darvas(IDataSeries input)
+Darvas(IDataSeries inSeries)
 
 //For the upper Box boundary
 Darvas().Upper[int barsAgo]
-Darvas(IDataSeries input).Upper[int barsAgo]
+Darvas(IDataSeries inSeries).Upper[int barsAgo]
 
 //Returns the lower value
 Darvas().Lower[int barsAgo]
-Darvas(IDataSeries input).Lower[int barsAgo]
+Darvas(IDataSeries inSeries).Lower[int barsAgo]
 ```
 
 ### Return value
@@ -889,10 +1329,10 @@ Darvas(IDataSeries input).Lower[int barsAgo]
 When using this method with an index (e.g. **Darvas**()\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameter
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 ### Visualization
-![Darvas Boxes](./media/image22.png)
+![Darvas Boxes](./media/Darvas.jpg)
 
 ### Example
 ```cs
@@ -902,28 +1342,28 @@ Print("The upper boundary for the Darvas box is: " + Darvas().Upper[0]);
 Print("The lower boundary for the Darvas box is: " + Darvas().Lower[0]);
 ```
 
-##Directional Movement (DM)
+## Directional Movement (DM)
 ### Description
-The Directional Movement indicator is identical to the ADX, the only difference being that the +DM and -DM values are calculated. These will later on be used for the DMI.
+The Directional Movement indicator is almost identical to the ADX, with the only difference that the +DM and -DM values are also calculated. These values are then later on used for the DMI.
 
 ### Interpretation
 The Directional Movement indicator is positive when the difference between the highs is at its largest.
 
 ### Further information
-See: Directional Movement Index ([*DMI*])
+See: Directional Movement Index ([*DMI*](#directional-movement-index-dmi))
 
 ### Usage
 ```cs
 DM(int period)
-DM(IDataSeries input, int period)
+DM(IDataSeries inSeries, int period)
 DM(int period)[int barsAgo]
-DM(IDataSeries input, int period)[int barsAgo]
+DM(IDataSeries inSeries, int period)[int barsAgo]
 //For the value of +DM
 DM(int period).DiPlus[int barsAgo]
-DM(IDataSeries input, int period).DiPlus[int barsAgo]
+DM(IDataSeries inSeries, int period).DiPlus[int barsAgo]
 //For the value of -DM
 DM(int period).DiMinus[int barsAgo]
-DM(IDataSeries input, int period).DiMinus[int barsAgo]
+DM(IDataSeries inSeries, int period).DiMinus[int barsAgo]
 ```
 
 ### Return value
@@ -932,12 +1372,12 @@ DM(IDataSeries input, int period).DiMinus[int barsAgo]
 When using this method with an index (e.g. **DM**(14).DiPlus\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![Directional Movement (DM)](./media/image23.png)
+![Directional Movement (DM)](./media/DM.jpg)
 
 ### Example
 ```cs
@@ -946,10 +1386,9 @@ Print("The current +DM value is: " + DM(14).DiPlus[0]);
 Print("The current –DM value is: " + DM(14).DiMinus[0]);
 ```
 
-##Donchian Channel
+## Donchian Channel
 ### Description
-The Donchian channel is also known as the 4-week-rule and works in the following manner: when the current price peaks above the high of the past 4 weeks, a new long position is opened. If a short position is open at the time, then this is closed. The reverse applies to shorts.
-The trading system for the Donchian channel is a pure trend-following system based on the concept “buy when it’s strong, sell when it’s weak”. This breakout system was also used by the “Turtles”. With this indicator, the highs and lows of the last n days are displayed as lines above and below the price development. The 20 days represent 4 weeks.
+The Donchian channel can also be called the “4-week-rule”; this is how it works: when the current price reaches a peak above the high of the past 4 weeks, a new long position is opened. If a short position is open simultaneously, it is closed. This works vice versa with shorts. The  Donchian channel trading system is a purely trend-following system based on the concept “buy when it is strong, sell when it is weak”. The famous “Turtles” also employed this breakout system. This indicator displays the highs and lows of the last n days as lines above and below the price development. 20 days represent 4 weeks.
 
 ### Further information
 VTAD: <http://vtadwiki.vtad.de/index.php/Donchian\_Channel>
@@ -957,19 +1396,19 @@ VTAD: <http://vtadwiki.vtad.de/index.php/Donchian\_Channel>
 ### Usage
 ```cs
 DonchianChannel(int period)
-DonchianChannel(IDataSeries input, int period)
+DonchianChannel(IDataSeries inSeries, int period)
 
 //Upper band
 DonchianChannel(int period).Upper[int barsAgo]
-DonchianChannel(IDataSeries input, int period).Upper[int barsAgo]
+DonchianChannel(IDataSeries inSeries, int period).Upper[int barsAgo]
 
 //Middle band
 DonchianChannel(int period)[int barsAgo]
-DonchianChannel(IDataSeries input, int period)[int barsAgo]
+DonchianChannel(IDataSeries inSeries, int period)[int barsAgo]
 
 //Lower band
 DonchianChannel(int period).Lower[int barsAgo]
-DonchianChannel(IDataSeries input, int period).Lower[int barsAgo]
+DonchianChannel(IDataSeries inSeries, int period).Lower[int barsAgo]
 ```
 
 ### Return value
@@ -978,12 +1417,12 @@ DonchianChannel(IDataSeries input, int period).Lower[int barsAgo]
 When using this method with an index (e.g. **DonchianChannel**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![Donchian Channel](./media/image24.png)
+![Donchian Channel](./media/DonchianChannel.jpg)
 
 ### Example
 ```cs
@@ -993,30 +1432,30 @@ Print("The middle band is at: " + DonchianChannel(14)[0]);
 Print("The lower band is at: " + DonchianChannel(14).Lower[0]);
 ```
 
-##Directional Movement Index (DMI)
+## Directional Movement Index (DMI)
 ### Description
-The Directional Movement concept was developed by Welles Wilder Jr. in 1978. The concept contains the following components:
+Welles Wilder Jr. developed the Directional Movement concept in 1978. His concept includes the following components:
 
 Directional Movement Index (DMI)
 
-Average Directional Movement Index ([*ADX*])
+Average Directional Movement Index ([*ADX*](#average-directional-index-adx))
 
-True Range ([*TR*])
+True Range (TR)
 
-The Directional Movement Index is a precursor to the Average Directional Movement Index. The DMI shows the percentual strengths of the trend-favoring price movements. The standard application is the smoothed ADX.
+The Directional Movement Index comes before the Average Directional Movement Index. The DMI shows the strengths of the trend-favoring price movements in percentages. Its standard application is the smoothed ADX.
 
 ### Interpretation
 The DMI shows the strength of the trend, but not the trend direction. This means that it is particularly suited as a filter for trading systems employing the Parabolic SAR, for example, in order to filter out sideways phases. When the DMI rises (especially above 25), a trend is displayed; anything below that is recognized as a sideways phase. The +DI and the –DI point towards a trend. An uptrend is classified when the +DI is above the –DI. The further apart they drift, the stronger the trend.
 
 ### Further information
-VTAD: <http://vtadwiki.vtad.de/index.php/DMI\_-\_Directional\_Movement\_Index>
+VTAD: [http://vtadwiki.vtad.de/index.php/DMI_-_Directional_Movement_Index](http://vtadwiki.vtad.de/index.php/DMI_-_Directional_Movement_Index)
 
 ### Usage
 ```cs
 DMI(int period)
-DMI(IDataSeries input, int period)
+DMI(IDataSeries inSeries, int period)
 DMI(int period)[int barsAgo]
-DMI(IDataSeries input, int period)[int barsAgo]
+DMI(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -1025,12 +1464,12 @@ DMI(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **DMI**(20)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![Directional Movement Index (DMI)](./media/image25.png)
+![Directional Movement Index (DMI)](./media/DMI.jpg)
 
 ### Example
 ```cs
@@ -1038,11 +1477,11 @@ period Number of bars included in the calculations
 Print("The current DMI value is: " + DMI(20)[0]);
 ```
 
-##Double Stochastics (DSS)
+## Double Stochastics (DSS)
 ### Description
-The Double Smoothed Stochastic (DSS) was developed by W. Blau. It is a double-smoothed stochastic indicator. After some time, it was further developed by W. Bressert as a variant of the double-smoothed stochastic. This indicator reacts more sensitively towards smaller changes in the price movements and produces more signals than the one developed by Blau. The Bressert version exemplifies extreme zones with more clarity than the Blau version.
+William Blau was the developer of the Double Smoothed Stochastic (DSS), which is a double-smoothed stochastic indicator. After a while, it was improved upon by Walter Bressert as a variation of the double-smoothed stochastic. Smaller changes in the price movements cause this indicator to react more sensitively, and it also produces more signals than the one Blau developed. The Bressert version therefore also illustrates extreme zones more clearly than the Blau version.
 
-Irrespective of the various calculation methods, the DSS always remains within a scale of 0 to 100. The extreme zones are the same in the developed stochastics as the original stochastics. The upper extreme area is marked at 80 and the lower extreme zone at 20. These values cannot be changed. For many applications, it is smart to add an additional middle line at 50 and to adapt this to the necessary circumstances.
+Regardless of the various calculation methods used, the DSS always stays within a scale of 0 to 100. The extreme zones in the developed stochastics are the same as for the original stochastics. The upper extreme area is marked at 80, and the lower extreme zone at 20 - these values cannot be changed. For many applications, it is wise to include an additional middle line at 50, and to adapt this to the circumstances as needed.
 
 ### Interpretation
 Values above 80 are seen as overbought, and below 20 as oversold. In addition, signals are produced by the signal line’s behavior and movements into and out of the extreme zones.
@@ -1052,21 +1491,21 @@ Values above 80 are seen as overbought, and below 20 as oversold. In addition, s
 DoubleStochastics(int period)
 DoubleStochastics(int period)[int barsAgo]
 DoubleStochastics(int period, DoubleStochasticsMode mode, int EMA-Period1)
-DoubleStochastics(IDataSeries input, int period, DoubleStochasticsMode mode, int EMA-Period1)
+DoubleStochastics(IDataSeries inSeries, int period, DoubleStochasticsMode mode, int EMA-Period1)
 DoubleStochastics(int period, DoubleStochasticsMode mode, int EMA-Period1)[int barsAgo]
-DoubleStochastics(IDataSeries input, int period, DoubleStochasticsMode mode, int EMA-Period1)[int barsAgo]
+DoubleStochastics(IDataSeries inSeries, int period, DoubleStochasticsMode mode, int EMA-Period1)[int barsAgo]
 DoubleStochastics(int period, DoubleStochasticsMode mode, int EMA-Period1, int EMA-Period2)
-DoubleStochastics(IDataSeries input, int period, DoubleStochasticsMode mode, int EMA-Period1, int EMA-Period2)
+DoubleStochastics(IDataSeries inSeries, int period, DoubleStochasticsMode mode, int EMA-Period1, int EMA-Period2)
 DoubleStochastics(int period, DoubleStochasticsMode mode, int EMA-Period1, int EMA-Period2)[int barsAgo]
-DoubleStochastics(IDataSeries input, int period, DoubleStochasticsMode mode, int EMA-Period1, int EMA-Period2)[int barsAgo]
+DoubleStochastics(IDataSeries inSeries, int period, DoubleStochasticsMode mode, int EMA-Period1, int EMA-Period2)[int barsAgo]
 
 //For the value of %K
 DoubleStochastics(int period).K[int barsAgo]
-DoubleStochastics(IDataSeries input, int period).K[int barsAgo]
+DoubleStochastics(IDataSeries inSeries, int period).K[int barsAgo]
 DoubleStochastics(int period, DoubleStochasticsMode mode, int EMA-Period1).K[int barsAgo]
-DoubleStochastics(IDataSeries input, int period, DoubleStochasticsMode mode, int EMA-Period1).K[int barsAgo]
+DoubleStochastics(IDataSeries inSeries, int period, DoubleStochasticsMode mode, int EMA-Period1).K[int barsAgo]
 DoubleStochastics(int period, DoubleStochasticsMode mode, int EMA-Period1, int EMA-Period2).K[int barsAgo]
-DoubleStochastics(IDataSeries input, int period, DoubleStochasticsMode mode, int EMA-Period1, int EMA-Period2).K[int barsAgo]
+DoubleStochastics(IDataSeries inSeries, int period, DoubleStochasticsMode mode, int EMA-Period1, int EMA-Period2).K[int barsAgo]
 ```
 
 ### Return value
@@ -1075,18 +1514,18 @@ DoubleStochastics(IDataSeries input, int period, DoubleStochasticsMode mode, int
 When using this method with an index (e.g. **DoubleStochastics**(...)\[**int** barsAgo\] or **DoubleStochastics**(...).K\[**int** barsAgo\]), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations (default: 10)
 
-mode Method of calculation, possible inputs are Blau, Blau2, Bressert
+mode Method of calculation, possible inSeries are Blau, Blau2, Bressert
 
 EMA-Period1 Periods for the EMA
 
 EMA-Period2 Periods for the second EMA
 
 ### Visualization
-![Double Stochastics (DSS)](./media/image26.png)
+![Double Stochastics (DSS)](./media/DSS.jpg)
 
 ### Example
 ```cs
@@ -1094,13 +1533,12 @@ EMA-Period2 Periods for the second EMA
 Print("The value of the DSS Bressert %K is: " + DoubleStochastics(10, DoubleStochasticsMode.Bressert, 2)[0]);
 ```
 
-##Dynamic Momentum Index (DMIndex)
+##  Dynamic Momentum Index (DMIndex)
 ### Description
-The Dynamic Momentum Index was developed by Tushar Chande. It is a specific variation of the Relative Strength Index.
-Chande altered the Dynamic Momentum Index in such a way that the period settings automatically change themselves based on the various factors. He achieved this by coupling it to the RSI so that a volatility component is present. This component is defined based on a 5-day standard deviation of the closing prices. This is then compared to the 10-day average of a 5-day standard deviation.
+The Dynamic Momentum Index, which was developed by Tushar Chande, is a specific variant of the Relative Strength Index. Chande changed the Dynamic Momentum Index in such a way that, based on various factors, the period settings automatically adjust themselves, which he achieved by coupling it to the RSI in order for a volatility component to be present. The definition of this volatility component is based on a 5-day standard deviation of the closing prices. This, in turn, is then compared to the 10-day average of a 5-day standard deviation.
 
 ### Interpretation
-If the DMI is inside the oversold zone, it is reasonable to assume that prices are going to start to fall.
+If the Dynamic Momentum Index is showing the overbought area, one speculates on falling prices; if the Dynamic Momentum Index is showing the oversold area, the speculation is on rising prices. Trading in this way makes sense if other indicators such as absCMO are showing a trendless phase, so the point is to trade against the trend. During a strong trend phase, it is recommended to trade in the trend direction; in the phase of an upward trend, one should wait for an oversold situation until a buy signal occurs.
 
 ### Further and more concise information
 VTAD: <http://vtadwiki.vtad.de/index.php/Dynamic\_Momentum\_Index>
@@ -1108,9 +1546,9 @@ VTAD: <http://vtadwiki.vtad.de/index.php/Dynamic\_Momentum\_Index>
 ### Usage
 ```cs
 DMIndex(int smooth)
-DMIndex(IDataSeries input, int smooth)
+DMIndex(IDataSeries inSeries, int smooth)
 DMIndex(int smooth)[int barsAgo]
-DMIndex(IDataSeries input, int smooth)[int barsAgo]
+DMIndex(IDataSeries inSeries, int smooth)[int barsAgo]
 ```
 
 ### Return value
@@ -1119,12 +1557,12 @@ DMIndex(IDataSeries input, int smooth)[int barsAgo]
 When using this method with an index (e.g. **DMIndex**(3)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 smooth Smoothing settings
 
 ### Visualization
-![Dynamic Momentum Index (DMIndex)](./media/image27.png)
+![Dynamic Momentum Index (DMIndex)](./media/DMIindex.jpg)
 
 ### Example
 ```cs
@@ -1132,9 +1570,9 @@ smooth Smoothing settings
 Print("The current value for the DMIndex is: " + DMIndex(3)[0]);
 ```
 
-##Ease of Movement (EOM)
+## Ease of Movement (EOM)
 ### Description
-Developed by Richard Arms, Ease of Movement (EMV) is a volume-based oscillator that fluctuates above and below the zero line. As its name implies, it is designed to measure the "ease" of price movement. Arms created [Equivolume] charts to visually display price ranges and volume. Ease of Movement takes Equivolume to the next level by quantifying the price/volume relationship and showing the results as an oscillator. In general, prices are advancing with relative ease when the oscillator is in positive territory. Conversely, prices are declining with relative ease when the oscillator is in negative territory.
+Ease of Movement (EMV) is a volume-based oscillator created by Richard Arms that constantly moves above and below the zero line. It is intended to measure the "ease" of price movement, as suggested by the name. Arms developed Equivolume charts in order to visually display price ranges and volume. Ease of Movement expands upon Equivolume by quantifying the price/volume relationship and displaying the results in the form of an oscillator. Generally, when the oscillator is in a positive area, prices are advancing with relative ease. On the other hand, when the oscillator is in negative territory, prices are falling with relative ease.
 
 ### Interpretation
 When the EOM is moving away from the zero line (marker) then an impulse has begun in that direction. During a breakout onto the opposite side of the zero line, it is recommended to enter with the trend direction.
@@ -1145,9 +1583,9 @@ When the EOM is moving away from the zero line (marker) then an impulse has begu
 ### Usage
 ```cs
 EaseOfMovement(int smoothing, int volDivisor)
-EaseOfMovement(IDataSeries input, int smoothing, int volDivisor)
+EaseOfMovement(IDataSeries inSeries, int smoothing, int volDivisor)
 EaseOfMovement(int smoothing, int volDivisor)[int barsAgo]
-EaseOfMovement(IDataSeries input, int smoothing, int volDivisor)[int barsAgo]
+EaseOfMovement(IDataSeries inSeries, int smoothing, int volDivisor)[int barsAgo]
 ```
 
 ### Return value
@@ -1156,14 +1594,14 @@ EaseOfMovement(IDataSeries input, int smoothing, int volDivisor)[int barsAgo]
 When using this method with an index (e.g. **EaseOfMovement**(14, 10000)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 smoothing Smoothing settings
 
 volDivisor For calculation of the box ratio (see “Calculation” below)
 
 ### Visualization
-![Ease of Movement (EOM)](./media/image28.png)
+![Ease of Movement (EOM)](./media/EaseOfMovement.jpg)
 
 ### Calculation
 Midpoint = (High + Low) / 2
@@ -1177,16 +1615,16 @@ Ease = MidpointMove / Box Ratio
 Print("The value for the Ease of Movement is: " + EaseOfMovement(14, 10000)[0]);
 ```
 
-##Fisher Transform
+## Fisher Transform
 ### Description
-This indicator was developed by the physicist John Ehlers in 2002. The aim of the indicator is to illustrate turning points. This is achieved by using the Inverse Fisher Transform, which changes indicators in such a way that the movements are less random and the signal quality is improved. The transform compresses or stretches the input values of the function in such a way that the output is highly likely to be between -1 and 1. This results in a clearly identifiable pattern where even indicators such as the RSI become clearer and more precise.
+The physicist John Ehlers created the Fisher Transform in 2002. The intention of the indicator is to show where there are turning points, which can be achieved with the help of the Inverse Fisher Transform. This changes indicators in such a way that the movements are less random, and the signal quality is clearer. The Fisher Transform either stretches or compresses the input values of the function so that the output is very likely to be between -1 and 1. This gives us a clearly identifiable pattern where even indicators such as the RSI become better defined and more precise.
 
 ### Interpretation
 A system using the Fisher Transform can be found here:
 <https://www.prorealtime.com/de/pdf/probacktest.pdf>
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -1198,13 +1636,13 @@ When using this method with an index (e.g. **FisherTransform**(10)\[**int** bars
 ### Usage
 ```cs
 FisherTransform(int period)
-FisherTransform(IDataSeries input, int period)
+FisherTransform(IDataSeries inSeries, int period)
 FisherTransform(int period)[int barsAgo]
-FisherTransform(IDataSeries input, int period)[int barsAgo]
+FisherTransform(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Visualization
-![Fisher Transform](./media/image29.png)
+![Fisher Transform](./media/FisherTransform.jpg)
 
 ### Example
 ```cs
@@ -1212,17 +1650,17 @@ FisherTransform(IDataSeries input, int period)[int barsAgo]
 Print("The current value for the Fisher Transform is: " + FisherTransform(10)[0]);
 ```
 
-##Forecast Oscillator (FOSC)
+## Forecast Oscillator (FOSC)
 ### Description
-The Forecast Oscillator compares the current price with the value returned by the Time Series Forecast study. It is calculated as a percentage ratio of the difference between the close price and the value of the Time Series Forecast for the previous bar.
+The FOSC makes a comparison of the current price against the value returned by the Time Series Forecast study. It is calculated as a percentage ratio of the difference between the close price and the Time Series Forecast value for the previous bar.
 
-When the oscillator shows positive values, it suggests that the Time Series Forecast has underestimated the price, and negative values indicate that the actual price is lower than what was predicted by the TSF. Normally, the Forecast Oscillator line is also accompanied by an SMA to search for the oscillator reversals.
+When this oscillator displays positive values, it hints that the Time Series Forecast has underestimated the price, whereas negative values suggest that the TSF has overestimated the price. Usually, an SMA also accompanies the Forecast Oscillator line in the search for oscillator reversals.
 
 ### Further information
 FMLabs: <http://www.fmlabs.com/reference/default.htm?url=ForecastOscillator.htm>
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -1234,13 +1672,13 @@ When using this method with an index (e.g. **FOSC**(14)\[**int** barsAgo\] ), th
 ### Usage
 ```cs
 FOSC(int period)
-FOSC(IDataSeries input, int period)
+FOSC(IDataSeries inSeries, int period)
 FOSC(int period)[int barsAgo]
-FOSC(IDataSeries input, int period)[int barsAgo]
+FOSC(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Visualization
-![Forecast Oscillator (FOSC)](./media/image30.png)
+![Forecast Oscillator (FOSC)](./media/FOSC.jpg)
 
 ### Examples
 ```cs
@@ -1252,11 +1690,11 @@ if (FOSC(14)[0] > 0)
 Print("The FOSC is bigger than zero, which indicates rising price movements.");
 ```
 
-##HighestHighIndex()
+## HighestHighIndex()
 ### Description
-Highest High Index prints the index of the bars with the highest high within a predefined number of periods. It differentiates from the HighestBar() function in that it can be visualized within the chart.
+The Highest High Index prints the index for the bars with the highest high within a specified number of periods. It is slightly different from the GetSerieHighestValue() function in that it can be visualized within the chart.
 
-See [*HighestHighPrice()*], [*LowestLowPrice()*], [*LowestLowIndex]()*, [*HighestBar()*], [*LowestBar()*].
+See [*HighestHighPrice()*](#highesthighprice), [*LowestLowPrice()*](#lowestlowprice), [*LowestLowIndex*](#lowestlowindex), [*GetSerieHighestValue()*](#getseriehighestvalue), [*GetSerieLowestValue()*](#getserielowestvalue).
 
 ### Usage
 ```cs
@@ -1273,7 +1711,7 @@ When using this method with an index (e.g. **HighestHighIndex**(14)\[**int** bar
 BarsBack Number of periods in which the highest high will be searched for
 
 ### Visualization
-![HighestHighIndex()](./media/image31.png)
+![HighestHighIndex()](./media/HighestHighIndex.jpg)
 
 ### Example
 ```cs
@@ -1281,13 +1719,13 @@ BarsBack Number of periods in which the highest high will be searched for
 Print("The highest high in the last 14 bars was " + HighestHighIndex(14)[0] + " bars ago.");
 ```
 
-##HighestHighPrice()
+## HighestHighPrice()
 ### Description
-Highest High Price displays the highest high reached within a specified number of periods.
+Highest High Price shows the highest high achieved within a predefined number of periods.
 
-In contrast to the *HighestBar()*, this is an indicator that can be displayed within the chart.
+Unlike the GetSerieHighestValue(), this indicator can be displayed within the chart.
 
-See [*HighestHighIndex()*], [*LowestLowPrice()*], [*LowestLowIndex*](), [*HighestBar()*], [*LowestBar()*].
+See [*HighestHighIndex()*](#highesthighindex), [*LowestLowPrice()*](#lowestlowprice), [*LowestLowIndex*](#lowestlowindex), [*GetSerieHighestValue()*](#getseriehighestvalue), [*GetSerieLowestValue()*](#getserielowestvalue).
 
 ### Usage
 ```cs
@@ -1304,7 +1742,7 @@ When using this method with an index (e.g. **HighestHighPrice**(14)\[**int** bar
 BarsBack Number of periods in which the highest high will be searched for
 
 ### Visualization
-![HighestHighPrice()](./media/image32.png)
+![HighestHighPrice()](./media/HighestHighPrice.jpg)
 
 ### Example
 ```cs
@@ -1312,30 +1750,19 @@ BarsBack Number of periods in which the highest high will be searched for
 Print("The highest high for the last 14 bars is " + HighestHighPrice(14)[0]);
 ```
 
-##IchimokuCloud
-The Ichimoku Cloud, also known as Ichimoku Kinko Hyo, is a versatile indicator that defines support and resistance, identifies trend direction, gauges momentum and provides trading signals. Ichimoku Kinko Hyo translates into "one look equilibrium chart". With one look, chartists can identify the trend and look for potential signals within that trend. The indicator was developed by Goichi Hosoda, a journalist, and published in his 1969 book. Even though the Ichimoku Cloud may seem complicated when viewed on the price chart, it is actually a straight-forward indicator that is very usable. It was, after all, created by a journalist, not a rocket scientist! Moreover, the concepts are easy to understand and the signals are well-defined.
+## IchimokuCloud
+### Description
+The Ichimoku Cloud, also called Ichimoku Kinko Hyo, is a very adaptable indicator that defines support and resistance, gauges momentum, identifies trend direction and provides trading signals. Ichimoku Kinko Hyo literally means "one look equilibrium chart". With just one look, traders can identify the trend and search for possible signals in that trend. The indicator was developed by the journalist Goichi Hosoda, and published in his 1969 book. Although the Ichimoku Cloud may appear complicated when looked at on the price chart, it is in fact a simple indicator that can be implemented very well – a tribute to the fact that its inventor was a journalist! What is more, the concepts are easily understandable and the signals well-defined.
 
-**1. Tenkan Sen – conversion line**
-This is the median value of the 9-period high and the 9-period low.
-
-**2. Kinjun Sen – the baseline**
-This is the midpoint of the 26-period high and low.
-
-**3. Chikou Span – lagging span**
-This is the closing price plotted 26 days in the past.
-
-**4. Senkou Span A – the first leading line**
-This is the midpoint between the conversion line and the baseline. The leading Span A forms one of the two cloud boundaries. It is referred to as leading because it is plotted 26 periods in the future and thus forms the faster cloud boundary.
-
-**5. Senkou Span B – the second leading line**
-This is the midpoint of the 52-day high-low range projected 26 periods into the future, and forms the slower cloud boundary.
-
-**Kumo – cloud**
-The cloud (Kumo) is the area between Senkou Span A and Senkou Span B. This area is highlighted in color and thus forms a cloud shape.
+**1. Tenkan Sen** – conversion line This is the median value of the 9-period high and the 9-period low.
+**2. Kinjun Sen** – the baseline This is the midpoint of the 26-period high and low.
+**3. Chikou Span** – lagging span This is the closing price plotted 26 days in the past.
+**4. Senkou Span A** – the first leading line This is the midpoint between the conversion line and the baseline. The leading Span A forms one of the two cloud boundaries. It is referred to as leading because it is plotted 26 periods in the future and thus builds the faster cloud boundary.
+**5. Senkou Span B** – the second leading line This is the midpoint of the 52-day high-low range projected 26 periods into the future, forming the slower cloud boundary.
+Kumo – cloud The cloud (Kumo) is the area between Senkou Span A and Senkou Span B. This area is highlighted in color, forming a cloud shape.
 
 **Caution:**
-
-Since the cloud is drawn „into the future“ you must shift the time axis to the left in order to be able to see it.
+Because the cloud is drawn “into the future”, it is necessary to shift the time axis to the left in order to view it.
 
 ### Interpretation
 Similarly to the smoothing averages, the Ichimoku indicator will create a bullish signal when the Tenkan Sen crosses over the Kinjun Sen from below.
@@ -1354,27 +1781,27 @@ Similarly to the smoothing averages, the Ichimoku indicator will create a bullis
 ### Usage
 ```cs
 IchimokuCloud(int periodFast, int periodMedium, int periodSlow)
-IchimokuCloud(IDataSeries input, int periodFast, int periodMedium, int periodSlow)
+IchimokuCloud(IDataSeries inSeries, int periodFast, int periodMedium, int periodSlow)
 
 //TenkanSen
 IchimokuCloud(int periodFast, int periodMedium, int periodSlow).TenkanSen[int barsAgo]
-IchimokuCloud(IDataSeries input, int periodFast, int periodMedium, int periodSlow).TenkanSen[int barsAgo]
+IchimokuCloud(IDataSeries inSeries, int periodFast, int periodMedium, int periodSlow).TenkanSen[int barsAgo]
 
 //KijunSen
 IchimokuCloud(int periodFast, int periodMedium, int periodSlow).KijunSen[int barsAgo]
-IchimokuCloud(IDataSeries input, int periodFast, int periodMedium, int periodSlow).KijunSen[int barsAgo]
+IchimokuCloud(IDataSeries inSeries, int periodFast, int periodMedium, int periodSlow).KijunSen[int barsAgo]
 
 //ChikouSpan
 IchimokuCloud(int periodFast, int periodMedium, int periodSlow).ChikouSpan[int barsAgo]
-IchimokuCloud(IDataSeries input, int periodFast, int periodMedium, int periodSlow).ChikouSpan[int barsAgo]
+IchimokuCloud(IDataSeries inSeries, int periodFast, int periodMedium, int periodSlow).ChikouSpan[int barsAgo]
 
 //SenkouSpanA
 IchimokuCloud(int periodFast, int periodMedium, int periodSlow).SenkouSpanA[int barsAgo]
-IchimokuCloud(IDataSeries input, int periodFast, int periodMedium, int periodSlow).SenkouSpanA[int barsAgo]
+IchimokuCloud(IDataSeries inSeries, int periodFast, int periodMedium, int periodSlow).SenkouSpanA[int barsAgo]
 
 //SenkouSpanB
 IchimokuCloud(int periodFast, int periodMedium, int periodSlow).SenkouSpanB[int barsAgo]
-IchimokuCloud(IDataSeries input, int periodFast, int periodMedium, int periodSlow).SenkouSpanB[int barsAgo]
+IchimokuCloud(IDataSeries inSeries, int periodFast, int periodMedium, int periodSlow).SenkouSpanB[int barsAgo]
 ```
 
 ### Return value
@@ -1383,7 +1810,7 @@ IchimokuCloud(IDataSeries input, int periodFast, int periodMedium, int periodSlo
 When using this method with an index (e.g. **IchimokuCloud**(9,26,52)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 periodFast Period setting for the Tenkan line. Default: 9
 
@@ -1392,15 +1819,14 @@ periodMedium Period setting for the Kijun line. Default: 29
 periodSlow Number of periods used for the calculation of the Chikou line. Default: 52
 
 ### Visualization
-![IchimokuCloud](./media/image33.png)
+![IchimokuCloud](./media/IchimokuCloud.jpg)
 
-##InsideBarsMT
+## InsideBarsMT
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
 
 ### Description
-This indicator displays inside bars as defined by Michael Voigt in his book.
-
-The settings are modifiable, and additional adjustments are possible. In addition, there are several data series used in stop calculations for self-developed indicators and strategies.
+InsideBarsMT displays inside bars as defined by Michael Voigt in his book.
+The settings can be modified, and additional adjustments are also possible. Furthermore, there are several data series used in stop calculations for self-developed indicators and strategies.
 
 ### Interpretation
 Inside bars are bars whose body (open-close) are located within the high-low span of the previous bar. The previous bar is generally called an outside bar.
@@ -1434,22 +1860,22 @@ Will return the low of the bar preceding the outside bar
 ### Visualization
 ![InsideBarsMT](./media/image34.png)
 
-###  “Tolerance” parameter
+### Tolerance parameter
 In the image below you will see a longer “phase” where the market is within an inside bar. The bar marked with the arrow opens the low of the outside bar. If the open of the green candle had been a tick lower, then the marked bar would not be an inside bar and the red bar would clearly not be an outside bar.
 The tolerance parameter defines the number of ticks by which the inside bars may “breach” the high-low span of the outside bar and still be recognized as an inside bar.
 
 Tolerance default setting = 0.
 
-![InsideBarsMT](./media/image35.png)
+![InsideBarsMT](./media/InsideBarsMT.jpg)
 
 ### Example
 ```cs
 double StopPrice;
-protected override void OnBarUpdate()
+protected override void OnCalculate()
 {
 // Open position when SMAs cross
-if (CrossAbove(SMA(10),SMA(20),1) && Position.MarketPosition == PositionType.Flat)
-EnterLong();
+if (CrossAbove(SMA(10),SMA(20),1) && Position.PositionType == PositionType.Flat)
+OpenLong();
 // If the current bar is an inside bar, modify the stop
 if (InsideBarsMT().isInsideBar[0])
 StopPrice = InsideBarsMT().LowBeforeOutsideBar[0];
@@ -1458,19 +1884,20 @@ else
 }
 ```
 
-##Keltner Channel
+## Keltner Channel
 ### Description
-Keltner Channels are volatility-based envelopes set above and below an exponential moving average. This indicator is similar to Bollinger Bands, which use the standard deviation to set the bands. Instead of using the standard deviation, Keltner Channels use the Average True Range (ATR) to set channel distance. The channels are typically set two Average True Range values above and below the 20-day EMA. The exponential moving average dictates direction and the Average True Range sets channel width. Keltner Channels are a trend-following indicator used to identify reversals with channel breakouts and channel direction. Channels can also be used to identify overbought and oversold levels when the trend is flat.
-
-In his 1960 book, *How to Make Money in Commodities*, Chester Keltner introduced the "Ten-Day Moving Average Trading Rule," which is credited as the original version of Keltner Channels. This original version started with a 10-day SMA of the typical price {(H+L+C)/3)} as the centerline. The 10-day SMA of the high-low range was added and subtracted to set the upper and lower channel lines. Linda Bradford Raschke introduced the newer version of Keltner Channels in the 1980s. Like Bollinger Bands, this new version used a volatility-based indicator, Average True Range (ATR), to set channel width. (Source: StockCharts.com)
+Keltner Channels are volatility-based envelopes placed above and below an EMA. This indicator shares similarities with Bollinger Bands, where the bands are set using the standard deviation. Here, instead of using the standard deviation, Keltner Channels use the Average True Range (ATR) to set the channel distance. Typically, the channels are set two Average True Range values above and two ATRs below the 20-day EMA. The EMA determines the direction and the Average True Range dictates the channel width. Keltner Channels form a trend-following indicator that is applied with the aim of identifying reversals with channel breakouts and channel direction. The channels can also be used to spot overbought and oversold levels when the trend is flat.
+In his 1960 book, *How to Make Money in Commodities,* Chester Keltner featured the "Ten-Day Moving Average Trading Rule," credited as the original version of Keltner Channels. This version started off with a 10-day SMA of the typical price {(H+L+C)/3)} as the center line. The 10-day SMA of the high-low range was added and subtracted to set the upper and lower channel lines respectively. Linda Bradford Raschke then brought in the more recent version of Keltner Channels in the 1980s. Similarly to Bollinger Bands, this new version made use of a volatility-based indicator, Average True Range (ATR), to set channel width.
 Middle line = 20-day exponential moving average
 Upper channel line: 20-day EMA + (2x ATR(10))
 Lower channel line: 20-day EMA – (2xATR(10))
 
+
+
 ### Interpretation
 Indicators based on channels, bands and envelopes are designed to encompass most price action. Therefore, moves above or below the channel lines warrant attention because they are relatively rare. Trends often start with strong moves in one direction or another. A surge above the upper channel line shows extraordinary strength, while a plunge below the lower channel line shows extraordinary weakness. Such strong moves can signal the end of one trend and the beginning of another.
 
-With an exponential [*moving average*][*average*] as their foundation, the Keltner Channels are a trend-following indicator. As with moving averages and trend-following indicators, Keltner Channels lag price action. The direction of the moving average dictates the direction of the channel. In general, a downtrend is present when the channel moves lower, while an uptrend exists when the channel moves higher. The trend is flat when the channel moves sideways.
+With an exponential *moving average*, *average* as their foundation, the Keltner Channels are a trend-following indicator. As with moving averages and trend-following indicators, Keltner Channels lag price action. The direction of the moving average dictates the direction of the channel. In general, a downtrend is present when the channel moves lower, while an uptrend exists when the channel moves higher. The trend is flat when the channel moves sideways.
 
 A channel upturn and break above the upper trend line can signal the start of an uptrend. A channel downturn and break below the lower trend line can signal the start a downtrend. Sometimes a strong trend does not take hold after a channel breakout and prices oscillate between the channel lines. Such trading ranges are marked by a relatively flat moving average. The channel boundaries can then be used to identify overbought and oversold levels for trading purposes.
 
@@ -1480,19 +1907,19 @@ VTAD: <http://vtadwiki.vtad.de/index.php/Keltner\_Channel>
 ### Usage
 ```cs
 KeltnerChannel(double offsetMutiplier, int period)
-KeltnerChannel(IDataSeries input, double offsetMutiplier, int period)
+KeltnerChannel(IDataSeries inSeries, double offsetMutiplier, int period)
 
 //Returns midline value
 KeltnerChannel(double offsetMutiplier, int period)[int barsAgo]
-KeltnerChannel(IDataSeries input, double offsetMutiplier, int period)[int barsAgo]
+KeltnerChannel(IDataSeries inSeries, double offsetMutiplier, int period)[int barsAgo]
 
 //Returns upper band value
 KeltnerChannel(double offsetMutiplier, int period).Upper[int barsAgo]
-KeltnerChannel(IDataSeries input, double offsetMutiplier, int period).Upper[int barsAgo]
+KeltnerChannel(IDataSeries inSeries, double offsetMutiplier, int period).Upper[int barsAgo]
 
 //Returns lower band value
 KeltnerChannel(double offsetMutiplier, int period).Lower[int barsAgo]
-KeltnerChannel(IDataSeries input, double offsetMutiplier, int period).Lower[int barsAgo]
+KeltnerChannel(IDataSeries inSeries, double offsetMutiplier, int period).Lower[int barsAgo]
 ```
 
 ### Return value
@@ -1501,14 +1928,14 @@ KeltnerChannel(IDataSeries input, double offsetMutiplier, int period).Lower[int 
 When using this method with an index (e.g. **KeltnerChannel**(1.5, 15)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 offsetMultiplier Multiplier for the SMA
 
 period Number of bars included in the calculations
 
 ### Visualization
-![Keltner Channel](./media/image36.png)
+![Keltner Channel](./media/KeltnerChannel.jpg)
 
 ### Calculation
 diff.**Set**(High\[0\] - Low\[0\]);
@@ -1529,17 +1956,17 @@ Print("Current value of the middle Keltner Channel band: " + KeltnerChannel(1.5,
 Print("Current value of the lower Keltner Channel band: " + KeltnerChannel(1.5, 15).Lower[0]);
 ```
 
-##KeyReversalUp
+## KeyReversalUp
 ### Description
-KeyReversalUp searches within a specified number of periods for turning points defined as such:
+The KeyReversalUp indicator searches within a predefined number of periods to find turning points with the following characteristics:
+1	The current close is higher than the previous close
+2	The current low is smaller than or equal to the last low of the last n bars
 
-1. The current close is higher than the previous close
-2. The current low is smaller than or equal to the last low of the last n bars
+See [*KeyReversalDown*](#keyreversaldown), [*KeyReversalUpAtSMA*](#keyreversalupatsma), [*KeyReversalDownAtSMA*](#keyreversaldownatsma), [*KeyReversalUpAtEMA*](#keyreversalupatema), [*KeyReversalDownAtEMA*](#keyreversaldownatema).
 
-See [*KeyReversalDown*], [*KeyReversalUpAtSMA*], [*KeyReversalDownAtSMA*], [*KeyReversalUpAtEMA*], [*KeyReversalDownAtEMA*].
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Return value
@@ -1551,9 +1978,9 @@ period Number of bars included in the calculations
 ### Usage
 ```cs
 KeyReversalUp(int period)
-KeyReversalUp(IDataSeries input, int period)
+KeyReversalUp(IDataSeries inSeries, int period)
 KeyReversalUp(int period)[int barsAgo]
-KeyReversalUp(IDataSeries input, int period)[int barsAgo]
+KeyReversalUp(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Example
@@ -1563,17 +1990,18 @@ if (KeyReversalUp(10)[0] == 1)
 Print("A long reversal formation has occurred.");
 ```
 
-##KeyReversalDown
+## KeyReversalDown
 ### Description
-KeyReversalDown searches within a specified number of periods for turning points defined as such:
+KeyReversalDown searches within a predefined number of periods to find turning points with the following characteristics:
 
-1. The current close is lower than the previous close
-2. The current high is higher than or equal to the highest high of the last n bars
+1	The current close is lower than the previous close
+2	The current high is higher than or equal to the highest high of the last n bars
 
-See [*KeyReversalUp*], [*KeyReversalUpAtSMA*], [*KeyReversalDownAtSMA*], [*KeyReversalUpAtEMA*], [*KeyReversalDownAtEMA*].
+See [*KeyReversalUp*](#keyreversalup), [*KeyReversalUpAtSMA*](#keyreversalupatsma), [*KeyReversalDownAtSMA*](#keyreversaldownatsma), [*KeyReversalUpAtEMA*](#keyreversalupatema), [*KeyReversalDownAtEMA*](#keyreversaldownatema).
+
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 period Number of bars included in the calculations
 
 ### Return value
@@ -1585,9 +2013,9 @@ period Number of bars included in the calculations
 ### Usage
 ```cs
 KeyReversalDown(int period)
-KeyReversalDown(IDataSeries input, int period)
+KeyReversalDown(IDataSeries inSeries, int period)
 KeyReversalDown(int period)[int barsAgo]
-KeyReversalDown(IDataSeries input, int period)[int barsAgo]
+KeyReversalDown(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Example
@@ -1597,18 +2025,19 @@ if (KeyReversalDown(10)[0] == 1)
 Print("A short reversal formation has occurred.");
 ```
 
-##KeyReversalUpAtSMA
+## KeyReversalUpAtSMA
 ### Description
-KeyReversalUpAtSMA searches within a specified number of periods for turning points defined as such:
+KeyReversalUpAtSMA searches within a predefined number of periods to find turning points with the following characteristics:
 
-1. The current close is higher than the previous close
-2. The current low is smaller than or equal to the lowest low within n bars
-3. The current low has touched or breached an SMA
+1	The current close is higher than the previous close
+2	The current low is smaller than or equal to the lowest low within n bars
+3	The current low has touched or breached an SMA
 
-See [*KeyReversalUp*], [*KeyReversalDown*], [*KeyReversalDownAtSMA*], [*KeyReversalUpAtEMA*], [*KeyReversalDownAtEMA*].
+See [*KeyReversalUp*](#keyreversalup), [*KeyReversalDown*](#keyreversaldown), [*KeyReversalDownAtSMA*](#keyreversaldownatsma), [*KeyReversalUpAtEMA*](#keyreversalupatema), [*KeyReversalDownAtEMA*](#keyreversaldownatema).
+
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 period Number of bars included in the calculations
 SMAperiod Number of periods included in the calculation of the SMA
 
@@ -1621,9 +2050,9 @@ SMAperiod Number of periods included in the calculation of the SMA
 ### Usage
 ```cs
 KeyReversalUpAtSMA(int period, int SMAperiod)
-KeyReversalUpAtSMA(IDataSeries input, int period, int SMAperiod)
+KeyReversalUpAtSMA(IDataSeries inSeries, int period, int SMAperiod)
 KeyReversalUpAtSMA(int period, int SMAperiod)[int barsAgo]
-KeyReversalUpAtSMA(IDataSeries input, int period, int SMAperiod)[int barsAgo]
+KeyReversalUpAtSMA(IDataSeries inSeries, int period, int SMAperiod)[int barsAgo]
 ```
 
 ### Example
@@ -1633,18 +2062,19 @@ if (KeyReversalUpAtSMA(10)[0] == 1)
 Print("A long reversal formation has occurred.");
 ```
 
-##KeyReversalDownAtSMA
+## KeyReversalDownAtSMA
 ### Description
-KeyReversalDownAtSMA searches within a specified number of periods for a turning point defined as such:
+KeyReversalDownAtSMA searches within a predefined number of periods to find a turning point with the following characteristics:
 
-1. The current close is lower than the previous close
-2. The current high is higher than or equal to the highest high within the last n periods
-3. The current high has touched or breached an SMA
+1	The current close is lower than the previous close
+2	The current high is higher than or equal to the highest high within the last n periods
+3	The current high has touched or breached an SMA
 
-See [*KeyReversalUp*], [*KeyReversalDown*], [*KeyReversalUpAtSMA*], [*KeyReversalUpAtEMA*], [*KeyReversalDownAtEMA*].
+See [*KeyReversalUp*](#keyreversalup), [*KeyReversalDown*](#keyreversaldown), [*KeyReversalUpAtSMA*](#keyreversalupatsma), [*KeyReversalUpAtEMA*](#keyreversalupatema), [*KeyReversalDownAtEMA*](#keyreversaldownatema).
+
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 period Number of bars included in the calculations
 SMAperiod Number of periods included in the SMA calculation
 
@@ -1657,9 +2087,9 @@ SMAperiod Number of periods included in the SMA calculation
 ### Usage
 ```cs
 KeyReversalDownAtSMA(int period, int SMAperiod)
-KeyReversalDownAtSMA(IDataSeries input, int period, int SMAperiod)
+KeyReversalDownAtSMA(IDataSeries inSeries, int period, int SMAperiod)
 KeyReversalDownAtSMA(int period, int SMAperiod)[int barsAgo]
-KeyReversalDownAtSMA(IDataSeries input, int period, int SMAperiod)[int barsAgo]
+KeyReversalDownAtSMA(IDataSeries inSeries, int period, int SMAperiod)[int barsAgo]
 ```
 
 ### Example
@@ -1669,18 +2099,18 @@ if (KeyReversalDownAtSMA(10)[0] == 1)
 Print("A short reversal formation has occurred.");
 ```
 
-##KeyReversalUpAtEMA
+## KeyReversalUpAtEMA
 ### Description
-KeyReversalUpAtEMA searches within a specified number of periods for a reversal formation defined as such:
+KeyReversalUpAtEMA searches within a predefined number of periods to find a reversal formation with the following characteristics:
 
-1. The current close is higher than the previous close
-2. The current low is smaller than or equal to the lowest low within the last n bars
-3. The current low has touched or breached an EMA
+1	The current close is higher than the previous close
+2	The current low is smaller than or equal to the lowest low within the last n bars
+3	The current low has touched or breached an EMA
 
-See [*KeyReversalUp*], [*KeyReversalDown*], [*KeyReversalUpAtSMA*], [*KeyReversalDownAtSMA*], [*KeyReversalDownAtEMA*].
+See [*KeyReversalUp*](#keyreversalup), [*KeyReversalDown*](#keyreversaldown), [*KeyReversalUpAtSMA*](#keyreversalupatsma), [*KeyReversalDownAtSMA*](#keyreversaldownatsma), [*KeyReversalDownAtEMA*](#keyreversaldownatema).
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 period Number of bars included in the calculations
 EMAperiod Number of periods included in the EMA calculation
 
@@ -1693,9 +2123,9 @@ EMAperiod Number of periods included in the EMA calculation
 ### Usage
 ```cs
 KeyReversalUpAtEMA(int period, int EMAperiod)
-KeyReversalUpAtEMA(IDataSeries input, int period, int EMAperiod)
+KeyReversalUpAtEMA(IDataSeries inSeries, int period, int EMAperiod)
 KeyReversalUpAtEMA(int period, int EMAperiod)[int barsAgo]
-KeyReversalUpAtEMA(IDataSeries input, int period, int EMAperiod)[int barsAgo]
+KeyReversalUpAtEMA(IDataSeries inSeries, int period, int EMAperiod)[int barsAgo]
 ```
 
 ### Example
@@ -1705,18 +2135,18 @@ if (KeyReversalUpAtEMA(10)[0] == 1)
 Print("A long reversal formation has occurred.");
 ```
 
-##KeyReversalDownAtEMA
+## KeyReversalDownAtEMA
 ### Description
-KeyReversalDownAtEMA searches within a specified number of periods for a reversal formation defined as such:
+KeyReversalDownAtEMA searches within a predefined number of periods to find a reversal formation with the following characteristics:
 
-1. The current close is lower than the previous close
-2. The current high is larger than or equal to the highest high of the last n bars
-3. The current high has touched or breached an EMA
+1	The current close is lower than the previous close
+2	The current high is larger than or equal to the highest high of the last n bars
+3	The current high has touched or breached an EMA
 
-See [*KeyReversalUp*], [*KeyReversalDown*], [*KeyReversalUpAtSMA*], [*KeyReversalDownAtSMA*], [*KeyReversalUpAtEMA*].
+See [*KeyReversalUp*](#keyreversalup), [*KeyReversalDown*](#keyreversaldown), [*KeyReversalUpAtSMA*](#keyreversalupatsma), [*KeyReversalDownAtSMA*](#keyreversaldownatsma), [*KeyReversalUpAtEMA*](#keyreversalupatema).
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 period Number of bars included in the calculations
 EMAperiod Number of periods used to calculate the EMA
 
@@ -1730,9 +2160,9 @@ EMAperiod Number of periods used to calculate the EMA
 ### Usage
 ```cs
 KeyReversalDownAtEMA(int period, int EMAperiod)
-KeyReversalDownAtEMA(IDataSeries input, int period, int EMAperiod)
+KeyReversalDownAtEMA(IDataSeries inSeries, int period, int EMAperiod)
 KeyReversalDownAtEMA(int period, int EMAperiod)[int barsAgo]
-KeyReversalDownAtEMA(IDataSeries input, int period, int EMAperiod)[int barsAgo]
+KeyReversalDownAtEMA(IDataSeries inSeries, int period, int EMAperiod)[int barsAgo]
 ```
 
 ### Example
@@ -1742,12 +2172,32 @@ if (KeyReversalDownAtEMA(10)[0] == 1)
 Print("A short reversal formation has occurred.");
 ```
 
-##Linear Regression
-### Description
-The linear regression is used for trend determination. The prices are set as dependent variables and time is set as an independent variable. Using the method to determine the smallest square, a straight line is placed through the price movements in such a way that the distance between the prices and the line deviates minimally. This method also establishes a trend between two points in time. The regression line is found in the middle of the price channel.
-The indicator provides the end values of multiple linear regression trend lines. Every point along this indicator is thus an end value of a linear regression trend line. The result is similar to a smoothing average, with the difference being that the regression line has less lag.
+## KlingerVolumeOscillator
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
 
-See [*R-Squared*], [*LinRegSlope*], [*LinRegIntercept*].
+### Description
+The KlingerVolumeOscillator is a technical indicator that was developed by Stephen Klinger in order to determine long-term trends of the money flow. At the same time, the indicator is sensitive enough to also identify short-term fluctuations, thereby giving the trader the possibility to detect even short-term reversals in the market. The indicator compares the influent and effluent volume of an instrument with its price movements, and is outputted as an oscillator. A signal line (13-period moving average) is used for generating signals. Divergences in the KlingerVolumeOscillator in comparison to the price movement can also be used for entry and exit decisions. A bullish signal is formed when the KlingerVolumeOscillator start to rise while the price continues to fall; the opposite goes for a bearish signal.
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![KlingerVolumeOscillator](./media/KlingerVolumeOscillator.png)
+
+### Example
+to be announced
+
+## Linear Regression
+### Description
+Linear Regression is used to determine trends. Here, the prices are set as dependent variables, and time is set as an independent variable. Using the method for determination of the smallest square, a straight line is placed through the price movements in such a way that the distance between the prices and the line deviates as little as possible. Using this method also establishes a trend between two points in time. The regression line can be found in the middle of the price channel, and the indicator provides the end values of multiple linear regression trend lines. Each point along this indicator is therefore an end value of a linear regression trend line. What results is quite similar to a smoothing average, with the difference that the regression line exhibits less lag.
+
+See [*R-Squared*](#r-squared), [*LinRegSlope*](#linregslope), [*LinRegIntercept*](#linregintercept).
 
 ### Further information
 <http://www.vtad.de/sites/files/forschung/vtad\_Award\_2011\_Joachim\_Lenz\_Veroeffentlichung.pdf>
@@ -1758,9 +2208,9 @@ The linear regression indicator is used as a prognosis tool for the future devel
 ### Usage
 ```cs
 LinReg(int period)
-LinReg(IDataSeries input, int period)
+LinReg(IDataSeries inSeries, int period)
 LinReg(int period)[int barsAgo]
-LinReg(IDataSeries input, int period)[int barsAgo]
+LinReg(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -1769,12 +2219,12 @@ LinReg(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **LinReg**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![Linear Regression](./media/image37.png)
+![Linear Regression](./media/LinReg.jpg)
 
 ### Example
 ```cs
@@ -1782,13 +2232,13 @@ period Number of bars included in the calculations
 Print("The current value for the linear regression is: " + LinReg(14)[0]);
 ```
 
-##LinRegIntercept
+## LinRegIntercept
 ### Description
-The Linear Regression Intercept delivers the value of the regression constant, meaning the mathematical intersection of the regression line with the price axis.
+The Linear Regression Intercept outputs the value of the regression constant, i.e. the mathematical intersection of where the regression line meets the price axis.
 
-A straight line can be accurately determined by using the slope and intercept values.
+A straight line can be accurately determined with the help of the slope and intercept values.
 
-See [*Linear Regression*], [*R-Squared,*][*R-Squared*] [*LinRegSlope*].
+See [*Linear Regression*](#linearregression), [*R-Squared*](#r-squared) [*LinRegSlope*](#linregslope).
 
 ### Interpretation
 The indicator is not used by itself, but is simply a component of trading systems that analyze trade trends with the help of the linear regression.
@@ -1796,9 +2246,9 @@ The indicator is not used by itself, but is simply a component of trading system
 ### Usage
 ```cs
 LinRegIntercept(int period)
-LinRegIntercept(IDataSeries input, int period)
+LinRegIntercept(IDataSeries inSeries, int period)
 LinRegIntercept(int period)[int barsAgo]
-LinRegIntercept(IDataSeries input, int period)[int barsAgo]
+LinRegIntercept(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -1807,12 +2257,12 @@ LinRegIntercept(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **LinRegIntercept**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![LinRegIntercept](./media/image38.png)
+![LinRegIntercept](./media/LinRegIntercept.jpg)
 
 ### Example
 ```cs
@@ -1820,11 +2270,11 @@ period Number of bars included in the calculations
 Print("The current value of the regression constant is: " + LinRegIntercept(14)[0]);
 ```
 
-##LinRegSlope
+## LinRegSlope
 ### Description
-The Linear Regression Slope delivers the slope of the linear regression line. It is a measurement of the “elevation” of the regression line.
+The Linear Regression Slope outputs the slope of the linear regression line, and is a measurement of the regression line’s “elevation”.
 
-See [*Linear Regression*], [*R-Squared*], [*LinRegIntercept*].
+See [*Linear Regression*](#linearregression), [*R-Squared*](#r-squared), [*LinRegIntercept*](#linregintercept).
 
 ### Interpretation
 Simply put: in an uptrend, the elevation is positive and facing upwards. The opposite applies to downtrends.
@@ -1833,9 +2283,9 @@ This indicator is not very useful for determining overbought or oversold areas, 
 ### Usage
 ```cs
 LinRegSlope(int period)
-LinRegSlope(IDataSeries input, int period)
+LinRegSlope(IDataSeries inSeries, int period)
 LinRegSlope(int period)[int barsAgo]
-LinRegSlope(IDataSeries input, int period)[int barsAgo]
+LinRegSlope(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -1844,12 +2294,12 @@ LinRegSlope(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **LinRegSlope**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![LinRegSlope](./media/image39.png)
+![LinRegSlope](./media/LinRegSlope.jpg)
 
 ### Example
 ```cs
@@ -1857,14 +2307,14 @@ period Number of bars included in the calculations
 Print("The current value for the inclination of the linear regression line is: " + LinRegSlope(14)[0]);
 ```
 
-##LowestLowIndex()
+## LowestLowIndex()
 ### Description
-LowestLowIndex outputs the index of the bar with the lowest low within a specified number of periods.
+LowestLowIndex delivers the index of the bar with the lowest low within a predefined number of periods.
 
-In contrast to LowestBar(), this indicator can be displayed within a chart.
+Differently to GetSerieLowestValue(), one can display this indicator within a chart.
 
-See [*HighestHighPrice()*], [*HighestHighIndex()*], [*LowestLowPrice()*],
-*HighestBar()*, *LowestBar()*.
+See [*HighestHighPrice()*](#highesthighprice), [*HighestHighIndex()*](#highesthighindex), [*LowestLowPrice()*](#lowestlowprice),
+*GetSerieHighestValue()*, *GetSerieLowestValue()*.
 
 ### Usage
 ```cs
@@ -1882,7 +2332,7 @@ When using this method with an index (e.g. **LowestLowIndex**(14)\[**int** barsA
 BarsBack Number of periods within which the highest high shall be searched for
 
 ### Visualization
-![LowestLowIndex()](./media/image40.png)
+![LowestLowIndex()](./media/LowestLowIndex.jpg)
 
 ### Example
 ```cs
@@ -1890,14 +2340,14 @@ BarsBack Number of periods within which the highest high shall be searched for
 Print("The lowest low of the last 14 bars was " + LowestLowIndex(14)[0] + " bars ago.");
 ```
 
-##LowestLowPrice()
+## LowestLowPrice()
 ### Description
-LowestLowPrice outputs the value of the lowest low within a specified number of periods.
+LowestLowPrice delivers the value of the lowest low within a predefined number of periods.
 
-In contrast to LowestBar(), this indicator can be displayed within the chart.
+Unlike the GetSerieLowestValue(), this indicator can be viewed within the chart.
 
-See [*HighestHighPrice()*], [*HighestHighIndex()*], *[LowestLowIndex]()*,
-*HighestBar()*, *LowestBar()*.
+See [*HighestHighPrice()*](#highesthighprice), [*HighestHighIndex()*](#highesthighindex), *[LowestLowIndex]()*,
+*GetSerieHighestValue()*, *GetSerieLowestValue()*.
 
 ### Usage
 ```cs
@@ -1914,7 +2364,7 @@ When using this method with an index (e.g. **LowestLowPrice**(14)\[**int** barsA
 BarsBack Number of periods within which the low will be searched for
 
 ### Visualization
-![LowestLowPrice()](./media/image41.png)
+![LowestLowPrice()](./media/LowestLowPrice.jpg)
 
 ### Example
 ```cs
@@ -1922,16 +2372,18 @@ BarsBack Number of periods within which the low will be searched for
 Print("The lowest low of the last 14 bars is " + LowestLowPrice(14)[0]);
 ```
 
-##MACD
+## MACD
 ### Description
-Developed by Gerald Appel in the late seventies, the Moving Average Convergence-Divergence (MACD) indicator is one of the simplest and most effective momentum indicators available. The MACD turns two trend-following indicators, [moving averages][*average*], into a momentum oscillator by subtracting the longer moving average from the shorter moving average. As a result, the MACD offers the best of both worlds: trend following and momentum. The MACD fluctuates above and below the zero line as the moving averages converge, cross and diverge. Traders can look for signal line crossovers, centerline crossovers and divergences to generate signals. Because the MACD is unbounded, it is not particularly useful for identifying overbought and oversold levels. The MACD line is the 12-day [Exponential Moving Average][*average*] (EMA) less the 26-day EMA. Closing prices are used for these moving averages. A 9-day EMA of the MACD line is plotted with the indicator to act as a signal line and identify turns. The MACD histogram represents the difference between MACD and its 9-day EMA, the signal line. The histogram is positive when the MACD line is above its signal line and negative when the MACD line is below its signal line.
+The Moving Average Convergence-Divergence (MACD) indicator, developed by Gerald Appel in the late 70s, is one of the simplest, most effective momentum indicators out there. The MACD makes two trend-following indicators, moving averages, average, become a momentum oscillator by subtracting the longer moving average from the shorter moving average. As a result of this, the MACD offers great advantages: trend following and momentum. The MACD moves above and below the zero line as the moving averages converge, cross and diverge again. Signal line crossovers, centerline crossovers and divergences are things that traders can keep an eye out for to generate signals. Since the MACD is unbounded, it is not especially useful for identifying overbought or oversold levels. The MACD line is the 12-day Exponential Moving Average (EMA) minus the 26-day EMA, and closing prices are used for these moving averages. A 9-day EMA of the MACD line is plotted with the indicator acting as a signal line and identifying turns. The MACD histogram shows the difference between the MACD and its 9-day EMA, i.e. the signal line. When the MACD line is above its signal line, the histogram is positive, and vice versa when the MACD line is below its signal line.
 
-The values of 12, 26 and 9 are the typical settings used with the MACD, however other values can be substituted depending on your trading style and goals.
+The typical settings used with the MACD are the values 12, 26 and 9. However, other values can also be used depending on the trading style and goals in mind.
+
+
 
 ### Interpretation
 As its name implies, the MACD is all about the convergence and divergence of the two moving averages. Convergence occurs when the moving averages move towards each other. Divergence occurs when the moving averages move away from each other. The shorter moving average (12-day) is faster and responsible for most MACD movements. The longer moving average (26-day) is slower and less reactive to price changes in the underlying security.
 
-The MACD line oscillates above and below the zero line, which is also known as the centerline. These crossovers signal that the 12-day EMA has crossed the 26-day EMA. The direction, of course, depends on the direction of the moving average cross. Positive MACD indicates that the 12-day EMA is above the 26-day EMA. Positive values increase as the shorter EMA diverges further from the longer EMA. This means upside momentum is increasing. Negative MACD values indicate that the 12-day EMA is below the 26-day EMA. Negative values increase as the shorter EMA diverges further below the longer EMA. This means downside [momentum] is increasing. Signal line crossovers are the most common MACD signals. The signal line is a 9-day EMA of the MACD line. As a moving average of the indicator, it trails the MACD and makes it easier to spot MACD turns. A bullish crossover occurs when the MACD turns up and crosses above the signal line. A bearish crossover occurs when the MACD turns down and crosses below the signal line. Crossovers can last a few days or a few weeks, it all depends on the strength of the move.
+The MACD line oscillates above and below the zero line, which is also known as the centerline. These crossovers signal that the 12-day EMA has crossed the 26-day EMA. The direction, of course, depends on the direction of the moving average cross. Positive MACD indicates that the 12-day EMA is above the 26-day EMA. Positive values increase as the shorter EMA diverges further from the longer EMA. This means upside momentum is increasing. Negative MACD values indicate that the 12-day EMA is below the 26-day EMA. Negative values increase as the shorter EMA diverges further below the longer EMA. This means downside [momentum](#momentum) is increasing. Signal line crossovers are the most common MACD signals. The signal line is a 9-day EMA of the MACD line. As a moving average of the indicator, it trails the MACD and makes it easier to spot MACD turns. A bullish crossover occurs when the MACD turns up and crosses above the signal line. A bearish crossover occurs when the MACD turns down and crosses below the signal line. Crossovers can last a few days or a few weeks, it all depends on the strength of the move.
 
 Due diligence is required before relying on these common signals. Signal line crossovers at positive or negative extremes should be viewed with caution. Even though the MACD does not have upper and lower limits, chartists can estimate historical extremes with a simple visual assessment. It takes a strong move in the underlying security to push momentum to an extreme. Even though the move may continue, momentum is likely to slow and this will usually produce a signal line crossover at the extremities. Volatility in the underlying security can also increase the number of crossovers.
 
@@ -1941,19 +2393,19 @@ VTAD: <http://vtadwiki.vtad.de/index.php/MACD>
 ### Usage
 ```cs
 MACD(int fast, int slow, int smooth)
-MACD(IDataSeries input, int fast, int slow, int smooth)
+MACD(IDataSeries inSeries, int fast, int slow, int smooth)
 
 //For the value of the MACD line
 MACD(int fast, int slow, int smooth)[int barsAgo]
-MACD(IDataSeries input, int fast, int slow, int smooth)[int barsAgo]
+MACD(IDataSeries inSeries, int fast, int slow, int smooth)[int barsAgo]
 
 //For the value of the signal line
 MACD(int fast, int slow, int smooth).Avg[int barsAgo]
-MACD(IDataSeries input, int fast, int slow, int smooth).Avg[int barsAgo]
+MACD(IDataSeries inSeries, int fast, int slow, int smooth).Avg[int barsAgo]
 
 //For the difference between the MACD and the signal line
 MACD(int fast, int slow, int smooth).Diff[int barsAgo]
-MACD(IDataSeries input, int fast, int slow, int smooth).Diff[int barsAgo]
+MACD(IDataSeries inSeries, int fast, int slow, int smooth).Diff[int barsAgo]
 ```
 
 ### Return value
@@ -1962,7 +2414,7 @@ MACD(IDataSeries input, int fast, int slow, int smooth).Diff[int barsAgo]
 When using this method with an index (e.g. **MACD**(12,26,9)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 fast Number of periods for the fast EMA calculation
 
@@ -1971,7 +2423,7 @@ slow Number of periods for the slow EMA calculation
 smooth Number of periods for the EMA calculation of the signal line
 
 ### Visualization
-![MACD](./media/image42.png)
+![MACD](./media/MACD.jpg)
 
 ### Example
 ```cs
@@ -1981,32 +2433,33 @@ Print("The current value for the signal line is: " + MACD(12,26,9).Avg[0]);
 Print("The difference between the MACD and the signal line is: " + MACD(12,26,9).Diff[0]);
 ```
 
-##MAEnvelopes
+## MAEnvelopes
 ### Description
-Moving Average Envelopes are percentage-based envelopes set above and below a moving average. The moving average, which forms the base for this indicator, can be a simple or exponential moving average. Each envelope is then set the same percentage above or below the moving average. This creates parallel bands that follow price action. With a moving average as the base, Moving Average Envelopes can be used as a trend-following indicator. However, this indicator is not limited to just trend following. The envelopes can also be used to identify overbought and oversold levels when the trend is relatively flat.
+These Moving Average Envelopes are percentage-based envelopes placed above and below a moving average. The moving average forms the base for this indicator, and can be a either simple or exponential moving average. Each MA envelope is set the same percentage above or below the moving average, thereby creating parallel bands that follow price action. Moving Average Envelopes can be used as a trend-following indicator with a moving average as the base. But this indicator is not limited to just trend following: the envelopes can also be used for spotting overbought and oversold levels when the trend is relatively flat.
 
-Indicators based on channels, bands and envelopes are designed to encompass most price action. Therefore, moves above or below the envelopes warrant attention. Trends often start with strong moves in one direction or another. A surge above the upper envelope shows extraordinary strength, while a plunge below the lower envelope shows extraordinary weakness. Such strong moves can signal the end of one trend and the beginning of another.
+Indicators based on channels, bands and envelopes are intended to encompass most price action, which is why moves above or below the envelopes deserve attention. Trends often start with sharp moves in one direction – a surge above the upper envelope shows extraordinary strength, while a dive below the lower envelope exhibits extraordinary weakness. Strong moves such as these can signal the end of one trend and the start of another.
 
-With a [*moving average*][*average*] as its foundation, Moving Average Envelopes are a natural trend-following indicator. As with moving averages, the envelopes will lag price action. The direction of the moving average dictates the direction of the channel. In general, a downtrend is present when the channel moves lower, while an uptrend exists when the channel moves higher. The trend is flat when the channel moves sideways.
+With a *moving average* as the foundation, Moving Average Envelopes are a trend-following indicator. As with moving averages, the envelopes lag price action. The direction of the moving average dictates the direction of the channel, so generally, when the channel moves lower, a downtrend exists, and when the channel goes higher, an uptrend is present. When the channel moves sideways, this signifies that the trend is flat.
 
-Sometimes a strong trend does not take hold after an envelope break and prices move into a trading range. Such trading ranges are marked by a relatively flat moving average. The envelopes can then be used to identify overbought and oversold levels for trading purposes. A move above the upper envelope denotes an overbought situation, while a move below the lower envelope marks an oversold condition.
+Occasionally, it happens that a strong trend does not establish itself after an envelope break, and prices move into a trading range. Trading ranges such as these are characterized by a relatively flat moving average. These envelopes can then be used to spot overbought and oversold levels. A move above the upper envelope shows an overbought situation; a move below the lower envelope signals an oversold situation.
+
 
 ### Usage
 ```cs
 MAEnvelopes(double envelopePercentage, MAEnvelopesMAType maType, int period)
-MAEnvelopes(IDataSeries input, double envelopePercentage, MAEnvelopesMAType maType, int period)
+MAEnvelopes(IDataSeries inSeries, double envelopePercentage, MAEnvelopesMAType maType, int period)
 
 //For the upper band
 MAEnvelopes(double envelopePercentage, MAEnvelopesMAType maType, int period).Upper[int barsAgo]
-MAEnvelopes(IDataSeries input, double envelopePercentage, MAEnvelopesMAType maType, int period).Upper[int barsAgo]
+MAEnvelopes(IDataSeries inSeries, double envelopePercentage, MAEnvelopesMAType maType, int period).Upper[int barsAgo]
 
 //For the middle band
 MAEnvelopes(double envelopePercentage, MAEnvelopesMAType maType, int period).Middle[int barsAgo]
-MAEnvelopes(IDataSeries input, double envelopePercentage, MAEnvelopesMAType maType, int period).Middle[int barsAgo]
+MAEnvelopes(IDataSeries inSeries, double envelopePercentage, MAEnvelopesMAType maType, int period).Middle[int barsAgo]
 
 //For the lower band
 MAEnvelopes(double envelopePercentage, MAEnvelopesMAType maType, int period).Lower[int barsAgo]
-MAEnvelopes(IDataSeries input, double envelopePercentage, MAEnvelopesMAType maType, int period).Lower[int barsAgo]
+MAEnvelopes(IDataSeries inSeries, double envelopePercentage, MAEnvelopesMAType maType, int period).Lower[int barsAgo]
 ```
 
 ### Return value
@@ -2015,22 +2468,22 @@ MAEnvelopes(IDataSeries input, double envelopePercentage, MAEnvelopesMAType maTy
 When using this method with an index (e.g. **MAEnvelopes**(14,SMA,1.5)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+v Input data series for the indicator
 
 period Number of bars included in the calculations
 
 envelopePercentage Distance of the upper and lower bands from the middle line in percent
 
 maType Type of moving average used, possible choices are:
-- EMA
-- HMA
-- SMA (default)
-- TMA
-- TEMA
-- WMA
+-   EMA
+-   HMA
+-   SMA (default)
+-   TMA
+-   TEMA
+-   WMA
 
 ### Visualization
-![MAEnvelopes](./media/image43.png)
+![MAEnvelopes](./media/MAEnvelopes.jpg)
 
 ### Usage
 ```cs
@@ -2044,13 +2497,16 @@ Print("Middle band of the MA Envelope: " + MAEnvelopes(1.5, MAEnvelopesMAType.SM
 Print("Lower band of the MA Envelope: " + MAEnvelopes(1.5, MAEnvelopesMAType.SMA, 14).Lower[0]);
 ```
 
-##MarketPhases
-**The installation of the Technical Analysis Package is required in order to access this indicator.**
+## MarketPhases
+**The installation of the Dow Theory Standard or Professional Package is required in order to access this indicator.**
 
 ### Description
-The Market Phases Indicator is another important component of the Technical Analysis Package. It is based on integrated trend detection for the relevant trading market phases.
+The Market Phases Indicator is another important component of the Technical Analysis Package, and is based on integrated trend detection for the various relevant trading market phases.
 
-The market phases are defined according to the book series “*Der Händler*” (“The Trader”) by Michael Voigt.
+The market phases are defined according to the book series “Der Händler” (“The Trader”) by Michael Voigt.
+
+**Important tip**
+MarketPhases indicators  are very history sensitive and need at least up to 2000 intraday candles to see good results.
 
 **Phase 3:**
 
@@ -2087,7 +2543,7 @@ Market phases 1, 2, 6, and 9 are not relevant for successful trading.
 ### Depiction in the chart
 No parameters are required.
 
-![MarketPhases in chart window](./media/image49.png)
+![MarketPhases in chart window](./media/MarketPhases.jpg)
 
 ### Usage in AgenaScript
 The indicator provides the following values for the market phases:
@@ -2098,9 +2554,9 @@ Phase 4: 4
 
 Phase 5: 5
 
-Phase 5+ 55
+Phase 5+ 5.1
 
-Prom Queen 66
+Prom Queen 5.2
 
 In a downtrend, the values are prefixed with a “-“ sign. If the market phase is not defined, then the value 0 is returned.
 ```cs
@@ -2113,37 +2569,141 @@ trendsize: trend size from 0 .. 3
 
 **Caution:**
 
-For a comparison of double values such as: **if** (**MarketPhases**(1)\[0\] == 55) ...we recommend that you use the following instead:
+For a comparison of double values such as: **if** (**MarketPhases**(1)\[0\] == 5.1) ...we recommend that you use the following instead:
 ```cs
-bool goLong = Math.Abs(MarketPhases(1)[0] - 55) <= Double.Epsilon;
+bool goLong = Math.Abs(MarketPhases(1)[0] - 5.1) <= Double.Epsilon;
 ```
 
 ### Usage within the Condition Escort
-When using market phases within AgenaScript, the indicator provides a data series that has the aforementioned values of +/-3, 4, 5, 55, 66.
+When using market phases within AgenaScript, the indicator provides a data series that has the aforementioned values of +/-3, 4, 5, 5.1, 5.2.
 
-You can use the indicator as a filter by using the signals of other indicators when they are inside the market phases 55 or 66 (long):
+You can use the indicator as a filter by using the signals of other indicators when they are inside the market phases 5.1 or 5.2(long):
 
-![Condition Escort](./media/image50.png)
+![Condition Escort](./media/MarketPhases.png)
 
-##Momentum (MOM)
+**Important tip**
+The scanner and chart use a different history calculation. Since Dow Theory indicators are very bar sensitive we cannot guarantee 100% synchronization between results show in the chart and the scanner. We recommend to reload the data in the scanner from time to time to avoid to big discrepancies.
+If you want to use  MarketPhases (also Pro and Advanced version) indicator in conjunction with the scanner, the following settings are required:
+
+- Chart settings:
+  - Bars count
+  - Time frame
+
+- Scanner column settings:
+  - Bars required
+  - Time frame
+
+These chart and column settings should be identical.  
+
+![MarketPhasesChart](./media/MarketPhases_chart.png)
+
+![MarketPhasesScanner](./media/MarketPhases_scanner.png)
+
+### MarketPhases Pro Description
+
+**Phase5Level**
+How many percents the price correction must be to become a valid market phase 5.
+
+**Phase4Level**
+How many percents the price correction must be to become a valid market phase 4.
+
+### Usage
+As this indicator ignores the input series, user can use only these 2 methods:
+
+```cs
+public MarketPhasesPro MarketPhasesPro(Int32 trendSize,
+            double phase4Level,
+            double phase5Level,
+            P123ProValidationMethod validationMethod,
+            double p2Distance,
+            double p3Distance,
+            double p3BreakageDistance,
+            bool breakTheTrendByCS)
+
+public MarketPhasesPro MarketPhasesPro(Int32 trendSize,
+            P123ProValidationMethod validationMethod,
+            double p2Distance,
+            double p3Distance,
+            double p3BreakageDistance,
+            bool breakTheTrendByCS)
+```
+### Parameter
+
+phase4Level = 0.2 (0.2 = 20%)
+phase5Level = 0.5 (0.5 = 50%)
+
+The parameters trendSize, validationMethod, p2Distance, p3Distance, p3BreakageDistance and breakTheTrendByCS are only for the P123 indicator which is used within the MarketPhasesPro.
+These parameters can be checked under P123Pro descripption.
+
+The most important parameter is the "int trendSize" parameter. It defines which trend is checked
+
+The output value is the phase in the specific trend (1, 2, 3, 4, 5, 5.1, 5.2, 5.3 / as well as the negative values when short direction, see screenshot)
+
+![MarketPhasesPro](./media/MarketPhasesPro.png)
+
+### Example
+```cs
+MarketPhasesPro(0, P123ProValidationMethod.Correction, 0, 0, 0, false)[0] == 4 //check if the big trend is in phase 4 (Long)
+
+            MarketPhasesPro(3, 0.3, 0.6, P123ProValidationMethod.Correction, 0, 0, 0, false)[0] == -5.3 //check if the smallest trend is in phase 5+ (Prom Queen) (Short, phase4Level = 0.3, phase5Level = 0.6)
+
+```
+
+## MarketValue
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
 ### Description
-Momentum is one of the more popular indicators. Many traders swear by this rather simple indicator, because it measures the attenuation of the motion without having to use complex formulas.
-The momentum indicator is representative of a whole family of indicators that measure the strength of a movement. Other representatives in this case are RSI or CCI etc. In the illustration below, the indicator is a graph that oscillates about a zero point. There is no fixed scale in percentage terms. The value can be removed quite far from the zero point; this generally happens when the price makes an unusually strong jump, thus the indicator primarily shows the direction in which the current prices are moving to.
+This indicator compares the value of a market with the current price of gold or the dollar index. This means that markets are placed in relation to the gold price or the dollar, whereby over- and undervaluation can be determined very well in instruments.
+
+A low MarketValue means that a market is cheap relative to gold/dollar index; vice versa, a higher value means that the market is relatively expensive.
+
+In general, commodities should be compared to the gold price, and financials to the dollar index. However, depending on the market environment, it may be useful to deviate from this rule.
+
+The following parameters are available for the MarketValue:
+
+- **CompareTo:** select [Gold/Dollar Index] depending on which market the current symbol should be placed in relation to.
+
+- **EMA1:** this is a period that is necessary for calculating the data. If you do not have detailed information about how this indicator works, please leave this period on the default settings. (Default value = 21)
+
+- **EMA2:** this is an EMA period that is necessary for calculating the data. If you do not have detailed information about how this indicator works, please leave this period on the standard settings. (Default value = 3)
+
+It is not yet possible to use the MarketValue indicator in the ConditionEscort, since a multi-instrument indicator cannot be depicted there. Since the MarketValue requires the price data from the current chart and also from gold i.e. the dollar index, this is a multi-instrument indicator, which, as mentioned, currently cannot be represented in the ConditionEscort.
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![MarketValue](./media/MarketValue.png)
+
+### Example
+to be announced
+
+
+## Momentum (MOM)
+### Description
+Momentum is one of the most popular indicators available, the first choice of many traders. This relatively simple indicator is so popular because it measures the attenuation of the motion without the need for complex formulas. The momentum indicator represents a whole family of indicators that measure a movement’s strength. Other representatives in this case are the RSI or CCI, and so on. In the illustration below, the indicator is a graph that oscillates around a zero point. There is no fixed scale in percentage terms, and the value can be quite far removed from the zero point; this usually happens when the price makes an exceptionally strong leap, which is why the indicator predominantly shows the direction in which the current prices are moving towards.
+
 
 ### Interpretation
 Entry signals are generated when the indicator crosses the zero line.
 
-See [*ROC*].
+See [*ROC*](#rate-of-change-roc).
 
 ### Further information
-<http://de.wikipedia.org/wiki/Momentum\_%28Chartanalyse%29>
+[http://de.wikipedia.org/wiki/Momentum_%28Chartanalyse%29](http://de.wikipedia.org/wiki/Momentum_%28Chartanalyse%29)
 
 ### Usage
 ```cs
 Momentum(int period)
-Momentum (IDataSeries input, int period)
+Momentum (IDataSeries inSeries, int period)
 Momentum (int period)[int barsAgo]
-Momentum (IDataSeries input, int period)[int barsAgo]
+Momentum (IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -2152,12 +2712,12 @@ Momentum (IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **Momentum**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![Momentum (MOM)](./media/image51.png)
+![Momentum (MOM)](./media/Momentum.jpg)
 
 ### Example
 ```cs
@@ -2165,22 +2725,23 @@ period Number of bars included in the calculations
 Print("The current value for the momentum is " + Momentum(14)[0]);
 ```
 
-##Money Flow Index (MFI)
+## Money Flow Index (MFI)
 ### Description
-The Money Flow Index (MFI) is an oscillator that uses both price and volume to measure buying and selling pressure. Created by Gene Quong and Avrum Soudack, MFI is also known as volume-weighted [RSI][*RSI*]. MFI starts with the typical price for each period. Money flow is positive when the typical price rises (buying pressure) and negative when the typical price declines (selling pressure). A ratio of positive and negative money flow is then plugged into an RSI formula to create an oscillator that moves between zero and one hundred. As a momentum oscillator tied to volume, the Money Flow Index (MFI) is best suited to identify reversals and price extremes with a variety of signals.
+The MFI is an oscillator that makes use of both volume and price to measure buying and selling pressure. MFI, which was developed by Gene Quong and Avrum Soudack, is also known as volume-weighted [*RSI*](#relative-strength-index-rsi). MFI starts with the typical price for each period. Money flow is then positive when this aforementioned typical price increases (buying pressure) and negative when it decreases (selling pressure). A ratio of positive-negative money flow is then inserted into an RSI formula to come up with an oscillator that fluctuates between 0 and 100. The MFI, which is a momentum oscillator linked to volume, is best used for identifying reversals and price extremes with a variety of different signals.
+
 
 ### Interpretation
 The MFI is interpreted similarly to the RSI indicator. The MFI’s decisive factor is much stronger than the RSI’s when it comes to trend direction, due to the fact that volume is included in the calculation.
 
 ### Further information
-VTAD: <http://vtadwiki.vtad.de/index.php/ Money\_Flow\_Index>
+VTAD: [http://vtadwiki.vtad.de/index.php/Money_Flow_Index](http://vtadwiki.vtad.de/index.php/Money_Flow_Index)
 
 ### Usage
 ```cs
 MFI(int period)
-MFI(IDataSeries input, int period)
+MFI(IDataSeries inSeries, int period)
 MFI(int period)[int barsAgo]
-MFI(IDataSeries input, int period)[int barsAgo]
+MFI(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -2189,12 +2750,12 @@ MFI(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **MFI**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![Money Flow Index (MFI)](./media/image52.png)
+![Money Flow Index (MFI)](./media/MoneyFlowIndex.jpg)
 
 ### Example
 ```cs
@@ -2202,38 +2763,38 @@ period Number of bars included in the calculations
 Print("The current value for the MFI is: " + MFI(14)[0]);
 ```
 
-##Moving Averages
+## Moving Averages
 ### Variants
-[*DEMA*] - Double Exponential Moving Average
+[*DEMA*](#dema-double-exponential-moving-average) - Double Exponential Moving Average
 
-[*EMA*] - Exponential Moving Average
+[*EMA*](#ema-exponential-moving-average) - Exponential Moving Average
 
-[*HMA*] - Hull Moving Average
+[*HMA*](#hma-hull-moving-average) - Hull Moving Average
 
-[*KAMA*] - Kaufman's Adaptive Moving Average
+[*KAMA*](#kama-kaufmans-adaptive-moving-average) - Kaufman's Adaptive Moving Average
 
-[*MAMA*] - Mesa Adaptive Moving Average
+[*MAMA*](#mama-mesa-adaptive-moving-average) - Mesa Adaptive Moving Average
 
-[*SMA*] - Simple Moving Average
+[*SMA*](#sma-simple-moving-average) - Simple Moving Average
 
-[*TEMA*] - Triple Exponential Moving Average
+[*TEMA*](#tema-triple-exponential-moving-average) - Triple Exponential Moving Average
 
-[*TMA*] - Triangular Moving Average
+[*TMA*](#tma-triangular-moving-average) - Triangular Moving Average
 
-[*TRIX*] - Triple Exponential Moving Average
+[*TRIX*](#trix-triple-exponential-moving-average) - Triple Exponential Moving Average
 
-[*T3*] - Triple Exponential Moving Average
+[*T3*](#t3-triple-exponential-moving-average) - Triple Exponential Moving Average
 
-[*VMA*] - Variable Moving Average
+[*VMA*](#vma-variable-moving-average) - Variable Moving Average
 
-[*VWMA*] - Volume Weighted Moving Average
+[*VWMA*](#vwma-volume-weighted-moving-average) - Volume Weighted Moving Average
 
-[*WMA*][*VMA*] - Weighted Moving Average
+[*WMA*](#wma-weighted-moving-average), [*VMA*](#vma-variable-moving-average) - Weighted Moving Average
 
-[*ZLEMA*] - Zero Lag Exponential Moving Average
+[*ZLEMA*](#zlema-zero-lag-exponential-moving-average) - Zero Lag Exponential Moving Average
 
 ### Interpretation
-The arithmetic average, also known as the moving average or simple moving average, smoothes the progression of the price for better trend detection. Moving averages are trend-following indicators; they follow the course and do not lead. Rising averages show uptrends, whereas falling averages display downtrends.
+The arithmetic average, also known as the moving average or simple moving average, smoothes the progression of the price for better trend detection. Moving averages are trend-following indicators; they follow the course and do not lead. IsSerieRising averages show uptrends, whereas falling averages display downtrends.
 By varying the period input, the time delay of the average can be changed. The smaller the period interval, the quicker the reaction time will be, but as a consequence, the smoothing effect will also be diminished. The opposite is true when increasing the period selection. The most popular choices are: 38, 50, 100 and 200 days. The 200-day moving average in particular has a significant importance for institutional traders, since it displays the long-term trend. 200 trading days are equal to a trading year. When the 200 MA is broken, then buy/sell signals are generated.
 
 ### Applications
@@ -2251,9 +2812,9 @@ If the short-term average crosses the long-term average from above, this is call
 Another method is to use three moving averages (Triple Crossover Method). This method was presented by R.C Allen, who used the 4, 9, and 18-day averages and suggested that a trend change is hinted at when the 4MA crosses the 9MA from bottom to top. An entry is only recommended when all lines are above the 18-day period. An exit is initiated when the 4-day MA moves below the 9-day MA.
 (Source: VTAD)
 
-##DEMA - Double Exponential Moving Average
+## DEMA - Double Exponential Moving Average
 ### Description
-The DEMA is a technical indicator developed by Patrick Mulloy. The calculation is based on a simple as well as a double exponential moving average.
+The Double Exponential Moving Average is a technical indicator created by Patrick Mulloy. The calculation hereof is done using a simple as well as a double exponential moving average.
 
 ### Interpretation
 The DEMA is a fast-working moving average that reacts quicker to market changes. The DEMA may be used as a stand-alone indicator or in tandem with other indicators.
@@ -2262,9 +2823,9 @@ The general interpretations are the same as for regular moving averages.
 ### Usage
 ```cs
 DEMA(int period)
-DEMA(IDataSeries input, int period)
+DEMA(IDataSeries inSeries, int period)
 DEMA(int period)[int barsAgo]
-DEMA(IDataSeries input, int period)[int barsAgo]
+DEMA(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -2273,16 +2834,16 @@ DEMA(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **DEMA**(20)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![DEMA - Double Exponential Moving Average](./media/image53.png)
+![DEMA - Double Exponential Moving Average](./media/DEMA.jpg)
 
 ### Calculation
 ```cs
-Value.Set(2 * EMA(Inputs[0], Period)[0] - EMA(EMA(Inputs[0], Period), Period)[0]);
+Value.Set(2 * EMA(InSeries[0], Period)[0] - EMA(EMA(InSeries[0], Period), Period)[0]);
 ```
 
 ### Example
@@ -2291,9 +2852,9 @@ Value.Set(2 * EMA(Inputs[0], Period)[0] - EMA(EMA(Inputs[0], Period), Period)[0]
 Print("The current DEMA value is " + DEMA(20)[0]);
 ```
 
-##EMA - Exponential Moving Average
+## EMA - Exponential Moving Average
 ### Description
-Exponential moving averages reduce the lag by applying more weight to recent prices. The weighting applied to the most recent price depends on the number of periods in the moving average. There are three steps to calculating an exponential moving average. First, calculate the simple moving average. An exponential moving average (EMA) has to start somewhere, so a simple moving average is used as the previous period's EMA in the first calculation. Second, calculate the weighting multiplier. Third, calculate the exponential moving average. The formula below is for a 10-day EMA.
+Exponential moving averages work to reduce lag by weighting recent prices more heavily. The weighting given to the most recent price depends on the number of periods in the moving average. Calculating an exponential moving average involves three steps. 1. Calculate the simple moving average. An exponential moving average (EMA) must start somewhere, therefore a simple moving average is used as the previous period's EMA in the beginning calculation. 2. Calculate the weighting multiplier. 3. Calculate the EMA.
 
 ### Interpretation
 The EMA is used by many traders in the most varying of timeframes. It is especially meaningful within the 15, 60 and 240-minute charts. The EMA 200 line is also especially popular with traders.
@@ -2304,9 +2865,9 @@ General interpretations of the moving averages also apply to the EMA.
 ### Usage
 ```cs
 EMA(int period)
-EMA(IDataSeries input, int period)
+EMA(IDataSeries inSeries, int period)
 EMA(int period)[int barsAgo]
-EMA(IDataSeries input, int period)[int barsAgo]
+EMA(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -2315,16 +2876,16 @@ EMA(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **EMA**(20)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![EMA - Exponential Moving Average](./media/image54.png)
+![EMA - Exponential Moving Average](./media/EMA.jpg)
 
 ### Calculation
 ```cs
-Value.Set(CurrentBar == 0 ? Input[0] : Input[0] * (2.0 / (1 + Period)) + (1 - (2.0 / (1 + Period))) * Value[1]);
+Value.Set(ProcessingBarIndex == 0 ? InSeries[0] : InSeries[0] * (2.0 / (1 + Period)) + (1 - (2.0 / (1 + Period))) * Value[1]);
 ```
 
 ### Example
@@ -2333,34 +2894,34 @@ Value.Set(CurrentBar == 0 ? Input[0] : Input[0] * (2.0 / (1 + Period)) + (1 - (2
 Print("The current EMA value is " + EMA(20)[0]);
 ```
 
-##EMA MTF (MultiTimeFrame)
+## EMA MTF (MultiTimeFrame)
 ### Description
-The EMA MTF indicator is the multi-timeframe variant of the standard EMA indicator.
+The EMA MTF indicator is a multi-timeframe version of the standard EMA indicator.
+This indicator basically allows you to make calculationgs in a different timeframe than that of the current chart.
 
-Essentially, this indicator allows you to calculate in a different timeframe than whichever timeframe the chart is currently in.
+For more information, see [*EMA*](#ema-exponential-moving-average).
 
-For more information, see [*EMA*].
+Also see [*BollingerMTF*](#bollingermtf), [*SmaMTF*](#smamtf).
 
-Also see [*BollingerMTF*], [*SmaMTF*].
 
 ### Visualization
 A 5-minute chart with an EMA(20) calculated with hourly bars as the underlying input:
 
-![EMA MTF (MultiTimeFrame)](./media/image55.png)
+![EMA MTF (MultiTimeFrame)](./media/EMAmtf.jpg)
 
-##HMA - Hull Moving Average
+## HMA - Hull Moving Average
 ### Description
-The Hull Moving Average was developed by Alan Hull and is a fast-working moving average that eliminates most of the delays/lags (zero lag). The calculation is performed using various weighted moving averages, which is why the smoothing effect is partially diminished. Hull’s methodology is to use square roots of the period instead of the period itself.
+The Hull Moving Average, invented by Alan Hull, is a fast-working moving average that gets rid of almost all delays/lags (zero lag). The calculation is carried out using several weighted moving averages, thereby partially reducing the smoothing effect. Hull’s methodology uses square roots of the period instead of the actual period itself.
 
 ### Interpretation
-The same interpretations as for the moving averages apply to the HMA, the only major distinction being the reduced lag. See [*Moving Averages*].
+The same interpretations as for the moving averages apply to the HMA, the only major distinction being the reduced lag. See [*Moving Averages*](#moving-averages).
 
 ### Usage
 ```cs
 HMA(int period)
-HMA(IDataSeries input, int period)
+HMA(IDataSeries InSeries, int period)
 HMA(int period)[int barsAgo]
-HMA(IDataSeries input, int period)[int barsAgo]
+HMA(IDataSeries InSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -2369,17 +2930,17 @@ HMA(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **HMA**(21)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![HMA - Hull Moving Average](./media/image56.png)
+![HMA - Hull Moving Average](./media/HMA.jpg)
 
 ### Calculation
 ```cs
-double value1 = 2 * WMA(Inputs[0], (int)(Period / 2))[0];
-double value2 = WMA(Inputs[0], Period)[0];
+double value1 = 2 * WMA(InSeries, (int)(Period / 2))[0];
+double value2 = WMA(InSeries, Period)[0];
 diffSeries.Set(value1 - value2);
 Value.Set(WMA(diffSeries, (int) Math.Sqrt(Period))[0]);
 ```
@@ -2390,15 +2951,15 @@ Value.Set(WMA(diffSeries, (int) Math.Sqrt(Period))[0]);
 Print("The current HMA value is " + HMA(21)[0]);
 ```
 
-##KAMA - Kaufman's Adaptive Moving Average
+## KAMA - Kaufman's Adaptive Moving Average
 ### Description
-The KAMA is based on an EMA in which the weight of the price changes that are to come is controlled by a trend efficiency ratio. The efficiency ratio (the squared efficiency factor) is a measure that can also be used on its own. The trend efficiency is defined as the ratio of the absolute price change from the beginning to the end of the period, and the sum of the absolute daily price changes. At higher trending efficiencies (meaning straight price movements) without much variation, the additional price will have a higher weighting, which corresponds to a shorter day period setting. Lower trending frequencies will have a smaller weighting.
+The KAMA is based on an EMA in which a trend efficiency ratio controls the weight of future price changes. This efficiency ratio (the squared efficiency factor) is a measure that can also be used by itself. The trend efficiency is the ratio of the absolute price change from the start to the end of the period, and the total of the absolute daily price changes. At higher trending efficiencies (i.e. straight price movements) without too much variation, the extra price carries a higher weighting, according to a shorter day period setting. Lower trending frequencies carry a smaller weighting.
 
 ### Interpretation
 Kaufman mentions that a rising KAMA value can be interpreted as a buying signal, whilst falling KAMA values assume the prices to be falling.
 Kaufman also defines a maximum and minimum value for the calculation of the smoothing components. The efficiency ratio is converted using specified maximum and minimum values, which are applied to newly incoming price changes. Kaufman uses 2 (short period) as a minimum value and 30 (long period) as a maximum value. The number of days for the determination of the efficiency ratio is one of the more important parameters for the KAMA.
 
-For a more general interpretation of moving averages, please see the following chapter: [*Moving Averages*].
+For a more general interpretation of moving averages, please see the following chapter: [*Moving Averages*](#moving-averages).
 
 ### Further information
 <http://www.investor-verlag.de/boersenwissen/kama/>
@@ -2406,9 +2967,9 @@ For a more general interpretation of moving averages, please see the following c
 ### Usage
 ```cs
 KAMA(int fast, int period, int slow)
-KAMA(IDataSeries input, int fast, int period, int slow)
+KAMA(IDataSeries inSeries, int fast, int period, int slow)
 KAMA(int fast, int period, int slow)[int barsAgo]
-KAMA(IDataSeries input, int fast, int period, int slow)[int barsAgo]
+KAMA(IDataSeries inSeries, int fast, int period, int slow)[int barsAgo]
 ```
 
 ### Return value
@@ -2417,7 +2978,7 @@ KAMA(IDataSeries input, int fast, int period, int slow)[int barsAgo]
 When using this method with an index (e.g. **KAMA**(2,10,30)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -2426,7 +2987,7 @@ fast Short period
 slow Long period
 
 ### Visualization
-![KAMA - Kaufman](./media/image57.png)
+![KAMA - Kaufman](./media/KAMA.jpg)
 
 ### Example
 ```cs
@@ -2434,18 +2995,17 @@ slow Long period
 Print("The current value of the KAMA is " + KAMA(2,10,30)[0]);
 ```
 
-##MAMA - Mesa Adaptive Moving Average
+## MAMA - Mesa Adaptive Moving Average
 ### Description
-The MAMA indicator is an automatically adapting moving average whose period length is determined via various complex calculations.
-This indicator originates from publications by John Ehlers and is relatively hard to understand. Ehlers calculates cycles for the price movements to determine length and intensity of individual trend phases. Based on the length of the cycles, the weighting factor for the moving average can be established in varying ways.
+This automatically adapting moving average has a period length that is determined by means of various complex calculations. This complex indicator has its origins in publications by John Ehlers. Ehlers calculates cycles for the price movements to determine the length and intensity of single trend phases. Working with the length of the cycles, the weighting factor for the moving average can be established in several different ways.
 
 **FAMA**
-This indicator is a second line that is known as FAMA in various publications. This line is similar to the underlying exponential moving average and acts as a trigger line.
+This indicator is a second line – the name FAMA can be found in various publications. This line is similar to the underlying exponential moving average and can be used as a trigger line.
 
 ### Interpretation
 For more concise information, we recommend that you read Ehler’s paper.
 
-General information about moving averages can be found here: [*Moving Averages*].
+General information about moving averages can be found here: [*Moving Averages*](#moving-averages).
 
 ### Further information
 <http://www.tradesignalonline.com/de/lexicon/view.aspx?id=MAMA+adaptive+Moving+Average>
@@ -2453,13 +3013,13 @@ General information about moving averages can be found here: [*Moving Averages*]
 ### Usage
 ```cs
 MAMA(double fastLimit, double slowLimit)
-MAMA(IDataSeries input, double fastLimit, double slowLimit)
+MAMA(IDataSeries inSeries, double fastLimit, double slowLimit)
 MAMA(double fastLimit, double slowLimit)[int barsAgo]
-MAMA(IDataSeries input, double fastLimit, double slowLimit)[int barsAgo]
+MAMA(IDataSeries inSeries, double fastLimit, double slowLimit)[int barsAgo]
 
 //Value of the Following Adaptive Moving Average (FAMA)
 MAMA(double fastLimit, double slowLimit).Fama[int barsAgo]
-MAMA(IDataSeries input, double fastLimit, double slowLimit).Fama[int barsAgo]
+MAMA(IDataSeries inSeries, double fastLimit, double slowLimit).Fama[int barsAgo]
 ```
 
 ### Return value
@@ -2468,14 +3028,14 @@ MAMA(IDataSeries input, double fastLimit, double slowLimit).Fama[int barsAgo]
 When using this method with an index (e.g. **MAMA**(0.5,0.05)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 fastLimit Upper limit for the alpha value
 
 slowLimit Lower limit for the alpha value
 
 ### Visualization
-![MAMA - Mesa Adaptive Moving Average](./media/image58.png)
+![MAMA - Mesa Adaptive Moving Average](./media/MAMA.jpg)
 
 ### Example
 ```cs
@@ -2485,14 +3045,12 @@ Print("The current value for the MAMA is " + MAMA(0.5, 0.05)[0]);
 Print("The current value for the FAMA is " + MAMA(0.5, 0.05).Fama[0]);
 ```
 
-##SMA - Simple Moving Average
+## SMA - Simple Moving Average
 ### Description
-The SMA is the “mother of all averages” and represents the easiest way to display the trend direction of a chart. Viewed from a mathematical perspective, this is the arithmetic mean of a number of individual lengths.
-The term “moving” comes from the fact that for this method of establishing an average, the oldest value is always sacrificed to make way for the currently incoming price change. Fundamentally speaking, the length of the period affects the intensity of the smoothing. Shorter periods (e.g. 10 days) will result in the indicator following the price changes relatively closely.
+The SMA is the most well-known average, representing the simplest method of displaying the trend direction in a chart. In mathematical terms, this is the arithmetic mean of a number of individual lengths. It is called “moving” because to establish an average, the oldest value is always sacrificed to make space for the new incoming price change. Fundamentally speaking, the period length influences the intensity of the smoothing. Shorter periods (such as 10 days) will mean that the indicator follows the price changes quite closely.
+The SMA has a few disadvantages, which is why several adaptations of this indicator have been developed in the last few years. One of the biggest disadvantages is the fact that the indicator tends to lag, and the equal weighting for all data inputs across time intervals.
+You can find more general interpretations and meanings here: [*Moving Averages*](#moving-averages).
 
-The simple moving average has a couple of drawbacks, which is why several permutations of this indicator have been developed over the course of the years. Primarily, one of the biggest drawbacks is the lagging nature of the indicator and the equal weighting for all data inputs across the time intervals.
-
-More general interpretations and meanings can be found here: [*Moving Averages*].
 
 ### Further information
 <http://www.forex-trading-online.de/indikatoren/simple-moving-average-sma>
@@ -2502,9 +3060,9 @@ More general interpretations and meanings can be found here: [*Moving Averages*]
 ### Usage
 ```cs
 SMA(int period)
-SMA(IDataSeries input, int period)
+SMA(IDataSeries InSeries, int period)
 SMA(int period)[int barsAgo]
-SMA(IDataSeries input, int period)[int barsAgo]
+SMA(IDataSeries InSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -2513,15 +3071,15 @@ SMA(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **SMA**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![SMA - Simple Moving Average](./media/image59.png)
+![SMA - Simple Moving Average](./media/SMA.jpg)
 
 ### Calculation
-Value.**Set**((last + Input\[0\] - Input\[Period\]) / Math.**Min**(CurrentBar, Period));
+Value.**Set**((last + InSeries\[0\] - InSeries\[Period\]) / Math.**Min**(ProcessingBarIndex, Period));
 
 ### Example
 ```cs
@@ -2529,26 +3087,25 @@ Value.**Set**((last + Input\[0\] - Input\[Period\]) / Math.**Min**(CurrentBar, P
 Print("The current SMA value is " + SMA(14)[0]);
 ```
 
-##SMA MTF (MultiTimeFrame)
+## SMA MTF (MultiTimeFrame)
 ### Description
-Just like the other multi-timeframe indicator variations, this allows you to display the SMA of a specific timeframe on a chart of a different timeframe.
+The SMA MTF – as is true for the other multi-timeframe indicator variations – allows traders to display the SMA of a specific timeframe on a chart of a different timeframe.
 
-See [*BollingerMTF*], [*EmaMTF*].
+See [*BollingerMTF*](#bollingermtf), [*EmaMTF*](#ema-mtf-multitimeframe).
 
 ### Visualization
 The image shows a 5-minute chart with an SMA (14) calculated on 4-hour bars
 
-![SMA MTF (MultiTimeFrame)](./media/image60.png)
+![SMA MTF (MultiTimeFrame)](./media/SMAmtf.jpg)
 
-##SMMA - Smoothed Moving Average
+## SMMA - Smoothed Moving Average
 ### Description
-The Smoothed Moving Average is a combination of the Simple Moving Average and the Exponential Moving Average. It is generally only used for higher period amounts/inputs.
-Generally speaking, it has about half of the value of an EMA, meaning that an SMMA(20) is similar to an EMA(40).
+The Smoothed Moving Average is combined from both Simple Moving Average and the Exponential Moving Average. Generally speaking, it is only used for higher period amounts/inputs. It normally has roughly half of the value of an EMA, meaning that an SMMA(20) is closer to an EMA(40).
 
 ### Interpretation
-For more general information about moving averages, please see [*Moving Averages*].
+For more general information about moving averages, please see [*Moving Averages*](#moving-averages).
 
-The SMMA is often used with the [*SuperTrend*] indicator.
+The SMMA is often used with the [*SuperTrend*](#supertrend) indicator.
 
 ### Further information
 <http://www2.wealth-lab.com/wiki/SMMA.ashx>
@@ -2556,9 +3113,9 @@ The SMMA is often used with the [*SuperTrend*] indicator.
 ### Usage
 ```cs
 SMMA(int period)
-SMMA(IDataSeries input, int period)
+SMMA(IDataSeries inSeries, int period)
 SMMA(int period)[int barsAgo]
-SMMA(IDataSeries input, int period)[int barsAgo]
+SMMA(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -2567,12 +3124,12 @@ SMMA(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **SMMA**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![SMMA - Smoothed Moving Average](./media/image61.png)
+![SMMA - Smoothed Moving Average](./media/SMMA.jpg)
 
 ### Example
 ```cs
@@ -2580,18 +3137,18 @@ period Number of bars included in the calculations
 Print("The current SMMA value is " + SMMA(14)[0]);
 ```
 
-##TEMA - Triple Exponential Moving Average
+## TEMA - Triple Exponential Moving Average
 ### Description
-The Triple Exponential Moving Average is a combination of a single EMA, a double EMA and a triple EMA. The combination improves the delay between the indicator and the price movements. TEMA is relatively efficient at smoothing the price changes.
+The TEMA is combined from a single, a double and a triple EMA. This combo improves the delay between the indicator and price movements. The Triple Exponential Moving Average is quite efficient at smoothing price changes.
 
-More information about moving averages in general can be found here: [*Moving Averages*].
+You can find more information about moving averages here: [*Moving Averages*](#moving-averages).
 
 ### Usage
 ```cs
 TEMA(int period)
-TEMA(IDataSeries input, int period)
+TEMA(IDataSeries inSeries, int period)
 TEMA(int period)[int barsAgo]
-TEMA(IDataSeries input, int period)[int barsAgo]
+TEMA(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -2600,12 +3157,12 @@ TEMA(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **TEMA**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![TEMA - Triple Exponential Moving Average](./media/image62.png)
+![TEMA - Triple Exponential Moving Average](./media/TEMA.jpg)
 
 ### Example
 ```cs
@@ -2613,16 +3170,16 @@ period Number of bars included in the calculations
 Print("The current TEMA value is " + TEMA(14)[0]);
 ```
 
-##TMA - Triangular Moving Average
+## TMA - Triangular Moving Average
 ### Description
-The Triangular Moving Average is a specifically weighted average with a special smoothing component. The weightings are not linear but are assigned a triangular pattern. The weighting for a 7-period average would thus be 1,2,3,4,3,2,1. The median value of the time series will be given more weight, and the newest i.e. oldest data less.
+This specifically weighted average has an extra smoothing component. The weightings are not linear, but instead take on a triangular pattern. To demonstrate, the weighting for a 7-period average would be 1,2,3,4,3,2,1. More weight is given to the median value of the time series, and the newest and oldest data is given less weight.
 
 ### Usage
 ```cs
 TMA(int period)
-TMA(IDataSeries input, int period)
+TMA(IDataSeries inSeries, int period)
 TMA(int period)[int barsAgo]
-TMA(IDataSeries input, int period)[int barsAgo]
+TMA(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -2631,12 +3188,12 @@ TMA(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **TMA**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![TMA - Triangular Moving Average](./media/image63.png)
+![TMA - Triangular Moving Average](./media/TMA.jpg)
 
 ### Example
 ```cs
@@ -2644,9 +3201,10 @@ period Number of bars included in the calculations
 Print("The current value for the TMA is " + TMA(14)[0]);
 ```
 
-##TRIX - Triple Exponential Moving Average
+## TRIX - Triple Exponential Moving Average
 ### Description
-The TRIX indicator was developed by Jack Hutson. It is a 1-day rate-of-change indicator, meaning that day 2 is divided by day 1, day 3 by day 2 and so on, and this is applied to a triple exponential moving average of the closing prices. The result is a zero line fluctuating oscillator which, based on its stability, is used as trend indicator.
+Jack Hutson developed this TRIX indicator, which is a 1-day rate-of-change indicator. What this means is that day 2 is divided by day 1, day 3 by day 2 and so on and so forth, and this is then applied to a triple exponential moving average of the closing prices. This results in a zero line fluctuating oscillator which is used as trend indicator thanks to its stability.
+
 
 ### Interpretation
 A buy signal is created when the TRIX indicator crosses the zero line from bottom to top. A sell signal is generated when the zero line is broken in a downwards direction.
@@ -2654,13 +3212,13 @@ A buy signal is created when the TRIX indicator crosses the zero line from botto
 ### Usage
 ```cs
 TRIX(int period, int signalPeriod)
-TRIX(IDataSeries input, int period, int signalPeriod)
+TRIX(IDataSeries inSeries, int period, int signalPeriod)
 TRIX(int period, int signalPeriod)[int barsAgo]
-TRIX(IDataSeries input, int period, int signalPeriod)[int barsAgo]
+TRIX(IDataSeries inSeries, int period, int signalPeriod)[int barsAgo]
 
 //For the signal line
 TRIX(int period, int signalPeriod).Signal[int barsAgo]
-TRIX(IDataSeries input, int period, int signalPeriod).Signal[int barsAgo]
+TRIX(IDataSeries inSeries, int period, int signalPeriod).Signal[int barsAgo]
 ```
 
 ### Return value
@@ -2669,14 +3227,14 @@ TRIX(IDataSeries input, int period, int signalPeriod).Signal[int barsAgo]
 When using this method with an index (e.g. **TRIX**(14, 3)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 signal period Number of bars included in the signal line calculation
 
 ### Visualization
-![TRIX - Triple Exponential Moving Average](./media/image64.png)
+![TRIX - Triple Exponential Moving Average](./media/TRIX.jpg)
 
 ### Example
 ```cs
@@ -2687,18 +3245,16 @@ Print("The current TRIX value is " + TRIX(14, 3)[0]);
 Print("The current TRIX value is " + TRIX(14, 3).Signal[0]);
 ```
 
-##T3 - Triple Exponential Moving Average
+## T3 - Triple Exponential Moving Average
 ### Description
-The Triple Exponential Moving Average T3 (also known as the T3MA) indicator is calculated using the weighted sums of a simple EMA, a double EMA, and a triple EMA. This results in a very smooth, soft indicator line.
-The number of iterations can be set using the parameter tCount.
-The calculation is the same as that of the DEMA, the only difference being that here, a volume factor is added. It accepts values between 0 and 1 (default: 0.7).
+The Triple Exponential Moving Average T3 indicator (also dubbed the T3MA) is calculated by taking the weighted sums of a simple, a double, and a triple EMA. This produces a smooth, soft indicator line. The parameter tCount allows the trader to set the number of reiterations. The calculation is the same as the calculation for the DEMA, with the slight difference that here, a volume factor is also added. It accepts values between 0 and 1 (default: 0.7).
 
 ### Usage
 ```cs
 T3(int period, int tCount, double vFactor)
-T3(IDataSeries input, int period, int tCount, double vFactor)
+T3(IDataSeries inSeries, int period, int tCount, double vFactor)
 T3(int period, int tCount, double vFactor)[int barsAgo]
-T3(IDataSeries input, int period, int tCount, double vFactor)[int barsAgo]
+T3(IDataSeries inSeries, int period, int tCount, double vFactor)[int barsAgo]
 ```
 
 ### Return value
@@ -2707,7 +3263,7 @@ T3(IDataSeries input, int period, int tCount, double vFactor)[int barsAgo]
 When using this method with an index (e.g. **T3**(14,3,0.7)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
@@ -2716,7 +3272,7 @@ tCount Number of iterations for the smoothing
 vFactor Volume factor (multiplier)
 
 ### Visualization
-![T3 - Triple Exponential Moving Average](./media/image65.png)
+![T3 - Triple Exponential Moving Average](./media/T3.jpg)
 
 ### Example
 ```cs
@@ -2724,11 +3280,11 @@ vFactor Volume factor (multiplier)
 Print("The current T3 value is " + T3(14, 3, 0.7)[0]);
 ```
 
-##VMA - Variable Moving Average
+## VMA - Variable Moving Average
 ### Description
-The Variable Moving Average is an EMA that automatically applies smoothing to the fluctuations in the market. The sensitivity grows as more weight is placed on “fresher” data.
+This variation of an EMA automatically smoothes any fluctuations in the market, and its sensitivity grows as more weight is placed on more recent data.
 
-By automatically regulating the smoothing constant, the VMA attempts to eliminate the drawbacks of other moving averages. Thus the VMA can be used for most of the market conditions, and in some cases is even better than other averages.
+The VMA attempts to get rid of the disadvantages of other moving averages by automatically regulating the smoothing constant. This is why the VMA can be implemented for most of the market conditions, and is in a few cases actually better than other averages.
 
 **Caution**
 The VMA is not to be confused with the Volume Moving Average (VolMA)!
@@ -2736,9 +3292,9 @@ The VMA is not to be confused with the Volume Moving Average (VolMA)!
 ### Usage
 ```cs
 VMA(int period, int volatilityPeriod)
-VMA(IDataSeries input, int period, int volatilityPeriod)
+VMA(IDataSeries inSeries, int period, int volatilityPeriod)
 VMA(int period, int volatilityPeriod)[int barsAgo]
-VMA(IDataSeries input, int period, int volatilityPeriod)[int barsAgo]
+VMA(IDataSeries inSeries, int period, int volatilityPeriod)[int barsAgo]
 ```
 
 ### Return value
@@ -2747,14 +3303,14 @@ VMA(IDataSeries input, int period, int volatilityPeriod)[int barsAgo]
 When using this method with an index (e.g. **VMA**(9,9)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 volatility period Number of bars included in the calculation for the signal line
 
 ### Visualization
-![VMA - Variable Moving Average](./media/image66.png)
+![VMA - Variable Moving Average](./media/VMA.jpg)
 
 ### Example
 ```cs
@@ -2762,16 +3318,16 @@ volatility period Number of bars included in the calculation for the signal line
 Print("The current VMA value is " + VMA(9, 9)[0]);
 ```
 
-##VWMA - Volume Weighted Moving Average
+## VWMA - Volume Weighted Moving Average
 ### Description
-VWMA is a non-cumulated smoothed average. This moving average is weighted based on the various volumes for the periods.
+VWMA is a non-cumulated smoothed average that is weighted based on the various volumes for the periods.
 
 ### Usage
 ```cs
 VWMA(int period)
-VWMA(IDataSeries input, int period)
+VWMA(IDataSeries inSeries, int period)
 VWMA(int period)[int barsAgo]
-VWMA(IDataSeries input, int period)[int barsAgo]
+VWMA(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -2780,12 +3336,12 @@ VWMA(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **VWMA**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![VWMA - Volume Weighted Moving Average](./media/image67.png)
+![VWMA - Volume Weighted Moving Average](./media/VWMA.jpg)
 
 ### Example
 ```cs
@@ -2793,9 +3349,9 @@ period Number of bars included in the calculations
 Print("The current VWMA value is " + VWMA(14)[0]);
 ```
 
-##WMA - Weighted Moving Average
+## WMA - Weighted Moving Average
 ### Description
-The Weighted Moving Average is the most well-known of the weighted averages. It is used to identify and react to price changes more quickly. Current prices are given higher weighting than older values. An additional advantage is that bad signals in sideways markets are minimized. The WMA smoothes the price changes and allows for more efficient trade identification.
+The Weighted Moving Average is the most well-known of the weighted averages, and is implemented to identify and quickly react to price changes. Current prices are given higher weighting than older ones. In addition, bad signals in sideways markets are minimized. The WMA smoothes the price changes and makes more efficient trade identification possible.
 
 ### Further information
 <http://www.tradesignalonline.com/de/lexicon/view.aspx?id=Moving+Average+Weighted+%28WMA%29>
@@ -2803,9 +3359,9 @@ The Weighted Moving Average is the most well-known of the weighted averages. It 
 ### Usage
 ```cs
 WMA(int period)
-WMA(IDataSeries input, int period)
+WMA(IDataSeries inSeries, int period)
 WMA(int period)[int barsAgo]
-WMA(IDataSeries input, int period)[int barsAgo]
+WMA(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -2814,12 +3370,12 @@ WMA(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **WMA**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![WMA - Weighted Moving Average](./media/image68.png)
+![WMA - Weighted Moving Average](./media/WMA.jpg)
 
 ### Example
 ```cs
@@ -2827,9 +3383,9 @@ period Number of bars included in the calculations
 Print("The current value of the WMA is " + WMA(14)[0]);
 ```
 
-##ZLEMA - Zero Lag Exponential Moving Average
+## ZLEMA - Zero Lag Exponential Moving Average
 ### Description
-The Zero Lag Exponential Moving Average is another variant of the EMA. Here, zero lag means no delay i.e. the indicator adapts more closely to the price changes. The indicator achieves this by taking out older price data and reducing the cumulative effect to minimize the lag.
+The Zero Lag Exponential Moving Average is another variation of the EMA. Zero lag in this context signifies no delay, which means that the indicator adapts to the price changes more closely. The indicator does so by removing older price data and decreasing the cumulative effect in order to minimize the lag.
 
 ### Further information
 FMLabs: <http://www.fmlabs.com/reference/default.htm?url=ZeroLagExpMA.htm>
@@ -2837,9 +3393,9 @@ FMLabs: <http://www.fmlabs.com/reference/default.htm?url=ZeroLagExpMA.htm>
 ### Usage
 ```cs
 ZLEMA(int period)
-ZLEMA(IDataSeries input, int period)
+ZLEMA(IDataSeries inSeries, int period)
 ZLEMA(int period)[int barsAgo]
-ZLEMA(IDataSeries input, int period)[int barsAgo]
+ZLEMA(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -2848,12 +3404,12 @@ ZLEMA(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **ZLEMA**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![ZLEMA - Zero Lag Exponential Moving Average](./media/image69.png)
+![ZLEMA - Zero Lag Exponential Moving Average](./media/ZLEMA.jpg)
 
 ### Example
 ```cs
@@ -2861,22 +3417,20 @@ period Number of bars included in the calculations
 Print("The current ZLEMA value is " + ZLEMA(14)[0]);
 ```
 
-##nBarsUp
+## nBarsUp
 ### Description
-The nBarsUp indicator searched for a specific number of rising closing prices.
-In addition, other conditions can be added to the search, such as:
-Continuously rising bars, i.e. close &lt; open (red candles)
-Continuously rising highs
-Continuously rising lows
+The nBarsUp indicator looks for a specified number of rising closing prices. Other conditions can also be added to the search, for example:
+Constantly rising bars, i.e. close < open (red candles)
+Constantly rising highs
+Constantly rising lows
 
-See [*NBarsDown*].
 
 ### Usage
 ```cs
 NBarsUp(int barCount, bool BarUp, bool higherHigh, bool higherLow)
-NBarsUp(IDataSeries input, int barCount, bool BarUp, bool higherHigh, bool higherLow)
+NBarsUp(IDataSeries inSeries, int barCount, bool BarUp, bool higherHigh, bool higherLow)
 NBarsUp(int barCount, int barCount, bool BarUp, bool higherHigh, bool higherLow)[int barsAgo]
-NBarsUp(IDataSeries input, int barCount, bool BarUp, bool higherHigh, bool higherLow)[int barsAgo]
+NBarsUp(IDataSeries inSeries, int barCount, bool BarUp, bool higherHigh, bool higherLow)[int barsAgo]
 ```
 
 ### Return value
@@ -2888,7 +3442,7 @@ When using this method with an index (e.g. **NBarsUp**(...)\[**int** barsAgo\] )
 0 – The condition does not apply
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 barCount Number of successively rising closing prices
 
@@ -2899,7 +3453,7 @@ higherHigh Additional condition (true): continuously rising highs
 higherLow Additional condition (true): continuously rising lows
 
 ### Visualization
-![nBarsUp](./media/image70.png)
+![nBarsUp](./media/nBarsUp.jpg)
 
 ### Example
 ```cs
@@ -2908,22 +3462,21 @@ if (NBarsUp(3, true, true, true)[0] == 1)
 Print("3 successively higher closing prices have occurred.");
 ```
 
-##nBarsDown
+## nBarsDown
 ### Description
-The nBarsDown indicator searches for a specific number of falling closing prices.
+The nBarsDown indicator looks for a specified number of falling closing prices.
 
-In addition, the following conditions can be included in the search:
-
-- Continuously falling bars
-- Continuously falling highs
-- Continuously falling lows
+The following conditions can also be included in the search:
+-   Constantly falling bars
+-   Constantly falling highs
+-   Constantly falling lows
 
 ### Usage
 ```cs
 NBarsDown(int barCount, bool BarDown, bool lowerHigh, bool lowerLow)
-NBarsDown(IDataSeries input, int barCount, bool BarDown, bool lowerHigh, bool lowerLow)
+NBarsDown(IDataSeries inSeries, int barCount, bool BarDown, bool lowerHigh, bool lowerLow)
 NBarsDown(int barCount, bool BarDown, bool lowerHigh, bool lowerLow)[int barsAgo]
-NBarsDown(IDataSeries input, bool barCount, int BarDown, bool lowerHigh, bool lowerLow)[int barsAgo]
+NBarsDown(IDataSeries inSeries, bool barCount, int BarDown, bool lowerHigh, bool lowerLow)[int barsAgo]
 ```
 
 ### Return value
@@ -2935,7 +3488,7 @@ When using this method with an index (e.g. **NBarsDown**(...)\[**int** barsAgo\]
 0 – The condition does not apply
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 barCount Required number of successively lower closing prices
 
@@ -2946,19 +3499,19 @@ lowerHigh Additional condition (true): continuously falling highs
 lowerLow Additional condition (true); continuously falling lows
 
 ### Visualization
-![nBarsDown](./media/image71.png)
+![nBarsDown](./media/nBarsDown.jpg)
 
 ### Example
 ```cs
 NBarsDown(int barCount, bool BarDown, bool lowerHigh, bool lowerLow)
-NBarsDown(IDataSeries input, int barCount, bool BarDown, bool lowerHigh, bool lowerLow)
+NBarsDown(IDataSeries inSeries, int barCount, bool BarDown, bool lowerHigh, bool lowerLow)
 NBarsDown(int barCount, bool BarDown, bool lowerHigh, bool lowerLow)[int barsAgo]
-NBarsDown(IDataSeries input, bool barCount, int BarDown, bool lowerHigh, bool lowerLow)[int barsAgo]
+NBarsDown(IDataSeries inSeries, bool barCount, int BarDown, bool lowerHigh, bool lowerLow)[int barsAgo]
 ```
 
-##OnBalanceVolume (OBV)
+## OnBalanceVolume (OBV)
 ### Description
-The On Balance Volume Indicator shows the buy or sell pressure. The volume is cumulatively added for each day with a positive close, and subtracted for days with a close smaller than the open.
+This indicator displays the buy or sell pressure. For each day with a positive close, the volume is added cumulatively, and it is subtracted for days with a close that is smaller than the open.
 
 ### Interpretation
 Granville theorized that volume precedes price. OBV rises when volume on up days outpaces volume on down days. OBV falls when volume on down days is stronger. A rising OBV reflects positive volume pressure that can lead to higher prices. Conversely, falling OBV reflects negative volume pressure that can foreshadow lower prices. Granville noted in his research that OBV would often move before price. Expect prices to move higher if OBV is rising while prices are either flat or moving down. Expect prices to move lower if OBV is falling while prices are either flat or moving up.
@@ -2968,9 +3521,9 @@ The absolute value of OBV is not important. Chartists should instead focus on th
 ### Usage
 ```cs
 OBV()
-OBV(IDataSeries input)
+OBV(IDataSeries inSeries)
 OBV()[int barsAgo]
-OBV(IDataSeries input)[int barsAgo]
+OBV(IDataSeries inSeries)[int barsAgo]
 ```
 
 ### Return value
@@ -2979,10 +3532,10 @@ OBV(IDataSeries input)[int barsAgo]
 When using this method with an index (e.g. **OBV**()\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameter
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 ### Visualization
-![OnBalanceVolume (OBV)](./media/image72.png)
+![OnBalanceVolume (OBV)](./media/OBV.jpg)
 
 ### Example
 ```cs
@@ -2990,53 +3543,53 @@ input Input data series for the indicator
 Print("The current value for the OBV is " + OBV()[0]);
 ```
 
-##OutsideBars
+## OutsideBars
 ### Description
-The indicator Outside Bars is an outdated version of the [*InsideBarsMT*].
+The Outside Bars indicator is in fact an outdated version of the [*InsideBarsMT*](#insidebarsmt).
 
-##P123
+## P123
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
 
 ### Description
-The P123 indicator’s purpose is to automatically detect a 1,2,3 pattern.
+The goal of the P123 indicator is to automatically detect a 1-2-3 pattern.
 
-**The following features stand out:**
+**The following features make it stand out:**
 
-Innovative recognition of 4 differing trend sizes
+Innovative recognition of 4 different trend sizes
 
-Points 1, 2, and 3 are recognized at the bar
+It recognizes points 1, 2, and 3 at the bar
 
-Recognition of the continuation of a trend in the same direction as a trend break
+Recognition of a trend continuation in the same direction as a trend break
 
-Fully automatic adjustment of the search algorithm for all market conditions (no additional settings/inputs necessary)
+Completely automatic adjustment of the search algorithm for all possible market conditions (no additional settings/inputs required)
 
-Adaptive workflow, it adjusts to the fluctuations in volatility
+Adaptive workflow, adjusting to any volatility fluctuations
 
-Clear view while at the same time displaying the various trend sizes
+Clear overview while simultaneously displaying the various trend sizes
 
-Usable within the Condition Escort and AgenaScript
+Can be implemented within the Condition Escort and AgenaScript
 
 The trend sizes are defined as follows:
 
 T0 = large trend
 
-T1 = middle-sized trend
+T1 = medium-sized trend
 
 T2 = small trend
 
 T3 = smallest trend size
 
-The smallest trend size (T3) is not detectable on all trading instruments. Point 2 is often situated at the high of a bar, and point 3 at the low of the same bar. Depending on the timeframe and the fluctuation range, T0 and T1 are fused into one.
+The smallest trend size (T3) cannot be detected on all trading instruments. Point 2 is often situated at the high of a bar, and point 3 at the low of the same bar. Depending on the timeframe and fluctuation range, T0 and T1 can be fused into one.
 
-The indicator identifies the selected timeframe of the chart, and all trends and trend sizes are labeled accordingly. In times of low volatility, the trend recognition is more sensitive, and the opposite is true for higher volatility. The adaptive methods ensure a balanced recognition of trend sizes.
+The indicator determines the selected timeframe of the chart, and then labels all trends and trend sizes accordingly. When there is low volatility, trend recognition is more sensitive, and the vice versa for higher volatility. The P123’s adaptive methods make for a balanced recognition of trend sizes.
 
 **Important tip:**
 
-In some cases the large trend (T0) is not visible, which may sometimes be due to the fact that not enough candles are visible within the chart. A minimum of 500 candles should be loaded in order to ensure this is not the case.
+In some cases, the large trend (T0) cannot be seen with the naked eye, which may be due to the fact that not enough candles are visible within the chart. A minimum of 500 candles should be loaded to ensure this is not the case.
+
 
 ### Interpretation
-Trading signals often form at points 2 & 3: at point 3 as entry signals into a correction phase within a confirmed trend, and at point 2 as a sub-trend in the trend direction of the superior trade.
-The definition of a trend at points 1 to 3 can be read in "[*Das große Buch der Markttechnik*]" by Michael Voigt (German only).
+Trading signals often form at points 2 & 3: at point 3 as entry signals into a correction phase within a confirmed trend, and at point 2 as a sub-trend in the trend direction of the superior trade. The definition of a trend at points 1 to 3 can be read in "*Das große Buch der Markttechnik*" by Michael Voigt (German only).
 
 ### Visualization in the chart
 The parameter input settings define which trend sizes are shown in the chart and whether or not they are connected by a line.
@@ -3045,13 +3598,13 @@ For the default settings, the trend T2 is enabled by default.
 
 The depiction in the chart may change with the changing market movements. If the market moves below the last point 3 and breaks the uptrend, the point is marked with a “3?”. The newly created low becomes the new point 2 and the last point 2 becomes point 1.
 
-![Visualization in the chart](./media/image73.png)
+![Visualization in the chart](./media/P123.jpg)
 
 The parameter settings are not relevant for the display in the chart and are primarily used for the Condition Escort.
 
 The depiction in the chart is primarily influenced by the settings “Display 123” and “Display Lines”.
 
-![parameter settings](./media/image74.png)
+![parameter settings](./media/P123settings.jpg)
 
 The settings highlighted in yellow have no influence on the chart. No changes need to be made.
 
@@ -3112,17 +3665,99 @@ private void PrintOutTrendProperties(int trendSize)
 
 ### Utilization within the Condition Escort
 All public variables are available to you inside the Condition Escort as data series; they can be found under „Series & Output Values“.
-The name has an underscore (“\_“) suffix in order to differentiate it.
+The name has an underscore ("\_") suffix in order to differentiate it.
 
 The parameters “trendSize” and “occurrence” can be found within the Condition Escort.
 
-##Parabolic SAR
+### P123Pro
+The parameter TrendSize can be found under the parameter settings (see figure). It is only intended to be used within the Condition Escort. This parameter is not relevant for display in the chart. The display is only controlled by the following settings: "Display 123" and "Display Lines".
+
+![parameter settings](./media/p123Pro_settings.jpg)
+
+You can see in the respectful description fields for each parameter to which extend the particular parameters may influence the chart or Condition Escort as well as AgenaScript.
+
+### Usage in the AgenaScript
+For the AgenaScript purposes several data series of the same type are doubled. For each of these data series the common notation with ...[barsAgo] can be used.
+
+|                |                                                                                         |
+|----------------|-----------------------------------------------------------------------------------------|
+| TrendDirection | 1 = Uptrend -1 = Downtrend 0 = no trend defined according to the market technique       |
+| IsP21          | If a bar represents an old point 2 and at the same time a new point 1, it will be labelled in the chart as "(2) 1". The value of this bar (and all subsequent bars up to the next point 2) will be 1, and 0 otherwise.         |
+| IsTrendValid   | 1 = defines a confirmed trend, i.e. at least a point sequence 1 - 2 - 3 - 2. 0 = there is no confirmed trend yet. (Phase 1 and 2 according to market technique)                                                              |
+| LastPoint      | Provides the latest point of the trend, i.e. 1, 2, or 3                                 |
+| LastPointPrice | Provides the corresponding market value of the latest point according to the market technique      |
+| LastPointDateTime | Provides the corresponding date and time related to the latest point according to the market technique        |
+| LastPointExtInfo | Provides the corresponding label of the latest point according to the market technique. The labelling should be additionally defined in Parameter tab. The slope is a chart-only feature therefore it is neither in Conditions, nor in the AgenaScript available.                                                                                                 |
+| P1Price        | Provides the market value of the latest point 1                                         |
+| P1DateTime     | Provides the date and time of the latest point 2                                        |
+| PriorP2Price   | efert die Datums- und Zeitangabe des vorletzten Punkt 2                                 |
+| TempP3Price    | Provides the date and time of the second last point 2                                   |
+| TempP3DateTime | Provides the date and time of the last preliminary point 3                              |
+| ValidP3Price   | Provides the market value of the last valid point 3. This market value defines the stop movement according to the market techniques. When this point is crossed, there is a trend break from the market technique perspective.       |
+| ValidP3DateTime| Provides the date and time of the last valid point 3                                    |
+
+### Parameters
+|                |                                                                                         |
+|----------------|-----------------------------------------------------------------------------------------|
+| trendsize      | Trend size of 0 .. 3                                                                 |
+| breakageP2     | Shows an arrow in the chart, when a break of P2 occurs or has been already completed. The figure is expressed as a percentage between -100 and +100. -20 alerts e.g. 20% before the P2 will be reached                        |
+| extInfo        | Selection of a labelling                                                                 |
+| p2Distance     | **Uncertainty:** this is a factor (between 0 and 1) that defines, how far has to be the P2 from the "old" valid P2 in order to be treated as valid. The previous movement is decisive in this case.                            |
+| p3Distance     | **Uncertainty:** this is a factor (between 0 and 1) that defines, how far has to be the P3 from the "old" valid P2 in order to be treated as valid. The previous movement is decisive in this case..                          |
+| p3BreakageDistance | **Uncertainty:** this is a factor (between 0 and 1) that defines when a trend brake is valid. The previous movement is decisive in this case. So, for instance, the breakout of the latest P3 (with one tick only) will not be considered as the breakout anymore.                                  |
+
+### Examples
+```cs
+private void PrintOutTrendProperties(int trendSize)
+private void PrintOutTrendProperties(int trendSize)
+{
+	// revers order of prints fills output window in correct order
+	Print("");
+	Print("IsP21: " +  P123Pro(trendSize).IsP21[0]);
+	Print("valid P3 date: " +  P123Pro(trendSize).ValidP3DateTime[0]);
+	Print("valid P3 price: " +  P123Pro(trendSize).ValidP3Price[0]);
+	Print("temp P3 date: " +  P123Pro(trendSize).TempP3DateTime[0]);
+	Print("temp P3 price: " +  P123Pro(trendSize).TempP3Price[0]);
+	Print("P2 date: " +  P123Pro(trendSize).P2DateTime[0]);
+	Print("P2 price: " +  P123Pro(trendSize).P2Price[0]);
+	Print("P1 date: " +  P123Pro(trendSize).P1DateTime[0]);
+	Print("P1 price: " +  P123Pro(trendSize).P1Price[0]);
+	Print("last point date: " +  P123Pro(trendSize).LastPointDateTime[0]);
+	Print("last point price: " +  P123Pro(trendSize).LastPointPrice[0]);
+	Print("last point: " +  P123Pro(trendSize).LastPoint[0]);
+	Print("Is trend valid: " +  P123Pro(trendSize).IsTrendValid[0]);
+	Print("Trend direction: " +  P123Pro(trendSize).TrendDirection[0]);
+	Print("P2Breakout: " +  P123Pro(trendSize).P2Breakout[0]);
+	Print("Extended Information: " +  P123Pro(trendSize).LastPointExtInfo[0]);
+}
+```
+### Usage in the Condition Escort
+All data series (excluding the DateTime series) are available in the Condition Escort under the "Series & Output Values".
+
+Logical variables (true and false) are replaced by the numbers 1 and 0. The "TrendSize" parameter is available in the Condition Escort as well. The description you will find below.
+
+
+### Examples
+Inquiry whether the currently active in the chart middle trend is a downtrend:
+P123Pro(Close, 1).TrendDirection[0] - Inh. TimeFrame   ==   1
+
+Inquiry whether the latest point of the currently active in the chart smallest trend is a Point2:
+P123Pro(Close, 3).LastPoint[0] - Inh. TimeFrame   ==   2
+
+Inquiry whether the latest bar under the valid point 3 (not the 3?) of the small trend has been closed:
+P123Pro(Close, 2).isTrendValid[0] - Inh. TimeFrame   ==   1
+UND (also neue Zeile)
+Close[0] - Inh. TimeFrame   <   P123Pro(Close, 2).ValidP3Price[0] - Inh. TimeFrame
+
+## Parabolic SAR
 ### Description
-Developed by Welles Wilder, the Parabolic SAR refers to a price and time-based trading system. Wilder called this the "Parabolic Time/Price System." SAR stands for "stop and reverse," which is the actual indicator used in the system. **SAR trails price as the trend extends over time.** The indicator is below prices when prices are rising and above prices when prices are falling. In this regard, the indicator stops and reverses when the price trend reverses and breaks above or below the indicator.
+Welles Wilder came up with the Parabolic SAR, which denotes a price and time-based trading system. Wilder named this the "Parabolic Time/Price System." SAR signifies "stop and reverse," which is the name of the actual indicator used in his system, where **SAR trails price as the trend extends over time**. When prices are rising, the indicator is below them, and when prices are falling, it is above them. Therefore the indicator stops and reverses when the price trend reverses and breaks either above or below the indicator.
 
-Wilder introduced the Parabolic Time/Price System in his 1978 book, *New Concepts in Technical Trading Systems*. This book also includes RSI, Average True Range (ATR), and the Directional Movement Concept (ADX). Despite being developed before the computer age, Wilder's indicators have stood the test of time and remain extremely popular.
+Wilder used his new book, New Concepts in Technical Trading Systems, to introduce the Parabolic Time/Price System in 1978. The book also discusses RSI, Average True Range, and the Directional Movement Concept (ADX). Although they were created before the computer age, Wilder's indicators function equally well today and have a high reputation.
 
-SAR follows price and can be considered a trend-following indicator. Once a downtrend reverses and starts up, SAR follows prices like a trailing stop. The stop continuously rises as long as the uptrend remains in place. In other words, SAR never decreases in an uptrend and continuously protects profits as prices advance. The indicator acts as a guard against the propensity to lower a stop-loss. Once price stops rising and reverses below SAR, a downtrend starts and SAR is above the price. SAR follows prices lower like a trailing stop. The stop continuously falls as long as the downtrend extends. Because SAR never rises in a downtrend, it continuously protects profits on short positions. (Source: Stockcharts.com)
+SAR follows the price, and can be considered a trend-following indicator. If a downtrend reverses and starts up, SAR follows the prices just like a trailing stop. This stop continues to rise so long as the uptrend remains intact, which means that the SAR never decreases in an uptrend and is always protecting profits as prices move forwards. Once the price stops rising and reverses below SAR, a downtrend starts and SAR is above the price. SAR follows prices lower like a trailing stop, as mentioned before. The stop continuously falls as long as the downtrend continues to exist. Due to the fact that SAR never rises in a downtrend, it always protects profits on short positions.
+
+
 
 ### Further information
 VTAD: <http://vtadwiki.vtad.de/index.php/Parabolic\_SAR>
@@ -3132,9 +3767,9 @@ Wikipedia: <http://en.wikipedia.org/wiki/Parabolic\_SAR>
 ### Usage
 ```cs
 ParabolicSAR(double acceleration, double accelerationStep, double accelerationMax)
-ParabolicSAR(IDataSeries input, double acceleration, double accelerationStep, double accelerationMax)
+ParabolicSAR(IDataSeries inSeries, double acceleration, double accelerationStep, double accelerationMax)
 ParabolicSAR(double acceleration, double accelerationStep, double accelerationMax)[int barsAgo]
-ParabolicSAR(IDataSeries input, double acceleration, double accelerationStep, double accelerationMax)[int barsAgo]
+ParabolicSAR(IDataSeries inSeries, double acceleration, double accelerationStep, double accelerationMax)[int barsAgo]
 ```
 
 ### Return value
@@ -3148,10 +3783,10 @@ When using this method with an index (e.g. **ParabolicSAR**(...)\[**int** barsAg
 | acceleration     | Acceleration                        |
 | accelerationStep | Increment of the acceleration       |
 | accelerationMax  | Maximum acceleration                |
-| input            | Input data series for the indicator |
+| InSeries         | Input data series for the indicator |
 
 ### Visualization
-![Parabolic SAR](./media/image75.png)
+![Parabolic SAR](./media/ParabolicSAR.jpg)
 
 ### Example
 ```cs
@@ -3159,11 +3794,9 @@ When using this method with an index (e.g. **ParabolicSAR**(...)\[**int** barsAg
 Print("The current value for the Parabolic SAR is " + ParabolicSAR(0.02, 0.2, 0.02)[0]);
 ```
 
-##Percentage Price Oscillator (PPO)
+## Percentage Price Oscillator (PPO)
 ### Description
-The Percentage Price Oscillator shows the percentual difference between two moving averages.
-
-The PPO is classed as a momentum indicator and is similar in its construction to the MACD.
+The Percentage Price Oscillator displays the percentage difference between two moving averages. It is classed as a momentum indicator and is similar to the MACD in its construction.
 
 ### Interpretation
 The PPO can be used for divergence analysis. The divergences have the advantage of having a higher percentual hit rate. On the downside, they often appear too early and thus are hard for newer traders to assess properly.
@@ -3171,13 +3804,13 @@ The PPO can be used for divergence analysis. The divergences have the advantage 
 ### Usage
 ```cs
 PPO(int fast, int slow, int smooth)
-PPO(IDataSeries input, int fast, int slow, int smooth)
+PPO(IDataSeries inSeries, int fast, int slow, int smooth)
 PPO(int fast, int slow, int smooth)[int barsAgo]
-PPO(IDataSeries input, int fast, int slow, int smooth)[int barsAgo]
+PPO(IDataSeries inSeries, int fast, int slow, int smooth)[int barsAgo]
 
 //For the smoothed value
 PPO(int fast, int slow, int smooth).Smoothed[int barsAgo]
-PPO(IDataSeries input, int fast, int slow, int smooth).Smoothed[int barsAgo]
+PPO(IDataSeries inSeries, int fast, int slow, int smooth).Smoothed[int barsAgo]
 ```
 
 ### Return value
@@ -3186,7 +3819,7 @@ PPO(IDataSeries input, int fast, int slow, int smooth).Smoothed[int barsAgo]
 When using this method with an index (e.g. **PPO**(12,26,9)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 fast Number of bars for the calculation of the fast EMA
 
@@ -3195,7 +3828,7 @@ slow Number of bars for the calculation of the slow EMA
 smooth Number of bars for the calculation of the EMA signal line
 
 ### Visualization
-![Percentage Price Oscillator (PPO)](./media/image76.png)
+![Percentage Price Oscillator (PPO)](./media/PPO.jpg)
 
 ### Example
 ```cs
@@ -3206,12 +3839,11 @@ Print("The current value for the PPO is " + PPO(12, 26, 9)[0]);
 Print("The current value for the PPO is " + PPO(12, 26, 9).Smoothed[0]);
 ```
 
-##PercentEnvelopes
+## PercentEnvelopes
 ### Description
-The Percent Envelopes indicator draws an upper band and a lower band around a predetermined value with a distance of a given percentual value.
-The entry value can be a data series of your choosing (highs, lows, the closing price, another indicator etc.).
+The Percent Envelopes indicator draws an upper and a lower band around a predefined value with a distance of a specified percentage value. The trader can specify which data series the entry value should be (highs, lows, closing price, another indicator etc.).
 
-It is permitted to use an SMA as the entry value. The upper and the lower bands will then be displayed with a distance of 1.5%.
+It is possible to use an SMA as the entry value. In this case, the upper and lower bands will be displayed with a distance of 1.5%.
 
 ### Interpretation
 Similarly to the Bollinger Bands, the Percent Envelope indicator can be used to make buy or sell decisions and to determine whether the price is under- or overvalued.
@@ -3221,15 +3853,15 @@ The Percent Envelope should never be used to make decisions based solely on the 
 ### Usage
 ```cs
 PercentEnvelopes(double percent)
-PercentEnvelopes(IDataSeries input, double percent)
+PercentEnvelopes(IDataSeries inSeries, double percent)
 
 //For the upper band
 PercentEnvelopes(double percent).UpperPercentBand[int barsAgo]
-PercentEnvelopes(IDataSeries input, double percent).UpperPercentBand[int barsAgo]
+PercentEnvelopes(IDataSeries inSeries, double percent).UpperPercentBand[int barsAgo]
 
 //For the lower band
 PercentEnvelopes(double percent).LowerPercentBand[int barsAgo]
-PercentEnvelopes(IDataSeries input, double percent).LowerPercentBand[int barsAgo]
+PercentEnvelopes(IDataSeries inSeries, double percent).LowerPercentBand[int barsAgo]
 ```
 
 ### Return value
@@ -3238,12 +3870,12 @@ PercentEnvelopes(IDataSeries input, double percent).LowerPercentBand[int barsAgo
 When using this method with an index (e.g. **PercentEnvelopes**(2)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 percent Difference in % for the bands (from the input value)
 
 ### Visualization
-![PercentEnvelopes](./media/image77.png)
+![PercentEnvelopes](./media/PercentEnvelopes.jpg)
 
 ### Example
 ```cs
@@ -3254,13 +3886,9 @@ Print("Value of the upper percent band is: " + PercentEnvelopes(3).UpperPercentB
 Print("Value of the lower percent band is: " + PercentEnvelopes(3).LowerPercentBand[0]);
 ```
 
-##Pivot Points
+## Pivot Points
 ### Description
-Pivot Points are based on the price zone approach developed by Dr. Bruce Gould, which has been refined over the years. While the price zones were originally calculated based on the price developments of the last 2-3 years, the practical concept of pivot points is based on the calculation of price zones in the daily chart, with the previous day’s periods as the basis. The aim is to define price levels that can be used as potential resistance (R1..R3) or support zones (S1..S3).
-The indicator can be calculated using the following methods:
-Classic, Floor, Woodie, Camarilla, Fibonacci. The calculatory steps are outlined below.
-The Classic and Floor methods are often wrongly named within literature, which is why in AgenaTrader you will find that the Classic method is labeled as “Floor” and vice versa.
-The indicator shows the pivot points for intraday charts, and the “ShowPrices” parameter allows you to display the price on the levels. The “DaysBack” parameter allows you to set the number of periods in the past that should be used for the calculation. The line coloring can be defined manually.
+This indicator, based on the price zone approach invented by Dr. Bruce Gould, has been honed over the years. In the beginning, the price zones were calculated using the price developments of the last 2-3 years. Nowadays, however, the practical concept of pivot points is taken from the calculation of price zones in the daily chart, using the previous day’s periods as the basis. The goal hereby is to determine price levels that one could use as potential resistance zones (R1..R3) or support zones (S1..S3). The following methods can be used to calculate the indicator: Classic, Floor, Woodie, Camarilla, Fibonacci. The Classic and Floor methods are often wrongly named within literature, which is why in AgenaTrader you will find that the Classic method is labeled as “Floor” and vice versa. The indicator displays the pivot points for intraday charts, and the parameter “ShowPrices” allows you to display the price on the levels. The parameter “DaysBack” allows you to set the number of periods in the past that should be used for the calculation. The line coloring can be defined manually
 
 ### Interpretation
 Traders prefer to sell above the resistance lines 1 & 2 (e.g. to build up short positions), and to start building up tactical long positions at the support lines.
@@ -3277,11 +3905,11 @@ Traders prefer to sell above the resistance lines 1 & 2 (e.g. to build up short 
 PivotPoints()
 PivotPoints(PivotPointsMode mode)
 PivotPoints(PivotPointsMode mode, int LineWidth, bool ShowPrices, int DaysBack, Color RColor, Color PPColor, Color SColor)
-PivotPoints(IDataSeries input, PivotPointsMode mode, int LineWidth, bool ShowPrices, int DaysBack, Color RColor, Color PPColor, Color SColor)
+PivotPoints(IDataSeries inSeries, PivotPointsMode mode, int LineWidth, bool ShowPrices, int DaysBack, Color RColor, Color PPColor, Color SColor)
 PivotPoints()[barsAgo]
 PivotPoints(PivotPointsMode mode)[barsAgo]
 PivotPoints(PivotPointsMode mode, int LineWidth, bool ShowPrices, int DaysBack, Color RColor, Color PPColor, Color SColor)[barsAgo]
-PivotPoints(IDataSeries input, PivotPointsMode mode, int LineWidth, bool ShowPrices, int DaysBack, Color RColor, Color PPColor, Color SColor)[barsAgo]
+PivotPoints(IDataSeries inSeries, PivotPointsMode mode, int LineWidth, bool ShowPrices, int DaysBack, Color RColor, Color PPColor, Color SColor)[barsAgo]
 ```
 
 ### Return value
@@ -3298,17 +3926,17 @@ PivotPoints(PivotPointsMode.Classic).S3[int barsAgo]
 ### Parameters
 |                 |                                                                                   |
 |-----------------|-----------------------------------------------------------------------------------|
-| input           | Input data series for the indicator                                               |
-| PivotPointsMode | Calculatory method                                                                
-                   PivotPointsMode.Classic                                                            
-                   PivotPointsMode.Floor                                                              
-                   PivotPointsMode.Woodie                                                             
-                   PivotPointsMode.Camarilla                                                          
-                   PivotPointsMode.Fibonacci                                                          
-                   Default: floor                                                                     |
+| InSeries        | Input data series for the indicator                                               |
+| PivotPointsMode | Calculatory method
+PivotPointsMode.Classic
+PivotPointsMode.Floor
+PivotPointsMode.Woodie
+PivotPointsMode.Camarilla
+PivotPointsMode.Fibonacci
+Default: floor                                                                     |
 | LineWidth       | Default: 1                                                                        |
-| ShowPrices      | Shows prices next to the lines                                                    
-                   Default: false                                                                     |
+| ShowPrices      | Shows prices next to the lines
+Default: false                                                                     |
 | DaysBack        | The number of historical periods to be included in the display of the pivot lines
                    Default: 0                                                                         |
 | RColor          | Resistance line color                                                             |
@@ -3316,7 +3944,7 @@ PivotPoints(PivotPointsMode.Classic).S3[int barsAgo]
 | SColor          | Support line color                                                                |
 
 ### Visualization
-![Pivot Points](./media/image78.png)
+![Pivot Points](./media/PivotPoints.jpg)
 
 ### Example
 ```cs
@@ -3411,9 +4039,9 @@ r3 = pp + 0.764 \* Range
 
 s3 = pp - 0.764 \* Range
 
-##Polarized Fractal Efficiency (PFE)
+## Polarized Fractal Efficiency (PFE)
 ### Description
-Developed by Hans Hannula, the PFE is categorized as a momentum indicator, and uses the methods of fractal geometry and the chaos theory to establish the price efficiency of the movements.
+Hans Hannula developed the PFE, which is categorized as a momentum indicator. It uses the methods of fractal geometry and chaos theory to determine the price efficiency of the movements.
 
 ### Interpretation
 When the PFE zigzags around the zero line, no trend is present. If the PFE is equally formed and running above the zero line, the market is in an uptrend. The higher the value, the stronger the uptrend.
@@ -3421,9 +4049,9 @@ When the PFE zigzags around the zero line, no trend is present. If the PFE is eq
 ### Usage
 ```cs
 PFE(int period)
-PFE(IDataSeries input, int period)
+PFE(IDataSeries inSeries, int period)
 PFE(int period)[int barsAgo]
-PFE(IDataSeries input, int period)[int barsAgo]
+PFE(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -3432,12 +4060,12 @@ PFE(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **PFE**(20)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![Polarized Fractal Efficiency (PFE)](./media/image79.png)
+![Polarized Fractal Efficiency (PFE)](./media/PFE.jpg)
 
 ### Example
 ```cs
@@ -3447,14 +4075,14 @@ Print("The current value for the PFE is: " + PFE(20)[0]);
 
 ## Price Oscillator
 ### Description
-The Price Oscillator is an indicator based on the difference between two moving averages. The difference is accounted for in absolute values and not in percentages.
+This indicator is based on the difference between two moving averages. The difference is measured in absolute values, not in percentages.
 
 ### Usage
 ```cs
 PriceOscillator(int fast, int slow, int smooth)
-PriceOscillator(IDataSeries input, int fast, int slow, int smooth)
+PriceOscillator(IDataSeries inSeries, int fast, int slow, int smooth)
 PriceOscillator(int fast, int slow, int smooth)[int barsAgo]
-PriceOscillator(IDataSeries input, int fast, int slow, int smooth)[int barsAgo]
+PriceOscillator(IDataSeries inSeries, int fast, int slow, int smooth)[int barsAgo]
 ```
 
 ### Return value
@@ -3463,7 +4091,7 @@ PriceOscillator(IDataSeries input, int fast, int slow, int smooth)[int barsAgo]
 When using this method with an index (e.g. **PriceOscillator**(12,26,9)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 fast Number of bars used for the calculation of the fast EMA
 
@@ -3472,7 +4100,7 @@ slow Number of bars used for the calculation of the slow EMA
 smooth Number of bars used for the calculation of the EMA signal line
 
 ### Visualization
-![Price Oscillator](./media/image80.png)
+![Price Oscillator](./media/PriceOscillator.jpg)
 
 ### Example
 ```cs
@@ -3481,17 +4109,44 @@ Print("The current value for the PPO is " + PriceOscillator(12, 26, 9)[0]);
 //Output for the value of the smooth price oscillator
 Print("The current value for the smooth is " + PriceOscillator(12, 26, 9).Smoothed[0]);
 ```
-
-##Range
+## Rainbow
 ### Description
-Range outputs the span/difference between the high and the low in ticks for each bar. Range is always larger than or equal to 0.
+The rainbow indicator is represented by the set of the moving average indicator lines. Each of these lines is placed closer or further from the chart depending on the time period taken into the account for calculation of moving averages.
+
+### Introduction
+The rainbow indicator has some advantages comparing to the single moving average lines because it shows better, where the trend reversal occurs. When divergence in all lines is substantial - this is a signal of a strong up- or downtrend movement.
+By default red lines are the closest to the chart and represent the moving average line with the smallest time period.  Yellow lines indicate short-term trends. Blue display the area for short-term traders’ activity. Green is typify for medium-term trends. Pink lines can be usefull for traders who hold positions for a long period.
+
+### Return value
+Colors:
+
+Yellow ЕМА: 2,3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15;
+Blue ЕМА: 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41;
+Green ЕМА: 44, 47, 50, 53, 56, 59, 62, 65, 68, 71, 74;
+Red ЕМА: 78, 82, 86, 90, 94, 98, 102, 106, 110, 114, 118, 122;
+Pink ЕМА: 125, 130, 135, 140, 145, 150, 155, 160, 165, 170, 175, 180, 185, 190, 195, 200.
+
+### Parameters
+|                |                                                                                                                    |
+|----------------|--------------------------------------------------------------------------------------------------------------------|
+| MA Type        | Allows to select between the types of the moving average lines that shape a rainbow indicator. Default setting is the EMA (exponential moving average) but it is possible to choose a simple (SMA), hull (HMA) and weighted (WMA) moving average lines  |
+| Low MA Period  |  Shows the smallest amount of time periods for which the moving average will be calculated. For example, the setting “2” for the daily chart indicates the two latest daily closing prices.                                                                |
+| High MA Period | Shows the largest amount of time periods for which the moving average will be calculated.                          |
+| Step           | Defines the amount of moving average lines shown on a chart within the rainbow indicator. The smaller is this number the larger amount of lines will be plotted. In our example, step 2 would mean that the indicator will contain 80 EMA lines: EMA(2), EMA(4), EMA(6) and so on.                                                                                                             |
+
+### Visualisation
+![Rainbow](./media/Rainbow.jpg)
+
+## Range
+### Description
+Range delivers the span/difference between the high and low in ticks for each bar. The range is always greater than or equal to 0.
 
 ### Usage
 ```cs
 Range()
-Range(IDataSeries input)
+Range(IDataSeries inSeries)
 Range()[int barsAgo]
-Range(IDataSeries input)[int barsAgo]
+Range(IDataSeries inSeries)[int barsAgo]
 ```
 
 ### Return value
@@ -3500,10 +4155,10 @@ Range(IDataSeries input)[int barsAgo]
 When using this method with an index (e.g. **Range**()\[**int** barsAgo\] ), the range value for the referenced bar will be outputted.
 
 ### Parameter
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 ### Visualization
-![Range](./media/image81.png)
+![Range](./media/Range.jpg)
 
 ### Example
 ```cs
@@ -3514,9 +4169,9 @@ Print("The current bar has a range of: " + Range()[0]);
 Print("The current bar has a range of: " + High[0] - Low[0]);
 ```
 
-##Range Indicator (RIND)
+## Range Indicator (RIND)
 ### Description
-The Range Indicator (RIND) was developed by Jack Weinberg and published in 1954 for the first time. The indicator compares the span (range) between the high and low on an intraday basis to the span (range) between the current closing price and the previous day’s closing price.
+Jack Weinberg created the Range Indicator (RIND), which was first published in 1954. The RIND compares the intraday span (range) between the high and low to the span (range) between the current closing price and the closing price from the day before.
 
 ### Interpretation
 When the span between the current close and the previous days close is bigger than the intraday span between high and low, the indicator will display a high value. This signals a potential trend change...
@@ -3527,9 +4182,9 @@ When the span between the current close and the previous days close is bigger th
 ### Usage
 ```cs
 RIND(int periodQ, int smooth)
-RIND(IDataSeries input, int periodQ, int smooth)
+RIND(IDataSeries inSeries, int periodQ, int smooth)
 RIND(int periodQ, int smooth)[int barsAgo]
-RIND(IDataSeries input, int periodQ, int smooth)[int barsAgo]
+RIND(IDataSeries inSeries, int periodQ, int smooth)[int barsAgo]
 ```
 
 ### Return value
@@ -3538,14 +4193,14 @@ RIND(IDataSeries input, int periodQ, int smooth)[int barsAgo]
 When using this method with an index (e.g. **RIND**(3,10)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 periodQ Number of bars used for the short-term stochastic
 
 smooth Number of bars used for smoothing the indicator (using an EMA)
 
 ### Visualization
-![Range Indicator (RIND)](./media/image82.png)
+![Range Indicator (RIND)](./media/Rind.jpg)
 
 ### Example
 ```cs
@@ -3553,10 +4208,10 @@ smooth Number of bars used for smoothing the indicator (using an EMA)
 Print("The current value for the PFE is: " + RIND(3, 10)[0]);
 ```
 
-##Rate of Change (ROC)
+## Rate of Change (ROC)
 ### Description
-The Rate of Change Indicator is a simple and effective momentum oscillator that measures the relative percentual change of the prices from one period to the next.
-The calculation compares the current price to the price of n periods ago.
+The Rate of Change Indicator is a simple yet effective momentum oscillator. It measures the relative percentage change of the prices from one period to the next.
+The calculation looks at the current price and compares it to the price of n periods ago.
 
 ### Interpretation
 As long as the ROC is above 0, the uptrend is intact.
@@ -3564,14 +4219,14 @@ As long as the ROC is below 0, the downtrend is intact.
 Divergences between the indicator and the price development can hint to a trend change.
 
 ### Further information
-VTAD: <http://vtadwiki.vtad.de/index.php/RoC>
+VTAD: [http://vtadwiki.vtad.de/index.php/RoC](http://vtadwiki.vtad.de/index.php/RoC)
 
 ### Usage
 ```cs
 ROC(int period)
-ROC(IDataSeries input, int period)
+ROC(IDataSeries inSeries, int period)
 ROC(int period)[int barsAgo]
-ROC(IDataSeries input, int period)[int barsAgo]
+ROC(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -3580,40 +4235,138 @@ ROC(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **ROC**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![Rate of Change (ROC)](./media/image83.png)
+![Rate of Change (ROC)](./media/ROC.jpg)
 
-### Example
+
+## Relative Currency Strength (RCS)
+### Description
+The Relative Currency Strength indicator is a tool used for technical analysis for the Forex
+(foreign exchange) market. This indicator calculates the current and historical strength or
+weakness of a currency. The RCS can be used in all timeframes; the interpretation of the
+indicator remains the same.
+
+The basic idea of the RCS is based on finding the strongest and weakest currency in the
+present moment in a historical context. When you have all currencies displayed
+simultaneously, you can seek out the strongest and weakest currency in that moment. The
+strongest currency is the one whose line is currently the highest in comparison to the other
+lines; vice versa, you will find the weakest currency to be the lowest line at that moment. The
+currency pair that results from this is a potential trade candidate.
+
+If the RCS is showing that at the moment, the euro is the strongest (overbought) and the US
+dollar is the weakest (oversold) currency relative to the other major currencies, then a short
+entry in the EURUSD Forex pair makes sense.
+
+The logic behind this states that the EURUSD will fall either when the euro shows weakness
+or the US dollar displays strength. Since the euro is overbought, its performance will tend to
+weaken; in addition, the dollar is oversold, which means we can predict rising strength on the
+part of the USD. By finding the strongest and weakest currency, one trades the currency pair
+that currently contains the highest probability of a value adjustment
+
+### Parameters
+01. Moving Average Type: [SMA/EMA] – calculation of the Relative Strength based on an SMA (Simple Moving Average) or EMA (Exponential Moving Average).
+
+02. Slow Period: input parameter for the sensitivity of the calculation. Higher values mean that a slower average is used for the calculation. Please leave this parameter on the standard setting (10) unless you are 100% sure what you are changing with this, since the analysis of the RCS can be distorted by deviating values. A higher period simply outputs fewer signals, which, however, present higher potential in return.
+
+03. Fast Period: see Slow Period.
+
+04. – 11. Set the currencies that you wish to have displayed in the chart to “True”.
+
+
+### Signals
+#### Extreme points in the valuation of 2 currencies
+
+![Extreme points in the valuation of 2 currencies](./media/relative_extreme.png)
+For this signal, just display the two currencies included in the respective currency pair from
+the RCS. In the example above, the EURUSD is loaded in the chart and the RCS is showing
+the USD (green) and the euro (blue).
+At the red horizontal lines, there is a strong overvaluation of the euro in comparison to the
+dollar. In these situations, the euro shows enormous strength, and the dollar great
+weakness. These tendencies cannot be maintained in the long run, since in the course of
+things, both currencies gravitate toward their fair value. This is why this overvaluation of the
+euro is followed by a weakening of the EURUSD ratio, that is to say the EURUSD currency
+price falls.
+This interpretation is possible for every Forex pair.
+
+#### Intersecting of the currency lines
+
+The overlapping of two currency lines can also be used as a signal. In the example, a long
+signal (blue) forms when the USD intersects the CHF line from bottom to top. A short signal
+is formed when the CHF intersects the USD line from top to bottom.
+
+![Extreme points in the valuation of 2 currencies](./media/relative_intersecting.png)
+
+#### Divergences between chart and RCS
+A divergence is formed when, for example, the chart forms new highs that are no longer confirmed by the strength of the RCG. In the example, the USDCHF forms new highs after a strong upward movement, which, however, are no longer confirmed by the USD strength of the RCS. After the divergence occurs, the USDCHF cannot continue its upward movement and transitions into a sideways phase. A divergence, therefore, can be used as an early indicator, for example to “foresee” the end of a longer movement.
+
+![Divergences between chart and RCS](./media/relative_divergences.png)
+
+#### Display of the current performance
+In the right-hand side of the indicator window, you have a display showing how the
+currencies are currently developing. The values shown are the absolute changes of the
+individual currency in the RCS graph of the previous period compared to the current period.
+For example, a change in the USD from 0.0700 (previous period) to 0.0800 (current period)
+is outputted as +100 USD. This display serves to provide a global overview of how the Forex
+majors are currently developing relative to each other.
+
+![Display of the current performance](./media/relative_display.png)
+
+## Relative Performance
+### Description
+Calculates the price ratio between current and selected symbols.
+
+
+### Further information
+http://stockcharts.com/articles/mailbag/2012/01/how-can-i-chart-relative-performance-qqq-underperforms-spy-.html?st=relative+performance
+
+http://www.wikinvest.com/wiki/Relative_performance
+
+
+### Usage
 ```cs
-//Output of the value for the ROC indicator
-Print("The current ROC value is: " + ROC(14)[0]);
+RelativePerformance (Instrument)
+RelativePerformance (Instrument)[int barsAgo]
+
 ```
 
-##Relative Spread Strength (RSS)
+### Return value
+**double**
+
+
+### Parameters
+IInstrument
+
+### Visualization
+![Relative Performance](./media/RelativePerformance.png)
+
+
+
+
+## Relative Spread Strength (RSS)
 ### Description
-The Relative Spread Strength Indicator was developed in 2006 and calculates the value of the RSI based on the difference of two SMAs.
+The Relative Spread Strength Indicator was developed in 2006. It uses the difference of two SMAs to calculates the value of the RSI.
 
 ### Interpretation
 Values above 70 and below 30 mean that the price has the potential of turning. Trades should not be entered into at these points. When it comes to extreme values, you might want to check smaller timeframes for clearer trading signals.
 
 In the long-term analysis, the following methodology should be applied:
 
-- below 30: long entry
-- above 70: for more than 5 days: exit long
+-   below 30: long entry
+-   above 70: for more than 5 days: exit long
 
-- above 95: short entry
-- below 30: for more than 5 days: exit short
+-   above 95: short entry
+-   below 30: for more than 5 days: exit short
 
 ### Usage
 ```cs
 RSS(int eMA1, int eMA2, int length)
-RSS(IDataSeries input, int eMA1, int eMA2, int length)
+RSS(IDataSeries inSeries, int eMA1, int eMA2, int length)
 RSS(int eMA1, int eMA2, int length)[int barsAgo]
-RSS(IDataSeries input, int eMA1, int eMA2, int length)[int barsAgo]
+RSS(IDataSeries inSeries, int eMA1, int eMA2, int length)[int barsAgo]
 ```
 
 ### Return value
@@ -3622,7 +4375,7 @@ RSS(IDataSeries input, int eMA1, int eMA2, int length)[int barsAgo]
 When using this method with an index (e.g. **RSS**(10,40,5)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 length Number of bars used in the calculation
 
@@ -3631,7 +4384,7 @@ eMA1 Number of periods for the first EMA
 eMA2 Number of periods for the second EMA
 
 ### Visualization
-![Relative Spread Strength (RSS)](./media/image84.png)
+![Relative Spread Strength (RSS)](./media/RSS.jpg)
 
 ### Example
 ```cs
@@ -3639,9 +4392,9 @@ eMA2 Number of periods for the second EMA
 Print("The current RSS is " + RSS (10, 40, 5)[0]);
 ```
 
-##Relative Strength Index (RSI)
+## Relative Strength Index (RSI)
 ### Description
-The RSI was developed by J. Welles Wilder and is one of the more popular and useful Momentum Oscillators. It compares the size of the most recent winnings with the size of the most recent losses. This means that it evaluates the relationships between the up and down closing prices. The information is depicted between 0 and 100.
+J. Welles Wilder, the creator of several indicators, also developed the RSI, which is one of the most popular, useful momentum oscillators. It compares the size of the most recent profits with the size of the most recent losses, which means that it assesses the relationships between the up and down closing prices. The values are shown between 0 and 100.
 
 ### Interpretation
 Traditionally, and according to Wilder, RSI is considered overbought when above 70 and oversold when below 30. Signals can also be generated by searching for divergences, failure swings and centerline crossovers. RSI can also be used to identify the general trend. These traditional levels can also be adjusted to better fit the security or analytical requirements. Raising overbought to 80 or lowering oversold to 20 will reduce the number of overbought/oversold readings. Short-term traders sometimes use 2-period RSI to look for overbought readings above 80 and oversold readings below 20.
@@ -3652,13 +4405,13 @@ Traditionally, and according to Wilder, RSI is considered overbought when above 
 ### Usage
 ```cs
 RSI(int period, int smooth)
-RSI(IDataSeries input, int period, int smooth)
+RSI(IDataSeries inSeries, int period, int smooth)
 RSI(int period, int smooth)[int barsAgo]
-RSI(IDataSeries input, int period, int smooth)[int barsAgo]
+RSI(IDataSeries inSeries, int period, int smooth)[int barsAgo]
 
 //For the average value
 RSI(int period, int smooth).Avg[int barsAgo]
-RSI(IDataSeries input, int period, int smooth).Avg[int barsAgo]
+RSI(IDataSeries inSeries, int period, int smooth).Avg[int barsAgo]
 ```
 
 ### Return value
@@ -3667,14 +4420,14 @@ RSI(IDataSeries input, int period, int smooth).Avg[int barsAgo]
 When using this method with an index (e.g. **RSI**(14,3)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 smooth Number of periods for the smoothing
 
 ### Visualization
-![Relative Strength Index (RSI)](./media/image85.png)
+![Relative Strength Index (RSI)](./media/RSI.jpg)
 
 ### Example
 ```cs
@@ -3685,18 +4438,19 @@ Print("The current value for the RSI is: " + RSI(14, 3)[0]);
 Print("The current value for the AVG line is: " + RSI(14, 3).Avg[0]);
 ```
 
-##Relative Strength Levy (RSL)
+## Relative Strength Levy (RSL)
 ### Description
-The concept of the Relative Strength according to Levy is that the past developments contribute greatly to the strength that will be found in the future. Essentially, the current performance is compared to the performance of the past.
+The concept of the Relative Strength according to R.A. Levy is that the past developments play a very important role in the strength that will be seen in the future. The current performance is compared to the past performance.
 
-The calculation is carried out by taking the weekly closes (or daily closes) and dividing these by the arithmetic mean of the closing prices of the inspected period. The result is then balanced around the 10 marker, and a sorted list is created where the first place is filled with the value of the highest RSL.
+The calculation involves taking the weekly closes (or daily closes) and dividing them by the arithmetic mean of the closing prices for the examined period. The result is then balanced around the 10 marker, and an ordered list is created where the value of the highest RSL fills the first place.
+
 
 ### Usage
 ```cs
 RSL(int period)
-RSLDataSeries input, int period)
+RSLDataSeries inSeries, int period)
 RSLnt period)[int barsAgo]
-RSL(IDataSeries input, int period)[int barsAgo]
+RSL(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -3705,12 +4459,12 @@ RSL(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **RSL**(27)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![Relative Strength Levy (RSL)](./media/image86.png)
+![Relative Strength Levy (RSL)](./media/RSL.png)
 
 ### Example
 ```cs
@@ -3718,10 +4472,9 @@ period Number of bars included in the calculations
 Print("The Relative Strength as calculated by Levy is " + RSL(27)[0]);
 ```
 
-##Relative Volatility Index (RVI)
+## Relative Volatility Index (RVI)
 ### Description
-The Relative Volatility Index (RVI) is similar to the RSI indicator. Developed by Donald Dorsey, it is similar to the RSI, but uses the standard deviation instead of the daily price span.
-The standard deviation over a period of 10 is used to determine the underlying volatility of the instrument. The RSI indicator is used on the results. The end result is shown on a scale of 1 to 100. Applying the RSI normalizes the results.
+The Relative Volatility Index (RVI) has many similarities to the RSI indicator. Donald Dorsey developed the RVI, which uses the standard deviation instead of the daily price span. To determine the underlying volatility of the instrument, the RVI uses the standard deviation over a period of 10. The RSI indicator is then used on the results, which normalizes them. What comes from this is displayed on a scale of 1 to 100.
 
 ### Interpretation
 Values above 50 assume an increase in volatility. Values below 50 imply a drop in volatility. Dorsey recommends using the indicator as a filter for other indicators.
@@ -3732,9 +4485,9 @@ Values above 50 assume an increase in volatility. Values below 50 imply a drop i
 ### Usage
 ```cs
 RVI(int period)
-RVI(IDataSeries input, int period)
+RVI(IDataSeries inSeries, int period)
 RVI(int period)[int barsAgo]
-RVI(IDataSeries input, int period)[int barsAgo]
+RVI(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -3743,12 +4496,12 @@ RVI(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **RVI**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![Relative Volatility Index (RVI)](./media/image87.png)
+![Relative Volatility Index (RVI)](./media/RVI.jpg)
 
 ### Example
 ```cs
@@ -3756,12 +4509,12 @@ period Number of bars included in the calculations
 Print("The current value for the RVI is: " + RVI(14)[0]);
 ```
 
-##ReversalBars
+## ReversalBars
 **The installation of the Technical Analysis Package is required in order to access this indicator.**
 
 ### Description
-The Reversal Bars indicator assists you in finding reversal bars within the chart.
-The indicator has a plot and will output the value of 1 for long reversal bars, -1 for short reversal bars and 0 for none. You are able to make several changes such as colors, display arrows etc.
+The Reversal Bars indicator helps the trader find reversal bars within a chart.
+The indicator has a plot, and outputs the value 1 for long reversal bars, -1 for short reversal bars and 0 when there are none present. Traders can make several adjustments such as colors, arrows that are shown, etc.
 
 ### Interpretation
 The interpretation of reversal bars is described in M. Voight’s book.
@@ -3769,13 +4522,13 @@ The interpretation of reversal bars is described in M. Voight’s book.
 ### Usage
 ```cs
 Reversalbars()
-Reversalbars(IDataSeries input)
+Reversalbars(IDataSeries inSeries)
 Reversalbars()[int barsAgo]
-Reversalbars(IDataSeries input)[int barsAgo]
+Reversalbars(IDataSeries inSeries)[int barsAgo]
 Reversalbars(int tolerance)
-Reversalbars(IDataSeries input, int tolreance)
+Reversalbars(IDataSeries inSeries, int tolreance)
 Reversalbars(int tolerance)[int barsAgo]
-Reversalbars(IDataSeries input, int tolerance)[int barsAgo]
+Reversalbars(IDataSeries inSeries, int tolerance)[int barsAgo]
 ```
 
 ### Return value
@@ -3790,12 +4543,12 @@ Reversalbars(IDataSeries input, int tolerance)[int barsAgo]
 When using this method with an index (e.g. **Reversalbars**()\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 tolerance See the following description below
 
 ### Visualization
-![ReversalBars](./media/image88.png)
+![ReversalBars](./media/ReversalBars.jpg)
 
 ### The tolerance parameter
 The reversal bars must exceed their previous bars by at least 1 tick. The tolerance parameter allows you to define/add a certain number of ticks; the parameter is set to 0 by default, but in a sideways market this will lead to a relatively large number of reversal bars being marked.
@@ -3804,18 +4557,18 @@ The reversal bars must exceed their previous bars by at least 1 tick. The tolera
 
 ### Example
 ```cs
-// Set CalculateOnBarClose = true !!
+// Set CalculateOnClosedBar = true !!
 if (Reversalbars()[0] == 1.0)
 Print("The last bar is a long reversal bar.");
 ```
 
-##R-Squared
+## R-Squared
 ### Description
-The R-Squared indicator is one of the indicators belonging to the linear regression series. R-Squared is the correlation coefficient that describes the quality of the linear regression line.
+This indicator belongs to the linear regression series. R-Squared is the correlation coefficient that specifies the quality of the linear regression line.
 
-R-Squared derives its name from the calculation, since the value is the square of the correlation coefficient, which in the discipline of mathematics is prefixed with the Greek letter Rho (P).
+It is the calculation that gives R-Squared its name – the value is the square of the correlation coefficient, which in mathematics is prefixed with the Greek letter Rho (P).
 
-See [*Linear Regression*], [*LinRegSlope*], [*LinRegIntercept*].
+See [*Linear Regression*](#linearregression), [*LinRegSlope*](#linregslope), [*LinRegIntercept*](#linregintercept).
 
 ### Interpretation
 The value of the oscillator fluctuates between 0 and 1. By default, the upper boundary line is located at 0.75, and the lower border is at 0.2.
@@ -3828,9 +4581,9 @@ In a strong trend phase, the prices will remain within a tight range for an exte
 ### Usage
 ```cs
 RSquared(int period)
-RSquared(IDataSeries input, int period)
+RSquared(IDataSeries inSeries, int period)
 RSquared(int period)[int barsAgo]
-RSquared(IDataSeries input, int period)[int barsAgo]
+RSquared(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -3839,12 +4592,12 @@ RSquared(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **RSquared**(8)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![R-Squared](./media/image90.png)
+![R-Squared](./media/RSquared.jpg)
 
 ### Example
 ```cs
@@ -3852,9 +4605,9 @@ period Number of bars included in the calculations
 Print("The current value of R-Squared is: " + RSquared(8)[0]);
 ```
 
-##StandardDeviation(StdDev)
+## StandardDeviation(StdDev)
 ### Description
-The Standard Deviation ![StandardDeviation(StdDev)](./media/image91.png)(StdDev) is a tool used in statistics and probability calculation, and is a measurement of the dispersion of the values of a random variable around its median value. The Standard Deviation is used to calculate many indicators, such as the Bollinger Bands etc.
+The Standard Deviation  (StdDev) is a tool used in statistics and probability calculation. It measures the dispersion of the values of a random variable around its median value. The Standard Deviation is used for the calculation of many indicators, such as, for example, the Bollinger Bands.
 
 ### Interpretation
 A lower standard deviation implies that the data points are located very close to their median value. The trading application assumes that prices will return to their median value.
@@ -3865,9 +4618,9 @@ VTAD: <http://vtadwiki.vtad.de/index.php/Standard\_Abweichung>
 ### Usage
 ```cs
 StdDev (int period)
-StdDev (IDataSeries input, int period)
+StdDev (IDataSeries inSeries, int period)
 StdDev (int period)[int barsAgo]
-StdDev (IDataSeries input, int period)[int barsAgo]
+StdDev (IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -3876,12 +4629,12 @@ StdDev (IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **StdDev**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![StandardDeviation(StdDev)](./media/image92.png)
+![StandardDeviation(StdDev)](./media/StdDev.jpg)
 
 ### Example
 ```cs
@@ -3889,10 +4642,9 @@ period Number of bars included in the calculations
 Print("The current value for the standard deviation is: " + StdDev(14)[0]);
 ```
 
-##Standard Error (StdError)
+## Standard Error (StdError)
 ### Description
-The Standard Error Bands were developed by Jon Anderson, and are similar to the Bollinger Bands, except that their calculation is different. The bands are created by an upper and a lower boundary around a middle line, also known as the linear regression.
-The subtraction of two standard errors from the final value of the regression line results in the lower standard error band. Since individual closing prices can have a vast influence on the values of the bands, it is necessary to smooth the data using a Simple Moving Average.
+Jon Anderson came up with the Standard Error Bands, which are similar to the Bollinger Bands, but with a different calculation. An upper and a lower boundary around a middle line create the bands – this is also known as the linear regression. The lower standard error band results from the subtraction of two standard errors from the final value of the regression line. Because individual closing prices can have a huge influence on the values of the bands, it is necessary to use a Simple Moving Average to smooth the data.
 
 ### Interpretation
 One of the applications of the standard error bands is the tightening of the bands when prices rise/fall. If the bands tighten, it signifies that a trend is currently in place. A strong trend will continue to tighten the bands.
@@ -3903,17 +4655,17 @@ One of the applications of the standard error bands is the tightening of the ban
 ### Usage
 ```cs
 StdError(int period)
-StdError(IDataSeries input, int period)
+StdError(IDataSeries inSeries, int period)
 StdError(int period)[int barsAgo]
-StdError(IDataSeries input, int period)[int barsAgo]
+StdError(IDataSeries inSeries, int period)[int barsAgo]
 
 //Upper band
 StdError(int period).Upper[int barsAgo]
-StdError(IDataSeries input, int period).Upper[int barsAgo]
+StdError(IDataSeries inSeries, int period).Upper[int barsAgo]
 
 //Lower band
 StdError(int period).Lower[int barsAgo]
-StdError(IDataSeries input, int period).Lower[int barsAgo]
+StdError(IDataSeries inSeries, int period).Lower[int barsAgo]
 ```
 
 ### Return value
@@ -3922,12 +4674,12 @@ StdError(IDataSeries input, int period).Lower[int barsAgo]
 When using this method with an index (e.g. **StdError**(21)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![Standard Error (StdError)](./media/image93.png)
+![Standard Error (StdError)](./media/StdError.jpg)
 
 ### Example
 ```cs
@@ -3941,7 +4693,7 @@ Print("The lower band of the standard error is currently at: " + StdError(21).Lo
 Print("The upper band of the standard error is currently at: " + StdError(21).Upper[0]);
 ```
 
-##Stochastics
+## Stochastics
 ### Description
 The stochastic indicator was developed by George C. Lane in the 1950s. It belongs to the class “momentum indicators” (oscillators) and represents the current closing price in relation to a high or low area over a defined number of periods.
 The stochastic indicator is based on the observation that in an uptrend, the closing price is close to the daily high, while in a downtrend, the closing price is closer to the daily low.
@@ -3964,15 +4716,15 @@ VTAD: <http://vtadwiki.vtad.de/index.php/Stochastik>
 ### Usage
 ```cs
 Stochastics(int periodD, int periodK, int smooth)
-Stochastics(IDataSeries input, int periodD, int periodK, int smooth)
+Stochastics(IDataSeries inSeries, int periodD, int periodK, int smooth)
 
 //For the %D line
 Stochastics(int periodD, int periodK, int smooth).D[int barsAgo]
-Stochastics(IDataSeries input, int periodD, int periodK, int smooth).D[int barsAgo]
+Stochastics(IDataSeries inSeries, int periodD, int periodK, int smooth).D[int barsAgo]
 
 //For the %K line
 Stochastics(int periodD, int periodK, int smooth).K[int barsAgo]
-Stochastics(IDataSeries input, int periodD, int periodK, int smooth).K[int barsAgo]
+Stochastics(IDataSeries inSeries, int periodD, int periodK, int smooth).K[int barsAgo]
 ```
 
 ### Return value
@@ -3981,7 +4733,7 @@ Stochastics(IDataSeries input, int periodD, int periodK, int smooth).K[int barsA
 When using this method with an index (e.g. **Stochastics**(7,14,3)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 periodD Number of periods to be used for the %K smoothing
 
@@ -3990,7 +4742,7 @@ periodK Number of bars included in the %K calculation
 smooth Number of periods for the smoothing of %D
 
 ### Visualization
-![Stochastics](./media/image94.png)
+![Stochastics](./media/Stochastics.jpg)
 
 ### Example
 ```cs
@@ -4001,30 +4753,30 @@ Print("The stochastic line %K is currently at: " + Stochastics(3, 14, 7).K[0]);
 Print("The stochastic line %D is currently at: " + Stochastics(3, 14, 7).D[0]);
 ```
 
-##Stochastics Fast
+## Stochastics Fast
 ### Description
-See [*stochastics*].
+See [*stochastics*](#stochastics).
 
 ### Interpretation
 Closing prices that are constantly in the upper area indicate accumulation (i.e. buying pressure), whilst the distribution (i.e. selling pressure) is shown by an indicator value in the lower area.
 
 ### Further information
-VTAD: <http://vtadwiki.vtad.de/index.php/Stochastik>
+VTAD: [http://vtadwiki.vtad.de/index.php/Stochastik](http://vtadwiki.vtad.de/index.php/Stochastik)
 
-Charttec: <http://www.charttec.de/html/indikator\_stochastics.php>
+Charttec: [http://www.charttec.de/html/indikator_stochastics.php](http://www.charttec.de/html/indikator_stochastics.php)
 
 ### Usage
 ```cs
 StochasticsFast(int periodD, int periodK)
-StochasticsFast(IDataSeries input, int periodD, int periodK)
+StochasticsFast(IDataSeries inSeries, int periodD, int periodK)
 
 //For the %D line
 StochasticsFast(int periodD, int periodK).D[int barsAgo]
-StochasticsFast(IDataSeries input, int periodD, int periodK).D[int barsAgo]
+StochasticsFast(IDataSeries inSeries, int periodD, int periodK).D[int barsAgo]
 
 //For the %K line
 StochasticsFast(int periodD, int periodK).K[int barsAgo]
-StochasticsFast(IDataSeries input, int periodD, int periodK).K[int barsAgo]
+StochasticsFast(IDataSeries inSeries, int periodD, int periodK).K[int barsAgo]
 ```
 
 ### Return value
@@ -4033,14 +4785,14 @@ StochasticsFast(IDataSeries input, int periodD, int periodK).K[int barsAgo]
 When using this method with an index (e.g. **StochasticsFast**(7,14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 periodD Number of periods for the smoothing of %K
 
 periodK Number of periods included in the calculation of %K
 
 ### Visualization
-![Stochastics Fast](./media/image95.png)
+![Stochastics Fast](./media/StochasticsFast.jpg)
 
 ### Example
 ```cs
@@ -4051,22 +4803,22 @@ Print("The stochastic line %K is currently at: " + StochasticsFast(3, 14).K[0]);
 Print("The stochastic line %D is currently at: " + StochasticsFast(3, 14).D[0]);
 ```
 
-##Stochastics RSI (StochRSI)
+## Stochastics RSI (StochRSI)
 ### Description
-This is a calculation of the stochastic based on of the RSI indicator.
+Stochastics RSI is a calculation of the stochastic based on the RSI indicator.
 
 ### Interpretation
 The indicator provides fast and precise extreme values/points in the price movements. The StochRSI can be used as a trend filter in higher timeframes as well as a tool for better entry timing.
 
 ### Further information
-<http://www.investopedia.com/terms/s/stochrsi.asp\#axzz263tizhIG>
+[http://www.investopedia.com/terms/s/stochrsi.asp#axzz263tizhIG](http://www.investopedia.com/terms/s/stochrsi.asp#axzz263tizhIG)
 
 ### Usage
 ```cs
 StochRSI(int period)
-StochRSI(IDataSeries input, int period)
+StochRSI(IDataSeries inSeries, int period)
 StochRSI(int period)[int barsAgo]
-StochRSI(IDataSeries input, int period)[int barsAgo]
+StochRSI(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -4075,12 +4827,12 @@ StochRSI(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **StochRSI**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![Stochastics RSI (StochRSI)](./media/image96.png)
+![Stochastics RSI (StochRSI)](./media/StochRSI.jpg)
 
 ### Example
 ```cs
@@ -4088,16 +4840,16 @@ period Number of bars included in the calculations
 Print("The current value for the StochRSI is: " + StochRSI(14)[0]);
 ```
 
-##Summation (SUM)
+## Summation (SUM)
 ### Description
-Summation is the sum over a specific number of periods.
+Summation is the sum over a predefined number of periods.
 
 ### Usage
 ```cs
 SUM(int period)
-SUM(IDataSeries input, int period)
+SUM(IDataSeries inSeries, int period)
 SUM(int period)[int barsAgo]
-SUM(IDataSeries input, int period)[int barsAgo]
+SUM(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -4106,12 +4858,12 @@ SUM(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **SUM**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![Summation (SUM)](./media/image97.png)
+![Summation (SUM)](./media/SUM.jpg)
 
 ### Example
 ```cs
@@ -4119,9 +4871,10 @@ period Number of bars included in the calculations
 Print(SUM(Volume,10)[0]);
 ```
 
-##SuperTrend
+## SuperTrend
 ### Description
-The SuperTrend indicator was developed by a French trader and is similar to the Parabolic Stop and Reverse System (Parabolic SAR). It is based on the median values of the candles and measures the volatility as a span between high and low, ignoring potential price gaps. Originating from a starting value, the indicator will continue to run in one direction until the market turns direction in combination with rising volatility. The indicator then changes its starting value to that of the counter-direction. The indicator is programmed so that only the trend direction can initiate a change. Dropping volatility and movements against a trend direction will lead to the indicator moving along horizontally.
+The SuperTrend indicator was invented by a French trader. SuperTrend is similar to the Parabolic Stop and Reverse System (Parabolic SAR), and is based on the median values of the candles. It measures volatility as a span between high and low, not taking potential price gaps into account. The indicator, which originates from a starting value, continues to proceed in one direction until the market changes direction, combined with rising volatility. This causes the indicator to adjust its starting value to match that of the counter-direction. The indicator is programmed in such a way that nothing but the trend direction can bring about a change. Dropping volatility combined with movements against the trend direction cause the indicator to move horizontally.
+
 
 ### Interpretation
 There are multiple interpretations and applications for the SuperTrend. Forex traders prefer to trade the crosses directly. This way, the system will continuously be inside the market and only needs to be complemented by a stop and further trading logic settings.
@@ -4131,17 +4884,17 @@ The indicator can be used as an exit for additional trading systems, meaning tha
 ### Usage
 ```cs
 SuperTrend(SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth)
-SuperTrend(IDataSeries input, SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth)
+SuperTrend(IDataSeries inSeries, SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth)
 SuperTrend(SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth)[int barsAgo]
-SuperTrend(IDataSeries input, SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth)[int barsAgo]
+SuperTrend(IDataSeries inSeries, SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth)[int barsAgo]
 
 //For the values of the uptrend:
 SuperTrend(SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth).UpTrend[int barsAgo]
-SuperTrend(IDataSeries input, SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth).UpTrend[int barsAgo]
+SuperTrend(IDataSeries inSeries, SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth).UpTrend[int barsAgo]
 
 //For the values of the downtrend:
 SuperTrend(SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth).DownTrend[int barsAgo]
-SuperTrend(IDataSeries input, SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth).DownTrend[int barsAgo]
+SuperTrend(IDataSeries inSeries, SuperTrendMode stMode, int length, double multiplier, SuperTrendMAType maType, int smooth).DownTrend[int barsAgo]
 ```
 
 ### Return value
@@ -4152,47 +4905,47 @@ When using this method with an index (e.g. **SuperTrend**(...).UpTrend\[**int** 
 ### Parameters
 |            |                                                                                                                                                                        |
 |------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| input      | Input data series for the indicator                                                                                                                                    |
-| maType     | For the calculation of the MA, the following methods can be used:                                                                                                      
-              SuperTrendMAType.HMA                                                                                                                                                    
-              SuperTrendMAType.SMA                                                                                                                                                    
-              SuperTrendMAType.SMMA                                                                                                                                                   
-              SuperTrendMAType.TEMA                                                                                                                                                   
-              SuperTrendMAType.TMA                                                                                                                                                    
-              SuperTrendMAType.VMA                                                                                                                                                    
-              SuperTrendMAType.VWMA                                                                                                                                                   
-              SuperTrendMAType.WMA                                                                                                                                                    
-              Also see: [*HMA*], [*SMA*], [*SMMA*], [*TEMA*], [*TMA*], [*VMA*], [*VWMA*], [*WMA*][*VMA*].                                                                             
-              Default: HMA                                                                                                                                                            |
-| multiplier | This is a multiplier for the internal calculation of the offset. This is only used when the method is set to ATR and DualThrust.                                       
-              (In the adaptive mode, the multiplier uses the Homodyne Discriminator)                                                                                                  
-              Default: 2.618                                                                                                                                                          |
-| Period     | Number of bars used for the calculation of the moving average                                                                                                          
-              Default: 14                                                                                                                                                             |
-| smooth     | Values for additional smoothing                                                                                                                                        
-              If no smoothing is necessary, this value can be set to 1                                                                                                                
-              Default: 14                                                                                                                                                             |
-| stMode     | The following methods can be chosen:                                                                                                                                   
-              SuperTrendMode.ATR,                                                                                                                                                     
-              SuperTrendMode.DualThrust,                                                                                                                                              
-              SuperTrendMode.Adaptive                                                                                                                                                 
-              The Period Parameter will have a huge influence when the DualThrustMode is selected. The smaller the period, the tighter the indicator will follow price developments.  
-              Default: SuperTrendMode.ATR                                                                                                                                             |
+| InSeries   | Input data series for the indicator                                                                                                                                    |
+| maType     | For the calculation of the MA, the following methods can be used:
+SuperTrendMAType.HMA
+SuperTrendMAType.SMA
+SuperTrendMAType.SMMA
+SuperTrendMAType.TEMA
+SuperTrendMAType.TMA
+SuperTrendMAType.VMA
+SuperTrendMAType.VWMA
+SuperTrendMAType.WMA
+
+Also see: [*HMA*](#hma-hull-moving-average), [*SMA*](#sma-simple-moving-average), [*SMMA*](#smma-smoothed-moving-average), [*TEMA*](#tema-triple-exponential-moving-average), [*TMA*](#tma-triangular-moving-average), [*VMA*](#vma-variable-moving-average), [*VWMA*](#vwma-volume-weighted-moving-average), [*WMA*](#wma-weighted-moving-average).
+Default:
+              HMA  |
+| multiplier | This is a multiplier for the internal calculation of the offset. This is only used when the method is set to ATR and DualThrust.
+(In the adaptive mode, the multiplier uses the Homodyne Discriminator)
+Default: 2.618      |
+| Period     | Number of bars used for the calculation of the moving average
+Default: 14    |
+| smooth     | Values for additional smoothing
+If no smoothing is necessary, this value can be set to 1
+Default: 14     |
+| stMode     | The following methods can be chosen:
+SuperTrendMode.ATR, SuperTrendMode.DualThrust,  SuperTrendMode.Adaptive
+The Period Parameter will have a huge influence when the DualThrustMode is selected. The smaller the period, the tighter the indicator will follow price developments.
+Default: SuperTrendMode.ATR     |
 
 ### Visualization
-![SuperTrend](./media/image98.png)
+![SuperTrend](./media/SuperTrend.jpg)
 
 ### Example
 ```cs
-if (Close[0] > SuperTrend(SuperTrendMode.ATR, 14, 2.618, MovingAverageType.HMA, 14).UpTrend[0])
+if (Close[0] > SuperTrend(SuperTrendMAType.HMA, SuperTrendMode.ATR, 14, 2.618, 14).UpTrend[0])
   Print("The market is in an uptrend.");
-if (Close[0] < SuperTrend(SuperTrendMode.ATR, 14, 2.618, MovingAverageType.HMA, 14).DownTrend[0])
+if (Close[0] < SuperTrend(SuperTrendMAType.HMA, SuperTrendMode.ATR, 14, 2.618, 14).DownTrend[0])
   Print("The market is in a downtrend.");
 ```
 
-##SupportResistanceAreas
+## SupportResistanceAreas
 ### Description
-The Support Resistance Areas indicator draws support and resistance areas for the chart. There are 4 types of supports and resistances available, all distinguished by varying colors.
+This indicator draws support and resistance areas in the chart. There are 4 different types of possible supports and resistances, which are differentiated by various colors.
 
 Support due to a lower high (ColorLowerHigh)
 
@@ -4220,12 +4973,11 @@ Once broken, these areas tend to reverse their function, meaning that a broken s
                      The smallest setting is 1; the default is 5                                                       |
 
 ### Visualization
-![SupportResistanceAreas](./media/image99.png)
+![SupportResistanceAreas](./media/SupportResistanceAreas.jpg)
 
-##Swing
+## Swing
 ### Description
-The swing indicator draws a line at the swing highs or swing lows based on the strength of these points. The strength is determined by the number of bars to the left and right of the extreme point.
-Methods for these indicators can be used for other scripts.
+Based on the strength of the swing highs or the swing lows, the swing indicator draws a line at these points. The number of bars to the left and right of the extreme point is the determining factor for the strength. Methods for these indicators can also be implemented for other scripts.
 
 ### Interpretation
 The methods for these indicators can be used in scripts to determine the last extreme point and its corresponding price value. The highs and lows of these points may then be used as entry, stop or target markers.
@@ -4233,12 +4985,12 @@ The methods for these indicators can be used in scripts to determine the last ex
 ### Usage
 ```cs
 //For a high
-Swing(int strength).SwingHighBar(int barsAgo, int instance, int lookBackPeriod)
-Swing(IDataSeries input, int strength).SwingHighBar(int barsAgo, int instance, int lookBackPeriod)
+Swing(int strength).SwingHighBar(int barsAgo, int instance, int lookBackPeriod);
+Swing(IDataSeries inSeries, int strength).SwingHighBar(int barsAgo, int instance, int lookBackPeriod);
 
 //For a low
-Swing(int strength).SwingLowBar(int barsAgo, int instance, int lookBackPeriod)
-Swing(IDataSeries input, int strength).SwingLowBar(int barsAgo, int instance, int lookBackPeriod)
+Swing(int strength).SwingLowBar(int barsAgo, int instance, int lookBackPeriod);
+Swing(IDataSeries inSeries, int strength).SwingLowBar(int barsAgo, int instance, int lookBackPeriod);
 ```
 
 ### Return value
@@ -4252,14 +5004,14 @@ When using this method with an index (e.g. **Swing**(5)\[**int** barsAgo\] ), th
 |                |                                                                                                              |
 |----------------|--------------------------------------------------------------------------------------------------------------|
 | barsAgo        | Starting point for the search                                                                                |
-| input          | Input data series for the indicator                                                                          |
+| InSeries       | Input data series for the indicator                                                                          |
 | instance       | The number of occurrences of extreme points (1 is the last occurrence, 2 is the second last occurrence etc.) |
 | length         | Number of bars included in the calculation                                                                   |
 | lookBackPeriod | Number of bars in the past in which swing points will be searched for (search area)                          |
 | strength       | Number of bars to the left and right of the extreme points                                                   |
 
 ### Visualization
-![Swing](./media/image100.png)
+![Swing](./media/Swing.jpg)
 
 ### Example
 ```cs
@@ -4269,9 +5021,9 @@ Print("The last swing high was " + barsAgo + " bars ago.");
 Print("The last swing high was at " + High[barsAgo]);
 ```
 
-##Time-Series-Forecast (TSF)
+## Time-Series-Forecast (TSF)
 ### Description
-The Time-Series-Forecast is similar to a moving average. The trend is established according to a regression equation using the smallest square formula. The aim is to extrapolate the future price movements based on the currently existing data.
+The Time-Series-Forecast is quite similar to a moving average. Here, the trend is established based on a regression equation that uses the smallest square formula. The goal of the TSF is to anticipate future price movements with the help of currently existing data.
 
 ### Interpretation
 The TSF reacts faster than the moving averages. These always have time delays when depicting the pre-existing trends. The TSF formula never allows the distance to the current price to become too large, thus permitting sharper trade reversal recognition.
@@ -4284,9 +5036,9 @@ An entry is placed when the price breaks the TSF line from bottom to top.
 ### Usage
 ```cs
 TSF(int forecast, int period)
-TSF(IDataSeries input, int forecast, int period)
+TSF(IDataSeries inSeries, int forecast, int period)
 TSF(int forecast, int period)[int barsAgo]
-TSF(IDataSeries input, int forecast, int period)[int barsAgo]
+TSF(IDataSeries inSeries, int forecast, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -4297,12 +5049,12 @@ When using this method with an index (e.g. **TSF**(3,14)\[**int** barsAgo\] ), t
 ### Parameters
 forecast Number of bars used for the forecast
 
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![Time-Series-Forecast (TSF)](./media/image101.png)
+![Time-Series-Forecast (TSF)](./media/TSF.jpg)
 
 ### Example
 ```cs
@@ -4310,10 +5062,10 @@ period Number of bars included in the calculations
 Print("The current value for the TSF is: " + TSF(3, 14)[0]);
 ```
 
-##Tools
-##Constant Lines
+## Tools
+## Constant Lines
 ### Description
-The Constant Lines tool draws up to four freely configurable horizontal lines within the chart. It is generally used to mark specific price levels in order to keep track of them.
+The Constant Lines tool can draw a maximum of four freely configurable horizontal lines within a chart. In general, it is used to label certain price levels in order to keep an eye on them.
 
 ### Usage
 ```cs
@@ -4331,64 +5083,64 @@ ConstantLines(double line1Value, double line2Value, double line3Value, double li
 When using this method with an index (e.g. **ConstantLines**(1,2,3,4)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Visualization
-![Constant Lines](./media/image102.png)
+![Constant Lines](./media/ConstantLines.jpg)
 
-##CurrentDayOHL
+## CurrentDayOHL
 ### Description
-This function outputs the values for the open, high and low of the current day (session).
+This function delivers the values for the open, high and low of the current day i.e. session.
 
-CurrentDayOHL is designed to be used with intraday data series.
+CurrentDayOHL is intended for use with intraday data series.
 
-See [*PriorDayOHLC*], [*DayLines*].
+See [*PriorDayOHLC*](#priordayohlc), [*DayLines*](#daylines).
 
 ### Parameter
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 ### Return value
 **double**
 
-When using this method with an index (e.g. **CurrentDayOHL**.CurrentOpen(...)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
+When using this method with an index (e.g. **CurrentDayOHL**.GetCurrentBar().Open\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Usage
 ```cs
 CurrentDayOHL()
-CurrentDayOHL(IDataSeries input)
+CurrentDayOHL(IDataSeries inSeries)
 
 //For the open value
-CurrentDayOHL().CurrentOpen[int barsAgo]
-CurrentDayOHL(IDataSeries input).CurrentOpen[int barsAgo]
+CurrentDayOHL().GetCurrentBar().Open[int barsAgo]
+CurrentDayOHL(IDataSeries inSeries).GetCurrentBar().Open[int barsAgo]
 
 //For the high value
-CurrentDayOHL().CurrentHigh[int barsAgo]
-CurrentDayOHL(IDataSeries input).CurrentHigh[int barsAgo]
+CurrentDayOHL().GetCurrentBar().High[int barsAgo]
+CurrentDayOHL(IDataSeries inSeries).GetCurrentBar().High[int barsAgo]
 
 //For the low value
-CurrentDayOHL().CurrentLow[int barsAgo]
-CurrentDayOHL(IDataSeries input).CurrentLow[int barsAgo]
+CurrentDayOHL().GetCurrentBar().Low[int barsAgo]
+CurrentDayOHL(IDataSeries inSeries).GetCurrentBar().Low[int barsAgo]
 ```
 
 ### Visualization
-![CurrentDayOHL](./media/image103.png)
+![CurrentDayOHL](./media/CurrentDayOHL.jpg)
 
 ### Example
 ```cs
-Print("The low of the current session is at " + CurrentDayOHL().CurrentLow[0]);
+Print("The low of the current session is at " + CurrentDayOHL().GetCurrentBar().Low[0]);
 ```
 
-##Daily Performance
+## Daily Performance
 ### Description
-The Daily Performance indicator provides information about the changes in the price movements based on either a close in the past or an open for the current day compared to the current price level.
+This indicator delivers information concerning the changes in the price movements based on either a past close or a current-day open in comparison to the current price level.
 
-The performance can be displayed in points, ticks, percent, or a currency value.
+The Daily Performance can be displayed in points, ticks, percent, or a currency value.
 
-Colors and other settings can be freely selected.
+Colors and other settings can be freely adjusted.
 
-See [*Momentum*], [*ROC*].
+See [*Momentum*](#momentum), [*ROC*](#rate-of-change-roc).
 
 **Regarding usage with a scanner:**
-To get a list of your favorite stocks and their daily percentual changes, please set CalculateOnBarClose to “False”, TimeFrame to “1 Day”, Calculation mode to “Percent” and Days ago to “0”.
+To get a list of your favorite stocks and their daily percentual changes, please set CalculateOnFinishedBar to “False”, TimeFrame to “1 Day”, Calculation mode to “Percent” and Days ago to “0”.
 
-![settings](./media/image104.png)
+![settings](./media/Daily_Performance.jpg)
 
 The result will look similar to this:
 
@@ -4397,9 +5149,9 @@ The result will look similar to this:
 ### Usage
 ```cs
 DailyPerformance(DailyPerformanceReference reference, DailyPerformanceCalculationMode mode, int daysAgo)
-DailyPerformance(IDataSeries input,DailyPerformanceReference reference, DailyPerformanceCalculationMode mode, int daysAgo)
+DailyPerformance(IDataSeries inSeries,DailyPerformanceReference reference, DailyPerformanceCalculationMode mode, int daysAgo)
 DailyPerformance(DailyPerformanceReference reference, DailyPerformanceCalculationMode mode, int daysAgo)[int barsAgo]
-DailyPerformance(IDataSeries input,DailyPerformanceReference reference, DailyPerformanceCalculationMode mode, int daysAgo)[int barsAgo]
+DailyPerformance(IDataSeries inSeries,DailyPerformanceReference reference, DailyPerformanceCalculationMode mode, int daysAgo)[int barsAgo]
 ```
 
 ### Return value
@@ -4408,27 +5160,27 @@ DailyPerformance(IDataSeries input,DailyPerformanceReference reference, DailyPer
 When using this method with an index (e.g. **DailyPerformance**(...)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 reference Possible values are:
-- DailyPerformanceReference.TodaysOpen
-- DailyPerformanceReference.PreviousClose
+-   DailyPerformanceReference.Open
+-   DailyPerformanceReference.PreviousClose
 
 mode Possible values are:
-- DailyPerformanceCalculationMode.Points
-- DailyPerformanceCalculationMode.Ticks
-- DailyPerformanceCalculationMode.Percent
-- DailyPerformanceCalculationMode.Currency
+-   DailyPerformanceCalculationMode.Points
+-   DailyPerformanceCalculationMode.Ticks
+-   DailyPerformanceCalculationMode.Percent
+-   DailyPerformanceCalculationMode.Currency
 
 daysAgo Number of days in the past
 
 ### Visualization
-![DailyPerformance](./media/image106.png)
+![DailyPerformance](./media/DailyPerformance.jpg)
 
 ### Example
 ```cs
 //How many ticks are between today’s open and the current price?
-DailyPerformance(DailyPerformanceReference.TodaysOpen, DailyPerformanceCalculationMode.Ticks, 1)[0]
+DailyPerformance(DailyPerformanceReference.Open, DailyPerformanceCalculationMode.Ticks, 1)[0]
 
 //By how much percent did the stock rise/fall since the last closing price?
 DailyPerformance(DailyPerformanceReference.PreviousClose, DailyPerformanceCalculationMode.Percent, 1)[0]
@@ -4443,22 +5195,57 @@ DailyPerformance(DailyPerformanceReference.PreviousClose, DailyPerformanceCalcul
 DailyPerformance(DailyPerformanceReference.PreviousClose, DailyPerformanceCalculationMode.Points, 1)[0]
 ```
 
-##DayLines
+## DailyQuoteMoves
 ### Description
-The DayLines indicator draws lines for yesterday’s high, low, and close, as well as the current day’s open. These lines often provide a reaction to the market.
+This indicator shows the daily price moves of the current market, starting at the zero line each day.
+With this indicator you can see if the Market is currently over/under water based on the perspective of the market open.
+e.g. the FDAX has the character that after reaching the 100, 200, 400 level, the market has a potential to turn.
 
-Each line can be turned on/off, and the colors and line strengths are freely configurable.
+**Works only with intraday charts!**
 
-See [*CurrentDayOHL*], [*PriorDayOHLC*].
+
+### Usage
+```cs
+DailyQuoteMoves()
+DailyQuoteMoves(IDataSeries inSeries)
+DailyQuoteMoves()[int barsAgo]
+DailyQuoteMoves(IDataSeries inSeries) [int barsAgo]
+
+```
+
+### Return value
+**double**
+
+When using this method with an index (e.g. **DailyQuoteMoves**(...)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
+
+### Parameters
+inSeries Input data series for the indicator
 
 ### Visualization
-![DayLines](./media/image107.png)
+![DailyQuoteMoves](./media/DailyQuoteMoves.jpg)
 
-##DayLinesAdv
+### Example
+```cs
+//How many ticks are in between closing price of current bar and opening price of the current day? If this bar is the first of the day, the difference will be shown Open-Close of the bar
+DailyQuoteMoves()[0]
+
+```
+
+## DayLines
 ### Description
-The DayLinesAdv draws horizontal lines for yesterday’s high, low, and close, as well as the current day’s open.
+The DayLines indicator draws lines for the previous day’s high, low, and close. It also draws a line for the current day’s open. These lines often show a reaction to the market.
+Each line can be turned on or off, and the colors and line strengths can be freely set.
 
-[*CurrentDayOHL*], [*PriorDayOHLC*].
+See [*CurrentDayOHL*](#currentdayohl), [*PriorDayOHLC*](#priordayohlc).
+
+### Visualization
+![DayLines](./media/DayLines.jpg)
+
+## DayLinesAdv
+### Description
+DayLinesAdv draws horizontal lines for the previous day’s high, low, and close, as well as the current day’s open.
+
+[*CurrentDayOHL*](#currentdayohl), [*PriorDayOHLC*](#priordayohlc).
 
 **DaysBack parameter**
 
@@ -4471,31 +5258,29 @@ This is generally applicable to traders in different time zones. For example, a 
 To add the couple of hours that are transcribed on Sunday to the previous Friday’s session, you simply need to set IncludeWeekends = true.
 The first picture shows IncludeWeekends = false:
 
-![IncludeWeekends = false](./media/image108.png)
+![IncludeWeekends = false](./media/DayLinesAdvFalse.jpg)
 
 The second picture shows IncludeWeekends = true:
 
-![IncludeWeekends = true](./media/image109.png)
+![IncludeWeekends = true](./media/DayLinesAdvTrue.jpg)
 
 **Show Prices parameter**
 If set to “true”, prices are displayed in addition to the line itself.
 
-![prices are displayed](./media/image110.png)
+![prices are displayed](./media/DayLinesAdvTrueShowPrice.jpg)
 
 **Extend high lines and Extend low lines parameters.**
 If set to “true”, the highs and lows that have not yet been „breached“ by the price will be extended onto the right-hand side of the chart using dotted lines.
 
-![highs and lows](./media/image111.png)
+![highs and lows](./media/DayLinesAdvExtend.jpg)
 
-##GetDayBar
+## GetDayBar
 ### Description
-The function GetDayBar() provides all values (open, high, low, close, time, median, typical, volume, and weighted) for a specific day (session) in the past or for the current session.
-GetDayBar() is not recommended for use inside the chart. DayLinesAdv should be used for this purpose instead.
-GetDayBar is primarily used as a high-performance replacement for [*PriorDayOHLC()*][*PriorDayOHLC*].
+The function GetDayBar() outputs all values (open, high, low, close, time, median, typical, volume, and weighted) for a specified past or current day i.e. session. GetDayBar() is not intended to be used inside the chart. For this purpose, DayLinesAdv should be used instead. GetDayBar is mainly used as a high-performance replacement for [*PriorDayOHLC*](#priordayohlc).
 
-Some data feed providers also offer historical data. If this is the case, we recommend that you use GetDayBar. If intraday data is offered, it is still ok to use *[PriorDayOHLC()][*PriorDayOHLC*].*
+Several data feed providers also offer historical data, in which case we recommend that you use GetDayBar. If it is intraday data that is offered, it still works adequately to use [*PriorDayOHLC*](#priordayohlc).
 
-If the output data varies, the primary culprit is generally assumed to be the difference between Session Begin and Session End.
+If the outputted data varies, the main cause is normally assumed to be the difference between Session Begin and Session End.
 
 ### Parameters
 daysAgo Number of days in the past
@@ -4506,7 +5291,7 @@ DateTime for time
 double for all other values
 
 For **daysAgo = 0,** the following applies:
-Close = current price (for CalculateOnBarClose = false)
+Close = current price (for CalculateOnClosedBar = false)
 Time = time of the current day’s open
 All other values are calculated using intraday data.
 
@@ -4524,7 +5309,7 @@ public class xy : UserIndicator
   double historicalClose = Instrument.Round2TickSize(GetDayBar(daysAgo).Close);
 }
 
-protected override void OnStartUp()
+protected override void OnStart()
 {
   Print("The closing price from " + daysAgo + " days ago was at " + historicalClose);
 }
@@ -4533,24 +5318,23 @@ protected override void OnStartUp()
 **Important:**
 The attribute *TimeFrameRequirements* must also always be used for the class doing the calling up (in the above example, class xy) if the indicator uses *Multibars*.
 
-##Info
+## Info
 ### Description
-Info is not an indicator in the classic sense, but can be considered as more of a tool.
-The background of the chart may (depending on the underlying instrument) display additional information.
+Info is not an indicator in the classic sense of the word, but is actually more similar to a tool. Depending on the underlying instrument, the background of the chart may show additional information.
 
 ### Visualization
-![GetDayBar](./media/image112.png)
+![Info](./media/Info.jpg)
 
-##Maximum (MAX)
+## Maximum (MAX)
 ### Description
-Max (MAX) outputs the highest value for a specified number of periods.
+Max (MAX) delivers the highest value for a predefined number of periods.
 
 ### Usage
 ```cs
 MAX(int period)
-MAX (IDataSeries input, int period)
+MAX (IDataSeries inSeries, int period)
 MAX (int period)[int barsAgo]
-MAX (IDataSeries input, int period)[int barsAgo]
+MAX (IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -4559,30 +5343,30 @@ MAX (IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **MAX**(Close, 10)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![Maximum (MAX)](./media/image113.png)
+![Maximum (MAX)](./media/MAX.jpg)
 
 ### Example
 ```cs
 // Output of the highest value of the last 20 periods
-// The output is identical to high [HighestBar(High,20)]
+// The output is identical to high [GetSerieHighestValue(High,20)]
 Print("The highest value of the last 20 periods is " + MAX(High, 20)[0]);
 ```
 
-##Minimum (MIN)
+## Minimum (MIN)
 ### Description
-Minimum (MIN) provides the smallest value for a specified number of periods.
+Minimum (MIN) outputs the lowest value for a predefined number of periods.
 
 ### Usage
 ```cs
 MIN (int period)
-MIN (IDataSeries input, int period)
+MIN (IDataSeries inSeries, int period)
 MIN (int period)[int barsAgo]
-MIN (IDataSeries input, int period)[int barsAgo]
+MIN (IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -4591,12 +5375,12 @@ MIN (IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **MIN**(Close, 10)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![Minimum (MIN)](./media/image114.png)
+![Minimum (MIN)](./media/MIN.jpg)
 
 ### Example
 ```cs
@@ -4604,44 +5388,39 @@ period Number of bars included in the calculations
 Print("The lowest value of the last 20 periods is " + MIN(Low, 20)[0]);
 ```
 
-##MTFBoxes
+## MTFBoxes
 ### Description
-MTFBoxes draws a colored area behind the bars that represent a candle of a higher timeframe.
+What MTFBoxes does is to draw a colored area behind the bars that signify a candle from a higher timeframe. This therefore makes it possible to depict an hourly candle inside a 5-minute chart. The area would contain all 5-minute bars that are located within said hourly candle.
 
-This allows you to draw an hourly candle inside a 5-minute chart. The area contains all 5-minute bars located within the hourly candle.
-
-If the candle of the higher timeframe is rising, the area turns greener. A Doji will be colored in grey.
+The area turns greener if the candle of the higher timeframe is rising. A Doji would be shown in grey.
 
 ### Parameters
 TimeFrame Timeframe of the “virtual” candle (second, minute, hour, day, week, month)
 TimeFrameValue Value of the timeframe (number)
 
 ### Visualization
-![MTFBoxes](./media/image115.png)
+![MTFBoxes](./media/MTFBoxes.jpg)
 
-##PriceLine
+## PriceLine
 ### Description
-PriceLine is considered as more of a tool rather than an indicator.
-
-A horizontal line is placed within the chart on top of the current market price.
-
-The colors and line widths can be freely modified.
+PriceLine is not so much an indicator, but more of a tool.
+It places a horizontal line on top of the current market price within the chart.
+The colors and line widths are freely configurable.
 
 ### Visualization
-![PriceLine](./media/image116.png)
+![PriceLine](./media/PriceLine.jpg)
 
-##PriorDayOHLC
+## PriorDayOHLC
 ### Description
-The function PriorDayOHLC displays the values for the previous day’s (or the previous session’s) open, high, low, and close.
-PriorDayOHLC is intended for use with the intraday data series.
+PriorDayOHLC shows the values for yesterday’s (i.e. the previous session’s) open, high, low, and close. PriorDayOHLC works best when used together with the intraday data series.
 
 **PriorDayOHLCext**
-For people in different time zones, PriorDayOHLCext allows you to set the IncludeWeekend parameter to “true” so that all data originating from a Saturday or Sunday is treated as if it belongs to the previous Friday’s session.
+PriorDayOHLCext For people in different time zones, PriorDayOHLCext makes it possible to set the IncludeWeekend parameter to “true”, which is helpful because all data originating from a Saturday or Sunday is treated as if it comes from the previous Friday’s session.
 
-See [*CurrentDayOHL*], [*DayLines*].
+See [*CurrentDayOHL*](#currentdayohl), [*DayLines*](#daylines).
 
 ### Parameter
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 ### Return value
 **double**
@@ -4651,27 +5430,27 @@ When using this method with an index (e.g. **PriorDayOHLC**().PriorHigh\[**int**
 ### Usage
 ```cs
 PriorDayOHLC()
-PriorDayOHLC(IDataSeries input)
+PriorDayOHLC(IDataSeries inSeries)
 
 //For the value of open
 PriorDayOHLC().PriorOpen[int barsAgo]
-PriorDayOHLC(IDataSeries input).PriorOpen[int barsAgo]
+PriorDayOHLC(IDataSeries inSeries).PriorOpen[int barsAgo]
 
 //For the value of high
 PriorDayOHLC().PriorHigh[int barsAgo]
-PriorDayOHLC(IDataSeries input).PriorHigh[int barsAgo]
+PriorDayOHLC(IDataSeries inSeries).PriorHigh[int barsAgo]
 
 //For the value of low
 PriorDayOHLC().PriorLow[int barsAgo]
-PriorDayOHLC(IDataSeries input).PriorLow[int barsAgo]
+PriorDayOHLC(IDataSeries inSeries).PriorLow[int barsAgo]
 
 //For the value of close
 PriorDayOHLC().PriorClose[int barsAgo]
-PriorDayOHLC(IDataSeries input).PriorClose[int barsAgo]
+PriorDayOHLC(IDataSeries inSeries).PriorClose[int barsAgo]
 ```
 
 ### Visualization
-![PriorDayOHLC](./media/image117.png)
+![PriorDayOHLC](./media/PriorDayOHLC.jpg)
 
 ### Example
 ```cs
@@ -4682,53 +5461,51 @@ Print("Yesterday’s low was " + PriorDayOHLC().PriorLow[0]);
 Print("Yesterday’s close was " + PriorDayOHLC().PriorClose[0]);
 ```
 
-##PriorDayOHLCext
-See *[PriorDayOHLC][*PriorDayOHLC*].*
+## PriorDayOHLCext
+See [*PriorDayOHLC*](#priordayohlc).
 
-##SessionBreakLines
+## SessionBreakLines
 ### Description
 The indicator SessionBreakLines draws a vertical line at the first candle of a new trading session.
 What is special about this indicator is that you can manually set how the so-called “weekend sessions” should be handled. If the parameter IncludeWeekends is set to “true”, then the Sunday sessions will be added to the Friday’s session.
-See [*PriorDayOHLCext*].
+See [*PriorDayOHLC*](#priordayohlc).
 
 ### Visualization
-![PriorDayOHLCext](./media/image118.png)
+![SessionBreakLines](./media/SessionBreakLines.jpg)
 
-##ShowBidAsk
+## ShowBidAsk
 ### Description
-The indicator ShowBidAsk shows the current bid and ask prices as well as the corresponding volume within the lower half of the chart. Changes in volume are also displayed even if a trade has not occurred.
+The ShowBidAsk indicator displays the current bid and ask prices as well as the corresponding volume within the lower part of the chart. It also shows changes in volume even if a trade has not occurred.
 
 ### Visualization
-![ShowBidAsk](./media/image119.png)
+![ShowBidAsk](./media/ShowBidAsk.jpg)
 
-##TickCounter
+## TickCounter
 ### Description
-TickCounter provides information about the current number of ticks contained within the bar.
-The indicator can count starting from 0, but can also count down from a predefined number to 0. The value can be displayed either as absolute or a percentage.
-The indicator will only work with candle charts in which the bars are constructed based on a fixed number of ticks.
+TickCounter provides information regarding the current number of ticks that are contained within the bar. The indicator can not only count starting from 0, but can also be set to count from a specified number down to 0. TickCounter can display the value either as absolute or as a percentage. It only works with candle charts in which the bars are established based on a fixed number of ticks.
 
-When programming your own scripts, please use Bars, TickCount or Bars, PercentComplete.
+When programming your own scripts, please use Bars, TicksCountForLastBar or Bars, LastBarCompleteness.
 
 ### Visualization
-![TickCounter](./media/image120.png)
+![TickCounter](./media/TickCounter.jpg)
 
-##True Strength Index (TSI)
+## True Strength Index (TSI)
 ### Description
-The True Strength Index (TSI) is a momentum indicator and is used as an indicator for the trend direction and the display of overbought/oversold situations.
-Typically, momentum oscillators are early/preemptive indicators of price changes, and moving averages are characteristically known to lag behind the price. The TSI combines the advantages of both indicator groups.
+The True Strength Index (TSI) is a momentum indicator. It is used as an indicator for trend direction and for displaying overbought or oversold conditions.
+As a rule, momentum oscillators preemptively indicate price changes, whereas moving averages generally lag behind the price. The TSI brings together the advantages of these two indicator groups.
 
 ### Interpretation
 The TSI line moves between 100 and -100. Most values are between +25 and -25. These trigger lines can be used to anticipate overbought or oversold situations. A rising TSI signals an uptrend, while falling TSI suggests a downtrend.
 
 ### Further information
-<http://en.wikipedia.org/wiki/True\_strength\_index>
+[http://en.wikipedia.org/wiki/True_strength_index](http://en.wikipedia.org/wiki/True_strength_index)
 
 ### Usage
 ```cs
 TSI(int fast, int slow)
-TSI(IDataSeries input, int fast, int slow)
+TSI(IDataSeries inSeries, int fast, int slow)
 TSI(int fast, int slow)[int barsAgo]
-TSI(IDataSeries input, int fast, int slow)[int barsAgo]
+TSI(IDataSeries inSeries, int fast, int slow)[int barsAgo]
 ```
 
 ### Return value
@@ -4737,14 +5514,14 @@ TSI(IDataSeries input, int fast, int slow)[int barsAgo]
 When using this method with an index (e.g. **TSI**(3,14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 fast Number of bars included in the calculation of the fast EMA
 
 slow Number of bars included in the calculation of the slow EMA
 
 ### Visualization
-![True Strength Index (TSI)](./media/image121.png)
+![True Strength Index (TSI)](./media/TSI.jpg)
 
 ### Example
 ```cs
@@ -4752,9 +5529,9 @@ slow Number of bars included in the calculation of the slow EMA
 Print("The current value for the TSI is " + TSI(3, 14)[0]);
 ```
 
-##Ultimate Oscillator
+## Ultimate Oscillator
 ### Description
-The Ultimate Oscillator was developed by Larry Williams and published in 1985 for the first time. The indicator is calculated using the weighted sum of three oscillators in various timeframes. The three timeframes represent short-term, middle and long-term market cycles. The typical period lengths are 7, 14 and 28. The value of the indicator fluctuates between 0 and 100. Values above 70 are overbought, and values below 30 are oversold.
+Larry Williams developed the Ultimate Oscillator, which was first published in 1985. The Ultimate Oscillator is calculated by means of taking the weighted sum of three oscillators in different timeframes. These three timeframes are the short-term, middle and long-term market cycles. The typical period lengths used are 7, 14 and 28, and the value of the indicator moves between 0 and 100. Values above 70 signify an overbought situation, and values below 30 show that it is oversold.
 
 ### Interpretation
 Williams defined the following criteria for a buy signal:
@@ -4773,9 +5550,9 @@ A sell signal consists of bearish divergences forming above 70. These positions 
 ### Usage
 ```cs
 UltimateOscillator(int fast, int intermediate, int slow)
-UltimateOscillator(IDataSeries input, int fast, int intermediate, int slow)
+UltimateOscillator(IDataSeries inSeries, int fast, int intermediate, int slow)
 UltimateOscillator(int fast, int intermediate, int slow)[int barsAgo]
-UltimateOscillator(IDataSeries input, int fast, int intermediate, int slow)[int barsAgo]
+UltimateOscillator(IDataSeries inSeries, int fast, int intermediate, int slow)[int barsAgo]
 ```
 
 ### Return value
@@ -4786,13 +5563,13 @@ When using this method with an index (e.g. **UltimateOscillator** (5)\[**int** b
 ### Parameters
 |              |                                                                   |
 |--------------|-------------------------------------------------------------------|
-| input        | Input data series for the indicator                               |
+| inSeries        | Input data series for the indicator                               |
 | fast         | Number of bars for the calculation of the short-term oscillator   |
 | intermediate | Number of bars for the calculation of the intermediate oscillator |
 | slow         | Number of bars for the calculation of the slow indicator          |
 
 ### Visualization
-![Ultimate Oscillator](./media/image122.png)
+![Ultimate Oscillator](./media/UltimateOscillator.jpg)
 
 ### Example
 ```cs
@@ -4800,19 +5577,20 @@ When using this method with an index (e.g. **UltimateOscillator** (5)\[**int** b
 Print("The current value for the Ultimate Oscillator is " + UltimateOscillator(7, 14, 28)[0]);
 ```
 
-##Volume (VOL)
+## Volume (VOL)
 ### Description
-This is the volume for the shares, futures, ETFs etc. traded within a certain time period.
+This is the volume for the shares, futures, ETFs and so on that are traded within a specified time period.
+
 
 ### Further information
-<http://de.wikipedia.org/wiki/Volumenanalyse>
+[http://de.wikipedia.org/wiki/Volumenanalyse](http://de.wikipedia.org/wiki/Volumenanalyse)
 
 ### Usage
 ```cs
 VOL()
-VOL(IDataSeries input)
+VOL(IDataSeries inSeries)
 VOL()[int barsAgo]
-VOL(IDataSeries input)[int barsAgo]
+VOL(IDataSeries inSeries)[int barsAgo]
 ```
 
 ### Return value
@@ -4821,10 +5599,10 @@ VOL(IDataSeries input)[int barsAgo]
 When using this method with an index (e.g. **VOL**()\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameter
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 ### Visualization
-![Volume (VOL)](./media/image123.png)
+![Volume (VOL)](./media/VOL.jpg)
 
 ### Example
 ```cs
@@ -4832,12 +5610,12 @@ input Input data series for the indicator
 Print("The current volume is " + VOL()[0]);
 ```
 
-##Volume Moving Average (VOLMA)
+## Volume Moving Average (VOLMA)
 ### Description
-The Volume Moving Average is calculated by applying an exponential moving average to the respective volume of each individual period, i.e. their EMA (volume).
+The VOLMA calculation is carried out by applying an exponential moving average to the respective volume of each period, that is to say its EMA (volume).
 
 **Caution:**
-In literature, the abbreviation for the Variable Moving Average (VMA) is often confused with the Volume Moving Average (VOLMA).
+In trading literature, the Volume Moving Average is often confused with the abbreviation for the Variable Moving Average (VMA).
 
 ### Interpretation
 The VOLMA indicator helps you to find and assess the relative volume of a period.
@@ -4853,14 +5631,14 @@ After three successive volume spikes, it becomes much less likely that the situa
 Here, you can find more general information about *Moving Averages*.
 
 ### Further information
-Volumen-Analyse.de: <http://www.volumen-analyse.de>
+Volumen-Analyse.de: [http://www.volumen-analyse.de](http://www.volumen-analyse.de)
 
 ### Usage
 ```cs
 VOLMA(int period)
-VOLMA(IDataSeries input, int period)
+VOLMA(IDataSeries inSeries, int period)
 VOLMA(int period)[int barsAgo]
-VOLMA(IDataSeries input, int period)[int barsAgo]
+VOLMA(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -4869,12 +5647,12 @@ VOLMA(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **VOLMA**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![Volume Moving Average (VOLMA)](./media/image124.png)
+![Volume Moving Average (VOLMA)](./media/VOLMA.jpg)
 
 ### Example
 ```cs
@@ -4882,20 +5660,20 @@ period Number of bars included in the calculations
 Print("The current VOLMA value is " + VOLMA(14)[0]);
 ```
 
-##Volume Oscillator
+## Volume Oscillator
 ### Description
-The Volume Oscillator uses the difference between the moving averages based on the trading volume. The result is similar to the MACD or any other oscillator where moving averages are applied.
+The Volume Oscillator makes use of the difference between the moving averages based on the trading volume, with a similar result to the MACD or to any other oscillator in which moving averages are used for calculation.
 
 ### Interpretation
 The Volume Oscillator is used to determine the trend strength. If developments in the price of the share are accompanied by disproportionate volume oscillator values, this should be regarded as highly relevant. In this way, the indicator can be used to filter out false signals.
-Values above zero mean that the shortest moving average of the volume is above the long-term moving average. Rising prices with a higher short-term volume indicate a bullish scenario.
+Values above zero mean that the shortest moving average of the volume is above the long-term moving average. IsSerieRising prices with a higher short-term volume indicate a bullish scenario.
 
 ### Usage
 ```cs
 VolumeOscillator(int fast, int slow)
-VolumeOscillator(IDataSeries input, int fast, int slow)
+VolumeOscillator(IDataSeries inSeries, int fast, int slow)
 VolumeOscillator(int fast, int slow)[int barsAgo]
-VolumeOscillator(IDataSeries input, int fast, int slow)[int barsAgo]
+VolumeOscillator(IDataSeries inSeries, int fast, int slow)[int barsAgo]
 ```
 
 ### Return value
@@ -4904,14 +5682,14 @@ VolumeOscillator(IDataSeries input, int fast, int slow)[int barsAgo]
 When using this method with an index (e.g. **VolumeOszillator**(12,26)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 fast Number of bars for the calculation of the fast moving average
 
 slow Number of bars for the calculation of the slow moving average
 
 ### Visualization
-![Volume Oscillator](./media/image125.png)
+![Volume Oscillator](./media/VolumeOscillator.jpg)
 
 ### Example
 ```cs
@@ -4919,37 +5697,33 @@ slow Number of bars for the calculation of the slow moving average
 Print("The current value for the Volume Oscillator is: " + VolumeOszillator(12,26)[0]);
 ```
 
-##Volume Profile
+## Volume Profile
 ### Description
-The VolumeProfile indicator shows the real-time volume profile in the form of a vertical histogram on the chart. Each bar inside the histogram represents the cumulative traded volume for a specific price level. The bar at which the calculations have started are marked with a “\#” symbol.
-The histogram bars have different coloring: executions at or above the ask are interpreted as buys and are colored in green. Trades at or below the bid are interpreted as sells and are colored in red. Neutral executions are colored in grey.
-The indicator only works with a real-time data feed. After you make changes in the properties window, the indicator will be restarted and all calculated values up to this point will be lost.
+The VolumeProfile indicator displays the real-time volume profile as a vertical histogram on the chart. In this histogram, every bar depicts the cumulative traded volume for a certain price level. The starting bar for the calculations is labeled with a “#”.
+These bars inside the histogram have various colors: green indicates executions at or above the ask, which are interpreted as buys. Red means trades at or below the bid, which are interpreted as sells. Grey signifies neutral executions.
+It is important to note that the Volume Profile indicator only works together with a real-time data feed. After changes have been made in the properties window, the indicator is restarted and all values that have been calculated up to this point are lost.
 
-See: [*VolumeZones*]
+See: [*VolumeZones*](#volumezones)
 
 ### Interpretation
 Prices with especially high trading volume will have a more satiated accumulation and distribution at their respective levels. This leads to price resistance/support zones being formed.
 
 ### Visualization
-![Volume Profile](./media/image126.png)
+![Volume Profile](./media/VolumeProfile.jpg)
 
-##Volume Rate of Change (VROC)
+## Volume Rate of Change (VROC)
 ### Description
-The Volume Rate of Change (VROC) is identical to the ROC indicator, with the primary difference being that instead of price data, the volume data (VOL) is used. In addition, a smoothing component is applied.
-Interpretation
-
-Rising prices are accompanied by a rising VROC within the positive area.
-A shrinking VROC during rising prices may hint to a trend change about to occur.
+The Volume Rate of Change (VROC) is almost exactly the same as the ROC indicator, with the exception that instead of price data, volume data (VOL) is used. A smoothing component is also applied.
 
 ### Further information
-<http://www.shareholder24.de/boersensoftware-wiki/pages/viewpage.action?pageId=9207904>
+[http://www.shareholder24.de/boersensoftware-wiki/pages/viewpage.action?pageId=9207904](http://www.shareholder24.de/boersensoftware-wiki/pages/viewpage.action?pageId=9207904)
 
 ### Usage
 ```cs
 VROC(int period, int smooth)
-VROC(IDataSeries input, int period, int smooth)
+VROC(IDataSeries inSeries, int period, int smooth)
 VROC(int period, int smooth)[int barsAgo]
-VROC(IDataSeries input, int period, int smooth)[int barsAgo]
+VROC(IDataSeries inSeries, int period, int smooth)[int barsAgo]
 ```
 
 ### Return value
@@ -4958,14 +5732,14 @@ VROC(IDataSeries input, int period, int smooth)[int barsAgo]
 When using this method with an index (e.g. **VROC**(14,3)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 smooth Number of Bars included in the calculation for the smoothing
 
 ### Visualization
-![Volume Rate of Change (VROC)](./media/image127.png)
+![Volume Rate of Change (VROC)](./media/VROC.jpg)
 
 ### Example
 ```cs
@@ -4973,19 +5747,270 @@ smooth Number of Bars included in the calculation for the smoothing
 Print("The current value for the Volume ROC is: " + VROC(14, 3)[0]);
 ```
 
-##VolumeUpDown
+## VolumeArea
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
 ### Description
-This indicator is a variant of the volume indicator. The only difference is that the volume bars are colored depending on whether the price movement creates an up bar or a down bar.
-A rising bar displays the volume in green.
-A falling bar displays the volume in red.
-A Doji (open = close) displays the volume in blue.
+Similarly, with this indicator you can also have your own volume profiles displayed. Here you can now determine the start and end time completely freely by clicking on your desired position. There are no restrictions as to where the calculation should start and end. In the upper right corner you have the setting options with which you can switch between the profile types (for a description of these, read more under VolumeSessionPro). With a click on the little red “+” under the profile settings, you can add a further volume profile to your chart; you do so by once again determining the start and end time by left-clicking.
+ The settings and the display of the indicator are exactly equivalent to the VolumeSessionPro: via ProfileType you select which calculation method should be used; via ValueArea you determine the percentage for what portion of the volume area should be colored with the highest activity.
+The most effective way of working with the VolumeArea is to place this indicator in the action bar and assign it a hot key. In this way, if necessary, the indicator can be quickly called up and you can specify the desired volume area.
+
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![VolumeArea](./media/VolumeArea.png)
+
+### Example
+to be announced
+
+## VolumeGraph
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+This indicator contains a normal volume histogram, but here, the coloring takes place based on price trends. The VolumeGraph determines short- or long-term price trends; you can set the sensitivity for this using the parameter “SlopeLength”. A high value delivers long-term trends; low values represent short-term price trends. Using the setting “Exponential”, you can select whether the calculation for trend determination should be based on an exponential (=True) or linear (=False) algorithm. This is about the fine-tuning, and no large changes should be expected with this parameter. In addition, the volume histogram also contains a moving average, for which you can enter the period using the parameter “AvgLength”.
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![VolumeGraph](./media/VolumeGraph.png)
+
+### Example
+to be announced
+
+## VolumeKeltnerChannels
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+The VolumeKeltnerChannels are a great tool to determine very high or very low volume in comparison to past periods. Beginning with an upper Keltner channel line calculated with volume data, this line is shifted ever further upwards or downwards using special multipliers. Volume that is higher than the highest Keltner channel line can be interpreted as extremely high volume that shows that huge numbers of trades have been carried out in the current price period and that an unusually large number of traders are buying or selling positions at the current price level.
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![VolumeKeltnerChannels](./media/VolumeKeltnerChannels.png)
+
+### Example
+to be announced
+
+
+## VolumeRiseFall
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+The VolumeRiseFall indicator is a normal volume display as volume bars, with, however, a different coloring than normal. A volume bar is drawn in green when the volume of this bar is higher than the volume of the previous bar, meaning that rising volume is present. A volume bar is drawn in gray when the volume of this bar is lower than the volume of the previous bar, thereby showing falling volume.
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![VolumeRiseFall](./media/VolumeRiseFall.png)
+
+### Example
+to be announced
+
+## VolumeSentimentLong
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+This indicator detects bullish volume activity based on the analysis of the volume of a period, the price span of a bar and the close of the bar (=VolumeSpreadAnalysis).
+
+It screens for 3 signals (listed are the sub-criteria that must be met for the respective signal):
+
+- SellingClimax (dark green)
+ 6.11..1. Lowest low since 50 periods
+ 6.11..2. Bar with large range
+ 6.11..3. Extremely high volume
+
+- DemandComingIn (lime green)
+ 6.11..1. UpBar (current close larger than previous close)
+ 6.11..2. Previous Bar: DownBar (close smaller than previous close)
+ 6.11..3. Previous Bar: Bar with large range
+ 6.11..4. Previous Bar: Above-average high volume
+
+- BagHolding (light green)
+ 6.11..1. Lowest low since 50 periods
+ 6.11..2. DownBar
+ 6.11..3. Bar with small range
+ 6.11..4. Above-average high volume
+ 6.11..5. Close larger than or equal to the middle of the bar
+
+The VolumeSentiments provide the foundation for the calculation of the volume condition; see point 5. When a bullish VolumeSentiment occurs, the bar is colored in the respective color of the signal; you can change this color in the parameter setting
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![VolumeSentimentLong](./media/VolumeSentimentLong.png)
+
+### Example
+to be announced
+
+## VolumeSentimentShort
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+This indicator is the counterpart to the VolumeSentimentLong and detects bearish volume activity based on the analysis of the volume of a period, the price span of a bar and the close of the bar (=VolumeSpreadAnalysis).
+
+It screens for 3 signals (listed are the sub-criteria that must be met for the respective signal):
+
+- BuyingClimax (dark red)
+ 6.12..1. Highest high since 50 periods
+ 6.12..2. Bar with large range
+ 6.12..3. Extremely high volume
+
+- SupplyComingIn (red)
+ 6.12..1. DownBar
+ 6.12..2. Previous Bar: UpBar
+ 6.12..3. Previous Bar: Bar with large range
+ 6.12..4.Previous Bar: Above-average high volume
+
+- EndOfRisingMarket (coral)
+ 6.12..1. Highest high since 50 periods
+ 6.12..2. UpBar
+ 6.12..3. Bar with small range
+ 6.12..4.Above-average high volume
+ 6.12..5.Close smaller than or equal the middle of the bar
+
+The VolumeSentiments provide the foundation for the calculation of the volume conditions; see point 5. When a bearish VolumeSentiment occurs, the bar is colored in the respective color of the signal; you can change this color in the parameter settings.
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![VolumeSentimentShort](./media/VolumeSentimentShort.png)
+
+### Example
+to be announced
+
+## VolumeSessionPro
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+This indicator is equivalent to the well-known VolumeProfile indicator with a display for a specific time span (session). You can determine the start time and the length of a session however you wish. For each session, the VolumeProfile is then shown. Use this indicator only in timeframes smaller than 1 day; the smaller the timeframe selected, the more detailed the display of the VolumeProfile. The price at which the most volume was traded in the respective session is shown as a red bar. The price area in which, for example, 70% of the trading activity for the respective session took place, is colored light blue. You can determine this percentage yourself as you wish under the parameter “ValueArea”. Furthermore, you have four different options for displaying the volume information:
+
+Furthermore, you have four different options for displaying the volume information:
+
+**4.1.1. VOC (Volume on close):** Loads the entire volume of a bar at the closing price of this bar – e.g. if a 5-minute bar has a volume of 280 and a range of 1.5 points with a closing price at 1534.25, all 280 volume units are counted at the closing price of 1534.24.
+
+**4.1.2. TPO (Time price opportunity):** This method does not take the actual traded volume into account, but instead counts an individual volume unit for each price in the traded range of the bar – e.g. if a 5-minute bar has its high at 1534 and its low at 1532.5, then one volume unit is counted for each of the following prices: 1532.50, 1532.75, 1533.0, 1533.25, 1533.50, 1533.75, and 1534.
+
+**4.1.3. VWTPO (Volume weighted time price opportunity):** This version distributes the traded volume of a bar across its price range – e.g. if a 5-minute bar exhibits a volume of 280 with a range of 1.5 points, with its high at 1534 and low at 1532.5, then 40 volume units (=280/7) are added to each of the seven prices in this range: 1532.50, 1532.75, 1533.0, 1533.25, 1533.50, 1533.75, and 1534.
+
+**4.1.4. VTPO (Volume time price opportunity):** Here, the traded volume is added to each price of the range – e.g. if a 5-minute bar has 280 volume units, a range of 1.5 points with a high at 1534 and low at 1532.5, then 280 volume units are added to each of the seven prices of the range:: 1532.50, 1532.75, 1533.0, 1533.25, 1533.50, 1533.75, and 1534.
+
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![VolumeSessionPro](./media/VolumeSessionPro.png)
+
+### Example
+to be announced
+
+## VolumeTickSpeed
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+**ATTENTION!** You can only use this indicator in the tick chart! The indicator measures the number of ticks that are traded during a number of seconds defined by the user. You can set the number of seconds under the parameter “Period”. A high tick speed can, therefore, be equated with high trading intensity, which can in turn often be observed at turning points in the market. With the parameter “LimitValue”, you can specify from which number of ticks during the selected period the background should be colored in order to display extreme values.
+
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![VolumeTickSpeed](./media/VolumeTickSpeed.png)
+
+### Example
+to be announced
+
+## VolumeUDR
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
+### Description
+The VolumeUpDownRatio is the relationship between UpVolume and DownVolume, displayed as an oscillator. Volume is classified as UpVolume when the current close of the price candle is located above the close of the prior candle; the opposite applies for DownVolume. Values above 80 are to be graded as a bearish signal; values under 20 as a bullish signal. Besides this, a moving average can be shown, which can serve as an additional signal generator.
+
+- Using “DrawCandleOutline”, you can have the border of your candles colored accordingly when bullish/bearish extreme values occur.
+
+- PriceWeightChange regulates whether you would like to have the weighted change of the market price flow into the calculation of the indicator.
+
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![VolumeUDR](./media/VolumeUDR.png)
+
+### Example
+to be announced
+
+## VolumeUpDown
+### Description
+This indicator is a variation of the volume indicator, with the slight difference that the volume bars are shown in different colors depending on whether the price movement forms an up or down bar. An up (rising) bar shows the volume in green, while a down (falling) bar shows the volume in red. A Doji, where open = close, shows the volume in blue.
 
 ### Usage
 ```cs
 VolumeUpDown()
-VolumeUpDown(IDataSeries input)
+VolumeUpDown(IDataSeries inSeries)
 VolumeUpDown()[int barsAgo]
-VolumeUpDown(IDataSeries input)[int barsAgo]
+VolumeUpDown(IDataSeries inSeries)[int barsAgo]
 ```
 
 ### Return value
@@ -4994,10 +6019,10 @@ VolumeUpDown(IDataSeries input)[int barsAgo]
 When using this method with an index (e.g. **VolumeUpDown**()\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameter
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 ### Visualization
-![Volume Rate of Change (VROC)](./media/image128.png)
+![VolumeUpDown](./media/VolumeUpDown.jpg)
 
 ### Example
 ```cs
@@ -5005,16 +6030,35 @@ input Input data series for the indicator
 Print("The current volume is " + VolumeUpDown()[0]);
 ```
 
-##Volume Zones
+## Volume Zones
 ### Description
-The Volume Zones indicator draws a histogram on the left side of the chart containing the historical volume.
-The length of the bars represents the cumulative volume. The price series (open, high, low etc.) can be configured using the properties dialog box.
-A rising bar (close above open) colors the bar green. Falling bars are colored in red.
-The indicator is intended for use with historical data only. To see volume changes in real-time, please consider using the VolumeProfile.
+This indicator draws a histogram on the left side of the chart. This histogram contains the historical volume, and inside the histogram, the length of the bars shows the cumulative volume. Traders can configure the price series (open, high, low etc.) with the help of the properties dialog box.
+An up bar (where the close is above the open) shows the bar in green, and falling bars are displayed in red. The indicator is only designed to be used with historical data. In order to view volume changes in real-time, it is wise to consider using the VolumeProfile.
 
-##Williams %R
+## VolumeZoneOscillator
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
 ### Description
-Developed by Larry Williams, Williams %R is a momentum indicator that is the inverse of the Fast [Stochastic Oscillator]. Also referred to as %R, Williams %R reflects the level of the close relative to the highest high for the look-back period. In contrast, the Stochastic Oscillator reflects the level of the close relative to the lowest low. %R corrects for the inversion by multiplying the raw value by -100. As a result, the Fast Stochastic Oscillator and Williams %R produce the exact same lines, only the scaling is different. Williams %R oscillates between 0 to -100. Readings from 0 to -20 are considered overbought. Readings from -80 to -100 are considered oversold. Unsurprisingly, signals derived from the Stochastic Oscillator are also applicable to Williams %R. (Source: Stockcharts.com)
+The VolumeZoneOscillator divides the volume activity into UpVolume and DownVolume, similarly to the VolumeUDR. Volume is ranked as UpVolume when the current closing price is located above the prior closing price; vice versa for DownVolume. The oscillator calculated hereby outputs relative percentage values. An instrument is in a positive trend when the VolumeZoneOscillator rises above a level of 5% and vice versa in a negative trend, when it falls below -5%. Values above 40% show overbought situations, while values above 60% are an indication for an extreme exaggeration in the market. On the other hand, values smaller than -40% are deemed oversold and values smaller than -60% to be classified as enormously oversold and exaggerated.
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![VolumeZoneOscillator](./media/VolumeZoneOscillator.png)
+
+### Example
+to be announced
+
+## Williams %R
+### Description
+Larry Williams developed the Williams %R. It is a momentum indicator, and is the inverse of the Fast Stochastic Oscillator. Williams %R, which is also called simply %R, reflects the level of the close relative to the highest high for the look-back period. The Stochastic Oscillator, on the other hand, reflects the level of the close relative to the lowest low. %R multiplies the raw value by -100 as a means of correcting for the inversion. This means that the Fast Stochastic Oscillator and Williams %R actually produce the exact same lines, with different scaling. The Williams %R fluctuates between 0 and -100. Values between 0 to -20 are deemed overbought, and values from -80 to -100 are seen as oversold. Naturally, signals taken from the Stochastic Oscillator can also be applied to Williams %R.
 
 ### Interpretation
 As with the Stochastic Oscillator, Williams %R reflects the level of the close relative to the high-low range over a given period of time. Assume that the highest high equals 110, the lowest low equals 100 and the close equals 108. The high-low range is 10 (110 - 100), which is the denominator in the %R formula. The highest high less the close equals 2 (110 - 108), which is the numerator. 2 divided by 10 equals 0.20. Multiply this number by -100 to get -20 for %R. Williams %R would equal -30 if the close was 103 (0.30 x -100).
@@ -5029,9 +6073,9 @@ Low readings (below -80) indicate that the price is near its low for the given t
 ### Usage
 ```cs
 WilliamsR(int period)
-WilliamsR(IDataSeries input, int period)
+WilliamsR(IDataSeries inSeries, int period)
 WilliamsR(int period)[int barsAgo]
-WilliamsR(IDataSeries input, int period)[int barsAgo]
+WilliamsR(IDataSeries inSeries, int period)[int barsAgo]
 ```
 
 ### Return value
@@ -5040,24 +6084,50 @@ WilliamsR(IDataSeries input, int period)[int barsAgo]
 When using this method with an index (e.g. **WilliamsR**(14)\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Parameters
-input Input data series for the indicator
+inSeries Input data series for the indicator
 
 period Number of bars included in the calculations
 
 ### Visualization
-![Williams %R](./media/image129.png)
+![Williams %R](./media/WilliamsR.jpg)
 
 ### Example
 ```cs
 WilliamsR(int period)
-WilliamsR(IDataSeries input, int period)
+WilliamsR(IDataSeries inSeries, int period)
 WilliamsR(int period)[int barsAgo]
-WilliamsR(IDataSeries input, int period)[int barsAgo]
+WilliamsR(IDataSeries inSeries, int period)[int barsAgo]
 ```
+## WyckoffWave
 
-##ZigZag
+**The installation of the Technical Analysis Package is required in order to access this indicator.**
+
 ### Description
-The ZigZag indicator finds extreme points for various timeframes. These are found using threshold values that you can define yourself. The threshold values define the extent to which the market direction must change before the ZigZag line changes its orientation and creates another extreme point.
+The WyckoffWave indicator adds the volume for each following bar until a price wave is over / finished. You can set the sensitivity of the price waves. When the  volume of a wave rises to particularly high values, is it very often because a turning point in the chart has been reached. When the volume bars are colored red, we are dealing with a short wave; green volume bars indicate a long wave.
+
+Using the parameter “MedianPeriod” you can select how sensitively the indicator should determine the individual price waves. The smaller the value, the larger the price waves that the indicator calculates.
+
+The parameter Poles serves to fine-tune the display of the volume waves; you can select a parameter between 1-4. Changing this value usually causes only imperceptible changes.
+
+### Parameters
+to be announced
+
+### Return value
+to be announced
+
+### Usage
+to be announced
+
+### Visualization
+![WyckoffWave](./media/WyckoffWave.png)
+
+### Example
+to be announced
+
+
+## ZigZag
+### Description
+The ZigZag indicator searched for extreme points in different timeframes. It finds the extreme points by using threshold values that traders themselves define. These specified threshold values determine the extent to which the market direction needs to change before the ZigZag line alters its orientation and forms a further extreme point.
 
 ### Interpretation
 The previous extreme values (local highs or lows) are ideally suited for either entries or stop targets.
@@ -5071,11 +6141,11 @@ The previous extreme values (local highs or lows) are ideally suited for either 
 ```cs
 //For the upper extreme value
 ZigZag(DeviationType deviationType, double deviationValue, bool useHighLow).ZigZagHigh[int barsAgo]
-ZigZag(IDataSeries input, DeviationType deviationType, double deviationValue, bool useHighLow).ZigZagHigh[int barsAgo]
+ZigZag(IDataSeries inSeries, DeviationType deviationType, double deviationValue, bool useHighLow).ZigZagHigh[int barsAgo]
 
 //For the lower extreme value
 ZigZag(DeviationType deviationType, double deviationValue, bool useHighLow).ZigZagLow[int barsAgo]
-ZigZag(IDataSeries input, DeviationType deviationType, double deviationValue, bool useHighLow).ZigZagLow[int barsAgo]
+ZigZag(IDataSeries inSeries, DeviationType deviationType, double deviationValue, bool useHighLow).ZigZagLow[int barsAgo]
 ```
 
 ### Return value
@@ -5088,15 +6158,14 @@ A return value of 0 indicates that no high or low point has been found yet.
 ### Parameters
 |                |                                                                                                                    |
 |----------------|--------------------------------------------------------------------------------------------------------------------|
-| input          | Input data series for the indicator                                                                                |
-| deviationType  | The change in points or percent                                                                                    
-                  DeviationType.Points and                                                                                            
-                  DeviationType.Percent                                                                                               |
+| inSeries       | Input data series for the indicator                                                                                |
+| deviationType  | The change in points or percent
+DeviationType.Points and DeviationType.Percent       |
 | deviationValue | Value of the deviation                                                                                             |
 | useHighLow     | Defines whether the high/low of a bar will be used for extreme values or if you want to use closing prices instead |
 
 ### Visualization
-![ZigZag](./media/image130.png)
+![ZigZag](./media/ZigZag.jpg)
 
 ### Example
 ```cs

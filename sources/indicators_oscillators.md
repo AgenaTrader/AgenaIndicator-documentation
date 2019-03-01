@@ -612,10 +612,10 @@ Explanations of the formations and their interpretations can be found here:
 
 ### Usage
 ```cs
-CandleStickPattern(ChartPattern pattern, int trendStrength)
-CandleStickPattern(IDataSeries input, ChartPattern pattern, int trendStrength)
-CandleStickPattern(ChartPattern pattern, int trendStrength)[int barsAgo]
-CandleStickPattern(IDataSeries input, ChartPattern pattern, int trendStrength)[int barsAgo]
+CandleStickPattern(CandleStickPattern pattern, int trendStrength)
+CandleStickPattern(IDataSeries input, CandleStickPattern pattern, int trendStrength)
+CandleStickPattern(CandleStickPattern pattern, int trendStrength)[int barsAgo]
+CandleStickPattern(IDataSeries input, CandleStickPattern pattern, int trendStrength)[int barsAgo]
 ```
 
 ### Return value
@@ -632,19 +632,19 @@ When using this method with an index (e.g. **CandleStickPattern**(...)\[**int** 
 | input         | Input data series for the indicator
 |
 | pattern       | Possible values are:
-                ChartPattern.BearishBeltHold
-                 ChartPattern.BearishEngulfing
-                 ChartPattern.BearishHarami
-                 ChartPattern.BearishHaramiCross
-                 ChartPattern.BullishBeltHold
-                ChartPattern.BullishEngulfing
-                ChartPattern.BullishHarami
-                ChartPattern.BullishHaramiCross  
-                ChartPattern.DarkCloudCover
-                ChartPattern.Doji
-                ChartPattern.DownsideTasukiGap
-                ChartPattern.EveningStar
-                ChartPattern.FallingThreeMethods
+				CandleStickPattern.BearishBeltHold
+                 CandleStickPattern.BearishEngulfing
+                 CandleStickPattern.BearishHarami
+                 CandleStickPattern.BearishHaramiCross
+                 CandleStickPattern.BullishBeltHold
+                CandleStickPattern.BullishEngulfing
+                CandleStickPattern.BullishHarami
+                CandleStickPattern.BullishHaramiCross  
+                CandleStickPattern.DarkCloudCover
+                CandleStickPattern.Doji
+                CandleStickPattern.DownsideTasukiGap
+                CandleStickPattern.EveningStar
+                CandleStickPattern.FallingThreeMethods
                 ChartPattern.Hammer
                 ChartPattern.HangingMan
                 ChartPattern.InvertedHammer
@@ -656,7 +656,7 @@ When using this method with an index (e.g. **CandleStickPattern**(...)\[**int** 
                 ChartPattern.ThreeBlackCrows
                 ChartPattern.ThreeWhiteSoldiers
                 ChartPattern.UpsideGapTwoCrows
-                ChartPattern.UpsideTasukiGap    |
+                ChartPattern.UpsideTasukiGap   |
 | trendStrength | Signifies the number of bars to the left and right of the swing high or swing low that are used to identify a trend. The value 0 turns off the search, meaning that the only thing searched for is chart patterns. |
 
 ### Visualization
@@ -664,7 +664,7 @@ When using this method with an index (e.g. **CandleStickPattern**(...)\[**int** 
 
 ### Example
 ```cs
-if (CandelStickPattern(ChartPattern.ShootingStar, 5)[0] == 1)
+if (CandelStickPattern(CandleStickPattern.ShootingStar, 5)[0] == 1)
 Print("Pattern ShootingStar found!");
 ```
 

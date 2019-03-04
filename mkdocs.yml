@@ -7,12 +7,9 @@ repo_url: https://github.com/AgenaTrader/AgenaIndicator-documentation
 edit_uri: edit/master/sources/
 site_url: https://agenatrader.github.io/AgenaIndicator-documentation/index.html
 strict: true
-<<<<<<< HEAD
-nav:
-=======
+
 google_analytics: ['UA-74646070-1', 'agenatrader.github.io']
-pages:
->>>>>>> a4624cd245f48aa39faa1900e3ab365fe456875f
+nav:
     - 'Lets start': 'index.md'
     - 'Data': 'data.md'
     - 'Indicators & Oscillators': 'indicators_oscillators.md'

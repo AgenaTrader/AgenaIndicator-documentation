@@ -7,32 +7,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
-  <link rel="shortcut icon" href="../favicon.ico">
-  
+  <link rel="shortcut icon" href="../img/favicon.ico">
   <title>Indicators & Oscillators - AgenaIndicator Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../css/highlight.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   <link href="../custom.css" rel="stylesheet">
   
   <script>
     // Current page data
     var mkdocs_page_name = "Indicators & Oscillators";
     var mkdocs_page_input_path = "indicators_oscillators.md";
-    var mkdocs_page_url = "/indicators_oscillators/";
+    var mkdocs_page_url = "/AgenaIndicator-documentation/index.html/indicators_oscillators/";
   </script>
   
-  <script src="../js/jquery-2.1.1.min.js"></script>
-  <script src="../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
   
   <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
       ga('create', 'UA-74646070-1', 'agenatrader.github.io');
       ga('send', 'pageview');
@@ -50,7 +50,7 @@
         <a href=".." class="icon icon-home"> AgenaIndicator Documentation</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -462,8 +462,9 @@ ADL(IDataSeries inSeries)[int barsAgo]
 <p><img alt="Accumulation/Distribution (ADL)" src="../media/ADL.jpg" /></p>
 <h3 id="example">Example</h3>
 <pre><code class="cs">//Testing the direction of the ADL
-if (IsSerieRising(ADL())
+if (IsSerieRising(ADL()) {
 Print(&quot;The ADL indicator is rising.&quot;);
+}
 </code></pre>
 
 <h2 id="adaptive-price-zone-apz">Adaptive Price Zone (APZ)</h2>
@@ -476,10 +477,10 @@ Print(&quot;The ADL indicator is rising.&quot;);
 <h3 id="usage_1">Usage</h3>
 <pre><code class="cs">APZ(double barPct, int period)
 APZ(IDataSeries inSeries, double barPct, int period)
-Upper Band
+//Upper Band
 APZ(double barPct, int period).Upper[int barsAgo]
 APZ(IDataSeries inSeries, double barPct, int period).Upper[int barsAgo]
-Lower Band
+//Lower Band
 APZ(double barPct, int period).Lower[int barsAgo]
 APZ(IDataSeries inSeries, double barPct, int period).Lower[int barsAgo]
 </code></pre>
@@ -650,10 +651,10 @@ Print(&quot;The current ATR value is: &quot; + ATR(14)[0]);
 Negative (red) means that the Bollinger Bands are drawing together. (Larger than SignalSize -&gt; Short, characterized by a more intense red)
 Positive (green) means that the Bollinger Bands are diverging. (Larger than SignalSize -&gt; Long, characterized by a more intense green)</p>
 <h3 id="usage_7">Usage</h3>
-<pre><code class="cs">BBBreakOutSpeed(double bandsDeviation, int bandsPeriod, int signalsize) 
-BBBreakOutSpeed(IDataSeries inSeries, double bandsDeviation, int bandsPeriod, int signalsize) 
+<pre><code class="cs">BBBreakOutSpeed(double bandsDeviation, int bandsPeriod, int signalsize)
+BBBreakOutSpeed(IDataSeries inSeries, double bandsDeviation, int bandsPeriod, int signalsize)
 BBBreakOutSpeed(double bandsDeviation, int bandsPeriod, int signalsize)[int barsAgo]
-BBBreakOutSpeed(IDataSeries inSeries, double bandsDeviation, int bandsPeriod, int signalsize)[int barsAgo] 
+BBBreakOutSpeed(IDataSeries inSeries, double bandsDeviation, int bandsPeriod, int signalsize)[int barsAgo]
 </code></pre>
 
 <h3 id="return-value_7">Return value</h3>
@@ -776,8 +777,10 @@ BollingerPercentB(IDataSeries inSeries, int period, double numStdDev)[int barsAg
 <h3 id="visualization_10">Visualization</h3>
 <p><img alt="Bollinger Percent B (%b)" src="../media/BollingerPercentB.jpg" /></p>
 <h3 id="example_10">Example</h3>
-<p>//Output for the value of Bollinger %B</p>
-<p><strong>Print</strong>("Value of the Bollinger Percent B is: " + <strong>BollingerPercentB</strong>(20, 2)[0]);</p>
+<pre><code class="cs">//Output for the value of Bollinger %B
+Print(&quot;Value of the Bollinger Percent B is: &quot; + BollingerPercentB(20, 2)[0]);
+</code></pre>
+
 <h2 id="bollinger-band-width-bbwidth">Bollinger Band Width (BBWidth)</h2>
 <h3 id="description_9">Description</h3>
 <p>This indicator is derived from Bollinger Bands. John Bollinger refers to Bollinger Band Width as one of two indicators that one can derive from Bollinger Bands; the other indicator is %B.
@@ -903,10 +906,12 @@ Print(&quot;The BuySellVolume is: &quot; + BuySellVolume()[0]);
 <h3 id="further-information_8">Further information</h3>
 <p>Explanations of the formations and their interpretations can be found here: <a href="http://en.wikipedia.org/wiki/Candlestick_pattern">http://en.wikipedia.org/wiki/Candlestick_pattern</a></p>
 <h3 id="usage_14">Usage</h3>
-<pre><code class="cs">CandleStickPattern(ChartPattern pattern, int trendStrength)
-CandleStickPattern(IDataSeries inSeries, ChartPattern pattern, int trendStrength)
-CandleStickPattern(ChartPattern pattern, int trendStrength)[int barsAgo]
-CandleStickPattern(IDataSeries inSeries, ChartPattern pattern, int trendStrength)[int barsAgo]
+<pre><code class="cs">
+CandleStickPattern(CandleStickPattern pattern, int trendStrength)
+CandleStickPattern(IDataSeries input, CandleStickPattern pattern, int trendStrength)
+CandleStickPattern(CandleStickPattern pattern, int trendStrength)[int barsAgo]
+CandleStickPattern(IDataSeries input, CandleStickPattern pattern, int trendStrength)[int barsAgo]
+
 </code></pre>
 
 <h3 id="return-value_14">Return value</h3>
@@ -928,112 +933,112 @@ CandleStickPattern(IDataSeries inSeries, ChartPattern pattern, int trendStrength
 <td>Input data series for the indicator</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
 <td>pattern</td>
 <td>Possible values are:</td>
 </tr>
 <tr>
-<td>ChartPattern.BearishBeltHold</td>
+<td>CandleStickPattern.BearishBeltHold</td>
 <td></td>
 </tr>
 <tr>
-<td>ChartPattern.BearishEngulfing</td>
+<td>CandleStickPattern.BearishEngulfing</td>
 <td></td>
 </tr>
 <tr>
-<td>ChartPattern.BearishHarami</td>
+<td>CandleStickPattern.BearishHarami</td>
 <td></td>
 </tr>
 <tr>
-<td>ChartPattern.BearishHaramiCross</td>
+<td>CandleStickPattern.BearishHaramiCross</td>
 <td></td>
 </tr>
 <tr>
-<td>ChartPattern.BullishBeltHold</td>
+<td>CandleStickPattern.BullishBeltHold</td>
 <td></td>
 </tr>
 <tr>
-<td>ChartPattern.BullishEngulfing</td>
+<td>CandleStickPattern.BullishEngulfing</td>
 <td></td>
 </tr>
 <tr>
-<td>ChartPattern.BullishHarami</td>
+<td>CandleStickPattern.BullishHarami</td>
 <td></td>
 </tr>
 <tr>
-<td>ChartPattern.BullishHaramiCross</td>
+<td>CandleStickPattern.BullishHaramiCross</td>
 <td></td>
 </tr>
 <tr>
-<td>ChartPattern.DarkCloudCover</td>
+<td>CandleStickPattern.DarkCloudCover</td>
 <td></td>
 </tr>
 <tr>
-<td>ChartPattern.Doji</td>
+<td>CandleStickPattern.Doji</td>
 <td></td>
 </tr>
 <tr>
-<td>ChartPattern.DownsideTasukiGap</td>
+<td>CandleStickPattern.DownsideTasukiGap</td>
 <td></td>
 </tr>
 <tr>
-<td>ChartPattern.EveningStar</td>
+<td>CandleStickPattern.EveningStar</td>
 <td></td>
 </tr>
 <tr>
-<td>ChartPattern.FallingThreeMethods</td>
+<td>CandleStickPattern.FallingThreeMethods</td>
 <td></td>
 </tr>
 <tr>
-<td>ChartPattern.Hammer</td>
+<td>CandleStickPattern.Hammer</td>
 <td></td>
 </tr>
 <tr>
-<td>ChartPattern.HangingMan</td>
+<td>CandleStickPattern.HangingMan</td>
 <td></td>
 </tr>
 <tr>
-<td>ChartPattern.InvertedHammer</td>
+<td>CandleStickPattern.InvertedHammer</td>
 <td></td>
 </tr>
 <tr>
-<td>ChartPattern.MorningStart</td>
+<td>CandleStickPattern.MorningStart</td>
 <td></td>
 </tr>
 <tr>
-<td>ChartPattern.PiercingLine</td>
+<td>CandleStickPattern.PiercingLine</td>
 <td></td>
 </tr>
 <tr>
-<td>ChartPattern.RisingThreeMethods</td>
+<td>CandleStickPattern.RisingThreeMethods</td>
 <td></td>
 </tr>
 <tr>
-<td>ChartPattern.ShootingStar</td>
+<td>CandleStickPattern.ShootingStar</td>
 <td></td>
 </tr>
 <tr>
-<td>ChartPattern.StickSandwich</td>
+<td>CandleStickPattern.StickSandwich</td>
 <td></td>
 </tr>
 <tr>
-<td>ChartPattern.ThreeBlackCrows</td>
+<td>CandleStickPattern.ThreeBlackCrows</td>
 <td></td>
 </tr>
 <tr>
-<td>ChartPattern.ThreeWhiteSoldiers</td>
+<td>CandleStickPattern.ThreeWhiteSoldiers</td>
 <td></td>
 </tr>
 <tr>
-<td>ChartPattern.UpsideGapTwoCrows</td>
+<td>CandleStickPattern.UpsideGapTwoCrows</td>
 <td></td>
 </tr>
 <tr>
-<td>ChartPattern.UpsideTasukiGap</td>
+<td>CandleStickPattern.UpsideTasukiGap</td>
 <td></td>
+</tr>
+<tr>
+<td>pattern</td>
+<td>Possible values are: CandleStickPattern.BearishBeltHold, CandleStickPattern.BearishEngulfing, ChartPattern.BearishHarami, ChartPattern.BearishHaramiCross, ChartPattern.BullishBeltHold ChartPattern.BullishEngulfing,  ChartPattern.BullishHarami,  ChartPattern.BullishHaramiCross,  ChartPattern.DarkCloudCover, ChartPattern.Doji,ChartPattern.DownsideTasukiGapChartPattern.EveningStar,  ChartPattern.FallingThreeMethods,  ChartPattern.Hammer,  ChartPattern.HangingMan,  ChartPattern.InvertedHammer,  ChartPattern.MorningStart  ChartPattern.PiercingLine,  ChartPattern.RisingThreeMethods,  ChartPattern.ShootingStar,  ChartPattern.StickSandwich,ChartPattern.ThreeBlackCrows,ChartPattern.ThreeWhiteSoldiers, ChartPattern.UpsideGapTwoCrows,  ChartPattern.UpsideTasukiGap</td>
 </tr>
 <tr>
 <td>trendStrength</td>
@@ -1044,7 +1049,7 @@ CandleStickPattern(IDataSeries inSeries, ChartPattern pattern, int trendStrength
 <h3 id="visualization_15">Visualization</h3>
 <p><img alt="CandleStickPattern" src="../media/CandleStickPattern.jpg" /></p>
 <h3 id="example_14">Example</h3>
-<pre><code class="cs">if (CandelStickPattern(ChartPattern.ShootingStar, 5)[0] == 1)
+<pre><code class="cs">if (CandelStickPattern(CandleStickPattern.ShootingStar, 5)[0] == 1)
 Print(&quot;Pattern ShootingStar found!&quot;);
 </code></pre>
 
@@ -1242,10 +1247,10 @@ Print(&quot;The value of the Commodity Channel Index is: &quot; + CCI(14));
 <p>This indicator also works in the same way as the COTAggregatedIndexPositionLegacy; for interpretation and more detailed information, please read more under  <a href="#COTAggregatedIndexPositionLegacy"><em>COTAggregatedIndexPositionLegacy</em></a>. The difference here, in turn, consists in the usage of the detailed disaggregated data for calculating the indicator.</p>
 <p>For the COTAggregatedIndexPositionDisaggregated, the following parameters are available:</p>
 <ul>
-<li>AddIndices: </li>
-<li><strong>DowJones:</strong> select [True] if the positions of the DowJones should be added to the overall result. </li>
-<li><strong>Nasdaq100:</strong> select [True] if the positions of the Nasdaq100 should be added to the overall result. </li>
-<li><strong>Russell2000:</strong> select [True] if the positions of the Russell2000 should be added to the overall  result. </li>
+<li>AddIndices:</li>
+<li><strong>DowJones:</strong> select [True] if the positions of the DowJones should be added to the overall result.</li>
+<li><strong>Nasdaq100:</strong> select [True] if the positions of the Nasdaq100 should be added to the overall result.</li>
+<li><strong>Russell2000:</strong> select [True] if the positions of the Russell2000 should be added to the overall  result.</li>
 <li>
 <p><strong>SP500:</strong>  select [True] if the positions of the SP500 should be added to the overall result.</p>
 </li>
@@ -1265,8 +1270,8 @@ Print(&quot;The value of the Commodity Channel Index is: &quot; + CCI(14));
 <li>
 <p>Display:</p>
 </li>
-<li><strong>LongPosition:</strong> select [True] to display the long positions of the desired market participants </li>
-<li><strong>ShortPosition:</strong> select [True] to display the short positions of the desired market participants </li>
+<li><strong>LongPosition:</strong> select [True] to display the long positions of the desired market participants</li>
+<li><strong>ShortPosition:</strong> select [True] to display the short positions of the desired market participants</li>
 <li><strong>NetPosition:</strong> select [True] to display the net positions of the desired market participants</li>
 </ul>
 <h3 id="parameters_19">Parameters</h3>
@@ -1282,7 +1287,7 @@ Print(&quot;The value of the Commodity Channel Index is: &quot; + CCI(14));
 <h2 id="cotcommercialindex">COTCommercialIndex</h2>
 <p><strong>The installation of the Technical Analysis Package is required in order to access this indicator.</strong></p>
 <h3 id="description_21">Description</h3>
-<p>The CommercialIndex is a very telling COT indicator. It puts two of the most important COT-parameters in relation to each other – the net position of the commercials to the open interest. These values are normalized and subsequently outputted. A high value of the CommercialIndex shows strong buying behavior of the commercials, whereas a low value shows strong sell pressure from the commercials. The parameters are similarly structured as with the COTReport. </p>
+<p>The CommercialIndex is a very telling COT indicator. It puts two of the most important COT-parameters in relation to each other – the net position of the commercials to the open interest. These values are normalized and subsequently outputted. A high value of the CommercialIndex shows strong buying behavior of the commercials, whereas a low value shows strong sell pressure from the commercials. The parameters are similarly structured as with the COTReport.</p>
 <p>The following parameters are available for the COTCommercialIndex:</p>
 <ul>
 <li><strong>CotType</strong>: see <a href="#COTReportLegacy"><em>COTReportLegacy</em></a> – CotType</li>
@@ -1305,27 +1310,27 @@ Print(&quot;The value of the Commodity Channel Index is: &quot; + CCI(14));
 <h3 id="description_22">Description</h3>
 <p>This indicator corresponds to the mode of operation of the COTOpenInterestLegacy, instead using, however, the more finely broken down data of the disaggregated reports. For the functionality and interpretation of the open interest, please read more under see <a href="#COTOpenInterestLegacy"><em>COTOpenInterestLegacy</em></a>.
  The calculation also occurs analogously to the legacy reports, and since for each long contract, there must also be a market participant on the short side, two calculation methods are possible (here for commodity futures):</p>
-<p>1) Producer[Long] + SwapDealer[Long] + SwapDealer[Spread] + ManagedMoney[Long] + ManagedMoney[Spread] + OtherReportables[Long] + OtherReportables[Spread] + NonReportable[Long] = OpenInterest </p>
+<p>1) Producer[Long] + SwapDealer[Long] + SwapDealer[Spread] + ManagedMoney[Long] + ManagedMoney[Spread] + OtherReportables[Long] + OtherReportables[Spread] + NonReportable[Long] = OpenInterest</p>
 <p>2) Producer[Short] + SwapDealer[Short] + SwapDealer[Spread] + ManagedMoney[Short] + ManagedMoney[Spread] + OtherReportables[Short] + OtherReportables[Spread] + NonReportable[Short] = OpenInterest</p>
 <p>The following parameters are available for the COTOpenInterestDisaggregated:</p>
 <ul>
-<li><strong>Categories: Commodity</strong> </li>
-<li><strong>OpenInterest_Comm:</strong> (=total OpenInterest for Commodities) <ul>
+<li><strong>Categories: Commodity</strong></li>
+<li><strong>OpenInterest_Comm:</strong> (=total OpenInterest for Commodities)<ul>
 <li>[Absolute]: outputs the OpenInterest as an absolute number</li>
-<li>[Stochastic]: OpenInterest as an oscillator with values between 0-100 </li>
+<li>[Stochastic]: OpenInterest as an oscillator with values between 0-100</li>
 <li>[None]: no output for the OpenInterest.</li>
 </ul>
 </li>
 <li><strong>%ofOIProd Long/Short/Spread:</strong> (=Percent of OpenInterest for Producer Long/Short/Spread – Position) – select [True] if this value should be displayed. This here is the percentage that the positions of the producers have of the overall OpenInterest. A value of 0.5, for example, means that the producers have built up long positions in the size of 50% of the entire OpenInterest.</li>
 <li><strong>%ofOISwapDealer Long/Short/Spread:</strong> (=Percent of OpenInterest for SwapDealers Long/Short/Spread – Position) – select [True] if this value should be displayed.</li>
-<li><strong>%ofOIManagedMoney Long/Short/Spread</strong>: (=Percent of OpenInterest for ManagedMoney Long/Short/Spread – Position) – select [True] if this value should be displayed. </li>
-<li><strong>%ofOIComOther Long/Short/Spread:</strong> (=Percent of OpenInterest for Other Traders in Commodities Long/Short/Spread – Position) – select [True] if this value should be displayed. </li>
+<li><strong>%ofOIManagedMoney Long/Short/Spread</strong>: (=Percent of OpenInterest for ManagedMoney Long/Short/Spread – Position) – select [True] if this value should be displayed.</li>
+<li><strong>%ofOIComOther Long/Short/Spread:</strong> (=Percent of OpenInterest for Other Traders in Commodities Long/Short/Spread – Position) – select [True] if this value should be displayed.</li>
 <li><strong>%ofOIComNonreportables Long/Short/Spread</strong>: (=Percent of OpenInterest for NonReportables in Commodites Long/Short/Spread – Position) select [True] if this value should be displayed.</li>
 <li><strong>Categories: Financial</strong></li>
 <li>All parameters work analogously to the settings under “Categories: Commodity”; the only difference lies in the division into various groups of market participants</li>
-<li><strong>Data base:</strong> </li>
-<li><strong>CotType:</strong> <a href="#COTReportLegacy"><em>COTReportLegacy</em></a> - CotType </li>
-<li><strong>ReportType:</strong> <a href="#COTReportLegacy"><em>COTReportLegacy</em></a> - ReportType </li>
+<li><strong>Data base:</strong></li>
+<li><strong>CotType:</strong> <a href="#COTReportLegacy"><em>COTReportLegacy</em></a> - CotType</li>
+<li><strong>ReportType:</strong> <a href="#COTReportLegacy"><em>COTReportLegacy</em></a> - ReportType</li>
 <li><strong>StochasticPeriod:</strong> <a href="#COTReportLegacy"><em>COTReportLegacy</em></a> – ComparativePeriod</li>
 </ul>
 <h3 id="parameters_21">Parameters</h3>
@@ -1341,7 +1346,7 @@ Print(&quot;The value of the Commodity Channel Index is: &quot; + CCI(14));
 <h2 id="cotopeninterestlegacy">COTOpenInterestLegacy</h2>
 <p><strong>The installation of the Technical Analysis Package is required in order to access this indicator.</strong></p>
 <h3 id="description_23">Description</h3>
-<p>The open interest specifies the number of all currently held contracts; a high open interest, therefore, indicates that the market participants have great interest in this value; vice versa, low open interest shows that a value has only few held contracts and therefore little activity from the market participants. 
+<p>The open interest specifies the number of all currently held contracts; a high open interest, therefore, indicates that the market participants have great interest in this value; vice versa, low open interest shows that a value has only few held contracts and therefore little activity from the market participants.
 There are two options for calculating the OpenInterest:</p>
 <p>1) Commercial[Long] + NonCommercial[Long] + NonCommercial[Spread] + NonReportable[Long] = OpenInterest
  2) Commercial[Short] + NonCommercial[Short] + NonCommercial[Spread] + NonReportable[Short] = OpenInterest</p>
@@ -1355,7 +1360,7 @@ There are two options for calculating the OpenInterest:</p>
 <p><strong>ReportType:</strong> <a href="#COTReportLegacy"><em>COTReportLegacy</em></a> – ReportType</p>
 </li>
 <li>
-<p><strong>StochasticPeriod:</strong> <a href="#COTReportLegacy"><em>COTReportLegacy</em></a>– ComparativePeriod </p>
+<p><strong>StochasticPeriod:</strong> <a href="#COTReportLegacy"><em>COTReportLegacy</em></a>– ComparativePeriod</p>
 </li>
 <li>
 <p><strong>IsNative:</strong> outputs the OpenInterest as an absolute number, just as it is read out from the CFTC reports</p>
@@ -1389,29 +1394,29 @@ There are two options for calculating the OpenInterest:</p>
 <h2 id="cotreportdisaggregated">COTReportDisaggregated</h2>
 <p><strong>The installation of the Technical Analysis Package is required in order to access this indicator.</strong></p>
 <h3 id="description_24">Description</h3>
-<p>The COTReportDisaggregated accesses the detailed disaggregated reports of the CFTC, which have been published since 2009 and can be regarded as a further development of the legacy reports. The necessity for improvement has resulted in the drastically changing and constantly developing market environment since the introduction of the COT reports in 1986. 
+<p>The COTReportDisaggregated accesses the detailed disaggregated reports of the CFTC, which have been published since 2009 and can be regarded as a further development of the legacy reports. The necessity for improvement has resulted in the drastically changing and constantly developing market environment since the introduction of the COT reports in 1986.
 The market participants are now divided more subtly and are organized into 5 categories. These 5 categories vary according to whether we are dealing with a commodity future or a financial future.</p>
 <p>The market participants are now divided more subtly and are organized into 5 categories. These 5 categories vary according to whether we are dealing with a commodity future or a financial future.</p>
-<p>The <strong>commodity futures</strong> are divided into the following groups: </p>
+<p>The <strong>commodity futures</strong> are divided into the following groups:</p>
 <ul>
-<li>Producer/Merchant/Processor/User </li>
-<li>SwapDealers o ManagedMoney </li>
-<li>Other Reportables </li>
-<li>Nonreportables </li>
+<li>Producer/Merchant/Processor/User</li>
+<li>SwapDealers o ManagedMoney</li>
+<li>Other Reportables</li>
+<li>Nonreportables</li>
 <li>You can find more information about the classification of the commodities <a href="http://www.cftc.gov/idc/groups/public/@commitmentsoftraders/documents/file/disaggregatedcotexplanatorynot.pdf">HERE</a></li>
 </ul>
-<p>For the <strong>financial futures</strong>, there are the following groups: </p>
+<p>For the <strong>financial futures</strong>, there are the following groups:</p>
 <ul>
-<li>Dealer/Intermediary </li>
-<li>AssetManager/Institutional </li>
-<li>Leveraged Funds </li>
-<li>Other Reportables </li>
+<li>Dealer/Intermediary</li>
+<li>AssetManager/Institutional</li>
+<li>Leveraged Funds</li>
+<li>Other Reportables</li>
 <li>Nonreportabes</li>
 <li>You can find more information about the classification of the financials <a href="http://www.cftc.gov/idc/groups/public/@commitmentsoftraders/documents/file/tfmexplanatorynotes.pdf">HERE</a></li>
 </ul>
 <p>The following parameters are available for the COTReportDisaggregated:</p>
 <ul>
-<li><strong>Categories Commodity/Categories Financial:</strong> </li>
+<li><strong>Categories Commodity/Categories Financial:</strong></li>
 <li>
 <p>Select [True] for the groups that you would like to have displayed in the chart. If you have opened a commodity chart, only settings made under “Categories Commodity” will be taken into account, and vice versa if you have opened a financial chart.</p>
 </li>
@@ -1422,13 +1427,13 @@ The market participants are now divided more subtly and are organized into 5 cat
 <li><strong>IndexType:</strong> <a href="#COTReportLegacy"><em>COTReportLegacy</em></a> – IndexType</li>
 <li><strong>ReportType:</strong> <a href="#COTReportLegacy"><em>COTReportLegacy</em></a> – ReportType</li>
 <li>
-<p><strong>StochasticPeriod:</strong> <a href="#COTReportLegacy"><em>COTReportLegacy</em></a>– ComparativePeriod </p>
+<p><strong>StochasticPeriod:</strong> <a href="#COTReportLegacy"><em>COTReportLegacy</em></a>– ComparativePeriod</p>
 </li>
 <li>
-<p><strong>Display:</strong> </p>
+<p><strong>Display:</strong></p>
 </li>
-<li><strong>LongPosition:</strong> select [True] to display the long positions of the desired market participants </li>
-<li><strong>ShortPosition:</strong> select [True] to display the short positions of the desired market participants </li>
+<li><strong>LongPosition:</strong> select [True] to display the long positions of the desired market participants</li>
+<li><strong>ShortPosition:</strong> select [True] to display the short positions of the desired market participants</li>
 <li><strong>NetPosition:</strong> select [True] to display the net positions of the desired market participants</li>
 </ul>
 <h3 id="parameters_23">Parameters</h3>
@@ -1444,7 +1449,7 @@ The market participants are now divided more subtly and are organized into 5 cat
 <h2 id="cotreportlegacy">COTReportLegacy</h2>
 <p><strong>The installation of the Technical Analysis Package is required in order to access this indicator.</strong></p>
 <h3 id="description_25">Description</h3>
-<p>This indicator is the core element of the COT analysis, with which one can directly display the pure data that the indicator reads from the reports published weekly by the CFTC (www.cftc.gov/CommitmentsofTraders). 
+<p>This indicator is the core element of the COT analysis, with which one can directly display the pure data that the indicator reads from the reports published weekly by the CFTC (www.cftc.gov/CommitmentsofTraders).
 The published reports can be viewed by every market participant. The legacy data is published in the so called short reports you can find on the CFTC-website. The following parameters are available in the COTReportLegacy:</p>
 <ul>
 <li>
@@ -1456,7 +1461,7 @@ The published reports can be viewed by every market participant. The legacy data
 <li>
 <p><strong>IndexType:</strong> choose between [Absolute/Stochastic] as to how the values should be outputted.</p>
 </li>
-<li>Absolute = the values are outputted in whole numbers, just as they are read out from the reports. </li>
+<li>Absolute = the values are outputted in whole numbers, just as they are read out from the reports.</li>
 <li>
 <p>Stochastic = the values are outputted and calculated as an oscillator with values between 0-100. With the ComparativePeriod, you can set with which period the Stochastic should be calculated.</p>
 </li>
@@ -1464,7 +1469,7 @@ The published reports can be viewed by every market participant. The legacy data
 <p><strong>ReportType:</strong> under this parameter, you select whether the data from the reports should be read out only for futures, or for futures + options.</p>
 </li>
 <li>
-<p><strong>ReturnType:</strong> </p>
+<p><strong>ReturnType:</strong></p>
 </li>
 <li>Net: outputs the net position (=LongContracts – ShortContracts) of the selected market participants</li>
 <li>Long/Short: outputs the long i.e. short contracts of the selected market participants</li>
@@ -2446,7 +2451,7 @@ Print(&quot;Lower band of the MA Envelope: &quot; + MAEnvelopes(1.5, MAEnvelopes
 <h3 id="description_56">Description</h3>
 <p>The Market Phases Indicator is another important component of the Technical Analysis Package, and is based on integrated trend detection for the various relevant trading market phases.</p>
 <p>The market phases are defined according to the book series “Der Händler” (“The Trader”) by Michael Voigt.</p>
-<p><strong>Important tip</strong> 
+<p><strong>Important tip</strong>
 MarketPhases indicators  are very history sensitive and need at least up to 2000 intraday candles to see good results.</p>
 <p><strong>Phase 3:</strong></p>
 <p>The market is located far away from the movement; a correction is imminent.</p>
@@ -2489,7 +2494,7 @@ MarketPhases indicators  are very history sensitive and need at least up to 2000
 <p>When using market phases within AgenaScript, the indicator provides a data series that has the aforementioned values of +/-3, 4, 5, 5.1, 5.2.</p>
 <p>You can use the indicator as a filter by using the signals of other indicators when they are inside the market phases 5.1 or 5.2(long):</p>
 <p><img alt="Condition Escort" src="../media/MarketPhases.png" /></p>
-<p><strong>Important tip</strong> 
+<p><strong>Important tip</strong>
 The scanner and chart use a different history calculation. Since Dow Theory indicators are very bar sensitive we cannot guarantee 100% synchronization between results show in the chart and the scanner. We recommend to reload the data in the scanner from time to time to avoid to big discrepancies.
 If you want to use  MarketPhases (also Pro and Advanced version) indicator in conjunction with the scanner, the following settings are required:</p>
 <ul>
@@ -2549,16 +2554,16 @@ These parameters can be checked under P123Pro descripption.</p>
 <h2 id="marketvalue">MarketValue</h2>
 <p><strong>The installation of the Technical Analysis Package is required in order to access this indicator.</strong></p>
 <h3 id="description_57">Description</h3>
-<p>This indicator compares the value of a market with the current price of gold or the dollar index. This means that markets are placed in relation to the gold price or the dollar, whereby over- and undervaluation can be determined very well in instruments. </p>
-<p>A low MarketValue means that a market is cheap relative to gold/dollar index; vice versa, a higher value means that the market is relatively expensive. </p>
+<p>This indicator compares the value of a market with the current price of gold or the dollar index. This means that markets are placed in relation to the gold price or the dollar, whereby over- and undervaluation can be determined very well in instruments.</p>
+<p>A low MarketValue means that a market is cheap relative to gold/dollar index; vice versa, a higher value means that the market is relatively expensive.</p>
 <p>In general, commodities should be compared to the gold price, and financials to the dollar index. However, depending on the market environment, it may be useful to deviate from this rule.</p>
-<p>The following parameters are available for the MarketValue: </p>
+<p>The following parameters are available for the MarketValue:</p>
 <ul>
 <li>
-<p><strong>CompareTo:</strong> select [Gold/Dollar Index] depending on which market the current symbol should be placed in relation to. </p>
+<p><strong>CompareTo:</strong> select [Gold/Dollar Index] depending on which market the current symbol should be placed in relation to.</p>
 </li>
 <li>
-<p><strong>EMA1:</strong> this is a period that is necessary for calculating the data. If you do not have detailed information about how this indicator works, please leave this period on the default settings. (Default value = 21) </p>
+<p><strong>EMA1:</strong> this is a period that is necessary for calculating the data. If you do not have detailed information about how this indicator works, please leave this period on the default settings. (Default value = 21)</p>
 </li>
 <li>
 <p><strong>EMA2:</strong> this is an EMA period that is necessary for calculating the data. If you do not have detailed information about how this indicator works, please leave this period on the standard settings. (Default value = 3)</p>
@@ -3459,14 +3464,14 @@ private void PrintOutTrendProperties(int trendSize)
 <p>All data series (excluding the DateTime series) are available in the Condition Escort under the "Series &amp; Output Values".</p>
 <p>Logical variables (true and false) are replaced by the numbers 1 and 0. The "TrendSize" parameter is available in the Condition Escort as well. The description you will find below.</p>
 <h3 id="examples_2">Examples</h3>
-<p>Inquiry whether the currently active in the chart middle trend is a downtrend: 
+<p>Inquiry whether the currently active in the chart middle trend is a downtrend:
 P123Pro(Close, 1).TrendDirection[0] - Inh. TimeFrame   ==   1</p>
-<p>Inquiry whether the latest point of the currently active in the chart smallest trend is a Point2: 
+<p>Inquiry whether the latest point of the currently active in the chart smallest trend is a Point2:
 P123Pro(Close, 3).LastPoint[0] - Inh. TimeFrame   ==   2</p>
-<p>Inquiry whether the latest bar under the valid point 3 (not the 3?) of the small trend has been closed: 
-P123Pro(Close, 2).isTrendValid[0] - Inh. TimeFrame   ==   1 
+<p>Inquiry whether the latest bar under the valid point 3 (not the 3?) of the small trend has been closed:
+P123Pro(Close, 2).isTrendValid[0] - Inh. TimeFrame   ==   1
 UND (also neue Zeile)
-Close[0] - Inh. TimeFrame   &lt;   P123Pro(Close, 2).ValidP3Price[0] - Inh. TimeFrame </p>
+Close[0] - Inh. TimeFrame   &lt;   P123Pro(Close, 2).ValidP3Price[0] - Inh. TimeFrame</p>
 <h2 id="parabolic-sar">Parabolic SAR</h2>
 <h3 id="description_82">Description</h3>
 <p>Welles Wilder came up with the Parabolic SAR, which denotes a price and time-based trading system. Wilder named this the "Parabolic Time/Price System." SAR signifies "stop and reverse," which is the name of the actual indicator used in his system, where <strong>SAR trails price as the trend extends over time</strong>. When prices are rising, the indicator is below them, and when prices are falling, it is above them. Therefore the indicator stops and reverses when the price trend reverses and breaks either above or below the indicator.</p>
@@ -3995,7 +4000,7 @@ RelativePerformance (Instrument)[int barsAgo]
 <h3 id="return-value_87">Return value</h3>
 <p><strong>double</strong></p>
 <h3 id="parameters_80">Parameters</h3>
-<p>IInstrument </p>
+<p>IInstrument</p>
 <h3 id="visualization_84">Visualization</h3>
 <p><img alt="Relative Performance" src="../media/RelativePerformance.png" /></p>
 <h2 id="relative-spread-strength-rss">Relative Spread Strength (RSS)</h2>
@@ -4552,12 +4557,12 @@ Once broken, these areas tend to reverse their function, meaning that a broken s
 <p>The methods for these indicators can be used in scripts to determine the last extreme point and its corresponding price value. The highs and lows of these points may then be used as entry, stop or target markers.</p>
 <h3 id="usage_103">Usage</h3>
 <pre><code class="cs">//For a high
-Swing(int strength).SwingHighBar(int barsAgo, int instance, int lookBackPeriod)
-Swing(IDataSeries inSeries, int strength).SwingHighBar(int barsAgo, int instance, int lookBackPeriod)
+Swing(int strength).SwingHighBar(int barsAgo, int instance, int lookBackPeriod);
+Swing(IDataSeries inSeries, int strength).SwingHighBar(int barsAgo, int instance, int lookBackPeriod);
 
 //For a low
-Swing(int strength).SwingLowBar(int barsAgo, int instance, int lookBackPeriod)
-Swing(IDataSeries inSeries, int strength).SwingLowBar(int barsAgo, int instance, int lookBackPeriod)
+Swing(int strength).SwingLowBar(int barsAgo, int instance, int lookBackPeriod);
+Swing(IDataSeries inSeries, int strength).SwingLowBar(int barsAgo, int instance, int lookBackPeriod);
 </code></pre>
 
 <h3 id="return-value_101">Return value</h3>
@@ -5167,7 +5172,7 @@ Print(&quot;The current value for the Volume ROC is: &quot; + VROC(14, 3)[0]);
 <p><strong>The installation of the Technical Analysis Package is required in order to access this indicator.</strong></p>
 <h3 id="description_133">Description</h3>
 <p>Similarly, with this indicator you can also have your own volume profiles displayed. Here you can now determine the start and end time completely freely by clicking on your desired position. There are no restrictions as to where the calculation should start and end. In the upper right corner you have the setting options with which you can switch between the profile types (for a description of these, read more under VolumeSessionPro). With a click on the little red “+” under the profile settings, you can add a further volume profile to your chart; you do so by once again determining the start and end time by left-clicking.
- The settings and the display of the indicator are exactly equivalent to the VolumeSessionPro: via ProfileType you select which calculation method should be used; via ValueArea you determine the percentage for what portion of the volume area should be colored with the highest activity. 
+ The settings and the display of the indicator are exactly equivalent to the VolumeSessionPro: via ProfileType you select which calculation method should be used; via ValueArea you determine the percentage for what portion of the volume area should be colored with the highest activity.
 The most effective way of working with the VolumeArea is to place this indicator in the action bar and assign it a hot key. In this way, if necessary, the indicator can be quickly called up and you can specify the desired volume area.</p>
 <h3 id="parameters_108">Parameters</h3>
 <p>to be announced</p>
@@ -5224,28 +5229,28 @@ The most effective way of working with the VolumeArea is to place this indicator
 <h2 id="volumesentimentlong">VolumeSentimentLong</h2>
 <p><strong>The installation of the Technical Analysis Package is required in order to access this indicator.</strong></p>
 <h3 id="description_137">Description</h3>
-<p>This indicator detects bullish volume activity based on the analysis of the volume of a period, the price span of a bar and the close of the bar (=VolumeSpreadAnalysis). </p>
+<p>This indicator detects bullish volume activity based on the analysis of the volume of a period, the price span of a bar and the close of the bar (=VolumeSpreadAnalysis).</p>
 <p>It screens for 3 signals (listed are the sub-criteria that must be met for the respective signal):</p>
 <ul>
 <li>
 <p>SellingClimax (dark green)
- 6.11..1. Lowest low since 50 periods 
- 6.11..2. Bar with large range 
- 6.11..3. Extremely high volume </p>
+ 6.11..1. Lowest low since 50 periods
+ 6.11..2. Bar with large range
+ 6.11..3. Extremely high volume</p>
 </li>
 <li>
-<p>DemandComingIn (lime green) 
- 6.11..1. UpBar (current close larger than previous close) 
- 6.11..2. Previous Bar: DownBar (close smaller than previous close) 
- 6.11..3. Previous Bar: Bar with large range 
+<p>DemandComingIn (lime green)
+ 6.11..1. UpBar (current close larger than previous close)
+ 6.11..2. Previous Bar: DownBar (close smaller than previous close)
+ 6.11..3. Previous Bar: Bar with large range
  6.11..4. Previous Bar: Above-average high volume</p>
 </li>
 <li>
-<p>BagHolding (light green) 
- 6.11..1. Lowest low since 50 periods 
- 6.11..2. DownBar 
- 6.11..3. Bar with small range 
- 6.11..4. Above-average high volume 
+<p>BagHolding (light green)
+ 6.11..1. Lowest low since 50 periods
+ 6.11..2. DownBar
+ 6.11..3. Bar with small range
+ 6.11..4. Above-average high volume
  6.11..5. Close larger than or equal to the middle of the bar</p>
 </li>
 </ul>
@@ -5263,28 +5268,28 @@ The most effective way of working with the VolumeArea is to place this indicator
 <h2 id="volumesentimentshort">VolumeSentimentShort</h2>
 <p><strong>The installation of the Technical Analysis Package is required in order to access this indicator.</strong></p>
 <h3 id="description_138">Description</h3>
-<p>This indicator is the counterpart to the VolumeSentimentLong and detects bearish volume activity based on the analysis of the volume of a period, the price span of a bar and the close of the bar (=VolumeSpreadAnalysis). </p>
+<p>This indicator is the counterpart to the VolumeSentimentLong and detects bearish volume activity based on the analysis of the volume of a period, the price span of a bar and the close of the bar (=VolumeSpreadAnalysis).</p>
 <p>It screens for 3 signals (listed are the sub-criteria that must be met for the respective signal):</p>
 <ul>
 <li>
-<p>BuyingClimax (dark red) 
- 6.12..1. Highest high since 50 periods 
- 6.12..2. Bar with large range 
- 6.12..3. Extremely high volume </p>
+<p>BuyingClimax (dark red)
+ 6.12..1. Highest high since 50 periods
+ 6.12..2. Bar with large range
+ 6.12..3. Extremely high volume</p>
 </li>
 <li>
-<p>SupplyComingIn (red) 
- 6.12..1. DownBar 
- 6.12..2. Previous Bar: UpBar 
- 6.12..3. Previous Bar: Bar with large range 
+<p>SupplyComingIn (red)
+ 6.12..1. DownBar
+ 6.12..2. Previous Bar: UpBar
+ 6.12..3. Previous Bar: Bar with large range
  6.12..4.Previous Bar: Above-average high volume</p>
 </li>
 <li>
-<p>EndOfRisingMarket (coral) 
- 6.12..1. Highest high since 50 periods 
- 6.12..2. UpBar 
- 6.12..3. Bar with small range 
- 6.12..4.Above-average high volume 
+<p>EndOfRisingMarket (coral)
+ 6.12..1. Highest high since 50 periods
+ 6.12..2. UpBar
+ 6.12..3. Bar with small range
+ 6.12..4.Above-average high volume
  6.12..5.Close smaller than or equal the middle of the bar</p>
 </li>
 </ul>
@@ -5303,9 +5308,9 @@ The most effective way of working with the VolumeArea is to place this indicator
 <p><strong>The installation of the Technical Analysis Package is required in order to access this indicator.</strong></p>
 <h3 id="description_139">Description</h3>
 <p>This indicator is equivalent to the well-known VolumeProfile indicator with a display for a specific time span (session). You can determine the start time and the length of a session however you wish. For each session, the VolumeProfile is then shown. Use this indicator only in timeframes smaller than 1 day; the smaller the timeframe selected, the more detailed the display of the VolumeProfile. The price at which the most volume was traded in the respective session is shown as a red bar. The price area in which, for example, 70% of the trading activity for the respective session took place, is colored light blue. You can determine this percentage yourself as you wish under the parameter “ValueArea”. Furthermore, you have four different options for displaying the volume information:</p>
-<p>Furthermore, you have four different options for displaying the volume information: </p>
+<p>Furthermore, you have four different options for displaying the volume information:</p>
 <p><strong>4.1.1. VOC (Volume on close):</strong> Loads the entire volume of a bar at the closing price of this bar – e.g. if a 5-minute bar has a volume of 280 and a range of 1.5 points with a closing price at 1534.25, all 280 volume units are counted at the closing price of 1534.24.</p>
-<p><strong>4.1.2. TPO (Time price opportunity):</strong> This method does not take the actual traded volume into account, but instead counts an individual volume unit for each price in the traded range of the bar – e.g. if a 5-minute bar has its high at 1534 and its low at 1532.5, then one volume unit is counted for each of the following prices: 1532.50, 1532.75, 1533.0, 1533.25, 1533.50, 1533.75, and 1534. </p>
+<p><strong>4.1.2. TPO (Time price opportunity):</strong> This method does not take the actual traded volume into account, but instead counts an individual volume unit for each price in the traded range of the bar – e.g. if a 5-minute bar has its high at 1534 and its low at 1532.5, then one volume unit is counted for each of the following prices: 1532.50, 1532.75, 1533.0, 1533.25, 1533.50, 1533.75, and 1534.</p>
 <p><strong>4.1.3. VWTPO (Volume weighted time price opportunity):</strong> This version distributes the traded volume of a bar across its price range – e.g. if a 5-minute bar exhibits a volume of 280 with a range of 1.5 points, with its high at 1534 and low at 1532.5, then 40 volume units (=280/7) are added to each of the seven prices in this range: 1532.50, 1532.75, 1533.0, 1533.25, 1533.50, 1533.75, and 1534.</p>
 <p><strong>4.1.4. VTPO (Volume time price opportunity):</strong> Here, the traded volume is added to each price of the range – e.g. if a 5-minute bar has 280 volume units, a range of 1.5 points with a high at 1534 and low at 1532.5, then 280 volume units are added to each of the seven prices of the range:: 1532.50, 1532.75, 1533.0, 1533.25, 1533.50, 1533.75, and 1534.</p>
 <h3 id="parameters_114">Parameters</h3>
@@ -5335,7 +5340,7 @@ The most effective way of working with the VolumeArea is to place this indicator
 <h2 id="volumeudr">VolumeUDR</h2>
 <p><strong>The installation of the Technical Analysis Package is required in order to access this indicator.</strong></p>
 <h3 id="description_141">Description</h3>
-<p>The VolumeUpDownRatio is the relationship between UpVolume and DownVolume, displayed as an oscillator. Volume is classified as UpVolume when the current close of the price candle is located above the close of the prior candle; the opposite applies for DownVolume. Values above 80 are to be graded as a bearish signal; values under 20 as a bullish signal. Besides this, a moving average can be shown, which can serve as an additional signal generator. </p>
+<p>The VolumeUpDownRatio is the relationship between UpVolume and DownVolume, displayed as an oscillator. Volume is classified as UpVolume when the current close of the price candle is located above the close of the prior candle; the opposite applies for DownVolume. Values above 80 are to be graded as a bearish signal; values under 20 as a bullish signal. Besides this, a moving average can be shown, which can serve as an additional signal generator.</p>
 <ul>
 <li>
 <p>Using “DrawCandleOutline”, you can have the border of your candles colored accordingly when bullish/bearish extreme values occur.</p>
@@ -5428,8 +5433,8 @@ WilliamsR(IDataSeries inSeries, int period)[int barsAgo]
 <h2 id="wyckoffwave">WyckoffWave</h2>
 <p><strong>The installation of the Technical Analysis Package is required in order to access this indicator.</strong></p>
 <h3 id="description_146">Description</h3>
-<p>The WyckoffWave indicator adds the volume for each following bar until a price wave is over / finished. You can set the sensitivity of the price waves. When the  volume of a wave rises to particularly high values, is it very often because a turning point in the chart has been reached. When the volume bars are colored red, we are dealing with a short wave; green volume bars indicate a long wave. </p>
-<p>Using the parameter “MedianPeriod” you can select how sensitively the indicator should determine the individual price waves. The smaller the value, the larger the price waves that the indicator calculates. </p>
+<p>The WyckoffWave indicator adds the volume for each following bar until a price wave is over / finished. You can set the sensitivity of the price waves. When the  volume of a wave rises to particularly high values, is it very often because a turning point in the chart has been reached. When the volume bars are colored red, we are dealing with a short wave; green volume bars indicate a long wave.</p>
+<p>Using the parameter “MedianPeriod” you can select how sensitively the indicator should determine the individual price waves. The smaller the value, the larger the price waves that the indicator calculates.</p>
 <p>The parameter Poles serves to fine-tune the display of the volume waves; you can select a parameter between 1-4. Changing this value usually causes only imperceptible changes.</p>
 <h3 id="parameters_119">Parameters</h3>
 <p>to be announced</p>
@@ -5525,18 +5530,18 @@ Print(&quot;The last low of the ZigZag indicator was at &quot; + ZigZag(Deviatio
 
   Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-	  
+      
         </div>
       </div>
 
     </section>
-    
+
   </div>
 
   <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
-          <a href="https://github.com/AgenaTrader/AgenaIndicator-documentation" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+          <a href="https://github.com/AgenaTrader/AgenaIndicator-documentation/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
         <span><a href="../data/" style="color: #fcfcfc;">&laquo; Previous</a></span>
@@ -5544,7 +5549,9 @@ Print(&quot;The last low of the ZigZag indicator was at &quot; + ZigZag(Deviatio
       
     </span>
 </div>
-    <script src="../js/theme.js"></script>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
 
 </body>
 </html>

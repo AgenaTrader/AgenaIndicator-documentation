@@ -5073,24 +5073,25 @@ inSeries Input data series for the indicator
 ### Return value
 **double**
 
-When using this method with an index (e.g. **CurrentDayOHL**.GetCurrentBar().Open\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
+When using this method with an index (e.g. **CurrentDayOHL**.CurrentOpen\[**int** barsAgo\] ), the value of the indicator will be issued for the referenced bar.
 
 ### Usage
 ```cs
 CurrentDayOHL()
 CurrentDayOHL(IDataSeries inSeries)
-
+int barsAgo = 0;
 //For the open value
-CurrentDayOHL().GetCurrentBar().Open[int barsAgo]
-CurrentDayOHL(IDataSeries inSeries).GetCurrentBar().Open[int barsAgo]
-
+CurrentDayOHL().CurrentOpen[ barsAgo]
+CurrentDayOHL(IDataSeries inSeries).CurrentOpen[ barsAgo]
 //For the high value
-CurrentDayOHL().GetCurrentBar().High[int barsAgo]
-CurrentDayOHL(IDataSeries inSeries).GetCurrentBar().High[int barsAgo]
+CurrentDayOHL().CurrentHigh[ barsAgo]
+CurrentDayOHL(IDataSeries inSeries).CurrentBarHigh[ barsAgo]
+
 
 //For the low value
-CurrentDayOHL().GetCurrentBar().Low[int barsAgo]
-CurrentDayOHL(IDataSeries inSeries).GetCurrentBar().Low[int barsAgo]
+CurrentDayOHL().CurrentLow[ barsAgo]
+CurrentDayOHL(IDataSeries inSeries).CurrentLow[ barsAgo]
+
 ```
 
 ### Visualization

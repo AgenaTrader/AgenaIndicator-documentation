@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
+
+
   <link rel="shortcut icon" href="../img/favicon.ico">
   <title>Indicators & Oscillators - AgenaIndicator Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
@@ -15,19 +15,19 @@
   <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   <link href="../custom.css" rel="stylesheet">
-  
+
   <script>
     // Current page data
     var mkdocs_page_name = "Indicators & Oscillators";
     var mkdocs_page_input_path = "indicators_oscillators.md";
     var mkdocs_page_url = "/AgenaIndicator-documentation/index.html/indicators_oscillators/";
   </script>
-  
+
   <script src="../js/jquery-2.1.1.min.js" defer></script>
   <script src="../js/modernizr-2.8.3.min.js" defer></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  
+  <script>hljs.initHighlightingOnLoad();</script>
+
   <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -37,14 +37,14 @@
       ga('create', 'UA-74646070-1', 'agenatrader.github.io');
       ga('send', 'pageview');
   </script>
-  
+
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
   <div class="wy-grid-for-nav">
 
-    
+
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
         <a href=".." class="icon icon-home"> AgenaIndicator Documentation</a>
@@ -57,339 +57,339 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
 	<ul class="current">
-	  
-          
+
+
             <li class="toctree-l1">
-		
+
     <a class="" href="..">Lets start</a>
 	    </li>
-          
+
             <li class="toctree-l1">
-		
+
     <a class="" href="../data/">Data</a>
 	    </li>
-          
+
             <li class="toctree-l1 current">
-		
+
     <a class="current" href="./">Indicators & Oscillators</a>
     <ul class="subnav">
-            
+
     <li class="toctree-l2"><a href="#indicators-oscillators">Indicators &amp; Oscillators</a></li>
-    
+
         <ul>
-        
+
             <li><a class="toctree-l3" href="#accumulationdistribution-adl">Accumulation/Distribution (ADL)</a></li>
-        
+
             <li><a class="toctree-l3" href="#adaptive-price-zone-apz">Adaptive Price Zone (APZ)</a></li>
-        
+
             <li><a class="toctree-l3" href="#aroon">Aroon</a></li>
-        
+
             <li><a class="toctree-l3" href="#aroon-oscillator">Aroon Oscillator</a></li>
-        
+
             <li><a class="toctree-l3" href="#average-directional-index-adx">Average Directional Index (ADX)</a></li>
-        
+
             <li><a class="toctree-l3" href="#average-directional-movement-rating-adxr">Average Directional Movement Rating (ADXR)</a></li>
-        
+
             <li><a class="toctree-l3" href="#average-true-range-atr">Average True Range (ATR)</a></li>
-        
+
             <li><a class="toctree-l3" href="#bbbreakoutspeed">BBBreakOutSpeed</a></li>
-        
+
             <li><a class="toctree-l3" href="#balance-of-power-bop">Balance of Power (BOP)</a></li>
-        
+
             <li><a class="toctree-l3" href="#bollinger-bands">Bollinger Bands</a></li>
-        
+
             <li><a class="toctree-l3" href="#bollinger-percent-b-b">Bollinger Percent B (%b)</a></li>
-        
+
             <li><a class="toctree-l3" href="#bollinger-band-width-bbwidth">Bollinger Band Width (BBWidth)</a></li>
-        
+
             <li><a class="toctree-l3" href="#bollinger-mtf-multitimeframe">Bollinger MTF (MultiTimeFrame)</a></li>
-        
+
             <li><a class="toctree-l3" href="#buysellpressure">BuySellPressure</a></li>
-        
+
             <li><a class="toctree-l3" href="#buysellvolume">BuySellVolume</a></li>
-        
+
             <li><a class="toctree-l3" href="#candlestickpattern">CandleStickPattern</a></li>
-        
+
             <li><a class="toctree-l3" href="#chaikinmoneyflow-cmf">ChaikinMoneyFlow (CMF)</a></li>
-        
+
             <li><a class="toctree-l3" href="#chaikin-oscillator">Chaikin Oscillator</a></li>
-        
+
             <li><a class="toctree-l3" href="#chaikinvolatility-cvl">ChaikinVolatility (CVL)</a></li>
-        
+
             <li><a class="toctree-l3" href="#chande-momentum-oscillator-cmo">Chande Momentum Oscillator (CMO)</a></li>
-        
+
             <li><a class="toctree-l3" href="#climactic-distance">Climactic Distance</a></li>
-        
+
             <li><a class="toctree-l3" href="#commodity-channel-index-cci">Commodity Channel Index (CCI)</a></li>
-        
+
             <li><a class="toctree-l3" href="#cotaggregatedindexpositiondisaggregated">COTAggregatedIndexPositionDisaggregated</a></li>
-        
+
             <li><a class="toctree-l3" href="#cotcommercialindex">COTCommercialIndex</a></li>
-        
+
             <li><a class="toctree-l3" href="#cotopeninterestdisaggregated">COTOpenInterestDisaggregated</a></li>
-        
+
             <li><a class="toctree-l3" href="#cotopeninterestlegacy">COTOpenInterestLegacy</a></li>
-        
+
             <li><a class="toctree-l3" href="#cotreportdisaggregated">COTReportDisaggregated</a></li>
-        
+
             <li><a class="toctree-l3" href="#cotreportlegacy">COTReportLegacy</a></li>
-        
+
             <li><a class="toctree-l3" href="#cotstockdummy">COTStockDummy</a></li>
-        
+
             <li><a class="toctree-l3" href="#cotlargetraderactivity">COTLargeTraderActivity</a></li>
-        
+
             <li><a class="toctree-l3" href="#darvas-boxes">Darvas Boxes</a></li>
-        
+
             <li><a class="toctree-l3" href="#directional-movement-dm">Directional Movement (DM)</a></li>
-        
+
             <li><a class="toctree-l3" href="#donchian-channel">Donchian Channel</a></li>
-        
+
             <li><a class="toctree-l3" href="#directional-movement-index-dmi">Directional Movement Index (DMI)</a></li>
-        
+
             <li><a class="toctree-l3" href="#double-stochastics-dss">Double Stochastics (DSS)</a></li>
-        
+
             <li><a class="toctree-l3" href="#dynamic-momentum-index-dmindex">Dynamic Momentum Index (DMIndex)</a></li>
-        
+
             <li><a class="toctree-l3" href="#ease-of-movement-eom">Ease of Movement (EOM)</a></li>
-        
+
             <li><a class="toctree-l3" href="#fisher-transform">Fisher Transform</a></li>
-        
+
             <li><a class="toctree-l3" href="#forecast-oscillator-fosc">Forecast Oscillator (FOSC)</a></li>
-        
+
             <li><a class="toctree-l3" href="#highesthighindex">HighestHighIndex()</a></li>
-        
+
             <li><a class="toctree-l3" href="#highesthighprice">HighestHighPrice()</a></li>
-        
+
             <li><a class="toctree-l3" href="#ichimokucloud">IchimokuCloud</a></li>
-        
+
             <li><a class="toctree-l3" href="#insidebarsmt">InsideBarsMT</a></li>
-        
+
             <li><a class="toctree-l3" href="#keltner-channel">Keltner Channel</a></li>
-        
+
             <li><a class="toctree-l3" href="#keyreversalup">KeyReversalUp</a></li>
-        
+
             <li><a class="toctree-l3" href="#keyreversaldown">KeyReversalDown</a></li>
-        
+
             <li><a class="toctree-l3" href="#keyreversalupatsma">KeyReversalUpAtSMA</a></li>
-        
+
             <li><a class="toctree-l3" href="#keyreversaldownatsma">KeyReversalDownAtSMA</a></li>
-        
+
             <li><a class="toctree-l3" href="#keyreversalupatema">KeyReversalUpAtEMA</a></li>
-        
+
             <li><a class="toctree-l3" href="#keyreversaldownatema">KeyReversalDownAtEMA</a></li>
-        
+
             <li><a class="toctree-l3" href="#klingervolumeoscillator">KlingerVolumeOscillator</a></li>
-        
+
             <li><a class="toctree-l3" href="#linear-regression">Linear Regression</a></li>
-        
+
             <li><a class="toctree-l3" href="#linregintercept">LinRegIntercept</a></li>
-        
+
             <li><a class="toctree-l3" href="#linregslope">LinRegSlope</a></li>
-        
+
             <li><a class="toctree-l3" href="#lowestlowindex">LowestLowIndex()</a></li>
-        
+
             <li><a class="toctree-l3" href="#lowestlowprice">LowestLowPrice()</a></li>
-        
+
             <li><a class="toctree-l3" href="#macd">MACD</a></li>
-        
+
             <li><a class="toctree-l3" href="#maenvelopes">MAEnvelopes</a></li>
-        
+
             <li><a class="toctree-l3" href="#marketphases">MarketPhases</a></li>
-        
+
             <li><a class="toctree-l3" href="#marketvalue">MarketValue</a></li>
-        
+
             <li><a class="toctree-l3" href="#momentum-mom">Momentum (MOM)</a></li>
-        
+
             <li><a class="toctree-l3" href="#money-flow-index-mfi">Money Flow Index (MFI)</a></li>
-        
+
             <li><a class="toctree-l3" href="#moving-averages">Moving Averages</a></li>
-        
+
             <li><a class="toctree-l3" href="#dema-double-exponential-moving-average">DEMA - Double Exponential Moving Average</a></li>
-        
+
             <li><a class="toctree-l3" href="#ema-exponential-moving-average">EMA - Exponential Moving Average</a></li>
-        
+
             <li><a class="toctree-l3" href="#ema-mtf-multitimeframe">EMA MTF (MultiTimeFrame)</a></li>
-        
+
             <li><a class="toctree-l3" href="#hma-hull-moving-average">HMA - Hull Moving Average</a></li>
-        
+
             <li><a class="toctree-l3" href="#kama-kaufmans-adaptive-moving-average">KAMA - Kaufman's Adaptive Moving Average</a></li>
-        
+
             <li><a class="toctree-l3" href="#mama-mesa-adaptive-moving-average">MAMA - Mesa Adaptive Moving Average</a></li>
-        
+
             <li><a class="toctree-l3" href="#sma-simple-moving-average">SMA - Simple Moving Average</a></li>
-        
+
             <li><a class="toctree-l3" href="#sma-mtf-multitimeframe">SMA MTF (MultiTimeFrame)</a></li>
-        
+
             <li><a class="toctree-l3" href="#smma-smoothed-moving-average">SMMA - Smoothed Moving Average</a></li>
-        
+
             <li><a class="toctree-l3" href="#tema-triple-exponential-moving-average">TEMA - Triple Exponential Moving Average</a></li>
-        
+
             <li><a class="toctree-l3" href="#tma-triangular-moving-average">TMA - Triangular Moving Average</a></li>
-        
+
             <li><a class="toctree-l3" href="#trix-triple-exponential-moving-average">TRIX - Triple Exponential Moving Average</a></li>
-        
+
             <li><a class="toctree-l3" href="#t3-triple-exponential-moving-average">T3 - Triple Exponential Moving Average</a></li>
-        
+
             <li><a class="toctree-l3" href="#vma-variable-moving-average">VMA - Variable Moving Average</a></li>
-        
+
             <li><a class="toctree-l3" href="#vwma-volume-weighted-moving-average">VWMA - Volume Weighted Moving Average</a></li>
-        
+
             <li><a class="toctree-l3" href="#wma-weighted-moving-average">WMA - Weighted Moving Average</a></li>
-        
+
             <li><a class="toctree-l3" href="#zlema-zero-lag-exponential-moving-average">ZLEMA - Zero Lag Exponential Moving Average</a></li>
-        
+
             <li><a class="toctree-l3" href="#nbarsup">nBarsUp</a></li>
-        
+
             <li><a class="toctree-l3" href="#nbarsdown">nBarsDown</a></li>
-        
+
             <li><a class="toctree-l3" href="#onbalancevolume-obv">OnBalanceVolume (OBV)</a></li>
-        
+
             <li><a class="toctree-l3" href="#outsidebars">OutsideBars</a></li>
-        
+
             <li><a class="toctree-l3" href="#p123">P123</a></li>
-        
+
             <li><a class="toctree-l3" href="#parabolic-sar">Parabolic SAR</a></li>
-        
+
             <li><a class="toctree-l3" href="#percentage-price-oscillator-ppo">Percentage Price Oscillator (PPO)</a></li>
-        
+
             <li><a class="toctree-l3" href="#percentenvelopes">PercentEnvelopes</a></li>
-        
+
             <li><a class="toctree-l3" href="#pivot-points">Pivot Points</a></li>
-        
+
             <li><a class="toctree-l3" href="#polarized-fractal-efficiency-pfe">Polarized Fractal Efficiency (PFE)</a></li>
-        
+
             <li><a class="toctree-l3" href="#price-oscillator">Price Oscillator</a></li>
-        
+
             <li><a class="toctree-l3" href="#rainbow">Rainbow</a></li>
-        
+
             <li><a class="toctree-l3" href="#range">Range</a></li>
-        
+
             <li><a class="toctree-l3" href="#range-indicator-rind">Range Indicator (RIND)</a></li>
-        
+
             <li><a class="toctree-l3" href="#rate-of-change-roc">Rate of Change (ROC)</a></li>
-        
+
             <li><a class="toctree-l3" href="#relative-currency-strength-rcs">Relative Currency Strength (RCS)</a></li>
-        
+
             <li><a class="toctree-l3" href="#relative-performance">Relative Performance</a></li>
-        
+
             <li><a class="toctree-l3" href="#relative-spread-strength-rss">Relative Spread Strength (RSS)</a></li>
-        
+
             <li><a class="toctree-l3" href="#relative-strength-index-rsi">Relative Strength Index (RSI)</a></li>
-        
+
             <li><a class="toctree-l3" href="#relative-strength-levy-rsl">Relative Strength Levy (RSL)</a></li>
-        
+
             <li><a class="toctree-l3" href="#relative-volatility-index-rvi">Relative Volatility Index (RVI)</a></li>
-        
+
             <li><a class="toctree-l3" href="#reversalbars">ReversalBars</a></li>
-        
+
             <li><a class="toctree-l3" href="#r-squared">R-Squared</a></li>
-        
+
             <li><a class="toctree-l3" href="#standarddeviationstddev">StandardDeviation(StdDev)</a></li>
-        
+
             <li><a class="toctree-l3" href="#standard-error-stderror">Standard Error (StdError)</a></li>
-        
+
             <li><a class="toctree-l3" href="#stochastics">Stochastics</a></li>
-        
+
             <li><a class="toctree-l3" href="#stochastics-fast">Stochastics Fast</a></li>
-        
+
             <li><a class="toctree-l3" href="#stochastics-rsi-stochrsi">Stochastics RSI (StochRSI)</a></li>
-        
+
             <li><a class="toctree-l3" href="#summation-sum">Summation (SUM)</a></li>
-        
+
             <li><a class="toctree-l3" href="#supertrend">SuperTrend</a></li>
-        
+
             <li><a class="toctree-l3" href="#supportresistanceareas">SupportResistanceAreas</a></li>
-        
+
             <li><a class="toctree-l3" href="#swing">Swing</a></li>
-        
+
             <li><a class="toctree-l3" href="#time-series-forecast-tsf">Time-Series-Forecast (TSF)</a></li>
-        
+
             <li><a class="toctree-l3" href="#tools">Tools</a></li>
-        
+
             <li><a class="toctree-l3" href="#constant-lines">Constant Lines</a></li>
-        
+
             <li><a class="toctree-l3" href="#currentdayohl">CurrentDayOHL</a></li>
-        
+
             <li><a class="toctree-l3" href="#daily-performance">Daily Performance</a></li>
-        
+
             <li><a class="toctree-l3" href="#dailyquotemoves">DailyQuoteMoves</a></li>
-        
+
             <li><a class="toctree-l3" href="#daylines">DayLines</a></li>
-        
+
             <li><a class="toctree-l3" href="#daylinesadv">DayLinesAdv</a></li>
-        
+
             <li><a class="toctree-l3" href="#getdaybar">GetDayBar</a></li>
-        
+
             <li><a class="toctree-l3" href="#info">Info</a></li>
-        
+
             <li><a class="toctree-l3" href="#maximum-max">Maximum (MAX)</a></li>
-        
+
             <li><a class="toctree-l3" href="#minimum-min">Minimum (MIN)</a></li>
-        
+
             <li><a class="toctree-l3" href="#mtfboxes">MTFBoxes</a></li>
-        
+
             <li><a class="toctree-l3" href="#priceline">PriceLine</a></li>
-        
+
             <li><a class="toctree-l3" href="#priordayohlc">PriorDayOHLC</a></li>
-        
+
             <li><a class="toctree-l3" href="#priordayohlcext">PriorDayOHLCext</a></li>
-        
+
             <li><a class="toctree-l3" href="#sessionbreaklines">SessionBreakLines</a></li>
-        
+
             <li><a class="toctree-l3" href="#showbidask">ShowBidAsk</a></li>
-        
+
             <li><a class="toctree-l3" href="#tickcounter">TickCounter</a></li>
-        
+
             <li><a class="toctree-l3" href="#true-strength-index-tsi">True Strength Index (TSI)</a></li>
-        
+
             <li><a class="toctree-l3" href="#ultimate-oscillator">Ultimate Oscillator</a></li>
-        
+
             <li><a class="toctree-l3" href="#volume-vol">Volume (VOL)</a></li>
-        
+
             <li><a class="toctree-l3" href="#volume-moving-average-volma">Volume Moving Average (VOLMA)</a></li>
-        
+
             <li><a class="toctree-l3" href="#volume-oscillator">Volume Oscillator</a></li>
-        
+
             <li><a class="toctree-l3" href="#volume-profile">Volume Profile</a></li>
-        
+
             <li><a class="toctree-l3" href="#volume-rate-of-change-vroc">Volume Rate of Change (VROC)</a></li>
-        
+
             <li><a class="toctree-l3" href="#volumearea">VolumeArea</a></li>
-        
+
             <li><a class="toctree-l3" href="#volumegraph">VolumeGraph</a></li>
-        
+
             <li><a class="toctree-l3" href="#volumekeltnerchannels">VolumeKeltnerChannels</a></li>
-        
+
             <li><a class="toctree-l3" href="#volumerisefall">VolumeRiseFall</a></li>
-        
+
             <li><a class="toctree-l3" href="#volumesentimentlong">VolumeSentimentLong</a></li>
-        
+
             <li><a class="toctree-l3" href="#volumesentimentshort">VolumeSentimentShort</a></li>
-        
+
             <li><a class="toctree-l3" href="#volumesessionpro">VolumeSessionPro</a></li>
-        
+
             <li><a class="toctree-l3" href="#volumetickspeed">VolumeTickSpeed</a></li>
-        
+
             <li><a class="toctree-l3" href="#volumeudr">VolumeUDR</a></li>
-        
+
             <li><a class="toctree-l3" href="#volumeupdown">VolumeUpDown</a></li>
-        
+
             <li><a class="toctree-l3" href="#volume-zones">Volume Zones</a></li>
-        
+
             <li><a class="toctree-l3" href="#volumezoneoscillator">VolumeZoneOscillator</a></li>
-        
+
             <li><a class="toctree-l3" href="#williams-r">Williams %R</a></li>
-        
+
             <li><a class="toctree-l3" href="#wyckoffwave">WyckoffWave</a></li>
-        
+
             <li><a class="toctree-l3" href="#zigzag">ZigZag</a></li>
-        
+
         </ul>
-    
+
 
     </ul>
 	    </li>
-          
+
         </ul>
       </div>
       &nbsp;
@@ -397,34 +397,34 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
-      
+
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
         <a href="..">AgenaIndicator Documentation</a>
       </nav>
 
-      
+
       <div class="wy-nav-content">
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="..">Docs</a> &raquo;</li>
-    
-      
-    
+
+
+
     <li>Indicators & Oscillators</li>
     <li class="wy-breadcrumbs-aside">
-      
+
         <a href="https://github.com/AgenaTrader/AgenaIndicator-documentation/edit/master/sources/indicators_oscillators.md"
           class="icon icon-github"> Edit on GitHub</a>
-      
+
     </li>
   </ul>
   <hr/>
 </div>
           <div role="main">
             <div class="section">
-              
+
                 <h1 id="indicators-oscillators">Indicators &amp; Oscillators</h1>
 <p><strong>Trade like the professionals!</strong></p>
 <p>AgenaTrader provides you with a variety of powerful indicators that will assist you with your individual market analysis.</p>
@@ -2684,7 +2684,7 @@ DEMA(IDataSeries inSeries, int period)[int barsAgo]
 <p>period Number of bars included in the calculations</p>
 <h3 id="visualization_55">Visualization</h3>
 <p><img alt="DEMA - Double Exponential Moving Average" src="../media/DEMA.jpg" /></p>
-<h3 id="calculation_2">Calculation</h3>
+<h3 id="calculation_2">Calculation</h3>++
 <pre><code class="cs">Value.Set(2 * EMA(InSeries[0], Period)[0] - EMA(EMA(InSeries[0], Period), Period)[0]);
 </code></pre>
 
@@ -5508,29 +5508,29 @@ Print(&quot;The last high of the ZigZag indicator was at &quot; + ZigZag(Deviati
 // Output of the market value for the last low point
 Print(&quot;The last low of the ZigZag indicator was at &quot; + ZigZag(DeviationType.Percent, 1, true).ZigZagLow[0]);
 </code></pre>
-              
+
             </div>
           </div>
           <footer>
-  
+
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-      
+
+
         <a href="../data/" class="btn btn-neutral" title="Data"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
+
     </div>
-  
+
 
   <hr/>
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-    
+
   </div>
 
   Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-      
+
         </div>
       </div>
 
@@ -5540,13 +5540,13 @@ Print(&quot;The last low of the ZigZag indicator was at &quot; + ZigZag(Deviatio
 
   <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
-      
+
           <a href="https://github.com/AgenaTrader/AgenaIndicator-documentation/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
-      
-      
+
+
         <span><a href="../data/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
+
+
     </span>
 </div>
     <script>var base_url = '..';</script>

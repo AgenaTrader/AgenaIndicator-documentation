@@ -670,36 +670,10 @@ CandleStickPattern(IDataSeries input, CandleStickPattern pattern, int trendStren
 When using this method with an index (e.g. **CandleStickPattern**(...)\[**int** barsAgo\] ), the value of the indicator will be outputted for the referenced bar.
 
 ### Parameters
-|               |                                                                                                                                                                                                                    |
-|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|              |                                                                   |
+|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | InSeries      | Input data series for the indicator|
-| pattern       | Possible values are:
-				CandleStickPattern.BearishBeltHold
-                 CandleStickPattern.BearishEngulfing
-                 CandleStickPattern.BearishHarami
-                 CandleStickPattern.BearishHaramiCross
-                 CandleStickPattern.BullishBeltHold
-                CandleStickPattern.BullishEngulfing
-                CandleStickPattern.BullishHarami
-                CandleStickPattern.BullishHaramiCross  
-                CandleStickPattern.DarkCloudCover
-                CandleStickPattern.Doji
-                CandleStickPattern.DownsideTasukiGap
-                CandleStickPattern.EveningStar
-                CandleStickPattern.FallingThreeMethods
-                CandleStickPattern.Hammer
-                CandleStickPattern.HangingMan
-                CandleStickPattern.InvertedHammer
-                CandleStickPattern.MorningStart
-                CandleStickPattern.PiercingLine
-                CandleStickPattern.RisingThreeMethods
-                CandleStickPattern.ShootingStar
-                CandleStickPattern.StickSandwich
-                CandleStickPattern.ThreeBlackCrows
-                CandleStickPattern.ThreeWhiteSoldiers
-                CandleStickPattern.UpsideGapTwoCrows
-                CandleStickPattern.UpsideTasukiGap   |
-| pattern       | Possible values are: CandleStickPattern.BearishBeltHold, CandleStickPattern.BearishEngulfing, ChartPattern.BearishHarami, ChartPattern.BearishHaramiCross, ChartPattern.BullishBeltHold ChartPattern.BullishEngulfing,  ChartPattern.BullishHarami,  ChartPattern.BullishHaramiCross,  ChartPattern.DarkCloudCover, ChartPattern.Doji,ChartPattern.DownsideTasukiGapChartPattern.EveningStar,  ChartPattern.FallingThreeMethods,  ChartPattern.Hammer,  ChartPattern.HangingMan,  ChartPattern.InvertedHammer,  ChartPattern.MorningStart  ChartPattern.PiercingLine,  ChartPattern.RisingThreeMethods,  ChartPattern.ShootingStar,  ChartPattern.StickSandwich,ChartPattern.ThreeBlackCrows,ChartPattern.ThreeWhiteSoldiers, ChartPattern.UpsideGapTwoCrows,  ChartPattern.UpsideTasukiGap    |
+| pattern       | Possible values are:  <br>CandleStickPattern.BearishBeltHold,   <br>CandleStickPattern.BearishEngulfing,<br> CandleStickPattern.BearishHarami,   <br>CandleStickPattern.BearishHaramiCross, <br>CandleStickPattern.BullishBeltHold,  <br>CandleStickPattern.BullishEngulfing, <br>CandleStickPattern.BullishHarami, <br>CandleStickPattern.BullishHaramiCross, <br>CandleStickPattern.DarkCloudCover,  <br>CandleStickPattern.Doji, <br>CandleStickPattern.DownsideTasukiGap,  <br>CandleStickPattern.EveningStar,  <br>CandleStickPattern.FallingThreeMethods,  <br>CandleStickPattern.Hammer,  <br>CandleStickPattern.HangingMan,<br>CandleStickPattern.InvertedHammer, <br>CandleStickPattern.MorningStart, <br>CandleStickPattern.PiercingLine,<br>CandleStickPattern.RisingThreeMethods, <br>CandleStickPattern.ShootingStar,<br>CandleStickPattern.StickSandwich,  <br>CandleStickPattern.ThreeBlackCrows,  <br>CandleStickPattern.ThreeWhiteSoldiers, <br>CandleStickPattern.UpsideGapTwoCrows,   <br>CandleStickPattern.UpsideTasukiGap  |
 | trendStrength | Signifies the number of bars to the left and right of the swing high or swing low that are used to identify a trend. The value 0 turns off the search, meaning that the only thing searched for is chart patterns. |
 
 ### Visualization

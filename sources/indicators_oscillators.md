@@ -3916,6 +3916,8 @@ Default: false                                                                  
 | RColor          | Resistance line color                                                             |
 | PPColor         | Pivot line color                                                                  |
 | SColor          | Support line color                                                                |
+|Show Regions |Color fill space between lines |
+|Extend Lines to Future|Extend lines to latest data |
 
 ### Visualization
 ![Pivot Points](./media/PivotPoints.jpg)

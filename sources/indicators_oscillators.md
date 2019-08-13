@@ -3901,18 +3901,16 @@ PivotPoints(PivotPointsMode.Classic).S3[int barsAgo]
 |                 |                                                                                   |
 |-----------------|-----------------------------------------------------------------------------------|
 | InSeries        | Input data series for the indicator                                               |
-| PivotPointsMode | Calculatory method
+| PivotPointsMode | Calculatory method. Default: floor
 PivotPointsMode.Classic
 PivotPointsMode.Floor
 PivotPointsMode.Woodie
 PivotPointsMode.Camarilla
-PivotPointsMode.Fibonacci
-Default: floor                                                                     |
+PivotPointsMode.Fibonacci                                         |
 | LineWidth       | Default: 1                                                                        |
-| ShowPrices      | Shows prices next to the lines
-Default: false                                                                     |
-| DaysBack        | The number of historical periods to be included in the display of the pivot lines
-                   Default: 0                                                                         |
+| ShowPrices      | Shows prices next to the lines. Default: false    
+                                                                 |
+| DaysBack        | The number of historical periods to be included in the display of the pivot lines           Default:0                                                                         |
 | RColor          | Resistance line color                                                             |
 | PPColor         | Pivot line color                                                                  |
 | SColor          | Support line color                                                                |

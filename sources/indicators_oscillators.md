@@ -3908,8 +3908,7 @@ PivotPointsMode.Woodie
 PivotPointsMode.Camarilla
 PivotPointsMode.Fibonacci                                         |
 | LineWidth       | Default: 1                                                                        |
-| ShowPrices      | Shows prices next to the lines. Default: false    
-                                                                 |
+| ShowPrices      | Shows prices next to the lines. Default:false                                                      |
 | DaysBack        | The number of historical periods to be included in the display of the pivot lines           Default:0                                                                         |
 | RColor          | Resistance line color                                                             |
 | PPColor         | Pivot line color                                                                  |

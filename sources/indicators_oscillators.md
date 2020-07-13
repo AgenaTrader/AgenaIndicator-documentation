@@ -14,7 +14,7 @@ For each indicator you will find a brief description of its interpretation, oper
 ![indicators](./media/1image.jpg)
 
 ## Accumulation/Distribution (ADL)
-### Description
+###Description
 The Accumulation Distribution LevelLine (ADL) indicator was developed by Marc Chaikin. The ADL is a volume indicator that represents the money flow. The ADL is an improvement of the On-Balance Volume Indicator created by Joe Granville, which was actually one of the very first volume indicators.
 
 ### Interpretation
@@ -4498,10 +4498,8 @@ Reversalbars()
 Reversalbars(IDataSeries inSeries)
 Reversalbars()[int barsAgo]
 Reversalbars(IDataSeries inSeries)[int barsAgo]
-Reversalbars(int tolerance)
-Reversalbars(IDataSeries inSeries, int tolreance)
-Reversalbars(int tolerance)[int barsAgo]
-Reversalbars(IDataSeries inSeries, int tolerance)[int barsAgo]
+Reversalbars(IDataSeries inSeries)
+Reversalbars(IDataSeries inSeries)[int barsAgo]
 ```
 
 ### Return value
@@ -4523,10 +4521,6 @@ tolerance See the following description below
 ### Visualization
 ![ReversalBars](./media/ReversalBars.jpg)
 
-### The tolerance parameter
-The reversal bars must exceed their previous bars by at least 1 tick. The tolerance parameter allows you to define/add a certain number of ticks; the parameter is set to 0 by default, but in a sideways market this will lead to a relatively large number of reversal bars being marked.
-
-![The tolerance parameter](./media/image89.png)
 
 ### Example
 ```cs

@@ -4516,7 +4516,6 @@ When using this method with an index (e.g. **Reversalbars**()\[**int** barsAgo\]
 ### Parameters
 inSeries Input data series for the indicator
 
-tolerance See the following description below
 
 ### Visualization
 ![ReversalBars](./media/ReversalBars.jpg)

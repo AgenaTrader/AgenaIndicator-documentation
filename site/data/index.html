@@ -7,14 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
+  <link rel="canonical" href="https://agenatrader.github.io/AgenaIndicator-documentation/index.html/data/">
   <link rel="shortcut icon" href="../img/favicon.ico">
   <title>Data - AgenaIndicator Documentation</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-  <link href="../custom.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="../custom.css" rel="stylesheet" />
   
   <script>
     // Current page data
@@ -25,7 +26,7 @@
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
   <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
   <script>
@@ -46,6 +47,7 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
         <a href=".." class="icon icon-home"> AgenaIndicator Documentation</a>
         <div role="search">
@@ -56,69 +58,220 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="..">Lets start</a>
-	    </li>
-          
-            <li class="toctree-l1 current">
-		
-    <a class="current" href="./">Data</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#data">Data</a></li>
-    
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Lets start</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Data</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#bars-candles">Bars (Candles)</a>
         <ul>
-        
-            <li><a class="toctree-l3" href="#bars-candles">Bars (Candles)</a></li>
-        
-            <li><a class="toctree-l3" href="#data-series">Data Series</a></li>
-        
-            <li><a class="toctree-l3" href="#open">Open</a></li>
-        
-            <li><a class="toctree-l3" href="#high">High</a></li>
-        
-            <li><a class="toctree-l3" href="#low">Low</a></li>
-        
-            <li><a class="toctree-l3" href="#close">Close</a></li>
-        
-            <li><a class="toctree-l3" href="#median">Median</a></li>
-        
-            <li><a class="toctree-l3" href="#typical">Typical</a></li>
-        
-            <li><a class="toctree-l3" href="#weighted">Weighted</a></li>
-        
-            <li><a class="toctree-l3" href="#weighteds">Weighteds</a></li>
-        
-            <li><a class="toctree-l3" href="#time">Time</a></li>
-        
-            <li><a class="toctree-l3" href="#times">Times</a></li>
-        
-            <li><a class="toctree-l3" href="#volume">Volume</a></li>
-        
-            <li><a class="toctree-l3" href="#volumes">Volumes</a></li>
-        
-            <li><a class="toctree-l3" href="#timeframe">TimeFrame</a></li>
-        
-            <li><a class="toctree-l3" href="#timeframes">TimeFrames</a></li>
-        
+    <li class="toctree-l3"><a class="reference internal" href="#modus-operandi">Modus Operandi</a>
+    </li>
         </ul>
-    
-
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#data-series">Data Series</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#description">Description</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#open">Open</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#description_1">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter">Parameter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#more-information">More information</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#high">High</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#description_2">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter_1">Parameter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage_1">usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#more-information_1">More information</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example_1">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#low">Low</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#description_3">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter_2">Parameter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage_2">Usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#more-information_2">More information</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example_2">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#close">Close</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#description_4">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter_3">Parameter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage_3">Usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#more-information_3">More information</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example_3">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#median">Median</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#description_5">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter_4">Parameter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage_4">Usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#more-information_4">More information</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example_4">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#typical">Typical</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#description_6">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter_5">Parameter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage_5">Usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#more-information_5">More information</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example_5">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#weighted">Weighted</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#description_7">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter_6">Parameter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage_6">Usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#more-information_6">More information</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example_6">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#weighteds">Weighteds</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#description_8">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter_7">Parameter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage_7">Usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#more-information_7">More Information</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example_7">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#time">Time</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#description_9">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter_8">Parameter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage_8">Usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#more-information_8">More Information</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example_8">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#times">Times</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#description_10">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter_9">Parameter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage_9">Usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#more-information_9">More Information</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example_9">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#volume">Volume</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#description_11">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter_10">Parameter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage_10">Usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#more-information_10">More Information</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example_10">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#volumes">Volumes</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#description_12">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter_11">Parameter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage_11">Usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#more-information_11">More Information</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example_11">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#timeframe">TimeFrame</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#description_13">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage_12">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#timeframes">TimeFrames</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#description_14">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter_12">Parameter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage_13">Usage</a>
+    </li>
+        </ul>
+    </li>
     </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../indicators_oscillators/">Indicators & Oscillators</a>
-	    </li>
-          
-        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../indicators_oscillators/">Indicators & Oscillators</a>
+                    </li>
+                </ul>
       </div>
-      &nbsp;
+    </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -146,6 +299,7 @@
       
     </li>
   </ul>
+  
   <hr/>
 </div>
           <div role="main">
@@ -519,7 +673,7 @@ Print(TimeFrames[2]); // returns &quot;1 Week&quot;
     
   </div>
 
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
       
         </div>
@@ -529,7 +683,7 @@ Print(TimeFrames[2]); // returns &quot;1 Week&quot;
 
   </div>
 
-  <div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
           <a href="https://github.com/AgenaTrader/AgenaIndicator-documentation/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
@@ -545,6 +699,11 @@ Print(TimeFrames[2]); // returns &quot;1 Week&quot;
     <script>var base_url = '..';</script>
     <script src="../js/theme.js" defer></script>
       <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
 </body>
 </html>

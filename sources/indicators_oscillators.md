@@ -673,7 +673,7 @@ When using this method with an index (e.g. **CandleStickPattern**(...)\[**int** 
 |              |                                                                   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | InSeries      | Input data series for the indicator|
-| pattern       | Possible values are:  <br>CandleStickPattern.BearishBeltHold,   <br>CandleStickPattern.BearishEngulfing,<br> CandleStickPattern.BearishHarami,   <br>CandleStickPattern.BearishHaramiCross, <br>CandleStickPattern.BullishBeltHold,  <br>CandleStickPattern.BullishEngulfing, <br>CandleStickPattern.BullishHarami, <br>CandleStickPattern.BullishHaramiCross, <br>CandleStickPattern.DarkCloudCover,  <br>CandleStickPattern.Doji, <br>CandleStickPattern.DownsideTasukiGap,  <br>CandleStickPattern.EveningStar,  <br>CandleStickPattern.FallingThreeMethods,  <br>CandleStickPattern.Hammer,  <br>CandleStickPattern.HangingMan,<br>CandleStickPattern.InvertedHammer, <br>CandleStickPattern.MorningStart, <br>CandleStickPattern.PiercingLine,<br>CandleStickPattern.RisingThreeMethods, <br>CandleStickPattern.ShootingStar,<br>CandleStickPattern.StickSandwich,  <br>CandleStickPattern.ThreeBlackCrows,  <br>CandleStickPattern.ThreeWhiteSoldiers, <br>CandleStickPattern.UpsideGapTwoCrows,   <br>CandleStickPattern.UpsideTasukiGap  |
+| pattern       | Possible values are:  <br>CandleStickPatterns.BearishBeltHold,   <br>CandleStickPatterns.BearishEngulfing,<br> CandleStickPatterns.BearishHarami,   <br>CandleStickPatterns.BearishHaramiCross, <br>CandleStickPatterns.BullishBeltHold,  <br>CandleStickPatterns.BullishEngulfing, <br>CandleStickPatterns.BullishHarami, <br>CandleStickPatterns.BullishHaramiCross, <br>CandleStickPatterns.DarkCloudCover,  <br>CandleStickPatterns.Doji, <br>CandleStickPatterns.DownsideTasukiGap,  <br>CandleStickPatterns.EveningStar,  <br>CandleStickPatterns.FallingThreeMethods,  <br>CandleStickPatterns.Hammer,  <br>CandleStickPatterns.HangingMan,<br>CandleStickPatterns.InvertedHammer, <br>CandleStickPatterns.MorningStart, <br>CandleStickPatterns.PiercingLine,<br>CandleStickPatterns.RisingThreeMethods, <br>CandleStickPatterns.ShootingStar,<br>CandleStickPatterns.StickSandwich,  <br>CandleStickPatterns.ThreeBlackCrows,  <br>CandleStickPatterns.ThreeWhiteSoldiers, <br>CandleStickPatterns.UpsideGapTwoCrows,   <br>CandleStickPatterns.UpsideTasukiGap  |
 | trendStrength | Signifies the number of bars to the left and right of the swing high or swing low that are used to identify a trend. The value 0 turns off the search, meaning that the only thing searched for is chart patterns. |
 
 ### Visualization
@@ -681,7 +681,7 @@ When using this method with an index (e.g. **CandleStickPattern**(...)\[**int** 
 
 ### Example
 ```cs
-if (CandelStickPattern(CandleStickPattern.ShootingStar, 5)[0] == 1)
+if (CandleStickPattern(CandleStickPatterns.ShootingStar, 5)[0] == 1) [0] == 1)
 Print("Pattern ShootingStar found!");
 ```
 
